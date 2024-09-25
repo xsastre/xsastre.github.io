@@ -1,0 +1,736 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsastre.github.io/5.Acces_bases_de_dades.html">
+      
+      
+      
+      
+      <link rel="icon" href="imagenes/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Acces a Bases de dades - Docencia Xavier</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans Condensed";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#acces-a-bases-de-dades" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="." title="Docencia Xavier" class="md-header__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docencia Xavier
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Acces a Bases de dades
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode dia"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Docencia Xavier" class="md-nav__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Docencia Xavier
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Inici
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            DWEC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/DWEC/_DWEC2425.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupament web en entorn client - DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/DWEC/desenvolupamentfrontend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupamet frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AW
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/AW/01.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicacions web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="acces-a-bases-de-dades">Acces a Bases de dades<a class="headerlink" href="#acces-a-bases-de-dades" title="Permanent link">&para;</a></h1>
+<h2 id="acces-a-bbdd-des-de-php">Accés a BBDD des de  PHP<a class="headerlink" href="#acces-a-bbdd-des-de-php" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Per a accedir a BBDD  mysql o mariabd tenim dues opcions:<ul>
+<li>El  driver natiu  <strong>mysqli</strong> o El  driver genèric  <strong>PDO</strong></li>
+</ul>
+</li>
+<li>En aquest curs utilitzarem PDO, encara que l'ús de  mysqli és molt similar al de PDO</li>
+<li>Accions a realitzar:<ul>
+<li>Establir connexions </li>
+<li>Executar sentències  SQL</li>
+<li>Obtenir els registres afectats o retornats per una sentència SQL.</li>
+<li>Emprar transaccions</li>
+<li>Gestionar els errors que es produïsquen durant la connexió o en l'establiment de la mateixa</li>
+</ul>
+</li>
+</ul>
+<h3 id="establiment-de-la-connexio">Establiment de la connexió<a class="headerlink" href="#establiment-de-la-connexio" title="Permanent link">&para;</a></h3>
+<p><a href="https://youtu.be/lSZdXcO-au4"><img alt="" src="../img/ull.png" />Video</a></p>
+<ul>
+<li>Haurem de  instanciar un objecte de la classe  PDO passant-li els següents paràmetres (només el primer és obligatori):<ul>
+<li>Origen de dades (DSN). Cadena de text que indica què controlador es va a utilitzar i, a continuació, separades pel caràcter dos punts, els paràmetres específics necessaris pel controlador, com per exemple, el nom o adreça IP del servidor i el nom de la base de dades</li>
+<li>Nom d'usuari amb permisos per a establir la connexió</li>
+<li>Contrasenya de l'usuari</li>
+<li>Opcions de connexió, emmagatzemades en forma de  array</li>
+</ul>
+</li>
+</ul>
+<p>Per exemple, si utilitzem el controlador per a  Mysql, la cadena  DSN rebrà els paràmetres següents (a continuació del prefix  mysql:</p>
+<ul>
+<li>host. Nom o adreça IP del servidor </li>
+<li>port. Nombre de port  TCP en el qual escolta el servidor </li>
+<li>dbname. Nom de la base de dades</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">$conn = new PDO (&#39;mysql:host=mysql;port=3306;dbname=juegoRol&#39;, &#39;root&#39;, &#39;1234&#39;);</span>
+</code></pre></div>
+<h3 id="class-pdoexception">Class PDOException<a class="headerlink" href="#class-pdoexception" title="Permanent link">&para;</a></h3>
+<p>Totes les excepcions que genera  PDO són del tipus  <strong>PDOException</strong> que hereta de la classe  Exception. Si hagueren errors de connexió, es llançarà una excepció  PDOException. Si no capturem l'excepció, es finalitzarà el  script i mostrarà informació de seguiment, que podria revelar detalls de la connexió a la base de dades, incloent el nom d'usuari i la contrasenya</p>
+<h2 id="presentacio-i-recuperacio-de-dades">Presentació i recuperació de dades<a class="headerlink" href="#presentacio-i-recuperacio-de-dades" title="Permanent link">&para;</a></h2>
+<p><a href="https://youtu.be/rP8NleOi5W0"><img alt="" src="../img/ull.png" />Video</a></p>
+<ul>
+<li>Si la consulta genera un conjunt de dades (SELECT), s'utilitza el mètode <strong>query</strong> per executa una sentència SQL. La sentencia retorna false si hi ha errors o un conjunt de resultats com un objecte  <a href="https://www.php.net/manual/es/class.pdostatement.php"><strong>PDOStatement</strong></a></li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nv">$parametres_connexio</span> <span class="o">=</span> <span class="s1">&#39;mysql:host=localhost;port=3306;dbname=test&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="nv">$usuari</span> <span class="o">=</span> <span class="s1">&#39;root&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nv">$passwd</span> <span class="o">=</span> <span class="s1">&#39;...&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="nv">$bd</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="nv">$parametres_connexio</span><span class="p">,</span><span class="nv">$usuari</span><span class="p">,</span><span class="nv">$passwd</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="k">echo</span> <span class="s2">&quot;Connexio realitzada correctament!!&lt;br/&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;SELECT producte, unitats  FROM stock&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="nv">$productes</span> <span class="o">=</span>  <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="k">echo</span> <span class="nv">$productes</span><span class="o">-&gt;</span><span class="na">rowCount</span><span class="p">()</span><span class="o">.</span><span class="s2">&quot; elements&lt;br/&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="k">echo</span> <span class="s1">&#39;&lt;ul&gt;&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos="12 "></span>        <span class="c1">//dues maneres</span>
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span>        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$productes</span><span class="o">-&gt;</span><span class="na">fetchAll</span> <span class="k">as</span> <span class="nv">$producte</span><span class="p">){</span>
+<span class="linenos" data-linenos="15 "></span>            <span class="k">echo</span> <span class="s1">&#39;&lt;li&gt;&#39;</span><span class="o">.</span><span class="nv">$producte</span><span class="p">[</span><span class="s1">&#39;producte&#39;</span><span class="p">]</span><span class="o">.</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="nv">$producte</span><span class="p">[</span><span class="s1">&#39;unitats&#39;</span><span class="p">]</span><span class="o">.</span><span class="s1">&#39;&lt;/li&gt;&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos="16 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="17 "></span>
+<span class="linenos" data-linenos="18 "></span>        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$productes</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_OBJ</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$producte</span><span class="p">){</span>
+<span class="linenos" data-linenos="19 "></span>            <span class="k">echo</span> <span class="s1">&#39;&lt;li&gt;&#39;</span><span class="o">.</span><span class="nv">$producte</span><span class="o">-&gt;</span><span class="na">producte</span><span class="o">.</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="nv">$producte</span><span class="o">-&gt;</span><span class="na">unitats</span><span class="o">.</span><span class="s1">&#39;&lt;/li&gt;&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos="20 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="21 "></span>        <span class="k">echo</span> <span class="s1">&#39;&lt;/ul&gt;&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos="22 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="23 "></span>    <span class="k">echo</span> <span class="s1">&#39;Error con la base de datos: &#39;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="linenos" data-linenos="24 "></span>    <span class="p">}</span> 
+</code></pre></div>
+* Podem recuperar les dades utilitzan la instrucció fetchAll() utilitzant l'estil que <a href="https://www.php.net/manual/es/pdostatement.fetch.php">vulgam</a></p>
+<ul>
+<li>Treballar amb consultes d'esta manera és vulnerable a injeccions  SQL. En el seu lloc es recomana utilitzar consultes preparades.</li>
+</ul>
+<h2 id="insercio-esborrat-i-modificat">Inserció, esborrat i modificat<a class="headerlink" href="#insercio-esborrat-i-modificat" title="Permanent link">&para;</a></h2>
+<p>S'utilitza el mètode  <strong>PDO::exec</strong>, que executa una sentència  SQL i retorna el nombre de registres afectats</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">    $registres = $pdo-&gt;exec(&#39;DELETE FROM stock WHERE unitats=0&#39;);  </span>
+<span class="linenos" data-linenos="2 "></span><span class="x">    echo &quot;\&lt;p&gt;S&#39;han esborrat $registres registres.\&lt;/p&gt;&quot;;</span>
+</code></pre></div>
+<p>Aquesta sentència és vulnerable a injeccions SQL. En el seu lloc es recomana utilitzar consultes preparades</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="c1">// datos conexión</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="nv">$cadena_conexion</span> <span class="o">=</span> <span class="s1">&#39;mysql:host=localhost;port=3306;dbname=test&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nv">$usuario</span> <span class="o">=</span> <span class="s1">&#39;root&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="nv">$clave</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="c1">// conectar</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nv">$bd</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="nv">$cadena_conexion</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$clave</span><span class="p">);</span>  
+<span class="linenos" data-linenos=" 9 "></span>    <span class="k">echo</span> <span class="s2">&quot;Conexión realizada con éxito&lt;br&gt;&quot;</span><span class="p">;</span>    
+<span class="linenos" data-linenos="10 "></span>    <span class="c1">// insertar nuevo usario</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="nv">$ins</span> <span class="o">=</span> <span class="s2">&quot;insert into usuarios(nombre, clave, rol) values(&#39;Alberto&#39;, &#39;33333&#39;, &#39;1&#39;);&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="nv">$resul</span> <span class="o">=</span> <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">exec</span><span class="p">(</span><span class="nv">$ins</span><span class="p">);</span>   
+<span class="linenos" data-linenos="13 "></span>    <span class="c1">//comprobar errores</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="k">if</span><span class="p">(</span><span class="nv">$resul</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="15 "></span>        <span class="k">echo</span> <span class="s2">&quot;insert correcto &lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="16 "></span>        <span class="k">echo</span> <span class="s2">&quot;Filas insertadas: &quot;</span> <span class="o">.</span> <span class="nv">$resul</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="17 "></span>    <span class="p">}</span><span class="k">else</span> <span class="nb">print_r</span><span class="p">(</span> <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">errorinfo</span><span class="p">());</span>   
+<span class="linenos" data-linenos="18 "></span>    <span class="c1">// para los autoincrementos</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="k">echo</span> <span class="s2">&quot;Código de la fila insertada&quot;</span> <span class="o">.</span> <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">lastInsertId</span><span class="p">()</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span> 
+<span class="linenos" data-linenos="20 "></span>
+<span class="linenos" data-linenos="21 "></span>    <span class="c1">// actualizar</span>
+<span class="linenos" data-linenos="22 "></span>    <span class="nv">$upd</span> <span class="o">=</span> <span class="s2">&quot;update usuarios set rol =  0 where rol = 1&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="23 "></span>    <span class="nv">$resul</span> <span class="o">=</span> <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">exec</span><span class="p">(</span><span class="nv">$upd</span><span class="p">);</span>   
+<span class="linenos" data-linenos="24 "></span>    <span class="c1">//comprobar errores</span>
+<span class="linenos" data-linenos="25 "></span>    <span class="k">if</span><span class="p">(</span><span class="nv">$resul</span><span class="p">){</span>
+<span class="linenos" data-linenos="26 "></span>        <span class="k">echo</span> <span class="s2">&quot;update correcto &lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="27 "></span>        <span class="k">echo</span> <span class="s2">&quot;Filas actualizadas: &quot;</span> <span class="o">.</span> <span class="nv">$resul</span><span class="o">-&gt;</span><span class="na">rowCount</span><span class="p">()</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="28 "></span>    <span class="p">}</span><span class="k">else</span> <span class="nb">print_r</span><span class="p">(</span> <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">errorinfo</span><span class="p">());</span>   
+<span class="linenos" data-linenos="29 "></span>
+<span class="linenos" data-linenos="30 "></span>    <span class="c1">// borrar</span>
+<span class="linenos" data-linenos="31 "></span>    <span class="nv">$del</span> <span class="o">=</span> <span class="s2">&quot;delete from usuarios where nombre = &#39;Luisa&#39;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="32 "></span>    <span class="nv">$resul</span> <span class="o">=</span> <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">exec</span><span class="p">(</span><span class="nv">$del</span><span class="p">);</span>   
+<span class="linenos" data-linenos="33 "></span>    <span class="c1">//comprobar errores</span>
+<span class="linenos" data-linenos="34 "></span>    <span class="k">if</span><span class="p">(</span><span class="nv">$resul</span><span class="p">){</span>
+<span class="linenos" data-linenos="35 "></span>        <span class="k">echo</span> <span class="s2">&quot;delete correcto &lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="36 "></span>        <span class="k">echo</span> <span class="s2">&quot;Filas borradas: &quot;</span> <span class="o">.</span> <span class="nv">$resul</span><span class="o">-&gt;</span><span class="na">rowCount</span><span class="p">()</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="37 "></span>    <span class="p">}</span><span class="k">else</span> <span class="nb">print_r</span><span class="p">(</span> <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">errorinfo</span><span class="p">());</span>
+<span class="linenos" data-linenos="38 "></span>
+<span class="linenos" data-linenos="39 "></span><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="40 "></span>    <span class="k">echo</span> <span class="s1">&#39;Error con la base de datos: &#39;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="linenos" data-linenos="41 "></span><span class="p">}</span> 
+</code></pre></div>
+<h2 id="consultes-preparades">Consultes preparades<a class="headerlink" href="#consultes-preparades" title="Permanent link">&para;</a></h2>
+<p>Ens aporten dos avantatges importants:</p>
+<ul>
+<li>Per a sentències que seran executades en múltiples ocasions amb diferents paràmetres optimitza el rendiment de l'aplicació. </li>
+<li>Ajuda a prevenir injeccions  SQL eliminant la necessitat de entrecomillar manualment els paràmetres.</li>
+</ul>
+<p>Utilitzem el mètode <strong>prepare</strong> de la classe PDO que retorna un objecte de la classe PDOStatement. A més, els paràmetres es poden marcar utilitzant signes d'interrogació o amb nom, utilitzant :.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x"> $pdoSt = $pdo-&gt;prepare(&#39;INSERT INTO família (cod,nom)  VALUES (?, ?)&#39;);</span>
+<span class="linenos" data-linenos="2 "></span><span class="x"> $pdoSt = $pdo-&gt;prepare(&#39;INSERT INTO família (cod,nom)  VALUES (:cod,:nom)&#39;);</span>
+</code></pre></div>
+<p>Abans d'executar la consulta, cal assignar un valor als paràmetres.Utilitzem el mètode <strong>bindParam</strong> de la classe PDOStatement. Si hem utilitzat signe d'interrogació posarem l'índex del paràmetre començant per 1. Si usem paràmetres amb nom, indiquem el nom en la cridada a bindParam.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">$cod_producte = &quot; TABLET&quot;;  </span>
+<span class="linenos" data-linenos="2 "></span><span class="x">$nom_producte = &quot; Tablet PC&quot;; </span>
+<span class="linenos" data-linenos="3 "></span><span class="x">$pdoSt-&gt;bindParam(1,$cod_producte); </span>
+<span class="linenos" data-linenos="4 "></span><span class="x">$pdoSt-&gt;bindParam(2,$nom_producte);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">$pdoSt-&gt;bindParam(&quot;:cod&quot;,$cod_producte); </span>
+<span class="linenos" data-linenos="2 "></span><span class="x">$pdoSt-&gt;bindParam(&quot;:nom&quot;,$nom_producte);</span>
+</code></pre></div>
+<p>Una vegada preparada la consulta i enllaçats els paràmetres amb els seus valors, s'executa la consulta utilitzant el mètode  <strong>execute</strong> de la classe  PDOStatement. També, és possible assignar els valors dels paràmetres en el moment d'executar la consulta, utilitzant un  array (associatiu o amb claus numèriques depenent de la forma en què hages indicat els paràmetres) en la cridada a  execute</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nv">$cadena_conexion</span> <span class="o">=</span> <span class="s1">&#39;mysql:host=localhost;port=3306;dbname=test&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="nv">$usuario</span> <span class="o">=</span> <span class="s1">&#39;root&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nv">$clave</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span>       <span class="nv">$bd</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="nv">$cadena_conexion</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$clave</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="k">echo</span> <span class="s2">&quot;Conexión realizada con éxito&lt;br&gt;&quot;</span><span class="p">;</span>        
+<span class="linenos" data-linenos=" 8 "></span>        <span class="nv">$sql</span> <span class="o">=</span> <span class="s1">&#39;SELECT nombre, clave, rol FROM usuarios&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="nv">$usuarios</span> <span class="o">=</span> <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="k">echo</span> <span class="s2">&quot;Número de usuarios: &quot;</span> <span class="o">.</span> <span class="nv">$usuarios</span><span class="o">-&gt;</span><span class="na">rowCount</span><span class="p">()</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$usuarios</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_OBJ</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$usu</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span>            <span class="k">print</span> <span class="s2">&quot;Nombre : &quot;</span> <span class="o">.</span> <span class="nv">$usu</span><span class="o">-&gt;</span><span class="na">nombre</span><span class="p">;</span>
+<span class="linenos" data-linenos="13 "></span>            <span class="k">print</span> <span class="s2">&quot;Clave : &quot;</span> <span class="o">.</span> <span class="nv">$usu</span><span class="o">-&gt;</span><span class="na">clave</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="14 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="15 "></span>
+<span class="linenos" data-linenos="16 "></span>        <span class="cm">/* consulta preparada, parametros por orden */</span>  
+<span class="linenos" data-linenos="17 "></span>        <span class="nv">$preparada</span> <span class="o">=</span> <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;select nombre from usuarios where rol = ?&quot;</span><span class="p">);</span> 
+<span class="linenos" data-linenos="18 "></span>        <span class="nv">$preparada</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">(</span> <span class="k">array</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<span class="linenos" data-linenos="19 "></span>        <span class="k">echo</span> <span class="s2">&quot;Usuarios con rol 0: &quot;</span> <span class="o">.</span>  <span class="nv">$preparada</span><span class="o">-&gt;</span><span class="na">rowCount</span><span class="p">()</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="20 "></span>        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$preparada</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_OBJ</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$usu</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="21 "></span>            <span class="k">print</span> <span class="s2">&quot;Nombre : &quot;</span> <span class="o">.</span> <span class="nv">$usu</span><span class="o">-&gt;</span><span class="na">nombre</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="22 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="23 "></span>
+<span class="linenos" data-linenos="24 "></span>        <span class="cm">/* consulta preparada, parametros por nombre */</span> 
+<span class="linenos" data-linenos="25 "></span>        <span class="nv">$preparada_nombre</span> <span class="o">=</span> <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;select nombre from usuarios where rol = :rol&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="26 "></span>        <span class="nv">$preparada_nombre</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">(</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;:rol&#39;</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">));</span>
+<span class="linenos" data-linenos="27 "></span>        <span class="k">echo</span> <span class="s2">&quot;Usuarios con rol 0: &quot;</span> <span class="o">.</span>  <span class="nv">$preparada</span><span class="o">-&gt;</span><span class="na">rowCount</span><span class="p">()</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="28 "></span>        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$preparada_nombre</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_OBJ</span><span class="p">)</span>  <span class="k">as</span> <span class="nv">$usu</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="29 "></span>            <span class="k">print</span> <span class="s2">&quot;Nombre : &quot;</span> <span class="o">.</span> <span class="nv">$usu</span><span class="o">-&gt;</span><span class="na">nombre</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="30 "></span>        <span class="p">}</span>   
+<span class="linenos" data-linenos="31 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="32 "></span>        <span class="k">echo</span> <span class="s1">&#39;Error con la base de datos: &#39;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="linenos" data-linenos="33 "></span>    <span class="p">}</span>
+</code></pre></div>
+<h3 id="querybuilder">QueryBuilder<a class="headerlink" href="#querybuilder" title="Permanent link">&para;</a></h3>
+<p>Un Query Builder conté una sèrie de funcions llestes per a realitzar les operacions més comunes amb una base de dades, 
+però sense usar el llenguatge SQL directament. Podem instal·lar alguno com Eloquent o el de Doctrine.
+En esta sèrie de videos es mostra com anar implementant un:</p>
+<p>Mètode find :
+<a href="https://youtu.be/aOGH6iD8P3Y"><img alt="" src="../img/ull.png" />Video</a> </p>
+<p>Utilitzant el mètode find dins d'una classe per a implementar un modelo de dades:
+<a href="https://youtu.be/ALsXCEIwYGA"><img alt="" src="../img/ull.png" />Video</a> </p>
+<p>Mètode insert:
+<a href="https://youtu.be/AzpyinW8ar4"><img alt="" src="../img/ull.png" />Video</a> </p>
+<h3 id="transaccions">Transaccions<a class="headerlink" href="#transaccions" title="Permanent link">&para;</a></h3>
+<p><a href="https://youtu.be/oggtMwoEIfI"><img alt="" src="../img/ull.png" />Video</a></p>
+<p>Una transacció consistix en un conjunt d'operacions que han de realitzar-se de forma atòmica. Es a dir, o es realitzen totes o cap.</p>
+<p>Per defecte PDO treballa en manera  <strong>autocommit</strong>, així esconfirma de forma automàtica cada sentència que executa el servidor.</p>
+<p>Per a treballar amb transaccions,  PDO incorpora tres mètodes:</p>
+<ul>
+<li><strong>beginTransaction</strong>. Deshabilita la manera  autocommit i comença una
+nova transacció, que finalitzarà quan executes un dels dos mètodes següents.</li>
+<li><strong>commit</strong>. Confirma la transacció actual </li>
+<li><strong>rollback</strong>. Reverteix els canvis duts a terme en la transacció actual</li>
+</ul>
+<p>Una vegada executat un  commit o un  rollback, es tornarà a la manera de confirmació automàtica</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="x">    </span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="nv">$cadena_conexion</span> <span class="o">=</span> <span class="s1">&#39;mysql:host=localhost;port=3306;dbname=test&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="nv">$usuario</span> <span class="o">=</span> <span class="s1">&#39;homestead&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nv">$clave</span> <span class="o">=</span> <span class="s1">&#39;secret&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="nv">$bd</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="nv">$cadena_conexion</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$clave</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="k">echo</span> <span class="s2">&quot;Conexión realizada con éxito&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="c1">// comenzar la transacción</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">beginTransaction</span><span class="p">();</span>    
+<span class="linenos" data-linenos="10 "></span>        <span class="nv">$ins</span> <span class="o">=</span> <span class="s2">&quot;insert into usuarios(nombre, clave, rol) values(&#39;Fernando&#39;, &#39;33333&#39;, &#39;1&#39;)&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="nv">$resul</span> <span class="o">=</span> <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">exec</span><span class="p">(</span><span class="nv">$ins</span><span class="p">);</span>   
+<span class="linenos" data-linenos="12 "></span>        <span class="c1">// se repite la consulta</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="c1">// falla porque el nombre es unique</span>
+<span class="linenos" data-linenos="14 "></span>        <span class="nv">$resul</span> <span class="o">=</span> <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">exec</span><span class="p">(</span><span class="nv">$ins</span><span class="p">);</span>   
+<span class="linenos" data-linenos="15 "></span>        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nv">$resul</span><span class="p">){</span>
+<span class="linenos" data-linenos="16 "></span>            <span class="k">echo</span> <span class="s2">&quot;Error: &quot;</span> <span class="o">.</span> <span class="nb">print_r</span><span class="p">(</span><span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">errorinfo</span><span class="p">());</span>
+<span class="linenos" data-linenos="17 "></span>            <span class="c1">// deshace el primer cambio</span>
+<span class="linenos" data-linenos="18 "></span>            <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">rollback</span><span class="p">();</span>
+<span class="linenos" data-linenos="19 "></span>            <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;Transacción anulada&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="20 "></span>        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="linenos" data-linenos="21 "></span>            <span class="c1">// si hubiera ido bien...</span>
+<span class="linenos" data-linenos="22 "></span>            <span class="nv">$bd</span><span class="o">-&gt;</span><span class="na">commit</span><span class="p">();</span>
+<span class="linenos" data-linenos="23 "></span>        <span class="p">}</span>   
+<span class="linenos" data-linenos="24 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="25 "></span>        <span class="k">echo</span> <span class="s1">&#39;Error al conectar: &#39;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="linenos" data-linenos="26 "></span>    <span class="p">}</span> 
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 Xavier Sastre - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "toc.integrate", "content.tabs.link", "navigation.expand"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>

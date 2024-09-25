@@ -1,0 +1,1148 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsastre.github.io/prova.html">
+      
+      
+      
+      
+      <link rel="icon" href="imagenes/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Aplicaciones web dinámicas: PHP y Javascript. - Docencia Xavier</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans Condensed";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aplicaciones-web-dinamicas-php-y-javascript" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="." title="Docencia Xavier" class="md-header__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docencia Xavier
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aplicaciones web dinámicas: PHP y Javascript.
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode dia"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Docencia Xavier" class="md-nav__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Docencia Xavier
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Inici
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            DWEC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/DWEC/_DWEC2425.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupament web en entorn client - DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/DWEC/desenvolupamentfrontend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupamet frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AW
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/AW/01.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicacions web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="aplicaciones-web-dinamicas-php-y-javascript">Aplicaciones web dinámicas: PHP y Javascript.<a class="headerlink" href="#aplicaciones-web-dinamicas-php-y-javascript" title="Permanent link">&para;</a></h1>
+<h1 id="1-programacion-del-cliente-web">1.- Programación del cliente web.<a class="headerlink" href="#1-programacion-del-cliente-web" title="Permanent link">&para;</a></h1>
+<p>Cuando comenzaste con el presente módulo, uno de los primeros conceptos que aprendiste es a diferenciar entre la ejecución de código en el servidor web y la ejecución de código en el navegador o cliente web.</p>
+<p>Todo lo que has aprendido hasta el momento se ha centrado en la ejecución de código en el servidor web utilizando el lenguaje <code>PHP</code>. La otra parte importante de una aplicación web, la programación de código que se ejecute en el navegador, no forma parte de los contenidos de este módulo. Tiene su propio módulo dedicado, <strong>Desarrollo</strong> Web <strong>en Entorno Cliente.</strong></p>
+<p>Muchas de las aplicaciones web que existen en la actualidad tienen esos dos componentes: una parte de la aplicación, generalmente la que contiene la lógica de negocio, se ejecuta en el servidor; y otra parte de la aplicación, de menor peso, se ejecuta en el cliente. Existen incluso cierto tipo de aplicaciones web, como "<em>Google Docs</em>", en las que gran parte de las funcionalidades que ofrecen se implementan utilizando programación del cliente web.</p>
+<p>En la presente unidad vas a aprender cómo integrar estos dos componentes de una misma aplicación web: el código <code>PHP</code> que se ejecutará en el servidor, con el código que se enviará al cliente para que éste lo ejecute.</p>
+<p>La programación de guiones para su ejecución en un cliente web es similar a lo que ya conoces sobre <code>PHP</code>, salvo que en este caso el código completo del guión llega al navegador junto con las etiquetas <code>HTML</code>, y es éste el encargado de procesarlo.</p>
+<p>Así como el código <code>PHP</code> se marcaba utilizando los delimitadores "<code>&lt;?PHP</code> <code>?&gt;"</code>, en <code>HTML</code> existe una etiqueta que se utiliza para integrar el código ejecutable por el navegador junto al resto de etiquetas. Se trata de la etiqueta <code>&lt;script&gt;</code> , que puede indicar tanto la localización del código en un fichero externo, como simplemente delimitar unas líneas de código dentro del propio fichero <code>HTML</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>// Inclusión de código en el documento HTML
+<span class="linenos" data-linenos="2 "></span>&lt;script type=&quot;text/javascript&quot;&gt;
+<span class="linenos" data-linenos="3 "></span>// Código que ejecuta el navegador
+<span class="linenos" data-linenos="4 "></span>&lt;/script&gt;
+<span class="linenos" data-linenos="5 "></span>// Inclusión de código en un fichero externo
+<span class="linenos" data-linenos="6 "></span>&lt;script type=&quot;text/javascript&quot; src=&quot;codigo.js&quot;&gt;&lt;/script&gt;
+</code></pre></div>
+<p>Cuando el código se incluye en el propio documento <code>HTML</code>, se suele encerrar en una sección <code>CDATA</code> para no encontrar errores de validación en documentos <code>XHTML</code>. Estos errores aparecerían si dentro del código del guion hubiera algún carácter especial como <code>"&lt;</code>" o "<code>&gt;"</code>.</p>
+<p>Sin embargo, al utilizar una sección <a href="#t8327ea1c-4f15-366b-a9df-9a10fb8cf192" title="CDATA |"><code>CDATA</code></a>, puede suceder que cuando se procese la página como documento <code>HTML</code>, algún navegador no reconozca éstas secciones. Es por este motivo que el texto <code>CDATA</code> que identifica estas secciones suele también ponerse dentro de un comentario (por ejemplo, utilizando <code>//</code> o <code>/* */</code>).</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;script type=&quot;text/javascript&quot;&gt;
+<span class="linenos" data-linenos="2 "></span>/* &lt;![CDATA[ */
+<span class="linenos" data-linenos="3 "></span>// Código que ejecuta el navegador
+<span class="linenos" data-linenos="4 "></span>/* ]]&gt; */
+<span class="linenos" data-linenos="5 "></span>&lt;/script&gt;
+</code></pre></div>
+<p>En un documento, una sección CDATA es aquella perteneciente a un documento que es marcado para que el analizador sintáctico lo interprete como una cadena de caracteres y no como contenido etiquetado.</p>
+<h1 id="11-paginas-web-dinamicas">1.1.- Páginas web dinámicas.<a class="headerlink" href="#11-paginas-web-dinamicas" title="Permanent link">&para;</a></h1>
+<p>La inclusión de código en páginas web para su ejecución por parte del navegador tiene ciertas limitaciones:</p>
+<ul>
+<li>Cuando ejecutas código <code>PHP</code> en un servidor, es normalmente el programador el que tiene el control sobre el entorno de ejecución. Al cliente llegan únicamente etiquetas en lenguaje <code>HTML</code> o <code>XHTML</code>. Sin embargo, cuando programas código para que se ejecute en un cliente web, no tienes siquiera la certeza de que el navegador del usuario soporte la ejecución del código que recibe. Existen ciertos sistemas, como dispositivos móviles o navegadores integrados en hardware específico, que no permiten la ejecución de código de cliente.</li>
+<li>El código que se ejecuta en el navegador está normalmente limitado a ser ejecutado en un entorno controlado, que no permite, por ejemplo, la lectura o escritura de ficheros en el ordenador del usuario. De esta forma se restringen los efectos negativos que pueda causar un guion y se favorece la confianza del usuario en este tipo de código.</li>
+</ul>
+<p>Pese a estas limitaciones, la ejecución de código en el navegador encaja perfectamente con cierto tipo de tareas como:</p>
+<ul>
+<li>Comprobar y/o procesar los datos que introduce el usuario en los formularios, como paso previo a su envío al servidor web.</li>
+<li>Gestionar diferentes marcos y/o ventanas del navegador.</li>
+<li>Modificar de forma dinámica los elementos que componen la página web, ajustando sus propiedades o estilos en respuesta a la interacción del usuario.</li>
+</ul>
+<p>El código <code>JavaScript</code> de una página se puede ejecutar en respuesta a eventos generados por el navegador. Por ejemplo, utilizando el evento <code>onsubmit</code> podemos llamar a una función <code>validar_email</code> para validar una dirección de correo introducida por el usuario cuando se intenta enviar el formulario:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;form action=&quot;usuario.php&quot; method=&quot;get&quot; name=&quot;datos_usuario&quot;  onsubmit=&quot;return validar_email()&quot;&gt;
+<span class="linenos" data-linenos="2 "></span>&lt;input type=&quot;text&quot; id=&quot;email&quot; /&gt;
+<span class="linenos" data-linenos="3 "></span>&lt;/form&gt;
+</code></pre></div>
+<p>Para la función que realiza la validación básica de una dirección de <code>email</code> puedes utilizar, por ejemplo, el siguiente código:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>function validar_email() {
+<span class="linenos" data-linenos=" 2 "></span>    valor = document.getElementById(&quot;email&quot;).value;
+<span class="linenos" data-linenos=" 3 "></span>    pos_arroba = valor.indexOf(&quot;@&quot;);
+<span class="linenos" data-linenos=" 4 "></span>    pos_punto = valor.lastIndexOf(&quot;.&quot;);
+<span class="linenos" data-linenos=" 5 "></span>    if (pos_arroba &lt; 1 || pos_punto &lt; pos_arroba+2 || pos_punto+2&gt;=valor.length) {
+<span class="linenos" data-linenos=" 6 "></span>        alert(&#39;Dirección de correo no válida.&#39;);
+<span class="linenos" data-linenos=" 7 "></span>        return false;
+<span class="linenos" data-linenos=" 8 "></span>    }
+<span class="linenos" data-linenos=" 9 "></span>    return true;
+<span class="linenos" data-linenos="10 "></span>}
+</code></pre></div>
+<p>Las páginas web que se aprovechan de las capacidades de ejecución de código en el cliente para cambiar su apariencia, o su funcionamiento, se conocen como páginas web dinámicas.</p>
+<p>Se llama <code>HTML dinámico</code> (<code>DHTML</code>) al conjunto de técnicas que emplean <code>HTML</code>, el modelo de objetos del documento web (<code>[DOM](#tb6933733-f350-b4b9-b414-5f005ca03efb "DOM | "))</code>, hojas de estilo CSS y lenguaje ejecutado en el navegador para crear sitios webs dinámicos.</p>
+<p>DOM es esencialmente una interfaz de plataforma que proporciona un conjunto estándar de objetos para representar documentos HTML, XHTML y XML.</p>
+<h1 id="12-el-lenguaje-javascript">1.2.- El lenguaje JavaScript.<a class="headerlink" href="#12-el-lenguaje-javascript" title="Permanent link">&para;</a></h1>
+<p>El lenguaje de guiones que se utiliza mayoritariamente hoy en día para la programación de clientes web es <code>JavaScript</code>. Su sintaxis está basada en la del lenguaje <code>C</code>, parecida a la que conocemos del lenguaje <code>PHP</code>. Aunque su utilización principal es incorporarlo a páginas web, también puedes encontrar <code>JavaScript</code> en otros lugares como en documentos <code>PDF, o para definir la funcionalidad de extensiones de escritorio o de algunas aplicaciones `widgets`).</code></p>
+<p>Si bien, la gran mayoría de navegadores web soportan código en lenguaje <code>JavaScript</code>, debes tener en cuenta que:</p>
+<ul>
+<li>La ejecución de <code>JavaScript</code> en el navegador puede haber sido deshabilitada por el usuario.</li>
+<li>La implementación de <code>JavaScript</code> puede variar de un navegador a otro. Lo mismo sucede con el interface de programación que usa <code>JavaScript</code> para acceder a la estructura de las páginas web: el <code>DOM</code>. Por este motivo, es conveniente que verifiques la funcionalidad del código en diversos navegadores antes de publicarlo como parte de tu sitio web.</li>
+</ul>
+<p>Se conoce como motor <code>JavaScript</code> a la parte del navegador encargada de interpretar y ejecutar el código <code>JavaScript</code> que forma parte de las páginas web. Los motores <code>JavaScript</code> que se incluyen en los navegadores han experimentado una importante mejora de rendimiento en los últimos tiempos. Existen pruebas específicas destinadas a medir la velocidad de ejecución de distintos motores <code>JavaScript</code>.</p>
+<p><a href="http://arewefastyet.com/" title="Acceder a pruebas de velocidad de motores JavaScript realizadas a distintos navegadores (Se abre en una ventana nueva)">Velocidad de ejecución de distintos motores JavaScript.</a></p>
+<p>Aunque no vamos a aprender en esta unidad a programar en <code>JavaScript</code>, deberías saber cómo depurar el código que vamos a utilizar. Es conveniente que manejes un depurador para cada navegador que utilices.</p>
+<p>En versiones actuales de Firefox las herramientas de desarrollo ya vienen integradas en el ítem de menú "Desarrollador Web".</p>
+<h1 id="13-comunicacion-asincrona-con-el-servidor-web-ajax">1.3.- Comunicación asíncrona con el servidor web: AJAX.<a class="headerlink" href="#13-comunicacion-asincrona-con-el-servidor-web-ajax" title="Permanent link">&para;</a></h1>
+<p>Una de las principales causas de la evolución de <code>JavaScript</code> es, sin duda, la tecnología <code>AJAX</code>. Como ya vimos en la primera unidad, el término <code>AJAX</code> hace referencia a la posibilidad de una página web de establecer una comunicación con un servidor web y recibir una respuesta sin necesidad de que el navegador recargue la página.</p>
+<p><code>AJAX</code> utiliza el objeto <code>XMLHttpRequest</code>, creado originariamente por <code>Microsoft</code> como parte de su librería <code>MSXML</code>, y que hoy en día se ha incorporado de forma nativa a todos los navegadores actuales.</p>
+<p>Pese al nombre del objeto, y a que la letra X de las siglas AJAX hace referencia a XML, la información que se transmite de forma asíncrona entre el navegador y el servidor web no es necesario que se encuentre en formato XML.</p>
+<p>Entre las tareas que puedes llevar a cabo gracias a AJAX están:</p>
+<ul>
+<li>Actualizar el contenido de una página web sin necesidad de recargarla.</li>
+<li>Pedir y recibir información desde un servidor web manteniendo la página cargada en el navegador.</li>
+<li>Enviar información de la página a un servidor web en segundo plano.</li>
+</ul>
+<p>Dependiendo del navegador del usuario, y de si utiliza una versión antigua o moderna, tendrás que usar un método u otro para crear el objeto <code>XMLHttpRequest</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>// Distintas formas para crear el objeto 
+<span class="linenos" data-linenos="2 "></span>//  XMLHttpRequest según el navegador
+<span class="linenos" data-linenos="3 "></span>xmlhttp = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);
+<span class="linenos" data-linenos="4 "></span>xmlhttp = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+<span class="linenos" data-linenos="5 "></span>xmlhttp = new XMLHttpRequest();
+</code></pre></div>
+<p>Afortunadamente, muchas de las librerías <code>JavaScript</code> de las que hablábamos antes soportan también <code>AJAX</code> , y utilizan un código adaptado según el navegador del usuario. Si utilizas una de estas librerías podrás ahorrarte muchos quebraderos de cabeza al programar. Por ejemplo, si utilizas <code>jQuery</code> podrías utilizar <code>AJAX</code> para enviar en segundo plano el email validado en el ejemplo anterior. Simplemente tendrías que incluir en el <code>HTML</code> la librería <code>jQuery</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>//Versión 3.5.0 jQuery CDN jQuery
+<span class="linenos" data-linenos="2 "></span>&lt;script src=&quot;https://code.jquery.com/jquery-3.5.0.min.js&quot;
+<span class="linenos" data-linenos="3 "></span> integrity=&quot;sha256xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=&quot;crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+</code></pre></div>
+<p>Y tras el código de validación, debes ejecutar la función <code>AJAX</code> incluida en la librería <code>jQuery:</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>function validar_email() {
+<span class="linenos" data-linenos=" 2 "></span>    valor = document.getElementById(&quot;email&quot;).value;
+<span class="linenos" data-linenos=" 3 "></span>    // Aquí iría el código de validación
+<span class="linenos" data-linenos=" 4 "></span>    $.ajax({
+<span class="linenos" data-linenos=" 5 "></span>        type: &quot;POST&quot;, url: &quot;email.php&quot;, data: &quot;email=&quot; + valor,
+<span class="linenos" data-linenos=" 6 "></span>        statusCode: {
+<span class="linenos" data-linenos=" 7 "></span>        404: function() { alert(&#39;Página no encontrada&#39;); }
+<span class="linenos" data-linenos=" 8 "></span>        },
+<span class="linenos" data-linenos=" 9 "></span>        success: function(result) { alert( &quot;Resultado: &quot; + result ); }
+<span class="linenos" data-linenos="10 "></span>    });
+<span class="linenos" data-linenos="11 "></span>    return false;
+<span class="linenos" data-linenos="12 "></span>}
+</code></pre></div>
+<p>La función anterior envía la dirección de email introducida mediante <code>POST</code> a la página <code>"email.php"</code>, y muestra un mensaje con el resultado obtenido.</p>
+<h1 id="2-php-y-javascript">2.- PHP y JavaScript.<a class="headerlink" href="#2-php-y-javascript" title="Permanent link">&para;</a></h1>
+<p>Si sabes programar aplicaciones que se ejecuten en un servidor web (con un lenguaje como <code>PHP</code>) y en el navegador del usuario (con <code>JavaScript/jQuery</code>), tienes en tu mano las herramientas necesarias para construir aplicaciones web completas. Sin embargo, es necesario que antes de comenzar tengas claras las funcionalidades que soporta cada una de estas tecnologías de desarrollo, y cómo puedes hacer para utilizar ambas a la vez.</p>
+<p>Llevándolo a los extremos, podrías hacer aplicaciones en <code>PHP</code> que utilicen programación del cliente simplemente para tareas sencillas como verificar campos en los formularios antes de enviarlos. O, por el contrario, sería también posible programar aplicaciones completas que se ejecuten en el navegador del usuario, dejando el lenguaje del servidor para proporcionar ciertas funcionalidades como almacenamiento en bases de datos.</p>
+<p>Una alternativa no es necesariamente mejor que la otra. Es necesario analizar de forma independiente la lógica de cada aplicación, de manera que no se malgasten los recursos del servidor realizando tareas que podrían trasladarse al cliente web. En ocasiones también es necesario comprobar los tiempos de carga de las páginas y el tamaño de las mismas. Puede ser preferible utilizar <code>AJAX</code> para, por ejemplo, enviar nuevos registros al servidor, si el esfuerzo que invertimos redunda en un interfaz de usuario más ágil y usable. En cualquier caso, la consistencia y robustez de la aplicación no debe verse afectada.</p>
+<p>Si decides unir en una aplicación programación del cliente web con programación del servidor web, habrá ocasiones en que necesites comunicar ambos lenguajes. En el ejemplo anterior ya has comprobado cómo puedes hacer para pasar un valor o una variable <code>JavaScript</code> desde el navegador web a un guión en <code>PHP</code>: enviándolo como parámetro <code>POST</code> o <code>GET</code> en una petición de nueva página, bien sea al cargarla en el navegador o utilizando <code>AJAX</code> en una comunicación asíncrona:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>&lt;!DOCTYPE html&gt;
+<span class="linenos" data-linenos=" 2 "></span>&lt;html lang=&quot;es&quot;&gt;
+<span class="linenos" data-linenos=" 3 "></span>&lt;head&gt;
+<span class="linenos" data-linenos=" 4 "></span>    &lt;meta charset=&quot;UTF-8&quot;&gt;
+<span class="linenos" data-linenos=" 5 "></span>    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+<span class="linenos" data-linenos=" 6 "></span>    &lt;title&gt;Desarrollo Web&lt;/title&gt;
+<span class="linenos" data-linenos=" 7 "></span>&lt;/head&gt;
+<span class="linenos" data-linenos=" 8 "></span>&lt;body&gt;
+<span class="linenos" data-linenos=" 9 "></span>    &lt;script type=&quot;text/javascript&quot;&gt;
+<span class="linenos" data-linenos="10 "></span>        &lt;?php
+<span class="linenos" data-linenos="11 "></span>            // Creamos en la página un código JavaScript que
+<span class="linenos" data-linenos="12 "></span>            //   utiliza la variable PHP &quot;$email&quot;
+<span class="linenos" data-linenos="13 "></span>            $email = &quot;alumno@educacion.es&quot;;
+<span class="linenos" data-linenos="14 "></span>            echo &#39;window.open(&quot;email.php?email=&#39;.urlencode($email).&#39;&quot;);&#39;;
+<span class="linenos" data-linenos="15 "></span>        ?&gt;
+<span class="linenos" data-linenos="16 "></span>    &lt;/script&gt;
+<span class="linenos" data-linenos="17 "></span>&lt;/body&gt;
+<span class="linenos" data-linenos="18 "></span>&lt;/html&gt;
+</code></pre></div>
+<p>En ambos casos deberás asegurarte de que las cadenas que insertes en las direcciones <code>URL</code> no incluyan caracteres inválidos. Para evitarlo, en <code>PHP</code> puedes usar la función <code>"urlencode"</code>, y en <code>JavaScript</code>: <code>"encodeURIComponent"</code>.</p>
+<h1 id="21-aplicaciones-web-con-php-y-javascript">2.1.- Aplicaciones web con PHP y JavaScript.<a class="headerlink" href="#21-aplicaciones-web-con-php-y-javascript" title="Permanent link">&para;</a></h1>
+<p>Con lo que has visto hasta el momento, seguramente, ya te has hecho una idea de qué tareas son las que con más frecuencia hacen uso de <code>JavaScript</code>. Y si hay una que destaca sobre el resto es, sin duda, la validación de formularios <code>HTML</code>, que vamos a utilizar en los ejemplos que se desarrollan a lo largo de la presente unidad.</p>
+<p>Como ya sabes, el mecanismo que utilizan las aplicaciones web para permitir al usuario la entrada de información es el formulario . Los datos que se introducen en un formulario web se envían al servidor utilizando bien el método <code>POST</code>, bien el método <code>GET</code>. Muchos de los campos de los formularios tienen, normalmente, restricciones sobre el contenido que se debe rellenar. La validación de un formulario web consiste en comprobar que el contenido introducido en todos los componentes del mismo cumpla estas restricciones.</p>
+<p>Si no utilizas código ejecutable en el navegador, la única forma de validar un formulario consiste en enviarlo al servidor web para comprobar si existen errores en los datos. En caso de que así sea, habrá que volver a enviar el formulario al navegador del usuario mostrando las advertencias oportunas.</p>
+<p>Obviamente, si utilizas <code>JavaScript</code> en tus aplicaciones, la validación se puede realizar en el cliente web. De esta forma el proceso es mucho más rápido. No es necesario enviar la información al servidor hasta que se haya comprobado que no existen errores de validación.</p>
+<p>Sin embargo, aunque parecen claras las ventajas de la validación de formularios en el cliente web, hay ocasiones en las que ésta no es posible. Ya vimos que no siempre podrás asegurar que el navegador que utiliza el usuario tiene capacidad para ejecutar código <code>JavaScript</code>, o incluso puede suceder que se haya deshabilitado por motivos de seguridad.</p>
+<p>En los casos que no sea posible asegurar la capacidad de ejecución de código de los clientes, la solución óptima sería utilizar un escenario dual: diseñar las aplicaciones suponiendo que es posible ejecutar <code>JavaScript</code> en los clientes, y al mismo tiempo prever la posibilidad de que no sea así. Por ejemplo, en el caso de la validación del formulario, podrías crear el código <code>JavaScript</code> de validación y, si en algún cliente este código no se puede ejecutar, preparar un código <code>PHP</code> similar que realice la validación en el servidor.</p>
+<p>Por ejemplo, supongamos que queremos validar los datos que se introducen en el siguiente formulario web:</p>
+<p><a href="DWES07_CONT_R07_Form.png" title="Ampliar imagen del formulario de registro"><img alt="Imagen de una captura del navegador Firefox en la que se muestra un formulario web para introducción de datos, con casillas de texto para Nombre, Contraseña (2) y email." src="/Users/xavier/projectes/githubpages/docs/imagenes/Moodle/DWES07_CONT_R07_Form.png" title="Formulario" /></a></p>
+<p>Captura de pantalla Firefox (Elaboración propia.)</p>
+<p>Si realizas la validación en <code>PHP</code>, podrías generar junto con la página web el texto con las advertencias de validación. Y si el formulario lo quieres validar también utilizando <code>JavaScript</code>, tendrás que crear los mismos textos o similares. Una posibilidad para no repetir el código que introduce esos textos en el cliente y en el servidor, es introducir los textos de validación en las etiquetas <code>HTML</code> de la página web, y utilizar estilos para mostrarlos, o no, según sea oportuno.</p>
+<p>Por ejemplo, para realizar la validación del formulario web anterior, puedes crear los siguientes textos en <code>HTML</code> (asociados al nombre, las contraseñas y la dirección de correo respectivamente):</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;span class=&#39;error&#39;&gt;Debe tener más de 3 caracteres.&lt;/span&gt;
+<span class="linenos" data-linenos="2 "></span>&lt;span class=&#39;error&#39;&gt;Debe ser mayor de 5 caracteres o no coinciden.&lt;/span&gt;
+<span class="linenos" data-linenos="3 "></span>&lt;span class=&#39;error&#39;&gt;La dirección de email no es válida.&lt;/span&gt;
+</code></pre></div>
+<p>El código <code>HTML</code> y <code>JavaScript</code> deberá ocultar cada uno de los textos cuando la validación de su elemento respectivo sea correcta. Por ejemplo, si el nombre tiene más de tres letras, validará correctamente y no se deberá mostrar el primer mensaje.</p>
+<h1 id="211-aplicaciones-web-con-php-y-javascript-i">2.1.1.- Aplicaciones web con PHP y JavaScript (I).<a class="headerlink" href="#211-aplicaciones-web-con-php-y-javascript-i" title="Permanent link">&para;</a></h1>
+<p>Para realizar la validación del formulario en el servidor web utilizando <code>PHP</code>, necesitarás utilizar las siguientes funciones o similares:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>&lt;?php
+<span class="linenos" data-linenos=" 2 "></span>function validarNombre($nombre){
+<span class="linenos" data-linenos=" 3 "></span>    return !(strlen($nombre)&lt;4);
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span>}
+<span class="linenos" data-linenos=" 6 "></span>function validarEmail($email){
+<span class="linenos" data-linenos=" 7 "></span>    return preg_match(&quot;/^[a-z0-9]+([_\\.-][a-z0-9]+)*@([a-z0-9]+([\.-][a-z0-9]+)*)+\\.[a-z]{2,}$/i&quot;, $email);
+<span class="linenos" data-linenos=" 8 "></span>}
+<span class="linenos" data-linenos=" 9 "></span>function validarPasswords($pass1, $pass2) {
+<span class="linenos" data-linenos="10 "></span>    return ($pass1 == $pass2) &amp;&amp; (strlen($pass1) &gt; 5);
+<span class="linenos" data-linenos="11 "></span>}
+</code></pre></div>
+<p>Fíjate en el uso de la función <code>"preg_match()"</code> y de expresiones regulares (<a href="#tbccf79a9-5976-51d1-c539-28016e290092" title="Expresiones Regulares (regexp) |"><code>regexp</code></a>) para validar la dirección de correo.</p>
+<p><a href="https://www.php.net/manual/es/function.preg-match.php" title="Acceder a función preg_match para realizar comparaciones utilizando expresiones regulares (se abre en una ventana nueva).">Función <code>preg_match</code></a></p>
+<p>Ten en cuenta que las barras invertidas (<code>"\"</code>) tienen un significado especial dentro de una cadena de <code>PHP</code> (sirven para escapar el siguiente carácter, por ejemplo por si queremos mostrar unas comillas); por ese motivo, la doble barra "<code>\\"</code> se convierte en una barra simple <code>"\"</code> cuando se interpreta la expresión regular.</p>
+<p>Son una secuencia de caracteres que conforma un patrón de búsqueda.</p>
+<h2 id="debes-conocer">Debes conocer<a class="headerlink" href="#debes-conocer" title="Permanent link">&para;</a></h2>
+<p>En ocasiones es importante saber construir expresiones regulares en <code>PHP</code> para realizar comparación de cadenas de texto con patrones. Tienes más información en el siguiente enlace.</p>
+<p><a href="https://diego.com.es/expresiones-regulares-en-php" title="Acceder a tutorial de la web diego.com.es sobre expresiones regulares en PHP (se abre en un aventana nueva).">Expresiones regulares en PHP.</a></p>
+<p>Con las funciones anteriores, puedes crear código en <code>PHP</code> que oculte los mensajes de validación cuando no sean necesarios:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>&lt;span id=&#39;errUsu&#39; for=&#39;usu&#39; 
+<span class="linenos" data-linenos=" 2 "></span>    class=&#39;&lt;?php echo (!isset($_POST[&#39;enviar&#39;]) || validarNombre($_POST[&#39;usu&#39;])) ? &quot;d-none&quot; : &quot;input-group form-group text-danger&quot; ?&gt;&#39;&gt;
+<span class="linenos" data-linenos=" 3 "></span>Debe tener más de tres caracteres.
+<span class="linenos" data-linenos=" 4 "></span>&lt;/span&gt;
+<span class="linenos" data-linenos=" 5 "></span>&lt;span id=&#39;errPass&#39; for=&#39;pass2&#39; 
+<span class="linenos" data-linenos=" 6 "></span>    class=&#39;&lt;?php echo (!isset($_POST[&#39;enviar&#39;]) || validarPasswords($_POST[&#39;pass1&#39;], $_POST[&#39;pass2&#39;])) ? &quot;d-none&quot; : &quot;input-group form-group text-danger&quot; ?&gt;&#39;&gt;
+<span class="linenos" data-linenos=" 7 "></span>    Deben tener más de 5 caracteres o ser iguales.
+<span class="linenos" data-linenos=" 8 "></span>&lt;/span&gt;
+<span class="linenos" data-linenos=" 9 "></span>&lt;span id=&#39;errMail&#39; for=&#39;mail&#39; 
+<span class="linenos" data-linenos="10 "></span>    class=&#39;&lt;?php echo (!isset($_POST[&#39;enviar&#39;]) || validarEmail($_POST[&#39;mail&#39;])) ? &quot;d-none&quot; : &quot;input-group form-group text-danger&quot; ?&gt;&#39;&gt;
+<span class="linenos" data-linenos="11 "></span>    La dirección de email NO es válida.
+<span class="linenos" data-linenos="12 "></span>&lt;/span&gt;
+</code></pre></div>
+<p>El código anterior oculta los textos de validación que no sea necesario mostrar. En <code>Bootstrap</code>, la clase: <code>"d-none"</code> equivale a <code>"display:none"</code> en <code>CSS.</code></p>
+<p>Fíjate que se utiliza el operador ternario de comparación en él la expresión <code>"(expr1) ? (expr2) : (expr3)"</code> evalúa a <code>"expr2"</code> si <code>"expr1"</code> se evalúa como <code>"TRUE"</code> y a <code>"expr3"</code> si <code>"expr1"</code> se evalúa como <code>"FALSE"</code>.</p>
+<p><a href="DWES07_CONT_R08_ErroreForm.png" title="Ampliar imagen de errores de validación en un formulario."><img alt="Imagen de una captura de Firefox  donde se puede ver un formulario con cuatro campos, debajo del nombre de usuario en rojo un texto de error al igual que debajo del campo repita la contraseña y email." src="/Users/xavier/projectes/githubpages/docs/imagenes/Moodle/DWES07_CONT_R08_ErroreForm.png" title="Errores del formulario" /></a></p>
+<p>Recorte captura de pantalla de Firefox (Elaboración propia.)</p>
+<p>Revisa el código de validación <code>PHP</code> resultante. Descargar código de ejemplo: <a href="Ejercicio2_2.zip" title="Descargar fichero comprimido con el código del ejemplo anterior [zip - 1,88 KB]">Código</a> (zip - 1,88 KB)</p>
+<h1 id="212-aplicaciones-web-con-php-y-javascript-ii">2.1.2.- Aplicaciones web con PHP y JavaScript (II).<a class="headerlink" href="#212-aplicaciones-web-con-php-y-javascript-ii" title="Permanent link">&para;</a></h1>
+<p>Partiendo de la página <code>PHP</code> anterior, que ya incluye código para validar el formulario web en el servidor, vas a ver cómo puedes hacer para incorporarle código en <code>JavaScript</code> que realice la misma validación en el cliente. De esta forma, si el navegador del usuario soporta <code>JavaScript</code>, se reducirá el procesamiento del servidor y la transferencia de información entre éste y el cliente.</p>
+<p>Crearás todo el código necesario en un archivo externo que llamaremos <code>"validar.js"</code>. Como vamos a utilizar la librería <code>jQuery</code>, tendrás que añadir las dos líneas siguientes a la página anterior:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+<span class="linenos" data-linenos="2 "></span>&lt;script src=&#39;validar.js&#39;&gt;&lt;/script&gt;
+</code></pre></div>
+<p>En el enlace siguiente puedes encontrar los enlaces para bajarte el <code>CDN</code> más reciente para <code>jQuery</code>: <a href="https://jquery.com/download/" title="Acceder a la página web de descargas de jQuery (se abre en una ventana nueva)"><code>Jquery</code></a>.</p>
+<p>En el código <code>JavaScript</code> habrá que definir unas funciones de validación similares a las programadas anteriormente en <code>PHP</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>function validarNombre() {
+<span class="linenos" data-linenos=" 2 "></span>    var usu = $(&quot;#usu&quot;);
+<span class="linenos" data-linenos=" 3 "></span>    var errUsu = $(&quot;#errUsu&quot;);
+<span class="linenos" data-linenos=" 4 "></span>    if (usu.val().length &lt; 4) {
+<span class="linenos" data-linenos=" 5 "></span>        errUsu.removeClass(&quot;d-none&quot;).addClass(&quot;input-group form-group text-danger&quot;);
+<span class="linenos" data-linenos=" 6 "></span>        return false;
+<span class="linenos" data-linenos=" 7 "></span>    }
+<span class="linenos" data-linenos=" 8 "></span>    errUsu.last().addClass(&quot;d-none&quot;);
+<span class="linenos" data-linenos=" 9 "></span>    return true;
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span>}
+<span class="linenos" data-linenos="12 "></span>function validarPass() {
+<span class="linenos" data-linenos="13 "></span>    var pass1 = $(&quot;#pass1&quot;);
+<span class="linenos" data-linenos="14 "></span>    var pass2 = $(&quot;#pass2&quot;);
+<span class="linenos" data-linenos="15 "></span>    var errPass = $(&quot;#errPass&quot;);
+<span class="linenos" data-linenos="16 "></span>    if (pass1.val().length &lt; 6 || pass1.val() != pass2.val()) {
+<span class="linenos" data-linenos="17 "></span>        errPass.removeClass(&quot;d-none&quot;).addClass(&quot;input-group form-group text-danger&quot;);
+<span class="linenos" data-linenos="18 "></span>        return false;
+<span class="linenos" data-linenos="19 "></span>    }
+<span class="linenos" data-linenos="20 "></span>    errPass.last().addClass(&quot;d-none&quot;);
+<span class="linenos" data-linenos="21 "></span>    return true;
+<span class="linenos" data-linenos="22 "></span>
+<span class="linenos" data-linenos="23 "></span>}
+<span class="linenos" data-linenos="24 "></span>function validarMail() {
+<span class="linenos" data-linenos="25 "></span>    var mail = $(&quot;#mail&quot;)
+<span class="linenos" data-linenos="26 "></span>    var errMail = $(&quot;#errMail&quot;);
+<span class="linenos" data-linenos="27 "></span>    if (!mail.val().match(&quot;^[a-zA-Z0-9]+[a-zA-Z0-9_-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+[a-zA-Z0-9]+.[a-z]{2,4}$&quot;)) {
+<span class="linenos" data-linenos="28 "></span>        errMail.removeClass(&quot;d-none&quot;).addClass(&quot;input-group form-group text-danger&quot;);
+<span class="linenos" data-linenos="29 "></span>        return false;
+<span class="linenos" data-linenos="30 "></span>    }
+<span class="linenos" data-linenos="31 "></span>    errMail.last().addClass(&quot;d-none&quot;);
+<span class="linenos" data-linenos="32 "></span>    return true;
+<span class="linenos" data-linenos="33 "></span>}
+<span class="linenos" data-linenos="34 "></span>function validar() {
+<span class="linenos" data-linenos="35 "></span>    return validarNombre() &amp; validarMail() &amp; validarPass();
+<span class="linenos" data-linenos="36 "></span>}
+</code></pre></div>
+<p>En <code>JavaScript</code> usamos la función <code>"match"</code> para validar las direcciones de <code>email</code>. Las expresiones regulares que admite esta función no son exactamente iguales, pero si parecidas, a las que viste anteriormente para la función <code>"preg_match"</code> de <code>PHP</code>.</p>
+<p>Las funciones usan los métodos de <code>jQuery</code> <code>addClass()</code> y <code>removeClass()</code> para incorporar, y quitar, respectivamente, los textos de validación a la clase oculto, lo mismo que hacía el código <code>PHP</code> anterior. Para seleccionar los elementos a ocultar, puedes utilizar también <code>jQuery</code>. Por ejemplo, para seleccionar el elemento de la página web con identificador <code>"usu"</code>, se pone:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>var usu=$(&quot;#usu&quot;);
+</code></pre></div>
+<p>Podemos capturar el evento <code>submit</code> del formulario forzando a que se valide con la función de <code>JavaScript</code>. Si la validación no es correcta <code>event.preventDefault()</code> evitará que se haga el <code>submit</code> del mismo.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$(&quot;#registro&quot;).submit(function(event){
+<span class="linenos" data-linenos="2 "></span>    if(!validar()) event.preventDefault();
+<span class="linenos" data-linenos="3 "></span>});
+</code></pre></div>
+<p>En el código final del ejemplo se ha quitado la validación <code>PHP</code> (en el servidor) para que se vea más legible</p>
+<p><a href="Ejercicio2_3.zip" title="Descargar Ejemplo de validación de formulario web utilizando JavaScript [zip - 2,27 KB]">Código final de Ejemplo.</a> (zip - 2,27 KB) </p>
+<p>Si trabajas con <code>BootStrap</code> en su página te puedes descargar una plantilla de ejemplo donde ya viene integrado <code>Bootstrap</code> y <code>jQuery</code> .Puedes ver la plantilla en el enlace siguiente: <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/" title="Acceder a la página de ejemplo de una plantilla HTML con Bootstrap y jQuery integrado (se abre en una ventana nueva).">Plantilla Ejemplo</a></p>
+<h1 id="3-utilizacion-de-ajax-con-php">3.- Utilización de AJAX con PHP.<a class="headerlink" href="#3-utilizacion-de-ajax-con-php" title="Permanent link">&para;</a></h1>
+<h2 id="caso-practico">Caso práctico<a class="headerlink" href="#caso-practico" title="Permanent link">&para;</a></h2>
+<p>Como ya sabes, la tecnología <code>AJAX</code> se utiliza desde el cliente para permitir comunicaciones asíncronas con el servidor web, sin necesidad de recargar la página que se muestra en el navegador. Se basa en la utilización de código en lenguaje <code>JavaScript</code>. Por tanto, te estarás preguntando, ¿qué tiene que ver la tecnología <code>AJAX</code> con el lenguaje <code>PHP</code>?</p>
+<p>Acabamos de ver cómo se pueden crear aplicaciones web que utilicen de forma simultánea la programación del cliente web (con <code>JavaScript</code>) y la programación del servidor web (con <code>PHP</code>). En el procedimiento seguido en el ejemplo anterior, ambas tecnologías coexistían en una misma página, pero su programación era independiente. El código <code>PHP</code> se ejecutaba en el servidor, y en la misma página se incluían también guiones en lenguaje <code>JavaScript</code> que se ejecutan en el navegador. En nuestro ejemplo solamente existía una relación: si el navegador permitía la ejecución de código <code>JavaScript</code>, se deshabilitaba el envío del formulario y la validación se realizaba en el cliente. En este caso no se llegaba a enviar la página al servidor y no se ejecutaba por tanto el código <code>PHP</code> de validación.</p>
+<p>Si vas a usar aplicaciones que utilicen ambos lenguajes, es preferible tener un mecanismo mejor para integrarlos. Afortunadamente existen librerías para <code>PHP</code> que te permiten aprovechar las capacidades de <code>JavaScript</code> utilizando casi exclusivamente código en lenguaje <code>PHP</code>. Estas librerías definen una serie de objetos que puedes utilizar en el código de servidor, y que generan de forma automática código <code>JavaScript</code> en las páginas web que se envían al cliente.</p>
+<p>La mayoría de estas librerías añaden a las aplicaciones web funcionalidades de la tecnología <code>AJAX</code>. Esto es: permiten crear páginas <code>PHP</code> que, tras ejecutarse en el servidor, producen páginas web que incorporan código <code>JavaScript</code> con funcionalidades <code>AJAX</code>. El mecanismo de funcionamiento lo puedes observar en el siguiente diagrama.</p>
+<p><a href="DWES07_CONT_R09_diagrama.png" title="Ampliar esquema funcionamiento AJAX"><img alt="Imagen del esquema de funcionamiento de las librerías PHP que incorporan funcionalidades AJAX." src="/Users/xavier/projectes/githubpages/docs/imagenes/Moodle/DWES07_CONT_R09_diagrama.png" title="Esquema AJAX" /></a></p>
+<p>Editor DIA (Elaboración propia)</p>
+<p>Muchas de estas librerías suelen apoyarse en librerías <code>JavaScript</code> como <code>jQuery</code> para la ejecución de código en el cliente. En Internet puedes encontrar información sobre librerías <code>PHP</code> con soporte para <code>AJAX</code>.</p>
+<p>A continuación vas a aprender a utilizar dos de estas librerías: <strong>Xajax</strong> y <strong>jQuery4PHP</strong>.</p>
+<h1 id="31-xajax">3.1.- Xajax.<a class="headerlink" href="#31-xajax" title="Permanent link">&para;</a></h1>
+<p><code>Xajax</code> es una librería <code>PHP</code> de código abierto que permite generar aplicaciones web con tecnología <code>AJAX</code>. Facilita la utilización desde el cliente de funciones existentes en el servidor. Al utilizar los objetos <code>AJAX</code> en el código <code>PHP</code>, las páginas <code>HTML</code> que se obtienen incorporan el código <code>JavaScript</code> necesario para realizar las llamadas al servidor mediante <code>AJAX</code>. En la página web del proyecto tienes información disponible sobre su utilización.</p>
+<p><a href="https://github.com/Xajax/Xajax" title="Acceder página web  de la librería Xajax en github (se abre en una ventana nueva).">Página en GitHub del proyecto</a></p>
+<p>Para poder utilizar <code>AJAX</code>, descárgate la última versión de la librería desde la sección de descargas de su página web. De las carpetas que contienen los ficheros comprimidos, necesitas el contenido de <code>"xajax_core</code>" y <code>"xajax_js"</code>. Cópialas a una ruta de tu servidor web en la que sean accesibles por tus aplicaciones web. <a href="https://github.com/Xajax/Xajax/archive/master.zip" title="Descargar master.zip archivo comprimido con las librerias Xajax">Descargar <code>ZIP</code></a></p>
+<p>En las páginas <code>PHP</code> en que quieras utilizar <code>AJAX</code>, deberás incluir la librería escribiendo el siguiente código:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>require_once(&quot;xajax_core/xajax.inc.php&quot;);
+</code></pre></div>
+<p>Asegúrate de que la ruta a la librería sea la correcta. Lo siguiente es crear un objeto de la clase <code>xajax</code>, indicando como parámetro el script <code>PHP</code> que contiene las funciones a las que se podrán realizar llamadas mediante <code>AJAX</code>. Puedes incluir estas funciones en una página aparte o en la misma página <code>PHP</code>, y en este caso no será necesario indicar ningún parámetro:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$xajax = new xajax();
+</code></pre></div>
+<p><code>AJAX</code> necesita incluir en la página web que se envía al navegador su propio código <code>JavaScript</code>. Para ello, tienes que incluir en tu código <code>PHP</code> la siguiente llamada al método <code>printJavaScript</code> del objeto <code>$xajax</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$xajax-&gt;printJavascript();
+</code></pre></div>
+<p>En caso necesario, también deberás configurar la ruta de acceso a la carpeta <code>xajax_js</code> que contiene el código <code>JavaScript</code> de la librería (usa tu propia ruta como segundo parámetro). Esta carpeta se está incluida en el proyecto:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$xajax-&gt;configure(&#39;javascript URI&#39;,&#39;./libs/&#39;);;
+</code></pre></div>
+<p>Existen otras opciones de configuración de Xajax. Por ejemplo, cuando las cosas no funcionan como deberían, es muy interesante la opción que activa los mensajes de depuración:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$xajax-&gt;configure(&#39;debug&#39;,true);
+</code></pre></div>
+<p><a href="DWES07_CONT_R10_debug.png" title="Ampliar imagen debug Xajax"><img alt="Imagen de una captura del navegador Firefox en la que se muestra la ventana de depuración que genera la librería Xajax." src="/Users/xavier/projectes/githubpages/docs/imagenes/Moodle/DWES07_CONT_R10_debug.png" title="Xajax con debug activado" /></a></p>
+<p>Captura de pantalla Firefox (Elaboración propia.)</p>
+<p>Y por último, tienes que utilizar el método <code>"register()"</code> para registrar cada una de las funciones <code>PHP</code> del servidor que estarán disponibles para ser ejecutadas de forma asíncrona desde el navegador:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$xajax-&gt;register(XAJAX_FUNCTION,&quot;funcion1&quot;);
+<span class="linenos" data-linenos="2 "></span>$xajax-&gt;register(XAJAX_FUNCTION,&quot;funcion2&quot;);
+<span class="linenos" data-linenos="3 "></span>. . .
+</code></pre></div>
+<p>En el script <code>PHP</code> en que definas las funciones (si no es la misma página que la anterior), tienes que incluir la librería, crear el objeto y registrar las funciones de la misma forma que hiciste antes:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>require_once(&quot;xajax_core/xajax.inc.php&quot;);
+<span class="linenos" data-linenos="2 "></span>$xajax = new xajax();
+<span class="linenos" data-linenos="3 "></span>$xajax-&gt;register(XAJAX_FUNCTION,&quot;funcion1&quot;);
+<span class="linenos" data-linenos="4 "></span>$xajax-&gt;register(XAJAX_FUNCTION,&quot;funcion2&quot;);
+</code></pre></div>
+<p>Al registrar una función, web crea automáticamente una función <code>JavaScript</code> en el documento <code>HTML</code> con su mismo nombre prefijado por "<code>xajax_</code>". En el caso anterior, se crearán las funciones <code>"xajax_funcion1"</code> y <code>"xajax_funcion2"</code>.</p>
+<p>Además deberás utilizar el método <code>"processRequest()"</code>, que es el encargado de procesar las llamadas que reciba la página.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$xajax-&gt;processRequest();
+</code></pre></div>
+<p>Es importante tener en cuenta que la llamada a <code>processRequest</code> debe realizarse antes de que el guion <code>PHP</code> genere ningún tipo de salida.</p>
+<p>En cada una de las funciones que definas, podrás instanciar y utilizar un objeto de la clase <code>xajaxResponse</code> para devolver al navegador los comandos resultado del procesamiento:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>function funcion1($a){
+<span class="linenos" data-linenos="2 "></span>    $respuesta = new xajaxResponse();
+<span class="linenos" data-linenos="3 "></span>    . . .
+<span class="linenos" data-linenos="4 "></span>    . . .
+<span class="linenos" data-linenos="5 "></span>    return $respuesta;
+<span class="linenos" data-linenos="6 "></span>}
+</code></pre></div>
+<h1 id="311-xajax-i">3.1.1.- Xajax (I).<a class="headerlink" href="#311-xajax-i" title="Permanent link">&para;</a></h1>
+<p>Vamos a ver un ejemplo de programación que utilice la librería <code>Xajax</code>. Partiendo del formulario web que utilizaste anteriormente, veremos el código <code>Xajax</code> necesario para utilizar <code>AJAX</code> en su validación. La idea es crear una función <code>PHP</code>, que llamaremos "<code>validarFormulario()"</code>, que reciba los datos del formulario y realice su validación. La página web, al pulsar el botón de enviar del formulario, utilizará <code>AJAX</code> para llamar a esta función y mostrar los errores de validación que devuelva.</p>
+<p><a href="DWES07_CONT_R11_form.png" title="Ampliar imagen del formulario."><img alt="Imagen de una captura del navegador Firefox en la que se muestra un formulario web para introducción de datos, con casillas de texto para Nombre, Contraseña (2) y email, y tres errores de validación en los campos nombre, contraseña y email." src="/Users/xavier/projectes/githubpages/docs/imagenes/Moodle/DWES07_CONT_R11_form.png" title="Formulario" /></a></p>
+<p>Captura de pantalla FIrefox (Elaboración propia)</p>
+<p>En este ejemplo, todo el código va a compartir la misma página, incluyendo las funciones que se ejecutarán mediante <code>AJAX</code>. El primer paso es incluir la librería <code>Xajax</code>, y definir la función de validación, que aprovechará el código de validación <code>PHP</code> que creaste antes:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>&lt;?php
+<span class="linenos" data-linenos=" 2 "></span>//1.- Incluimos las librerias Xajax
+<span class="linenos" data-linenos=" 3 "></span>require_once &quot;xajax/xajax_core/xajax.inc.php&quot;;
+<span class="linenos" data-linenos=" 4 "></span>//2.- Creamos las funciones de validación que serán lammadas desde JS
+<span class="linenos" data-linenos=" 5 "></span>function validarNombre($nombre){
+<span class="linenos" data-linenos=" 6 "></span>    if (strlen($nombre) &lt; 4) return false;
+<span class="linenos" data-linenos=" 7 "></span>    return true;
+<span class="linenos" data-linenos=" 8 "></span>}
+<span class="linenos" data-linenos=" 9 "></span>function validarEmail($email){
+<span class="linenos" data-linenos="10 "></span>    return preg_match(&quot;/^[a-z0-9]+([_\\.-][a-z0-9]+)*@([a-z0-9]+([\.-][a-z0-9]+)*)+\\.[a-z]{2,}$/i&quot;, $email);
+<span class="linenos" data-linenos="11 "></span>}
+<span class="linenos" data-linenos="12 "></span>function validarPasswords($pass1, $pass2){
+<span class="linenos" data-linenos="13 "></span>    return ($pass1 == $pass2 &amp;&amp; strlen($pass1) &gt; 5);
+<span class="linenos" data-linenos="14 "></span>}
+<span class="linenos" data-linenos="15 "></span>function validarFormulario($valores){
+<span class="linenos" data-linenos="16 "></span>    $respuesta = new xajaxResponse();
+<span class="linenos" data-linenos="17 "></span>    $error = false;
+<span class="linenos" data-linenos="18 "></span>    if (!validarNombre($valores[&#39;usu&#39;])) {
+<span class="linenos" data-linenos="19 "></span>        $respuesta-&gt;assign(&quot;errUsu&quot;, &quot;innerHTML&quot;, &quot;El nombre debe tener más de 3 caracteres.&quot;);
+<span class="linenos" data-linenos="20 "></span>        $error = true;
+<span class="linenos" data-linenos="21 "></span>    } else $respuesta-&gt;clear(&quot;errUsu&quot;, &quot;innerHTML&quot;);
+<span class="linenos" data-linenos="22 "></span>    if (!validarPasswords($valores[&#39;pass1&#39;], $valores[&#39;pass2&#39;])) {
+<span class="linenos" data-linenos="23 "></span>        $respuesta-&gt;assign(&quot;errPass&quot;, &quot;innerHTML&quot;, &quot;La contraseña debe ser mayor de 5 caracteres o no coinciden.&quot;);
+<span class="linenos" data-linenos="24 "></span>        $error = true;
+<span class="linenos" data-linenos="25 "></span>    } else $respuesta-&gt;clear(&quot;errPass&quot;, &quot;innerHTML&quot;);
+<span class="linenos" data-linenos="26 "></span>    if (!validarEmail($valores[&#39;mail&#39;])) {
+<span class="linenos" data-linenos="27 "></span>        $respuesta-&gt;assign(&quot;errMail&quot;, &quot;innerHTML&quot;, &quot;La dirección de email no es válida.&quot;);
+<span class="linenos" data-linenos="28 "></span>        $error = true;
+<span class="linenos" data-linenos="29 "></span>    } else $respuesta-&gt;clear(&quot;errMail&quot;, &quot;innerHTML&quot;);
+<span class="linenos" data-linenos="30 "></span>    if (!$error) $respuesta-&gt;alert(&quot;Todo correcto.&quot;);
+<span class="linenos" data-linenos="31 "></span>
+<span class="linenos" data-linenos="32 "></span>    $respuesta-&gt;assign(&quot;enviar&quot;, &quot;value&quot;, &quot;Enviar&quot;);
+<span class="linenos" data-linenos="33 "></span>    $respuesta-&gt;assign(&quot;enviar&quot;, &quot;disabled&quot;, false);
+<span class="linenos" data-linenos="34 "></span>
+<span class="linenos" data-linenos="35 "></span>    return $respuesta;
+<span class="linenos" data-linenos="36 "></span>}
+</code></pre></div>
+<p>Como ves, si el nombre no valida, se utiliza el método <code>assign</code> de <code>"xajaxResponse()"</code> para asignar al elemento de <code>"id=errUsu"</code> (un <code>span</code> que ya está creado) el mensaje de error correspondiente. Si el nombre es válido, se vacía el contenido de ese elemento utilizando <code>"clear()"</code> (por si se estuviera mostrando algún mensaje de error anterior). Este procedimiento tendrás que realizarlo para los tres elementos que debes validar en el formulario.</p>
+<p>Si no se produce ningún error de validación, se muestra un mensaje de información de que todo está correcto. Además, se utiliza <code>"assign"</code> para volver a habilitar el botón de envío del formulario, y restaurar su etiqueta a <code>Enviar</code> (ahora vemos en qué otro lugar se cambia).</p>
+<p>Como ya viste anteriormente, antes de crear el contenido <code>HTML</code> de la página, deberás incluir las siguientes sentencias <code>PHP</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$xajax = new xajax();
+<span class="linenos" data-linenos="2 "></span>$xajax-&gt;register(XAJAX_FUNCTION,&quot;validarFormulario&quot;);
+<span class="linenos" data-linenos="3 "></span>$xajax-&gt;configure(&#39;javascript URI, &#39;xajax/&#39;);
+<span class="linenos" data-linenos="4 "></span>$xajax-&gt;configure(&quot;debug&quot;, true); //si queremos debug
+<span class="linenos" data-linenos="5 "></span>$xajax-&gt;processRequest();
+</code></pre></div>
+<h1 id="312-xajax-ii">3.1.2.- Xajax (II).<a class="headerlink" href="#312-xajax-ii" title="Permanent link">&para;</a></h1>
+<p>Para ejecutar el código de validación cuando se envíe el formulario deberás crear una función <code>JavaScript</code> y asignarla al evento <code>"onsubmit"</code> del formulario.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;form id=&#39;miForm&#39; action=&quot;javascript:void(null);&quot; onsubmit=&quot;enviarFormulario();&quot;&gt;
+</code></pre></div>
+<p>La función <code>JavaScript</code> <code>"enviarFormulario()"</code> utilizará la función <code>"xajax_validarFormulario()"</code> que ha sido creada automáticamente por <code>Xajax</code> al registrar la función correspondiente. Además se encargará de deshabilitar el botón de envío y de cambiar el texto que muestra:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>xajax.$(&#39;enviar&#39;).disabled=true;
+<span class="linenos" data-linenos="2 "></span>xajax.$(&#39;enviar&#39;).value=&quot;Un momento...&quot;;
+<span class="linenos" data-linenos="3 "></span>xajax_validarFormulario (xajax.getFormValues(&quot;miForm&quot;));
+</code></pre></div>
+<p>Este método de llamar a una función registrada se conoce como asíncrono. Una vez realizada la llamada a la función, el procesamiento del formulario continúa sin esperar a recibir una respuesta. Es por este motivo que se deshabilita el botón de enviar el formulario. Cuando se recibe la respuesta de la función, se producen en el formulario los cambios que se indican en la misma.</p>
+<p>Existe en <code>Xajax</code> otro método de realizar llamadas síncronas a una función registrada: el método: "<code>xajax.request()"``.</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>respuesta = xajax.request({xjxfun:&quot;validarFormulario&quot;}, {mode:&#39;synchronous&#39;, parameters: [&quot;valor1&quot;, &quot;valor2&quot;, …]})
+</code></pre></div>
+<p>La función <code>PHP</code> a la que se realiza la llamada, debe recibir tantos parámetros como se pasan. Para indicar el valor que se devuelve, puede usar el método <code>"setReturnValue()"</code> de la clase <code>xajaxResponse</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$respuesta = new xajaxResponse();
+<span class="linenos" data-linenos="2 "></span>. . .
+<span class="linenos" data-linenos="3 "></span>$respuesta-&gt;setReturnValue(&quot;valorDevuelto&quot;);
+<span class="linenos" data-linenos="4 "></span>return $respuesta;
+</code></pre></div>
+<p>Fíjate que para realizar estas acciones se utiliza el objeto <code>JavaScript</code>: <code>xajax</code>. Su método <code>"getFormValues()"</code> se encarga de obtener los datos de un formulario</p>
+<p>Para acceder a los elementos de una página <code>HTML</code> mediante <code>JavaScript</code> mediante su atributo <code>"id"</code>, se puede usar:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>objUsuario = document.getElementById(&quot;usuario&quot;);
+</code></pre></div>
+<p>Y si quieres conocer su valor:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>valorUsuario = objUsuario.value;
+</code></pre></div>
+<p><a href="DWES07_CONT_R12_debug.png" title="Ampliar imagen Debug anterior"><img alt="Imagen de una captura del navegador Firefox en la que se utiliza Firebug para mostrar los parámetros POST enviados en una petición AJAX." src="/Users/xavier/projectes/githubpages/docs/imagenes/Moodle/DWES07_CONT_R12_debug.png" title="Datos POST Ajax" /></a></p>
+<p>Captura Firefox (Elaboración Propia.)</p>
+<p>Si utilizas La herramientas de desarrollador de Firefox puedes comprobar que los parámetros se envían mediante POST.</p>
+<p>Es importante que tengas clara la estructura en clases de la librería <code>Xajax</code>, y sepas diferenciar entre las clases <code>PHP</code> y las clases <code>JavaScript</code> de la misma. Las principales clases son las que has visto en el ejemplo anterior: <code>xajax</code> y <code>xajaxResponse</code> en cuanto a clases <code>PHP</code>, y <code>xajax</code> en cuanto a <code>JavaScript</code>.</p>
+<h1 id="313-xajax-iii">3.1.3.- Xajax (III).<a class="headerlink" href="#313-xajax-iii" title="Permanent link">&para;</a></h1>
+<p>Esta función, que se encargará de validar el formulario, puedes crearla en el mismo fichero <code>PHP</code> o en un fichero aparte. Deberás incluir también el código necesario para <code>Xajax</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;head&gt;
+<span class="linenos" data-linenos="2 "></span>    . . .
+<span class="linenos" data-linenos="3 "></span>&lt;?php
+<span class="linenos" data-linenos="4 "></span>    // Le indicamos a Xajax que incluya el código JavaScript necesario
+<span class="linenos" data-linenos="5 "></span>    $xajax-&gt;printJavascript();
+<span class="linenos" data-linenos="6 "></span>?&gt;
+<span class="linenos" data-linenos="7 "></span>    &lt;script type=&quot;text/javascript&quot; src=&quot;validar.js&quot;&gt;&lt;/script&gt;
+<span class="linenos" data-linenos="8 "></span>&lt;/head&gt;
+</code></pre></div>
+<p>Puedes descargar y comprobar el código completo de la página.</p>
+<p><a href="ej3A.zip" title="Descargar código correspondiente al ejemplo sobre Xajax. [zip - 0,14 MB]">Código completo de la página</a> (zip - 0,14 MB)</p>
+<p>Asegúrate de incluir la librería y ajustar las rutas en el código. Si tienes problemas, puedes utilizar las herramientas de desarrollador web de Firefox para comprobar que los cambios que realiza <code>Xajax</code> en el <code>HTML</code> son los adecuados.</p>
+<h2 id="recomendacion">Recomendación<a class="headerlink" href="#recomendacion" title="Permanent link">&para;</a></h2>
+<p>Cuando trabajas con <code>Xajax</code> en la carpeta <code>"xajax_js"</code> se crea una carpeta llamada <code>"deferred"</code> con archivos <code>Javascript</code> que <code>Xajax</code> necesita, asegúrate que <code>Apache</code> tenga permisos de escritura en esta carpeta. (se recomienda crear tú la carpeta "<code>deferred</code>" dentro de "<code>"xajax_js"</code>" y darle permisos  <code>777</code> por ejemplo).</p>
+<h2 id="ejercicio-resuelto">Ejercicio resuelto<a class="headerlink" href="#ejercicio-resuelto" title="Permanent link">&para;</a></h2>
+<p>Partiendo de la base de datos "<code>proyecto</code>" que ya utilizamos en unidades anteriores, utiliza <code>Xajax</code> para cambiar el mecanismo de login. Se trata de crear una función en <code>PHP</code> de nombre <code>"vUsuario"</code>, que reciba como parámetros un nombre y contraseña, y que compruebe estas credenciales con la base de datos y devuelva <code>false</code> sin no son correctas o <code>true</code> sin son válidas. En este caso, deberá encargarse, también, de almacenar el nombre del usuario en una variable de sesión. Si la validación es válida cargaremos la página <code>"listado.php"</code> con un listado de los productos disponibles (a esta última página no podremos acceder si no tenemos la variable de sesión inicializada). Esta página tendrá un botón para cerrar sesión.</p>
+<p>var feedbackquesFeedback0b47text = "Mostrar retroalimentación";</p>
+<h1 id="retroalimentacion">Retroalimentación<a class="headerlink" href="#retroalimentacion" title="Permanent link">&para;</a></h1>
+<p>Deberás utilizar <code>xajax.request</code> para realizar una llamada síncrona a la función. Revisa el código que se propone como solución al ejercicio.</p>
+<p><a href="ej3_4.zip" title="Descargar solución al ejercicio de utilización de Xajax para validación de credenciales. [zip - 0,20 MB]">Descargar una solución propuesta al ejercicio.</a> (zip - 0,20 MB)</p>
+<h1 id="32-jquery4php">3.2.- JQuery4PHP.<a class="headerlink" href="#32-jquery4php" title="Permanent link">&para;</a></h1>
+<p><img alt="Logotipo de la librería jQuery4PHP." src="DWES07_CONT_R13_jQuery4PHP.jpg" title="jQuery4PHP." /></p>
+<p><a href="http://sourceforge.net/projects/jquery4php/" title="Acceder a la web con la imagen de jQuery4php (Se abre en una ventana nueva)">Omar Yepez</a> (<a href="http://www.gnu.org/licenses/gpl.html" title="Acceder a los términos de la licencia GNU/GPL (Se abre en una ventana nueva)">GNU/GPL</a>)</p>
+<p>La otra librería con la que vas a trabajar se llama <code>jQuery4PHP</code>. Su objetivo es proporcionar un interface de programación en <code>PHP</code> que aproveche las capacidades de la librería de <code>JavaScript jQuery</code>. Es de código abierto, disponible bajo licencias <code>MIT</code> y <code>GPLv2</code>, y funciona únicamente con las últimas versiones de <code>PHP</code> (a partir de la versión <strong>5</strong>).</p>
+<p><code>[jQuery4PHP](http://jquery4php.sourceforge.net/ "Acceder a página web de la librería jQuery4PHP (Se abre en una ventana nueva)")</code></p>
+<p>Para poder utilizarla en tus páginas puedes descargarte la última versión o bien instalarla con <code>Composer</code> (recomendado):</p>
+<ul>
+<li><a href="http://sourceforge.net/projects/jquery4php/files/" title="Acceder a página de descarga de la librería jQuery4PHP (Se abre en una ventana nueva)">Página de descargas.</a></li>
+<li><a href="https://packagist.org/packages/yepsua/jquery4php" title="Abrir página web de la libreria jquery4php en Packagist (se abre en una ventana nueva)">Librería en <code>Packagist</code>.</a></li>
+</ul>
+<p>En las <strong>páginas <code>PHP</code> en que quieras utilizar <code>jQuery4PHP</code></strong>, deberás incluir la librería escribiendo el siguiente código:</p>
+<p>Si has hecho la instalación normal:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;?php
+<span class="linenos" data-linenos="2 "></span>    require_once(&quot;YepSua/Labs/RIA/jQuery4PHP/YsJQueryAutoloader.php&quot;);
+<span class="linenos" data-linenos="3 "></span>    YsJQueryAutoloader::register();
+</code></pre></div>
+<p>Con <code>Composer</code> y <code>autoload</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;?php
+<span class="linenos" data-linenos="2 "></span>require &#39;../vendor/autoload.php&#39;;
+<span class="linenos" data-linenos="3 "></span>YsJQueryAutoloader::register();
+</code></pre></div>
+<p>Asegúrate de que la ruta a la librería y del <code>autoload</code> sea la correcta a tú configuración.</p>
+<p>El código anterior ejecuta un método estático de la clase <code>YsJQueryAutoloader</code> que se encarga de incluir todos los ficheros necesarios para la librería en el código de tu página.</p>
+<p>Para acceder a las capacidades de <code>jQuery4PHP</code>, deberás utilizar en tu código <code>PHP</code> la clase <code>YsJQuery</code>.</p>
+<p>La librería <code>jQuery4PHP</code> se apoya completamente en el código <code>JavaScript</code> de la librería <code>jQuery</code>. Por tanto, al escribir el código <code>HTML</code> de la página deberás asegurarte de que se incluye dicha librería, poniendo una línea como la siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;head&gt;
+<span class="linenos" data-linenos="2 "></span>// Utilizamos la versión de jQuery disponible en las CDN de jQuery
+<span class="linenos" data-linenos="3 "></span>&lt;script src=&quot;https://code.jquery.com/jquery-3.5.0.min.js&quot;
+<span class="linenos" data-linenos="4 "></span>    integrity=&quot;sha256xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=&quot;
+<span class="linenos" data-linenos="5 "></span>    crossorigin=&quot;anonymous&quot;&gt;
+<span class="linenos" data-linenos="6 "></span>&lt;/script&gt;
+<span class="linenos" data-linenos="7 "></span>. . .
+<span class="linenos" data-linenos="8 "></span>&lt;/head&gt;
+</code></pre></div>
+<p>Asegurate de trabajar con la versión adecuada. Las puedes conultar en el enlace siguiente: <a href="https://code.jquery.com/" title="Acceder a la web con las descargas y CDN de jQuery (se abre en una ventana nueva)"><code>jQuery</code></a></p>
+<p>En la documentación de la librería, y en los ejemplos que vas a programar a continuación, se utiliza una sintaxis peculiar de programación propia de <code>PHP</code>. Por ejemplo, comprueba el siguiente código:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;?php
+<span class="linenos" data-linenos="2 "></span>    $jq = YsJQuery::newInstance();
+<span class="linenos" data-linenos="3 "></span>    $jq-&gt;onClick();
+<span class="linenos" data-linenos="4 "></span>    $jq-&gt;in(&#39;#enviar&#39;);
+<span class="linenos" data-linenos="5 "></span>    $jq-&gt;execute(&#39;alert(&quot;Has pulsado el botón.&quot;)&#39;);
+<span class="linenos" data-linenos="6 "></span>    $jq-&gt;write();
+<span class="linenos" data-linenos="7 "></span>?&gt;
+</code></pre></div>
+<p>Como ves, se crea un nuevo objeto a partir del método estático <code>newInstance</code>, y a continuación se ejecutan ciertos métodos implementados en la clase <code>YsJQuery</code>. Estos métodos definen código <code>JavaScript</code> asociado al evento <code>onClick</code> del botón con <code>id='enviar'</code>. El código que se ejecutará cuando se pulse el botón se incluye dentro del método <code>execute</code>, y muestra un mensaje en pantalla. El último método (<code>write</code>) es el encargado de generar el código <code>JavaScript</code> en la página.</p>
+<p>Ese mismo código se puede escribir de la forma siguiente, que es la que utilizaremos a continuación.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;?php
+<span class="linenos" data-linenos="2 "></span>echo 
+<span class="linenos" data-linenos="3 "></span>    YsJQuery::newInstance()
+<span class="linenos" data-linenos="4 "></span>      -&gt;onClick()
+<span class="linenos" data-linenos="5 "></span>      -&gt;in(&#39;#enviar&#39;)
+<span class="linenos" data-linenos="6 "></span>      -&gt;execute(&#39;alert(&quot;Has pulsado el botón.&quot;)&#39;)
+<span class="linenos" data-linenos="7 "></span>?&gt;
+</code></pre></div>
+<p>Fíjate que no se asigna nombre al objeto que se crea, pues no es necesario nombrarlo si los métodos se ejecutan justo a continuación de su instanciación. Además, se ha sustituido la llamada al método <code>write</code> por un comando <code>echo</code> al comienzo.</p>
+<h1 id="321-jquery4php-i">3.2.1.- JQuery4PHP (I).<a class="headerlink" href="#321-jquery4php-i" title="Permanent link">&para;</a></h1>
+<p><a href="DWES07_CONT_R14_Errores_validacion_jQuery4PHP_alert.jpg" title="Ampliar imagen alerta de validación"><img alt="Imagen de una Captura del navegador Firefox en la que se muestra un mensaje de alerta de validación con el texto “El nombre debe tener más de 3 caracteres”." src="DWES07_CONT_R14_Errores_validacion_jQuery4PHP_alert.jpg" title="Alerta de validación" /></a></p>
+<p>Captura de Firefox (Elaboración propia)</p>
+<p>Para comenzar a ver la librería, utilizaremos una versión simplificada del formulario de introducción de datos con el que has estado trabajando. El objetivo es el mismo, validar los datos introducidos por el usuario; pero en lugar de mostrar los errores de validación integrados en la página web, vas a emplear la función <code>"alert()"</code> de <code>JavaScript</code>.</p>
+<p>La página <code>"login.php"</code> es similar a la que has utilizado anteriormente, añadiéndole código para:</p>
+<ul>
+<li>
+<p>Incluir y registrar la librería:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>require &#39;../vendor/autoload.php&#39;;
+<span class="linenos" data-linenos="2 "></span>YsJQueryAutoloader::register();
+</code></pre></div>
+</li>
+<li>
+<p>Incluir también la librería de <code>JavaScript: jQuery</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;script 
+<span class="linenos" data-linenos="2 "></span>    src=&quot;https://code.jquery.com/jquery-3.5.0.min.js&quot; 
+<span class="linenos" data-linenos="3 "></span>    integrity=&quot;sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=&quot;
+<span class="linenos" data-linenos="4 "></span>    crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+</code></pre></div>
+<p>Además, hay que capturar el evento <code>onClick</code> del formulario, e indicarle que envíe los datos del mismo a una página <code>PHP</code> de validación.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>&lt;?php
+<span class="linenos" data-linenos=" 2 "></span>echo
+<span class="linenos" data-linenos=" 3 "></span>YsJQuery::newInstance()
+<span class="linenos" data-linenos=" 4 "></span>    -&gt;onClick()
+<span class="linenos" data-linenos=" 5 "></span>    -&gt;in(&quot;#enviar&quot;)
+<span class="linenos" data-linenos=" 6 "></span>    -&gt;execute(
+<span class="linenos" data-linenos=" 7 "></span>        YsJQuery::getJSON(
+<span class="linenos" data-linenos=" 8 "></span>            &quot;validar.php&quot;,
+<span class="linenos" data-linenos=" 9 "></span>            YsJQuery::toArray()-&gt;in(&#39;#miForm input&#39;),
+<span class="linenos" data-linenos="10 "></span>            new YsJsFunction(&#39;
+<span class="linenos" data-linenos="11 "></span>                    if(msg.errUsu) alert(msg.errUsu);
+<span class="linenos" data-linenos="12 "></span>                    if(msg.errPass) alert(msg.errPass);
+<span class="linenos" data-linenos="13 "></span>                    if(msg.errMail) alert(msg.errMail);&#39;, &#39;msg&#39;
+<span class="linenos" data-linenos="14 "></span>            )
+<span class="linenos" data-linenos="15 "></span>        )
+<span class="linenos" data-linenos="16 "></span>    );
+<span class="linenos" data-linenos="17 "></span>?&gt;
+</code></pre></div>
+<p>En el código anterior, primero se asocia al evento <code>onClick</code> del botón <code>enviar</code> al código que se encuentra en la llamada a <code>execute</code>. Este código llama al fichero <code>"validar.php"</code>, enviando como parámetros los datos del formulario (los que se han introducido en etiquetas de tipo <code>input</code>) convertidos a array y, una vez recibida la respuesta, ejecuta una función <code>JavaScript</code>. En esta función se usa la función <code>alert</code> de <code>JavaScript</code> para mostrar los errores de validación obtenidos.</p>
+<p>Fíjate que para comunicarse con el servidor, se utiliza el método <code>getJSON</code>. Este método utiliza la notación <a href="#te1301159-05a6-cd5e-adaa-fd74791ac6f6" title="JSON |"><code>JSON</code></a> para transmitir la información con el servidor.</p>
+</li>
+</ul>
+<p>Acrónimo de JavaScript Object Notation, «notación de objeto de JavaScript» .Es un formato de texto sencillo para el intercambio de datos. Se trata de un subconjunto de la notación literal de objetos de JavaScript, aunque, debido a su amplia adopción como alternativa a XML, se considera un formato independiente del lenguaje.</p>
+<h2 id="autoevaluacion">Autoevaluación<a class="headerlink" href="#autoevaluacion" title="Permanent link">&para;</a></h2>
+<h1 id="pregunta">Pregunta<a class="headerlink" href="#pregunta" title="Permanent link">&para;</a></h1>
+<p><strong>¿Cuál es la función del método <code>write</code> de la clase <code>YsJQuery</code>?</strong></p>
+<h1 id="respuestas">Respuestas<a class="headerlink" href="#respuestas" title="Permanent link">&para;</a></h1>
+<p><a href="#answer-50_63">Opción 1</a></p>
+<p>Generar el código <code>JavaScript</code> necesario para que la página lleve a cabo las funciones que se han definido.</p>
+<p><a href="#answer-50_114">Opción 2</a></p>
+<p>Mostrar un texto en la página web generada, de forma similar al <code>echo</code> o <code>print</code> de <code>PHP</code>.</p>
+<h1 id="retroalimentacion_1">Retroalimentación<a class="headerlink" href="#retroalimentacion_1" title="Permanent link">&para;</a></h1>
+<p>Efectivamente. Recuerda que no es necesario llamar a este método si empleas una construcción comenzando por <code>echo</code>, como en los ejemplos anteriores.</p>
+<p>Revisa lo que has aprendido sobre la librería <code>jQuery4PHP</code>.</p>
+<h1 id="solucion">Solución<a class="headerlink" href="#solucion" title="Permanent link">&para;</a></h1>
+<ol>
+<li><a href="#answer-50_63">Opción correcta</a> (<a href="#sa0b50_60">Retroalimentación</a>)</li>
+<li><a href="#answer-50_114">Incorrecto</a> (<a href="#sa1b50_60">Retroalimentación</a>)</li>
+</ol>
+<h1 id="322-jquery4php-ii">3.2.2.- JQuery4PHP (II).<a class="headerlink" href="#322-jquery4php-ii" title="Permanent link">&para;</a></h1>
+<p>Al ejecutar la página <code>PHP</code> que has programado, puedes observar que se genera el siguiente código <code>JavaScript</code> en la misma cuando se envía al navegador:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot;&gt;
+<span class="linenos" data-linenos=" 2 "></span>/* &lt;![CDATA[ */
+<span class="linenos" data-linenos=" 3 "></span>    jQuery(&#39;#enviar&#39;).click(function(){
+<span class="linenos" data-linenos=" 4 "></span>            jQuery.getJSON(&#39;validar.php&#39;,jQuery(&#39;#miForm input&#39;).toArray(),function(msg){
+<span class="linenos" data-linenos=" 5 "></span>            if(msg.errUsu) alert(msg.errUsu);
+<span class="linenos" data-linenos=" 6 "></span>            if(msg.errPass) alert(msg.errPass);
+<span class="linenos" data-linenos=" 7 "></span>            if(msg.errMail) alert(msg.errMail);
+<span class="linenos" data-linenos=" 8 "></span>            })
+<span class="linenos" data-linenos=" 9 "></span>    })             
+<span class="linenos" data-linenos="10 "></span>/* ]]&gt; */
+<span class="linenos" data-linenos="11 "></span>&lt;/script&gt;
+</code></pre></div>
+<p>Como ves, todo el código creado utilizando la librería <code>jQuery4PHP</code> se traduce en llamadas a la librería <code>jQuery</code> de <code>JavaScript</code>.</p>
+<p>En la página <code>PHP</code> de validación, <code>"validar.php"</code>, puedes utilizar las mismas funciones de ejemplos anteriores y definir una nueva de nombre <code>validarFormulario</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>function validarFormulario($valores)
+<span class="linenos" data-linenos=" 2 "></span>{
+<span class="linenos" data-linenos=" 3 "></span>    $respuesta = array();
+<span class="linenos" data-linenos=" 4 "></span>    if (!validarNombre($valores[&#39;usu&#39;]))
+<span class="linenos" data-linenos=" 5 "></span>        $respuesta[&#39;errUsu&#39;] = &quot;El nombre debe tener más de 3 caracteres.&quot;;
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span>    if (!validarPasswords($valores[&#39;pass1&#39;], $valores[&#39;pass2&#39;]))
+<span class="linenos" data-linenos=" 8 "></span>        $respuesta[&#39;errPass&#39;] = &quot;La contraseña debe ser mayor de 5 caracteres o no coinciden.&quot;;
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span>    if (!validarEmail($valores[&#39;mail&#39;]))
+<span class="linenos" data-linenos="11 "></span>        $respuesta[&#39;errMail&#39;] = &quot;La dirección de email no es válida.&quot;;
+<span class="linenos" data-linenos="12 "></span>
+<span class="linenos" data-linenos="13 "></span>    return $respuesta;
+<span class="linenos" data-linenos="14 "></span>}
+<span class="linenos" data-linenos="15 "></span>echo json_encode(validarFormulario($_REQUEST));
+</code></pre></div>
+<p><a href="DWES07_CONT_R15_formDebug.png" title="Ampliar imagen de la notación JSON"><img alt="Imagen de una captura del navegador Firefox en la que se utilizan las herramientas de desarrollo para mostrar los mensajes devueltos por el servidor web en notación JSON." src="DWES07_CONT_R15_formDebug.png" title="Notación JSON" /></a></p>
+<p>Captura de Firefox (Elaboración propia)</p>
+<p>Utilizaremos la función <code>"json_encode"</code> de <code>PHP</code> para devolver los errores de validación con notación <code>JSON</code>. Revisa el código obtenido y comprueba su funcionamiento.</p>
+<p><a href="Ej37.zip" title="Descargar Código correspondiente al ejemplo sobre jQuery4PHP [zip - 0,32 MB]">Código obtenido</a> (zip - 0,32 MB)</p>
+<h1 id="323-jquery4php-iii">3.2.3.- JQuery4PHP (III).<a class="headerlink" href="#323-jquery4php-iii" title="Permanent link">&para;</a></h1>
+<p><img alt="Imagen de una lista de verificación." src="DWES07_CONT_R16_checklist.svg.png" title="Lista de verificación." /></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Checklist.svg" title="Acceder a la web con la imagen de checklist (Se abre en una ventana nueva)">original image pixabay</a> (<a href="http://creativecommons.org/publicdomain/zero/1.0/deed.es" title="Acceder a los términos de la licencia CC0 (Se abre en una ventana nueva)">CC0</a>)</p>
+<p>Una de las características que cabe destacar de <code>jQuery4PHP</code> es su extensibilidad. Existen varias extensiones que se integran con la librería y permiten realizar de forma sencilla tareas adicionales a las que soporta el núcleo de la misma.</p>
+<p>Por ejemplo, si en la página anterior quisiéramos integrar en etiquetas los mensajes de validación, el código necesario sería más complejo. De hecho, ya has visto que para mostrar los mensajes de alerta has tenido que utilizar código <code>JavaScript</code> mezclado con el código PHP.</p>
+<p>Vamos a ver cómo podemos utilizar la extensión: <code>"JqValidate"</code> para realizar de forma mucho más sencilla y eficaz la validación del formulario anterior.</p>
+<ul>
+<li><a href="https://jqueryvalidation.org/" title="Acceder a la web del plugin de validación de  jQuery (Se abre en una ventana nueva)">Enlace a <code>jQuery Validation Plugin</code></a></li>
+<li><a href="http://jquery4php.sourceforge.net/index.php?section=plugins&amp;module=jqValidate&amp;method=about" title="Acceder a la web con información sobre la extensión JqValidate para la librería jQuery4PHP (se abre en una ventana nueva)"><code>Enlace a Extensión JqValidate.</code></a></li>
+</ul>
+<p>Para poder usar esta extensión en tus páginas has de:</p>
+<ul>
+<li>
+<p>Indicar a la librería <code>jQuery4PHP</code> que vas a usar la extensión:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>YsJQuery::usePlugin(YsJQueryConstant::PLUGIN_JQVALIDATE);
+</code></pre></div>
+</li>
+<li>
+<p>Incluir el código <code>JavaScript</code> necesario por la extensión, que en este caso concreto se corresponde con la extensión <code>"Validate</code>" de <code>jQuery</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js&quot;&gt;&lt;/script&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Cargar los mensajes de validación en idioma español (de no hacerlo, se mostrarán en inglés):</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>echo YsJQueryAssets::loadScripts(&#39;jq4php-showcase/showcase/jquery4php-assets/js/plugins/bassistance/validate/localization/messages_es.js&#39;)-&gt;execute();
+</code></pre></div>
+</li>
+</ul>
+<p>Como siempre, revisa las rutas y últimas versiones de las librerías del código anterior para ajustarlas a las tuyas.</p>
+<h1 id="324-jquery4php-iv">3.2.4.- JQuery4PHP (IV).<a class="headerlink" href="#324-jquery4php-iv" title="Permanent link">&para;</a></h1>
+<p><img alt="Imagen del icono de una consolola con el símbolo de jQuery encima." src="DWES07_CONT_R17_intro.png" title="Terminal jQuery" /></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Jquery-terminal-emulator-logo.svg" title="Acceder a la web con la imagen de terminal jQuery (Se abre en una ventana nueva)">Jakub Jankiewicz (jcubic)</a> (<a href="http://creativecommons.org/licenses/?lang=es" title="Acceder a los términos de la licencia CC BY (Se abre en una ventana nueva)">CC BY</a>)</p>
+<p>Al utilizar la extensión <code>JqValidate</code> para validar los datos introducidos en un formulario, el código de validación que se usará utiliza la extensión <code>jQuery.Validate</code>. No será necesario que programes los algoritmos de validación, sino que indiques qué reglas se deberán aplicar a cada uno de los campos del formulario. Esto se hace utilizando el método <code>_rules</code>.</p>
+<p>Para indicar las reglas, se pasa como parámetro un array, que contendrá tantos elementos como campos a validar. Para cada uno de estos campos se crea un nuevo array, que contendrá las reglas de dicho campo. Cada una de las reglas se compone en base a los distintos métodos de validación que incorpora la extensión de JavaScript <code>jQuery.Validate</code>.</p>
+<p><a href="http://docs.jquery.com/Plugins/Validation#List_of_built-in_Validation_methods" title="Acceder a métodos de validación de la extensión de JavaScript jQuery.Validate (Se abre en una ventana nueva)">Métodos de validación</a></p>
+<p>El código <code>PHP</code> necesario para validar nuestro formulario será:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>&lt;?php
+<span class="linenos" data-linenos=" 2 "></span>    echo YsJQuery::newInstance()
+<span class="linenos" data-linenos=" 3 "></span>             -&gt;onClick()
+<span class="linenos" data-linenos=" 4 "></span>             -&gt;in(&quot;#enviar&quot;)
+<span class="linenos" data-linenos=" 5 "></span>             -&gt;execute(
+<span class="linenos" data-linenos=" 6 "></span>                YsJQValidate::build()-&gt;in(&#39;#miForm&#39;)
+<span class="linenos" data-linenos=" 7 "></span>                    -&gt;_rules(
+<span class="linenos" data-linenos=" 8 "></span>                        [
+<span class="linenos" data-linenos=" 9 "></span>                            &#39;usu&#39; =&gt; [&#39;required&#39; =&gt; true, &#39;minlength&#39; =&gt; 4],
+<span class="linenos" data-linenos="10 "></span>                            &#39;mail&#39; =&gt; [&#39;required&#39; =&gt; true, &#39;email&#39; =&gt; true],
+<span class="linenos" data-linenos="11 "></span>                            &#39;pass2&#39; =&gt; [&#39;required&#39; =&gt; true, &#39;minlength&#39; =&gt; 6, &#39;equalTo&#39; =&gt; &#39;#pass1&#39;]
+<span class="linenos" data-linenos="12 "></span>                        ]
+<span class="linenos" data-linenos="13 "></span>                    )
+<span class="linenos" data-linenos="14 "></span>            );
+<span class="linenos" data-linenos="15 "></span>?&gt;
+</code></pre></div>
+<p>Fíjate que la asociación del código con el evento <code>onClick</code> del botón se sigue haciendo como antes.</p>
+<p>Si revisas el código <code>JavaScript</code> que se genera en la página <code>HTML</code>, observarás lo siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>/* &lt;![CDATA[ */
+<span class="linenos" data-linenos=" 2 "></span>    jQuery(&#39;#enviar&#39;).click(function(){
+<span class="linenos" data-linenos=" 3 "></span>        jQuery(&#39;#miForm&#39;).validate(
+<span class="linenos" data-linenos=" 4 "></span>        {&quot;rules&quot;: {
+<span class="linenos" data-linenos=" 5 "></span>                &quot;usu&quot;: {&quot;required&quot;: true,&quot;minlength&quot;: 4},
+<span class="linenos" data-linenos=" 6 "></span>                &quot;mail&quot;: {&quot;required&quot;: true,&quot;email&quot;: true},
+<span class="linenos" data-linenos=" 7 "></span>                &quot;pass1&quot;: {&quot;required&quot;: true,&quot;minlength&quot;: 6,&quot;equalTo&quot;: &quot;#pass2&quot;}
+<span class="linenos" data-linenos=" 8 "></span>                }
+<span class="linenos" data-linenos=" 9 "></span>        })})             
+<span class="linenos" data-linenos="10 "></span>/* ]]&gt; */
+</code></pre></div>
+<p>Como ves, todo se sigue traduciendo en llamadas a la librería <code>jQuery</code> de <code>JavaScript</code>. Además, una de las grandes ventajas de este método es que una vez definidas las reglas de validación en <code>PHP</code>, todo el código que se ejecuta para verificarlas es <code>JavaScript</code>. Si el navegador soporta la ejecución de código en lenguaje <code>JavaScript</code>, no es necesario establecer ningún tipo de tráfico de validación con el servidor web.</p>
+<p>Revisa el código obtenido y comprueba su funcionamiento. Solo está el fichero <code>"login.php"</code> se entiende que has instalado como en el ejemplo anterior las librerías necesarias, manualmente o con <code>Composer</code>.</p>
+<p><a href="ej3_9.zip" title="Descargar código correspondiente al ejemplo de validación utilizando la extensión JqValidate de jQuery4PHP. [zip - 1,72 KB]">Código obtenido</a> (zip - 1,72 KB)</p>
+<h2 id="autoevaluacion_1">Autoevaluación<a class="headerlink" href="#autoevaluacion_1" title="Permanent link">&para;</a></h2>
+<h1 id="pregunta_1">Pregunta<a class="headerlink" href="#pregunta_1" title="Permanent link">&para;</a></h1>
+<p>Al emplear la extensión <code>JqValidate</code> de <code>jQuery4PHP</code>, ¿qué código <code>JavaScript</code> deberás incluir en tus páginas?</p>
+<h1 id="respuestas_1">Respuestas<a class="headerlink" href="#respuestas_1" title="Permanent link">&para;</a></h1>
+<p><a href="#answer-54_63">Opción 1</a></p>
+<p>El correspondiente a la librería <code>jQuery</code> y a su extensión <code>Validate</code>.</p>
+<p><a href="#answer-54_123">Opción 2</a></p>
+<p>Únicamente el correspondiente a la librería <code>jQuery</code>.</p>
+<h1 id="retroalimentacion_2">Retroalimentación<a class="headerlink" href="#retroalimentacion_2" title="Permanent link">&para;</a></h1>
+<p>Efectivamente. <code>JqValidate</code> utiliza en la parte cliente la extensión <code>Validate</code> de <code>jQuery</code>.</p>
+<p>Revisa lo que has aprendido sobre la librería <code>jQuery4PHP</code>.</p>
+<h1 id="solucion_1">Solución<a class="headerlink" href="#solucion_1" title="Permanent link">&para;</a></h1>
+<ol>
+<li><a href="#answer-54_63">Opción correcta</a> (<a href="#sa0b54_60">Retroalimentación</a>)</li>
+<li><a href="#answer-54_123">Incorrecto</a> (<a href="#sa1b54_60">Retroalimentación</a>)</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 Xavier Sastre - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "toc.integrate", "content.tabs.link", "navigation.expand"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>

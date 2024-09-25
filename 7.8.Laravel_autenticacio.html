@@ -1,0 +1,822 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsastre.github.io/7.8.Laravel_autenticacio.html">
+      
+      
+      
+      
+      <link rel="icon" href="imagenes/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>7.8.Laravel autenticacio - Docencia Xavier</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans Condensed";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#control-dusuaris" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="." title="Docencia Xavier" class="md-header__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docencia Xavier
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              7.8.Laravel autenticacio
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode dia"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Docencia Xavier" class="md-nav__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Docencia Xavier
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Inici
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            DWEC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/DWEC/_DWEC2425.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupament web en entorn client - DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/DWEC/desenvolupamentfrontend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupamet frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AW
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/AW/01.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicacions web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>7.8.Laravel autenticacio</h1>
+
+<h2 id="control-dusuaris"><a href="https://laravel.com/docs/8.x/authentication">Control d'usuaris</a><a class="headerlink" href="#control-dusuaris" title="Permanent link">&para;</a></h2>
+<p>A l'hora d'afegir autenticació d'usuaris en les nostres aplicacions Laravel, hem de tindre en compte
+que existeixen dos possibles escenaris:</p>
+<ul>
+<li>Estem treballant sobre un projecte ja existent que no disposa d'autenticació</li>
+<li>Estem creant un nou projecte en el qual definirem l'autenticació des de l'inici</li>
+</ul>
+<p>En el primer cas, haurem d'implementar una autenticació més o menys "manual", encara que molt senzilla.
+En el segon cas, podem especificar unes opcions en crear el projecte que ens facilitaran molt la
+incorporació del <strong>login</strong>, i fins i tot del registre de nous usuaris. Veurem cada cas per separat.</p>
+<h3 id="configuracio-general-de-lautenticacio">Configuració general de l'autenticació<a class="headerlink" href="#configuracio-general-de-lautenticacio" title="Permanent link">&para;</a></h3>
+<p>En l'arxiu <strong>config/auth.php</strong> es disposa d'algunes opcions de configuració generals d'autenticació.
+Aquesta autenticació en Laravel es recolza en dos elements: els <strong>guards</strong> i els <strong>providers</strong>.</p>
+<ul>
+<li>
+<p>Els guards són mecanismes que defineixen com s'autenticaran els usuaris per a cada petició. El
+mecanisme més habitual és mitjançant sessions, on es guarda la informació de l'usuari
+autenticat en la sessió, encara que per defecte també s'habilita l'autenticació mitjançant tokens.</p>
+</li>
+<li>
+<p>Els providers indiquen com s'obtindran els usuaris de la base de dades per a comprovar l'autenticació.
+Les opcions habilitades per defecte són mitjançant Eloquent (i el model d'usuaris que tinguem definit), o mitjançant <strong>query builder</strong>, consultant directament la taula corresponent d'usuaris.</p>
+</li>
+</ul>
+<p>Haurem de modificar en l'arxiu la referència a la taula on emmagatzemarem els usuaris (per defecte
+es fa referència a una taula anomenada <strong>users</strong> ) i/o al model associat (per defecte, la classe <strong>User</strong> ). Així que convindrà modificar els noms d'aquests dos elements en la secció <strong>providers</strong> , així com la
+ubicació (namespace) del model d'usuari, si escau. Per exemple:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>...
+<span class="linenos" data-linenos=" 2 "></span>&#39;providers&#39; =&gt; [
+<span class="linenos" data-linenos=" 3 "></span>&#39;users&#39; =&gt; [
+<span class="linenos" data-linenos=" 4 "></span>&#39;driver&#39; =&gt; &#39;eloquent&#39;,
+<span class="linenos" data-linenos=" 5 "></span>&#39;model&#39; =&gt; App\Models\Usuario::class,
+<span class="linenos" data-linenos=" 6 "></span>],
+<span class="linenos" data-linenos=" 7 "></span>// &#39;users&#39; =&gt; [
+<span class="linenos" data-linenos=" 8 "></span>// &#39;driver&#39; =&gt; &#39;database&#39;,
+<span class="linenos" data-linenos=" 9 "></span>// &#39;table&#39; =&gt; &#39;usuarios&#39;,
+<span class="linenos" data-linenos="10 "></span>// ],
+<span class="linenos" data-linenos="11 "></span>],
+</code></pre></div>
+<p>Notar que la secció providers disposa de dos proveïdors d'autenticació: un (el que està
+habilitat) està basat en Eloquent, i fa ús del model d'usuaris que hàgem definit. L'altre (que
+apareix comentat) no utilitza Eloquent, sinó del query builder contra la pròpia base de dades. Si preferim
+aquesta segona opció, haurem de comentar la primera i deixar habilitada la segona. També és possible
+deixar habilitats múltiples providers, cadascun amb un nom diferent, i assignar-lo a múltiples guards.</p>
+<h4 id="el-model-o-la-taula-users">El model o la taula users<a class="headerlink" href="#el-model-o-la-taula-users" title="Permanent link">&para;</a></h4>
+<p>Si triem el provider basat en Eloquent, haurem de tindre un model d'usuaris al qual accedir. En el
+cas de la nostra aplicació de blog, disposem ja d'un model creat en <strong>App\Models\Usuari</strong> , per la qual cosa l'exemple anterior ens serviria per a establir aquest model com el model d'usuaris per defecte.</p>
+<p>Si optem per utilitzar el query builder en lloc de Eloquent, haurem de tindre una taula en la base de dades on estiguen les dades dels usuaris. En el nostre cas, també disposem d'aqueixa taula usuaris, per la qual cosa podríem emprar aquesta altra opció per a autenticar usuaris si volguérem. </p>
+<p>No obstant això, ens valdrem de Eloquent per a l'autenticació. En qualsevol cas, com veurem a continuació, serà convenient que els passwords dels usuaris estiguen <strong>encriptats</strong> mitjançant <strong>bcrypt</strong>, que és el mecanisme d'encriptació per defecte que utilitza Laravel. </p>
+<h4 id="afegir-autentiacio-a-un-projecte-existent">Afegir autentiació a un projecte existent<a class="headerlink" href="#afegir-autentiacio-a-un-projecte-existent" title="Permanent link">&para;</a></h4>
+<p>Per a afegir autenticació a un projecte Laravel ja existent que no dispose d'aquests mecanismes,seguirem aquests passos:</p>
+<ol>
+<li>Definirem un formulari de *login</li>
+<li>Definirem un nou controlador que s'encarregue de gestionar el *login: tant de mostrar el
+formulari quan l'usuari no estiga autenticat com de validar les seues credencials quan les envie</li>
+<li>Afegirem les rutes pertinents en l'arxiu <strong>routes/web.php</strong> tant per al formulari de *login
+com per a l'autenticació posterior</li>
+<li>Protegirem les rutes que siguen d'accés restringit</li>
+<li>Opcionalment, podem afegir també una opció de <strong>logout</strong>.</li>
+</ol>
+<h5 id="el-formulari-de-login">El formulari de login<a class="headerlink" href="#el-formulari-de-login" title="Permanent link">&para;</a></h5>
+<p>Definirem un formulari de login en la vista **resources/views/auth/login.blade.php , perquè
+ l'usuari especifique el seu login i el seu password. També deixarem una zona per a mostrar un possible
+missatge d'error si l'autenticació no ha sigut reeixida:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>@extends(&#39;plantilla&#39;)
+<span class="linenos" data-linenos=" 2 "></span>@section(&#39;titulo&#39;, &#39;Login&#39;)
+<span class="linenos" data-linenos=" 3 "></span>@section(&#39;contenido&#39;)
+<span class="linenos" data-linenos=" 4 "></span>    &lt;h1&gt;Login&lt;/h1&gt;
+<span class="linenos" data-linenos=" 5 "></span>    @if (!empty($error))
+<span class="linenos" data-linenos=" 6 "></span>        &lt;div class=&quot;text-danger&quot;&gt;
+<span class="linenos" data-linenos=" 7 "></span>            {{ $error }}
+<span class="linenos" data-linenos=" 8 "></span>        &lt;/div&gt;
+<span class="linenos" data-linenos=" 9 "></span>    @endif
+<span class="linenos" data-linenos="10 "></span>&lt;form action=&quot;{{ route(&#39;login&#39;) }}&quot; method=&quot;POST&quot;&gt;
+<span class="linenos" data-linenos="11 "></span>    @csrf
+<span class="linenos" data-linenos="12 "></span>    &lt;div class=&quot;form-group&quot;&gt;
+<span class="linenos" data-linenos="13 "></span>        &lt;label for=&quot;login&quot;&gt;Login:&lt;/label&gt;
+<span class="linenos" data-linenos="14 "></span>        &lt;input type=&quot;text&quot; class=&quot;form-control&quot;
+<span class="linenos" data-linenos="15 "></span>name=&quot;login&quot; id=&quot;login&quot; /&gt;
+<span class="linenos" data-linenos="16 "></span>    &lt;/div&gt;
+<span class="linenos" data-linenos="17 "></span>    &lt;div class=&quot;form-group&quot;&gt;
+<span class="linenos" data-linenos="18 "></span>        &lt;label for=&quot;password&quot;&gt;Password:&lt;/label&gt;
+<span class="linenos" data-linenos="19 "></span>        &lt;input type=&quot;password&quot; class=&quot;form-control&quot;
+<span class="linenos" data-linenos="20 "></span>name=&quot;password&quot; id=&quot;password&quot; /&gt;
+<span class="linenos" data-linenos="21 "></span>    &lt;/div&gt;
+<span class="linenos" data-linenos="22 "></span>    &lt;input type=&quot;submit&quot; name=&quot;enviar&quot; value=&quot;Enviar&quot;
+<span class="linenos" data-linenos="23 "></span>class=&quot;btn btn-dark btn-block&quot;&gt;
+<span class="linenos" data-linenos="24 "></span>&lt;/form&gt;
+<span class="linenos" data-linenos="25 "></span>@endsection
+</code></pre></div>
+<h5 id="el-controlador-de-login">El controlador de Login<a class="headerlink" href="#el-controlador-de-login" title="Permanent link">&para;</a></h5>
+<p>Crearem un nou controlador que s'encarregue de gestionar tota l'autenticació:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>php artisan make:controller LoginController
+</code></pre></div>
+<p>Dins, definim una funció que s'encarregarà de mostrar el formulari anterior:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>public function loginForm()
+<span class="linenos" data-linenos="2 "></span>{
+<span class="linenos" data-linenos="3 "></span>    return view(&#39;auth.login&#39;);
+<span class="linenos" data-linenos="4 "></span>}
+</code></pre></div>
+<p>I afegirem una segona funció que s'encarregue de validar les credencials enviades per l'usuari. Per a això,farem ús del facade d'autenticació, existent en <strong>Illuminate\Support\Facades\Auth</strong> .
+Recorda que un <strong>facade</strong> és bàsicament un element que proporciona accés a una sèrie de mètodes estàtics d'utilitat, en aquest cas per a autenticar usuaris.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>namespace App\Http\Controllers;
+<span class="linenos" data-linenos=" 2 "></span>use Illuminate\Http\Request;
+<span class="linenos" data-linenos=" 3 "></span>use Illuminate\Support\Facades\Auth;
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span>class LoginController extends Controller
+<span class="linenos" data-linenos=" 6 "></span>{
+<span class="linenos" data-linenos=" 7 "></span>    ...
+<span class="linenos" data-linenos=" 8 "></span>    public function login(Request $request)
+<span class="linenos" data-linenos=" 9 "></span>    {
+<span class="linenos" data-linenos="10 "></span>        $credenciales = $request-&gt;only(&#39;login&#39;, &#39;password&#39;);
+<span class="linenos" data-linenos="11 "></span>        if (Auth::attempt($credenciales))
+<span class="linenos" data-linenos="12 "></span>        {
+<span class="linenos" data-linenos="13 "></span>            // Autenticación exitosa
+<span class="linenos" data-linenos="14 "></span>            return redirect()-&gt;intended(route(&#39;movies.index&#39;));
+<span class="linenos" data-linenos="15 "></span>        } else {
+<span class="linenos" data-linenos="16 "></span>            $error = &#39;Usuario incorrecto&#39;;
+<span class="linenos" data-linenos="17 "></span>            return view(&#39;auth.login&#39;, compact(&#39;error&#39;));
+<span class="linenos" data-linenos="18 "></span>        }
+<span class="linenos" data-linenos="19 "></span>    }
+<span class="linenos" data-linenos="20 "></span>}
+</code></pre></div>
+<p>El mètode <strong>attempt</strong> accepta una sèrie de parells clau-valor com a primer paràmetre. En aquest cas, li passem un només parell format pel <strong>login</strong> (o <strong>l'e-mail</strong>, depenent del camp que usem per a autenticar)
+i el password rebuts en la petició. Això servirà per a localitzar a l'usuari per la clau , i comprovar
+si té el valor associat (el password). En el cas dels passwords, Laravel automàticament els encripta
+en format <strong>bcrypt</strong>, per la qual cosa hem de cerciorar-nos que el password està encriptat en aqueix format en la base de dades.</p>
+<p>D'altra banda, el mètode <strong>intended</strong> tracta d'enviar a l'usuari a la ruta a la qual intentava accedir abans que se li sol·licitara autenticació. Li passem com a paràmetre una ruta per defecte en el cas que la
+destinació prevista no estiga disponible.</p>
+<h5 id="les-rutes-associades">Les rutes associades<a class="headerlink" href="#les-rutes-associades" title="Permanent link">&para;</a></h5>
+<p>Finalment, hem de definir les rutes tant per a mostrar el formulari (per get) com per a recollir les
+credencials i validar a l'usuari (per post).</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">Route::get(&#39;login&#39;, [LoginController::class, &#39;loginForm&#39;])-&gt;name(&#39;login&#39;);</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">Route::post(&#39;login&#39;, [LoginController::class, &#39;login&#39;]);</span>
+</code></pre></div>
+<h5 id="redireccio-en-cas-derror">Redirecció en cas d'error<a class="headerlink" href="#redireccio-en-cas-derror" title="Permanent link">&para;</a></h5>
+<p>Quan es detecta que un usuari no autenticat intenta accedir a una ruta protegida, automàticament
+se li redirigeix a la ruta nomenada com login (com la que hem definit prèviament), on veurà el
+formulari d'accés. Si volem canviar el nom de la ruta a la qual redirigir (en el cas que no
+vulguem que siga login), hem de modificar el mètode <strong>redirectTo</strong> en el middleware d'autenticació
+<strong>app/Http/Middleware/Authenticate.php</strong> :</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">protected function redirectTo($request)</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">...</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">return route(&#39;login&#39;);</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">}</span>
+</code></pre></div>
+<h5 id="protegir-les-rutes-dacces-restringit">Protegir les rutes d'accés restringit<a class="headerlink" href="#protegir-les-rutes-dacces-restringit" title="Permanent link">&para;</a></h5>
+<p>Ara que ja tenim definit el mecanisme de login (controlador amb mètode d'autenticació,
+formulari de login i ruta associada), podem protegir aquelles rutes o enllaços que vulguem que siguen d'accés restringit. Per exemple, podem fer que les operacions de creació, esborrat i edició de videos
+(funcions create , store , edit , update i destroy ) només estiguen disponibles per a usuaris
+autenticats. Això pot fer-se de diverses formes.</p>
+<p>Si tenim una ruta de recursos ( Route::resource ) en l'arxiu routes/web.php , llavors l'opció més còmoda és definir un constructor en el controlador associat (en aquest cas,MovieController ), i especificar quines funcions volem protegir, bé amb <strong>only</strong> o amb
+<strong>except</strong> (en aquest últim cas, es protegiran totes les rutes excepte les indicades en la llista):</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">class LibroController extends Controller</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">    public function __construct()</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">    {</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">        $this-&gt;middleware(&#39;auth&#39;,[&#39;only&#39; =&gt; [&#39;create&#39;, &#39;store&#39;, &#39;edit&#39;, &#39;update&#39;, &#39;destroy&#39;]]);</span>
+<span class="linenos" data-linenos="6 "></span><span class="x">    }</span>
+<span class="linenos" data-linenos="7 "></span><span class="x">...</span>
+</code></pre></div>
+<p>Si definim les rutes soltes, podem emprar el mètode middleware per a indicar en cadascuna si
+volem que s'aplique el middleware d'autenticació:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">Route::get(&#39;prueba&#39;, [PruebaController::class, &#39;create&#39;])-&gt;middleware(&#39;auth&#39;);</span>
+</code></pre></div>
+<h5 id="detectar-en-les-vistes-lusuari-autenticat">Detectar en les vistes l'usuari autenticat<a class="headerlink" href="#detectar-en-les-vistes-lusuari-autenticat" title="Permanent link">&para;</a></h5>
+<p>Pot ser molt necessari detectar en una vista si l'usuari s'ha autenticat o no, bé per a mostrar
+certs controls (per exemple, enllaços per a crear llibres), o per a carregar informació pròpia de l'usuari (per exemple, posts creats per l'usuari que ha entrat en un blog).
+Per exemple, d'aquesta manera podem modificar el menú de navegació
+( **resources/views/partials/nav.blade.php ) perquè mostre l'enllaç de crear nou nova película només
+si l'usuari s'ha autenticat:</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">@if(Auth()::check())</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">    &lt;li class=&quot;{{ setActivo(&#39;movies.create&#39;) }} nav-item&quot;&gt;</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">&lt;a class=&quot;nav-link&quot; href=&quot;{{ route(&#39;movies.create&#39;) }}&quot;&gt;Nova pelicula&lt;/a</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">&lt;/li&gt;</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">@endif</span>
+</code></pre></div>
+Podem emprar el mètode <strong>Auth::guest()</strong> si volem comprovar si l'usuari encara NO s'ha
+autenticat (per exemple, per a mostrar-li l'enllaç a login), i el mètode <strong>Auth::check()</strong> per a comprovar
+si <strong>SI</strong> està autenticat (per a mostrar-li, per exemple, les opcions restringides). De manera
+anàloga, el mètode <strong>Auth::user()</strong> obté l'objecte de l'usuari autenticat, amb el que podem
+accedir als seus atributs:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>Bienvenido/a {{ Auth::user()-&gt;login }}
+</code></pre></div>
+<h5 id="implementacio-del-logout">Implementació del logout<a class="headerlink" href="#implementacio-del-logout" title="Permanent link">&para;</a></h5>
+<p>Per a implementar el <strong>logout</strong>, n'hi ha prou amb cridar al mètode logout del <strong>facade Auth</strong> utilitzat
+anteriorment, en el mètode que es vaja a encarregar d'aqueixa tasca. Ho podem afegir en el mateix
+controlador anterior:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="x">namespace App\Http\Controllers;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="x">use Illuminate\Http\Request;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="x">use Illuminate\Support\Facades\Auth;</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="x">class LoginController extends Controller</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="x">{</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="x">    ...</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="x">    public function logout()</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="x">    {</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="x">        Auth::logout();</span>
+<span class="linenos" data-linenos="10 "></span><span class="x">        // ... Renderizar la vista deseada</span>
+<span class="linenos" data-linenos="11 "></span><span class="x">    }</span>
+</code></pre></div>
+<p>També farà falta definir la ruta associada en <strong>routes/web.php</strong> :</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">Route::get(&#39;logout&#39;, [LoginController::class, &#39;logout&#39;])-&gt;name(&#39;logout&#39;);</span>
+</code></pre></div>
+<p>Òbviament, també serà necessari afegir un enllaç per a fer logout en alguna part. Podem posar-ho
+en el menú de navegació (arxiu <strong>resources/views/partials/nav.blade.php</strong> , quan detectem que l'usuari està autenticat):</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">@if(Auth::check())</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">    &lt;li class=&quot;{{ setActivo(&#39;movies.create&#39;) }} nav-item&quot;&gt;</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">        &lt;a class=&quot;nav-link&quot; href=&quot;{{ route(&#39;movies.create&#39;) }}&quot;&gt;Nuevo libro&lt;/a</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">    &lt;/li&gt;</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">    &lt;li class=&quot;nav-item&quot;&gt;</span>
+<span class="linenos" data-linenos="6 "></span><span class="x">        &lt;a class=&quot;nav-link&quot; href=&quot;{{ route(&#39;logout&#39;) }}&quot;&gt;Logout&lt;/a&gt;</span>
+<span class="linenos" data-linenos="7 "></span><span class="x">    &lt;/li&gt;</span>
+<span class="linenos" data-linenos="8 "></span><span class="x">@endif</span>
+</code></pre></div>
+<h2 id="crear-un-projecte-desde-cero-amb-lautenticacio-incorporada">Crear un projecte desde cero amb l'autenticació incorporada<a class="headerlink" href="#crear-un-projecte-desde-cero-amb-lautenticacio-incorporada" title="Permanent link">&para;</a></h2>
+<p>Laravel també ofereix l'opció de crear un projecte des de zero incorporant mecanismes d'autenticació
+d'usuaris des del principi. Aquesta opció ha variat amb el pas de les versions de Laravel,però bàsicament es conserva una mateixa essència: quan creem el projecte, podem deixar ja establit el model d'usuaris, i mecanismes per a registrar i autenticar usuaris en l'aplicació.</p>
+<p>Per a crear un projecte amb aquesta infraestructura ja definida executem el comando laravel <strong>new</strong> amb l'opció <strong>--jet</strong> en Laravel 8.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>laravel new nombre_proyecto --jet
+</code></pre></div>
+<p>Això crearà el projecte incorporant la infraestructura de gestió d'usuaris, juntament amb formularis
+bàsics per a registre i login. En el cas de Laravel 8 s'empra <strong>JetStream</strong>, la nova utilitat incorporada en
+aquesta versió per a proporcionar l'esquelet bàsic o <strong>scaffolding</strong> d'autenticació.  Una de les principals diferències entre totes dues versions és que
+en Laravel 7 s'empra Bootstrap per a l'aparença o el disseny web, i en Laravel 8 s'empra <strong>Tailwind</strong>.
+Ho podem comprovar donant una ullada al contingut de la carpeta views , on ja tindrem unes quantes vistes preparades per a registre, login, recuperació de contrasenya, etc:</p>
+<p>Evidentment, abans de poder fer res necessitem tindre una base de dades creada. Recorda crear-la i modificar les dades de connexió en l'arxiu .env del teu projecte, i també executar les migracions predefinides en el projecte amb <strong>php artisan migrate:fresh</strong>.</p>
+<h3 id="canviar-lidioma">Canviar l'idioma<a class="headerlink" href="#canviar-lidioma" title="Permanent link">&para;</a></h3>
+<p>Un dels inconvenients que tenim en utilitzar aquest <strong>scaffolding</strong> és que tots els enllaços i camps de formularis que s'han creat vénen amb textos en anglés. Podem afegir missatges en altres idiomes amb
+dos passos senzills:</p>
+<ul>
+<li>D'una banda, hem de modificar la regió (locale) per defecte definida en l'arxiu <strong>config/app.php</strong> . Així la deixaríem per a fixar l'idioma en espanyol:</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&#39;locale&#39; =&gt; &#39;es&#39;,
+</code></pre></div>
+* D'altra banda, hem de descarregar el paquet de fitxers en l'idioma corresponent, i situar-lo en la subcarpeta adequada dins de <strong>resources/lang</strong> . En el nostre cas, podem per exemple copiar els arxius d'aquesta carpeta en la subcarpeta <strong>resources/lang</strong> del nostre projecte, de manera que l'arxiu <strong>es.json</strong> quedarà en aqueixa carpeta, i a més es crearà una subcarpeta <strong>es</strong> amb el contingut dels arxius que hi ha en aqueix repositori. </p>
+<p>Si els donem una ullada, podem veure que contenen les traduccions a l'espanyol de diferents missatges de diferents seccions de la web.
+Amb això ja podrem veure els continguts de la web en espanyol. Aquesta "màgia" es deu al fet que en les vistes que hem carregat, els missatges s'obtenen directament d'aquesta carpeta <strong>resources/lang</strong> per a l'idioma especificat en <strong>config/app.php</strong> . Per exemple, així es mostra el missatge <strong>Forgot Your Password?</strong> original en el formulari de login:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&lt;a class=&quot;btn btn-link&quot; href=&quot;{{ route(&#39;password.request&#39;) }}&quot;&gt;
+<span class="linenos" data-linenos="2 "></span>{{ __(&#39;Forgot Your Password?&#39;) }}
+<span class="linenos" data-linenos="3 "></span>&lt;/a&gt;
+</code></pre></div>
+<p>La instrucció __() cerca la clau que li passem (Forgot Your Password?) en els arxius de configuració
+en anglés, i si no la troba, posa directament la clau sense més. Si busquem aquesta mateixa
+clau en l'arxiu <strong>es.json</strong> que hem descarregat, podem veure per què text se substituirà quan
+canviem l'idioma a espanyol:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&quot;Forgot Your Password?&quot;: &quot;¿Olvidaste tu contraseña?&quot;,
+</code></pre></div>
+<h3 id="altres-consideracions">Altres consideracions<a class="headerlink" href="#altres-consideracions" title="Permanent link">&para;</a></h3>
+<p>La incorporació del scaffolding d'autenticació, com podem comprovar, estalvia molta faena a l'hora
+de definir els mecanismes de registre i login d'usuaris en el sistema. No obstant això, queden algunes
+tasques pendents que poden requerir una configuració addicional, i que no veurem en aquest curs per falta
+de temps.</p>
+<p>Una d'elles, per exemple, és l'opció de recuperar contrasenya quan punxem en l'enllaç de Vas
+oblidar la teua contrasenya?. En principi, i atés que ens registrem amb un e-mail com login, ens demana que
+facilitem aquest e-mail per a enviar-nos un enllaç per a restablir la contrasenya. No obstant això, hem de configurar apropiadament el correu SMTP per a poder enviar el missatge. Per a això, necessitem un
+compte origen, i depenent del servidor de correu on el tinguem creat (Gmail, Outlook, etc), la
+configuració és diferent. <a href="https://medium.com/@agavitalis/how-to-send-an-email-in-laravel-using-gmail-smtp-server-53d962f01a0c">Ací</a>, per exemple, explica els passos a seguir per a configurar com a compte
+emissora una de Gmail. </p>
+<h2 id="definir-roles-us-de-middleware">Definir roles. Ús de middleware<a class="headerlink" href="#definir-roles-us-de-middleware" title="Permanent link">&para;</a></h2>
+<p>Per a poder definir rols per als diferents usuaris de la nostra aplicació, òbviament hem de començar
+per definir un nou camp en la taula d'usuaris per a emmagatzemar aquest rol.</p>
+<p>Després, per a protegir certes rutes en funció dels rols, podem ocultar l'enllaç en les vistes amb
+una simple comprovació. Per exemple, assumint que el camp dels rols es diu rol:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>@if (Auth::user()-&gt;rol === &#39;admin&#39;)
+<span class="linenos" data-linenos="2 "></span>    // Mostrar contenido
+<span class="linenos" data-linenos="3 "></span>@endif
+</code></pre></div>
+<p>No obstant això, si accedim a la URL sense passar per l'enllaç, podrem veure el contingut. Devem
+novament incorporar el middleware auth al controlador que corresponga (si no ho està ja), per a protegir
+l'accés general per a usuaris autenticats.
+A més, hem de definir un middleware propi que verifique el rol de l'usuari logueado. Podem crear-ho
+amb aquest comando: </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>php artisan make:middleware RolCheck
+</code></pre></div>
+<p>En aquest cas hem anomenat al <strong>middleware RolCheck</strong> , però el nom pot ser el que vulguem. Aquest
+middleware es crearà en la carpeta <strong>App\Http\Middleware</strong> . Hem d'editar el seu mètode <strong>handle</strong> per a verificar que els usuaris són de tipus "admin":</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">public function handle($request, Closure $next, $rol)</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">    if (Auth::user()-&gt;rol === $rol)</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">        return $next($request);</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">    else</span>
+<span class="linenos" data-linenos="6 "></span><span class="x">        return redirect(&#39;/&#39;);</span>
+<span class="linenos" data-linenos="7 "></span><span class="x">}</span>
+</code></pre></div>
+<p>Després de definir el middleware, ho registrem en l'arxiu <strong>App/Http/Kernel.php</strong> (en l'apartat de <strong>routeMiddleware</strong>):</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">protected $routeMiddleware = [</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">...</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">&#39;roles&#39; =&gt; \App\Http\Middleware\RolCheck::class</span>
+</code></pre></div>
+<p>Finalment, ho carreguem en el constructor del nostre controlador. Podem incloure amb <strong>except</strong> i
+<strong>only</strong> restriccions sobre quins mètodes del controlador es veuran afectats o no pel middleware.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>public function __construct()
+<span class="linenos" data-linenos="2 "></span>{
+<span class="linenos" data-linenos="3 "></span>    $this-&gt;middleware([&#39;auth&#39;, &#39;roles:admin&#39;]);
+<span class="linenos" data-linenos="4 "></span>}
+</code></pre></div>
+<p>En aquest exemple, hem mapatge el middleware amb l'àlies rols en l'arxiu <strong>Kernel.php</strong> , i el que hi ha
+després dels dos punts és el paràmetre extra que té el mètode <strong>handle</strong> del middleware (el rol a comprovar).
+En el cas de voler passar més paràmetres, es pot fer separats per comes.</p>
+<h4 id="sobre-el-concepte-de-middleware">Sobre el concepte de middleware<a class="headerlink" href="#sobre-el-concepte-de-middleware" title="Permanent link">&para;</a></h4>
+<p>Hem comentat breument el concepte de middleware associat tant al mecanisme d'autenticació
+com a la classe "extra" que podem crear per a comprovar rols. En general, un middleware és un
+fragment de codi (normalment una funció) que s'executa enmig d'un procés. En aquest cas, s'executa
+des que es rep la petició fins que s'emet la resposta, i permet alterar aqueix flux normal,
+fent certes comprovacions sobre la petició. Per exemple, com és el cas, verificar que l'usuari
+té els permisos adequats abans d'emetre una resposta o una altra.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 Xavier Sastre - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "toc.integrate", "content.tabs.link", "navigation.expand"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>

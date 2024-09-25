@@ -1,0 +1,841 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsastre.github.io/Moduls/AW/01.html">
+      
+      
+        <link rel="prev" href="../DWEC/desenvolupamentfrontend.html">
+      
+      
+      
+      <link rel="icon" href="../../imagenes/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Internet, características y evolución - Docencia Xavier</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans Condensed";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-introduccion" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../.." title="Docencia Xavier" class="md-header__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docencia Xavier
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Internet, características y evolución
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode dia"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Docencia Xavier" class="md-nav__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Docencia Xavier
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Inici
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            DWEC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC/_DWEC2425.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupament web en entorn client - DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC/desenvolupamentfrontend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupamet frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AW
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Aplicacions web
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="01.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Aplicacions web
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-historia-de-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Historia de Internet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-historia-de-la-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Historia de la web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-la-web-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. La web 1.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-la-web-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. La web 2.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-web-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Web 3.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-arquitectura-cliente-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Arquitectura cliente-servidor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-direcciones-de-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Direcciones de Internet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Direcciones de Internet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-direcciones-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1. Direcciones IP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2. URLs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. HTML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Bibliografía
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Aplicacions web</h1>
+
+<h2 id="1-introduccion">1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">&para;</a></h2>
+<p>En este artículo se va a tratar la historia la web así como su funcionamiento básico.</p>
+<h2 id="2-historia-de-internet">2. Historia de Internet<a class="headerlink" href="#2-historia-de-internet" title="Permanent link">&para;</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mGG5o6vbKyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l-zFtlzanvQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9hIQjrMHTv4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Leer artículo <a href="https://marketing4ecommerce.net/historia-de-internet/">Historia de Internet: cómo nació y cuál fue su evolución</a></p>
+<p>Pregunta 1: ¿Cómo se llamaba el primer satélite artificial lanzado al espacio?</p>
+<p>Pregunta 2: ¿En que se basa la teoría de conmutación de paquetes?</p>
+<p>Pregunta 3: ¿Qué unía la red ARPANET?</p>
+<p>Pregunta 4: ¿Que dos ciudades se unieron por primera vez?</p>
+<p>Pregunta 5: ¿Cuál es el país con mayor penetración de internet?</p>
+<p>Pregunta 6: ¿Cuál es el sitio web más visitado del mundo?</p>
+<p>Pregunta 7: ¿Cuál fue la primera red social de la historia?</p>
+<p>Leer artículo <a href="https://www.mastermarketing-valencia.com/marketing-digital/blog/internet-historia-evolucion/#Los_origenes_de_internet_ARPA">Historia de Internet</a> hasta la sección "Evolución de Internet en cifras" incluida.</p>
+<p>Leer artículo <a href="https://www.fib.upc.edu/retro-informatica/historia/internet.html">Historia de internet</a> hasta la sección "WWW" incluida.</p>
+<h2 id="3-historia-de-la-web">3. Historia de la web<a class="headerlink" href="#3-historia-de-la-web" title="Permanent link">&para;</a></h2>
+<p>Ver hasta el año 2001...</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NWUZCTTLQcg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<details class="card mb-2">
+  <summary class="card-header question">¿Qué es una página web?</summary>
+  <div class="card-body" markdown="1">
+
+Una página web es un documento HTML. Este documento HTML es interpretado por un navegador:
+
+- Google Chrome
+- Mozilla Firefox
+- Internet Explorer
+- Microsoft Edge
+- Opera
+- Safari
+
+<!-- Comentario para que no se descuajeringue la cosa -->
+
+</div>
+</details>
+
+<details class="card mb-2">
+  <summary class="card-header question">¿Es lo mismo Internet que la web?</summary>
+  <div class="card-body" markdown="1">
+
+No. WEB = INTERNET + HTTP
+
+</div>
+</details>
+
+<h2 id="4-la-web-10">4. La web 1.0<a class="headerlink" href="#4-la-web-10" title="Permanent link">&para;</a></h2>
+<p>La web primitiva, la del siglo 20, era aquella que se caracteriza principalmente por ser unidireccional y realizada sobre contenidos estáticos. Las primeras páginas que vimos en Internet publicaban contenidos de texto que, una vez publicados, no se actualizaban salvo que el "webmaster" modificase dichos contenidos y volviese a subir la web de nuevo a internet.</p>
+<p>La web 1.0 tenía un carácter principalmente divulgativo, y empezaron a colgarse de internet documentos e información principalmente cultural. Poco a poco las empresas empezaron a tomar parte y las primeras webs de empresa surgieron, con diseños muy pobres (no había herramientas, ni tecnología, ni conexión suficiente como para hacerlo mejor) y contenidos que rápidamente quedaban anticuados al ser complejo actualizarlos.</p>
+<h2 id="5-la-web-20">5. La web 2.0<a class="headerlink" href="#5-la-web-20" title="Permanent link">&para;</a></h2>
+<p>La web 2.0 se asiento a mediados de la primera década de este siglo. Sustentada bajo unas conexiones a internet evolucionadas (ya teníamos ADSL), y mejores herramientas para desarrollar web, mejores servidores, etc., la web 2.0, también denominada "la red social", llena Internet de blogs, wikis, foros y finalmente, redes sociales. El objetivo de la web 2.0 es la compartición del conocimiento, es la web colaborativa y ha sido uno de los atractivos principales para atraer a usuarios (basta ver los usuarios de facebook que, hasta facebook, no tocaban un ordenador).</p>
+<p>Pregunta:  ¿La web de Homer Simpson es 1.0 o 2.0?</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P5MWN3TQeY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="6-web-30">6. Web 3.0<a class="headerlink" href="#6-web-30" title="Permanent link">&para;</a></h2>
+<p>La web 3.0 es:</p>
+<ul>
+<li>Web semántica</li>
+<li>Experiencia de navegación personalizada a través de:</li>
+<li>Analizar el historial de cada usuario</li>
+<li>Analizar datos de conducta web de cada usuario</li>
+<li>Desarrollar tecnologías 3.0 como la Inteligencia Artificial.</li>
+<li>Crear una base de datos global.</li>
+<li>Analizar la geolocalización del usuario.</li>
+<li>Etc.</li>
+</ul>
+<p>Leer artículo <a href="https://www.ionos.es/digitalguide/online-marketing/marketing-para-motores-de-busqueda/web-semantica/">¿En qué consiste la web semántica?</a>.</p>
+<p>{:.question}
+¿Qué diferencia existe entre la web semántica y sintáctica? ¿Sabrías poner un ejemplo?</p>
+<details class="card mb-2">
+  <summary class="card-header question">¿Cuál fue el motivo del éxito de Google?</summary>
+  <div class="card-body" markdown="1">
+
+La respuesta del éxito actual de Google es sencilla: fue el primer buscador, como tal, que se tomó en serio su trabajo.
+
+Google nació a finales de los años 90, como la tesis doctoral de Larry Page y Sergey Brin. En 1998 se estrenó en Internet y desde entonces se ha consagrado como el principal motor de búsqueda en el mundo.
+
+Su principal innovación fue tener en cuenta la autoridad de las páginas, ganada a través de enlaces. Google desarrolló un sistema para cuantificar esta autoridad, y lo llamó "PageRank".
+
+Aunque hay que agregar que, a consecuencia de la gran importancia que Google otorgaba a los enlaces, muchos -si no es que todos- sitios web han estado creando enlaces no orgánicos durante años, consiguiendo más autoridad de la que correspondería de forma natural.
+
+Por ello, y para intentar combatir este problema, las más reciente actualizaciones del algoritmo de Google se han centrado en otras métricas, como señales sociales, interacción del usuario y calidad de los contenidos, entre otras.
+
+</div>
+</details>
+
+<h2 id="8-arquitectura-cliente-servidor">8. Arquitectura cliente-servidor<a class="headerlink" href="#8-arquitectura-cliente-servidor" title="Permanent link">&para;</a></h2>
+<p>La web tiene una arquitectura cliente-servidor.</p>
+<p><img alt="Arquitectura cliente-servidor" src="/assets/img/internet-caracteristicas-evolucion/arquitecturaClienteServidor.png" />
+<em>Arquitectura cliente-servidor</em></p>
+<details class="card mb-2">
+  <summary class="card-header question">¿Qué diferencia hay entre una arquitectura cliente servidor y una arquitectura p2p?</summary>
+  <div class="card-body" markdown="1">
+
+**Cliente-Servidor**: es un modelo de aplicación distribuida en el que las tareas se reparten entre los proveedores de recursos o servicios, llamados servidores, y los demandantes, llamados clientes. Un cliente realiza peticiones a otro programa, el servidor, quien le da respuesta. Esta idea también se puede aplicar a programas que se ejecutan sobre una sola computadora, aunque es más ventajosa en un sistema operativo multiusuario distribuido a través de una red de computadoras.
+
+**P2P**: es una red de computadoras en la que todos o algunos aspectos funcionan sin clientes ni servidores fijos, sino una serie de nodos que se comportan como iguales entre sí. Es decir, actúan simultáneamente como clientes y servidores respecto a los demás nodos de la red. Las redes P2P permiten el intercambio directo de información, en cualquier formato, entre los ordenadores interconectados.
+
+Una de las diferencias, es que en el "CS" se necesita un servidor, y un cliente, a diferencia del "P2P", que permite a cualquier usuario ser cliente o servidor. Una de las ventajas del "P2P" es que la conexión siempre estará activa, ya que con que haya un cliente, el servidor esta activo, pero en el "CS" se requiere que el servidor principal esté activo. En el "P2P" todo usuario o cliente tiene las mismas funciones que otro igual que él, aspecto contrario al "CS" en el cual un servidor tiene las funciones que los clientes no poseen.
+
+</div>
+</details>
+
+<p><strong>Pregunta: ¿Sabríais decirme 5 navegadores web?</strong></p>
+<p><img alt="Arquitectura cliente-servidor" src="/assets/img/internet-caracteristicas-evolucion/arquitecturaClienteServidorConNat.png" />
+<em>Arquitectura cliente-servidor con NAT</em></p>
+<p><strong>Pregunta:¿Qué significan las siglas NAT?</strong></p>
+<h2 id="9-direcciones-de-internet">9. Direcciones de Internet<a class="headerlink" href="#9-direcciones-de-internet" title="Permanent link">&para;</a></h2>
+<h3 id="91-direcciones-ip">9.1. Direcciones IP<a class="headerlink" href="#91-direcciones-ip" title="Permanent link">&para;</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gVUE2IDwWA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Pregunta : ¿Cómo se llaman los proveedores de internet (siglas)?</p>
+<p>Pregunta : ¿Cómo puede Movistar disponer de menos IPs que usuarios?</p>
+<p>Pregunta : ¿Qué es la WAN?</p>
+<p>Pregunta : ¿Qué información tiene cada paquete TCP/IP?</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HeZWcZmrQUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Preguntas sobre el vídeo:</p>
+<ul>
+<li>¿Cómo sabe el router a qué dispositivo de la LAN a la que va el paquete de respuesta?</li>
+<li>¿El router analiza la dirección MAC para realizar el trabajo del NAT satisfactoriamente?</li>
+<li>¿Qué es el NAT? ¿En qué dispositivo suele estar?</li>
+<li>¿Cuál es la IP de la puerta de enlace?</li>
+<li>¿Cuál es el rango de direcciones IP? ¿Cómo se puede calcular?</li>
+<li>¿Es lo mismo la puerta enlace que el gateway? ¿Qué le(s) corresponde(n)?</li>
+<li>¿Por qué existen las IPs privadas? ¿No podrían ser todas públicas y así ahorrarnos el paso de traducción?</li>
+</ul>
+<h3 id="92-urls">9.2. URLs<a class="headerlink" href="#92-urls" title="Permanent link">&para;</a></h3>
+<p>Todo recurso de Internet debe tener una dirección accesible desde cualquier ordenador del mundo. A esa dirección se le llama URLs (Uniform Resource Locator).</p>
+<p>Una URL es una secuencia de caracteres, de acuerdo a un formato estándar, que se usa para nombrar recursos en Internet para su localización o identificación.</p>
+<p>Esta imagen <a href="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/Heckert_GNU_white.svg/246px-Heckert_GNU_white.svg.png">https://upload.wikimedia.org/wikipedia/en/thumb/2/22/Heckert_GNU_white.svg/246px-Heckert_GNU_white.svg.png</a> tiene una URL en Internet.</p>
+<p><img alt="Formato de una URL" src="/assets/img/internet-caracteristicas-evolucion/formatoUrl.png" />
+<em>Formato de una URL</em></p>
+<details class="card mb-2">
+  <summary class="card-header question">¿Por qué usamos dominios?</summary>
+  <div class="card-body" markdown="1">
+
+La IP del centro educativo IES Leonardo de Chabacier es 2.139.196.76.
+Cómo memorizar estos números es poco práctico se crearon los servidores DNS y así asociar estas IPs a nombres.
+
+</div>
+</details>
+
+<details class="card mb-2">
+  <summary class="card-header question">¿Qué es un DNS y para qué sirve?</summary>
+  <div class="card-body" markdown="1">
+
+Cada dispositivo conectado a Internet tiene una dirección IP única que otros equipos pueden usar para encontrarlo. Los servidores DNS (Domain Name System) suprimen la necesidad de que los humanos memoricen direcciones IP tales como 192.168.1.1 (en IPv4) o nuevas direcciones IP alfanuméricas más complejas, tales como 2400:cb00:2048:1:c629:d7a2 (en IPv6).
+
+![Comunicación cliente-servidor DNS básica](/assets/img/internet-caracteristicas-evolucion/servidorDns.png)
+_Comunicación cliente-servidor DNS básica_
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7XjJqUM0dvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- Comentario para que no se descuajeringue la cosa -->
+
+</div>
+</details>
+
+<h2 id="10-html">10. HTML<a class="headerlink" href="#10-html" title="Permanent link">&para;</a></h2>
+<p>Leer artículo <a href="/posts/html/">HTML</a>.</p>
+<h2 id="11-bibliografia">11. Bibliografía<a class="headerlink" href="#11-bibliografia" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://eidos.com.mx/blog/por-que-google-es-el-buscador-mas-utilizado-en-todo-el-mundo/#:~:text=La%20respuesta%20del%20%C3%A9xito%20actual,m%C3%A1s%20r%C3%A1pida%20y%20precisa%20posible.">¿Por qué Google es el buscador más utilizado en todo el mundo?</a></li>
+<li><a href="https://www.ionos.es/digitalguide/online-marketing/marketing-para-motores-de-busqueda/web-semantica/#:~:text=La%20web%20sem%C3%A1ntica%20a%C3%B1ade%20informaci%C3%B3n,pueden%20tener%20el%20mismo%20significado">¿En qué consiste la web semántica?</a></li>
+<li><a href="https://www.ceupe.com/blog/que-es-la-web-3-0.html">¿Qué es la Web 3.0?</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 Xavier Sastre - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "toc.integrate", "content.tabs.link", "navigation.expand"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1060 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsastre.github.io/7.5.Laravel_models.html">
+      
+      
+      
+      
+      <link rel="icon" href="imagenes/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>FRAMEWORK LARAVEL - Docencia Xavier</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans Condensed";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#framework-laravel" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="." title="Docencia Xavier" class="md-header__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docencia Xavier
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FRAMEWORK LARAVEL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode dia"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Docencia Xavier" class="md-nav__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Docencia Xavier
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Inici
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            DWEC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/DWEC/_DWEC2425.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupament web en entorn client - DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/DWEC/desenvolupamentfrontend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupamet frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AW
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/AW/01.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicacions web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="framework-laravel">FRAMEWORK LARAVEL<a class="headerlink" href="#framework-laravel" title="Permanent link">&para;</a></h1>
+<h2 id="base-de-dades"><a href="https://laravel.com/docs/8.x/database">Base de dades</a><a class="headerlink" href="#base-de-dades" title="Permanent link">&para;</a></h2>
+<p>Laravel facilita la configuració i l'ús de diferents tipus de base de dades: MySQL, Postgres, SQLite i SQL Server. En el fitxer de configuració (<strong>config/database.php</strong>) hem d'indicar tots els paràmetres d'accés a les nostres bases de dades i a més especificar com és la connexió que s'utilitzarà per defecte. En Laravel podem fer ús de diverses bases de dades alhora, encara que siguen de diferent tipus. Per defecte s'accedirà a la qual especifiquem en la configuració i si volem accedir a una altra connexió ho haurem d'indicar expressament en realitzar la consulta.</p>
+<p>En aquest capítol veurem com configurar una base de dades, com crear taules i especificar els seus camps des de codi, com inicialitzar la base de dades i com construir consultes tant de forma directa com a través del ORM anomenat <strong>Eloquent</strong>.</p>
+<h3 id="configuracio-inicial">Configuració inicial<a class="headerlink" href="#configuracio-inicial" title="Permanent link">&para;</a></h3>
+<h5 id="configuracio-de-la-base-de-dades">Configuració de la Base de dades<a class="headerlink" href="#configuracio-de-la-base-de-dades" title="Permanent link">&para;</a></h5>
+<p>El primer que hem de fer per a treballar amb bases de dades és completar la configuració. Com a exemple anem a configurar l'accés a una base de dades tipus <strong>MySQL</strong>. Si editem el fitxer amb la configuració config/database.php podem veure en primer lloc la següent línia:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&#39;default&#39; =&gt; env(&#39;DB_CONNECTION&#39;, &#39;mysql&#39;),
+</code></pre></div>
+<p>Aquest valor indica el tipus de base de dades a utilitzar per defecte. Com vam veure en el primer capítol Laravel utilitza el sistema de variables d'entorn per a separar les diferents configuracions d'usuari o de màquina. 
+El mètode env('DB_CONNECTION', 'mysql') el que fa és obtenir el valor de la variable DB_CONNECTION del fitxer <strong>.env</strong>. En cas que aquesta variable <strong>no estiga definida</strong> retornarà el valor per defecte mysql.</p>
+<p>En aquest mateix fitxer de configuració, dins de la secció connections, podem trobar tots els camps utilitzats per a configurar cada tipus de base de dades, en concret la base de dades tipus mysql té els següents valors:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="x">    &#39;mysql&#39; =&gt; [</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="x">            &#39;driver&#39; =&gt; &#39;mysql&#39;,</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="x">            &#39;host&#39; =&gt; env(&#39;DB_HOST&#39;, &#39;127.0.0.1&#39;),</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="x">            &#39;port&#39; =&gt; env(&#39;DB_PORT&#39;, &#39;3306&#39;),</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="x">            &#39;database&#39; =&gt; env(&#39;DB_DATABASE&#39;, &#39;forge&#39;),</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="x">            &#39;username&#39; =&gt; env(&#39;DB_USERNAME&#39;, &#39;forge&#39;),</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="x">            &#39;password&#39; =&gt; env(&#39;DB_PASSWORD&#39;, &#39;&#39;),</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="x">            &#39;unix_socket&#39; =&gt; env(&#39;DB_SOCKET&#39;, &#39;&#39;),</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="x">            &#39;charset&#39; =&gt; &#39;utf8mb4&#39;,</span>
+<span class="linenos" data-linenos="10 "></span><span class="x">            &#39;collation&#39; =&gt; &#39;utf8mb4_unicode_ci&#39;,</span>
+<span class="linenos" data-linenos="11 "></span><span class="x">            &#39;prefix&#39; =&gt; &#39;&#39;,</span>
+<span class="linenos" data-linenos="12 "></span><span class="x">            &#39;prefix_indexes&#39; =&gt; true,</span>
+<span class="linenos" data-linenos="13 "></span><span class="x">            &#39;strict&#39; =&gt; true,</span>
+<span class="linenos" data-linenos="14 "></span><span class="x">            &#39;engine&#39; =&gt; null,</span>
+<span class="linenos" data-linenos="15 "></span><span class="x">        ],</span>
+</code></pre></div>
+<h5 id="contrasenya-dacces">Contrasenya d'accés<a class="headerlink" href="#contrasenya-dacces" title="Permanent link">&para;</a></h5>
+<p>Com es pot veure, bàsicament els camps que hem de configurar per a usar la nostra base de dades són: host, database, username i password. El host ho podem deixar com està si anem a usar una base de dades local, mentre que els altres tres camps sí que hem d'actualitzar-los amb el noms de la base de dades a utilitzar i l'usuari i la contrasenya d'accés. Per a posar aquests valors obrim el fitxer <strong>.env</strong> de l'arrel del projecte i els actualitzem:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>DB_CONNECTION=mysql 
+<span class="linenos" data-linenos="2 "></span>DB_HOST=localhost 
+<span class="linenos" data-linenos="3 "></span>DB_DATABASE=nom-base-de-dades 
+<span class="linenos" data-linenos="4 "></span>DB_USERNAME=nom-de-usuari
+<span class="linenos" data-linenos="5 "></span>DB_PASSWORD=contrasenya-de-accés
+</code></pre></div>
+<h5 id="crear-la-base-de-dades">Crear la base de dades<a class="headerlink" href="#crear-la-base-de-dades" title="Permanent link">&para;</a></h5>
+<p>L'únic pas necessari des de fora de Laravel per a accedir a la base de dades serà crear-la. La resta d'operacions(creació de taules, camps, claus, relacions, dades, etc) es podran fer des del propi
+Laravel, com anirem veient a continuació.
+La base de dades podem crear-la a través d'algun administrador que tinguem disponible (per exemple,
+<strong>phpMyAdmin</strong> per a bases de dades <strong>MySQL</strong>), o bé per línia de comandos, connectant amb el SGBD en
+qüestió i creant la base de dades.</p>
+<h2 id="migracions">Migracions<a class="headerlink" href="#migracions" title="Permanent link">&para;</a></h2>
+<p>Les migracions són un sistema de control de versions per a bases de dades. Permeten que un equip treballe sobre una base de dades afegint i modificant camps, mantenint un històric dels canvis realitzats i de l'estat actual de la base de dades. </p>
+<p>Les migracions s'utilitzen de forma conjunta amb l'eina Schema builder (que veurem en la següent secció) per a gestionar l'esquema de base de dades de l'aplicació.</p>
+<p>La forma de funcionar de les migracions és crear fitxers (PHP) amb la descripció de la taula a crear i posteriorment, si es vol modificar aquesta taula s'afegiria una nova migració (un nou fitxer PHP) amb els camps a modificar.</p>
+<p>Artisan inclou comandos per a crear migracions, per a executar les migracions o per a fer rollback de les mateixes (tornar arrere).</p>
+<h4 id="estructura-de-les-migracions">Estructura de les migracions<a class="headerlink" href="#estructura-de-les-migracions" title="Permanent link">&para;</a></h4>
+<p>Per defecte, Laravel porta unes migracions predefinides, que es troben en la carpeta
+<strong>database/migrations</strong> . Cadascuna té un nom d'arxiu que comença per la data en què es va fer, seguida d'una breu descripció del que conté (creació de la taula d'usuaris, reinicialitze de contrasenyes...).
+Pot ser que algunes d'aquestes migracions no ens vagen a ser necessàries, amb el que podem esborrar-les directament, i pot ser que altres (especialment la creació de la taula d'usuaris) sí que ens servisca, però amb altres camps, amb el que haurem d'editar-la, com veurem a continuació.
+Si examinem el contingut d'una migració, totes han de tindre dos mètodes:</p>
+<ul>
+<li><strong>up</strong> : permet agregar taules, columnes o índexs a la base de dades</li>
+<li><strong>down</strong> : reverteix el fet pel mètode anterior</li>
+</ul>
+<p>Si observem el contingut d'un mètode up dels quals vénen predefinits per a crear una taula, veiem
+que s'utilitzen diferents mètodes per a definir els tipus de dades de cada camp de la taula, com per exemple <strong>id()</strong> per a camps que puguen contindre sencers <em>autoincrementales, o </em><em>string()</em><em> per a camps
+de tipus text. A més, existeixen altres mètodes modificadors per a agregar propietats addicionals,
+com per exemple </em><em>unique()</em><em> per a indicar valors únics (claus alternatives), o </em><em>nullable()</em><em> per a indicar
+que un camp admet nuls. Ací tenim un exemple de mètode </em><em>up</em>* :</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="x">public function up()</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="x">    Schema::create(&#39;usuarios&#39;, function(BluePrint $tabla) {</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="x">        $tabla-&gt;id();</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="x">        $tabla-&gt;string(&#39;nombre&#39;);</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="x">        $tabla-&gt;string(&#39;email&#39;)-&gt;unique();</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="x">        ...</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="x">        $tabla-&gt;timestamps();</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="x">    });</span>
+<span class="linenos" data-linenos="10 "></span><span class="x">}</span>
+</code></pre></div>
+Per defecte, com veiem en els exemples que es proporcionen, els esquemes es creen amb un id
+autonumèric, i uns <strong>timestamps</strong> per a indicar la data de creació i de modificació de cada registre, i que
+Laravel gestiona de manera automàtica quan inserim o actualitzem continguts, la qual cosa resulta molt
+útil.</p>
+<p>Sobre aquesta base, podem afegir o llevar els camps que vulguem. Per a veure els tipus disponibles per a les
+columnes de la taula, podem visitar la documentació de Laravel sobre migracions, en concret
+buscarem el subapartat <strong>Available Column Types</strong>. </p>
+<p>Convé tindre present, per exemple, que el tipus <strong>string</strong> que hem utilitzat en l'exemple anterior té una limitació de 255 caràcters. Per a textos
+més grans, es pot emprar el tipus <strong>text</strong> (20.000 caràcters aproximadament) o <strong>longText</strong> .
+Podem especificar una clau primària amb el mètode <strong>primary</strong> , al qual li podem passar o bé el
+nom del camp clau, o un array de camps clau, en el cas que aquesta siga composta. 
+Per defecte, els
+camps de tipus <strong>id</strong> s'acte-estableixen com a claus primàries.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$table-&gt;primary([&#39;campo1&#39;, &#39;campo2&#39;]);
+</code></pre></div>
+<h4 id="crear-una-nova-migracio">Crear una nova migració<a class="headerlink" href="#crear-una-nova-migracio" title="Permanent link">&para;</a></h4>
+<p>Per a crear una nova migració s'utilitza el comando de Artisan <strong>make:migration</strong>, al com li passarem el nom del fitxer a crear i el nom de la taula:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    php artisan make:migration nom_migracio
+</code></pre></div>
+<p>Açò ens crearà un fitxer de migració en la carpeta database/migrations amb el nom <strong><TIMESTAMP>_nom_migracio.php</strong>. En afegir un timestamp a les migracions el sistema sap l'ordre en el qual ha d'executar (o desfer) les mateixes.</p>
+<p>Notar que Laravel ja assigna automàticament la data de la migració, només hem d'especificar el nom
+descriptiu d'aquesta. A més, si Laravel detecta la paraula create en el nom de la migració,
+finalitzada en table, intueix que és per a crear una taula nova. 
+En canvi, si detecta la paraula to (entre
+altres), i al final la paraula table, intueix que s'alterarà o modificar una taula existent. Això és gràcies a la classe <strong>TableGuesser</strong> incorporada en Laravel, que detecta uns certs patrons en els noms de migracions.</p>
+<p>La diferència entre la creació i la modificació és que en el mètode <strong>up</strong> de la migració s'utilitzarà
+<strong>Schema::create</strong> o <strong>Schema::table</strong> sobre la taula en qüestió, respectivament.</p>
+<p>En qualsevol cas, també podem especificar un paràmetre addicional en el comando de migració per a indicar
+si volem crear o modificar una taula, i d'aquesta manera podem definir el nom de la migració
+en l'idioma que vulguem, i sense restriccions de patrons. Aquestes dues migracions creen una taula (comandes) i modifiquen una altra (usuaris), respectivament:</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>php artisan make:migration crear_tabla_pedidos --create=pedidos
+<span class="linenos" data-linenos="2 "></span>php artisan make:migration nuevo_campo_usuario --table=usuarios 
+</code></pre></div>
+En el cas de la segona migració, si, per exemple, volem afegir una columna amb el número de telèfon
+ dels usuaris, pot quedar així (tant el mètode up com el down ):</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>public function up()
+<span class="linenos" data-linenos=" 2 "></span>{
+<span class="linenos" data-linenos=" 3 "></span>    Schema::table(&#39;usuarios&#39;, function(Blueprint $tabla)    {
+<span class="linenos" data-linenos=" 4 "></span>        $tabla-&gt;string(&#39;telefono&#39;)-&gt;nullable();
+<span class="linenos" data-linenos=" 5 "></span>    });
+<span class="linenos" data-linenos=" 6 "></span>}
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span>public function down()
+<span class="linenos" data-linenos=" 9 "></span>{
+<span class="linenos" data-linenos="10 "></span>    Schema::table(&#39;usuarios&#39;, function(Blueprint $tabla)    {
+<span class="linenos" data-linenos="11 "></span>        $tabla-&gt;dropColumn(&#39;telefono&#39;);
+<span class="linenos" data-linenos="12 "></span>    });
+<span class="linenos" data-linenos="13 "></span>}
+</code></pre></div>
+<p>Si volem que el camp en qüestió estiga en un ordre concret, podem usar el mètode after per a indicar
+darrere de quin camp volem posar-ho (en el mètode up ):</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$tabla-&gt;string(&#39;telefono&#39;)-&gt;after(&#39;email&#39;)-&gt;nullable();
+</code></pre></div>
+<h4 id="executar-i-esborrat-de-migracions">Executar i esborrat de migracions<a class="headerlink" href="#executar-i-esborrat-de-migracions" title="Permanent link">&para;</a></h4>
+<p>Després de crear una migració i de definir els camps de la taula (en la següent secció veurem com especificar açò) hem de llançar la migració amb el següent comando:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>php artisan migrate
+</code></pre></div>
+<p>Aquest comanament aplicarà la migració sobre la base de dades. Si hi haguera més d'una migració pendent s'executaran totes. Per a cada migració es dirà al seu mètode up perquè creu o modifique la base de dades. Posteriorment en cas que vulguem desfer els últims canvis podrem executar:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>php artisan migrate:rollback
+</code></pre></div>
+<p>O si volem desfer totes les migracions </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>php artisan migrate:reset
+</code></pre></div>
+<p>Un comanament interessant quan estem desenvolupant un nou lloc web és <strong>migrate:refresh</strong>, el qual desfarà tots els canvis i tornar a aplicar les migracions:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>php artisan migrate:fresh
+</code></pre></div>
+<p>A més si volem comprovar l'estat de les migracions, per a veure les que ja estan instal·lades i les que queden pendents, podem executar:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>php artisan migrate:status
+</code></pre></div>
+<h3 id="migracio-inversa">Migració inversa<a class="headerlink" href="#migracio-inversa" title="Permanent link">&para;</a></h3>
+<p>Si tenim la base de dades i volem crear les migracions a partir d'ella podem instal·lar el següent <a href="https://github.com/oscarafdev/migrations-generator">component</a>. Te un bug ,explicat en aquest <a href="https://github.com/Xethron/migrations-generator/issues/191">enllaç</a>.</p>
+<h3 id="schema-builder">Schema Builder<a class="headerlink" href="#schema-builder" title="Permanent link">&para;</a></h3>
+<p>Una vegada creada una migració hem de completar els seus mètodes up i down per a indicar la taula que volem crear o el camp que volem modificar. En el mètode down sempre haurem d'afegir l'operació inversa, eliminar la taula que s'ha creat en el mètode up o eliminar la columna que s'ha afegit. </p>
+<p>Açò ens permetrà desfer migracions deixant la base de dades en el mateix estat en el qual es trobaven abans que s'afegiren.</p>
+<p>Per a especificar la taula a crear o modificar, així com les columnes i tipus de dades de les mateixes, s'utilitza la classe <strong>Schema</strong>. Aquesta classe té una sèrie de mètodes que ens permetrà especificar l'estructura de les taules independentment del sistema de base de dades que utilitzem.</p>
+<h5 id="crear-i-esborrar-una-taula">Crear i esborrar una taula<a class="headerlink" href="#crear-i-esborrar-una-taula" title="Permanent link">&para;</a></h5>
+<p>Per a afegir una nova taula a la base de dades s'utilitza el següent constructor:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>Schema::create(&#39;users&#39;, function (Blueprint $table)     { 
+<span class="linenos" data-linenos="2 "></span>    $table-&gt;increments(&#39;id&#39;);
+<span class="linenos" data-linenos="3 "></span>});
+</code></pre></div>
+<p>On el primer argument és el nom de la taula i el segon és una funció que rep com a paràmetre un objecte
+del tipus Blueprint que utilitzarem per a configurar les columnes de la taula.</p>
+<p>En la secció down de la migració haurem d'eliminar la taula que hem creat, per a açò usarem algun dels
+següents mètodes: </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>Schema::drop(&#39;users&#39;);
+<span class="linenos" data-linenos="2 "></span>Schema::dropIfExists(&#39;users&#39;);
+</code></pre></div>
+<p>En crear una migració amb el comando de Artisan make:migration ja ens ve aquest codi afegit per defecte, la creació i eliminació de la taula que s'ha indicat i a més s'afigen un parell de columnes per defecte (id i timestamps).</p>
+<h5 id="afegir-columnes">Afegir columnes<a class="headerlink" href="#afegir-columnes" title="Permanent link">&para;</a></h5>
+<p>El constructor Schema::create rep com a segon paràmetre una funció que ens permet especificar les columnes que va a tenir aquesta taula. </p>
+<p>En aquesta funció podem anar afegint tots els camps que vulguem, indicant per a cadascun d'ells el seu tipus i nom, i a més si volem també podrem indicar una sèrie de modificadors com a valor per defecte, índexs, etc. Per exemple:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">    Schema::create(&#39;users&#39;, function($table) {</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">        $table-&gt;increments(&#39;id&#39;); </span>
+<span class="linenos" data-linenos="3 "></span><span class="x">        $table-&gt;string(&#39;username&#39;, 32); </span>
+<span class="linenos" data-linenos="4 "></span><span class="x">        $table-&gt;string(&#39;password&#39;); </span>
+<span class="linenos" data-linenos="5 "></span><span class="x">        $table-&gt;smallInteger(&#39;vots&#39;); </span>
+<span class="linenos" data-linenos="6 "></span><span class="x">        $table-&gt;string(&#39;direccion&#39;); </span>
+<span class="linenos" data-linenos="7 "></span><span class="x">        $table-&gt;boolean(&#39;confirmat&#39;)-&gt;default(false);</span>
+<span class="linenos" data-linenos="8 "></span><span class="x">        $table-&gt;timestamps();</span>
+<span class="linenos" data-linenos="9 "></span><span class="x">    });</span>
+</code></pre></div>
+<p>Schema defineix molts tipus de dades que podem utilitzar per a definir les columnes d'una taula, alguns dels principals són:</p>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Tipus de camp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$table-&gt;boolean('confirmed');</td>
+<td>BOOLEAN</td>
+</tr>
+<tr>
+<td>$table-&gt;enum('choices', array('foo', 'bar'));</td>
+<td>ENUM</td>
+</tr>
+<tr>
+<td>$table-&gt;float('amount');</td>
+<td>FLOAT</td>
+</tr>
+<tr>
+<td>$table-&gt;increments('id');</td>
+<td>Clau principal tipus INTEGER amb Acte-Increment</td>
+</tr>
+<tr>
+<td>$table-&gt;integer('votes');</td>
+<td>INTEGER</td>
+</tr>
+<tr>
+<td>$table-&gt;mediumInteger('numbers');</td>
+<td>MEDIUMINT</td>
+</tr>
+<tr>
+<td>$table-&gt;smallInteger('votes');</td>
+<td>SMALLINT</td>
+</tr>
+<tr>
+<td>$table-&gt;tinyInteger('numbers');</td>
+<td>TINYINT</td>
+</tr>
+<tr>
+<td>$table-&gt;string('email');</td>
+<td>VARCHAR</td>
+</tr>
+<tr>
+<td>$table-&gt;string('name', 100);</td>
+<td>VARCHAR amb la longitud indicada TEXT</td>
+</tr>
+<tr>
+<td>$table-&gt;text('description');</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>$table-&gt;timestamp('added_on');</td>
+<td></td>
+</tr>
+<tr>
+<td>$table-&gt;timestamps();</td>
+<td>Afig els timestamps "created_at" i "updated_at"</td>
+</tr>
+<tr>
+<td>-&gt;nullable()</td>
+<td>Indicar que la columna permet valors NULL</td>
+</tr>
+<tr>
+<td>-&gt;default($value)</td>
+<td>Declara un valor per defecte per a una columna</td>
+</tr>
+<tr>
+<td>-&gt;unsigned()</td>
+<td>Afig UNSIGNED a les columnes tipus INTEGER</td>
+</tr>
+</tbody>
+</table>
+<p>Els tres últims es poden combinar amb la resta de tipus per a crear, per exemple, una columna que permeta nuls, amb un valor per defecte i de tipus unsigned.</p>
+<p>Per a consultar tots els tipus de dades que podem utilitzar podeu consultar la documentació de Laravel <a href="http://laravel.com/docs/8.x/migrations#creating-columns">en</a>:</p>
+<h4 id="afegir-indexs">Afegir índexs<a class="headerlink" href="#afegir-indexs" title="Permanent link">&para;</a></h4>
+<p>Schema suporta els següents tipus d'índexs:</p>
+<table>
+<thead>
+<tr>
+<th>Comanament</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$table-&gt;primary('id');</td>
+<td>Afegir una clau primària</td>
+</tr>
+<tr>
+<td>$table-&gt;primary(array('first', 'last'));</td>
+<td>Definir una clau primària composta</td>
+</tr>
+<tr>
+<td>$table-&gt;unique('email');</td>
+<td>Definir el camp com UNIQUE</td>
+</tr>
+<tr>
+<td>$table-&gt;index('state');</td>
+<td>Afegir un índex a una columna</td>
+</tr>
+</tbody>
+</table>
+<p>En la taula s'especifica com afegir aquests índexs després de crear el camp, però també permet indicar aquests índexs alhora que es crea el camp:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$table-&gt;string(&#39;email&#39;)-&gt;unique();
+</code></pre></div>
+<h5 id="claus-alienes">Claus alienes<a class="headerlink" href="#claus-alienes" title="Permanent link">&para;</a></h5>
+<p>Amb Schema també podem definir claus alienes entre taules:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$table-&gt;integer(&#39;user_id&#39;)-&gt;unsigned();
+<span class="linenos" data-linenos="2 "></span>$table-&gt;foreign(&#39;user_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;users&#39;);
+</code></pre></div>
+<p>En aquest exemple en primer lloc afegim la columna "user_id" de tipus UNSIGNED INTEGER (sempre haurem de crear primer la columna sobre la qual es va a aplicar la clau aliena). A continuació vam crear la clau aliena entre la columna "user_id" i la columna "id" de la taula "users".</p>
+<p>La columna amb la clau aliena ha de ser del <strong>mateix tipus</strong> que la columna a la qual apunta. Si per exemple vam crear una columna a un índex auto-incremental haurem d'especificar que la columna siga <strong>unsigned</strong> per que no es produïsquen errors.</p>
+<p>També podem especificar les accions que s'han de realitzar per a "<strong>on delete</strong>" i "<strong>on update</strong>":</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$table-&gt;foreign(&#39;user_id&#39;)-&gt;references(&#39;id&#39;)-&gt;on(&#39;users&#39;)-&gt;onDelete(&#39;cascade&#39;);
+</code></pre></div>
+<p>Per a eliminar una clau aliena, en el mètode down de la migració hem d'utilitzar el següent codi: </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$table-&gt;dropForeign(&#39;posts_user_id_foreign&#39;);
+</code></pre></div>
+<p>Per a indicar la clau aliena a eliminar hem de seguir el següent patró per a especificar el nom <strong><tabla>_<columna>_foreign</strong>. On "taula" és el nom de la taula actual i "columna" el nom de la columna sobre la qual es cree la clau aliena.</p>
+<h2 id="models-de-dades-mitjancant-orm"><a href="https://laravel.com/docs/8.x/eloquent">Models de dades mitjançant ORM</a><a class="headerlink" href="#models-de-dades-mitjancant-orm" title="Permanent link">&para;</a></h2>
+<p>El mapeado objecte-relacional (més conegut pel seu nom en anglès, Object-Relational mapping, o per les seues sigles ORM) és una tècnica de programació per a convertir dades entre un llenguatge de programació orientat a objectes i una base de dades relacional com a motor de persistència. Açò possibilita l'ús de les característiques pròpies de l'orientació a objectes, podrem accedir directament als camps d'un objecte per a llegir les dades d'una base de dades o per a inserir-los o modificar-los.
+Laravel inclou el seu propi sistema de ORM anomenat <strong>Eloquent</strong>, el qual ens proporciona una manera elegant i fàcil d'interactuar amb la base de dades. Per a cada taula de la base dades haurem de definir el seu corresponent <strong>model</strong>, el qual s'utilitzarà per a interactuar des de codi amb la taula.</p>
+<h3 id="definicio-dun-model-de-dades">Definició dun model de dades<a class="headerlink" href="#definicio-dun-model-de-dades" title="Permanent link">&para;</a></h3>
+<p>Per defecte els models es guardaran com a classes PHP dins de la carpeta <strong>app/Models</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    php artisan make:model Movie
+</code></pre></div>
+<p>Aquest comando crearà el fitxer movie.php dins de la carpeta <strong>app/Models</strong> amb el codi bàsic d'un model.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="k">namespace</span> <span class="nx">App\Models</span><span class="p">;</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Model</span><span class="p">;</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="k">class</span> <span class="nc">Movie</span> <span class="k">extends</span> <span class="nx">Model</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="p">{</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="o">...</span>
+<span class="linenos" data-linenos="7 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="8 "></span><span class="cp">?&gt;</span>
+</code></pre></div>
+<p>Automàticament, s'associa aquest model a una taula amb el mateix nom, però en plural i en minúscula,
+per la qual cosa els models anteriors estarien associats a unes taules llibres i usuaris en la base de dades, respectivament. En cas que no vulguem que siga així, definim una propietat \$table en la classe amb el nom que vulguem que tinga la taula associada. Per exemple:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">class Movie extends Model</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">    protected $table = &#39;movies&#39;;</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">}</span>
+</code></pre></div>
+<h5 id="altres-opcions-de-crear-models">Altres opcions de crear models<a class="headerlink" href="#altres-opcions-de-crear-models" title="Permanent link">&para;</a></h5>
+<p>El comando anterior <strong>make:model</strong> admet uns paràmetres addicionals, de manera que es pot crear alhora
+el model i la migració, i més encara, el model, la migració i el controlador associat. Vegem alguns
+exemples:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">php artisan make:model Movie -m</span>
+</code></pre></div>
+<p>El comando anterior crea un model <strong>Pelicula</strong> en la carpeta <strong>app\Models</strong> i, a més, crea una
+migració anomenada <strong>create_peliculas_table</strong> en la carpeta <strong>database/migrations</strong> , llista perquè
+editem el mètode <strong>up</strong> i especifiquem els camps necessaris.
+<strong>Notar</strong> que el nom de la migració afig una "s" al nom de la taula automàticament, a partir del model en singular.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">php artisan make:model Movie -mc</span>
+</code></pre></div>
+<p>Aquest altre comando crea el mateix que l'anterior, i a més, un controlador anomenat <strong>PeliculaController</strong> en la carpeta <strong>app\Http\Controllers</strong> . Aquest controlador està buit, perquè afegim els mètodes que considerem.</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">php artisan make:model Movie -mcr</span>
+</code></pre></div>
+Aquesta altra opció crea el mateix que l'anterior, però el controlador <strong>PeliculaController</strong> és en aquest
+cas un controlador de recursos, per la qual cosa té ja incorporats el conjunt de mètodes propis d'aquesta
+mena de controladors: <strong>index , show , etc</strong>.</p>
+<h4 id="seguir-una-nomenclatura-uniforme">Seguir una nomenclatura uniforme<a class="headerlink" href="#seguir-una-nomenclatura-uniforme" title="Permanent link">&para;</a></h4>
+<p>Recorda que, de sessions anteriors, hem comentat la recomanació/necessitat de seguir una nomenclatura uniforme en els models, controladors i vistes. Així, per al <strong>model Movie</strong> ja tindríem el seu controlador associat <strong>MovieController</strong> , i les vistes es definirien en la subcarpetac <strong>resources/views/movies</strong> , amb els noms corresponents a cada mètode del controlador (per exemple <strong>index.blade.php</strong>  o <strong>show.blade.php</strong> ), i amb una taula associada <strong>movies</strong>.</p>
+<h5 id="clau-primaria">Clau primària<a class="headerlink" href="#clau-primaria" title="Permanent link">&para;</a></h5>
+<p>Laravel també assumeix que cada taula té declarada una clau primària amb el nom <strong>id</strong>. En el cas que no siga així i vulguem canviar-ho haurem de sobreescriure el valor de la propietat protegida <strong>\$primaryKey</strong> del model, per exemple: </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">    protected $primaryKey = &#39;my_id&#39;;</span>
+</code></pre></div>
+<p>És important definir correctament aquest valor ja que s'utilitza en determinats mètodes de Eloquent, com per exemple per a cercar registres o per a crear les relacions entre models.</p>
+<h5 id="timestamps">Timestamps<a class="headerlink" href="#timestamps" title="Permanent link">&para;</a></h5>
+<p>Una altra propietat que en ocasions haurem d'establir són els timestamps automàtics. Per defecte Eloquent assumeix que totes les taules contenen els camps updated_at i created_at (els quals els podem afegir molt fàcilment amb Schema afegint <strong>\$table-&gt;timestamps()</strong> en la migració). Aquests camps s'actualitzaran automàticament quan es creu un nou registre o es modifique. En el cas que no vulguem utilitzar-los (i que no estiguen afegits a la taula) haurem d'indicar-ho en el model o d'una altra forma ens donaria un error. Per a indicar que no els actualitze automàticament haurem de modificar el valor de la propietat pública <strong>\$timestamps</strong> a false, per exemple: </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">    public $timestamps = false;</span>
+</code></pre></div>
+<p>A continuació es mostra un exemple d'un model de Eloquent en el qual s'afigen totes les especificacions que hem vist:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">    </span><span class="cp">&lt;?php</span> <span class="k">namespace</span> <span class="nx">App</span><span class="p">;</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="k">use</span> <span class="nx">Illuminate\Database\Eloquent\Model</span><span class="p">;</span> 
+<span class="linenos" data-linenos="3 "></span>    <span class="k">class</span> <span class="nc">User</span> <span class="k">extends</span> <span class="nx">Model</span>
+<span class="linenos" data-linenos="4 "></span>        <span class="p">{</span>
+<span class="linenos" data-linenos="5 "></span>        <span class="k">protected</span> <span class="nv">$table</span> <span class="o">=</span> <span class="s1">&#39;my_users&#39;</span><span class="p">;</span> 
+<span class="linenos" data-linenos="6 "></span>        <span class="k">protected</span> <span class="nv">$primaryKey</span> <span class="o">=</span> <span class="s1">&#39;my_id&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos="7 "></span>        <span class="k">public</span> <span class="nv">$timestamps</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+<span class="linenos" data-linenos="8 "></span>        <span class="p">}</span>
+</code></pre></div>
+<h3 id="us-dun-model-de-dades">Ús d'un model de dades<a class="headerlink" href="#us-dun-model-de-dades" title="Permanent link">&para;</a></h3>
+<p>Una vegada creat el model ja podem començar a utilitzar-ho per a recuperar dades de la base de dades, per a inserir noves dades o per a actualitzar-los. 
+El lloc correcte on realitzar aquestes accions és en el controlador, el qual li'ls /els hi haurà de passar a la vista ja preparats per a la seua visualització.</p>
+<p>És important que per a la seua utilització indiquem a l'inici de la classe l'espai de noms del model o models a utilitzar. 
+Per exemple, si anem a usar els models User i Orders hauríem d'afegir:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    use App\Models\User;
+<span class="linenos" data-linenos="2 "></span>    use App\Models\Orders;
+</code></pre></div>
+<h4 id="consultar-dades">Consultar dades<a class="headerlink" href="#consultar-dades" title="Permanent link">&para;</a></h4>
+<p>Per a obtenir totes les files de la taula associada a un model usarem el mètode all():</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>    use App\Models\Movie;
+<span class="linenos" data-linenos=" 2 "></span>    ...
+<span class="linenos" data-linenos=" 3 "></span>    class MovieController extends Controller
+<span class="linenos" data-linenos=" 4 "></span>    {
+<span class="linenos" data-linenos=" 5 "></span>        public function index()
+<span class="linenos" data-linenos=" 6 "></span>        {
+<span class="linenos" data-linenos=" 7 "></span>            $movies = Movie::get();
+<span class="linenos" data-linenos=" 8 "></span>            return view(&#39;movies.index&#39;, compact(&#39;movies&#39;));
+<span class="linenos" data-linenos=" 9 "></span>        }
+<span class="linenos" data-linenos="10 "></span>    }   
+</code></pre></div>
+Aquest mètode pasarà a la vista un array de objectes, on cada item del array serà una instància del model movie i accedirem a les seues propietats com a tals. Així en la vista tindriem alguna cosa com:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>@forelse($movies as $movie)
+<span class="linenos" data-linenos="2 "></span>    {{ &quot;{{  $movies-&gt;titulo &quot; }}}}
+<span class="linenos" data-linenos="3 "></span>@endforelse
+</code></pre></div>
+<p>Alternativament, també podem obtindre una consulta filtrada, amb el mètode <strong>get</strong> i especificant amb el mètode <strong>where</strong> la condició que han de complir els registres a obtindre. Per exemple, així obtindríem els llibres el preu dels quals siga inferior a 10 euros</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$movies = Movie::where(&#39;precio&#39;, &#39;&lt;&#39;, 10)-&gt;get();
+</code></pre></div>
+o combinant-les</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$movies = Movie::where(&#39;precio&#39;, &#39;&lt;&#39;, 10)
+<span class="linenos" data-linenos="2 "></span>-&gt;where(&#39;precio&#39;, &#39;&gt;&#39;, 5)-&gt;get();
+</code></pre></div>
+<p>Sobre aquestes consultes base podem aplicar una sèrie d'afegits. Per exemple, podem voler ordenar
+els llibres per títol, per al que faríem això en el controlador:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">$movies = Movie::orderBy(&#39;titulo&#39;, &#39;DESC&#39;)-&gt;get();</span>
+</code></pre></div>
+<p><strong>Nota</strong>: Tots els mètodes que es descriuen en la secció de "Constructor de consultes" i en la documentació de Laravel sobre "Query Builder" també es poden utilitzar en els models Eloquent. Per tant podrem utilitzar where, orWhere, first, get, orderBy, groupBy, having, skip, take, etc. per a elaborar les consultes.</p>
+<p>També podem utilitzar els mètodes agregats per a calcular el total de registres obtinguts, o el màxim, mínim, mitjana o summa d'una determinada columna. Per exemple:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">    $count = User::where(&#39;votes&#39;, &#39;&gt;&#39;, 100)-&gt;count(); </span>
+<span class="linenos" data-linenos="2 "></span><span class="x">    $price = Orders::max(&#39;price&#39;);</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">    $price = Orders::min(&#39;price&#39;);</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">    $price = Orders::avg(&#39;price&#39;);</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">    $total = User::sum(&#39;votes&#39;);</span>
+</code></pre></div>
+<h5 id="paginacio-de-resultats">Paginaciò de resultats<a class="headerlink" href="#paginacio-de-resultats" title="Permanent link">&para;</a></h5>
+<p>Si volem paginar els resultats obtinguts, devem, d'una banda, quan obtinguem el llistat des del
+controlador, indicar amb <strong>paginate</strong> quants registres volem per pàgina:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">public function index()</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">    {</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">        $movies = Movie::paginate(5);</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">        return view(&#39;movies.index&#39;, compact(&#39;moviemovies&#39;));</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">    }</span>
+</code></pre></div>
+<p>Després, en la vista associada ( <strong>movies.index</strong> en l'exemple anterior), podem emprar el mètode
+links perquè mostre els botons de paginació en el lloc desitjat:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">    @forelse($movies as $movie)</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">        {{ &quot;{{  $movie-&gt;titulo &quot; }}}}</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">    @endforelse</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">    {{ &quot;{{  $movies-&gt;links() &quot; }}}}</span>
+</code></pre></div>
+<h6 id="paginacio-des-de-laravel-8">Paginació des de Laravel 8<a class="headerlink" href="#paginacio-des-de-laravel-8" title="Permanent link">&para;</a></h6>
+<p>En la versió 8 de Laravel s'ha canviat l'estil dels botons de paginació, emprant el del
+<strong>framework Tailwind CSS</strong>. Si volem continuar utilitzant els de <strong>Bootstrap</strong>, hem d'afegir aquesta línia en el mètode <strong>boot</strong> del <strong><em>provider</em>* </strong>App\Providers\AppServiceProvider** :</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>Paginator::useBootstrap();
+</code></pre></div>
+<p>A més hem d'incorporar la clausula use per localitzar l'element <strong>Paginator</strong></p>
+<p>use Illuminate\Pagination\Paginator;</p>
+<h4 id="objectes-individuals">Objectes individuals<a class="headerlink" href="#objectes-individuals" title="Permanent link">&para;</a></h4>
+<p>Una operació bastant habitual és mostrar una fitxa d'un objecte a partir d'un llistat, fent clic en el
+títol o alguna part visible d'aqueix objecte. Per exemple, si volem veure les dades d'un llibre a partir d'un
+llistat amb els seus títols, podem fer alguna cosa com això en la plantilla <strong>Blade</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">@forelse($movies as $movie)</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">    &lt;li&gt;</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">        &lt;a href=&quot;{{ &quot;{{  route(&#39;movies.show&#39;, $movie) &quot; }}}}&quot;&gt;</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">        {{ &quot;{{  $movie-&gt;titulo &quot; }}}}&lt;/a&gt;</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">    &lt;/li&gt;</span>
+<span class="linenos" data-linenos="6 "></span><span class="x">@endforelse</span>
+</code></pre></div>
+<p>Veiem que hem utilitzat el mètode <strong>route</strong> per a indicar la ruta a seguir, amb un segon paràmetre,
+que en aquest cas és l'objecte concret d'aqueixa fila. Laravel automàticament ho reemplaçarà en l'enllaç per l'identificador d'aquest objecte.
+Per part seua, la ruta associada a aquest enllaç podria ser una cosa així (en l'arxiu de rutes):</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">Route::get(&#39;/movies/{id}&#39;, [movieController::class, &#39;show&#39;])</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">-&gt;name(&#39;movies.show&#39;);</span>
+</code></pre></div>
+<h4 id="mostar-dades">Mostar dades<a class="headerlink" href="#mostar-dades" title="Permanent link">&para;</a></h4>
+<p>Finalment, el mètode show del controlador associat s'encarregarà d'obtindre les dades del llibre a partir de el seu <strong>id</strong>, i generar la vista corresponent. Per a obtindre les dades d'un objecte a partir del seu identificador,podem emprar el mètode <strong>find</strong> del model, passant-li com a paràmetre l'identificador. Així,podríem generar una vista amb les dades com aquesta:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="x">...</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="x">class movieController extends Controller</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="x">{</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="x">    ...</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="x">    public function show($id)</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="x">    {</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="x">        $movie = movie::find($id);</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="x">        return view(&#39;movies.show&#39;, compact(&#39;movie&#39;));</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="x">    }</span>
+<span class="linenos" data-linenos="10 "></span><span class="x">}</span>
+</code></pre></div>
+<p>En el cas que l'objecte no es trobe (perquè, per exemple, utilitzem un aneu equivocat), la vista
+generada fallarà. Per a evitar-ho, en lloc del mètode <strong>find</strong> podem emprar *findOrFail , que, en cas que
+   no es trobe l'objecte, generarà una vista amb un error 404, més apropiada. A més,
+recorda que pots personalitzar aquestes pàgines d'error definint les vistes corresponents.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$movie = movie::findOrFail($id);
+</code></pre></div>
+<h4 id="inserir-dades">Inserir dades<a class="headerlink" href="#inserir-dades" title="Permanent link">&para;</a></h4>
+<p>Per a afegir una entrada en la taula de la base de dades associada amb un model simplement hem de crear una nova instància d'aquest model, assignar els valors que vulguem i finalment guardar-los amb el mètode save():</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">    $movie = new movie();</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">    $movie-&gt;titulo = &quot;La guerra de las galaxias&quot;;</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">    $movie-&gt;director = &quot;George Lucas&quot;;</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">    $movie-&gt;precio = 3.95;</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">    $movie-&gt;save();</span>
+</code></pre></div>
+<p>Per a obtenir l'identificador assignat en la base de dades després de guardar (quan es tracte de taules amb índex auto-incremental), ho podrem recuperar simplement accedint al camp id de l'objecte que havíem creat, per exemple:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$insertedId = $movie-&gt;id;
+</code></pre></div>
+<p>Com a alternativa, també es pot utilitzar el mètode <strong>create</strong> del model, i passar-li totes les dades de la
+petició, que arribarien des d'un formulari, com veurem més endavant:    </p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">movie::create($request-&gt;all());</span>
+</code></pre></div>
+Perquè això últim funcione, han de complir-se dues premisses:</p>
+<ul>
+<li>
+<p>Cada camp de la petició ha de tindre associat un camp del mateix nom en el model.</p>
+</li>
+<li>
+<p>Hem de definir en el model una propietat anomenada <strong>\$fillable</strong> amb els noms dels camps
+de la petició que ens interessa processar (la resta es descarten). Això és obligatori especificar-ho,
+encara que ens interessen tots els camps, per a evitar insercions massives malintencionades (per exemple
+, editant el codi font per a afegir altres camps i modificar dades inesperades).</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">class movie extends Model</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">protected $fillable = [&#39;titulo&#39;, &#39;director&#39;, &#39;precio&#39;];</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">}</span>
+</code></pre></div>
+<p>Aquest codi d'inserció (o bé camp a camp, o usant el mètode <strong>all</strong> ) se sol posar en el mètode
+<strong>store</strong> del controlador, perquè reba les dades del formulari d'inserció i la faça en la base de dades
+.Ho acabarem de veure quan abordem el tema dels formularis.</p>
+<h4 id="modificar-dades">Modificar dades<a class="headerlink" href="#modificar-dades" title="Permanent link">&para;</a></h4>
+<p>La modificació consisteix en dos passos:</p>
+<ul>
+<li>Trobar l'objecte a modificar (buscant-lo per l'id amb <strong>findOrFail()</strong> , per exemple, com s'ha
+explicat abans).</li>
+<li>Modificar les propietats que es necessiten, i cridar al mètode <strong>save()</strong> de l'objecte per a guardar els
+canvis.</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">$movieAModificar = movie::findOrFail($id);</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">$movieAModificar-&gt;titulo=&quot;Otro título&quot;;</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">$movieAModificar-&gt;save();</span>
+</code></pre></div>
+També podem utilitzar el mètode <strong>update</strong> enllaçat amb <strong>findOrFail</strong> , i passar-li com a paràmetre
+totes les dades de la petició, igual que s'ha explicat per a la inserció, i sempre que hàgem
+declarat l'atribut <strong>\$fillable</strong> en el model per a indicar quins camps s'accepten:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>movie::findOrFail($id)-&gt;update($request-&gt;all());
+</code></pre></div>
+<h4 id="esborrar-dades">Esborrar dades<a class="headerlink" href="#esborrar-dades" title="Permanent link">&para;</a></h4>
+<p>Per a esborrar una instància d'un model en la base de dades simplement hem d'usar el seu mètode delete():</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    movie::findOrFail($id)-&gt;delete();
+</code></pre></div>
+<p>Això ho farem normalment en el mètode <strong>destroy</strong> del controlador en qüestió. Després, podem
+redirigir o renderitzar alguna vista resultat, com el llistat de llibres general per a comprovar que s'ha
+esborrat.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">public function destroy($id)</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">    movie::findOrFail($id)-&gt;delete();</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">    $movies = movie::get();</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">    return view(&#39;movies.index&#39;, compact(&#39;movies&#39;));</span>
+<span class="linenos" data-linenos="6 "></span><span class="x">}</span>
+</code></pre></div>
+<h5 id="sobre-lesborrat-des-de-les-vistes">Sobre lesborrat des de les vistes<a class="headerlink" href="#sobre-lesborrat-des-de-les-vistes" title="Permanent link">&para;</a></h5>
+<p>El normal és que l'esborrat s'active fent clic en algun element d'una vista. Per exemple, fent
+clic en un botó o enllaç que pose "Esborrar". Tanmateix, si implementem això així:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ &quot;</span><span class="err">{{</span>  <span class="na">route</span><span class="err">(&#39;</span><span class="na">movies</span><span class="err">.</span><span class="na">destroy</span><span class="err">&#39;,</span> <span class="err">$</span><span class="na">movie</span> <span class="err">&quot;</span> <span class="err">}}}}&quot;</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="2 "></span>Borrar
+<span class="linenos" data-linenos="3 "></span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Si volem esborrar el llibre amb id 3, es generarà una ruta <strong>http://biblioteca/movies/3</strong>. Ho podem comprovar
+passant el ratolí per l'enllaç i veient la barra inferior d'estat del navegador. Aquesta ruta, no obstant això,ens enviarà a la fitxa del llibre 3, no a l'esborrat, ja que estem enviant una petició <strong>GET</strong>, i no una d'esborrat (<strong>DELETE</strong>). Per a evitar això, l'opció d'esborrat ha de fer-se sempre des d'un formulari, on a través del <strong>helper</strong> <strong>@method</strong> indiquem que és una petició d'esborrat (DELETE). Amb el que l'enllaç per a esborrar un llibre quedaria així:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;{{ &quot;</span><span class="err">{{</span>  <span class="na">route</span><span class="err">(&#39;</span><span class="na">movies</span><span class="err">.</span><span class="na">destroy</span><span class="err">&#39;,</span> <span class="err">$</span><span class="na">movie</span><span class="err">)</span> <span class="err">&quot;</span> <span class="err">}}}}&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="2 "></span>    @method(&#39;DELETE&#39;)
+<span class="linenos" data-linenos="3 "></span>    @csrf
+<span class="linenos" data-linenos="4 "></span>    <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Borrar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="5 "></span><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>NOTA el helper @csrf ho veurem amb més detall en parlar de formularis, però s'afig als formularis Laravel per a evitar atacs de tipus cross-site, és a dir, accessos a una URL de la nostra web
+des d'altres webs.</p>
+<h2 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">&para;</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 Xavier Sastre - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "toc.integrate", "content.tabs.link", "navigation.expand"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>

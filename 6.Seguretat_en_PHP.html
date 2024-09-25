@@ -1,0 +1,1017 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsastre.github.io/6.Seguretat_en_PHP.html">
+      
+      
+      
+      
+      <link rel="icon" href="imagenes/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Seguretat en PHP (i altres coses) - Docencia Xavier</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans Condensed";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#seguretat-en-php-i-altres-coses" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="." title="Docencia Xavier" class="md-header__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docencia Xavier
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Seguretat en PHP (i altres coses)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode dia"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Docencia Xavier" class="md-nav__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Docencia Xavier
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Inici
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            DWEC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/DWEC/_DWEC2425.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupament web en entorn client - DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/DWEC/desenvolupamentfrontend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupamet frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AW
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/AW/01.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicacions web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="seguretat-en-php-i-altres-coses">Seguretat en PHP (i altres coses)<a class="headerlink" href="#seguretat-en-php-i-altres-coses" title="Permanent link">&para;</a></h1>
+<p>Taula de continguts</p>
+<ul>
+<li><a href="#ocultant-dades-d'entorn">Ocultant dades d'entorn</a></li>
+<li><a href="#sessions-i-seguretat">Sessions i seguretat</a></li>
+<li><a href="#enviament-de-correu-electronic">Correu electrònic</a></li>
+<li><a href="#composer">Composer</a></li>
+</ul>
+<h2 id="ocultant-dades-dentorn">Ocultant dades d'entorn<a class="headerlink" href="#ocultant-dades-dentorn" title="Permanent link">&para;</a></h2>
+<p><a href="https://youtu.be/BzE1eP5sHTk"><img alt="" src="../img/ull.png" />Video</a></p>
+<p>Una de les pràctiques habituals i necessàries en les aplicacions PHP  és l'emmagatzematge de les variables d'entorn i la seua posterior recuperació en el codi font de les pàgines.</p>
+<p>Per a poder incorporar d'una manera àgil les variables d'entorn en aplicacions PHP usarem una llibreria que ja ve preparada amb les funcionalitats bàsiques que podrem arribar a necessitar en el dia a dia. La llibreria es diu "<strong>PHP dotenv</strong>" i bàsicament permet la lectura senzilla de les variables d'entorn en arxius d'extensió ".*env".</p>
+<p>L'ús de variables d'entorn en les aplicacions web és important per a la separació del codi per responsabilitats: no hem de mesclar el codi de l'aplicació amb els valors de configuració.</p>
+<p>Les variables de configuració canviaran generalment segons l'entorn d'execució, és a dir, quan una aplicació està sent executada en diferents servidors. Per exemple, el servidor local per a desenvolupament i el servidor remot on es col·locarà el lloc web accessible als usuaris d'Internet. Per tant, separar-les en arxius independents permetrà que el mateix codi funcione en qualsevol lloc, sense necessitat de modificacions, independentment dels valors de configuració que es tinguen en cada entorn.</p>
+<p>Pensem en els valors de connexió amb la base de dades (<strong>host, user, password…</strong>). Aqueixos valors segurament seran diferents en el servidor de desenvolupament i en el servidor de producció. Altres elements que seria important tindre separats en variables d'entorn són les credencials d'accés a diversos serveis, claus APIs (<strong>API Keys</strong>), el nom del host on s'està executant l'aplicació, etc.</p>
+<h3 id="artxius-env">Artxius .env<a class="headerlink" href="#artxius-env" title="Permanent link">&para;</a></h3>
+<p>Els arxius <strong>.env</strong> es poden considerar un estàndard per a l'emmagatzematge de variables d'entorn. Aquests arxius tenen un format molt senzill i fàcil d'escriure i de llegir.</p>
+<p>La sintaxi dels .*env conté parells clau (nom de variable) i valor, separats per un caràcter "=". Cada variable en una línia.</p>
+<p>```
+MODE="development"
+HOST="projecte.my"</p>
+<p>DB_USER="batoi"
+DB_PASSWORD="1234"
+DB_HOST="localhost"
+ ```
+L'arxiu <strong>.env</strong> generalment ho col·locaràs en l'arrel del teu projecte, en un arxiu sense nom. La ruta del .env no ha d'estar accessible pel Servidor Web, sinó que ha de ser un directori per damunt, perquè els usuaris no puguen accedir a la configuració de les nostres variables d'entorn. Fixa't també que el nom de l'arxiu començarà amb un punt i després les tres lletres "env". En sistemes com Linux o Mac, l'arxiu que comença per "." es considera ocult.</p>
+<p>El que és important és que aquests arxius no es troben a l'abast dels usuaris, per la qual cosa mai haurien d'estar dins de la carpeta de publicació, sinó algun directori per damunt en el servidor. És a dir, es col·locarà en l'arrel del projecte, però mai dins de la carpeta arrel de publicació, perquè si foren allí els usuaris podrien accedir a aqueixos valors component la ruta com "example.com/.env". Òbviament, els valors de configuració desitgem que estiguen segurs, per la qual cosa no han de ser accessibles pel públic en general.</p>
+<h3 id="llibreria-php-dotenv">Llibreria PHP DOTENV<a class="headerlink" href="#llibreria-php-dotenv" title="Permanent link">&para;</a></h3>
+<p><strong>PHP dotenv</strong> <a href="https://github.com/vlucas/phpdotenv">https://github.com/vlucas/phpdotenv</a> fa la tasca d'obrir l'arxiu on les variables d'entorn s'emmagatzemen i processar el seu contingut, per a produir les variables d'entorn i consumir-les còmodament dins de les aplicacions.</p>
+<p>Pots instal·lar fàcilment mitjançant</p>
+<p><code>composer require vlucas/phpdotenv</code></p>
+<h4 id="carrega-darxius-amb-variables-dentorn">Càrrega d'arxius amb variables d'entorn<a class="headerlink" href="#carrega-darxius-amb-variables-dentorn" title="Permanent link">&para;</a></h4>
+<p>PHP dotenv ens permet tindre diversos arxius de configuració. Per a accedir al contingut dels arxius .env utilitzem el següent codi:</p>
+<p><code>php
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv-&gt;load();</code></p>
+<h4 id="acces-a-les-variables-dentorn">Accés a les variables d'entorn<a class="headerlink" href="#acces-a-les-variables-dentorn" title="Permanent link">&para;</a></h4>
+<p>Una vegada que hem carregat els arxius de variables d'entorn, estaran disponibles les seues variables i valors en el codi de les aplicacions per mitjà de diversos mètodes diferents.</p>
+<p>La funció getenv(), en la qual passem la cadena de la variable d'entorn que volem accedir.</p>
+<p>A través del <em>array </em>superglobal $_<em>ENV
+A través del </em>array <em>superglobal $_</em>SERVER</p>
+<p><code>php
+$s3_bucket = getenv('S3_BUCKET');
+$s3_bucket = $_ENV['S3_BUCKET'];
+$s3_bucket = $_SERVER['S3_BUCKET'];</code></p>
+<h2 id="sessions-i-seguretat">Sessions i seguretat<a class="headerlink" href="#sessions-i-seguretat" title="Permanent link">&para;</a></h2>
+<p><a href="https://youtu.be/JLoHLPgV7-w"><img alt="" src="../img/ull.png" />Video</a></p>
+<p>Com Http és un protocol sense estat, les diferents peticions d'un client a un servidor són independents, no estan relacionades entre si. Per associar-les s'utilitzen les sessions. </p>
+<p>El terme sessió fa referència al conjunt d'informació relativa a un usuari concret. Aquesta informació pot ser tan simple com el nom del propi usuari, o més complexa, com els articles que ha dipositat en la cistella de compra d'una tenda online.</p>
+<p>Cada usuari diferent d'un lloc web té la seua pròpia informació de sessió.Per a distingir una sessió d'una altra s'usen els identificadors de sessió (SID). Un SID és un atribut que s'assigna a cadascun dels visitants d'un lloc web i ho identifica. Si el servidor web utilitza el SID d'un usuari, per a relacionar-ho amb la informació que posseeix sobre ell, que es manté en la sessió de l'usuari.</p>
+<p>El procés de maneig de sessions en PHP està automatitzat. </p>
+<h4 id="accedir-a-les-dades-de-la-sessio">Accedir a les dades de la sessió<a class="headerlink" href="#accedir-a-les-dades-de-la-sessio" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Una vegada oberta la sessió, usem la variable superglobal  <strong>$_SESSION</strong> per a afegir informació a la sessió de l'usuari, o per a accedir a la informació emmagatzemada en la sessió</li>
+<li>Per exemple, per a explicar el nombre de vegades que l'usuari visita la pàgina, podem fer: </li>
+</ul>
+<p><code>php
+// Iniciem la sessió o recuperem l'anterior sessió existent 
+session_start(); 
+// Comprovem si la variable ja existeix 
+if (isset($_SESSION['visites']))
+    $_SESSION['visites']++; 
+else
+    $_SESSION['visites'] = 0;</code></p>
+<h4 id="eliminar-una-variable-de-la-sessio">Eliminar una variable de la sessió<a class="headerlink" href="#eliminar-una-variable-de-la-sessio" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Per a eliminar una variable de la sessió usarem la funció unset()</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">   unset($_SESSION[&#39;visites&#39;]);</span>
+</code></pre></div>
+<ul>
+<li>Per a tancar la sessió de forma manual utilitzarem la funció <strong>session_destroy()</strong></li>
+<li>Abans hem d'eliminar les variables de la sessió de la següent forma:<ul>
+<li>$_SESSION = [];</li>
+</ul>
+</li>
+</ul>
+<h5 id="objectes-i-arrays">Objectes i arrays<a class="headerlink" href="#objectes-i-arrays" title="Permanent link">&para;</a></h5>
+<p>Si volem guardar un objecte o un array en una variable de sessió primer l'hem de transformar amb serialize() i despres, quan el recuperem, haurem d'utilitzar unserialize()</p>
+<h2 id="autenticacio-amb-sessions">Autenticació amb sessions<a class="headerlink" href="#autenticacio-amb-sessions" title="Permanent link">&para;</a></h2>
+<p><a href="https://youtu.be/OW5XXB3UJlI"><img alt="" src="../img/ull.png" />Video</a></p>
+<ul>
+<li>Probablement, l'ús més estès del control de sessions siga el seguiment d'usuaris autenticats a través d'un mecanisme d'inici de sessió. Per a açò necessitarem un formulari de login.</li>
+</ul>
+<p>register.php</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">if</span> <span class="p">(</span><span class="nx">isPost</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="nx">cfsr</span><span class="p">()){</span>
+<span class="linenos" data-linenos=" 3 "></span>        <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 4 "></span>            <span class="c1">// Comprovació d&#39;errors</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span> <span class="nx">CheckFieldException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span>            <span class="nv">$errors</span><span class="p">[</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getField</span><span class="p">()]</span> <span class="o">=</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span>       <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">count</span><span class="p">(</span><span class="nv">$errors</span><span class="p">)){</span>
+<span class="linenos" data-linenos="10 "></span>           <span class="nv">$password</span> <span class="o">=</span> <span class="nb">password_hash</span><span class="p">(</span><span class="nv">$password</span><span class="p">,</span><span class="nx">PASSWORD_DEFAULT</span> <span class="p">);</span>
+<span class="linenos" data-linenos="11 "></span>           <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span><span class="nb">compact</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="p">,</span><span class="s1">&#39;password&#39;</span><span class="p">));</span>
+<span class="linenos" data-linenos="12 "></span>           <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: /&#39;</span><span class="p">);</span>
+<span class="linenos" data-linenos="13 "></span>       <span class="p">}</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="k">require_once</span><span class="p">(</span><span class="s1">&#39;register.view.php&#39;</span><span class="p">);</span>
+<span class="linenos" data-linenos="16 "></span><span class="cp">?&gt;</span>
+</code></pre></div>
+<p>login.php</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="x"> </span><span class="cp">&lt;?php</span> 
+<span class="linenos" data-linenos=" 2 "></span>    <span class="nb">session_start</span><span class="p">()</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">isPost</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="nx">cfsr</span><span class="p">()){</span>
+<span class="linenos" data-linenos=" 4 "></span>       <span class="c1">//comprovació d&#39;errors</span>
+<span class="linenos" data-linenos=" 5 "></span>       <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">count</span><span class="p">(</span><span class="nv">$errors</span><span class="p">)){</span>
+<span class="linenos" data-linenos=" 6 "></span>           <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">login</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span><span class="nv">$email</span><span class="p">,</span><span class="nv">$password</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span>           <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">serialize</span><span class="p">(</span><span class="nv">$user</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 8 "></span>           <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: /&#39;</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 9 "></span>       <span class="p">}</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span>    <span class="k">require_once</span><span class="p">(</span><span class="s1">&#39;login.view.php&#39;</span><span class="p">);</span> <span class="sb">```</span>
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span><span class="sb">logout.php</span>
+<span class="linenos" data-linenos="15 "></span>
+<span class="linenos" data-linenos="16 "></span><span class="sb">```</span><span class="nx">php</span>
+<span class="linenos" data-linenos="17 "></span><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="linenos" data-linenos="18 "></span>    <span class="nb">session_start</span><span class="p">();</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="nb">unset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">]);</span>
+<span class="linenos" data-linenos="20 "></span>    <span class="nb">session_destroy</span><span class="p">();</span>
+<span class="linenos" data-linenos="21 "></span>    <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: /&#39;</span><span class="p">);</span>
+<span class="linenos" data-linenos="22 "></span> <span class="sb">```</span>
+<span class="linenos" data-linenos="23 "></span><span class="sb">index.php</span>
+<span class="linenos" data-linenos="24 "></span>
+<span class="linenos" data-linenos="25 "></span><span class="sb">```</span><span class="nx">php</span>
+<span class="linenos" data-linenos="26 "></span><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="linenos" data-linenos="27 "></span>    <span class="nb">session_start</span><span class="p">();</span>
+<span class="linenos" data-linenos="28 "></span>   <span class="nv">$user</span> <span class="o">=</span> <span class="nb">unserialize</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">]);</span>
+<span class="linenos" data-linenos="29 "></span>   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$user</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="30 "></span>        <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Location: /login.php&#39;</span><span class="p">);</span>
+<span class="linenos" data-linenos="31 "></span>   <span class="p">}</span>
+<span class="linenos" data-linenos="32 "></span>   <span class="o">...</span>  
+</code></pre></div>
+<p>queryBuilder.php</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">login</span><span class="p">(</span><span class="nv">$table</span><span class="p">,</span><span class="nv">$email</span><span class="p">,</span><span class="nv">$password</span><span class="p">){</span>
+<span class="linenos" data-linenos="3 "></span>        <span class="nv">$stpdo</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">conn</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM </span><span class="si">$table</span><span class="s2"> WHERE email = :email&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="4 "></span>        <span class="nv">$stpdo</span><span class="o">-&gt;</span><span class="na">bindValue</span><span class="p">(</span><span class="s2">&quot;:email&quot;</span><span class="p">,</span><span class="nv">$email</span><span class="p">);</span>
+<span class="linenos" data-linenos="5 "></span>        <span class="nv">$stpdo</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
+<span class="linenos" data-linenos="6 "></span>        <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$stpdo</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">\PDO</span><span class="o">::</span><span class="na">FETCH_OBJ</span><span class="p">);</span>
+<span class="linenos" data-linenos="7 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nb">password_verify</span><span class="p">(</span><span class="nv">$password</span><span class="p">,</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">password</span><span class="p">))</span> <span class="k">return</span> <span class="nv">$user</span><span class="p">;</span>
+<span class="linenos" data-linenos="8 "></span>        <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="linenos" data-linenos="9 "></span>    <span class="p">}</span>    
+</code></pre></div>
+<p>La informació d'autenticació s'ha d'utlitzar en un protocol com a HTTPS que permeta xifrar les comunicacions amb el servidor web i amb contrasenya protegida amb hash.</p>
+<h2 id="enviament-de-correu-electronic">Enviament de correu electronic<a class="headerlink" href="#enviament-de-correu-electronic" title="Permanent link">&para;</a></h2>
+<p><a href="https://youtu.be/Mp244JgJhWQ"><img alt="" src="../img/ull.png" />Video</a></p>
+<p>Encara que la funció <strong>mail()</strong> permet l'enviament de correus electrònics, és habitual utilitzar alguna llibreria que s'ocupe dels detalls del format.</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span> composer require phpmailer/phpmailer
+</code></pre></div>
+o modificant el composer.json per afegir la linea "phpmailer/phpmailer": "~6.1" dins del require</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span> &quot;require&quot;: {
+<span class="linenos" data-linenos="2 "></span>        &quot;filp/whoops&quot;: &quot;^2.4&quot;,
+<span class="linenos" data-linenos="3 "></span>        &quot;phpmailer/phpmailer&quot;: &quot;~6.1&quot;
+<span class="linenos" data-linenos="4 "></span>    },
+</code></pre></div>
+i executant els composer update</p>
+<p>En principi es possible enviar un correu utilitzant la configuració de sendmail (en Linux) o un servidor SMTP local, en la pràctica els filtres antispam fan que no arriben els correus enviats des de servidors no registrats correctament. A més des de les aules tampoc es pot fer.</p>
+<p>Si no es disposa d'un servidor de correu en Internet, l'opció més comoda per tal d'enviar un correu és utilitzar un compte de Gmail. En Gmail cal activar l'opció "Permetre aplicacions meyns segures" en la secció d'ajustos de compte. Açò va a canviar en breu i no es podrà utilitzar sinó que haurem d'identificar-nos amb Oauth.
+Teniu informació disponible en el <a href="https://github.com/PHPMailer/PHPMailer">github</a> de php mailer.</p>
+<p>El següent programa permet enviar un correu mitjançant Google:</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>   
+<span class="linenos" data-linenos=" 2 "></span>    <span class="k">use</span> <span class="nx">PHPMailer\PHPMailer\PHPMailer</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="k">use</span> <span class="nx">PHPMailer\PHPMailer\SMTP</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="k">use</span> <span class="nx">PHPMailer\PHPMailer\Exception</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="k">require</span> <span class="s2">&quot;vendor/autoload.php&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="c1">//Server settings</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">SMTPDebug</span> <span class="o">=</span> <span class="nx">SMTP</span><span class="o">::</span><span class="na">DEBUG_SERVER</span><span class="p">;</span>                      <span class="c1">// Enable verbose debug output</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">isSMTP</span><span class="p">();</span>                                            <span class="c1">// Send using SMTP</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">Host</span>       <span class="o">=</span> <span class="s1">&#39;smtp.gmail.com&#39;</span><span class="p">;</span>                    <span class="c1">// Set the SMTP server to send through</span>
+<span class="linenos" data-linenos="12 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">SMTPAuth</span>   <span class="o">=</span> <span class="k">true</span><span class="p">;</span>                                   <span class="c1">// Enable SMTP authentication</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">Username</span>   <span class="o">=</span> <span class="s1">&#39;2daw2021batoi@gmail.com&#39;</span><span class="p">;</span>                     <span class="c1">// SMTP username</span>
+<span class="linenos" data-linenos="14 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">Password</span>   <span class="o">=</span> <span class="s1">&#39;batoi_1234&#39;</span><span class="p">;</span>                               <span class="c1">// SMTP password</span>
+<span class="linenos" data-linenos="15 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">SMTPSecure</span> <span class="o">=</span> <span class="nx">PHPMailer</span><span class="o">::</span><span class="na">ENCRYPTION_STARTTLS</span><span class="p">;</span>         <span class="c1">// Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged</span>
+<span class="linenos" data-linenos="16 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">Port</span>       <span class="o">=</span> <span class="mi">587</span><span class="p">;</span>                                    <span class="c1">// TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above</span>
+<span class="linenos" data-linenos="17 "></span>
+<span class="linenos" data-linenos="18 "></span>        <span class="c1">//Recipients</span>
+<span class="linenos" data-linenos="19 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">setFrom</span><span class="p">(</span><span class="s1">&#39;from@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;Mailer&#39;</span><span class="p">);</span>
+<span class="linenos" data-linenos="20 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">addAddress</span><span class="p">(</span><span class="s1">&#39;joe@example.net&#39;</span><span class="p">,</span> <span class="s1">&#39;Joe User&#39;</span><span class="p">);</span>     <span class="c1">// Add a recipient</span>
+<span class="linenos" data-linenos="21 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">addAddress</span><span class="p">(</span><span class="s1">&#39;ellen@example.com&#39;</span><span class="p">);</span>               <span class="c1">// Name is optional</span>
+<span class="linenos" data-linenos="22 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">addReplyTo</span><span class="p">(</span><span class="s1">&#39;info@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;Information&#39;</span><span class="p">);</span>
+<span class="linenos" data-linenos="23 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">addCC</span><span class="p">(</span><span class="s1">&#39;cc@example.com&#39;</span><span class="p">);</span>
+<span class="linenos" data-linenos="24 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">addBCC</span><span class="p">(</span><span class="s1">&#39;bcc@example.com&#39;</span><span class="p">);</span>
+<span class="linenos" data-linenos="25 "></span>
+<span class="linenos" data-linenos="26 "></span>        <span class="c1">// Attachments</span>
+<span class="linenos" data-linenos="27 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">addAttachment</span><span class="p">(</span><span class="s1">&#39;/var/tmp/file.tar.gz&#39;</span><span class="p">);</span>         <span class="c1">// Add attachments</span>
+<span class="linenos" data-linenos="28 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">addAttachment</span><span class="p">(</span><span class="s1">&#39;/tmp/image.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;new.jpg&#39;</span><span class="p">);</span>    <span class="c1">// Optional name</span>
+<span class="linenos" data-linenos="29 "></span>
+<span class="linenos" data-linenos="30 "></span>        <span class="c1">// Content</span>
+<span class="linenos" data-linenos="31 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">isHTML</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>                                  <span class="c1">// Set email format to HTML</span>
+<span class="linenos" data-linenos="32 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">Subject</span> <span class="o">=</span> <span class="s1">&#39;Here is the subject&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos="33 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">Body</span>    <span class="o">=</span> <span class="s1">&#39;This is the HTML message body &lt;b&gt;in bold!&lt;/b&gt;&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos="34 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">AltBody</span> <span class="o">=</span> <span class="s1">&#39;This is the body in plain text for non-HTML mail clients&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos="35 "></span>
+<span class="linenos" data-linenos="36 "></span>        <span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">();</span>
+<span class="linenos" data-linenos="37 "></span>        <span class="k">echo</span> <span class="s1">&#39;Message has been sent&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos="38 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="39 "></span>        <span class="k">echo</span> <span class="s2">&quot;Message could not be sent. Mailer Error: </span><span class="si">{</span><span class="nv">$mail</span><span class="o">-&gt;</span><span class="na">ErrorInfo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="40 "></span>    <span class="p">}</span>
+</code></pre></div>
+On us he possat unes credencials que podeu gastar per al curs i no tenir que obrir un compte cadascú.</p>
+<h2 id="composer">Composer<a class="headerlink" href="#composer" title="Permanent link">&para;</a></h2>
+<p>Composer ens resol dos problemes:</p>
+<ul>
+<li>Gestionar les dependències amb llibreries de tercers (N'hi ha prou que declarem les dependències i Composer s'encarregarà de descarregar i instal·lar tot el que siga necessari)</li>
+<li>Autoloading del nostre codi (Ja no haurem de fer més requires, Composer ho farà per nosaltres)</li>
+</ul>
+<h4 id="gestio-de-les-dependencies">Gestió de les dependències<a class="headerlink" href="#gestio-de-les-dependencies" title="Permanent link">&para;</a></h4>
+<ul>
+<li>La instal·lació de les llibreries sempre és local per a cada projecte</li>
+<li>S'instal·len en un directori del projecte</li>
+<li>Per defecte aqueix directori és vendor/</li>
+<li>Passos:<ul>
+<li>Declarar les llibreries de les quals depèn el projecte</li>
+<li>Composer descàrrega i instal·la automàticament les versions correctes de cadascuna d'aqueixes llibreries i les seues dependències</li>
+</ul>
+</li>
+</ul>
+<h4 id="installacio">Instal·lació<a class="headerlink" href="#installacio" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Es pot instal·lar localment per a cada projecte o globalment</li>
+<li>Anem a instal·lar-ho globalment:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$curl -sS https://getcomposer.org/installer | php  
+<span class="linenos" data-linenos="2 "></span>sudo mv composer.phar /usr/local/bin/composer
+</code></pre></div>
+<ul>
+<li>Hem descarregat composer i ho hem mogut a un directori que està dins del PATH. A partir d'ara, podem executar Composer simplement escrivint composer</li>
+</ul>
+<h4 id="preparar-larxiu-composerjson">Preparar l'arxiu composer.json<a class="headerlink" href="#preparar-larxiu-composerjson" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Necessari per a usar composer en un projecte</li>
+<li>Consisteix en una sèrie d'estructures d'informació niades</li>
+<li>Exemple:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span> {&quot;require&quot;: { &quot;monolog/monolog&quot;: &quot;1.2.&quot; } }
+</code></pre></div>
+<ul>
+<li>require mapea noms de paquets (en l'exemple, monolog/monolog) amb versions de paquets (en aquest cas, 1.2.)</li>
+</ul>
+<h4 id="exemple-dus">Exemple d'ús<a class="headerlink" href="#exemple-dus" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Estem desenvolupant un projecte i necessitem una llibreria per a guardar missatges de log</li>
+<li>Decidim utilitzar la llibreria monolog</li>
+<li>Per a incloure aquesta llibreria:<ul>
+<li>Anem a crear un arxiu composer.json</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>{ &quot;require&quot;: {&quot;monolog/monolog&quot;: &quot;1.0.&quot; } } 
+</code></pre></div>
+<p>Estem indicant que el projecte depèn d'un paquet anomenat monolog/monolog i que li serveix qualsevol versió la numeració de la qual comence per 1.0</p>
+<h4 id="noms-de-paquets">Noms de paquets<a class="headerlink" href="#noms-de-paquets" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Està format per dues parts:<ul>
+<li>La primera indica qui és la seua "vendor" o creador </li>
+<li>La segona indica el nom del projecte</li>
+</ul>
+</li>
+<li>Sovint les dues parts són idèntiques</li>
+<li>El nom del creador és important per a evitar col·lisions entre projectes amb el mateix nom</li>
+</ul>
+<h4 id="versions-de-paquets">Versions de paquets<a class="headerlink" href="#versions-de-paquets" title="Permanent link">&para;</a></h4>
+<ul>
+<li>En l'exemple anterior, la versió requerida de la llibreria és 1.0.</li>
+<li>Es pot utilitzar qualsevol versió de la branca 1.0 (com per exemple 1.0.0, 1.0.2 o 1.0.20)</li>
+<li>Aquesta versió és equivalent a =1.0 &gt; &lt;1.1</li>
+<li>Les versions requerides es poden especificar de moltes maneres:<ul>
+<li>Versió exacta: com per exemple 1.0.2 </li>
+<li>Rang de versions: S'usen operadors de comparació: &gt;, &gt;=, &lt;, &lt;=, !=.
+( Exemples: &gt;=1.0 o &gt;=1.0,&lt;2.0)</li>
+<li>Comodins: La versió 1.0. per exemple és equivalent a =1.0, &gt;&lt;1.1 </li>
+<li>La següent versió significativa: que s'indica mitjançant l'operador ~ i s'interpreta de la següent manera: ~1.2 és equivalent a =1.2, &gt;&lt;2.0, mentre que ~1.2.3 és equivalent a =1.2.3, &gt;&lt;1.3 (útil per a aquells projectes que segueixen el versionat semàntic)</li>
+</ul>
+</li>
+</ul>
+<h4 id="versionat-semantic-semver">Versionat semàntic (Semver)<a class="headerlink" href="#versionat-semantic-semver" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Els nombres de versió i la forma en què canvien informen sobre el que va ser modificat d'una versió a una altra</li>
+<li>Veure l'especificació en el següent document:<ul>
+<li>http://semver.org/lang/es/</li>
+</ul>
+</li>
+</ul>
+<h4 id="installant-les-dependencies">Instal·lant les dependències<a class="headerlink" href="#installant-les-dependencies" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Executem el següent comando:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span> composer install
+</code></pre></div>
+<ul>
+<li>Es generarà el directori vendor/ amb les llibreries de les quals depèn el projecte</li>
+<li>MOLT IMPORTANT: Hem d'afegir el directori vendor/ a l'arxiu .gitignore</li>
+<li>El comando també crea un arxiu composer.lock</li>
+</ul>
+<h4 id="larxiu-composerlock">L'arxiu composer.lock<a class="headerlink" href="#larxiu-composerlock" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Guarda la versió exacta que s'ha instal·lat de cada llibreria</li>
+<li>El projecte es fixa a unes determinades versions</li>
+<li>Tant el composer.lock com el composer.json han d'estar en el repositori</li>
+<li>El comando install comprova primer si existeix l'arxiu composer.lock, i si existeix, descàrrega exactament les versions que s'indiquen en aqueix arxiu</li>
+<li>Si treballem en equip, tot l'equip tindrà les mateixes versions</li>
+</ul>
+<h4 id="actualitzar-versions">Actualitzar versions<a class="headerlink" href="#actualitzar-versions" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Si tenim l'arxiu composer.lock sempre s'instal·laran les mateixes versions de les llibreries</li>
+<li>Per a actualitzar a noves versions, usem el comando update</li>
+<li>Fa que <strong>composer</strong> cerque les versions més recents de les llibreries</li>
+<li>Sempre que seguisquen complint les restriccions de les versions indicades en l'arxiu composer.json</li>
+<li>També actualitza l'arxiu composer.lock</li>
+<li>Si solament volem instal·lar o actualitzar una dependència, podem indicar el seu nom després del comando:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span> composer update monolog/monolog
+</code></pre></div>
+<h4 id="afegint-dependencies">Afegint dependències<a class="headerlink" href="#afegint-dependencies" title="Permanent link">&para;</a></h4>
+<ul>
+<li>El comando require afig noves dependències en l'arxiu composer.json<ul>
+<li>composer require</li>
+</ul>
+</li>
+<li>Ens preguntarà què llibreries volem afegir</li>
+<li>Després d'afegir aquestes noves dependències, s'instal·len o actualitzen les dependències que siguen necessàries</li>
+<li>Podem passar les noves dependències com a argument del comando</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span> composer require monolog/monolog:1.
+</code></pre></div>
+<h4 id="packagist">Packagist<a class="headerlink" href="#packagist" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Repositori central de Composer (lloc del que s'obtenen els paquets)</li>
+<li>Lloc web: http://packagist.org</li>
+</ul>
+<h4 id="carrega-automatica-de-classes">Càrrega automàtica de classes<a class="headerlink" href="#carrega-automatica-de-classes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Normalment les llibreries proporcionen informació sobre la càrrega automàtica de les seues classes</li>
+<li>Composer genera un arxiu vendor/autoload.php</li>
+<li>Incloent aquest arxiu en el projecte, podem utilitzar qualsevol classe instal·lada a través de Composer sense haver d'incloure-la explícitament:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span> require &#39;vendor/autoload.php&#39;;
+</code></pre></div>
+<h4 id="us-de-la-llibreria">Ús de la llibreria<a class="headerlink" href="#us-de-la-llibreria" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Per a usar la llibreria Monolog podem usar les seues classes i Composer s'encarregarà de carregar-les:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$log = new Monolog\Logger(&#39;name&#39;); 
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span>$log-&gt;pushHandler(
+<span class="linenos" data-linenos="4 "></span>new Monolog\Handler\StreamHandler(&#39;app.log&#39;, Monolog\Logger::WARNING) );
+<span class="linenos" data-linenos="5 "></span>
+<span class="linenos" data-linenos="6 "></span>$log-&gt;addWarning(&#39;Foo&#39;);
+</code></pre></div>
+<h4 id="espais-de-noms">Espais de noms<a class="headerlink" href="#espais-de-noms" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Són una manera d'encapsular elements</li>
+<li>Podemos fer un simil entre els namespaces i els directoris:<ul>
+<li>Els directoris serveixen per a agrupar fitxers relacionats </li>
+<li>El fitxer foo.txt pot existir en els directoris /home/greg i /home/un altre, però no poden coexistir dues còpies de foo.txt en el mateix directori</li>
+<li>Per a accedir al fitxer foo.txt fóra del directori /home/greg,
+s'ha d'anteposar el nom del directori al nom del fitxer, emprant el separador de directoris per a així obtenir /home/greg/foo.txt</li>
+</ul>
+</li>
+<li>Aquest mateix principi s'estén als espais de noms en el món de la programació</li>
+</ul>
+<h4 id="introduccio-als-namespaces">Introducció als namespaces<a class="headerlink" href="#introduccio-als-namespaces" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Els namespaces són una característica de PHP que s'introdueix en la versió 5.3</li>
+<li>L'ús de namespaces és molt convenient per dos motius:<ul>
+<li>El conflicte de noms entre el codi que es crea i les
+classes/funciones/constants internes de PHP o les classes/funciones/constants de tercers </li>
+<li>La capacitat de sobrenomenar (o abreujar) Noms_Extra_Llargs millorant la llegibilitat del codi font</li>
+</ul>
+</li>
+<li>Només usarem namespaces per a noms de classes</li>
+</ul>
+<h4 id="definir-espais-de-noms">Definir espais de noms<a class="headerlink" href="#definir-espais-de-noms" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Només les classes (incloent abstractes i traits), interfícies, funcions i constants es veuen afectats per espais de noms</li>
+<li>Es declaren utilitzant la paraula reservada namespace</li>
+<li>S'ha de declarar a l'inici del fitxer, abans que qualsevol altre codi</li>
+<li>Només hi ha una excepció: la paraula reservada declare</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>namespace MiProyecto;
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span>const CONNECTAR_OK = 1; 
+<span class="linenos" data-linenos="4 "></span>
+<span class="linenos" data-linenos="5 "></span>class Connexió { / ... / } 
+<span class="linenos" data-linenos="6 "></span>
+<span class="linenos" data-linenos="7 "></span>function connectar() { / ... / }
+</code></pre></div>
+<h4 id="ubicacio-de-la-declaracio">Ubicació de la declaració<a class="headerlink" href="#ubicacio-de-la-declaracio" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Tot el que no siga codi PHP no pot precedir a la declaració de l'espai de noms</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span> &lt;html&gt; &lt;?php namespace MiProyecto;
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span>  // error fatal - el espacio de nombres debe ser la primera sentencia del script ?&gt;
+</code></pre></div>
+<h4 id="declarar-subespacios-de-noms">Declarar subespacios de noms<a class="headerlink" href="#declarar-subespacios-de-noms" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Un nom d'un espai de noms es pot definir amb subnivells</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>namespace MiProyecto\Sub\Nivell;
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span>const CONNECTAR_OK = 1; 
+<span class="linenos" data-linenos="4 "></span>
+<span class="linenos" data-linenos="5 "></span>class Connexió { / ... / } 
+<span class="linenos" data-linenos="6 "></span>
+<span class="linenos" data-linenos="7 "></span>function connectar() { / ... / }
+</code></pre></div>
+<h4 id="us-de-namespaces-en-els-nostres-projectes">Ús de namespaces en els nostres projectes<a class="headerlink" href="#us-de-namespaces-en-els-nostres-projectes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Cada aplicació que creiem tindrà un espai de noms diferent</li>
+<li>Podrem separar els subnoms del namespace amb el caràcter \</li>
+<li>Per exemple:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>namespace CursoPhp7\Core; Class Request { ... }
+</code></pre></div>
+<ul>
+<li>La classe Request estarà dins de l'espai de noms CursoPhp7\Core</li>
+</ul>
+<h4 id="usar-elements-que-estan-dins-de-namespaces">Usar elements que estan dins de namespaces<a class="headerlink" href="#usar-elements-que-estan-dins-de-namespaces" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Per a poder usar la classe Request de l'exemple anterior haurem d'indicar el </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>nom complet CursoPhp7\Core\Request
+</code></pre></div>
+<ul>
+<li>Per a abreujar els usos podem utilitzar la instrucció use que permet indicar els espais de noms que anem a utilitzar:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>use CursoPhp7\Core\Request;
+</code></pre></div>
+<ul>
+<li>Ara ja podrem usar la classe Request sense indicar la ruta completa</li>
+<li>També podem definir un àlies per a una classe de la següent forma:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>use CursoPhp7\Core\Request as Req;
+</code></pre></div>
+<ul>
+<li>Ara podrem usar la classe Request com Req</li>
+<li>És una molt bona pràctica fer coincidir els namespaces amb els directoris on es troben els arxius</li>
+<li>Açò ens permetrà utilitzar el autoloader de Composer que veurem més endavant</li>
+<li>En el nostre projecte tots els arxius pengen del directori \</li>
+<li>Més endavant, veurem que podem associar el nom del directori de nostre projecte amb un espai de noms, per exemple, CursoPhp7.</li>
+<li>Per tant, els namespaces començaran per CursoPhp7\</li>
+<li>Per exemple:<ul>
+<li>CursoPhp7\App\Controllers o CursoPhp7\Core o CursoPhp7\Database o ...</li>
+</ul>
+</li>
+</ul>
+<h4 id="afegir-els-uses">Afegir els uses<a class="headerlink" href="#afegir-els-uses" title="Permanent link">&para;</a></h4>
+<ul>
+<li>En tots els llocs on utilitzem un namespace, haurem d'afegir l'use de l'espai de noms corresponent</li>
+<li>A més, quan utilitzem una classe d'alguna llibreria o del propi PHP, com per exemple PDO, haurem d'afegir-li una  davant per a indicar que la classe està en l'espai de noms arrel</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>return $statement-&gt;fetchAll(
+<span class="linenos" data-linenos="2 "></span>\PDO::FETCH_CLASS, &#39;Agenda\\Entities\\&#39;.$classEntity);
+</code></pre></div>
+<h4 id="autoloading-amb-composer">Autoloading amb Composer<a class="headerlink" href="#autoloading-amb-composer" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Cada vegada que afegim una nova classe a la nostra aplicació hem d'inserir el require corresponent en el nostre bootstrap.php</li>
+<li>Per a evitar açò podem utilitzar l'eina composer amb la seua funcionalitat de autoloading</li>
+</ul>
+<h5 id="carrega-automatica-de-les-nostres-classes">Càrrega automàtica de les nostres classes<a class="headerlink" href="#carrega-automatica-de-les-nostres-classes" title="Permanent link">&para;</a></h5>
+<ul>
+<li>La càrrega automàtica de classes en composer es controla mitjançant la propietat autoload de l'arxiu composer.json</li>
+<li>Es permeten quatre valors:<ul>
+<li>El carregador de classes que segueix l'estàndard PSR-0 </li>
+<li>El carregador de classes que segueix l'estàndard PSR-4 (substitueix a l'anterior)</li>
+<li>El mapa de classes (classmap) </li>
+<li>Els arxius individuals (files)</li>
+</ul>
+</li>
+<li>El mètode recomanat és el carregador PSR-4 perquè és el més flexible (no fa falta per exemple regenerar el carregador de classes quan s'afig una nova classe al projecte)</li>
+</ul>
+<h4 id="us-de-psr-4">Ús de PSR-4<a class="headerlink" href="#us-de-psr-4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Podemos consultar l'especificació en la següent url:<ul>
+<li>http://www.php-fig.org/psr/psr-4/</li>
+</ul>
+</li>
+<li>Es basa que els noms dels namespaces han de coincidir amb els directoris on se situen els arxius</li>
+<li>Per a activar-ho afegirem la clau autoload indicant l'opció psr-4 i amb quin directori es mapea el namespace principal</li>
+</ul>
+<h5 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>{
+<span class="linenos" data-linenos="2 "></span>&quot;autoload&quot;: {&quot;psr-4&quot;: {&quot;Acme\\&quot;: &quot;src/&quot;} } }
+</code></pre></div>
+<ul>
+<li>Composer crearà un carregador automàtic de classes per al namespace Acme que seguirà les normes de l'estàndard PSR-4 de PHP</li>
+<li>El directori src/ estarà en l'arrel del projecte, al mateix nivell que el directori vendor/</li>
+<li>Contindrà el codi del projecte</li>
+<li>Així, l'arxiu src/Acme/Foo.php hauria de contenir la classe Acme\Foo</li>
+<li>Després d'afegir l'opció autoload, cal executar el comando <strong>composer dump-autoload</strong> perquè es regenere l'arxiu vendor/autoload.php</li>
+</ul>
+<h4 id="incloure-el-autoloader">Incloure el autoloader<a class="headerlink" href="#incloure-el-autoloader" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Perquè tot funcione correctament caldrà incloure el fitxer autoload.php en el controlador frontal (index.php) abans d'incloure el bootstrap.php</li>
+<li>Ara podrem eliminar tots els requires de classes que tinguem en el bootstrap.php</li>
+<li>El autoload s'encarregarà cercar els fitxers i utilitzar-los</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 Xavier Sastre - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "toc.integrate", "content.tabs.link", "navigation.expand"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>

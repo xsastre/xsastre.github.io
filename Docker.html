@@ -8,11 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://xsastre.github.io/index.html">
+        <link rel="canonical" href="https://xsastre.github.io/Docker.html">
       
       
-      
-        <link rel="next" href="Moduls/DWEC/_DWEC2425.html">
       
       
       <link rel="icon" href="imagenes/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Inici - Docencia Xavier</title>
+        <title>Docker - Docencia Xavier</title>
       
     
     
@@ -72,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#recursos-docencia-xavier-sastre" class="md-skip">
+        <a href="#installacio-de-docker" class="md-skip">
           Salta el contingut
         </a>
       
@@ -108,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inici
+              Docker
             
           </span>
         </div>
@@ -226,19 +224,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -252,7 +250,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Inici
@@ -263,30 +261,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Inici
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -295,35 +273,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Taula de continguts
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#curs-2024-2025" class="md-nav__link">
-    <span class="md-ellipsis">
-      Curs 2024-2025
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -502,32 +451,49 @@
                   
 
 
-<h1 id="recursos-docencia-xavier-sastre">Recursos Docència Xavier Sastre<a class="headerlink" href="#recursos-docencia-xavier-sastre" title="Permanent link">&para;</a></h1>
-<h2 id="curs-2024-2025">Curs 2024-2025<a class="headerlink" href="#curs-2024-2025" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>SMX</th>
-<th><a href="Moduls/AW/AW2425.md">AW</a></th>
-<th>SI</th>
-<th>AOF</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>DAW</strong></td>
-<td>DWES</td>
-<td><a href="Moduls/DWEC/_DWEC2425.html">DWEC</a></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>DAM</strong></td>
-<td>PSP</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+  <h1>Docker</h1>
+
+<h3 id="installacio-de-docker">Instal·lació de Docker<a class="headerlink" href="#installacio-de-docker" title="Permanent link">&para;</a></h3>
+<p>La instal·lació de docker dependrà del sistema operatiu que estem utilitzant. Ací anem a vore la que efecturan els que utilitzen linux, amb el sistema operatiu linux-mint o ubuntu , que és el que ve instal·lat en les imatges suministrades. Per a mac o windows s'haurà de mirar la pàgina web de <a href="https://www.docker.com/get-started">docker</a></p>
+<p>Ens donem privilegis</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo su
+</code></pre></div>
+<p>Utilitzant els repositoris de docker l'instal·lem:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>echo &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable&quot; | tee /etc/apt/sources.list.d/docker.list
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+<span class="linenos" data-linenos="4 "></span>
+<span class="linenos" data-linenos="5 "></span>apt update
+<span class="linenos" data-linenos="6 "></span>
+<span class="linenos" data-linenos="7 "></span>apt install docker-ce docker-ce-cli containerd.io pigz
+</code></pre></div>
+<p>Donem permisos a l'usuari afegint-lo al grup de docker</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>usermod -aG docker $USER
+</code></pre></div>
+On $USER és el teu usuari.</p>
+<p>També haurem d'instal·lar el docker-compose</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>curl -L &quot;https://github.com/docker/compose/releases/download/1.26.1/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span>chmod +x /usr/local/bin/docker-compose
+</code></pre></div>
+<p>I provem</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker --version
+</code></pre></div>
+<p>Faltarà engegar el servei de docker per a poder executar contenidors</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo systemctl start docker.service
+</code></pre></div>
+<p><strong>Posada en marxa d'un repositori en el IDE</strong></p>
+<ul>
+<li>Es clona el repositori en un directori</li>
+<li>Es canvia el .env.example a .env</li>
+<li>Es canvia la variable BASE_DIRECTORY del .env al directori utilitzat</li>
+<li>Es posa en marxa els contenidors amb <strong>sh start.sh</strong></li>
+<li>La primera vola s'executa el composer amb <strong>sh composer.sh</strong></li>
+</ul>
+<p>Nota: Al principi de curs es canviarà el /etc/hosts per afegir la linea</p>
+<blockquote>
+<p>127.0.0.1 batoi2021.my</p>
+</blockquote>
 
 
 

@@ -1,0 +1,1053 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsastre.github.io/7.6.Laravel_dades.html">
+      
+      
+      
+      
+      <link rel="icon" href="imagenes/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Els models i les dades: seeders, factories, i relacions entre models. - Docencia Xavier</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans Condensed";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#els-models-i-les-dades-seeders-factories-i-relacions-entre-models" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="." title="Docencia Xavier" class="md-header__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docencia Xavier
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Els models i les dades: seeders, factories, i relacions entre models.
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode dia"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Docencia Xavier" class="md-nav__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Docencia Xavier
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Inici
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            DWEC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/DWEC/_DWEC2425.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupament web en entorn client - DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/DWEC/desenvolupamentfrontend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupamet frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AW
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Moduls/AW/01.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicacions web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="els-models-i-les-dades-seeders-factories-i-relacions-entre-models">Els models i les dades: seeders, factories, i relacions entre models.<a class="headerlink" href="#els-models-i-les-dades-seeders-factories-i-relacions-entre-models" title="Permanent link">&para;</a></h1>
+<p><a href="#relacions-en-laravel">Relacions</a></p>
+<p><a href="#seeders-i-factories">Seeders i factories</a></p>
+<p><a href="#query-builder">Constructor de consultes</a></p>
+<p><a href="#us-de-dates">Us de dades</a></p>
+<p><a href="#videoclub">Exemple</a></p>
+<p><a href="#exercisis-propossats">Exercisis</a></p>
+<p><a href="#addendum-sobre-relacions">Addedum</a></p>
+<p>En aquesta llicò continuarem amb el vist en l'anterior quant a mecanismes d'accés a dades des de Laravel,
+i parlarem de conceptes una mica més avançats. D'una banda, veurem com podem poblar les taules de la nostra base de dades amb una sèrie de dades ja pre-carregades, i fins i tot amb dades fictícies que ens servisquen per a unes proves inicials, que després es puguen descartar. També veurem quins tipus de relacions
+es poden establir entre els models de l'aplicació, i com es reflecteixen automàticament en
+la base de dades.   </p>
+<h2 id="relacions-en-laravel">Relacions en Laravel<a class="headerlink" href="#relacions-en-laravel" title="Permanent link">&para;</a></h2>
+<p>Les taules de les bases de dades es relacionen sovint unes amb unes altres. Eloquent facilita la gestió i el treball amb aquestes relacions fàcilment suportant diversos tipus de relacions diferents:</p>
+<ul>
+<li>Un a un – One to one</li>
+<li>Un a molts – One to many</li>
+<li>Molts a molts – Many to many</li>
+<li>Molta a molts mitjançant - Has Many Through</li>
+</ul>
+<p>Les relacions entre models <strong>Eloquent</strong> es defineixen com a mètodes en les pròpies classes. Atès que, com els propis <strong>models</strong> Eloquent, les relacions també serveixen com a poderosos <strong>query builders</strong>, la definició de relacions com a mètodes proporciona potents <strong>funcions d'encadenament</strong> i consulta de mètodes.</p>
+<h3 id="un-a-un">Un a Un<a class="headerlink" href="#un-a-un" title="Permanent link">&para;</a></h3>
+<p>Suposem que tenim dos models Usuario i Telefono , de manera que podem establir una relació un a un entre ells: un usuari té un telèfon, i un telèfon pertany a un usuari.
+Per a reflectir aquesta relació en taules, una de les dues hauria de tindre una referència a l'altra. En aquest cas, podríem tindre un camp usuari_id en la taula de telefonos que indique a qui pertany
+aquest telèfon. És important que el camp es diga usuari_id , com veurem a continuació.
+Per a indicar que un usuari té un telèfon, afegim un nou mètode en el model d'Usuari , que
+es cride igual que el model amb el qual volem connectar ( telefono , en aquest cas):</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">class Usuario extends Model</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">    public function telefono()</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">    {</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">        return $this-&gt;hasOne(&#39;App\Models\Telefono&#39;);</span>
+<span class="linenos" data-linenos="6 "></span><span class="x">    }</span>
+<span class="linenos" data-linenos="7 "></span><span class="x">}</span>
+</code></pre></div>
+<p>Ara, si volem obtindre el telèfon d'un usuari, n'hi ha prou que fem això:</p>
+<p>$telefono = Usuario::findOrFail($id)-&gt;telefono;</p>
+<p>Hem emprat una característica de <strong>Eloquent</strong> denominada propietats dinàmiques, per la qual podem
+referenciar un mètode de relació com si fóra una propietat (en lloc d'usar <strong>telefono()</strong> , hem
+emprat <strong>telefono</strong> ).
+La instrucció anterior obté l'objecte <strong>Telefono</strong> associat amb l'usuari buscat (a través del \$id
+de l'usuari). Perquè aquesta associació tinga efecte, cal que en la taula <strong>telefonos</strong> existisca un
+camp <strong>usuario_id</strong> i que es corresponga amb un camp <strong>id</strong> de la taula d'usuaris , de manera que
+<strong>Eloquent</strong> estableix la connexió entre una i una altra taula. Haurem de definir una nova migració de modificació sobre la taula <strong>telefonos</strong> per a afegir aqueix nou camp, o refrescar la migració original amb ell i esborrar els continguts previs.
+Si volem utilitzar altres camps diferents en una i una altra taula per a connectar-les, hem d'indicar dos
+paràmetres més en cridar a <strong>hasOne</strong> . Per exemple, així relacionaríem les dues taules anteriors, indicant
+que la clau aliena de telefonos és <strong>idUsuario</strong> , i que la clau local a la qual es referencia en
+usuaris és <strong>codigo</strong> :</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">return $this-&gt;hasOne(&#39;App\Models\Telefono&#39;, &#39;idUsuario&#39;, &#39;codigo&#39;);</span>
+</code></pre></div>
+<p>També és possible obtindre la relació inversa, és a dir, a partir d'un telèfon, obtindre l'usuari al qual
+pertany. Per a això, afegim un mètode en el model Telefono i emprem el mètode
+<strong>belongsTo</strong> per a indicar a quin model s'associa:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">class Telefono extends Model</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">    public function usuario()</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">    {</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">        return $this-&gt;belongsTo(&#39;App\Models\Usuario&#39;);</span>
+<span class="linenos" data-linenos="6 "></span><span class="x">    }</span>
+<span class="linenos" data-linenos="7 "></span><span class="x">}</span>
+</code></pre></div>
+<p>Novament, podem especificar altres noms de clau passant paràmetres addicionals a <strong>belongsTo</strong>
+, igual que es fa per a <strong>hasOne</strong> .
+D'aquesta manera, si volem obtindre l'usuari a partir del telèfon, podem fer-lo així:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$usuario = Telefono::findOrFail($idTelefono)-&gt;usuario;
+</code></pre></div>
+<h4 id="guardar-dades-relacionades">Guardar dades relacionades<a class="headerlink" href="#guardar-dades-relacionades" title="Permanent link">&para;</a></h4>
+<p>Suposem que volem guardar un usuari amb el seu telèfon associat. Podem simplement guardar l'id del telèfon com un camp més de l'usuari:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">// Buscamos el teléfono que queremos asociar</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">// (suponiendo que existe previamente)</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">$telefono = Telefono::findOrFail($idTelefono);</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">$usuario = new Usuario();</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">$usuario-&gt;nombre = &quot;Pepe&quot;;</span>
+<span class="linenos" data-linenos="6 "></span><span class="x">$usuario-&gt;email = &quot;pepe@gmail.com&quot;;</span>
+<span class="linenos" data-linenos="7 "></span><span class="x">$usuario-&gt;telefono_id = $telefono-&gt;id;</span>
+<span class="linenos" data-linenos="8 "></span><span class="x">$usuario-&gt;save();</span>
+</code></pre></div>
+<p>Però, a més, podem vincular tots dos objectes en la relació, usant el mètode <strong>associate</strong> , d'aquesta manera:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">// Buscamos el teléfono que queremos asociar</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">// (suponiendo que existe previamente)</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">$telefono = Telefono::findOrFail($idTelefono);</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">$usuario = new Usuario();</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">$usuario-&gt;nombre = &quot;Pepe&quot;;</span>
+<span class="linenos" data-linenos="6 "></span><span class="x">$usuario-&gt;email = &quot;pepe@gmail.com&quot;;</span>
+<span class="linenos" data-linenos="7 "></span><span class="x">$usuario-&gt;telefono()-&gt;associate($telefono);</span>
+<span class="linenos" data-linenos="8 "></span><span class="x">$usuario-&gt;save();</span>
+</code></pre></div>
+<h3 id="un-a-molts">Un a molts<a class="headerlink" href="#un-a-molts" title="Permanent link">&para;</a></h3>
+<p>Una relació "un-a-molts" s'usa per a definir relacions en les quals un model únic posseeix qualsevol quantitat d'altres models. Per exemple: suposem que tenim els models Autor i Llibre , de manera que un autor pot tindre diversos llibres, i un llibre està associat a un autor.
+La manera d'establir la relació entre tots dos consistirà a afegir en la taula de llibres una clau
+aliena a l'autor al qual pertany. A l'hora de plasmar aquesta relació en els models, es fa de manera similar
+al cas anterior, només que en lloc d'utilitzar el mètode <strong>hasOne</strong> en la classe Autor usaríem el
+mètode <strong>hasMany</strong> :    </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">class Autor extends Model</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">    public function libros()</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">    {</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">        return $this-&gt;hasMany(&#39;App\Models\Libro&#39;);</span>
+<span class="linenos" data-linenos="6 "></span><span class="x">    }</span>
+<span class="linenos" data-linenos="7 "></span><span class="x">}</span>
+</code></pre></div>
+<p>Igual que ocorria abans, s'assumeix que la taula de llibres té una clau primària id , i que la clau aliena
+corresponent cap a la taula d'autors és autor_id . En cas contrari, es poden especificar uns altres
+passant més paràmetres a <strong>hasMany</strong> .
+D'aquesta manera obtenim els llibres associats a un autor:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">$libros = Autor::findOrFail($id)-&gt;libros();</span>
+</code></pre></div>
+<p>Finalment, també podem establir la relació inversa, i recuperar l'autor al qual pertany un
+determinat llibre, definint un mètode en la classe Llibre que empre *belongsTo , com en les
+relacions un a un:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">class Libro extends Model</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">    public function autor()</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">    {</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">        return $this-&gt;belongsTo(&#39;App\Models\Autor&#39;);</span>
+<span class="linenos" data-linenos="6 "></span><span class="x">    }</span>
+<span class="linenos" data-linenos="7 "></span><span class="x">}</span>
+</code></pre></div>
+<p>I obtindre, per exemple, el nom de l'autor a partir del llibre:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$nombreAutor = Libro::findOrFail($id)-&gt;autor-&gt;nombre;
+</code></pre></div>
+<h4 id="acces-eficient-a-dades-relacionades-eager-loading">Accés eficient a dades relacionades. Eager loading<a class="headerlink" href="#acces-eficient-a-dades-relacionades-eager-loading" title="Permanent link">&para;</a></h4>
+<p>Si en una vista Blade, accedim al nom de l'autor de esta manera:</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>{{ &quot;{{ $libro-&gt;autor-&gt;nombre &quot; }}}}
+</code></pre></div>
+aquest codi provoca una nova consulta en la base de dades per a buscar les dades de l'autor
+associat al llibre, al que, per a un llistat de 100 llibres, estarem fent 100 consultes addicionals
+per a extraure la informació dels respectius autors.
+Per a evitar aquesta sobrecàrrega, podem emprar una tècnica anomenada <strong>eager loading</strong> (que en valencià
+podríem traduir com a càrrega precipitada o impacient). Consisteix a emprar el mètode <strong>with</strong> per a indicar
+quina relació volem deixar pre-carregada en el resultat. Per exemple, si indiquem una cosa així en la
+funció <strong>index</strong> del controlador de llibres:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">public function index()</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">    $libros = Libro::with(&#39;autor&#39;)-&gt;get();</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">    return view(&#39;libros.index&#39;, compact(&#39;libros&#39;));</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">}</span>
+</code></pre></div>
+<h3 id="molts-a-molts-many-to-many">Molts a molts – Many to many<a class="headerlink" href="#molts-a-molts-many-to-many" title="Permanent link">&para;</a></h3>
+<p>Les relacions molts-a-molts són una mica més complicades que les hasOne o les hasMany. Un exemple de tal relació és un usuari que conté diversos rols, on els rols són compartits per altres usuaris. Per exemple, diversos usuaris poden tenir el rol de "Admin". Per a definir aquesta relació, es requereixen tres taules de la base de dades: users, rols, i role_user. La taula role_user és derivada de l'ordre alfabètic dels noms dels models relacionats i conté les columnes user_id i role_id.</p>
+<p>Les relacions molts-a-molts es defineixen amb un mètode que retorna el resultat del mètode <strong>belongsToMany</strong>. Per exemple, definir el mètode rols en el model User:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="x">    class User extends Model</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="x">    {</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="x">        /</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="x">          The roles that belong to the user.</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="x">         /</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="x">        public function roles()</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="x">        {</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="x">            return $this-&gt;belongsToMany(&#39;App\Models\Role&#39;);</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="x">        }</span>
+<span class="linenos" data-linenos="10 "></span><span class="x">    }</span>
+</code></pre></div>
+<p>Una vegada definida la relació, es pot accedir als rols de l'usuari usant la propietat dinàmica rols:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    $roles = App\User::find($id)-&gt;roles;
+</code></pre></div>
+<p>Per a definir la inversa d'una relació de molts a molts, simplement cal posar una altra cridada a belongsToMany en el model relacionat. </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">class Rol extends Model</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">    public function usuarios()</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">    {</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">        return $this-&gt;belongsToMany(&#39;App\Models\Usuario&#39;);</span>
+<span class="linenos" data-linenos="6 "></span><span class="x">    }</span>
+<span class="linenos" data-linenos="7 "></span><span class="x">}</span>
+</code></pre></div>
+<p>A l'efecte d'automatització, és a dir, perquè Eloquent establisca els nexes de manera automàtica, si
+volem establir una relació molts a molts entre un model A i un altre B , s'assumeix que existirà
+una altra taula a_b (l'ordre en què es col·loquen els noms de les taules és alfabètic), amb els camps
+a_id i b_id , que relacionen els dos models. En este cas, s'assumirà que existeix una taula
+rol_usuari amb un camp <strong>rol_id</strong> i un altre anomenat <strong>usuario_id</strong> , que enllacen amb els
+corresponents id de les taules d'usuaris i rols. Si això no fóra així, podem passar més
+paràmetres a <strong>belongsToMany</strong> per a indicar-ho.</p>
+<p>En el cas de les relacions molts a molts, és possible que ens interesse accedir a alguna dada d'aqueixa taula
+intermèdia que els relaciona. En aqueix cas, fem ús de l'atribut <strong>pivot</strong> , predefinit, i que apunta a la
+taula o model intermedi entre els dos relacionats. Per exemple, si volguérem obtindre la data de creació
+de la relació entre un usuari i un rol, podríem fer això:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$roles = Usuario::findOrFail($id)-&gt;roles;
+<span class="linenos" data-linenos="2 "></span>for($roles as $rol)
+<span class="linenos" data-linenos="3 "></span>{
+<span class="linenos" data-linenos="4 "></span>    echo $rol-&gt;pivot-&gt;created_at;
+<span class="linenos" data-linenos="5 "></span>}
+</code></pre></div>
+<p>Per defecte, només les claus del model estaran presents en l'objecte pivot. Si la taula pivot conté atributs addicionals, s'han d'especificar en definir la relació:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    return $this-&gt;belongsToMany(&#39;App\Role&#39;)-&gt;withPivot(&#39;column1&#39;, &#39;column2&#39;);
+</code></pre></div>
+<p>Si es desitja que els camps crated_at i updated_at es mantinguen de forma automàtica, cal utilitzar el mètode withTimestamps en definir la relació:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    return $this-&gt;belongsToMany(&#39;App\Role&#39;)-&gt;withTimestamps();
+</code></pre></div>
+<h5 id="filtrant-relacions-via-columnes-de-taula-intermedia">Filtrant Relacions Via Columnes de Taula Intermèdia<a class="headerlink" href="#filtrant-relacions-via-columnes-de-taula-intermedia" title="Permanent link">&para;</a></h5>
+<p>També pots filtrar els resultats van retornar per belongsToMany utilitzant el <strong>wherePivot</strong> i <strong>wherePivotIn</strong> mètodes quan definint la relació:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    retorn $this-&gt;belongsToMany(&#39;App\Notes&#39;)-&gt;wherePivot(&#39;aprovat&#39;, 1);
+</code></pre></div>
+<h2 id="seeders-i-factories">Seeders i factories<a class="headerlink" href="#seeders-i-factories" title="Permanent link">&para;</a></h2>
+<p>En les proves que hem fet fins ara, per a tindre dades amb què provar l'aplicació, ens hem limitat a afegir-los a mà des de <strong>phpMyAdmin</strong>.
+Atés que les dades d'inici són necessaris per a provar algunes funcionalitats bàsiques de l'aplicació,
+com són les cerques i filtrats, i atés que els formularis per a donar d'alta i gestionar aquestes dades normalment no es tenen llestos fins a etapes més tardanes, pot resultar convenient disposar d'algun
+mecanisme que genere aquestes dades de prova a l'inici, sense preocupar-nos de tocar la base de dades a mà o
+alterar el codi de l'aplicació per a això. En aquest aspecte, els <strong>seeders i factories</strong> juguen un paper
+important.</p>
+<h3 id="los-seeds">Los seeds<a class="headerlink" href="#los-seeds" title="Permanent link">&para;</a></h3>
+<p>Els <strong>seeders</strong> són classes especials que permeten sembrar (seed) de contingut una aplicació. Per a crear-los, utilitzem el comando <strong>php artisan</strong> com segueix:</p>
+<p>php artisan make:seeder NombreSeeder</p>
+<p>Això crearà una classe anomenada <strong>NombreSeeder</strong> en la carpeta <strong>database/seeders</strong>. En el mètode <strong>run</strong> d'aquesta classe podem crear els elements que necessitem afegir a la base de dades.
+Per exemple, per a emplenar un taula de llibres podem fer un LibrosSeeder:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>php artisan make:seeder LibrosSeeder
+</code></pre></div>
+<p>Editem el mètode run del seeder que hem creat, i definim aquest codi per a crear un autor amb
+un llibre associat (haurem d'incorporar amb use els models d'Autor i Llibre prèviament):</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="x">public function run()</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="x">    $autor = new Autor();</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="x">$autor-&gt;nombre = &quot;Juan Seeder&quot;;</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="x">$autor-&gt;nacimiento = 1960;</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="x">$autor-&gt;save();</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="x">$libro = new Libro();</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="x">$libro-&gt;titulo = &quot;El libro del Seeder&quot;;</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="x">$libro-&gt;editorial = &quot;Seeder S.A.&quot;;</span>
+<span class="linenos" data-linenos="10 "></span><span class="x">$libro-&gt;precio = 10;</span>
+<span class="linenos" data-linenos="11 "></span><span class="x">$libro-&gt;autor()-&gt;associate($autor);</span>
+<span class="linenos" data-linenos="12 "></span><span class="x">$libro-&gt;save();</span>
+<span class="linenos" data-linenos="13 "></span><span class="x">}</span>
+</code></pre></div>
+<h4 id="afegint-els-seeders-a-laplicacio">Afegint els seeders a l'aplicació<a class="headerlink" href="#afegint-els-seeders-a-laplicacio" title="Permanent link">&para;</a></h4>
+<p>Per defecte, els <em>seeders que creguem no formen part de l'aplicació encara, en el sentit que encara no els
+podem executar. Per a això, hem de donar-los d'alta en el seeder general, anomenat </em><em>DatabaseSeeder</em>* ,
+situat en la mateixa carpeta que els seeders que definim:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>class DatabaseSeeder extends Seeder
+<span class="linenos" data-linenos="2 "></span>{
+<span class="linenos" data-linenos="3 "></span>    public function run()
+<span class="linenos" data-linenos="4 "></span>    {
+<span class="linenos" data-linenos="5 "></span>        ...
+<span class="linenos" data-linenos="6 "></span>        $this-&gt;call(LibrosSeeder::class);
+<span class="linenos" data-linenos="7 "></span>    }
+<span class="linenos" data-linenos="8 "></span>}
+</code></pre></div>
+<h4 id="llancant-els-seeders">Llançant els seeders<a class="headerlink" href="#llancant-els-seeders" title="Permanent link">&para;</a></h4>
+<p>Si només volem executar aquest *seeder perquè afija les dades, emprarem aquest comando:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>php artisan db:seed
+</code></pre></div>
+<p>Això llançarà tots els seeders que tinguem declarats en la classe DatabaseSeeder . Si només volem
+llançar un en concret, podem fer el següent:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>php artisan db:seed --class=LibrosSeeder
+</code></pre></div>
+<p>També pot ser necessari (i a vegades convenient) netejar la base de dades i omplir-la des de zero amb les dades dels seeds per a començar a provar l'aplicació. En aquest cas, el comando és el següent:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>php artisan migrate:fresh --seed
+</code></pre></div>
+<h3 id="els-factories">Els factories<a class="headerlink" href="#els-factories" title="Permanent link">&para;</a></h3>
+<p>Els seeders són una eina útil per a poblar la nostra aplicació amb dades a l'inici. Podem, per exemple
+, donar d'alta una sèrie d'usuaris inicials amb accés a l'aplicació, perquè amb ells es puguen
+emplenar la resta de dades. També podem donar d'alta una sèrie de dades predefinides en unes certes taules, o dades de prova que després poder esborrar.
+No obstant això, els <strong>seeders</strong> per si sols es queden una mica "coixos". Què hauríem de fer per a donar d'alta 10 o 20 llibres en la nostra taula. Hauríem de definir algun tipus de bucle en el <strong>seeder</strong>,
+i definir dades diferents (per exemple, amb identificadors o comptadors aleatoris) per a cada llibre. Per a facilitar
+aquesta tasca, podem tirar mà dels <strong>factories</strong>.</p>
+<p>Els factories són classes que permeten generar dades per lots. Es creen amb el següent comando,
+emmagatzemant-se la classe en la carpeta <strong>database/factories</strong> :</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>php artisan make:factory NombreFactory
+</code></pre></div>
+<p>Per exemple, anem a crear un factori per crear autors:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>php artisan make:factory AutorFactory
+</code></pre></div>
+<p>Un dels canvis importants que ha portat la versió 8 de Laravel és que ara els factories estan
+orientats a objectes, per la qual cosa s'engloben en classes. A més, per defecte s'associen als models que creguem, de manera que podem generar una factoria d'objectes a partir d'una classe, com veurem a continuació. Per aquest motiu, quan creguem un model s'afig una clàusula use indicant que
+empra el <strong>trait HasFactory</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>class Libro extends Model
+<span class="linenos" data-linenos="2 "></span>{
+<span class="linenos" data-linenos="3 "></span>use HasFactory;
+<span class="linenos" data-linenos="4 "></span>...
+<span class="linenos" data-linenos="5 "></span>}
+</code></pre></div>
+<p>Un <strong>trait</strong> bàsicament és un conjunt de mètodes que es pot emprar per qualsevol classe que vulga
+utilitzar-los. D'aquesta manera, s'esmorteeix en part la limitació de només poder heretar d'una classe, i
+mitjançant aquests <strong>traits</strong> podem incorporar la funcionalitat d'unes altres.</p>
+<p>Quan creem una factoria en <strong>Laravel 8</strong> emprant el comando <strong>php artisan make:factory</strong>
+comentat anteriorment, obtindrem una classe amb el nom que hàgem indicat, en la carpeta
+<strong>database/factories</strong> . Per exemple:</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>namespace Database\Factories;
+<span class="linenos" data-linenos=" 2 "></span>use App\Models\Autor;
+<span class="linenos" data-linenos=" 3 "></span>use Illuminate\Database\Eloquent\Factories\Factory;
+<span class="linenos" data-linenos=" 4 "></span>class AutorFactory extends Factory
+<span class="linenos" data-linenos=" 5 "></span>{
+<span class="linenos" data-linenos=" 6 "></span>    /**
+<span class="linenos" data-linenos=" 7 "></span>    * The name of the factory&#39;s corresponding model.
+<span class="linenos" data-linenos=" 8 "></span>    *
+<span class="linenos" data-linenos=" 9 "></span>    * @var string
+<span class="linenos" data-linenos="10 "></span>    */
+<span class="linenos" data-linenos="11 "></span>    protected $model = Autor::class;
+<span class="linenos" data-linenos="12 "></span>        /**
+<span class="linenos" data-linenos="13 "></span>        * Define the model&#39;s default state.
+<span class="linenos" data-linenos="14 "></span>        *
+<span class="linenos" data-linenos="15 "></span>        * @return array
+<span class="linenos" data-linenos="16 "></span>        */
+<span class="linenos" data-linenos="17 "></span>        public function definition()
+<span class="linenos" data-linenos="18 "></span>        {
+<span class="linenos" data-linenos="19 "></span>            return [
+<span class="linenos" data-linenos="20 "></span>                //
+<span class="linenos" data-linenos="21 "></span>            ];
+<span class="linenos" data-linenos="22 "></span>    }
+<span class="linenos" data-linenos="23 "></span>}
+</code></pre></div>
+Ara haurem d'emplenar el mètode <strong>definition</strong> amb les dades que vulguem generar per a cada objecte
+que es cree. Per exemple, així empraríem el <strong>faker</strong> (ara automàticament incorporat en el propi
+objecte \$this ), per a generar dades a l'atzar per als autors:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">public function definition()</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">    return [</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">        &#39;nombre&#39; =&gt; $this-&gt;faker-&gt;name,</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">        &#39;nacimiento&#39; =&gt; $this-&gt;faker-&gt;numberBetween(1950, 1990)</span>
+<span class="linenos" data-linenos="6 "></span><span class="x">    ];</span>
+<span class="linenos" data-linenos="7 "></span><span class="x">}</span>
+</code></pre></div>
+<p>Finalment, en el seeder corresponent, podem utilitzar aquest factory per a generar N objectes del model
+associat. Per exemple:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">class AutoresSeeder extends Seeder</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">    public function run()</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">    {</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">        Autor::factory()-&gt;count(5)-&gt;create();</span>
+<span class="linenos" data-linenos="6 "></span><span class="x">    }</span>
+<span class="linenos" data-linenos="7 "></span><span class="x">}</span>
+</code></pre></div>
+<p>Per a generar dades relacionades entre models (per exemple, llibres amb els seus autors), procedim igual queen les versions anteriors de Laravel, però tenint en compte que per a cridar a la factoria s'ha d'utilitzar
+el mètode estàtic del model associat. Per exemple:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="x">class LibrosSeeder extends Seeder</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="x">{</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="x">    public function run()</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="x">    {</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="x">        $autores = Autor::all();</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="x">        $autores-&gt;each(function($autor) {</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="x">            Libro::factory()-&gt;count(2)-&gt;create([</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="x">&#39;autor_id&#39; =&gt; $autor-&gt;id]);</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="x">        });</span>
+<span class="linenos" data-linenos="10 "></span><span class="x">    }</span>
+<span class="linenos" data-linenos="11 "></span><span class="x">}</span>
+</code></pre></div>
+<h2 id="query-builder">Query Builder<a class="headerlink" href="#query-builder" title="Permanent link">&para;</a></h2>
+<p>Laravel inclou una sèrie de classes que ens facilita la construcció de consultes i un altre tipus d'operacions amb la base de dades. A més, en utilitzar aquestes classes, vam crear una notació molt més llegible, compatible amb tots els tipus de bases de dades suportats per Laravel i que ens prevé de cometre errors o d'atacs per injecció de codi SQL.</p>
+<h4 id="consultes">Consultes<a class="headerlink" href="#consultes" title="Permanent link">&para;</a></h4>
+<p>Per a realitzar una "Select" que retorne totes les files d'una taula utilitzarem el següent codi: </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">    $users = DB::table(&#39;users&#39;)-&gt;get();</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">    foreach ($users as $user) {</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">        echo $user-&gt;name; </span>
+<span class="linenos" data-linenos="4 "></span><span class="x">    }</span>
+</code></pre></div>
+<p>En l'exemple s'utilitza el constructor DB::taula indicant el nom de la taula sobre la qual es va a realitzar la consulta, i finalment es diu al mètode get() per a obtenir totes les files de la mateixa.</p>
+<p>Si volem obtenir un sol element podem utilitzar first en lloc de get, de la forma: </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    $user = DB::table(&#39;users&#39;)-&gt;first();
+</code></pre></div>
+<h5 id="clausula-where">Clausula where<a class="headerlink" href="#clausula-where" title="Permanent link">&para;</a></h5>
+<p>Per a filtrar les dades usem la clausula where, indicant el nom de la columna i el valor a filtrar:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    $user = DB::table(&#39;users&#39;)-&gt;where(&#39;name&#39;,&#39;Pedro&#39;)-&gt;get();
+</code></pre></div>
+<p>En aquest exemple, la clausula where filtrarà totes les files la columna de les quals name siga igual a Pedro. Si volem realitzar un altre tipus de filtrats, com a columnes que tinguen un valor major (&gt;), major o igual (&gt;=), menor (&lt;), menor o igual (&lt;=), diferent de l'indicat (&lt;&gt;) o usar l'operador like, ho podem indicar com a segon paràmetre de la forma:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    $users = DB::table(&#39;users&#39;)-&gt;where(&#39;votes&#39;, &#39;&gt;&#39;, 100)-&gt;get(); 
+<span class="linenos" data-linenos="2 "></span>    $users = DB::table(&#39;users&#39;)-&gt;where(&#39;status&#39;, &#39;&lt;&gt;&#39;, &#39;active&#39;)-&gt;get();
+<span class="linenos" data-linenos="3 "></span>    $users = DB::table(&#39;users&#39;)-&gt;where(&#39;name&#39;, &#39;like&#39;, &#39;T%&#39;)-&gt;get();
+</code></pre></div>
+<p>Si afegim més clausulas where a la consulta per defecte s'uniran mitjançant l'operador lògic AND. En cas que vulguem utilitzar l'operador lògic OR ho haurem de realitzar usant <strong>orWhere</strong> de la forma:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    $users = DB::table(&#39;users&#39;) -&gt;where(&#39;votes&#39;, &#39;&gt;&#39;, 100)-&gt;orWhere(&#39;name&#39;, &#39;Pedro&#39;) -&gt;get();
+</code></pre></div>
+<h5 id="orderby-groupby-having">orderBy / groupBy / having<a class="headerlink" href="#orderby-groupby-having" title="Permanent link">&para;</a></h5>
+<p>També podem utilitzar els mètodes orderBy, groupBy i having en les consultes:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    $users = DB::table(&#39;users&#39;) -&gt;orderBy(&#39;name&#39;, &#39;desc&#39;)-&gt;groupBy(&#39;count&#39;) -&gt;having(&#39;count&#39;, &#39;&gt;&#39;, 100)-&gt;get();
+</code></pre></div>
+<h5 id="offset-limit">Offset / Limit<a class="headerlink" href="#offset-limit" title="Permanent link">&para;</a></h5>
+<p>Si volem indicar un offset o limit ho realitzarem mitjançant els mètodes skip (per a l'offset) i take (para limit), per exemple:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    $users = DB::table(&#39;users&#39;)-&gt;skip(10)-&gt;take(5)-&gt;get();
+</code></pre></div>
+<h3 id="transaccions">Transaccions<a class="headerlink" href="#transaccions" title="Permanent link">&para;</a></h3>
+<p>Laravel també permet crear transaccions sobre un conjunt d'operacions:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    DB::transaction(function() {
+<span class="linenos" data-linenos="2 "></span>        DB::table(&#39;users&#39;)-&gt;update(array(&#39;votes&#39; =&gt; 1));
+<span class="linenos" data-linenos="3 "></span>        DB::table(&#39;posts&#39;)-&gt;delete(); 
+<span class="linenos" data-linenos="4 "></span>    });
+</code></pre></div>
+<p>En cas que es produïsca qualsevol excepció en les operacions que es realitzen en la transacció es desfarien tots els canvis aplicats fins a aqueix moment de forma automàtica.</p>
+<h2 id="us-de-dates">Us de dates<a class="headerlink" href="#us-de-dates" title="Permanent link">&para;</a></h2>
+<p>En algunes taules que hem vist o creat, s'ha usat un tipus <strong>timestamp</strong>, que bàsicament genera un
+tipus data en la taula corresponent. Aquests camps de tipus taula són instàncies d'una llibreria PHP
+anomenada <strong>Carbon</strong>, molt útil per a treballar amb dates. Així que, si tenim un registre de tipus Persona amb un camp <strong>created_at</strong> de tipus data, podem treballar amb ell com una data <strong>Carbon</strong>, i, per exemple,
+mostrar-la en una vista amb un format específic:</p>
+<p>Fecha creación: {{ "{{ Carbon\Carbon::parse($persona->created_at)->format('d/m/Y) " }}}}</p>
+
+<p>A més, per a treballar sobre els camps created_at i updated_at que per defecte es creen en una
+taula des d'una migració Laravel, podem emprar aquesta llibreria <strong>Carbon</strong> per a donar-los valor, encara que d'això ja s'encarrega Eloquent automàticament, però per si ho volem fer manualment, ací va un exemple:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">DB::table(&#39;personas&#39;)-&gt;insert([</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">&#39;nombre&#39; =&gt; &#39;Juan&#39;,</span>
+<span class="linenos" data-linenos="3 "></span><span class="x">&#39;edad&#39; =&gt; 56,</span>
+<span class="linenos" data-linenos="4 "></span><span class="x">&#39;created_at&#39; =&gt; Carbon::now(),</span>
+<span class="linenos" data-linenos="5 "></span><span class="x">&#39;updated_at&#39; =&gt; Carbon::now()</span>
+<span class="linenos" data-linenos="6 "></span><span class="x">]);</span>
+</code></pre></div>
+<p>Per a poder emprar la classe Carbon , hem d'importar-la ( <strong>use Carbon\Carbon</strong> ).</p>
+<h2 id="addendum-sobre-relacions">Addendum sobre relacions<a class="headerlink" href="#addendum-sobre-relacions" title="Permanent link">&para;</a></h2>
+<h3 id="has-many-through">Has Many Through<a class="headerlink" href="#has-many-through" title="Permanent link">&para;</a></h3>
+<p>El "Has Many Through" proporciona una drecera convenient per accedir relacions distants via una relació intermèdia.Per exemple, un model Country, pot tenir molts models Post a través d'un model intermedi User. En aquest exemple, es podria reunir fàcilment tots els missatges d'un blog per a un país determinat. Fem una ullada a les taules per a definir aquesta relació:</p>
+<p>countries
+    id - integer
+    name - string</p>
+<p>users
+    id - integer
+    country_id - integer
+    name - string</p>
+<p>posts
+    id - integer
+    user_id - integer
+    title - string</p>
+<p>Encara que Post no conté una columna country_id, la relació hasManyThrough proporciona accés als missatges d'un país via \$country-&gt;posts. </p>
+<p>Per a realitzar aquesta consulta, Eloquent inspecciona country_id en la taula intermèdia users. Després de trobar els IDs d'usuaris coincidents, seran usats per a la consulta a la taula posts.</p>
+<p>Ara que s'ha examinat l'estructura de la taula per a la relació, es va a definir sobre el model Country:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="x">    class Country extends Model</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="x">    {</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="x">        /*</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="x">         * Get all of the posts for the country.</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="x">         */</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="x">        public function posts()</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="x">        {</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="x">            return $this-&gt;hasManyThrough(&#39;App\Post&#39;, &#39;App\User&#39;);</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="x">        }</span>
+<span class="linenos" data-linenos="10 "></span><span class="x">    }</span>
+</code></pre></div>
+<p>El primer paràmetre passat al mètode hasManyThrough és el nom del model final al que es desitja accedir, mentre que el segon paràmetre és el nom del model intermedi.</p>
+<p>Els convenis típics per a claus de Eloquent seran usats per a realitzar les consultes de la relació. Si es desitja personalitzar les claus de la relació, es pot fer pels paràmetres tercer i quart al mètode hasManyThrough. El tercer paràmetre és el nom de la clau aliena del model intermediari. El quart paràmetre correspon amb el nom de la clau aliena del model final. El cinquè argument és la clau local, mentre que el sisè és la clau local del model intermedi:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="x">    class Country extends Model</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="x">    {</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="x">        public function posts()</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="x">        {</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="x">            return $this-&gt;hasManyThrough(</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="x">                &#39;App\Post&#39;,</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="x">                &#39;App\User&#39;,</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="x">                &#39;country_id&#39;, // Foreign key on users table...</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="x">                &#39;user_id&#39;, // Foreign key on posts table...</span>
+<span class="linenos" data-linenos="10 "></span><span class="x">                &#39;id&#39;, // Local key on countries table...</span>
+<span class="linenos" data-linenos="11 "></span><span class="x">                &#39;id&#39; // Local key on users table...</span>
+<span class="linenos" data-linenos="12 "></span><span class="x">            );</span>
+<span class="linenos" data-linenos="13 "></span><span class="x">        }</span>
+<span class="linenos" data-linenos="14 "></span><span class="x">    }</span>
+</code></pre></div>
+<h5 id="consultar-lexistencia-de-relacions">Consultar l'Existència de Relacions<a class="headerlink" href="#consultar-lexistencia-de-relacions" title="Permanent link">&para;</a></h5>
+<p>Quan s'accedeixen als registres d'un model, es poden limitar els resultats basats en l'existència d'una relació. Per exemple, imaginar que es desitja obtenir tots els posts que continguen almenys un comentari. Per a açò, es passaria el nom de la relació al mètode has o a orHas:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    // Retrieve all posts that have at least one comment...
+<span class="linenos" data-linenos="2 "></span>    $posts = App\Post::has(&#39;comments&#39;)-&gt;get();
+</code></pre></div>
+<p>A més es pot especificar un operador i un comptador per a personalitzar la consulta:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    // Retrieve all posts that have three or habite comments...
+<span class="linenos" data-linenos="2 "></span>    $posts = Post::has(&#39;comments&#39;, &#39;&gt;=&#39;, 3)-&gt;get();
+</code></pre></div>
+<p>Es poden nigar estructures has utilitzant la notació de "punts". Per exemple, es podrien obtenir tots els posts que tenen almenys un comentari i un vot:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    // Retrieve all posts that have at least one comment with votes...
+<span class="linenos" data-linenos="2 "></span>    $posts = Post::has(&#39;comments.votes&#39;)-&gt;get();
+</code></pre></div>
+<p>Si es necessita encara més control, es poden utilitzar els mètodes whereHas i orWhereHas per a incloure condicions "where" en les consultes has. Aquests mètodes permeten afegir restricciones personalitzades a una relació, així com comprovar el contingut d'un comentari:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    // Retrieve all posts with at least one comment containing words like foo%
+<span class="linenos" data-linenos="2 "></span>    $posts = Post::whereHas(&#39;comments&#39;, function ($query) {
+<span class="linenos" data-linenos="3 "></span>        $query-&gt;where(&#39;content&#39;, &#39;like&#39;, &#39;foo%&#39;);
+<span class="linenos" data-linenos="4 "></span>    })-&gt;get();
+</code></pre></div>
+<p>Quan s'accedeixen als registres d'un model, es poden limitar els resultats basats en la <strong>inexistència</strong> d'una relació. Per exemple, imaginar que es desitja obtenir tots els posts que no continguen almenys un comentari. Per a açò, es passaria el nom de la relació al mètode doesntHave o a orDoesntHave:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    $posts = App\Post::doesntHave(&#39;comments&#39;)-&gt;get();
+</code></pre></div>
+<h4 id="insertant-i-modificant-models-rellacionats">Insertant i modificant Models rel.lacionats<a class="headerlink" href="#insertant-i-modificant-models-rellacionats" title="Permanent link">&para;</a></h4>
+<h5 id="el-metode-save">El mètode Save<a class="headerlink" href="#el-metode-save" title="Permanent link">&para;</a></h5>
+<p>Eloquent proveeix mètodes convenients per a l'addició de nous models a les relacions. Per exemple, potser necessite inserir un nou Comment a un model Post. En lloc de configurar manualment l'atribut <strong>post_id</strong> en el Comment, pot inserir el Comment directament des del mètode <strong>save</strong> de la relació:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$comment = new App\Comment([&#39;message&#39; =&gt; &#39;A new comment.&#39;]);
+<span class="linenos" data-linenos="2 "></span>$post = App\Post::find(1);
+<span class="linenos" data-linenos="3 "></span>$post-&gt;comments()-&gt;save($comment);
+</code></pre></div>
+<p>Note's que no accedim als comments de la relació com una propietat dinàmica. En el seu lloc, cridem al mètode comments per a obtenir una instància de la relació. El mètode save agregarà automàticament el valor post_id apropiat al nou model Comment.</p>
+<p>Si necessitem gravar multiples models relacionats, pot usar el mètode <strong>saveMany</strong></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    $post = App\Post::find(1);
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span>    $post-&gt;comments()-&gt;saveMany([
+<span class="linenos" data-linenos="4 "></span>        new App\Comment([&#39;message&#39; =&gt; &#39;A new comment.&#39;]),
+<span class="linenos" data-linenos="5 "></span>        new App\Comment([&#39;message&#39; =&gt; &#39;Another comment.&#39;]),
+<span class="linenos" data-linenos="6 "></span>    ]);
+</code></pre></div>
+<h4 id="el-metode-create">El mètode Create<a class="headerlink" href="#el-metode-create" title="Permanent link">&para;</a></h4>
+<p>A més dels mètodes save i saveMany, es pot utilitzar també el mètode <strong>create</strong>, eque accepta una matriu d'atributs, crea el model i ho insereix en la base de dades. De nou, la diferència entre save i create és que save accepta una instància d'un model complet de Eloquent mentre que create accepta una matriu de PHP:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    $post = App\Post::find(1);
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span>    $comment = $post-&gt;comments()-&gt;create([
+<span class="linenos" data-linenos="4 "></span>        &#39;message&#39; =&gt; &#39;A new comment.&#39;,
+<span class="linenos" data-linenos="5 "></span>    ]);
+</code></pre></div>
+<p>Abans d'utilitzar el crear mètode, revisa la documentació d'assignment masssiu.
+Pots utilitzar el createMany mètode per crear el múltiple va relacionar models:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    $post = App\Post::find(1);
+<span class="linenos" data-linenos="2 "></span>    $post-&gt;comments()-&gt;createMany([
+<span class="linenos" data-linenos="3 "></span>        [
+<span class="linenos" data-linenos="4 "></span>            &#39;message&#39; =&gt; &#39;A new comment.&#39;,
+<span class="linenos" data-linenos="5 "></span>        ],
+<span class="linenos" data-linenos="6 "></span>        [
+<span class="linenos" data-linenos="7 "></span>            &#39;message&#39; =&gt; &#39;Another new comment.&#39;,
+<span class="linenos" data-linenos="8 "></span>        ],
+<span class="linenos" data-linenos="9 "></span>    ]);
+</code></pre></div>
+<h4 id="belongs-to-relationships">Belongs To Relationships<a class="headerlink" href="#belongs-to-relationships" title="Permanent link">&para;</a></h4>
+<p>Quan actualitzem una relació <strong>belongsTo</strong>, utilitzaem el mètode associate. Aquest mètode establirà la clau forània en el model fill.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$account = App\Account::find(10);
+<span class="linenos" data-linenos="2 "></span>$user-&gt;account()-&gt;associate($account);
+<span class="linenos" data-linenos="3 "></span>$user-&gt;save();
+</code></pre></div>
+<p>Per a llevar-la, pots utilitzar el mètode <strong>dissociate</strong>. Aquest mètode posarà la clau forània de la relació a null:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$user-&gt;account()-&gt;dissociate();
+<span class="linenos" data-linenos="2 "></span>$user-&gt;save();
+</code></pre></div>
+<h4 id="relacions-molts-a-molts">Relacions Molts a Molts<a class="headerlink" href="#relacions-molts-a-molts" title="Permanent link">&para;</a></h4>
+<h5 id="adjuntar-separar-attaching-detaching">Adjuntar / Separar (Attaching / Detaching)<a class="headerlink" href="#adjuntar-separar-attaching-detaching" title="Permanent link">&para;</a></h5>
+<p>Eloquent també proporciona uns quants helpers addicionals helper mètodes per fer que treballen amb va relacionar models habite convenient. Per exemple, imaginar que un usuari pot tenir diversos rols i un rol pot tenir diversos usuaris. Per un adjuntar un rol un un usuari inserint un registre en la taula intermèdia que uneix els models, utilitzar el mètode attach:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$user = App\User::find(1);
+<span class="linenos" data-linenos="2 "></span>$user-&gt;rols()-&gt;attach($roleId);
+</code></pre></div>
+<p>Quan s'adjunta una relació a un model, es pot passar a més un array de dades addicional per a inserir-ho en la taula intermèdia:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$user-&gt;rols()-&gt;attach($roleId, [&#39;expires&#39; =&gt; $expires]);
+</code></pre></div>
+<p>Per descomptat, a voltes és necessari eliminar un rol d'un usuari. Per a eliminar un registre d'una relació molts-a-molts, utilitzar el mètode <strong>detach</strong>. El mètode detach eliminarà el registre apropiat de la taula intermèdia; no obstant açò, tots dos models romandran en la base de dades:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>// Detach a single role from the user...
+<span class="linenos" data-linenos="2 "></span>$user-&gt;rols()-&gt;dettach($roleId);
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span>// Detach all rols from the user...
+<span class="linenos" data-linenos="5 "></span>$user-&gt;rols()-&gt;dettach();
+</code></pre></div>
+<p>Per comoditat, attach i dettach accepten a més un array de IDs com a entrada:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$user = App\User::find(1);
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span>$user-&gt;rols()-&gt;detach([1, 2, 3]);
+<span class="linenos" data-linenos="4 "></span>
+<span class="linenos" data-linenos="5 "></span>$user-&gt;rols()-&gt;attach([
+<span class="linenos" data-linenos="6 "></span>    1 =&gt; [&#39;expires&#39; =&gt; $expires],
+<span class="linenos" data-linenos="7 "></span>    2 =&gt; [&#39;expires&#39; =&gt; $expires]
+<span class="linenos" data-linenos="8 "></span>]);
+</code></pre></div>
+<h5 id="guardant-dades-addicional-en-la-taula-pivot">Guardant dades addicional en la taula pivot<a class="headerlink" href="#guardant-dades-addicional-en-la-taula-pivot" title="Permanent link">&para;</a></h5>
+<p>Quan treballem amb una relació molts-a-molts, el mètode Save accepta , com a segon argument, una matriu de attributes de la taula annexa (taula pivot)</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>App\User::find(1)-&gt;rols()-&gt;save($role, [&#39;expires&#39; =&gt; $expires]);
+</code></pre></div>
+<h5 id="modificant-un-registre-en-la-taula-pivot">Modificant un registre en la taula Pivot<a class="headerlink" href="#modificant-un-registre-en-la-taula-pivot" title="Permanent link">&para;</a></h5>
+<p>Si necessites actualitzar una fila en el taula pivot, pots utilitzar el mètode <strong>updateExistingPivot</strong>. Aquest mètode accepta la clau forània i una varietat d'atributs per actualitzar:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$user = App\User::find(1);
+<span class="linenos" data-linenos="2 "></span>$user-&gt;rols()-&gt;updateExistingPivot($roleId, $attributes);
+</code></pre></div>
+<p>Consulta <a href="https://laravel.com/docs/8.x/eloquent-relationships">documentación</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 Xavier Sastre - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "toc.integrate", "content.tabs.link", "navigation.expand"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>

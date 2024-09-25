@@ -8,11 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://xsastre.github.io/index.html">
+        <link rel="canonical" href="https://xsastre.github.io/yyy7.1.Laravel_instalacio.html">
       
       
-      
-        <link rel="next" href="Moduls/DWEC/_DWEC2425.html">
       
       
       <link rel="icon" href="imagenes/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Inici - Docencia Xavier</title>
+        <title>FRAMEWORK LARAVEL - Docencia Xavier</title>
       
     
     
@@ -72,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#recursos-docencia-xavier-sastre" class="md-skip">
+        <a href="#framework-laravel" class="md-skip">
           Salta el contingut
         </a>
       
@@ -108,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inici
+              FRAMEWORK LARAVEL
             
           </span>
         </div>
@@ -226,19 +224,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -252,7 +250,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Inici
@@ -263,30 +261,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Inici
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -295,35 +273,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Taula de continguts
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#curs-2024-2025" class="md-nav__link">
-    <span class="md-ellipsis">
-      Curs 2024-2025
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -502,32 +451,114 @@
                   
 
 
-<h1 id="recursos-docencia-xavier-sastre">Recursos Docència Xavier Sastre<a class="headerlink" href="#recursos-docencia-xavier-sastre" title="Permanent link">&para;</a></h1>
-<h2 id="curs-2024-2025">Curs 2024-2025<a class="headerlink" href="#curs-2024-2025" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>SMX</th>
-<th><a href="Moduls/AW/AW2425.md">AW</a></th>
-<th>SI</th>
-<th>AOF</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>DAW</strong></td>
-<td>DWES</td>
-<td><a href="Moduls/DWEC/_DWEC2425.html">DWEC</a></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>DAM</strong></td>
-<td>PSP</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<h1 id="framework-laravel">FRAMEWORK LARAVEL<a class="headerlink" href="#framework-laravel" title="Permanent link">&para;</a></h1>
+<h2 id="installacio-laravelhomestead-en-entorns-de-desenvolupament">Instal·lació laravel/homestead en entorns de desenvolupament<a class="headerlink" href="#installacio-laravelhomestead-en-entorns-de-desenvolupament" title="Permanent link">&para;</a></h2>
+<p>Homestead és un entorn preparat, configurable que ens permet arrencar un entorn de desenvolupament complet ràpidament. Està disponible per a tots els sistemes però en windows hem de tenir en compte l'advertència que ens fa la pàgina oficial:</p>
+<p><strong>Si estàs utilitzant windows, pots necessitar habilitar virtualització de maquinari (VT-x). Usualment pot estar habilitat via la vostra BIOS. Si estàs utilitzant Hyper-V damunt un sistema UEFI  a més pot necessitar desactivar Hyper-V en ordre d'accedir VT-x.</strong></p>
+<p>L'instal.lacio la podeu consultar en la pàgina oficial de <a href="https://laravel.com/docs/8.x/homestead">laravel</a>. <br />
+Si tenim el <strong>VAGRANT</strong> instal.lat és molt senzill fer-la còrrer en el sistema de virtualització que tenim al nostre equip. Si no, hem d'instalar-lo des de la <a href="https://www.vagrantup.com/downloads">pàgina oficial</a>. <br />
+Una vegada instal·lat vagrant hem de seguir els següents pasos, des d'una terminal del sistema:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>git clone https://github.com/laravel/homestead.git ~/Homestead  
+<span class="linenos" data-linenos="2 "></span>cd ~/Homestead  
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span>// Mac / Linux...
+<span class="linenos" data-linenos="5 "></span>bash init.sh
+<span class="linenos" data-linenos="6 "></span>
+<span class="linenos" data-linenos="7 "></span>// Windows...
+<span class="linenos" data-linenos="8 "></span>init.bat
+</code></pre></div>
+<p>Ara hem de configurar el nostre equip per a sincronitzar-lo amb el homestead. Primer crearem un directori <strong>code</strong> on aniran el codi de les nostres apliacions web. Tindrem un directori per cada aplicació web.    </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>cd  
+<span class="linenos" data-linenos="2 "></span>mkdir code  
+</code></pre></div>
+<h4 id="possada-en-funcionament-de-la-maquina-virtual">Possada en funcionament de la màquina virtual.<a class="headerlink" href="#possada-en-funcionament-de-la-maquina-virtual" title="Permanent link">&para;</a></h4>
+<p>Abans d'arrancar la màquina haurem de crear un  certificat d'usuari:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
+</code></pre></div>
+<p>Per arrancar la màquina virtual hem d'anar al directori Homestead i executar:   </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>cd Homestead
+<span class="linenos" data-linenos="2 "></span>vagrant up  
+</code></pre></div>
+<p>El que tardarà un temps perquè s'ha de baixar la màquina.</p>
+<p>I per connectar-se a una consola en la màquina virtual<br />
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>vagrant ssh 
+</code></pre></div></p>
+<p>I per apagar la màquina </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>vagrant halt    
+</code></pre></div>
+<h4 id="base-de-dades">Base de dades<a class="headerlink" href="#base-de-dades" title="Permanent link">&para;</a></h4>
+<p>El homestead incorpora el mysql en el port 33060 i el postgreSQL en el 54320. <br />
+El nom d'usuari i el password són homestead / secret per als dos.   </p>
+<p>Si volem instal.lar el phpmyadmin ho haurem de fer des de la consola de la màquina virtual  </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo apt-get update 
+<span class="linenos" data-linenos="2 "></span>sudo apt-get install phpmyadmin 
+</code></pre></div>
+<p>Després haurem de crear un enllaç símbolic a un directori dins del directori code i crear un lloc web especific per accedir des del navegador   </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo ln -s /usr/share/phpmyadmin/ /home/vagrant/code/phpmyadmin 
+<span class="linenos" data-linenos="2 "></span>serve my.my /home/vagrant/code/phpmyadmin   
+</code></pre></div>
+<p>i afegir al /etc/host de la màquina física el domini creat (ja està fet als ordinadors d'aula)</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>192.168.10.10   my.my
+</code></pre></div>
+<h2 id="installacio-de-valet-en-entorns-mac">Instal.lació de Valet en entorns mac<a class="headerlink" href="#installacio-de-valet-en-entorns-mac" title="Permanent link">&para;</a></h2>
+<p>Si tens un mac també pots probar amb esta <a href="https://laravel.com/docs/8.x/valet">opció</a></p>
+<h2 id="installacio-amb-docker">Instal.lació amb docker<a class="headerlink" href="#installacio-amb-docker" title="Permanent link">&para;</a></h2>
+<p>Pode utilitzar també l'entorn docker amb <a href="https://laradock.io/">Laradock</a>.</p>
+<p>Si volen instal.lar soles un entorn de programació els pasos serien els següents:</p>
+<ul>
+<li>En un directori (jo utilitzaria el del usuari)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>git clone https://github.com/Laradock/laradock.git
+</code></pre></div>
+<ul>
+<li>Dins del directori laradock que haurà creat</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>cp env-example .env
+</code></pre></div>
+<ul>
+<li>Descarregar els containers (tarda una estona)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker-compose up -d nginx mysql phpmyadmin redis workspace 
+</code></pre></div>
+<ul>
+<li>Ix del directori laradock i crea, descarrega un projecte. En el nostre cas serà (cadascú amb el seu repositori)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>git clone https://github.com/BatoiDawDWES2021/bloglaravel-nomUsuari.git
+</code></pre></div>
+<ul>
+<li>Entra en el directori laradock i modifica el .env per afegir el directori que has creat (està en la primera linea):</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>APP_CODE_PATH_HOST=../bloglaravel-nomUsuari/
+</code></pre></div>
+<ul>
+<li>També marca que cal canviar en el .env per la base de dades.</li>
+</ul>
+<p>Update your project configuration to use the database host</p>
+<p>Open your PHP project’s .env file or whichever configuration file you are reading from, and set the database host DB_HOST to mysql:</p>
+<p>DB_HOST=mysql
+You need to use the Laradock’s default DB credentials which can be found in the .env file (ex: MYSQL_USER=). Or you can change them and rebuild the container.</p>
+<ul>
+<li>Posada en funcionament (açò és el que caldrà fer cada dia)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker-compose up -d nginx mysql     
+</code></pre></div>
+<ul>
+<li>Entrar en la màquina per a executar operacions</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>docker-compose exec workspace bash
+</code></pre></div>
+<ul>
+<li>Una vegada dins de la màquina caldrà executar el composer (soles quan caviem alguna cosa)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>composer install
+</code></pre></div>
+<ul>
+<li>Després podrem vore el nostre projecte funcionar amb </li>
+</ul>
+<p>http://localhost</p>
+<ul>
+<li>Mireu que no hi haja un altre servidor web funcionant al mateix temps</li>
+</ul>
 
 
 
