@@ -371,7 +371,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xsastre.github.io/Moduls/AW/00.html</loc>
+         <lastmod>2024-09-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xsastre.github.io/Moduls/AW/01.html</loc>
+         <lastmod>2024-09-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xsastre.github.io/Moduls/AW/02.html</loc>
          <lastmod>2024-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>

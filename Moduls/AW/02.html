@@ -1,0 +1,816 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsastre.github.io/Moduls/AW/02.html">
+      
+      
+        <link rel="prev" href="01.html">
+      
+      
+      
+      <link rel="icon" href="../../imagenes/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>HTML - Docencia Xavier</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans Condensed";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-introduccio" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../.." title="Docencia Xavier" class="md-header__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docencia Xavier
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HTML
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode dia"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Docencia Xavier" class="md-nav__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Docencia Xavier
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Inici
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            DWEC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC/_DWEC2425.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupament web en entorn client - DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC/desenvolupamentfrontend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupamet frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AW
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="00.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Temporització aproximada
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicacions web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="02.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducció
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>HTML</h1>
+
+<h2 id="1-introduccio">1. Introducció<a class="headerlink" href="#1-introduccio" title="Permanent link">&para;</a></h2>
+<p>HTML (Llenguatge de Marques d'Hipertext, de l'anglès HyperText Markup Language) és el component més bàsic de la web. Defineix el significat i estructura del contingut web. A més d'HTML, generalment s'utilitzen altres tecnologies per descriure l'aparença/presentació d'una pàgina web (CSS) o la funcionalitat/comportament (JavaScript).</p>
+<p>Hipertext fa referència als enllaços que connecten pàgines web entre si, ja sigui dins d'un únic lloc web o entre llocs web. Els enllaços són un aspecte fonamental de la web. En pujar contingut a Internet i vincular-lo a les pàgines creades per altres persones, et converteixes en un participant actiu a la “World Wide Web” (Xarxa Informàtica Mundial).</p>
+<p>HTML utilitza "marques" per etiquetar text, imatges i un altre contingut per mostrar-lo en un navegador web. Les marques HTML inclouen "elements" especials com <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;canvas&gt;</code>, <code>&lt;datalist&gt;</code>, <code>&lt;details&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;output&gt;</code>, <code>&lt;progress&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code> y muchos otros.</p>
+<p>Un element HTML es distingeix d'un altre text en un document mitjançant "etiquetes", que consisteixen en el nom de l'element envoltat per <code>&lt;</code> i <code>&gt;</code>. El nom d'un element dins d'una etiqueta no distingeix entre majúscules i minúscules. És a dir, es pot escriure en majúscules, minúscules o barreja. Per exemple, l'etiqueta <code>&lt;title&gt;</code> es pot escriure com a <code>&lt;Title&gt;</code>, <code>&lt;TITLE&gt;</code> o de qualsevol altra manera.</p>
+<details class="card mb-2">
+  <summary class="card-header question">Què significa hipertext?</summary>
+  <div class="card-body" markdown="1">
+
+De la mateixa manera que un hipermercat és millor que un mercat. L'hipertext és millor que el text. De manera simplificada és text amb enllaços que us porten a altres documents.
+
+</div>
+</details>
+
+<details class="card mb-2">
+  <summary class="card-header question">És HTML case sensitive?</summary>
+  <div class="card-body" markdown="1">
+
+Les etiquetes HTML no distingeixen entre majúscules i minúscules: `<P>` significa el mateix que `<p>` . L'estàndard HTML no requereix etiquetes en minúscules, però W3C recomana minúscules en HTML i exigeix minúscules per a tipus de document més estrictes com XHTML.
+
+## 2. Estructura bàsica html
+
+Ara veurem com combinar elements individuals per formar una pàgina html completa:
+
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Títol de la pàgina<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Això és una capçalera<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Això és un paràgraf.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span>    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;benvinguda&quot;</span><span class="p">&gt;</span>Benvingut!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="15 "></span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+- `<!DOCTYPE html>`: L'element doctype. Als seus inicis, quan l'HTML feia poc temps (al voltant de 1991-1992), els doctypes servien com a enllaços al conjunt de regles que la pàgina HTML havia de seguir perquè fos considerat bon HTML. Actualment s'ignora i es considera un llegat històric que cal incloure perquè tot funcioni correctament.
+- `<html></html>`: L'element `<html>`. Aquest element envolta tot el contingut de la pàgina. De vegades se'l coneix com l'element arrel.
+- `<head></head>`: L'element `<head>` (capçalera). Aquest element actua com a contenidor per a tots els paràmetres que vulguis incloure al document HTML que no seran visibles als visitants de la pàgina.
+- `<meta charset="utf-8">`: Aquest element estableix que el vostre document HTML utilitzarà la codificació UTF-8, que inclou la gran majoria de caràcters de tots els idiomes humans escrits.
+- `<title></title>`: L'element `<title>`. Aquest estableix el títol de la pàgina, que és el títol que apareix a la pestanya del navegador on es carrega la pàgina.
+- `<body></body>`: L'element `<body>`. Conté tot el contingut que vols mostrar als usuaris quan visiten la teva pàgina, ja sigui text, imatges, vídeos, jocs, pistes dàudio reproduïbles o qualsevol altra cosa.
+
+<details class="card mb-2">
+  <summary class="card-header question">Com veiem el codi HTML d'una pàgina?</summary>
+  <div class="card-body" markdown="1">
+
+F12 o Click dret i inspeccionar
+
+</div>
+</details>
+
+
+### 2.1. Element
+
+Els elements HTML són els components bàsics dun document HTML. En aquesta pàgina que llegiu, per exemple, el títol, un paràgraf i una imatge són elements H1, P i IMG, respectivament. No tots els tipus d'element són visibles: alguns tenen com a única funció agrupar altres elements, per exemple.
+
+Explorem una mica l'element paràgraf:
+
+![Element i etiquetes HTML](./img/elementoEtiquetas.png)
+_Element i etiquetes HTML_
+
+Les principals parts del nostre element són:
+
+- **L'etiqueta d'obertura**: consisteix en el nom de l'element (en aquest cas, p), tancat entre parèntesis angulars d'obertura i tancament. Aquesta etiqueta marca marca on comença l'element o comença a tenir efecte. En aquest exemple, precedeix al començament del text del paràgraf.
+- **El contingut**: Aquest és el contingut de l'element. En aquest exemple, és el text del paràgraf.
+- **L'etiqueta de tancament**: És el mateix que l'etiqueta d'obertura, excepte que inclou una barra diagonal abans del nom de l'element. Això indica on s'acaba l'element; en aquest cas, on finalitza el paràgraf. No incloure una etiqueta de tancament és un error comú de principiant, i pot conduir a resultats estranys.
+
+**L'element** el conformen l'etiqueta d'obertura, seguida del contingut, seguit de l'etiqueta de tancament.
+
+<details class="card mb-2">
+  <summary class="card-header question">Com se diu un element que té clau però no té valor?</summary>
+  <div class="card-body" markdown="1">
+
+Element buit.
+
+</div>
+</details>
+
+
+### 2.2. Atribut
+
+Els elements també poden tindre atributs. Els atributs tenen aquest aspecte:
+
+![Atribut HTML](./img/atributo.png)
+_Atribut HTML_
+
+Els atributs contenen informació extra sobre l'element que no es mostrarà al contingut. En aquest cas, l'atribut class assigna a l'element un identificador que podeu utilitzar per dotar-lo d'informació d'estil.
+
+Un atribut hauria de tenir:
+
+Un espai entre aquest i nom d'element. (Per a un element amb més d'un atribut, els atributs també han d'estar separats per espais).
+El nom de l'atribut seguit per un signe igual.
+Un valor de l'atribut, envoltat de cometes d'obertura i tancament.
+
+![Nomenclatura HTML](./img/nomenclaturaHtml.png)
+_Nomenclatura HTML_
+
+<details class="card mb-2">
+ <summary class="card-header question">Per què serveix l'atribut alt o text alternatiu?</summary>
+ <div class="card-body" markdown="1">
+
+L'atribut ALT o l'etiqueta ALT és un atribut HTML per a un text que descriu una imatge. L'atribut ALT es col·loca directament a l'etiqueta de la imatge. Si una imatge no es pot mostrar per alguna raó, l'atribut ALT proporciona text alternatiu per mostrar al vostre lloc.
+
+</div>
+</details>
+
+
+<details class="card mb-2">
+ <summary class="card-header question">Què és un atribut booleà?</summary>
+ <div class="card-body" markdown="1">
+
+Són atributs que tenen clau però no tenen cap valor. Per exemple, en aquest input `<input type="checkbox" name="vehicle" value="car" checked>` l'atribut `checked` és booleà.
+
+Els valors true i false estan especificament prohibits als atributs booleans. Per representar el valor false, l'atribut no ha d'aparèixer.
+
+Tots els exemples següents són correctes i equivalents:
+
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;vehicle&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;car&quot;</span> <span class="na">checked</span> <span class="na">disabled</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;vehicle&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;car&quot;</span> <span class="na">checked</span><span class="o">=</span><span class="s">&quot;checked&quot;</span> <span class="na">disabled</span><span class="o">=</span><span class="s">&quot;disabled&quot;</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="3 "></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;vehicle&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;car&quot;</span> <span class="na">checked</span> <span class="na">disabled</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+
+</div>
+</details>
+
+És correcte l'element `<a href=https://www.mozilla.org/>el meu lloc web preferit</a>`?
+
+És correcte l'element `<a href='http://www.exemple.com'>Un enllaç al meu exemple.</a>`?
+
+És correcte l'element `<a href='http://www.exemple.com' title=És correcte o no>Un enllaç al meu exemple.</a>`?
+
+És correcte l'element `<a href="http://www.exemple.com" title="És 'correcte'?">Un enllaç al meu exemple.</a>`?
+
+És correcte l'element `<a href='http://www.exemple.com' title='És 'correcte'?'>Un enllaç al meu exemple.</a>`?
+
+<details class="card mb-2">
+  <summary class="card-header question">Què és un llenguatge de programació?</summary>
+  <div class="card-body" markdown="1">
+
+Un llenguatge de programació és un llenguatge formal que proporciona a una persona, en aquest cas el programador, la capacitat d'escriure (o programar) una sèrie d'instruccions o seqüències d'ordres en forma d'algorismes per controlar el comportament físic o lògic d'un sistema informàtic, de manera que es puguin obtenir diverses classes de dades o executar determinades tasques.
+
+Tot aquest conjunt d'ordres escrites mitjançant un llenguatge de programació s'anomena programa informàtic.
+
+<!-- Comentari perquè no es desquariringui la cosa -->
+
+</div>
+</details>
+
+
+<details class="card mb-2">
+  <summary class="card-header question">És HTML un llenguatge de programació?
+</summary>
+  <div class="card-body">
+
+HTML és una manera de representar la informació. No programes el comportament dun ordinador per tant no és un llenguatge de programació.
+
+HTML ("Hypertext Markup Language") no és un llenguatge de programació. És un llenguatge de marcatge que diu als navegadors web com estructurar les pàgines web que estàs visitant. Pot ser tan complex o tan simple com vulgui el desenvolupador web. L'HTML consisteix en una sèrie d'elements, que podeu utilitzar per tancar, delimitar o marcar diferents parts del contingut per fer que apareguin d'una certa manera, o actuïn de manera determinada. Les etiquetes que delimiten un fragment de contingut poden fer que aquest contingut enllaçi amb una altra pàgina, poseu una paraula en cursiva, etcètera. Per exemple, atesa la següent línia de contingut:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b6sNxnldPhU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
+</details>
+
+
+## Formularios
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tqLJoWfdqIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Quines són les passes que he de seguir per poder veure quina informació estaria enviant a un servidor des d'un formulari?
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u1JRC24rUfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<details class="card mb-2">
+  <summary class="card-header"> Preguntes sobre el vídeo</summary>
+  <div class="card-body" markdown="1">
+
+1. Per què serveix l'element `label`?
+2. Per què l'atribut for serveix en un element `label`?
+3. Per què l'atribut name serveix en un element `input`?
+4. Per què serveix l'atribut `placeholder`?
+5. Se t'acudeix un cas real on necessitem utilitzar dos elements form dins d'un mateix html i tingui sentit?
+6. Per què serveix l'atribut `type="email"`?
+7. Per què serveix l'atribut `type="password"`? La contrasenya xifrada s'envia si posem l'atribut `type="password"`?
+8. L'atribut `type="submit"` en què dos elements el podem fer servir? Per què serveix aquest atribut `type="submit"`?
+9. Per a què serveix el `type="reset"`?
+10. Quins tipus d'input hi ha? text, password, email, etc.
+11. Per a què serveix lʻatribut `name`? I el `value`?
+12. El valor dels atributs ha d'anar sempre entre cometes dobles?
+13. Quina diferència hi ha entre els input `type="ràdio"` i `type="checkbox"`?
+14. Quina diferència hi ha entre `type="date"` i `type="datetime-local"` i `type="time"`?
+15. Podem en un input amb atribut `type="number"` posar números negatius? I números decimals?
+16. Quin és l'atribut que fa que només puguis triar una opció dins del tipus/categoria?
+17. Depèn el format de la data de la llengua en què escrivim l'html (`<html lang="es">`)?
+
+<!-- Comentario para que no se descuajeringue la cosa -->
+
+</div>
+</details>
+
+
+## 3. Bibliografía
+
+- [HTML: Lenguaje de etiquetas de hipertexto (Developer Mozilla)](https://developer.mozilla.org/es/docs/Web/HTML)
+- [HTML Tutorial (W3Schools)](https://www.w3schools.com/html/)
+- [Lenguaje HTML5](https://lenguajehtml.com/html/introduccion/que-es-html/)
+- [Atributos booleanos en HTML](http://notasjs.blogspot.com/2014/02/atributos-booleanos-en-html.html)
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 Xavier Sastre - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "toc.integrate", "content.tabs.link", "navigation.expand"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>
