@@ -509,6 +509,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2-estructura-basica-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Estructura bàsica html
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Estructura bàsica html">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Element
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-atribut" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Atribut
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formularios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formularios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Bibliografía
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -562,10 +613,11 @@ De la mateixa manera que un hipermercat és millor que un mercat. L'hipertext é
 
 Les etiquetes HTML no distingeixen entre majúscules i minúscules: `<P>` significa el mateix que `<p>` . L'estàndard HTML no requereix etiquetes en minúscules, però W3C recomana minúscules en HTML i exigeix minúscules per a tipus de document més estrictes com XHTML.
 
-## 2. Estructura bàsica html
+</div>
+</details>
 
-Ara veurem com combinar elements individuals per formar una pàgina html completa:
-
+<h2 id="2-estructura-basica-html">2. Estructura bàsica html<a class="headerlink" href="#2-estructura-basica-html" title="Permanent link">&para;</a></h2>
+<p>Ara veurem com combinar elements individuals per formar una pàgina html completa:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="linenos" data-linenos=" 2 "></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <span class="linenos" data-linenos=" 3 "></span>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -582,14 +634,14 @@ Ara veurem com combinar elements individuals per formar una pàgina html complet
 <span class="linenos" data-linenos="14 "></span>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="linenos" data-linenos="15 "></span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
-- `<!DOCTYPE html>`: L'element doctype. Als seus inicis, quan l'HTML feia poc temps (al voltant de 1991-1992), els doctypes servien com a enllaços al conjunt de regles que la pàgina HTML havia de seguir perquè fos considerat bon HTML. Actualment s'ignora i es considera un llegat històric que cal incloure perquè tot funcioni correctament.
-- `<html></html>`: L'element `<html>`. Aquest element envolta tot el contingut de la pàgina. De vegades se'l coneix com l'element arrel.
-- `<head></head>`: L'element `<head>` (capçalera). Aquest element actua com a contenidor per a tots els paràmetres que vulguis incloure al document HTML que no seran visibles als visitants de la pàgina.
-- `<meta charset="utf-8">`: Aquest element estableix que el vostre document HTML utilitzarà la codificació UTF-8, que inclou la gran majoria de caràcters de tots els idiomes humans escrits.
-- `<title></title>`: L'element `<title>`. Aquest estableix el títol de la pàgina, que és el títol que apareix a la pestanya del navegador on es carrega la pàgina.
-- `<body></body>`: L'element `<body>`. Conté tot el contingut que vols mostrar als usuaris quan visiten la teva pàgina, ja sigui text, imatges, vídeos, jocs, pistes dàudio reproduïbles o qualsevol altra cosa.
-
+<ul>
+<li><code>&lt;!DOCTYPE html&gt;</code>: L'element doctype. Als seus inicis, quan l'HTML feia poc temps (al voltant de 1991-1992), els doctypes servien com a enllaços al conjunt de regles que la pàgina HTML havia de seguir perquè fos considerat bon HTML. Actualment s'ignora i es considera un llegat històric que cal incloure perquè tot funcioni correctament.</li>
+<li><code>&lt;html&gt;&lt;/html&gt;</code>: L'element <code>&lt;html&gt;</code>. Aquest element envolta tot el contingut de la pàgina. De vegades se'l coneix com l'element arrel.</li>
+<li><code>&lt;head&gt;&lt;/head&gt;</code>: L'element <code>&lt;head&gt;</code> (capçalera). Aquest element actua com a contenidor per a tots els paràmetres que vulguis incloure al document HTML que no seran visibles als visitants de la pàgina.</li>
+<li><code>&lt;meta charset="utf-8"&gt;</code>: Aquest element estableix que el vostre document HTML utilitzarà la codificació UTF-8, que inclou la gran majoria de caràcters de tots els idiomes humans escrits.</li>
+<li><code>&lt;title&gt;&lt;/title&gt;</code>: L'element <code>&lt;title&gt;</code>. Aquest estableix el títol de la pàgina, que és el títol que apareix a la pestanya del navegador on es carrega la pàgina.</li>
+<li><code>&lt;body&gt;&lt;/body&gt;</code>: L'element <code>&lt;body&gt;</code>. Conté tot el contingut que vols mostrar als usuaris quan visiten la teva pàgina, ja sigui text, imatges, vídeos, jocs, pistes dàudio reproduïbles o qualsevol altra cosa.</li>
+</ul>
 <details class="card mb-2">
   <summary class="card-header question">Com veiem el codi HTML d'una pàgina?</summary>
   <div class="card-body" markdown="1">
@@ -599,24 +651,18 @@ F12 o Click dret i inspeccionar
 </div>
 </details>
 
-
-### 2.1. Element
-
-Els elements HTML són els components bàsics dun document HTML. En aquesta pàgina que llegiu, per exemple, el títol, un paràgraf i una imatge són elements H1, P i IMG, respectivament. No tots els tipus d'element són visibles: alguns tenen com a única funció agrupar altres elements, per exemple.
-
-Explorem una mica l'element paràgraf:
-
-![Element i etiquetes HTML](./img/elementoEtiquetas.png)
-_Element i etiquetes HTML_
-
-Les principals parts del nostre element són:
-
-- **L'etiqueta d'obertura**: consisteix en el nom de l'element (en aquest cas, p), tancat entre parèntesis angulars d'obertura i tancament. Aquesta etiqueta marca marca on comença l'element o comença a tenir efecte. En aquest exemple, precedeix al començament del text del paràgraf.
-- **El contingut**: Aquest és el contingut de l'element. En aquest exemple, és el text del paràgraf.
-- **L'etiqueta de tancament**: És el mateix que l'etiqueta d'obertura, excepte que inclou una barra diagonal abans del nom de l'element. Això indica on s'acaba l'element; en aquest cas, on finalitza el paràgraf. No incloure una etiqueta de tancament és un error comú de principiant, i pot conduir a resultats estranys.
-
-**L'element** el conformen l'etiqueta d'obertura, seguida del contingut, seguit de l'etiqueta de tancament.
-
+<h3 id="21-element">2.1. Element<a class="headerlink" href="#21-element" title="Permanent link">&para;</a></h3>
+<p>Els elements HTML són els components bàsics dun document HTML. En aquesta pàgina que llegiu, per exemple, el títol, un paràgraf i una imatge són elements H1, P i IMG, respectivament. No tots els tipus d'element són visibles: alguns tenen com a única funció agrupar altres elements, per exemple.</p>
+<p>Explorem una mica l'element paràgraf:</p>
+<p><img alt="Element i etiquetes HTML" src="img/elementoEtiquetas.png" />
+<em>Element i etiquetes HTML</em></p>
+<p>Les principals parts del nostre element són:</p>
+<ul>
+<li><strong>L'etiqueta d'obertura</strong>: consisteix en el nom de l'element (en aquest cas, p), tancat entre parèntesis angulars d'obertura i tancament. Aquesta etiqueta marca marca on comença l'element o comença a tenir efecte. En aquest exemple, precedeix al començament del text del paràgraf.</li>
+<li><strong>El contingut</strong>: Aquest és el contingut de l'element. En aquest exemple, és el text del paràgraf.</li>
+<li><strong>L'etiqueta de tancament</strong>: És el mateix que l'etiqueta d'obertura, excepte que inclou una barra diagonal abans del nom de l'element. Això indica on s'acaba l'element; en aquest cas, on finalitza el paràgraf. No incloure una etiqueta de tancament és un error comú de principiant, i pot conduir a resultats estranys.</li>
+</ul>
+<p><strong>L'element</strong> el conformen l'etiqueta d'obertura, seguida del contingut, seguit de l'etiqueta de tancament.</p>
 <details class="card mb-2">
   <summary class="card-header question">Com se diu un element que té clau però no té valor?</summary>
   <div class="card-body" markdown="1">
@@ -626,25 +672,17 @@ Element buit.
 </div>
 </details>
 
-
-### 2.2. Atribut
-
-Els elements també poden tindre atributs. Els atributs tenen aquest aspecte:
-
-![Atribut HTML](./img/atributo.png)
-_Atribut HTML_
-
-Els atributs contenen informació extra sobre l'element que no es mostrarà al contingut. En aquest cas, l'atribut class assigna a l'element un identificador que podeu utilitzar per dotar-lo d'informació d'estil.
-
-Un atribut hauria de tenir:
-
-Un espai entre aquest i nom d'element. (Per a un element amb més d'un atribut, els atributs també han d'estar separats per espais).
+<h3 id="22-atribut">2.2. Atribut<a class="headerlink" href="#22-atribut" title="Permanent link">&para;</a></h3>
+<p>Els elements també poden tindre atributs. Els atributs tenen aquest aspecte:</p>
+<p><img alt="Atribut HTML" src="img/atributo.png" />
+<em>Atribut HTML</em></p>
+<p>Els atributs contenen informació extra sobre l'element que no es mostrarà al contingut. En aquest cas, l'atribut class assigna a l'element un identificador que podeu utilitzar per dotar-lo d'informació d'estil.</p>
+<p>Un atribut hauria de tenir:</p>
+<p>Un espai entre aquest i nom d'element. (Per a un element amb més d'un atribut, els atributs també han d'estar separats per espais).
 El nom de l'atribut seguit per un signe igual.
-Un valor de l'atribut, envoltat de cometes d'obertura i tancament.
-
-![Nomenclatura HTML](./img/nomenclaturaHtml.png)
-_Nomenclatura HTML_
-
+Un valor de l'atribut, envoltat de cometes d'obertura i tancament.</p>
+<p><img alt="Nomenclatura HTML" src="img/nomenclaturaHtml.png" />
+<em>Nomenclatura HTML</em></p>
 <details class="card mb-2">
  <summary class="card-header question">Per què serveix l'atribut alt o text alternatiu?</summary>
  <div class="card-body" markdown="1">
@@ -653,7 +691,6 @@ L'atribut ALT o l'etiqueta ALT és un atribut HTML per a un text que descriu una
 
 </div>
 </details>
-
 
 <details class="card mb-2">
  <summary class="card-header question">Què és un atribut booleà?</summary>
@@ -673,16 +710,11 @@ Tots els exemples següents són correctes i equivalents:
 </div>
 </details>
 
-És correcte l'element `<a href=https://www.mozilla.org/>el meu lloc web preferit</a>`?
-
-És correcte l'element `<a href='http://www.exemple.com'>Un enllaç al meu exemple.</a>`?
-
-És correcte l'element `<a href='http://www.exemple.com' title=És correcte o no>Un enllaç al meu exemple.</a>`?
-
-És correcte l'element `<a href="http://www.exemple.com" title="És 'correcte'?">Un enllaç al meu exemple.</a>`?
-
-És correcte l'element `<a href='http://www.exemple.com' title='És 'correcte'?'>Un enllaç al meu exemple.</a>`?
-
+<p>És correcte l'element <code>&lt;a href=https://www.mozilla.org/&gt;el meu lloc web preferit&lt;/a&gt;</code>?</p>
+<p>És correcte l'element <code>&lt;a href='http://www.exemple.com'&gt;Un enllaç al meu exemple.&lt;/a&gt;</code>?</p>
+<p>És correcte l'element <code>&lt;a href='http://www.exemple.com' title=És correcte o no&gt;Un enllaç al meu exemple.&lt;/a&gt;</code>?</p>
+<p>És correcte l'element <code>&lt;a href="http://www.exemple.com" title="És 'correcte'?"&gt;Un enllaç al meu exemple.&lt;/a&gt;</code>?</p>
+<p>És correcte l'element <code>&lt;a href='http://www.exemple.com' title='És 'correcte'?'&gt;Un enllaç al meu exemple.&lt;/a&gt;</code>?</p>
 <details class="card mb-2">
   <summary class="card-header question">Què és un llenguatge de programació?</summary>
   <div class="card-body" markdown="1">
@@ -695,7 +727,6 @@ Tot aquest conjunt d'ordres escrites mitjançant un llenguatge de programació s
 
 </div>
 </details>
-
 
 <details class="card mb-2">
   <summary class="card-header question">És HTML un llenguatge de programació?
@@ -711,13 +742,10 @@ HTML ("Hypertext Markup Language") no és un llenguatge de programació. És un 
 </div>
 </details>
 
-
-## Formularios
-
+<h2 id="formularios">Formularios<a class="headerlink" href="#formularios" title="Permanent link">&para;</a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tqLJoWfdqIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Quines són les passes que he de seguir per poder veure quina informació estaria enviant a un servidor des d'un formulari?
-
+<p>Quines són les passes que he de seguir per poder veure quina informació estaria enviant a un servidor des d'un formulari?</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u1JRC24rUfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <details class="card mb-2">
@@ -747,13 +775,13 @@ Quines són les passes que he de seguir per poder veure quina informació estari
 </div>
 </details>
 
-
-## 3. Bibliografía
-
-- [HTML: Lenguaje de etiquetas de hipertexto (Developer Mozilla)](https://developer.mozilla.org/es/docs/Web/HTML)
-- [HTML Tutorial (W3Schools)](https://www.w3schools.com/html/)
-- [Lenguaje HTML5](https://lenguajehtml.com/html/introduccion/que-es-html/)
-- [Atributos booleanos en HTML](http://notasjs.blogspot.com/2014/02/atributos-booleanos-en-html.html)
+<h2 id="3-bibliografia">3. Bibliografía<a class="headerlink" href="#3-bibliografia" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/es/docs/Web/HTML">HTML: Lenguaje de etiquetas de hipertexto (Developer Mozilla)</a></li>
+<li><a href="https://www.w3schools.com/html/">HTML Tutorial (W3Schools)</a></li>
+<li><a href="https://lenguajehtml.com/html/introduccion/que-es-html/">Lenguaje HTML5</a></li>
+<li><a href="http://notasjs.blogspot.com/2014/02/atributos-booleanos-en-html.html">Atributos booleanos en HTML</a></li>
+</ul>
 
 
 
