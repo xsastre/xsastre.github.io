@@ -1946,41 +1946,51 @@
 <span class="linenos" data-linenos="12 "></span><span class="c">/*-- Layout ----------------------------------------------------------*/</span><span class="w">  </span>
 <span class="linenos" data-linenos="13 "></span><span class="p">#</span><span class="nn">contenedor</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
 <span class="linenos" data-linenos="14 "></span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="kt">%</span><span class="p">;</span><span class="w">  </span>
-<span class="linenos" data-linenos="15 "></span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">900</span><span class="kt">px</span><span class="p">;</span><span class="w">  </span>
-<span class="linenos" data-linenos="16 "></span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="nf">expression</span><span class="p">(</span><span class="n">document</span><span class="err">.</span><span class="n">body</span><span class="err">.</span><span class="n">clientWidth</span><span class="w"> </span><span class="err">&gt;</span><span class="w"> </span><span class="mi">901</span><span class="err">?</span><span class="w"> </span><span class="s2">&quot;900px&quot;</span><span class="err">:</span><span class="w"> </span><span class="s2">&quot;auto&quot;</span><span class="p">);</span><span class="w">  </span>
-<span class="linenos" data-linenos="17 "></span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span><span class="w">  </span>
-<span class="linenos" data-linenos="18 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="19 "></span>
-<span class="linenos" data-linenos="20 "></span><span class="p">#</span><span class="nn">cabecera</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">menu</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">lateral</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">contenido</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">contenido</span><span class="w"> </span><span class="p">#</span><span class="nn">principal</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">contenido</span><span class="w"> </span><span class="p">#</span><span class="nn">secundario</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">pie</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
-<span class="linenos" data-linenos="21 "></span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#777</span><span class="p">;</span><span class="w">  </span>
-<span class="linenos" data-linenos="22 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="23 "></span>
-<span class="linenos" data-linenos="24 "></span><span class="p">#</span><span class="nn">cabecera</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">clear</span><span class="p">:</span><span class="w"> </span><span class="kc">both</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
-<span class="linenos" data-linenos="25 "></span><span class="p">#</span><span class="nn">menu</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">clear</span><span class="p">:</span><span class="w"> </span><span class="kc">both</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
-<span class="linenos" data-linenos="26 "></span><span class="p">#</span><span class="nn">lateral</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
-<span class="linenos" data-linenos="27 "></span><span class="p">#</span><span class="nn">contenido</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">right</span><span class="p">;</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">78</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
-<span class="linenos" data-linenos="28 "></span><span class="p">#</span><span class="nn">contenido</span><span class="w"> </span><span class="p">#</span><span class="nn">principal</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">78</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
-<span class="linenos" data-linenos="29 "></span><span class="p">#</span><span class="nn">contenido</span><span class="w"> </span><span class="p">#</span><span class="nn">secundario</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">right</span><span class="p">;</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
-<span class="linenos" data-linenos="30 "></span><span class="p">#</span><span class="nn">pie</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">clear</span><span class="p">:</span><span class="w"> </span><span class="kc">both</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="linenos" data-linenos="31 "></span>
-<span class="linenos" data-linenos="32 "></span><span class="c">/*-- Cabecera --------------------------------------------------------*/</span><span class="w">  </span>
-<span class="linenos" data-linenos="33 "></span><span class="p">#</span><span class="nn">cabecera</span><span class="w"> </span><span class="p">#</span><span class="nn">logo</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
-<span class="linenos" data-linenos="34 "></span><span class="p">#</span><span class="nn">cabecera</span><span class="w"> </span><span class="p">#</span><span class="nn">buscador</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">right</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="linenos" data-linenos="35 "></span>
-<span class="linenos" data-linenos="36 "></span><span class="c">/*-- Menu ------------------------------------------------------------*/</span><span class="w">  </span>
-<span class="linenos" data-linenos="37 "></span><span class="p">#</span><span class="nn">menu</span><span class="w"> </span><span class="nt">ul</span><span class="p">#</span><span class="nn">menu_principal</span><span class="w"> </span><span class="nt">li</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline</span><span class="p">;</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="linenos" data-linenos="38 "></span>
-<span class="linenos" data-linenos="39 "></span><span class="c">/*-- Sección Principal -----------------------------------------------*/</span><span class="w">  </span>
-<span class="linenos" data-linenos="40 "></span><span class="p">#</span><span class="nn">contenido</span><span class="w"> </span><span class="p">#</span><span class="nn">principal</span><span class="w"> </span><span class="p">.</span><span class="nc">articulo</span><span class="w"> </span><span class="nt">img</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos" data-linenos="15 "></span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">900</span><span class="kt">px</span><span class="p">;</span>
+<span class="linenos" data-linenos="16 "></span><span class="cp">@media (max-width: 900px) {</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="err">body</span><span class="w"> </span><span class="err">{</span>
+<span class="linenos" data-linenos="18 "></span><span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="linenos" data-linenos="19 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="20 "></span><span class="err">}</span>
+<span class="linenos" data-linenos="21 "></span>
+<span class="linenos" data-linenos="22 "></span><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">min-width</span><span class="o">:</span><span class="w"> </span><span class="nt">901px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="23 "></span><span class="w">    </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="24 "></span><span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">900</span><span class="kt">px</span><span class="p">;</span>
+<span class="linenos" data-linenos="25 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="26 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="27 "></span><span class="nt">margin</span><span class="o">:</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">auto</span><span class="o">;</span><span class="w">  </span>
+<span class="linenos" data-linenos="28 "></span><span class="err">}</span>
+<span class="linenos" data-linenos="29 "></span>
+<span class="linenos" data-linenos="30 "></span><span class="p">#</span><span class="nn">cabecera</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">menu</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">lateral</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">contenido</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">contenido</span><span class="w"> </span><span class="p">#</span><span class="nn">principal</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">contenido</span><span class="w"> </span><span class="p">#</span><span class="nn">secundario</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">pie</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="linenos" data-linenos="31 "></span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#777</span><span class="p">;</span><span class="w">  </span>
+<span class="linenos" data-linenos="32 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="33 "></span>
+<span class="linenos" data-linenos="34 "></span><span class="p">#</span><span class="nn">cabecera</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">clear</span><span class="p">:</span><span class="w"> </span><span class="kc">both</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
+<span class="linenos" data-linenos="35 "></span><span class="p">#</span><span class="nn">menu</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">clear</span><span class="p">:</span><span class="w"> </span><span class="kc">both</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
+<span class="linenos" data-linenos="36 "></span><span class="p">#</span><span class="nn">lateral</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
+<span class="linenos" data-linenos="37 "></span><span class="p">#</span><span class="nn">contenido</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">right</span><span class="p">;</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">78</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
+<span class="linenos" data-linenos="38 "></span><span class="p">#</span><span class="nn">contenido</span><span class="w"> </span><span class="p">#</span><span class="nn">principal</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">78</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
+<span class="linenos" data-linenos="39 "></span><span class="p">#</span><span class="nn">contenido</span><span class="w"> </span><span class="p">#</span><span class="nn">secundario</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">right</span><span class="p">;</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
+<span class="linenos" data-linenos="40 "></span><span class="p">#</span><span class="nn">pie</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">clear</span><span class="p">:</span><span class="w"> </span><span class="kc">both</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 <span class="linenos" data-linenos="41 "></span>
-<span class="linenos" data-linenos="42 "></span><span class="c">/*-- Pie de página ---------------------------------------------------*/</span><span class="w">  </span>
-<span class="linenos" data-linenos="43 "></span><span class="p">#</span><span class="nn">pie</span><span class="w"> </span><span class="p">.</span><span class="nc">enlaces</span><span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
-<span class="linenos" data-linenos="44 "></span><span class="p">#</span><span class="nn">pie</span><span class="w"> </span><span class="p">.</span><span class="nc">copyright</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">right</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos" data-linenos="42 "></span><span class="c">/*-- Cabecera --------------------------------------------------------*/</span><span class="w">  </span>
+<span class="linenos" data-linenos="43 "></span><span class="p">#</span><span class="nn">cabecera</span><span class="w"> </span><span class="p">#</span><span class="nn">logo</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
+<span class="linenos" data-linenos="44 "></span><span class="p">#</span><span class="nn">cabecera</span><span class="w"> </span><span class="p">#</span><span class="nn">buscador</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">right</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 <span class="linenos" data-linenos="45 "></span>
-<span class="linenos" data-linenos="46 "></span><span class="c">/* === IMPORTANTE ===================================================  </span>
-<span class="linenos" data-linenos="47 "></span><span class="c">A partir de aquí, se pueden añadir todos los estilos propios que   </span>
-<span class="linenos" data-linenos="48 "></span><span class="c">sean necesarios.  </span>
-<span class="linenos" data-linenos="49 "></span><span class="c">================================================================== */</span>
+<span class="linenos" data-linenos="46 "></span><span class="c">/*-- Menu ------------------------------------------------------------*/</span><span class="w">  </span>
+<span class="linenos" data-linenos="47 "></span><span class="p">#</span><span class="nn">menu</span><span class="w"> </span><span class="nt">ul</span><span class="p">#</span><span class="nn">menu_principal</span><span class="w"> </span><span class="nt">li</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline</span><span class="p">;</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos" data-linenos="48 "></span>
+<span class="linenos" data-linenos="49 "></span><span class="c">/*-- Sección Principal -----------------------------------------------*/</span><span class="w">  </span>
+<span class="linenos" data-linenos="50 "></span><span class="p">#</span><span class="nn">contenido</span><span class="w"> </span><span class="p">#</span><span class="nn">principal</span><span class="w"> </span><span class="p">.</span><span class="nc">articulo</span><span class="w"> </span><span class="nt">img</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos" data-linenos="51 "></span>
+<span class="linenos" data-linenos="52 "></span><span class="c">/*-- Pie de página ---------------------------------------------------*/</span><span class="w">  </span>
+<span class="linenos" data-linenos="53 "></span><span class="p">#</span><span class="nn">pie</span><span class="w"> </span><span class="p">.</span><span class="nc">enlaces</span><span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
+<span class="linenos" data-linenos="54 "></span><span class="p">#</span><span class="nn">pie</span><span class="w"> </span><span class="p">.</span><span class="nc">copyright</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">right</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos" data-linenos="55 "></span>
+<span class="linenos" data-linenos="56 "></span><span class="c">/* === IMPORTANTE ===================================================  </span>
+<span class="linenos" data-linenos="57 "></span><span class="c">A partir de aquí, se pueden añadir todos los estilos propios que   </span>
+<span class="linenos" data-linenos="58 "></span><span class="c">sean necesarios.  </span>
+<span class="linenos" data-linenos="59 "></span><span class="c">================================================================== */</span>
 </code></pre></div>
 * <a href="https://wikiserver.infomerce.es/index.php/M8_-_Aplicacions_web_/_Activitats_UF5:_HTML_i_CSS_/_Soluci%C3%B3_Marges_-_Farciments">Solució Marges - Farciments</a></p>
 <h3 id="exercici-4-vores"><strong>Exercici 4: Vores</strong><a class="headerlink" href="#exercici-4-vores" title="Permanent link">&para;</a></h3>
@@ -2094,6 +2104,478 @@
 <span class="linenos" data-linenos="22 "></span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="linenos" data-linenos="23 "></span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="linenos" data-linenos="24 "></span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="exercici-10-estils-menu"><strong>Exercici 10: Estils menú</strong><a class="headerlink" href="#exercici-10-estils-menu" title="Permanent link">&para;</a></h3>
+<p>Modifica el menú vertical senzill per obtenir el següent comportament:</p>
+<p>1. Els elements han de mostrar una imatge de fons (flecha_inactiva.png):</p>
+<p><img alt="Css_ex10_1.png" src="../img/Css_ex10_1.png" /></p>
+<p>2. Quan es passa el ratolí per sobre d'un element, s'ha de mostrar una imatge alternativa (flecha_activa.png):</p>
+<p><img alt="Css_ex10_2.png" src="../img/Css_ex10_2.png" /></p>
+<p>3. El color de fons de l'element també ha de variar lleugerament i mostrar un color gris més fosc (#E4E4E4) quan es passa el ratolí per sobre:</p>
+<p><img alt="Css_ex10_3.png" src="../img/Css_ex10_3.png" /></p>
+<p>4. Aquest comportament anterior s'ha de produir quan l'usuari passa el ratolí per sobre de qualsevol zona de l'element del menú, i no només quan es passa el ratolí per sobre del text del element.</p>
+<p><img alt="Css_ex10_4.png" src="../img/Css_ex10_4.png" /></p>
+<p><strong>Codi HTML</strong></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html; charset=iso-8859-1&quot;</span> <span class="p">/&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejercicio menu vertical avanzado<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="nt">ul</span><span class="p">.</span><span class="nc">menu</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">180</span><span class="kt">px</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">            </span><span class="k">list-style</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">            </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#7C7C7C</span><span class="p">;</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="p">}</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">        </span><span class="nt">ul</span><span class="p">.</span><span class="nc">menu</span><span class="w"> </span><span class="nt">li</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="15 "></span><span class="w">            </span><span class="k">border-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#7C7C7C</span><span class="p">;</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">            </span><span class="k">border-top</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#FFF</span><span class="p">;</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">            </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#F4F4F4</span><span class="p">;</span>
+<span class="linenos" data-linenos="18 "></span><span class="w">        </span><span class="p">}</span>
+<span class="linenos" data-linenos="19 "></span><span class="w">        </span><span class="nt">ul</span><span class="p">.</span><span class="nc">menu</span><span class="w"> </span><span class="nt">li</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="20 "></span><span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">.2</span><span class="kt">em</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mf">.2</span><span class="kt">em</span><span class="w"> </span><span class="mf">1.3</span><span class="kt">em</span><span class="p">;</span>
+<span class="linenos" data-linenos="21 "></span><span class="w">            </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span>
+<span class="linenos" data-linenos="22 "></span><span class="w">            </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="linenos" data-linenos="23 "></span><span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="linenos" data-linenos="24 "></span><span class="w">        </span><span class="p">}</span>
+<span class="linenos" data-linenos="25 "></span><span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="26 "></span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="27 "></span>
+<span class="linenos" data-linenos="28 "></span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="29 "></span><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;menu&quot;</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="30 "></span>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Enlace gen?rico&quot;</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="31 "></span>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Enlace gen?rico&quot;</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="32 "></span>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Enlace gen?rico&quot;</span><span class="p">&gt;</span>Elemento 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="33 "></span>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Enlace gen?rico&quot;</span><span class="p">&gt;</span>Elemento 4<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="34 "></span>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Enlace gen?rico&quot;</span><span class="p">&gt;</span>Elemento 5<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="35 "></span>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Enlace gen?rico&quot;</span><span class="p">&gt;</span>Elemento 6<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="36 "></span><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="37 "></span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="38 "></span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="exercici-11-estils-taules"><strong>Exercici 11: Estils taules</strong><a class="headerlink" href="#exercici-11-estils-taules" title="Permanent link">&para;</a></h3>
+<p>Determina les regles CSS necessàries per mostrar la següent taula amb l'aspecte final mostrat en la imatge (modificar el codi HTML que consideris necessari afegint els atributs class oportunos).</p>
+<p>Taula original:</p>
+<p><img alt="Css_ex11_1.png" src="../img/Css_ex11_1.png" /></p>
+<p>Codi HTML:
+ ```html</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />  
+<title>Ejercicio formatear tabla</title>  
+</head>
+
+<body>  
+<table border="1" summary="Tipos de cambio">  
+<tr>  
+<th scope="col">Cambio</th>  
+<th scope="col">Compra</th>  
+<th scope="col">Venta</th>  
+<th scope="col">Máximo</th>  
+<th scope="col">Mínimo</th>  
+</tr>  
+<tr>  
+<th scope="row">Euro/Dolar</th>  
+<td>1.2524</td>  
+<td>1.2527</td>  
+<td>1.2539</td>  
+<td>1.2488</td>  
+</tr>  
+<tr>  
+<th scope="row">Dolar/Yen</th>  
+<td>119.01</td>  
+<td>119.05</td>  
+<td>119.82</td>  
+<td>119.82</td>  
+</tr>  
+<tr>  
+<th scope="row">Libra/Dolar</th>  
+<td>1.8606</td>  
+<td>1.8611</td>  
+<td>1.8651</td>  
+<td>1.8522</td>  
+</tr>  
+<tr>  
+<th scope="row">Euro/Yen</th>  
+<td>149.09</td>  
+<td>149.13</td>  
+<td>149.79</td>  
+<td>148.96</td>  
+</tr>  
+</table>
+
+</body>  
+</html>
+
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="  1 "></span>Taula final:
+<span class="linenos" data-linenos="  2 "></span>
+<span class="linenos" data-linenos="  3 "></span>![Css_ex11_2.png](../img/Css_ex11_2.png)
+<span class="linenos" data-linenos="  4 "></span>
+<span class="linenos" data-linenos="  5 "></span>1\. Alinea el text de les cel·les, capçaleres i títol. Defineix les vores de la taula, cel·les i capçaleres (color gris fosc \#333).
+<span class="linenos" data-linenos="  6 "></span>
+<span class="linenos" data-linenos="  7 "></span>![Css_ex11_3.png](../img/Css_ex11_3.png)
+<span class="linenos" data-linenos="  8 "></span>
+<span class="linenos" data-linenos="  9 "></span>2\. Formateja les capçaleres de fila i columna amb la imatge de fons corresponent en cada casa (fondo\_gris.gif, euro.png, dolar.png, yen.png, libra.png). Modifica el tipus de lletra de la taula i utilitza Arial. El color blau clar és \#E6F3FF.
+<span class="linenos" data-linenos=" 10 "></span>
+<span class="linenos" data-linenos=" 11 "></span>![Css_ex11_4.png](../img/Css_ex11_4.png)
+<span class="linenos" data-linenos=" 12 "></span>
+<span class="linenos" data-linenos=" 13 "></span>3\. Mostra un color altern en les files de dades (color groc clar \#FFFFCC).
+<span class="linenos" data-linenos=" 14 "></span>
+<span class="linenos" data-linenos=" 15 "></span>![Css_ex11_5.png](../img/Css_ex11_5.png)
+<span class="linenos" data-linenos=" 16 "></span>
+<span class="linenos" data-linenos=" 17 "></span>### **Exercici 12: Estils formularis**
+<span class="linenos" data-linenos=" 18 "></span>
+<span class="linenos" data-linenos=" 19 "></span>A partir del codi HTML proporcionat:
+<span class="linenos" data-linenos=" 20 "></span>
+<span class="linenos" data-linenos=" 21 "></span>```html
+<span class="linenos" data-linenos=" 22 "></span>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;  
+<span class="linenos" data-linenos=" 23 "></span>&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+<span class="linenos" data-linenos=" 24 "></span>
+<span class="linenos" data-linenos=" 25 "></span>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; lang=&quot;es&quot; xml:lang=&quot;es&quot;&gt;  
+<span class="linenos" data-linenos=" 26 "></span>&lt;head&gt;  
+<span class="linenos" data-linenos=" 27 "></span>&lt;title&gt;Ejercicio 12 - Formulario de alta&lt;/title&gt;  
+<span class="linenos" data-linenos=" 28 "></span>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+<span class="linenos" data-linenos=" 29 "></span>
+<span class="linenos" data-linenos=" 30 "></span>&lt;style type=&quot;text/css&quot;&gt;  
+<span class="linenos" data-linenos=" 31 "></span>&lt;/style&gt;  
+<span class="linenos" data-linenos=" 32 "></span>&lt;/head&gt;
+<span class="linenos" data-linenos=" 33 "></span>
+<span class="linenos" data-linenos=" 34 "></span>&lt;body&gt;  
+<span class="linenos" data-linenos=" 35 "></span>&lt;div id=&quot;contenedor&quot;&gt;
+<span class="linenos" data-linenos=" 36 "></span>
+<span class="linenos" data-linenos=" 37 "></span>&lt;h2&gt;Formulario de alta&lt;/h2&gt;
+<span class="linenos" data-linenos=" 38 "></span>
+<span class="linenos" data-linenos=" 39 "></span>&lt;form method=&quot;post&quot; action=&quot;#&quot;&gt;  
+<span class="linenos" data-linenos=" 40 "></span>&lt;ul&gt;  
+<span class="linenos" data-linenos=" 41 "></span>&lt;li&gt;  
+<span class="linenos" data-linenos=" 42 "></span>&lt;label class=&quot;titulo&quot; for=&quot;nombre&quot;&gt;Nombre y apellidos &lt;span class=&quot;requerido&quot;&gt;*&lt;/span&gt;&lt;/label&gt;  
+<span class="linenos" data-linenos=" 43 "></span>&lt;div&gt;  
+<span class="linenos" data-linenos=" 44 "></span>&lt;span&gt;  
+<span class="linenos" data-linenos=" 45 "></span>&lt;input id=&quot;nombre&quot; name=&quot;nombre&quot; value=&quot;&quot; /&gt;  
+<span class="linenos" data-linenos=" 46 "></span>&lt;label for=&quot;nombre&quot;&gt;Nombre&lt;/label&gt;  
+<span class="linenos" data-linenos=" 47 "></span>&lt;/span&gt;
+<span class="linenos" data-linenos=" 48 "></span>
+<span class="linenos" data-linenos=" 49 "></span>    &lt;span&gt;  
+<span class="linenos" data-linenos=" 50 "></span>      &lt;input id=&quot;apellido1&quot; name=&quot;apellido1&quot; value=&quot;&quot; /&gt;  
+<span class="linenos" data-linenos=" 51 "></span>      &lt;label for=&quot;apellido1&quot;&gt;Primer apellido&lt;/label&gt;  
+<span class="linenos" data-linenos=" 52 "></span>    &lt;/span&gt;  
+<span class="linenos" data-linenos=" 53 "></span>
+<span class="linenos" data-linenos=" 54 "></span>    &lt;span&gt;  
+<span class="linenos" data-linenos=" 55 "></span>      &lt;input id=&quot;apellido2&quot; name=&quot;apellido2&quot; value=&quot;&quot; /&gt;  
+<span class="linenos" data-linenos=" 56 "></span>      &lt;label for=&quot;apellido2&quot;&gt;Segundo apellido&lt;/label&gt;  
+<span class="linenos" data-linenos=" 57 "></span>    &lt;/span&gt;  
+<span class="linenos" data-linenos=" 58 "></span>&lt;/div&gt;
+<span class="linenos" data-linenos=" 59 "></span>
+<span class="linenos" data-linenos=" 60 "></span>&lt;p class=&quot;ayuda&quot;&gt;No te olvides de escribir también tu segundo apellido&lt;/p&gt;  
+<span class="linenos" data-linenos=" 61 "></span>&lt;/li&gt;
+<span class="linenos" data-linenos=" 62 "></span>
+<span class="linenos" data-linenos=" 63 "></span>&lt;li&gt;  
+<span class="linenos" data-linenos=" 64 "></span>&lt;label class=&quot;titulo&quot; for=&quot;direccion&quot;&gt;Dirección &lt;span class=&quot;requerido&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+<span class="linenos" data-linenos=" 65 "></span>
+<span class="linenos" data-linenos=" 66 "></span>&lt;div&gt;  
+<span class="linenos" data-linenos=" 67 "></span>&lt;span&gt;  
+<span class="linenos" data-linenos=" 68 "></span>&lt;input id=&quot;direccion&quot; name=&quot;direccion&quot; value=&quot;&quot; /&gt;  
+<span class="linenos" data-linenos=" 69 "></span>&lt;label for=&quot;direccion&quot;&gt;Calle, número, piso, puerta&lt;/label&gt;  
+<span class="linenos" data-linenos=" 70 "></span>&lt;/span&gt;
+<span class="linenos" data-linenos=" 71 "></span>
+<span class="linenos" data-linenos=" 72 "></span>    &lt;span&gt;  
+<span class="linenos" data-linenos=" 73 "></span>      &lt;input id=&quot;codigopostal&quot; name=&quot;codigopostal&quot; value=&quot;&quot; /&gt;  
+<span class="linenos" data-linenos=" 74 "></span>      &lt;label for=&quot;codigopostal&quot;&gt;Código postal&lt;/label&gt;  
+<span class="linenos" data-linenos=" 75 "></span>    &lt;/span&gt;  
+<span class="linenos" data-linenos=" 76 "></span>
+<span class="linenos" data-linenos=" 77 "></span>    &lt;span&gt;  
+<span class="linenos" data-linenos=" 78 "></span>      &lt;input id=&quot;municipio&quot; name=&quot;municipio&quot; value=&quot;&quot; /&gt;  
+<span class="linenos" data-linenos=" 79 "></span>      &lt;label for=&quot;municipio&quot;&gt;Municipio&lt;/label&gt;  
+<span class="linenos" data-linenos=" 80 "></span>    &lt;/span&gt;  
+<span class="linenos" data-linenos=" 81 "></span>
+<span class="linenos" data-linenos=" 82 "></span>    &lt;span&gt;  
+<span class="linenos" data-linenos=" 83 "></span>      &lt;select id=&quot;provincia&quot; name=&quot;provincia&quot;&gt;  
+<span class="linenos" data-linenos=" 84 "></span>        &lt;option value=&quot;&quot;&gt;&lt;/option&gt;  
+<span class="linenos" data-linenos=" 85 "></span>        &lt;option value=&quot;provincia1&quot;&gt;Provincia 1&lt;/option&gt;  
+<span class="linenos" data-linenos=" 86 "></span>        &lt;option value=&quot;provincia2&quot;&gt;Provincia 2&lt;/option&gt;  
+<span class="linenos" data-linenos=" 87 "></span>        &lt;option value=&quot;provincia3&quot;&gt;Provincia 3&lt;/option&gt;  
+<span class="linenos" data-linenos=" 88 "></span>      &lt;/select&gt;  
+<span class="linenos" data-linenos=" 89 "></span>      &lt;label for=&quot;provincia&quot;&gt;Provincia&lt;/label&gt;  
+<span class="linenos" data-linenos=" 90 "></span>    &lt;/span&gt;  
+<span class="linenos" data-linenos=" 91 "></span>
+<span class="linenos" data-linenos=" 92 "></span>    &lt;span&gt;  
+<span class="linenos" data-linenos=" 93 "></span>      &lt;select id=&quot;pais&quot; name=&quot;pais&quot;&gt;  
+<span class="linenos" data-linenos=" 94 "></span>        &lt;option value=&quot;&quot;&gt;&lt;/option&gt;  
+<span class="linenos" data-linenos=" 95 "></span>        &lt;option value=&quot;pais1&quot;&gt;País 1&lt;/option&gt;  
+<span class="linenos" data-linenos=" 96 "></span>        &lt;option value=&quot;pais2&quot;&gt;País 2&lt;/option&gt;  
+<span class="linenos" data-linenos=" 97 "></span>        &lt;option value=&quot;pais3&quot;&gt;País 3&lt;/option&gt;  
+<span class="linenos" data-linenos=" 98 "></span>      &lt;/select&gt;  
+<span class="linenos" data-linenos=" 99 "></span>      &lt;label for=&quot;pais&quot;&gt;País&lt;/label&gt;  
+<span class="linenos" data-linenos="100 "></span>    &lt;/span&gt;  
+<span class="linenos" data-linenos="101 "></span>&lt;/div&gt;
+<span class="linenos" data-linenos="102 "></span>
+<span class="linenos" data-linenos="103 "></span>&lt;p class=&quot;ayuda&quot;&gt;El código postal es imprescindible para poder recibir los pedidos&lt;/p&gt;  
+<span class="linenos" data-linenos="104 "></span>&lt;/li&gt;
+<span class="linenos" data-linenos="105 "></span>
+<span class="linenos" data-linenos="106 "></span>&lt;li&gt;  
+<span class="linenos" data-linenos="107 "></span>&lt;label class=&quot;titulo&quot; for=&quot;email&quot;&gt;Email&lt;/label&gt;
+<span class="linenos" data-linenos="108 "></span>
+<span class="linenos" data-linenos="109 "></span>&lt;div&gt;  
+<span class="linenos" data-linenos="110 "></span>&lt;span&gt;  
+<span class="linenos" data-linenos="111 "></span>&lt;input id=&quot;email&quot; name=&quot;email&quot; value=&quot;&quot; /&gt;  
+<span class="linenos" data-linenos="112 "></span>&lt;/span&gt;  
+<span class="linenos" data-linenos="113 "></span>&lt;/div&gt;
+<span class="linenos" data-linenos="114 "></span>
+<span class="linenos" data-linenos="115 "></span>&lt;p class=&quot;ayuda&quot;&gt;Asegúrate de que sea válido&lt;/p&gt;  
+<span class="linenos" data-linenos="116 "></span>&lt;/li&gt;
+<span class="linenos" data-linenos="117 "></span>
+<span class="linenos" data-linenos="118 "></span>&lt;li&gt;  
+<span class="linenos" data-linenos="119 "></span>&lt;label class=&quot;titulo&quot; for=&quot;telefonofijo&quot;&gt;Teléfono &lt;span class=&quot;requerido&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+<span class="linenos" data-linenos="120 "></span>
+<span class="linenos" data-linenos="121 "></span>&lt;div&gt;  
+<span class="linenos" data-linenos="122 "></span>&lt;span&gt;  
+<span class="linenos" data-linenos="123 "></span>&lt;input id=&quot;telefonofijo&quot; name=&quot;telefonofijo&quot; value=&quot;&quot; /&gt;  
+<span class="linenos" data-linenos="124 "></span>&lt;label for=&quot;telefonofijo&quot;&gt;Fijo&lt;/label&gt;  
+<span class="linenos" data-linenos="125 "></span>&lt;/span&gt;
+<span class="linenos" data-linenos="126 "></span>
+<span class="linenos" data-linenos="127 "></span>    &lt;span&gt;  
+<span class="linenos" data-linenos="128 "></span>      &lt;input id=&quot;telefonomovil&quot; name=&quot;telefonomovil&quot; value=&quot;&quot; /&gt;  
+<span class="linenos" data-linenos="129 "></span>      &lt;label for=&quot;telefonomovil&quot;&gt;Móvil&lt;/label&gt;  
+<span class="linenos" data-linenos="130 "></span>    &lt;/span&gt;  
+<span class="linenos" data-linenos="131 "></span>&lt;/div&gt;
+<span class="linenos" data-linenos="132 "></span>
+<span class="linenos" data-linenos="133 "></span>&lt;p class=&quot;ayuda&quot;&gt;Sin prefijo de país y sin espacios en blanco&lt;/p&gt;  
+<span class="linenos" data-linenos="134 "></span>&lt;/li&gt;
+<span class="linenos" data-linenos="135 "></span>
+<span class="linenos" data-linenos="136 "></span>&lt;li&gt;  
+<span class="linenos" data-linenos="137 "></span>&lt;input id=&quot;alta&quot; type=&quot;submit&quot; value=&quot;Darme de alta →&quot; /&gt;  
+<span class="linenos" data-linenos="138 "></span>&lt;/li&gt;
+<span class="linenos" data-linenos="139 "></span>
+<span class="linenos" data-linenos="140 "></span>&lt;/ul&gt;  
+<span class="linenos" data-linenos="141 "></span>&lt;/form&gt;
+<span class="linenos" data-linenos="142 "></span>
+<span class="linenos" data-linenos="143 "></span>&lt;/div&gt;  
+<span class="linenos" data-linenos="144 "></span>&lt;/body&gt;  
+<span class="linenos" data-linenos="145 "></span>&lt;/html&gt;
+</code></pre></div>
+<p>1. Aplica les regles CSS necessàries per donar al formulari el següent aspecte:</p>
+<p><img alt="Css_ex12_1.png" src="../img/Css_ex12_1.png" /></p>
+<p>2. Quan l'usuari passa el ratolí per sobre de cada grup d'elements de formulari (es a dir, per sobre de cada <strong>li</strong>) s'ha de modificar el seu color de fons (suggerència: color groc clar #FF9). I a més a més, quan l'usuari es posiciona en un quadre de text, s'ha de modificar la seva vora per resaltar el camp que està actiu cada moment (suggerència: color groc #E6B700):</p>
+<p><img alt="Css_ex12_2.png" src="../img/Css_ex12_2.png" /></p>
+<p>3. Utilitzant el menor nombre de regles CSS, canvia l'aspecte del formulari per a que es mostri como en la següent imatge:</p>
+<p><img alt="Css_ex12_3.png" src="../img/Css_ex12_3.png" /></p>
+<p>4. Quan l'usuari passa el ratoli per sobre d'un grup d'elements de fromulari (es a dir, per sobre de cada <strong>li</strong>&gt;) s'ha de mostrar el missatge d'ajuda associat. Afegeix les regles CSS necessàries per a que el formulari tingui l'aspecte definitiu mostrat en la següent imatge:</p>
+<p><img alt="Css_ex12_4.png" src="../img/Css_ex12_4.png" /></p>
+<h3 id="exercici-13-aspecte-final"><strong>Exercici 13: Aspecte final</strong><a class="headerlink" href="#exercici-13-aspecte-final" title="Permanent link">&para;</a></h3>
+<p>Determina les regles CSS necessàries per a mostrar la pàgina HTML que es proporciona amb l'estil que se mostra en la següent imatge:</p>
+<p><img alt="Css_ex13_1.png" src="../img/Css_ex13_1.png" /></p>
+<p>A continuació s'indica una proposta dels passos que es poden seguir per obtenir l'aspecte final desitjat:</p>
+<ul>
+<li>Afegeix els estils bàsics de la pàgina (tipus de lletra Verdana, color de lletra #192666, imatge de fons anomenada fondo.gif, color de fons #F2F5FE).</li>
+<li>Defineix l'estructura bàsica de la pàgina: amplada fixa de 770 píxel, centrada en la finestra del navegador, capçalera i peu, columna central de continguts d'amplada 530 píxel i columna secundària de continguts de 200 píxel d'amplada.</li>
+<li>La capçalera té una alçada de 100 píxel i una imatge de fons anomenada cabecera.jpg.</li>
+<li>Los elements del menú de navegació tenen un color de fonds #253575, un color de lletra #B5C4E3. Quan el ratolí passa per sobre de cada element, el seu color de fons canvia a #31479B. Els elements seleccionats es mostren amb un color de fons blanc i un color de lletra #FF9000:</li>
+</ul>
+<p><img alt="Css_ex13_2.png" src="../img/Css_ex13_2.png" /></p>
+<ul>
+<li>Amb l'ajuda de les imatges que es proporcionen, mostra cada un dels articles de contingut amb l'estil que es mostra en la següent imatge:</li>
+</ul>
+<p><img alt="Css_ex13_3.png" src="../img/Css_ex13_3.png" /></p>
+<ul>
+<li>Afegeix els estils adequats per mostrar els elements de la columna secundària de continguts amb el següent aspecte:</li>
+</ul>
+<p><img alt="Css_ex13_4.png" src="../img/Css_ex13_4.png" /></p>
+<p>Codi HTML:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="  1 "></span><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;</span>  
+<span class="linenos" data-linenos="  2 "></span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span> <span class="na">xml:lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="  3 "></span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="  4 "></span><span class="cm">&lt;!-- Este diseño está basado en un diseño web libre llamado CrystalX y que se puede descargar desde  </span>
+<span class="linenos" data-linenos="  5 "></span><span class="cm">         la dirección http://www.oswd.org/design/preview/id/3465 --&gt;</span>  
+<span class="linenos" data-linenos="  6 "></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;content-type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span> <span class="p">/&gt;</span>  
+<span class="linenos" data-linenos="  7 "></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;content-language&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;es&quot;</span> <span class="p">/&gt;</span>
+<span class="linenos" data-linenos="  8 "></span>
+<span class="linenos" data-linenos="  9 "></span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;copyright&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Design/Code: Vit Dlouhy [Nuvio - www.nuvio.cz]; e-mail: vit.dlouhy@nuvio.cz&quot;</span> <span class="p">/&gt;</span>  
+<span class="linenos" data-linenos=" 10 "></span>
+<span class="linenos" data-linenos=" 11 "></span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi sitio web<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 12 "></span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Mi sitio web&quot;</span> <span class="p">/&gt;</span>  
+<span class="linenos" data-linenos=" 13 "></span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;keywords&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;sitio, web&quot;</span> <span class="p">/&gt;</span>  
+<span class="linenos" data-linenos=" 14 "></span>
+<span class="linenos" data-linenos=" 15 "></span>    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;index&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Inicio&quot;</span> <span class="p">/&gt;</span>  
+<span class="linenos" data-linenos=" 16 "></span>    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;screen,projection&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./css/principal.css&quot;</span> <span class="p">/&gt;</span>  
+<span class="linenos" data-linenos=" 17 "></span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 18 "></span>
+<span class="linenos" data-linenos=" 19 "></span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 20 "></span>
+<span class="linenos" data-linenos=" 21 "></span><span class="cm">&lt;!-- Contenedor --&gt;</span>  
+<span class="linenos" data-linenos=" 22 "></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;contenedor&quot;</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 23 "></span>
+<span class="linenos" data-linenos=" 24 "></span>    <span class="cm">&lt;!-- Cabecera --&gt;</span>  
+<span class="linenos" data-linenos=" 25 "></span>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cabecera&quot;</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 26 "></span>
+<span class="linenos" data-linenos=" 27 "></span>        <span class="cm">&lt;!-- Logo --&gt;</span>  
+<span class="linenos" data-linenos=" 28 "></span>        <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;logo&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Mi sitio web&quot;</span><span class="p">&gt;</span>Mi sitio web<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 29 "></span>
+<span class="linenos" data-linenos=" 30 "></span>        <span class="cm">&lt;!-- Buscador --&gt;</span>  
+<span class="linenos" data-linenos=" 31 "></span>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;buscador&quot;</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 32 "></span>            <span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;get&quot;</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 33 "></span>                <span class="p">&lt;</span><span class="nt">fieldset</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 34 "></span>                    <span class="p">&lt;</span><span class="nt">legend</span><span class="p">&gt;</span>Buscador<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 35 "></span>                    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;busqueda&quot;</span> <span class="na">size</span><span class="o">=</span><span class="s">&quot;30&quot;</span> <span class="p">/&gt;</span>  
+<span class="linenos" data-linenos=" 36 "></span>                    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;botonbuscar&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Buscar&quot;</span> <span class="p">/&gt;</span>  
+<span class="linenos" data-linenos=" 37 "></span>                <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 38 "></span>            <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 39 "></span>        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="cm">&lt;!-- /buscador --&gt;</span>
+<span class="linenos" data-linenos=" 40 "></span>
+<span class="linenos" data-linenos=" 41 "></span>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clear&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 42 "></span>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="cm">&lt;!-- /cabecera --&gt;</span>
+<span class="linenos" data-linenos=" 43 "></span>
+<span class="linenos" data-linenos=" 44 "></span>     <span class="cm">&lt;!-- Menú principal --&gt;</span>  
+<span class="linenos" data-linenos=" 45 "></span>     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;menu&quot;</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 46 "></span>            <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 47 "></span>                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Inicio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 48 "></span>                <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;seleccionado&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Blog<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 49 "></span>                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Sobre mi<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 50 "></span>                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Fotos<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 51 "></span>                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Portfolio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 52 "></span>                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Contacto<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 53 "></span>                <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Enlaces<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 54 "></span>            <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 55 "></span>
+<span class="linenos" data-linenos=" 56 "></span>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clear&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 57 "></span>     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="cm">&lt;!-- /menú principal --&gt;</span>
+<span class="linenos" data-linenos=" 58 "></span>
+<span class="linenos" data-linenos=" 59 "></span>     <span class="cm">&lt;!-- Contenido --&gt;</span>  
+<span class="linenos" data-linenos=" 60 "></span>     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;contenido&quot;</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 61 "></span>
+<span class="linenos" data-linenos=" 62 "></span>        <span class="cm">&lt;!-- Principal --&gt;</span>  
+<span class="linenos" data-linenos=" 63 "></span>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;principal&quot;</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 64 "></span>
+<span class="linenos" data-linenos=" 65 "></span>            <span class="cm">&lt;!-- Articulo --&gt;</span>  
+<span class="linenos" data-linenos=" 66 "></span>            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;articulo&quot;</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 67 "></span>                <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 68 "></span>                <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;info&quot;</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 69 "></span>                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;fecha&quot;</span><span class="p">&gt;</span>dd-mm-aaaa 00:00<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 70 "></span>                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;categoria&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>diseño<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 71 "></span>                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;autor&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Nombre Apellido<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 72 "></span>                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;comentarios&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Añadir comentario<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 73 "></span>                <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 74 "></span>
+<span class="linenos" data-linenos=" 75 "></span>                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam pellentesque enim blandit enim bibendum blandit.  
+<span class="linenos" data-linenos=" 76 "></span>                Integer eu leo ac est aliquet imperdiet. Quisque nec justo id augue posuere malesuada. Nullam ac metus. Cras non leo  
+<span class="linenos" data-linenos=" 77 "></span>                ut est placerat condimentum.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 78 "></span>
+<span class="linenos" data-linenos=" 79 "></span>                <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn-more&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Seguir leyendo...<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 80 "></span>            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="cm">&lt;!-- /articulo --&gt;</span>
+<span class="linenos" data-linenos=" 81 "></span>
+<span class="linenos" data-linenos=" 82 "></span>            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clear&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 83 "></span>
+<span class="linenos" data-linenos=" 84 "></span>            <span class="cm">&lt;!-- Articulo --&gt;</span>  
+<span class="linenos" data-linenos=" 85 "></span>            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;articulo&quot;</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 86 "></span>                <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 87 "></span>                <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;info&quot;</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 88 "></span>                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;fecha&quot;</span><span class="p">&gt;</span>dd-mm-aaaa 00:00<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 89 "></span>                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;categoria&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>diseño<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 90 "></span>                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;autor&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Nombre Apellido<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 91 "></span>                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;comentarios&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Añadir comentario<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 92 "></span>                <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 93 "></span>
+<span class="linenos" data-linenos=" 94 "></span>                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam pellentesque enim blandit enim bibendum blandit.  
+<span class="linenos" data-linenos=" 95 "></span>                Integer eu leo ac est aliquet imperdiet. Quisque nec justo id augue posuere malesuada. Nullam ac metus. Cras non leo  
+<span class="linenos" data-linenos=" 96 "></span>                ut est placerat condimentum.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 97 "></span>
+<span class="linenos" data-linenos=" 98 "></span>                <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn-more&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Seguir leyendo...<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos=" 99 "></span>            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="cm">&lt;!-- /articulo --&gt;</span>
+<span class="linenos" data-linenos="100 "></span>
+<span class="linenos" data-linenos="101 "></span>            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clear&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="102 "></span>
+<span class="linenos" data-linenos="103 "></span>            <span class="cm">&lt;!-- Articulo --&gt;</span>  
+<span class="linenos" data-linenos="104 "></span>            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;articulo&quot;</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="105 "></span>                <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="106 "></span>                <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;info&quot;</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="107 "></span>                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;fecha&quot;</span><span class="p">&gt;</span>dd-mm-aaaa 00:00<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="108 "></span>                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;categoria&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>diseño<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="109 "></span>                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;autor&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Nombre Apellido<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="110 "></span>                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;comentarios&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Añadir comentario<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="111 "></span>                <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="112 "></span>
+<span class="linenos" data-linenos="113 "></span>                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam pellentesque enim blandit enim bibendum blandit.  
+<span class="linenos" data-linenos="114 "></span>                Integer eu leo ac est aliquet imperdiet. Quisque nec justo id augue posuere malesuada. Nullam ac metus. Cras non leo  
+<span class="linenos" data-linenos="115 "></span>                ut est placerat condimentum.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="116 "></span>
+<span class="linenos" data-linenos="117 "></span>                <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn-more&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Seguir leyendo...<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="118 "></span>            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="cm">&lt;!-- /articulo --&gt;</span>
+<span class="linenos" data-linenos="119 "></span>
+<span class="linenos" data-linenos="120 "></span>            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clear&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="121 "></span>
+<span class="linenos" data-linenos="122 "></span>        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span><span class="cm">&lt;!-- /principal --&gt;</span>
+<span class="linenos" data-linenos="123 "></span>
+<span class="linenos" data-linenos="124 "></span>        <span class="cm">&lt;!-- Secundario --&gt;</span>  
+<span class="linenos" data-linenos="125 "></span>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;secundario&quot;</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="126 "></span>
+<span class="linenos" data-linenos="127 "></span>                <span class="cm">&lt;!-- Sobre mi --&gt;</span>  
+<span class="linenos" data-linenos="128 "></span>                <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Sobre mí<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="129 "></span>
+<span class="linenos" data-linenos="130 "></span>                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;sobremi&quot;</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="131 "></span>                    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagenes/mifoto.gif&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Mi foto&quot;</span> <span class="p">/&gt;</span>  
+<span class="linenos" data-linenos="132 "></span>                    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Nombre apellidos<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>  
+<span class="linenos" data-linenos="133 "></span>                    Edad<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>  
+<span class="linenos" data-linenos="134 "></span>                    Ciudad de residencia<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>  
+<span class="linenos" data-linenos="135 "></span>                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Mi perfil público<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="136 "></span>                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="cm">&lt;!-- /sobre mi --&gt;</span>
+<span class="linenos" data-linenos="137 "></span>
+<span class="linenos" data-linenos="138 "></span>                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clear&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="139 "></span>
+<span class="linenos" data-linenos="140 "></span>                <span class="cm">&lt;!-- Categorías --&gt;</span>  
+<span class="linenos" data-linenos="141 "></span>                <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Categorías<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="142 "></span>
+<span class="linenos" data-linenos="143 "></span>                <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;categorias&quot;</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="144 "></span>                    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;seleccionado&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Categoría 1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="145 "></span>                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Categoría 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="146 "></span>                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Categoría 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="147 "></span>                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Categoría 4<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="148 "></span>                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Categoría 5<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="149 "></span>                <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="150 "></span>
+<span class="linenos" data-linenos="151 "></span>                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clear&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="152 "></span>
+<span class="linenos" data-linenos="153 "></span>                <span class="cm">&lt;!-- Archivo --&gt;</span>  
+<span class="linenos" data-linenos="154 "></span>                <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Archivo<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="155 "></span>
+<span class="linenos" data-linenos="156 "></span>                <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;archivo&quot;</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="157 "></span>                    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;seleccionado&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Enero 200X<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="158 "></span>                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Diciembre 200X<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="159 "></span>                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Noviembre 200X<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="160 "></span>                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Octubre 200X<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="161 "></span>                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Septiembre 200X<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="162 "></span>                <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="163 "></span>
+<span class="linenos" data-linenos="164 "></span>                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clear&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="165 "></span>
+<span class="linenos" data-linenos="166 "></span>                <span class="cm">&lt;!-- Enlaces --&gt;</span>  
+<span class="linenos" data-linenos="167 "></span>                <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Enlaces<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="168 "></span>
+<span class="linenos" data-linenos="169 "></span>                <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;enlaces&quot;</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="170 "></span>                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Enlace 1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="171 "></span>                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Enlace 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="172 "></span>                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Enlace 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="173 "></span>                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Enlace 4<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="174 "></span>                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Enlace 5<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="175 "></span>                <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="176 "></span>
+<span class="linenos" data-linenos="177 "></span>                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clear&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="178 "></span>
+<span class="linenos" data-linenos="179 "></span>        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="cm">&lt;!-- /secundario --&gt;</span>
+<span class="linenos" data-linenos="180 "></span>
+<span class="linenos" data-linenos="181 "></span>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clear&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="182 "></span>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="cm">&lt;!-- /contenido --&gt;</span>
+<span class="linenos" data-linenos="183 "></span>
+<span class="linenos" data-linenos="184 "></span>    <span class="cm">&lt;!-- Pie de página --&gt;</span>  
+<span class="linenos" data-linenos="185 "></span>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;pie&quot;</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="186 "></span>        <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;copyright&quot;</span><span class="p">&gt;</span>© 200X Nombre de empresa<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="187 "></span>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="cm">&lt;!-- /pie de página --&gt;</span>
+<span class="linenos" data-linenos="188 "></span>
+<span class="linenos" data-linenos="189 "></span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="cm">&lt;!-- /contenedor --&gt;</span>
+<span class="linenos" data-linenos="190 "></span>
+<span class="linenos" data-linenos="191 "></span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>  
+<span class="linenos" data-linenos="192 "></span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 
 
