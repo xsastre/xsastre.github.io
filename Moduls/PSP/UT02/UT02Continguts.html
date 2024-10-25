@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://docencia.xaviersastre.cat/Moduls/PSP/UT02/UT02Diapositives.html">
+        <link rel="canonical" href="https://docencia.xaviersastre.cat/Moduls/PSP/UT02/UT02Continguts.html">
       
       
         <link rel="prev" href="filosofs.html">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Diapositives UT02 - Docencia Xavier</title>
+        <title>Continguts UT02 - Docencia Xavier</title>
       
     
     
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Diapositives UT02
+              Continguts UT02
             
           </span>
         </div>
@@ -726,18 +726,18 @@
           
   
   <span class="md-ellipsis">
-    Diapositives UT02
+    Continguts UT02
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="UT02Diapositives.html" class="md-nav__link md-nav__link--active">
+      <a href="UT02Continguts.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Diapositives UT02
+    Continguts UT02
   </span>
   
 
@@ -764,6 +764,30 @@
       Programació multifil
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Programació multifil">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#presentacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Presentació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-us-semafors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple us semàfors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1580,8 +1604,76 @@
 
 <h1 id="presentacio-diapositives-ut02">Presentació diapositives UT02<a class="headerlink" href="#presentacio-diapositives-ut02" title="Permanent link">&para;</a></h1>
 <h2 id="programacio-multifil">Programació multifil<a class="headerlink" href="#programacio-multifil" title="Permanent link">&para;</a></h2>
+<p><strong>Taula de contingut</strong></p>
+<p><a href="#presentació"><strong>1. Presentació diapositives</strong></a></p>
+<p><a href="#exemple-us-semàfors"><strong>1. Exemple us semàfors</strong></a></p>
+<h3 id="presentacio">Presentació<a class="headerlink" href="#presentacio" title="Permanent link">&para;</a></h3>
 <p><img alt="Imatge PSP 02" src="../img/ServeisiProcessos03.jpeg" width="25%" /></p>
 <iframe src="https://cesurformacion0-my.sharepoint.com/personal/xavier_sastre_cesurformacion_com/_layouts/15/Doc.aspx?sourcedoc={8a4b92f0-eab4-4f00-90c6-be0a5c9126fe}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="854px" height="480px" frameborder="0">Aquest és un presentació de <a target="_blank" href="https://office.com">Microsoft Office</a> incrustat, amb tecnologia de <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+
+<h3 id="exemple-us-semafors">Exemple us semàfors<a class="headerlink" href="#exemple-us-semafors" title="Permanent link">&para;</a></h3>
+<p>Aquí teniu un exemple de com utilitzar semàfors. També el teniu al github.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kn">package</span><span class="w"> </span><span class="nn">docencia.xaviersastre.dam.psp.ut02</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.concurrent.Semaphore</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.concurrent.ThreadLocalRandom</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="kd">class</span> <span class="nc">RecursCompartit</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Semaphore</span><span class="w"> </span><span class="n">semafor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Semaphore</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">accessResource</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">threadName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">            </span><span class="c1">// Acquire the semaphore</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">            </span><span class="n">semafor</span><span class="p">.</span><span class="na">acquire</span><span class="p">();</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">threadName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is accessing the resource.&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">            </span><span class="c1">// Simulate some work with the resource</span>
+<span class="linenos" data-linenos="15 "></span><span class="w">            </span><span class="n">Thread</span><span class="p">.</span><span class="na">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">threadName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is done with the resource.&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">InterruptedException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="18 "></span><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="linenos" data-linenos="19 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="20 "></span><span class="w">            </span><span class="c1">// Release the semaphore</span>
+<span class="linenos" data-linenos="21 "></span><span class="w">            </span><span class="n">semafor</span><span class="p">.</span><span class="na">release</span><span class="p">();</span>
+<span class="linenos" data-linenos="22 "></span><span class="w">        </span><span class="p">}</span>
+<span class="linenos" data-linenos="23 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="24 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="25 "></span>
+<span class="linenos" data-linenos="26 "></span><span class="kd">class</span> <span class="nc">Fil</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Thread</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="27 "></span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">RecursCompartit</span><span class="w"> </span><span class="n">recurs</span><span class="p">;</span>
+<span class="linenos" data-linenos="28 "></span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nomFil</span><span class="p">;</span>
+<span class="linenos" data-linenos="29 "></span>
+<span class="linenos" data-linenos="30 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Fil</span><span class="p">(</span><span class="n">RecursCompartit</span><span class="w"> </span><span class="n">recurs</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nomFil</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="31 "></span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">recurs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recurs</span><span class="p">;</span>
+<span class="linenos" data-linenos="32 "></span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nomFil</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomFil</span><span class="p">;</span>
+<span class="linenos" data-linenos="33 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="34 "></span>
+<span class="linenos" data-linenos="35 "></span><span class="w">    </span><span class="nd">@Override</span>
+<span class="linenos" data-linenos="36 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="37 "></span><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="38 "></span><span class="w">            </span><span class="n">sleep</span><span class="p">(</span><span class="n">ThreadLocalRandom</span><span class="p">.</span><span class="na">current</span><span class="p">().</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2000</span><span class="p">));</span><span class="w"> </span><span class="c1">// esperam un temps aleatori per evitar que sempre acabi el primer fil en primer lloc.</span>
+<span class="linenos" data-linenos="39 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">InterruptedException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="40 "></span><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="linenos" data-linenos="41 "></span><span class="w">        </span><span class="p">}</span>
+<span class="linenos" data-linenos="42 "></span><span class="w">        </span><span class="n">recurs</span><span class="p">.</span><span class="na">accessResource</span><span class="p">(</span><span class="n">nomFil</span><span class="p">);</span>
+<span class="linenos" data-linenos="43 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="44 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="45 "></span>
+<span class="linenos" data-linenos="46 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UT2Exemple19Exemple_Semafor</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="47 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="48 "></span><span class="w">        </span><span class="n">RecursCompartit</span><span class="w"> </span><span class="n">resource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RecursCompartit</span><span class="p">();</span>
+<span class="linenos" data-linenos="49 "></span>
+<span class="linenos" data-linenos="50 "></span><span class="w">        </span><span class="c1">// Create multiple threads</span>
+<span class="linenos" data-linenos="51 "></span><span class="w">        </span><span class="n">Thread</span><span class="w"> </span><span class="n">t1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Fil</span><span class="p">(</span><span class="n">resource</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Thread 1&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="52 "></span><span class="w">        </span><span class="n">Thread</span><span class="w"> </span><span class="n">t2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Fil</span><span class="p">(</span><span class="n">resource</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Thread 2&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="53 "></span><span class="w">        </span><span class="n">Thread</span><span class="w"> </span><span class="n">t3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Fil</span><span class="p">(</span><span class="n">resource</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Thread 3&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="54 "></span>
+<span class="linenos" data-linenos="55 "></span><span class="w">        </span><span class="c1">// Start the threads</span>
+<span class="linenos" data-linenos="56 "></span><span class="w">        </span><span class="n">t1</span><span class="p">.</span><span class="na">start</span><span class="p">();</span>
+<span class="linenos" data-linenos="57 "></span><span class="w">        </span><span class="n">t2</span><span class="p">.</span><span class="na">start</span><span class="p">();</span>
+<span class="linenos" data-linenos="58 "></span><span class="w">        </span><span class="n">t3</span><span class="p">.</span><span class="na">start</span><span class="p">();</span>
+<span class="linenos" data-linenos="59 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="60 "></span><span class="p">}</span>
+</code></pre></div>
 
 
 
