@@ -241,6 +241,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docencia.xaviersastre.cat/Moduls/DWES/exercicisisolucions/ExpressionsRegularsPHP.html</loc>
+         <lastmod>2024-11-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docencia.xaviersastre.cat/Moduls/DWES/exercicisisolucions/solucionsExpressionsRegularsPHP.html</loc>
+         <lastmod>2024-11-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docencia.xaviersastre.cat/Moduls/PSP/_PSP2425.html</loc>
          <lastmod>2024-11-04</lastmod>
          <changefreq>daily</changefreq>
