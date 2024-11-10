@@ -1,0 +1,2182 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docencia.xaviersastre.cat/Moduls/PSP/exercicisisolucions/ExercicisFils.html">
+      
+      
+      
+      
+      <link rel="icon" href="../../../imatges/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
+    
+    
+      
+        <title>Col·lecció exercicis simples de programació multifil - Docencia Xavier</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-KXJX1CP7QG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-KXJX1CP7QG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-KXJX1CP7QG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#colleccio-exercicis-simples-de-programacio-multifil" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../../../index.html" title="Docencia Xavier" class="md-header__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  <img src="../../../imatges/education_blanc.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docencia Xavier
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Col·lecció exercicis simples de programació multifil
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode nit"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode nit" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode dia"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../index.html" title="Docencia Xavier" class="md-nav__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  <img src="../../../imatges/education_blanc.png" alt="logo">
+
+    </a>
+    Docencia Xavier
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWES
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            DWES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWES/UT02PHP.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT02 Llenguatge PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWES/UT03PHPPOO.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT03 PHP POO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWES/UT05AccesADades.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT05 Accés a dades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWES/UT05AccesADadesAmbMySQL.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT05 Accés a dades amb MySQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercicis i solucions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Exercicis i solucions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWES/exercicisisolucions/Exercicis.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercicis PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWES/exercicisisolucions/ExercicisPOO.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercicis PHP POO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWES/exercicisisolucions/ExerciciGestioBotiga.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercici PHP Gestió Botiga
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWES/exercicisisolucions/ExpressionsRegularsPHP.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expressions Regulars PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            DWEC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWEC/_DWEC2425.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupament web en entorn client - DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWEC/desenvolupamentfrontend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupamet frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWEC/UT03Diapositives.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diapositives UT03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWEC/UT03_Treball_amb_matrius.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT03 - Treball amb matrius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWEC/UT03FuncionsJavascript.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT03 - Funcions a JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercicis i solucions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Exercicis i solucions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWEC/exercicisisolucions/Exercicis_UT02.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercicis UT02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWEC/exercicisisolucions/Exercicis_UT03.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercicis UT03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWEC/exercicisisolucions/Exercici_UT03_funcio_reduce.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercici UT03 - Interpretació codi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PSP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            PSP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Continguts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Continguts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_PSP2425.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Codis exemple multifil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT02/filosofs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problema del sopar dels filòsofs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT02/UT02Continguts.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continguts UT02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT02/Problemadeljardi.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problema del jardí
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT02/exercicisisolucions/ExercicisFils.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercicis Multifil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AW
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            AW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AW/00.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Temporització aproximada
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AW/01.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT01 Aplicacions web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AW/02.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT02 HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AW/03CSS.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT03 CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercicis i solucions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Exercicis i solucions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AW/exercicisisolucions/solucio_formulari1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solució Formulari 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AW/exercicisisolucions/practica_html_W3Schools.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tasca HTML w3schools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AW/exercicisisolucions/practica_html_freeCodeCamp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica HTML freeCodeCamp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AW/exercicisisolucions/practica_CSS_W3Schools.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica CSS W3Schools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AW/exercicisisolucions/ExerciciHTMLCSSRestaurant.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercici HTML+CSS Restaurant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AW/exercicisisolucions/practicaPortafoliHTMLCSS.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica avaluable Portafoli HTML+CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            SI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SI/_SI2425.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continguts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SI/calculPotenciaSAI.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Càlcul potència necessaria per un SAI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SI/practicaPotenciaSAI.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica potència SAI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AOF
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            AOF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Continguts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Continguts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOF/UT_organitzacio_treball.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Organització individual de la feina
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOF/AOFUT2_Presentacions.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AOFUT02 - Presentacions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bloc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Arxiva
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Arxiva
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/aws.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/amazon.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/coneixements-generals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coneixements generals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/dam.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/daw.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/dwec.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/dwes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DWES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/dynamodb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DynamoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/general.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/javascript.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/matem%C3%A0tiques.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matemàtiques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/php.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/psp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PSP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/programci%C3%B3-multifil.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programció multifil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="colleccio-exercicis-simples-de-programacio-multifil">Col·lecció exercicis simples de programació multifil<a class="headerlink" href="#colleccio-exercicis-simples-de-programacio-multifil" title="Permanent link">&para;</a></h1>
+<p>Aquesta petita col·lecció d'exercicis és molt recomanable per agafar confiança amb la programació multifil i les seves eines. ÀNIM!</p>
+<h2 id="activitats-diniciacio">Activitats d'iniciació<a class="headerlink" href="#activitats-diniciacio" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Imprimeix "Hola, món!" des d'un fil.</li>
+<li>Imprimeix cinc vegades "Hola, món!" mitjançant cinc fils diferents.</li>
+<li>Imprimeix cinc vegades mitjançant cinc fils diferents "Hola, sóc el fil X!" on X és el número o identificador del fil.</li>
+<li>Amb dos fils, incrementa un sencer compartit en un repetidament, sense sincronització, 1.000.000 de vegades (500.000 cadascun) i imprimeix el resultat al final del programa.</li>
+<li>Amb dos fils, incrementa un sencer compartit en un repetidament, amb sincronització, 1.000.000 de vegades (500.000 cadascun) i imprimeix el resultat al final del programa.</li>
+<li>Llança dos fils simultàniament: un fil que incrementi un sencer en un 1.000.000 de vegades i un segon fil que imprimeixi el valor del sencer en aquell moment.</li>
+<li>Llança dos fils simultàniament: un fil que incrementi un sencer en un 1 000 000 de vegades i un segon fil que esperi (mètode <em>wait()</em> ) la notificació (mètode <em>notify()</em> ) del primer que ha finalitzat per imprimir finalment aquest sencer .</li>
+<li>Simula una cursa de relleus amb quatre corredors. Cada corredor és un fil que començarà a córrer quan l'altre s'acabi (excepte el primer). Usa els mètodes <em>start()</em> i <em>join()</em> alternativament per a cada fil.</li>
+<li>Repeteix l'activitat anterior però aquesta vegada usant els mètodes <em>wait()</em> i <em>notify()</em>.</li>
+<li>Simula una cursa de 100 metres de cinc animals on cada animal és un fil que avança 1 metre en cada iteració d'un bucle. Mostra els progressos de cada animal i el rànquing final. Pots fer servir el mètode <em>yield()</em> al final de cada iteració per fer la cursa més igualada.</li>
+</ol>
+<details class="info">
+<summary>Mètode <em>yield()</em></summary>
+<p>Ves <a href="https://www.javamadesoeasy.com/2015/03/differences-and-similarities-between.html">aquí</a> per veure més informació</p>
+</details>
+<h2 id="activitats">Activitats<a class="headerlink" href="#activitats" title="Permanent link">&para;</a></h2>
+<ol start="11">
+<li>Donat un enter n divisible per 5, calcula la suma de tots els enters des de 1 fins a n , ambdós inclosos. Divideix la feina en almenys 5 fils.</li>
+<li>Donat un String, calcula el nombre de vocals que hi ha. Per això, llança cinc fils: un per a cada vocal. Mostra el total per a cada vocal i el total de vocals.</li>
+<li>Repeteix l'activitat anterior, però donat un fitxer de text.</li>
+<li>Donades dues matrius d'enters 3 × 3, calcula'n la multiplicació. Per això, llança nou fils: un per calcular cada element.</li>
+</ol>
+<details class="example">
+<summary>Com calcular un producte de matrius</summary>
+<div style="background-color:rgba(250, 230, 7, 1);">
+<p>Anem a detallar com s'han calculat alguns dels seus elements.</p>
+<div class="arithmatex">\[
+\left( \begin{array}{ccc} 2 &amp; 5 &amp; 1 \\ 4 &amp; -2 &amp; 0 \\ 1 &amp; 6 &amp; 2 \end{array} \right) \cdot \left( \begin{array}{ccc} 1 &amp; 2 &amp; 3 \\ 3 &amp; 4 &amp; 1 \\ 1 &amp; -4 &amp; 2 \end{array} \right) = \left( \begin{array}{ccc} 18 &amp; 20 &amp; 13 \\ -2 &amp; 0 &amp; 10 \\ 21 &amp; 18 &amp; 13 \end{array} \right)
+\]</div>
+<p>L'element <span class="arithmatex">\(a_{11}\)</span> s'obté multiplicant primera fila per primera columna:</p>
+<div class="arithmatex">\[
+\left( \begin{array}{ccc} \fbox{2} &amp; \fbox{5} &amp; \fbox{1} \\ 4 &amp; -2 &amp; 0 \\ 1 &amp; 6 &amp; 2 \end{array} \right) \cdot \left( \begin{array}{ccc} \fbox{1} &amp; 2 &amp; 3 \\ \fbox{3} &amp; 4 &amp; 1 \\ \fbox{1} &amp; -4 &amp; 2 \end{array} \right) = \left( \begin{array}{ccc} \fbox{18} &amp; 20 &amp; 13 \\ -2 &amp; 0 &amp; 10 \\ 21 &amp; 18 &amp; 13 \end{array} \right)
+\]</div>
+<div class="arithmatex">\[
+2\cdot1+5\cdot3+1\cdot1=2+15+1=18
+\]</div>
+<p>L'element <span class="arithmatex">\(a_{23}\)</span> s'obté multiplicant segona fila per tercera columna:</p>
+<div class="arithmatex">\[
+\left( \begin{array}{ccc} 2 &amp; 5 &amp; 1 \\ \fbox{4} &amp; \fbox{-2} &amp; \fbox{0} \\ 1 &amp; 6 &amp; 2 \end{array} \right) \cdot \left( \begin{array}{ccc} 1 &amp; 2 &amp; \fbox{3} \\ 3 &amp; 4 &amp; \fbox{1} \\ 1 &amp; -4 &amp; \fbox{2} \end{array} \right) = \left( \begin{array}{ccc} 18 &amp; 20 &amp; 13 \\ -2 &amp; 0 &amp; \fbox{10} \\ 21 &amp; 18 &amp; 13 \end{array} \right)
+\]</div>
+<div class="arithmatex">\[
+4\cdot3+(-2)\cdot1+0\cdot2=12-2+0=10
+\]</div>
+<p>L'element <span class="arithmatex">\(a_{31}\)</span> s'obté multiplicant tercera fila per primera columna:</p>
+<div class="arithmatex">\[
+\left( \begin{array}{ccc} 2 &amp; 5 &amp; 1 \\ 4 &amp; -2 &amp; 0 \\ \fbox{1} &amp; \fbox{6} &amp; \fbox{2} \end{array} \right) \cdot \left( \begin{array}{ccc} \fbox{1} &amp; 2 &amp; 3 \\ \fbox{3} &amp; 4 &amp; 1 \\ \fbox{1} &amp; -4 &amp; 2 \end{array} \right) = \left( \begin{array}{ccc} 18 &amp; 20 &amp; 13 \\ -2 &amp; 0 &amp; 10 \\ \fbox{21} &amp; 18 &amp; 13 \end{array} \right)
+\]</div>
+<div class="arithmatex">\[
+1\cdot1+6\cdot3+1\cdot2=1+18+2=21
+\]</div>
+<p>L'element <span class="arithmatex">\(a_{22}\)</span> s'obté multiplicant segona fila per segona columna:</p>
+<div class="arithmatex">\[
+\left( \begin{array}{ccc} 2 &amp; 5 &amp; 1 \\ \fbox{4} &amp; \fbox{-2} &amp; \fbox{0} \\ 1 &amp; 6 &amp; 2 \end{array} \right) \cdot \left( \begin{array}{ccc} 1 &amp; \fbox{2} &amp; 3 \\ 3 &amp; \fbox{4} &amp; 1 \\ 1 &amp; \fbox{-4} &amp; 2 \end{array} \right) = \left( \begin{array}{ccc} 18 &amp; 20 &amp; 13 \\ -2 &amp; \fbox{0} &amp; 10 \\ 21 &amp; 18 &amp; 13 \end{array} \right)
+\]</div>
+<div class="arithmatex">\[
+4\cdot2+(-2)\cdot4+0\cdot2=8-8+0=0
+\]</div>
+<p>Els elements restants de la matriu producte es calculen seguint el mateix mètode.
+</div></p>
+</details>
+<ol start="15">
+<li>Simula un convertidor d'escala de grisos a binari. Per això, donada una matriu 100 × 100 d'enters aleatoris entre 0 i 255 (tots dos inclosos), converteix-la en una nova matriu 100 × 100 on els valors de 0 a 127 passin a 0 i els valors de 128 a 255 a 1. Divideix el treball a 4 fils, un per cada regió de 50 × 50.</li>
+<li>Repeteix l'activitat anterior però atesa una imatge. Pistes: <a href="https://stackoverflow.com/a/15972640">1</a> , <a href="https://stackoverflow.com/a/10392050">2</a>.</li>
+<li>Simula una cursa de relleus amb quatre corredors i amb pas de testimoni. Cada corredor és un fil que començarà a córrer quan l'altre s'acabi (excepte el primer). Utilitza synchronized() , wait() i notify() per al pas del testimoni.</li>
+<li>Repeteix l'activitat anterior però fent servir la classe Semaphore.</li>
+<li>(lector-escriptor). Simula l'accés i l'escriptura a una base de dades. Per fer-ho, llança 20 fils simultàniament, 10 de lectura i 10 d'escriptura d'un enter. Els fils d'escriptura s'han d'incrementar en un sencer mentre no hi hagi un altre fil d'escriptura escrivint o un fil de lectura llegint. Els de lectura poden llegir i imprimir sencer encara que hi hagi altres fils de lectura però no mentre n'hi hagi un d'escriptura escrivint. Fes servir la classe Semaphore de Java.</li>
+</ol>
+<h2 id="activitats-dampliacio">Activitats d'ampliació<a class="headerlink" href="#activitats-dampliacio" title="Permanent link">&para;</a></h2>
+<ol start="21">
+<li>Donades dues matrius d'enters aleatoris 100 × 100, calcula'n la multiplicació sense fer servir fils. A continuació, fes-ho de nou però amb 10.000 fils: un per calcular cada element. Finalment, calcula el temps d'execució amb fils i sense.</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">22. Problema del supermercat:</p>
+<p>Escriu una classe anomenada Parking que implementi el funcionament de N caixes d'un supermercat. Els M clients del supermercat estaran un temps aleatori comprant i amb posterioritat seleccionaran aleatòriament en quina caixa posicionar-se per situar-se en la seva cua corresponent. Quan els toqui el torn seran atesos procedint al pagament corresponent i guardant aquesta quantitat a la variable Resultats del supermercat. S'han de crear tants threads com a clients hi hagi i els paràmetres M i N s’han de passar com a arguments al programa. Per simplificar la implementació, el valor de pagament de cada client pot ser aleatori.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">22a. Problema del supermercat modern:</p>
+<p>Escriu una classe anomenada ParkingModern que implementi el funcionament de N caixes d’un supermercat. Els M clients del supermercat realitzaran el mateix procés que a l’exercici anterior del supermercat, però en aquest cas, en haver acabat la compra, els clients es col·locaran en una única coa. Quan una caixa estigui disponible, el primer de la coa serà atès a la caixa corresponent. Codificau M i N com a constants dins la vostra classe. De igual manera que a l’exercici original, simulau amb temps aleatori els següents processos:</p>
+<ul>
+<li>
+<p>Temps de compra</p>
+</li>
+<li>
+<p>Temps que tarda el caixer de cada una de les caixes en cobrar a un client.</p>
+</li>
+</ul>
+<p>Guardar en una variable el resultat del cobro de totes les caixes.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">22b. Què és més òptim una única coa o tantes coes com caixes?</p>
+<p><img alt="coes" src="../img/coes2.jpeg" style="height:100px; margin:10px; float:right; object-fit:cover" /></p>
+<p>Fes les dues versions del problema del pàrking. A continuació demostra a través de les modificacions als dos codis que consideris oportunes, quin dels dos mètodes és més eficient.</p>
+<p>Quan hagis arribat a la teva conclusió, llegeix <a href="../../../blog/2024/11/10/una-o-m%C3%BAltiples-coes.html">aquesta entrada del bloc.</a></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">23. Simulació parking</p>
+<p><img alt="coes" src="../img/aparcament.jpeg" style="height:100px; margin:10px; float:right; object-fit:cover" /></p>
+<p>Escriu una classe que simuli el funcionament d'un aparcament. Fes-ho de tal manera que contengui en dues constants el nombre de places del pàrquing i el nombre de cotxes existents en el sistema. S'han de crear tants threads com cotxes hi hagi. L'aparcament disposarà d'una única entrada i una única sortida. A l'entrada de vehicles hi haurà un dispositiu de control que permeti o impedeixi l'accés dels mateixos al pàrquing, depenent de l'estat actual del mateix (places d'aparcament disponibles). Els temps d'espera dels vehicles dins del pàrquing són aleatoris. En el moment en què un vehicle surt del pàrquing, notifica al dispositiu de control el número de la plaça que tenia assignada i s'allibera la plaça que estigués ocupant, quedant així aquestes novament disponibles.</p>
+<p>Un vehicle que ha sortit del pàrquing esperarà un temps aleatori per tornar a entrar novament en el mateix. Per tant, els vehicles han d'estar entrant i sortint indefinidament del pàrquing. És important que es dissenyi el programa de tal manera que s’asseguri que, abans o després, un vehicle que roman esperant a l'entrada del pàrquing entrarà en el mateix (no es produeixi inanició).</p>
+<p>Aquest exercici l’heu de plantejar utilitzant notify i wait. </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">24. Simulació bany</p>
+<p><img alt="bany.jpeg" src="../img/bany.jpeg" style="height:100px; margin:10px; float:right; object-fit:cover" />    </p>
+<p>Heu de fer un programa que simuli el procés d'un bany public. Ha d'estar fet utilitzant <em>wait()</em> i <em>notify()</em> però on tres persones (Tofol, Biel i Pep) arriben de forma aleatòria al bany i l'ordre d'arribada ha de ser l'ordre d'entrada al bany (FIFO).
+Feis un document de text 📄 amb l'explicació a alt nivell del vostre plantejament del programa. Es tracta d'explicar els detalls tècnics relacionats amb els fils que heu creat (no heu d'explicar el que és un bucle ni les variables utilitzades a no ser que tingui rellevància amb el problema que resoleu. Per exemple, si utilitzeu una booleana per sincronitzar part d'un procés o un integer per garantir l'ordre, aleshores sí).</p>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Darrera actualització">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">10 de novembre del 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 Xavier Sastre - Llicencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "toc.integrate", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
