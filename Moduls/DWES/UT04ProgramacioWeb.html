@@ -2104,9 +2104,9 @@
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Librerías de validación</p>
-</div>
 <p>Existen diversas librerías que facilitan la validación de los formularios, como son <a href="https://respect-validation.readthedocs.io/en/latest/">respect/validation</a> o <a href="http://validator.particle-php.com/en/latest/">particle/validator</a>.
-  Cuando estudiemos Laravel profundizaremos en la validación de forma declarativa.</p>
+Cuando estudiemos Laravel profundizaremos en la validación de forma declarativa.</p>
+</div>
 <h3 id="parametro-multivalor">Parámetro multivalor<a class="headerlink" href="#parametro-multivalor" title="Permanent link">&para;</a></h3>
 <p>Existen elementos HTML que envían varios valores:</p>
 <ul>
@@ -2252,8 +2252,8 @@ Las cookies se almacenan en el navegador, y la sesión en el servidor web.</p>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Inspeccionando las cookies</p>
-</div>
 <p>Si queremos ver que contienen las cookies que tenemos almacenadas en el navegador, se puede comprobar su valor en <em>Dev Tools &rarr; Application &rarr; Storage</em></p>
+</div>
 <p>El tiempo de vida de las cookies puede ser tan largo como el sitio web en el que residen. Ellas seguirán ahí, incluso si el navegador está cerrado o abierto.</p>
 <p>Para borrar una cookie se puede poner que expiren en el pasado:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
@@ -2313,16 +2313,16 @@ Cada sesión tiene asociado un almacén de datos mediante el array global <code>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Configurando la sesión en <code>php.ini</code></p>
-</div>
 <p>Las siguiente propiedades de <code>php.ini</code> permiten configurar algunos aspectos de la sesión:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>* `session.save_handler`: controlador que gestiona cómo se almacena (`files`)
-<span class="linenos" data-linenos="2 "></span>* `session.save_path`: ruta donde se almacenan los archivos con los datos (si tenemos un cluster, podríamos usar `/mnt/sessions` en todos los servidor de manera que apuntan a una carpeta compartida)
-<span class="linenos" data-linenos="3 "></span>* `session.name`: nombre de la sesión (`PHSESSID`)
-<span class="linenos" data-linenos="4 "></span>* `session.auto_start`: Se puede hacer que se autocargue con cada script. Por defecto está deshabilitado
-<span class="linenos" data-linenos="5 "></span>* `session.cookie_lifetime`: tiempo de vida por defecto
-<span class="linenos" data-linenos="6 "></span>
-<span class="linenos" data-linenos="7 "></span>Más información en la [documentación oficial](https://www.php.net/manual/es/session.configuration.php).
-</code></pre></div>
+<ul>
+<li><code>session.save_handler</code>: controlador que gestiona cómo se almacena (<code>files</code>)</li>
+<li><code>session.save_path</code>: ruta donde se almacenan los archivos con los datos (si tenemos un cluster, podríamos usar <code>/mnt/sessions</code> en todos los servidor de manera que apuntan a una carpeta compartida)</li>
+<li><code>session.name</code>: nombre de la sesión (<code>PHSESSID</code>)</li>
+<li><code>session.auto_start</code>: Se puede hacer que se autocargue con cada script. Por defecto está deshabilitado</li>
+<li><code>session.cookie_lifetime</code>: tiempo de vida por defecto</li>
+</ul>
+<p>Más información en la <a href="https://www.php.net/manual/es/session.configuration.php">documentación oficial</a>.</p>
+</div>
 <h2 id="autentificacion-de-usuarios">Autentificación de usuarios<a class="headerlink" href="#autentificacion-de-usuarios" title="Permanent link">&para;</a></h2>
 <p>Una sesión establece una relación anónima con un usuario particular, de manera que podemos saber si es el mismo usuario entre dos peticiones distintas. Si preparamos un sistema de login, podremos saber quien utiliza nuestra aplicación.</p>
 <p>Para ello, preparemos un sencillo sistema de autenticación:</p>
@@ -2422,8 +2422,8 @@ Cada sesión tiene asociado un almacén de datos mediante el array global <code>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Autenticación en producción</p>
-</div>
 <p>En la actualidad la autenticación de usuario no se realiza gestionando la sesión direcamente, sino que se realiza mediante algún framekwork que abstrae todo el proceso o la integración de mecanismos de autenticación tipo <em>OAuth</em>, como  estudiaremos en la última unidad mediante <em>Laravel</em>.</p>
+</div>
 <h2 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.php.net/manual/es/features.cookies.php">Cookies en PHP</a></li>
