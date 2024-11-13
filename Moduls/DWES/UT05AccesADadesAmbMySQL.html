@@ -1,0 +1,2653 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docencia.xaviersastre.cat/Moduls/DWES/UT05AccesADadesAmbMySQL.html">
+      
+      
+        <link rel="prev" href="UT05AccesADades.html">
+      
+      
+        <link rel="next" href="exercicisisolucions/Exercicis.html">
+      
+      
+      <link rel="icon" href="../../imatges/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>UT05 Accés a dades amb MySQL - Docencia Xavier</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-KXJX1CP7QG"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-KXJX1CP7QG",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-KXJX1CP7QG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#acces-a-bases-de-dades-amb-mysql" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../../index.html" title="Docencia Xavier" class="md-header__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  <img src="../../imatges/education_blanc.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docencia Xavier
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UT05 Accés a dades amb MySQL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode nit"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode nit" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode dia"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Docencia Xavier" class="md-nav__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  <img src="../../imatges/education_blanc.png" alt="logo">
+
+    </a>
+    Docencia Xavier
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWES
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            DWES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="UT02PHP.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT02 Llenguatge PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="UT03PHPPOO.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT03 PHP POO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="UT05AccesADades.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT05 Accés a dades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    UT05 Accés a dades amb MySQL
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="UT05AccesADadesAmbMySQL.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    UT05 Accés a dades amb MySQL
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducció
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1estats-en-lexecucio-de-sentencies-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Estats en l’execució de sentències SQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Estats en l’execució de sentències SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11transaccions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.Transaccions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2parametres-de-configuracio-de-la-connexio" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.Paràmetres de configuració de la connexió
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3realitzacio-i-comprovacio-de-la-connexio" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.Realització i comprovació de la connexió
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4insercio-modificacio-i-eliminacio-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.Inserció, modificació i eliminació de dades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5consulta-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.Consulta de dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.Consulta de dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51realitzacio-de-la-consulta" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.Realització de la consulta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52acces-i-gestio-de-les-dades-retornades-per-una-consulta" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.Accés i gestió de les dades retornades per una consulta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53finalitzacio-de-la-consulta" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.Finalització de la consulta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6desconnexio-de-la-base-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.Desconnexió de la base de dades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7gestio-i-control-derrors-i-obtencio-dinformacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.Gestió i control d’errors i obtenció d’informació
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8consideracions-generals-i-bones-practiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.Consideracions generals i bones pràctiques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.Consideracions generals i bones pràctiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81restriccio-didentitat-claus-primaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1.Restricció d’identitat (claus primàries)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82restriccio-dintegritat-referencial-claus-foranes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2.Restricció d’integritat referencial (claus foranes)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9annex-codi-emprat-als-exemples" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.Annex: codi emprat als exemples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10manuals-i-fonts-dinformacio-addicionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.Manuals i fonts d’informació addicionals
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercicis i solucions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Exercicis i solucions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicisisolucions/Exercicis.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercicis PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicisisolucions/ExercicisPOO.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercicis PHP POO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicisisolucions/ExerciciGestioBotiga.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercici PHP Gestió Botiga
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicisisolucions/ExpressionsRegularsPHP.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expressions Regulars PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            DWEC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC/_DWEC2425.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupament web en entorn client - DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC/desenvolupamentfrontend.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desenvolupamet frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC/UT03Diapositives.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diapositives UT03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC/UT03_Treball_amb_matrius.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT03 - Treball amb matrius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC/UT03FuncionsJavascript.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT03 - Funcions a JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercicis i solucions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Exercicis i solucions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC/exercicisisolucions/Exercicis_UT02.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercicis UT02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC/exercicisisolucions/Exercicis_UT03.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercicis UT03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC/exercicisisolucions/Exercici_UT03_funcio_reduce.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercici UT03 - Interpretació codi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PSP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            PSP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Continguts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Continguts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PSP/_PSP2425.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Codis exemple multifil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PSP/UT02/filosofs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problema del sopar dels filòsofs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PSP/UT02/UT02Continguts.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continguts UT02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PSP/UT02/Problemadeljardi.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problema del jardí
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PSP/exercicisisolucions/ExercicisFils.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercicis Multifil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AW
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            AW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AW/00.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Temporització aproximada
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AW/01.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT01 Aplicacions web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AW/02.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT02 HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AW/03CSS.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT03 CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercicis i solucions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Exercicis i solucions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AW/exercicisisolucions/solucio_formulari1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solució Formulari 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AW/exercicisisolucions/practica_html_W3Schools.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tasca HTML w3schools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AW/exercicisisolucions/practica_html_freeCodeCamp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica HTML freeCodeCamp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AW/exercicisisolucions/practica_CSS_W3Schools.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica CSS W3Schools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AW/exercicisisolucions/ExerciciHTMLCSSRestaurant.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercici HTML+CSS Restaurant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AW/exercicisisolucions/practicaPortafoliHTMLCSS.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica avaluable Portafoli HTML+CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            SI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SI/_SI2425.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continguts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SI/calculPotenciaSAI.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Càlcul potència necessaria per un SAI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SI/practicaPotenciaSAI.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica potència SAI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AOF
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            AOF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Continguts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Continguts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AOF/UT_organitzacio_treball.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Organització individual de la feina
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AOF/AOFUT2_Presentacions.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AOFUT02 - Presentacions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bloc  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"/></svg>
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Arxiva
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Arxiva
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/aws.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/amazon.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/coneixements-generals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coneixements generals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/dam.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/daw.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/dwec.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/dwes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DWES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/dynamodb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DynamoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/general.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/javascript.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/matem%C3%A0tiques.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matemàtiques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/php.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/psp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PSP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/programci%C3%B3-multifil.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programció multifil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="acces-a-bases-de-dades-amb-mysql"><strong>Accés a bases de dades amb MySQL</strong><a class="headerlink" href="#acces-a-bases-de-dades-amb-mysql" title="Permanent link">&para;</a></h1>
+<p><a href="#introducció">Introducció</a></p>
+<p><a href="#1estats-en-lexecució-de-sentències-sql">1.Estats en l’execució de sentències SQL</a></p>
+<ul>
+<li><a href="#11transaccions">1.1.Transaccions</a></li>
+</ul>
+<p><a href="#2paràmetres-de-configuració-de-la-connexió">2.Paràmetres de configuració de la connexió</a></p>
+<p><a href="#3realització-i-comprovació-de-la-connexió">3.Realització i comprovació de la connexió</a></p>
+<p><a href="#4inserció-modificació-i-eliminació-de-dades">4.Inserció, modificació i eliminació de dades</a></p>
+<p><a href="#5consulta-de-dades">5.Consulta de dades</a></p>
+<ul>
+<li>
+<p><a href="#51realització-de-la-consulta">5.1.Realització de la consulta</a></p>
+</li>
+<li>
+<p><a href="#52accés-i-gestió-de-les-dades-retornades-per-una-consulta">5.2.Accés i gestió de les dades retornades per una consulta</a></p>
+</li>
+<li>
+<p><a href="#53finalització-de-la-consulta">5.3.Finalització de la consulta</a></p>
+</li>
+</ul>
+<p><a href="#6desconnexió-de-la-base-de-dades">6.Desconnexió de la base de dades</a></p>
+<p><a href="#7gestió-i-control-derrors-i-obtenció-dinformació">7.Gestió i control d’errors i obtenció d’informació</a></p>
+<p><a href="#8consideracions-generals-i-bones-pràctiques">8.Consideracions generals i bones pràctiques</a></p>
+<ul>
+<li>
+<p><a href="#81restricció-didentitat-claus-primàries">8.1.Restricció d’identitat (claus primàries)</a></p>
+</li>
+<li>
+<p><a href="#82restricció-dintegritat-referencial-claus-foranes">8.2.Restricció d’integritat referencial (claus foranes)</a></p>
+</li>
+</ul>
+<p><a href="#9annex-codi-emprat-als-exemples">9.Annex: codi emprat als exemples</a></p>
+<p><a href="#10manuals-i-fonts-dinformació-addicionals">10.Manuals i fonts d’informació addicionals</a></p>
+<h2 id="introduccio"><strong>Introducció</strong><a class="headerlink" href="#introduccio" title="Permanent link">&para;</a></h2>
+<p>L’accés a una base de dades des d’un llenguatge de programació és la base de gairebé tots els sistemes de gestió de l’actualitat. En aquests casos, la gestió de la informació es fa a través d’un programa que accedeix a la base de dades per a poder executar les funcionalitats requerides.</p>
+<p>En aquest mòdul veurem com accedir a una base de dades MySQL des d’un programa PHP. En particular, farem la connexió via PDO MySQL.</p>
+<p>Per a realitzar la gestió de la base de dades emmagatzemada en un servidor MySQL a través de codi escrit en PHP, es farà servir l’extensió <em>mysqli</em> de PHP. Aquesta extensió del llenguatge PHP consta d’una sèrie de funcionalitats extres que milloren les extensions <em>mysql</em> que es feien servir en versions de MySQL anteriors a la 4.1.3. Aquesta extensió ja ve inclosa a les versions de PHP5 i posteriors. Entre les millores més importants destaquen la interfície orientada a objectes o el suport per a transaccions.</p>
+<p><strong>Connectors de programes amb bases de dades</strong></p>
+<p>Existeixen diversos sistemes per a interconnectar el codi dels programes amb les bases de dades, coneguts com a <strong><em>connectors</em></strong>. Aquests són alguns:</p>
+<p><strong>PDO</strong> (PHP Data Objects) per a connectar PHP amb diferents SGBDs</p>
+<p><strong>ADO</strong>: (ActiveX Data Objects) de Microsoft</p>
+<p><strong>JDBC</strong> (Java DataBase Connectivity) per interconnexió del llenguatge Java amb bases de dades.</p>
+<p><strong>PDO MySQL</strong></p>
+<p>El connector PDO MySQL s’instal·la amb WAMP i és totalment transparent a l’usuari.</p>
+<h2 id="1estats-en-lexecucio-de-sentencies-sql"><strong>1.Estats en l’execució de sentències SQL</strong><a class="headerlink" href="#1estats-en-lexecucio-de-sentencies-sql" title="Permanent link">&para;</a></h2>
+<p>A l’hora d’accedir i manipular les dades d’una base de dades des de qualsevol programa, a part d’executar la sentència d’accés o manipulació de dades, caldrà passar per una sèrie d’estats, independentment del llenguatge de programació i del SGBD que es faci servir. Aquests estats són necessaris per tal d’accedir a la base de dades (el que s’anomena <em>connectar-se a la base de dades</em>), analitzar com ha anat l’operació SQL i tancar la connexió amb la base de dades.</p>
+<p>Aquests estats es poden veure en el següent diagrama pel cas d’exemple d’una operació de SELECT:</p>
+<p><img alt="06555_m3_01z.gif" src="img/06555_m3_01z.gif" /></p>
+<p>El primer que cal fer per a poder accedir a una base de dades emmagatzemada a un servidor de bases de dades, és <strong>configurar els paràmetres de connexió</strong>, amb dades com el nom de la base de dades, la seva ubicació i les credencials d’accés de l’usuari que vol connectar.</p>
+<p>Una vegada configurada la connexió, cal executar una instrucció, <strong>connectar</strong>, per a fer efectiva aquesta connexió. Si els paràmetres proporcionats són correctes i el servidor de bases de dades està disponible, s’establirà la connexió entre el programa i la base de dades. Cal tenir en compte que la connexió pot no establir-se per diferents motius. Per tant, serà important assegurar-se que tot ha anat bé després d’executar la instrucció de connectar.</p>
+<p>La connexió a la base de dades estarà oberta fins que el programa finalitzi la seva execució. Per tal d’assegurar-se que els recursos utilitzats són alliberats, és important tancar la connexió un cop ja no s’hagin de fer més accessos a la base de dades. Per a fer-ho existeix una acció de <strong>desconnectar</strong>.</p>
+<p>Quan la connexió està establerta, es poden realitzar diferents accions sobre la base de dades. Tres d’aquestes accions tenen un efecte immediat; s’executa l’acció sobre la base de dades i es genera un resultat. Aquestes accions són:</p>
+<ul>
+<li><strong>Donar d’alta noves dades</strong>: es poden inserir noves dades a les taules de la base de dades. Si la sentència SQL d’inserció s’executa correctament (sense errors), la inserció es fa efectiva immediatament.</li>
+<li><strong>Donar de baixa dades</strong>: es poden eliminar dades de la base de dades mitjançant una sentència SQL. Aquesta acció comporta una eliminació d’informació, amb el que cal assegurar-se que s’elimina la informació que realment es vol eliminar. En els sistemes transaccionals, existeix el concepte de <em>transacció</em>, on un conjunt d’instruccions s’executen com si fossin una sola instrucció. Si es fan servir les transaccions, es pot desfer una eliminació de dades (amb la instrucció <em>rollback</em>), però només en el cas que la transacció no s’hagi donat per finalitzada amb èxit. D’altra banda, és important realitzar còpies de seguretat per a poder recuperar, en cas d’eliminacions errònies, les dades anteriors de la darrera còpia de seguretat.</li>
+<li><strong>Modificar les dades de la base de dades:</strong> una modificació és el fet de canviar una dada que ja està inserida a la base de dades per tal d’actualitzar-la o corregir-la. La modificació també elimina informació, ja que en modificar una dada, el valor anterior al que s’ha modificat, es perd. S’ha d’assegurar que la dada que es vol modificar serà l’única que es modificarà, i que la instrucció no afectarà altres dades. Com en el cas anterior, en fer servir transaccions, hi ha la possibilitat de revertir la instrucció de modificació (sempre que es faci <em>rollback</em> abans d’acabar la transacció).</li>
+</ul>
+<p>La quarta de les accions que es pot fer una vegada establerta la connexió és la consulta de dades. Aquesta acció és una mica diferent, ja que els resultats d’una consulta poden contenir molts elements que s’han de tractar per blocs (es pot pensar en una llista de productes d’una botiga que es presenten de 20 en 20, per exemple). Per aquest motiu, la consulta no és una acció immediata com les anteriors, sinó que la seva execució genera una connexió amb la base de dades, que té un estat i que permet anar consultant les dades de mica en mica. Més concretament, el que passa en fer una consulta és el següent:</p>
+<ul>
+<li><strong>Obrir la consulta</strong>: s’executa una sentència SQL de consulta sobre la base de dades. Si no hi ha cap error s’obtenen les dades de la base de dades. Llavors, ja es poden obtenir les dades pel seu tractament.</li>
+<li><strong>Accés a dades de la consulta</strong>: es consulten les dades resultants de la consulta. Mentre s’està realitzant una consulta (fins que no es tanqui la consulta), l’única acció que pot fer el programa amb la connexió a la base de dades és obtenir més dades de la consulta realitzada. No es pot ni inserir, ni modificar, ni eliminar dades.</li>
+<li><strong>Tancar la consulta</strong>: una vegada el programa (o l’usuari) han acabat el tractament de les dades o s’han obtingut totes les dades, cal donar per finalitzada la consulta. Això permetrà tornar a l’estat de “connexió establerta” i poder executar noves operacions SQL sobre la base de dades. A aquesta acció també se l’anomena <em>Tancar la consulta</em>.</li>
+</ul>
+<p><strong>Exemple de modificació de dades</strong></p>
+<p>Es pot imaginar el cas de voler modificar el preu d’un producte de 2 € a 1 €, fer-ho malament i acabant modificant TOTS els preus de la botiga a 1 €. Com es recuperen els anteriors preus de tots els productes afectats? Si s’ha fet servir el sistema de transaccions, es pot fer un <em>rollback</em>. Si no, amb una còpia de seguretat anterior.</p>
+<h3 id="11transaccions"><strong>1.1.Transaccions</strong><a class="headerlink" href="#11transaccions" title="Permanent link">&para;</a></h3>
+<p>El concepte de <strong><em>transacció</em></strong> es fa servir quan es vol executar un conjunt d’instruccions SQL amb la característica que s’han d’executar totes les instruccions del conjunt, i si no es pot, no se n’ha d’executar cap.</p>
+<p>Una transacció comença amb una instrucció (<code>Begin</code>, <code>Begin transaction</code> o <code>Start transaction</code>, depenent del sistema gestor de bases de dades que es faci servir), continua amb totes les instruccions que s’han d’executar, i pot acabar de dues maneres:</p>
+<ul>
+<li><strong>Confirmada</strong>: si totes les instruccions de la transacció s’han executat correctament i la transacció es dóna per bona, es confirma amb la instrucció <code>commit</code>.</li>
+<li><strong>Avortada</strong>: si s’ha produït algun error en l’execució de les instruccions de la transacció, cal deixar la base de dades en el mateix estat que hi era ABANS del començament de la transacció. Una transacció s’avorta amb la instrucció <code>rollback.</code></li>
+</ul>
+<p>En els sistemes transaccionals hi ha un mode anomenat <em>autocommit</em>, que fa un <code>commit</code> (confirmació) automàtic al final de cada instrucció SQL que s’executa. Fer servir aquest mode <em>autocommit</em> pot esdevenir problemàtic en haver de desfer un conjunt d’operacions.</p>
+<p><strong>Exemple de transacció</strong></p>
+<p>Qualsevol transferència bancària és una transacció. Suposem que es vol realitzar una transferència bancària de 1.000 euros d’un compte X a un compte Y. Fer una transferència implica, com a mínim, fer dues modificacions a la base de dades: 1) Restar 1.000 euros del saldo del compte X i 2) Afegir 1.000 euros del saldo del compte Y. Si ambdues operacions acaben correctament, la transferència és acceptada i acaba correctament. Però suposem que l’operació d’afegir 1000 euros al compte Y acaba amb error. Si no fem servir transaccions i no podem anul·lar la transacció sencera es perdran 1.000 euros, ja que s’haurà restat 1.000 euros del compte X (definitiu) però aquests no han anat a parar enlloc, ja que no s’han afegit al compte Y. Si anul·lem la transacció mitjançant un <em>rollback</em>, es desfaran les operacions que componen la transacció i els saldos dels comptes X i Y quedaran com si mai s’haguessin transferit al compte.</p>
+<h2 id="2parametres-de-configuracio-de-la-connexio"><strong>2.Paràmetres de configuració de la connexió</strong><a class="headerlink" href="#2parametres-de-configuracio-de-la-connexio" title="Permanent link">&para;</a></h2>
+<p>Com s’ha indicat prèviament, el primer que cal fer és connectar-se a la base de dades. Els paràmetres de connexió necessaris per a fer-ho són, en la majoria dels casos:</p>
+<ul>
+<li><strong>Servidor</strong>: és el nom del servidor (o l’adreça IP) on està ubicat el SGBD que allotja la base de dades a la que es vol connectar. Si el servidor està a la mateixa màquina, llavors serà <strong><em>localhost</em></strong>.</li>
+<li><strong>Usuari</strong>: la connexió sempre s’ha de fer mitjançant les credencials d’un determinat usuari de la base de dades. Això permetrà controlar a quines dades té accés i amb quins permisos. S’ha de proveir doncs el nom de l’usuari amb que ens volem connectar a la base de dades.</li>
+<li><strong>Paraula de pas</strong>: és necessària per a autentificar a l’usuari de la base de dades.</li>
+<li><strong>Base de dades</strong>: nom de la base de dades ubicada al servidor, a la que es vol connectar per a fer la gestió de les dades.</li>
+</ul>
+<p>Després d’introduir tota aquesta informació, el programa estarà preparat per a intentar establir la connexió amb la base de dades.</p>
+<p><strong>PHP</strong>: exemple de paràmetres de configuració. Són les variables que després es passaran a la instrucció de connexió:</p>
+<p><img alt="06555_m3_02.gif" src="img/06555_m3_02.gif" /></p>
+<h2 id="3realitzacio-i-comprovacio-de-la-connexio"><strong>3.Realització i comprovació de la connexió</strong><a class="headerlink" href="#3realitzacio-i-comprovacio-de-la-connexio" title="Permanent link">&para;</a></h2>
+<p>La connexió amb la base de dades es fa sempre a través d’una variable del programa, que és l’encarregada de realitzar la comunicació bidireccional amb el connector de MySQL.</p>
+<p>La instrucció necessària per realitzar la connexió retorna aquesta variable, una vegada executada amb els paràmetres de connexió especificats en l’apartat anterior.</p>
+<p><strong>PHP</strong>: retorna una variable amb la connexió establerta, que després s’haurà de fer servir per a la resta de tasques amb la base de dades. Si la variable (<strong>$con</strong> en aquest cas) és FALS després d’haver realitzat la instrucció, és que no s’ha pogut establir la connexió.</p>
+<p><img alt="Figura 1: Codi de connexió amb la base de dades" src="img/06555_m3_03.gif" />
+Figura 1: Codi de connexió amb la base de dades</p>
+<h2 id="4insercio-modificacio-i-eliminacio-de-dades"><strong>4.Inserció, modificació i eliminació de dades</strong><a class="headerlink" href="#4insercio-modificacio-i-eliminacio-de-dades" title="Permanent link">&para;</a></h2>
+<p>La instrucció per a realitzar aquestes tasques, sol ser la mateixa. El que canvia és la comanda SQL que es passa a la instrucció. Com que aquesta comanda SQL és puntual (un <code>INSERT</code>, un <code>DELETE</code> o un <code>UPDATE</code>) es fan sense que calgui cap més intervenció per part de l’usuari. Això és diferent en la comanda <code>SELECT</code>, on normalment es demanaran dades de diferents files, i caldrà que l’usuari vagi demanant les dades retornades per la comanda SQL a mesura que les vagi necessitant.</p>
+<p><strong>PHP</strong>: retorna una variable amb el resultat d’haver realitzat una comanda SQL. Si aquest resultat és CERT, la comanda s’ha realitzat correctament. Se li ha de passar com a paràmetres la connexió establerta anteriorment i la instrucció a realitzar.</p>
+<p>Figura 2: codi d’inserció d’una dada. Per a executar aquest codi, primer cal realitzar la connexió amb la base de dades amb el codi de la figura 1.</p>
+<p><img alt="Figura 2: codi d’inserció d’una dada. Per a executar aquest codi, primer cal realitzar la connexió amb la base de dades amb el codi de la figura 1." src="img/06555_m3_04.gif" /></p>
+<p>Figura 3: codi de modificació d’una dada. Per a executar aquest codi, primer cal realitzar la connexió amb la base de dades amb el codi de la figura 1.</p>
+<p><img alt="Figura 3: codi de modificació d’una dada. Per a executar aquest codi, primer cal realitzar la connexió amb la base de dades amb el codi de la figura 1." src="img/06555_m3_05.gif" /></p>
+<p>Figura 4: codi d’eliminació d’una dada. Per a executar aquest codi, primer cal realitzar la connexió amb la base de dades amb el codi de la figura 1.</p>
+<p><img alt="Figura 4: codi d’eliminació d’una dada. Per a executar aquest codi, primer cal realitzar la connexió amb la base de dades amb el codi de la figura 1." src="img/06555_m3_06.gif" /></p>
+<p>Com es pot veure, l’única diferència entre una inserció, una modificació i un esborrat és el codi de la instrucció que s’executa. Es munta primer la cadena de caràcters amb la instrucció de SQL que es vol executar, després se li passa com a paràmetre, junt amb la variable de la connexió prèviament establerta, a la instrucció <code>mysql_query</code> i aquesta retorna un resultat. Si el resultat és CERT, la instrucció s’ha realitzat correctament.</p>
+<p>Aquestes tres instruccions modifiquen el contingut de la base de dades, ja sigui inserint, modificant o eliminant dades. Als exemples mostrats, si es produeix algun error en l’execució de la instrucció (que la instrucció SQL sigui sintàcticament incorrecta, per exemple) es genera un error i la instrucció no s’executa. Però en el cas que tot estigui correcte, el contingut de la base de dades serà modificat, i no es podrà desfer aquesta modificació, a menys que es faci servir el sistema de transaccions, d’aquesta manera:</p>
+<p>Figura 5: codi d’eliminació d’una dada amb transaccions. Per a executar aquest codi, primer cal realitzar la connexió amb la base de dades amb el codi de la figura 1.</p>
+<p><img alt="Figura 5: codi d’eliminació d’una dada amb transaccions. Per a executar aquest codi, primer cal realitzar la connexió amb la base de dades amb el codi de la figura 1." src="img/06555_m3_07.gif" /></p>
+<p>El resultat de l’execució d’aquest codi és el següent:</p>
+<p><img alt="06555_m3_08.jpg" src="img/06555_m3_08.jpg" /></p>
+<p>Com es pot veure, es fa la connexió a la base de dades, es fa l’eliminació de l’estudiant amb DNI 52666666F (el resultat mostra que hi ha 0 estudiants amb aquest DNI), es fa <em>rollback</em>, i es torna a fer una consulta del mateix estudiant. El resultat és 1, perquè el <em>rollback</em> desfà els canvis realitzats dintre de la transacció.</p>
+<h2 id="5consulta-de-dades"><strong>5.Consulta de dades</strong><a class="headerlink" href="#5consulta-de-dades" title="Permanent link">&para;</a></h2>
+<p>En aquest apartat aprendrem a fer una consulta a la base de dades.</p>
+<h3 id="51realitzacio-de-la-consulta"><strong>5.1.Realització de la consulta</strong><a class="headerlink" href="#51realitzacio-de-la-consulta" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>La instrucció per a fer una consulta a la base de dades, o sigui, executar una comanda `SELECT` de SQL, pot variar respecte a la comanda per a fer `INSERT`, `UPDATE` o `DELETE` depenent del llenguatge. En el cas de PHP, la instrucció és la mateixa en ambdós casos.
+</code></pre></div>
+<p>Una vegada executada la comanda <code>SELECT</code>, la informació demanada ja està disponible, però encara cal que el programa carregi la informació obtinguda en variables, per a realitzar el tractament corresponent (que pot ser mostrar aquestes dades a l’usuari, per exemple). Per això, una vegada realitzada la instrucció de consultar, encara queda la feina d’obtenir les dades consultades i emmagatzemar-les dintre de variables del programa en PHP per tal de ser tractades.</p>
+<p>La unitat mínima de tractament de les dades d’una consulta és la <strong><em>fila o registre</em></strong>. Quan es realitza una consulta, aquesta pot retornar una gran quantitat de files, amb un cert nombre de camps o atributs per a cada fila. Però si hi accedim des d’un programa les dades s’hauran de tractar fila a fila.</p>
+<p><strong>PHP</strong>: en aquest cas, la instrucció que ha realitzat la consulta (<code>mysqli_query</code>) retorna un enllaç a les dades consultades. Si la consulta no s’ha pogut realitzar (per un error a la comanda <code>SELECT</code>, per exemple) la variable <code>$res</code> serà NULL.</p>
+<p>Figura 6: codi de consulta d’una dada. Per a executar aquest codi, primer cal realitzar la connexió amb la base de dades amb el codi de la figura 1</p>
+<p><img alt="Figura 6: codi de consulta d’una dada. Per a executar aquest codi, primer cal realitzar la connexió amb la base de dades amb el codi de la figura 1" src="img/06555_m3_09.gif" /></p>
+<p>En aquest cas, el comportament de la variable <code>$res</code> és diferent del cas d’inserció, modificació o esborrat, ja que si la consulta s’ha pogut realitzar amb èxit, la variable <code>$res</code> conté un apuntador a la zona de memòria que s’haurà de consultar per a obtenir la informació.</p>
+<h3 id="52acces-i-gestio-de-les-dades-retornades-per-una-consulta"><strong>5.2.Accés i gestió de les dades retornades per una consulta</strong><a class="headerlink" href="#52acces-i-gestio-de-les-dades-retornades-per-una-consulta" title="Permanent link">&para;</a></h3>
+<p>Una instrucció de consulta de dades pot retornar una gran quantitat d’informació. Per a accedir a aquesta informació, cal fer-lo de forma ordenada.</p>
+<p>Per a poder realitzar aquestes funcionalitats, es fa servir el concepte de <strong><em>cursor de dades</em></strong>. Conceptualment podem definir un cursor de dades com una variable que apunta a la zona de memòria que conté el resultat d’una consulta SQL (de tipus <code>SELECT</code>) i permet iterar per les diferents files els resultats d’aquesta consulta, una per una. En cada iteració s’obté les dades de la fila i es passa a la següent fila. Aquesta acció és el que s’anomena fer un <em>fetch</em> del cursor.</p>
+<p><img alt="06555_m3_10.gif" src="img/06555_m3_10.gif" /></p>
+<p>Just després d’executar la instrucció de consulta, si no s’ha produït cap error, la variable que retorna la instrucció de consulta <code>($res</code> en aquest cas) juga el rol d’un cursor i apunta a la primera fila de dades retornada.</p>
+<p><strong>PHP</strong>: per a accedir a una fila de dades retornada per una instrucció <code>mysqli_query</code> (la primera o qualsevol altre fila), es fa servir la instrucció <code>mysqli_fetch_assoc</code>, que, a partir d’un conjunt de dades retornat per la instrucció de consulta, retorna la fila actual de dades en forma d’array associatiu. En aquest cas, es retorna un vector <code>($fila</code>) amb tantes posicions com columnes hi hagi al resultat de la consulta, i per a accedir a un d’aquests resultats, només cal referenciar la posició del vector amb el nom del camp.</p>
+<p><img alt="06555_m3_11.gif" src="img/06555_m3_11.gif" /></p>
+<p>Cada vegada que es fa un <code>mysqli_fetch_assoc</code>, a més de retornar una fila de dades, s’avança una posició en els resultats del <code>SELECT</code> perquè a la següent crida a <code>mysqli_fetch_assoc</code>, es pugui retornar la fila adient.</p>
+<p>Si la crida a la instrucció <code>mysqli_fetch_assoc</code> retorna un valor NULL, vol dir que ja no hi ha més files de dades.</p>
+<p>Quan la consulta realitzada retorna més d’una fila de dades, cal fer el tractament de la informació fila a fila, seguint l’estructura d’un cursor de dades. Per a poder fer-ho cal programar un bucle per a anar accedint una per una a cada fila, fent a cada pas el tractament corresponent a aquella fila. Aquest bucle s’ha d’anar repetint mentre hi hagi files de dades a tractar. És molt important reconèixer aquest fet per a no programar bucles infinits, o amb errors.</p>
+<p><strong>PHP</strong>: per a poder fer el tractament de totes les files de dades retornades per una consulta, s’ha de programar un bucle que a cada iteració, comprovi si la fila obtinguda és o no un valor NULL. En cas que NO sigui NULL, s’accedeix als resultats, es fa el tractament corresponent (en aquest cas, el tractament consisteix a mostrar la informació per pantalla) i s’accedeix a la següent fila. Si la fila accedida resulta que és NULL, ja pot acabar el bucle, ja que no hi ha més dades retornades a la consulta.</p>
+<p><img alt="06555_m3_12.gif" src="img/06555_m3_12.gif" /></p>
+<p>El següent diagrama mostra de forma gràfica com actuen les tres instruccions necessàries per a accedir, a partir d’una sentència <code>SELECT</code>, a un valor individual d’una fila de dades.</p>
+<p>Primer s’obté el resultat de la consulta <code>SELECT</code> amb <code>mysqli_query</code>, després s’obté la fila de dades actual amb <code>mysqli_fetch_assoc</code>, que també avança la fila actual, i finalment s’obté la dada individual accedint a l’array associatiu mitjançant el nom del camp: <strong>$nom \= $fila[‘nom’]</strong>;</p>
+<p><img alt="06555_m3_13.gif" src="img/06555_m3_13.gif" /></p>
+<p><strong>Array associatiu</strong></p>
+<p>Un array associatiu és un vector (Array) on l’accés als seus elements NO es fa per posició, com en els arrays comuns, sinó que es fa mitjançant un índex de text:</p>
+<p>Array comú: vc[4] \= 32;</p>
+<p>Array Associatiu: va[‘edat’] \= 32;</p>
+<h3 id="53finalitzacio-de-la-consulta"><strong>5.3.Finalització de la consulta</strong><a class="headerlink" href="#53finalitzacio-de-la-consulta" title="Permanent link">&para;</a></h3>
+<p>Quan s’ha acabat de treballar amb les dades d’una consulta, cal tancar-la per a alliberar els recursos que s’han fet servir, com per exemple, la memòria RAM per a emmagatzemar les dades.</p>
+<p><strong>PHP</strong>: quan finalitza un script, automàticament es tanquen les consultes obertes i s’allibera memòria. De totes maneres, hi ha una instrucció per a tancar explícitament les consultes obertes, a la que se li ha de passar el conjunt de resultats obtinguts de fer un <code>mysqli_query</code>:</p>
+<p><img alt="06555_m3_14.gif" src="img/06555_m3_14.gif" /></p>
+<h2 id="6desconnexio-de-la-base-de-dades"><strong>6.Desconnexió de la base de dades</strong><a class="headerlink" href="#6desconnexio-de-la-base-de-dades" title="Permanent link">&para;</a></h2>
+<p>Una vegada acabada la feina de gestió de les dades, cal desconnectar el programa de la base de dades.</p>
+<p><strong>PHP</strong>: Quan finalitza un script, automàticament es tanquen les connexions establertes amb la base de dades. No obstant això, hi ha una instrucció per a tancar explícitament les connexions establertes:</p>
+<p><img alt="06555_m3_15.gif" src="img/06555_m3_15.gif" /></p>
+<h2 id="7gestio-i-control-derrors-i-obtencio-dinformacio"><strong>7.Gestió i control d’errors i obtenció d’informació</strong><a class="headerlink" href="#7gestio-i-control-derrors-i-obtencio-dinformacio" title="Permanent link">&para;</a></h2>
+<p>PHP disposa de dues instruccions per a controlar els errors que es poden produir durant la transferència de dades des de i cap a la base de dades amb el sistema <em>mysqli</em>. Aquestes dues instruccions són les següents:</p>
+<p><img alt="06555_m3_16.gif" src="img/06555_m3_16.gif" /></p>
+<p>Retorna el codi d’error si n’hi ha algun. Retorna 0 si no s’ha produït cap error a l’execució de la darrera instrucció <code>mysqli_query</code>.</p>
+<p><em><img alt="06555_m3_17.gif" src="img/06555_m3_17.gif" /></em></p>
+<p>Retorna el text d’error de la darrera instrucció SQL executada amb <code>mysqli_query</code>, si és que s’ha produït un error. Per exemple:</p>
+<p><img alt="06555_m3_18.gif" src="img/06555_m3_18.gif" /></p>
+<p>A banda, hi ha també una instrucció molt útil a l’hora de no tenir problemes amb els caràcters especials, com els accents, dièresis, etc. Aquesta instrucció és:</p>
+<p><img alt="06555_m3_19.gif" src="img/06555_m3_19.gif" /></p>
+<p>Estableix el conjunt de caràcters especials per a fer servir a la connexió. Per exemple:</p>
+<p><img alt="06555_m3_20.gif" src="img/06555_m3_20.gif" /></p>
+<p>Finalment, hi ha una instrucció que retorna el nombre de files o registres afectats per la darrera instrucció <code>mysql_query</code>. Aquestes files poden ser, per exemple, el nombre de files seleccionades per un <code>SELECT</code>, o eliminades per un <code>DELETE</code>:</p>
+<p><img alt="06555_m3_21.gif" src="img/06555_m3_21.gif" /></p>
+<p>Per exemple:</p>
+<p><img alt="06555_m3_22.gif" src="img/06555_m3_22.gif" /></p>
+<h2 id="8consideracions-generals-i-bones-practiques"><strong>8.Consideracions generals i bones pràctiques</strong><a class="headerlink" href="#8consideracions-generals-i-bones-practiques" title="Permanent link">&para;</a></h2>
+<p>Quan s’aborda el problema de programar una gestió de dades, cal tenir en compte algunes consideracions, que tenen a veure amb la consistència de les dades. En aquest apartat indicarem com tenir en compte les restriccions d’identitat i d’integritat referencial. Si es tenen en consideració, s’evitarà cometre errors, que en alguns casos poden ser molt greus, deixant la base de dades en un estat inconsistent o eliminant dades rellevants per error.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>Les restriccions d’integritat són condicions que han de complir els valors de la base de dades per a garantir que les dades representades a la base de dades componen una instància vàlida del model representat.
+</code></pre></div>
+<p>Exemples de restriccions d’integritat serien: l’edat d’una persona no pot ser negativa o una persona tan sols pot tenir una mare biològica.</p>
+<h3 id="81restriccio-didentitat-claus-primaries"><strong>8.1.Restricció d’identitat (claus primàries)</strong><a class="headerlink" href="#81restriccio-didentitat-claus-primaries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>La restricció d’identitat de clau primària fa referència als valors que es poden assignar a un atribut declarat com a clau primària. Aquests valors no poden ser valor NULL, i han de ser tots diferents, o sigui, no hi pot haver repetits.
+</code></pre></div>
+<p>Aquestes característiques de les claus primàries comporten que cal tenir en compte una sèrie de consideracions a l’hora de realitzar diferents operacions on estiguin implicades.</p>
+<p><strong>1) Inserció.</strong> La consideració fonamental a l’hora de fer una inserció de dades a una base de dades és comprovar que les dades no existeixen a la base de dades. Aquí, suposant que volem inserir dades que ja es troben a la base de dades, ens podem trobar amb dos casos, en funció de si proporcionem nosaltres les claus primàries o fem que la clau primària sigui un camp autoincremental:</p>
+<ul>
+<li>Si proporcionem nosaltres la clau primària: en cas que ja hi hagi una clau primària amb el valor introduït, l’operació d’inserció acabarà amb error i no es produirà.</li>
+<li>Clau primària autoincremental: aquest cas és més greu, perquè com el sistema gestor de bases de dades no sap que les dades que inserim ja existeixen a la base de dades, les torna a crear amb una nova clau. El resultat és que introduirem una inconsistència en les dades, ja que tindrem el mateix objecte representat dues vegades.</li>
+</ul>
+<p>Abans de fer una inserció podem comprovar que la dada no estigui ja a la base de dades. Aquesta comprovació es pot fer executant una consulta prèvia, que retorni el nombre de files que hi ha amb la mateixa clau primària (o consultant els camps que calgui) que la fila a inserir. Si aquesta consulta retorna 0 (zero), ja es pot inserir sense por de tenir un error de clau primària.</p>
+<p><strong>2) Eliminació.</strong> En el cas de l’eliminació d’una o més dades, no es genera cap error que tingui a veure amb la restricció d’integritat de clau primària.</p>
+<p><strong>3) Modificació.</strong> En realitzar una instrucció de modificació, si les dades a modificar no inclouen atributs que formin part de la clau primària, no hi ha cap problema.</p>
+<p>En cas que es vulgui modificar el valor de la clau primària total o parcialment (en casos on les claus primàries estiguin compostes per diversos atributs) cal tenir en compte que el nou valor a modificar, no coincideixi amb el valor de la clau primària de cap altra fila de dades. Cal tenir en compte que una modificació de la clau primària es pot veure com una eliminació de la dada antiga i una inserció de la dada nova, així que s’aplica tot el que s’aplicava a inserció.</p>
+<h3 id="82restriccio-dintegritat-referencial-claus-foranes"><strong>8.2.Restricció d’integritat referencial (claus foranes)</strong><a class="headerlink" href="#82restriccio-dintegritat-referencial-claus-foranes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>La restricció d’integritat referencial limita els valors que pot agafar un camp sobre el qual hi ha definida una clau forana. Aquests valors poden ser, o bé valor NULL (quan no està relacionada amb cap altra fila o no sabem amb quina fila està relacionada), o bé el valor de la clau primària referenciada.
+</code></pre></div>
+<p>Per exemple, en el cas que tinguem dues taules a la base de dades, una d’estudiants i l’altra de cursos, podríem definir una clau forana a la taula estudiant que ens indiqués quin curs està realitzant l’estudiant (això implicaria que un estudiant no pot fer més d’un curs a l’hora, però a efectes d’aquest exemple això no importa).</p>
+<p>Hi ha molts conflictes que poden apareixen en fer modificacions a la base de dades amb les claus foranes. Aquí en veurem els més importants. Alguns d’aquests conflictes poden solucionar-se de diferents formes. Per exemple, suposem que tenim un estudiant, en Joan Pere Pau, que està matriculat del 3r Grau d’informàtica (per tant, té una clau forana a la fila de cursos que representa el 3r Grau d’informàtica). Suposem que arran d’una modificació a la taula de cursos es vol eliminar el 3r Grau d’informàtica. Fer aquesta eliminació sense més provocaria que la base de dades caigués en un estat inconsistent, ja que es violaria la restricció d’integritat referencial (els estudiants del 3r Grau d’informàtica tindrien un valor de clau forana inexistent a la taula de cursos). Per tal de solucionar aquesta inconsistència, el sistema gestor de base de dades té diferents opcions:</p>
+<ul>
+<li>No deixar fer l’eliminació. En aquest cas no es permetria eliminar el 3r Grau d’Informàtica de la taula de cursos.</li>
+<li>Deixar fer l’eliminació i posar els valors de clau forana que hi apunten a NULL. En aquest cas s’eliminaria el 3r Grau d’Informàtica de la taula de cursos i es modificaria a NULL la clau forana dels estudiants que l’estaven cursant. Per tant, es perdrà informació ja que tindrem estudiants però no tindrem constància sobre el curs que estan o estaven fent.</li>
+<li>Fer l’eliminació en cascada. En aquest cas, s’eliminaria el 3r Grau d’Informàtica de la taula de cursos. A més a més, s’eliminarien de la taula d’estudiants totes aquelles persones que estiguessin fent el curs de 3r Grau d’Informàtica. Així, com no hi ha ningú que apunti al curs eliminat, es garanteix que no es viola la restricció d’integritat.</li>
+</ul>
+<p>Fer que el sistema gestor de base de dades utilitzi una o una altra estratègia és una decisió de disseny que el dissenyador de la base de dades haurà d’avaluar. A continuació mostrarem algunes de les violacions de les restriccions d’integritat referencial pels casos d’insercions, modificacions i esborrats a la base de dades i com poden tractar-se. També mostrarem com definir a MySQL les tres estratègies abans esmentades.</p>
+<p><strong>1) Inserció.</strong> A l’hora d’inserir una dada, a banda de controlar la restricció d’identitat, cal tenir en compte també si hi ha dades relacionades a la taula on es vol inserir la dada mitjançant claus foranes.</p>
+<p>Si a la inserció hi ha un camp de la taula que és clau forana cap a la clau primària d’una altra taula, el que s’ha de fer és comprovar que aquest valor ja existeix a l’altre taula. Altrament el sistema gestor de base de dades no permetrà fer la inserció. Per exemple, si a la base de dades hi ha aquestes dues taules:</p>
+<p><img alt="06555_m3_23.gif" src="img/06555_m3_23.gif" /></p>
+<p>Es podria inserir “Irene Riaza Dot”, perquè el curs que fa, 3GInf, està a la clau primària de la taula de cursos. En canvi, no es podria inserir “Victor Serra Piquer” perquè vol fer un curs, 1GFis que no està a clau primària de la taula de cursos. Abans de fer la inserció, caldria comprovar aquesta situació.</p>
+<p><strong>2) Eliminació.</strong> En el cas de l’eliminació de dades, cal comprovar que no hi hagi cap clau forana apuntant a la fila o files que es volen eliminar. Que passa si es vol eliminar el curs 1GInf de la taula CURS? Que es fa amb els alumnes que fan aquest curs, Mariano Fadó Giménez i Sílvia Martínez Español?</p>
+<p>Hi ha tres possibles solucions:</p>
+<p><strong>a)</strong> Restricció: no es pot eliminar la informació apuntada per una clau forana. Cal eliminar primer la informació relacionada. Si es vol eliminar el curs “1GInf”, es generaria un error dient que hi ha alumnes al curs i no es podrà eliminar.</p>
+<p><img alt="06555_m3_24.gif" src="img/06555_m3_24.gif" /></p>
+<p><strong>MySQL</strong>: per a indicar que una clau forana ha d’actuar de forma restrictiva quan es produeix una eliminació de dades, no cal afegir res a la instrucció, ja que és el comportament per defecte de les claus foranes a MySQL. De totes maneres, la instrucció seria:</p>
+<p><code>Alter table ESTUDIANT add foreign key curs references CURS(nom) on delete restrict;</code></p>
+<p><strong>b)</strong> Posar a NULL: abans d’eliminar el curs, es modifica el curs dels dos alumnes afectats i es posa a NULL. D’aquesta manera, a la taula ESTUDIANT ja no hi és el curs “1Ginf” a eliminar. Després, s’elimina aquest curs de la taula CURS. Les dues taules de l’exemple quedarien així:</p>
+<p><img alt="06555_m3_25.gif" src="img/06555_m3_25.gif" /></p>
+<p><strong>MySQL</strong>: per a indicar que una clau forana es comporti de forma “posar a NULL” quan es produeix una eliminació de dades, es fa de la següent manera:</p>
+<p><code>Alter table ESTUDIANT add foreign key curs references CURS(nom) on delete set null;</code></p>
+<p><strong>c)</strong> Cascada: l’eliminació en cascada s’ha de definir per a cada relació entre taules que volem que s’apliqui. És perillosa, ja que elimina més dades de les que en un principi es veurien afectades per la instrucció que s’executa. Aquest sistema consisteix a eliminar primer de la taula relacionada (ESTUDIANT en aquest cas), tots els registres que poden donar un problema d’integritat referencial (el segon i el quart, en aquest cas), i després fer l’eliminació demanada a la primera taula (CURS en aquest cas). Les dues taules quedarien així:</p>
+<p><img alt="06555_m3_26.gif" src="img/06555_m3_26.gif" /></p>
+<p><strong>MySQL:</strong> per a indicar que una clau forana elimini dades en cascada en fer una eliminació de dades, es fa de la següent manera:</p>
+<p><code>Alter table ESTUDIANT add foreign key curs references CURS(nom) on delete cascade;</code></p>
+<p><strong>3) Modificació:</strong> com ja s’ha vist amb anterioritat, una modificació es pot equiparar a una eliminació de les dades velles, i una inserció de les dades noves. Llavors, cal tenir en compte aquests dos fets, pel que fa a evitat errors d’integritat referencial.</p>
+<p>El valor que es vol modificar, si està referenciat per una clau forana, se li apliquen les mateixes regles que en el cas de l’eliminació, o sigui: <em>restricció</em>, <em>posar a NULL</em> o <em>cascada</em>. Això és així perquè a tots els efectes, el valor a modificar es perdrà, sobreescrit pel nou valor, i això pot afectar els valors referenciats.</p>
+<p>A l’exemple anterior, si a la taula CURS es vol canviar el nom del curs “3GM” per “3GMul”, afectarà l’estudiant Claudina Marinas Salvanya, que està fent un curs anomenat <em>3GM</em>.</p>
+<p>De la mateixa manera, si es vol modificar el valor d’un atribut que és clau forana cap a una altra taula, es pot fer, sempre que es continuïn complint les regles d’integritat, referencial, o sigui, que el nou valor sigui NULL, o bé un altre valor de la clau primària referenciada. Per exemple, Jaume Serra Lessner vol canviar-se de curs. Té clar que no vol fer “1GM”. Hi ha tres possibilitats:</p>
+<ul>
+<li><strong>No té clar quin nou curs vol fer. S’ho pensa.</strong> Per ara, el valor del curs que fa és NULL, que és un valor vàlid per a una clau forana.</li>
+<li><strong>Té clar què vol fer “1GInf”.</strong> Es pot canviar el valor sense cap problema, perquè és un dels valors de la clau primària de CURS.</li>
+<li><strong>Té clar què vol fer “Astrofísica Aplicada”</strong>. Doncs no ho pot fer, perquè no és un dels valors de la clau primària de CURS. Si es fes una modificació amb aquest valor, es generaria un error d’integritat referencial.</li>
+</ul>
+<p><strong>MySQL.</strong> Per a indicar com es vol que reaccioni la taula en modificar un valor d’una clau forana, la sintaxi és molt similar al cas de l’eliminació de dades:</p>
+<ul>
+<li><strong>Restrictiu</strong>: <code>Alter table ESTUDIANT add foreign key curs references CURS(nom) on update restrict;</code></li>
+<li><strong>Posar a NULL</strong>: <code>Alter table ESTUDIANT add foreign key curs references CURS(nom) on update set null;</code></li>
+<li><strong>Cascada</strong>: <code>Alter table ESTUDIANT add foreign key curs references CURS(nom) on update cascade;</code></li>
+</ul>
+<p>A una mateixa clau forana es poden combinar les accions pel cas de l’eliminació i pel cas de la modificació. No cal fer dues instruccions, només cal concatenar:</p>
+<p><code>Alter table ESTUDIANT add foreign key curs references CURS(nom) on delete set null on update cascade;</code></p>
+<h2 id="9annex-codi-emprat-als-exemples"><strong>9.Annex: codi emprat als exemples</strong><a class="headerlink" href="#9annex-codi-emprat-als-exemples" title="Permanent link">&para;</a></h2>
+<p><strong>1) Codi de connexió, inserció, modificació, eliminació, consulta d’una dada i consulta de diverses dades amb un cursor.</strong></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos=" 2 "></span>   <span class="c1">//paràmetres de connexió</span>
+<span class="linenos" data-linenos=" 3 "></span>   <span class="nv">$servidor</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span>   <span class="nv">$usuari</span> <span class="o">=</span> <span class="s2">&quot;root&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>   <span class="nv">$contrasenya</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span>   <span class="nv">$bd</span> <span class="o">=</span> <span class="s2">&quot;bdprova&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span>   <span class="c1">//realització de la connexió</span>
+<span class="linenos" data-linenos=" 9 "></span>   <span class="nv">$con</span> <span class="o">=</span> <span class="nb">mysqli_connect</span> <span class="p">(</span><span class="nv">$servidor</span><span class="p">,</span> <span class="nv">$usuari</span><span class="p">,</span> <span class="nv">$contrasenya</span><span class="p">,</span> <span class="nv">$bd</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span>   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$con</span><span class="p">)</span>
+<span class="linenos" data-linenos="11 "></span>   <span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span>      <span class="k">die</span><span class="p">(</span><span class="s2">&quot;No s&#39;ha pogut realitzar la connexió. ERROR:&quot;</span> <span class="o">.</span>
+<span class="linenos" data-linenos="13 "></span>      <span class="nx">mysqli_connect_error</span><span class="p">()</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span>   <span class="p">}</span>
+<span class="linenos" data-linenos="15 "></span>
+<span class="linenos" data-linenos="16 "></span>   <span class="c1">//inserció d&#39;una dada</span>
+<span class="linenos" data-linenos="17 "></span>   <span class="nv">$instruccio</span> <span class="o">=</span> <span class="s2">&quot;insert into estudiant </span>
+<span class="linenos" data-linenos="18 "></span><span class="s2">                  values (&#39;52666666F&#39;,&#39;Toni Blanco Serra&#39;,23,&#39;2GM&#39;)&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="19 "></span>   <span class="nv">$res</span> <span class="o">=</span> <span class="nx">mysqli_query</span><span class="p">(</span><span class="nv">$con</span><span class="p">,</span> <span class="nv">$instruccio</span><span class="p">);</span>
+<span class="linenos" data-linenos="20 "></span>   <span class="k">if</span> <span class="p">(</span><span class="nx">mysqli_errno</span><span class="p">(</span><span class="nv">$con</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">//si error es finalitza</span>
+<span class="linenos" data-linenos="21 "></span>   <span class="p">{</span>
+<span class="linenos" data-linenos="22 "></span>      <span class="k">die</span><span class="p">(</span><span class="s2">&quot;No s&#39;ha pogut inserir la dada&lt;br&gt;&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="23 "></span>   <span class="p">}</span>
+<span class="linenos" data-linenos="24 "></span>   <span class="k">echo</span> <span class="s2">&quot;Dada inserida&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="25 "></span>
+<span class="linenos" data-linenos="26 "></span>   <span class="c1">//modificació d&#39;una dada</span>
+<span class="linenos" data-linenos="27 "></span>   <span class="nv">$instruccio</span> <span class="o">=</span> <span class="s2">&quot;update estudiant set edat = 25 </span>
+<span class="linenos" data-linenos="28 "></span><span class="s2">   where DNI = &#39;52666666F&#39;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="29 "></span>   <span class="nv">$res</span> <span class="o">=</span> <span class="nx">mysqli_query</span><span class="p">(</span><span class="nv">$con</span><span class="p">,</span> <span class="nv">$instruccio</span><span class="p">);</span>
+<span class="linenos" data-linenos="30 "></span>   <span class="k">if</span> <span class="p">(</span><span class="nx">mysqli_errno</span><span class="p">(</span><span class="nv">$con</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">//si error es finalitza</span>
+<span class="linenos" data-linenos="31 "></span>   <span class="p">{</span>
+<span class="linenos" data-linenos="32 "></span>      <span class="k">die</span><span class="p">(</span><span class="s2">&quot;No s&#39;ha pogut modificar la dada&lt;br&gt;&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="33 "></span>   <span class="p">}</span>
+<span class="linenos" data-linenos="34 "></span>   <span class="k">echo</span> <span class="s2">&quot;Dada modificada&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="35 "></span>
+<span class="linenos" data-linenos="36 "></span>   <span class="c1">//eliminació d&#39;una dada</span>
+<span class="linenos" data-linenos="37 "></span>   <span class="nv">$instruccio</span> <span class="o">=</span> <span class="s2">&quot;delete from estudiant where DNI = &#39;52666666F&#39;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="38 "></span>   <span class="nv">$res</span> <span class="o">=</span> <span class="nx">mysqli_query</span><span class="p">(</span><span class="nv">$con</span><span class="p">,</span> <span class="nv">$instruccio</span><span class="p">);</span>
+<span class="linenos" data-linenos="39 "></span>   <span class="k">if</span> <span class="p">(</span><span class="nx">mysqli_errno</span><span class="p">(</span><span class="nv">$con</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">//si error es finalitza</span>
+<span class="linenos" data-linenos="40 "></span>   <span class="p">{</span>
+<span class="linenos" data-linenos="41 "></span>      <span class="k">die</span><span class="p">(</span><span class="s2">&quot;No s&#39;ha pogut eliminar la dada&lt;br&gt;&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="42 "></span>   <span class="p">}</span>
+<span class="linenos" data-linenos="43 "></span>   <span class="k">echo</span> <span class="s2">&quot;Dada eliminada&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="44 "></span>
+<span class="linenos" data-linenos="45 "></span>
+<span class="linenos" data-linenos="46 "></span>   <span class="c1">//consulta d&#39;una dada simple</span>
+<span class="linenos" data-linenos="47 "></span>   <span class="nv">$instruccio</span> <span class="o">=</span> <span class="s2">&quot;select nom from estudiant where dni = &#39;52222222B&#39;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="48 "></span>   <span class="nv">$res</span> <span class="o">=</span> <span class="nx">mysqli_query</span><span class="p">(</span><span class="nv">$con</span><span class="p">,</span><span class="nv">$instruccio</span><span class="p">);</span>
+<span class="linenos" data-linenos="49 "></span>   <span class="k">if</span> <span class="p">(</span><span class="nx">mysqli_errno</span><span class="p">(</span><span class="nv">$con</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">//si error es finalitza</span>
+<span class="linenos" data-linenos="50 "></span>   <span class="p">{</span>
+<span class="linenos" data-linenos="51 "></span>      <span class="k">die</span><span class="p">(</span><span class="s2">&quot;No s&#39;ha pogut consultar la dada&lt;br&gt;&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="52 "></span>   <span class="p">}</span>
+<span class="linenos" data-linenos="53 "></span>   <span class="k">echo</span> <span class="s2">&quot;Dada consultada&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="54 "></span>   <span class="nv">$fila</span> <span class="o">=</span> <span class="nx">mysqli_fetch_assoc</span><span class="p">(</span><span class="nv">$res</span><span class="p">);</span>
+<span class="linenos" data-linenos="55 "></span>   <span class="nv">$camp</span> <span class="o">=</span> <span class="s1">&#39;nom&#39;</span><span class="p">;</span>
+<span class="linenos" data-linenos="56 "></span>   <span class="nv">$dada</span> <span class="o">=</span> <span class="nv">$fila</span><span class="p">[</span><span class="s1">&#39;nom&#39;</span><span class="p">];</span>
+<span class="linenos" data-linenos="57 "></span>   <span class="k">echo</span> <span class="nv">$dada</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="58 "></span>
+<span class="linenos" data-linenos="59 "></span>   <span class="c1">//consulta de varies files de dades</span>
+<span class="linenos" data-linenos="60 "></span>   <span class="nv">$instruccio</span> <span class="o">=</span> <span class="s2">&quot;select nom, edat from estudiant&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="61 "></span>   <span class="nv">$res</span> <span class="o">=</span> <span class="nx">mysqli_query</span><span class="p">(</span><span class="nv">$con</span><span class="p">,</span><span class="nv">$instruccio</span><span class="p">);</span>
+<span class="linenos" data-linenos="62 "></span>   <span class="k">if</span> <span class="p">(</span><span class="nv">$res</span> <span class="o">!=</span> <span class="k">null</span><span class="p">)</span>
+<span class="linenos" data-linenos="63 "></span>   <span class="p">{</span>
+<span class="linenos" data-linenos="64 "></span>      <span class="nv">$fila</span> <span class="o">=</span> <span class="nx">mysqli_fetch_assoc</span><span class="p">(</span><span class="nv">$res</span><span class="p">);</span>
+<span class="linenos" data-linenos="65 "></span>      <span class="k">while</span> <span class="p">(</span><span class="nv">$fila</span> <span class="o">!=</span> <span class="k">null</span><span class="p">)</span>
+<span class="linenos" data-linenos="66 "></span>      <span class="p">{</span>   
+<span class="linenos" data-linenos="67 "></span>         <span class="nv">$nom</span> <span class="o">=</span> <span class="nv">$fila</span><span class="p">[</span><span class="s1">&#39;nom&#39;</span><span class="p">];</span>
+<span class="linenos" data-linenos="68 "></span>         <span class="nv">$edat</span> <span class="o">=</span> <span class="nv">$fila</span><span class="p">[</span><span class="s1">&#39;edat&#39;</span><span class="p">];</span>
+<span class="linenos" data-linenos="69 "></span>         <span class="k">echo</span> <span class="s2">&quot;Nom: &quot;</span> <span class="o">.</span> <span class="nv">$nom</span> <span class="o">.</span> <span class="s2">&quot; | edat: &quot;</span> <span class="o">.</span> <span class="nv">$edat</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="70 "></span>         <span class="nv">$fila</span> <span class="o">=</span> <span class="nx">mysqli_fetch_assoc</span><span class="p">(</span><span class="nv">$res</span><span class="p">);</span>
+<span class="linenos" data-linenos="71 "></span>      <span class="p">}</span>
+<span class="linenos" data-linenos="72 "></span>   <span class="p">}</span>
+<span class="linenos" data-linenos="73 "></span>   <span class="nx">mysqli_free_result</span><span class="p">(</span><span class="nv">$res</span><span class="p">);</span>
+<span class="linenos" data-linenos="74 "></span>   <span class="nx">mysqli_close</span> <span class="p">(</span><span class="nv">$con</span><span class="p">);</span>
+<span class="linenos" data-linenos="75 "></span>
+<span class="linenos" data-linenos="76 "></span><span class="cp">?&gt;</span>
+</code></pre></div>
+<p><strong>Codi d’eliminació d’una dada dintre d’una transacció, i posterior <em>rollback</em> per a desfer la transacció.</strong></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos=" 2 "></span>   <span class="c1">//paràmetres de connexió</span>
+<span class="linenos" data-linenos=" 3 "></span>   <span class="nv">$servidor</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span>   <span class="nv">$usuari</span> <span class="o">=</span> <span class="s2">&quot;root&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>   <span class="nv">$contrasenya</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span>   <span class="nv">$bd</span> <span class="o">=</span> <span class="s2">&quot;bdprova&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span>   <span class="c1">//realització de la connexió</span>
+<span class="linenos" data-linenos=" 9 "></span>   <span class="nv">$con</span> <span class="o">=</span> <span class="nb">mysqli_connect</span> <span class="p">(</span><span class="nv">$servidor</span><span class="p">,</span> <span class="nv">$usuari</span><span class="p">,</span> <span class="nv">$contrasenya</span><span class="p">,</span> <span class="nv">$bd</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span>   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$con</span><span class="p">)</span>
+<span class="linenos" data-linenos="11 "></span>   <span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span>      <span class="k">die</span><span class="p">(</span><span class="s2">&quot;No s&#39;ha pogut realitzar la connexió. ERROR:&quot;</span> <span class="o">.</span>
+<span class="linenos" data-linenos="13 "></span>      <span class="nx">mysqli_connect_error</span><span class="p">()</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span>   <span class="p">}</span>
+<span class="linenos" data-linenos="15 "></span>   <span class="k">else</span>
+<span class="linenos" data-linenos="16 "></span>   <span class="p">{</span>
+<span class="linenos" data-linenos="17 "></span>      <span class="k">echo</span> <span class="s2">&quot;S&#39;ha connectat a la base de dades&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="18 "></span>      <span class="c1">//eliminació d&#39;una dada</span>
+<span class="linenos" data-linenos="19 "></span>      <span class="nx">mysqli_query</span><span class="p">(</span><span class="nv">$con</span><span class="p">,</span> <span class="s2">&quot;begin&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="20 "></span>      <span class="nv">$instruccio</span> <span class="o">=</span> <span class="s2">&quot;delete from estudiant where </span>
+<span class="linenos" data-linenos="21 "></span><span class="s2">                     DNI = &#39;52666666F&#39;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="22 "></span>      <span class="nv">$res</span> <span class="o">=</span> <span class="nx">mysqli_query</span><span class="p">(</span><span class="nv">$con</span><span class="p">,</span> <span class="nv">$instruccio</span><span class="p">);</span>
+<span class="linenos" data-linenos="23 "></span>      <span class="k">if</span> <span class="p">(</span><span class="nx">mysqli_errno</span><span class="p">(</span><span class="nv">$con</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">//si error es finalitza</span>
+<span class="linenos" data-linenos="24 "></span>      <span class="p">{</span>
+<span class="linenos" data-linenos="25 "></span>         <span class="k">die</span><span class="p">(</span><span class="s2">&quot;No s&#39;ha pogut eliminar la dada&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="26 "></span>      <span class="p">}</span>
+<span class="linenos" data-linenos="27 "></span>      <span class="k">else</span>
+<span class="linenos" data-linenos="28 "></span>      <span class="p">{</span>
+<span class="linenos" data-linenos="29 "></span>         <span class="c1">//Després de l&#39;eliminació, comprovem que no hi ha cap </span>
+<span class="linenos" data-linenos="30 "></span>         <span class="c1">//estudiant amb aquest DNI</span>
+<span class="linenos" data-linenos="31 "></span>         <span class="nv">$res</span> <span class="o">=</span> <span class="nx">mysqli_query</span><span class="p">(</span><span class="nv">$con</span><span class="p">,</span><span class="s2">&quot;select count(*) as quants </span>
+<span class="linenos" data-linenos="32 "></span><span class="s2">            from estudiant where DNI = &#39;52666666F&#39;&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="33 "></span>         <span class="nv">$fila</span> <span class="o">=</span> <span class="nx">mysqli_fetch_assoc</span><span class="p">(</span><span class="nv">$res</span><span class="p">);</span>
+<span class="linenos" data-linenos="34 "></span>         <span class="nv">$num</span> <span class="o">=</span> <span class="nv">$fila</span><span class="p">[</span><span class="s1">&#39;quants&#39;</span><span class="p">];</span>
+<span class="linenos" data-linenos="35 "></span>         <span class="k">echo</span> <span class="s2">&quot;Estudiants amb DNI = 52666666F: &quot;</span> <span class="o">.</span> <span class="nv">$num</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="36 "></span>      <span class="p">}</span>
+<span class="linenos" data-linenos="37 "></span>      <span class="nx">mysqli_query</span><span class="p">(</span><span class="nv">$con</span><span class="p">,</span><span class="s2">&quot;rollback&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="38 "></span>      <span class="c1">//Després de l&#39;eliminació, i de desfer la transacció amb un </span>
+<span class="linenos" data-linenos="39 "></span>      <span class="c1">//&quot;rollback&quot;,comprovem que l&#39;estudiant no ha estat eliminat </span>
+<span class="linenos" data-linenos="40 "></span>      <span class="c1">//de la base de dades</span>
+<span class="linenos" data-linenos="41 "></span>      <span class="nv">$res</span> <span class="o">=</span> <span class="nx">mysqli_query</span><span class="p">(</span><span class="nv">$con</span><span class="p">,</span><span class="s2">&quot;select count(*) as quants from </span>
+<span class="linenos" data-linenos="42 "></span><span class="s2">         estudiant where DNI = &#39;52666666F&#39;&quot;</span><span class="p">);</span>
+<span class="linenos" data-linenos="43 "></span>      <span class="nv">$fila</span> <span class="o">=</span> <span class="nx">mysqli_fetch_assoc</span><span class="p">(</span><span class="nv">$res</span><span class="p">);</span>
+<span class="linenos" data-linenos="44 "></span>      <span class="nv">$num</span> <span class="o">=</span> <span class="nv">$fila</span><span class="p">[</span><span class="s1">&#39;quants&#39;</span><span class="p">];</span>
+<span class="linenos" data-linenos="45 "></span>      <span class="k">echo</span> <span class="s2">&quot;Estudiants amb DNI = 52666666F: &quot;</span> <span class="o">.</span> <span class="nv">$num</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="linenos" data-linenos="46 "></span>   <span class="p">}</span>
+<span class="linenos" data-linenos="47 "></span><span class="cp">?&gt;</span>
+</code></pre></div>
+<h2 id="10manuals-i-fonts-dinformacio-addicionals"><strong>10.Manuals i fonts d’informació addicionals</strong><a class="headerlink" href="#10manuals-i-fonts-dinformacio-addicionals" title="Permanent link">&para;</a></h2>
+<p><strong>1) MySQL:</strong></p>
+<ul>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/sql-syntax.html">https://dev.mysql.com/doc/refman/8.0/en/sql-syntax.html</a></li>
+<li><a href="https://downloads.mysql.com/docs/refman-5.0-es.pdf">https://downloads.mysql.com/docs/refman-5.0-es.pdf</a></li>
+</ul>
+<p><strong>2) PHP i MySQL:</strong></p>
+<ul>
+<li><a href="https://downloads.mysql.com/docs/apis-php-en.pdf">https://downloads.mysql.com/docs/apis-php-en.pdf</a></li>
+<li><a href="https://php.net/manual/es/book.mysqli.php">https://php.net/manual/es/book.mysqli.php</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Darrera actualització">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">5 de novembre de 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2024 Xavier Sastre - Llicencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
