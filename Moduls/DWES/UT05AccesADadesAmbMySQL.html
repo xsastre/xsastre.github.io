@@ -2445,12 +2445,12 @@ Figura 1: Codi de connexió amb la base de dades</p>
 <p><strong>PHP</strong>: per a poder fer el tractament de totes les files de dades retornades per una consulta, s’ha de programar un bucle que a cada iteració, comprovi si la fila obtinguda és o no un valor NULL. En cas que NO sigui NULL, s’accedeix als resultats, es fa el tractament corresponent (en aquest cas, el tractament consisteix a mostrar la informació per pantalla) i s’accedeix a la següent fila. Si la fila accedida resulta que és NULL, ja pot acabar el bucle, ja que no hi ha més dades retornades a la consulta.</p>
 <p><img alt="06555_m3_12.gif" src="img/06555_m3_12.gif" /></p>
 <p>El següent diagrama mostra de forma gràfica com actuen les tres instruccions necessàries per a accedir, a partir d’una sentència <code>SELECT</code>, a un valor individual d’una fila de dades.</p>
-<p>Primer s’obté el resultat de la consulta <code>SELECT</code> amb <code>mysqli_query</code>, després s’obté la fila de dades actual amb <code>mysqli_fetch_assoc</code>, que també avança la fila actual, i finalment s’obté la dada individual accedint a l’array associatiu mitjançant el nom del camp: <strong>$nom \= $fila[‘nom’]</strong>;</p>
+<p>Primer s’obté el resultat de la consulta <code>SELECT</code> amb <code>mysqli_query</code>, després s’obté la fila de dades actual amb <code>mysqli_fetch_assoc</code>, que també avança la fila actual, i finalment s’obté la dada individual accedint a l’array associatiu mitjançant el nom del camp: <strong>$nom = $fila[‘nom’]</strong>;</p>
 <p><img alt="06555_m3_13.gif" src="img/06555_m3_13.gif" /></p>
 <p><strong>Array associatiu</strong></p>
 <p>Un array associatiu és un vector (Array) on l’accés als seus elements NO es fa per posició, com en els arrays comuns, sinó que es fa mitjançant un índex de text:</p>
-<p>Array comú: vc[4] \= 32;</p>
-<p>Array Associatiu: va[‘edat’] \= 32;</p>
+<p>Array comú: vc[4] = 32;</p>
+<p>Array Associatiu: va[‘edat’] = 32;</p>
 <h3 id="53finalitzacio-de-la-consulta"><strong>5.3.Finalització de la consulta</strong><a class="headerlink" href="#53finalitzacio-de-la-consulta" title="Permanent link">&para;</a></h3>
 <p>Quan s’ha acabat de treballar amb les dades d’una consulta, cal tancar-la per a alliberar els recursos que s’han fet servir, com per exemple, la memòria RAM per a emmagatzemar les dades.</p>
 <p><strong>PHP</strong>: quan finalitza un script, automàticament es tanquen les consultes obertes i s’allibera memòria. De totes maneres, hi ha una instrucció per a tancar explícitament les consultes obertes, a la que se li ha de passar el conjunt de resultats obtinguts de fer un <code>mysqli_query</code>:</p>
