@@ -2,17 +2,69 @@
 
 ## Curs 2024-2025
 
-| SMX      | [AW](AW2425.md) | SI   |
-| -------- | ------------ | ---- |
-| **DAW** | DWES         | DWEC |
-| **DAM** | PSP          |      |
+[//]: #
+[//]: #
+[//]: #
+<style>
+.container {
+  text-align: center; /* Centra les imatges horitzontalment */
+img {
+  display: inline-block;
+  width: 300px; /* Amplada de les imatges */
+  height: auto; /* Manté la proporció */
+  margin: 10px; /* Espai entre les imatges */
+  vertical-align: middle; /* Alinea verticalment les imatges */
+}
+.image-bisell {
+            width: 200px;
+            height: auto;
+            border-radius: 15px; /* Opcional per arrodonir les vores */
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3), -4px -4px 10px rgba(255, 255, 255, 0.3);
+        }
+}
+</style>
 
-## Apunts Desenvolupament d'aplicacions web en entorn servidor
+<div class="container" markdown>
+<img src="imatges/Portada_web_docencia640.png" alt="portada" style="width:auto;height:300px">
+</div>
 
-### CURS 2023-24
+<div class="grid cards" markdown>
 
-#### 2n TRIMESTRE
+-   :material-server:{ .lg .middle } __DAW DWES__ Desenvolupament Web Entorn Servidor
+<!--
+    ---
+-->
+-   :fontawesome-brands-js: __DAW DWEC__ Desenvolupament Web Entorn Client
 
-* Tema 7.Frameworks i Laravel
-  * [Frameworks PHP i introducció a Laravel](071Laravel_introduccio.md)
-  * [Més Laravel](0.7frameworks.md)
+<!--    ---
+
+    [:octicons-book-16: Angular :fontawesome-solid-hourglass-half: _En revisió_ <img src="imatges/worksinprogress_WOv_icon.ico" alt="Icona" width="24" height="24">]()
+
+    [:octicons-book-16: Asincronía y Promesas :fontawesome-solid-hourglass-half: _En revisió_ <img src="imatges/worksinprogress_WOv_icon.ico" alt="Icona" width="24" height="24">]()
+
+    [:octicons-book-16: Comunicación con el servidor - AJAX :fontawesome-solid-hourglass-half: _En revisió_ <img src="imatges/worksinprogress_WOv_icon.ico" alt="Icona" width="24" height="24">]()
+
+-->
+-   :material-message-processing: __DAM PSP__ Programació de serveis i processos
+
+<!--    ---
+
+    [:octicons-book-16: UT03 Programació de comunicacions en xarxa <img src="imatges/new__billboard_NiT_icon.ico" alt="Icona" width="24" height="24">](Moduls/PSP/UT03/UT03Continguts.md)
+
+    [:octicons-book-16: UT03 Exercicis <img src="imatges/new__billboard_NiT_icon.ico" alt="Icona" width="24" height="24">](Moduls/PSP/exercicisisolucions/UT03Exercicis1.md)
+
+-->
+-   :material-security: __SMX SI__ Seguretat Informàtica
+<!--
+    ---
+-->
+-   :material-web: __SMX AW__ Aplicacions Web
+<!--
+    ---
+-->
+-   :material-microsoft-word: __SMX AO__ Aplicacions Ofimàtiques
+<!--
+    ---
+-->
+</div>
+
