@@ -29,7 +29,9 @@ h1 {
     border-color: #7c4dff;
 }
 .md-typeset .descarrega > .admonition-title,
-.md-typeset .descarrega > summary {
+.md-typeset .descarrega > summary,
+.md-typeset .note.dos > .admonition-title,
+.md-typeset .note.dos > summary {
     /*background-color: rgba(43, 155, 70, 0.1);*/
     background-color: rgba(223,65,251,0.1);
 
