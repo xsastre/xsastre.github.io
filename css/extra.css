@@ -20,3 +20,32 @@ table tr:nth-child(odd) {
 h1 {
     color: #4f81bd;
 }
+
+:root {
+    --md-admonition-icon--descarrega: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>')
+}
+.md-typeset .admonition.descarrega,
+.md-typeset details.descarrega {
+    border-color: #7c4dff;
+}
+.md-typeset .descarrega > .admonition-title,
+.md-typeset .descarrega > summary,
+.md-typeset .note.dos > .admonition-title,
+.md-typeset .note.dos > summary {
+    /*background-color: rgba(43, 155, 70, 0.1);*/
+    background-color: rgba(223,65,251,0.1);
+
+}
+.md-typeset .descarrega > .admonition-title::before,
+.md-typeset .descarrega > summary::before {
+    /*background-color: rgb(43, 155, 70);*/
+    background-color: rgb(223,65,251);
+    -webkit-mask-image: var(--md-admonition-icon--descarrega);
+    mask-image: var(--md-admonition-icon--descarrega);
+}
+
+.md-typeset .admonition.estret, .descarrega.estret, .note.estret, .question.estret{
+    max-width: 600px; /* <-- adjust to fit */
+    margin-inline: auto;
+}
+
