@@ -48,8 +48,6 @@
     
       <link rel="stylesheet" href="../../css/neoteroi-mkdocs.css">
     
-      <link rel="stylesheet" href="../../css/neoteroi-gantt.css">
-    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -2030,6 +2028,62 @@
   
   
   
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1_4_2" id="__nav_8_1_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercicis GIMP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_8_1_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Exercicis GIMP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AOF/exercicisisolucions/exercicisGIMP.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Presentació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../AOF/exercicisisolucions/exercicisGIMP01.html" class="md-nav__link">
         
@@ -2073,6 +2127,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../AOF/exercicisisolucions/exercicisGIMP03.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GIMP 03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../AOF/exercicisisolucions/exercicisGIMP04.html" class="md-nav__link">
         
   
@@ -2082,6 +2157,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2777,6 +2860,32 @@
 
 
 <h1 id="projecte-de-desenvolupament-de-damdaw-pfc">Projecte de desenvolupament de DAM/DAW (PFC)<a class="headerlink" href="#projecte-de-desenvolupament-de-damdaw-pfc" title="Permanent link">&para;</a></h1>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+(function() {
+  // 1. Bloqueig clic dret
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  // 2. Bloqueig dreceres de teclat
+  document.addEventListener('keydown', e => {
+    if (e.key === 'F12' || 
+        (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key)) ||
+        (e.ctrlKey && ['U'].includes(e.key))) {
+      e.preventDefault();
+    }
+  });
+
+  // 3. Detecció DevTools
+const checkDevTools = () => {
+  const threshold = 160;
+  if (window.outerWidth - window.innerWidth > threshold || 
+      window.outerHeight - window.innerHeight > threshold) {
+    document.body.innerHTML = 'Accés no permès';
+  }
+};
+setInterval(checkDevTools, 1000);
+})();
+</script>
 <figure>
   <img alt="codi" src="img/content.webp" style="height:200px; width:1800px; object-fit:cover" />
 </figure>
@@ -2797,17 +2906,92 @@
 <h3 id="diagrama-de-gantt">Diagrama de GANTT<a class="headerlink" href="#diagrama-de-gantt" title="Permanent link">&para;</a></h3>
 <p><img alt="img_3.png" src="img_3.png" /></p>
 <h2 id="exemple-memoria-de-pfc">Exemple Memòria de PFC<a class="headerlink" href="#exemple-memoria-de-pfc" title="Permanent link">&para;</a></h2>
-<!--- file: assets/MemoriaPFCExemple_pdf.md --->
-<p>{% with pdf_file = "./assets/MemoriaPFCExemple.pdf" %}</p>
-<p _="%" empty_filepdf="empty_filepdf" set="set">{% set solid_filepdf = '<i class="fas fa-file-pdf"></i>' %}</p>
-<h2 id="example-embedding-a-pdf-file">Example: Embedding a PDF file<a class="headerlink" href="#example-embedding-a-pdf-file" title="Permanent link">&para;</a></h2>
-<object data="{{ ../../../assets/MemoriaPFCExemple.pdf }}" type="application/pdf">
-    <embed src="{{ ../../../assets/MemoriaPFCExemple.pdf }}" type="application/pdf" />
-</object>
+<!--<embed width="100%" height="800" src="./assets/MemoriaPFCExemple.pdf#toolbar=0" type="application/pdf" id="pdf_fitxer" style="pointer-events: none;"/>-->
 
-<h2 id="example-creating-a-link-to-a-pdf-file">Example: Creating a link to a PDF file<a class="headerlink" href="#example-creating-a-link-to-a-pdf-file" title="Permanent link">&para;</a></h2>
-<p><a href="{{ ./assets/MemoriaPFCExemple.pdf }}" class="image fit">{{ solid_filepdf }}</a></p>
-<p>{% endwith %}</p>
+<!--<embed width="100%" height="800" src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://docencia.xaviersastre.cat/Moduls/PFC/assets/MemoriaPFCExemple.pdf" type="application/pdf" id="pdf_fitxer" style="pointer-events: none;"/>-->
+
+<div>
+  <iframe src="http://127.0.0.1:8000/Moduls/PFC/prova.html" 
+          style="width:100%; height:600px; border:none;"></iframe>
+</div>
+
+<div class="mermaid">
+  gantt
+    title Diagrama de Gantt
+    section Tasca 1
+    Fase 1 :a1, 2023-10-01, 7d
+</div>
+
+<p>[gantt(./assets/pfc2425.yml)]</p>
+<p>::gantt::
+[
+    {
+        "title": "Definition Phase",
+        "activities": [
+            {
+                "title": "Creative Brief",
+                "start": "2022-03-03",
+                "lasts": "1 day"
+            },
+            {
+                "title": "Graphic Design Research",
+                "start": "2022-03-02",
+                "lasts": "2 weeks"
+            },
+            {
+                "title": "Brainstorming / Mood Boarding",
+                "start": "2022-03-11",
+                "lasts": "2 weeks"
+            }
+        ]
+    },
+    {
+    "title": "Creation Phase",
+    "activities": [
+    {
+    "title": "Sketching",
+    "start": "2022-03-21",
+    "lasts": "2 weeks"
+    },
+    {
+    "title": "Design Building",
+    "start": "2022-04-02",
+    "lasts": "4 weeks"
+    },
+    {
+    "title": "Refining",
+    "start": "2022-05-01",
+    "lasts": "2 weeks"
+    }
+    ]
+    },
+    {
+    "title": "Feedback Phase",
+    "activities": [
+    {
+    "title": "Presenting",
+    "start": "2022-05-01",
+    "lasts": "3 days"
+    },
+    {
+    "title": "Revisions",
+    "start": "2022-05-02",
+    "end": "2022-05-31"
+    }
+    ]
+    },
+    {
+    "title": "Delivery Phase",
+    "activities": [
+    {
+    "title": "Final delivery",
+    "start": "2022-06-05",
+    "end": "2022-06-06"
+    }
+    ]
+    }
+]
+::/gantt::</p>
 
 
 
