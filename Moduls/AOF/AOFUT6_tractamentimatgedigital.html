@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://docencia.xaviersastre.cat/Moduls/AOF/tractamentimatgedigital.html">
+        <link rel="canonical" href="https://docencia.xaviersastre.cat/Moduls/AOF/AOFUT6_tractamentimatgedigital.html">
       
       
         <link rel="prev" href="AOFUT2_Presentacions.html">
@@ -1980,7 +1980,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="tractamentimatgedigital.html" class="md-nav__link md-nav__link--active">
+      <a href="AOFUT6_tractamentimatgedigital.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2112,6 +2112,33 @@
   <a href="#32-escalar-la-imatge" class="md-nav__link">
     <span class="md-ellipsis">
       3.2. Escalar la imatge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-modificacion-del-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Modificación del color.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34ajustar-la-brillantor-i-el-contrast" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.Ajustar la brillantor i el contrast.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-balance-de-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.- Balance de color.
     </span>
   </a>
   
@@ -3117,8 +3144,8 @@
 <p>Ja saps que els ordinadors treballen amb informació digital i amb informació numèrica. En un ordinador la informació analògica de textos, imatges i sons es codifica per mitjà de bits.</p>
 <p>Una <strong>imatge digital</strong> és una representació bidimensional d'una imatge analògica utilitzant bits (uns i zeros).</p>
 <p>A l'hora d'editar imatges digitals et trobaràs, que hi ha dues grans categories on es pot englobar. Si la resolució de la imatge és estàtica es diu que el gràfic és <strong>rasteritzat</strong> o de <strong>mapa de bits,</strong>  no obstant això, si la resolució de la imatge és dinàmica es diu que és un gràfic <strong>vectorial.</strong></p>
-<p>Les imatges vectorials es formen a partir de vectors. Les imatges es construeixen a partir de rectes, angles, corbes, definits amb punts que creen línies farcides. Aquests vectors es creen mitjançant fórmules i relacions matemàtiques com les de <strong>Bézier</strong>, usades per crear corbes. Un arxiu vectorial no pot definir una imatge de to continu, però sí que pot definir línies i dibuixos.</p>
-<p>Les imatges de mapa de bits defineixen la imatge indicant el to dels píxels de la imatge. De la <strong>resolució</strong> de la imatge, dependrà el que ocupi finalment l'arxiu. Prestarem atenció a la profunditat de color que pot guardar.</p>
+<p>Les imatges vectorials es formen a partir de vectors. Les imatges es construeixen a partir de rectes, angles, corbes, definits amb punts que creen línies farcides. Aquests vectors es creen mitjançant fórmules i relacions matemàtiques com les de <strong>Bézier</strong>, usades per crear corbes. Un arxiu vectorial no pot definir una imatge de tonalitat continu, però sí que pot definir línies i dibuixos.</p>
+<p>Les imatges de mapa de bits defineixen la imatge indicant la tonalitat dels píxels de la imatge. De la <strong>resolució</strong> de la imatge, dependrà el que ocupi finalment l'arxiu. Prestarem atenció a la profunditat de color que pot guardar.</p>
 <p>Les imatges que més utilitzaràs en la vida real són les de mapa de bits, per això, durant aquest capítol ens centrarem en elles, i en la seva manipulació.</p>
 <div class="admonition note">
 <p class="admonition-title">+ informació</p>
@@ -3250,7 +3277,7 @@
     const respostesCorrectes = {
         1: 'b', // Pregunta 1: La resposta correcta és Inkscape (opcio b)
         2: 'c', // Pregunta 2: resposta correcta és 'c'(Pixels per polzada)
-        3: 'b' // Pregunta 3: resposta correcta és 'b'(1969)
+        3: 'b', // Pregunta 3: resposta correcta és 'b'(1969)
     };
     // Funció per verificar les respostes
     function verificarResposta(numPregunta, respostaSeleccionada) {
@@ -3324,6 +3351,22 @@
                 feedbackElement.textContent = "❌ Incorrecte, bons resultats però molt lent. Malgrat això avui per avui, la velocitat d'interpolació per escalar imatges de mida raonable és prou ràpid.";
                 feedbackElement.className = "feedback incorrecte";
                 break;
+            case "5|a":
+                feedbackElement.textContent = "✅ Cert, i horitzontalment el contrast.";
+                feedbackElement.className = "feedback correcte";
+                break;
+            case "5|b":
+                feedbackElement.textContent = "❌ Incorrecte, el botó que has de mantenir polsat és l'esquerra.";
+                feedbackElement.className = "feedback incorrecte";
+                break;
+            case "5|c":
+                feedbackElement.textContent = "❌ No és correcte, seria verticalment, horitzontalment es modifica el contrast.";
+                feedbackElement.className = "feedback incorrecte";
+                break;
+            case "5|d":
+                feedbackElement.textContent = "❌ No és l'opció correcta, modificaries la brillantor, horitzontalment es modifica el contrast i verticalment la brillantor.";
+                feedbackElement.className = "feedback incorrecte";
+                break;
             default: {
                 console.log(`${numPregunta}|${respostaSeleccionada}`);
             }
@@ -3383,7 +3426,7 @@
 <p>Amb ells com a base també podràs formar qualsevol color. Et sona aquest esquema de colors de les impressores, el CMYK ( Cyan (Cian) + Magenta (Magenta) + Yellow (Groc) + blacK (Negre)).</p>
 <p>En combinar-se C, M, Y s'absorbeixen tots els colors i es genera negre. Per això, se'ls anomena colors <strong>substractius</strong>.</p>
 <p>El negre pur (K) es fa servir a causa que les impureses de les tintes d'impressió produirien un marró, més aviat que un negre.</p>
-<p>Una altra forma usual de fixar un color és usar tres de les seves propietats; el to, la saturació i la brillantor, HSB, Hue (tonalitat), Saturation (saturació) y Brightness (brillantor).</p>
+<p>Una altra forma usual de fixar un color és usar tres de les seves propietats; la tonalitat, la saturació i la brillantor, HSB, Hue (tonalitat), Saturation (saturació) y Brightness (brillantor).</p>
 <p>La tonalitat serà mesurada com una posició en graus, en la roda de colors estàndard. La saturació ens indica la puresa que té un color, seguint una línia entre el pur (100) i gris amb idèntica brillantor (0). La brillantor indica la lluminositat del color i marcaria la línia entre blanc (100) i negre (0).</p>
 <p>En informàtica hi ha altres <strong>modes de color</strong> per a efectes, en part, obligats pel mode gràfic en el qual estem treballant. Per exemple:</p>
 <ul>
@@ -3590,6 +3633,89 @@
     </div>
 </div></p>
 </details>
+<h3 id="33-modificacion-del-color"><strong>3.3. Modificación del color.</strong><a class="headerlink" href="#33-modificacion-del-color" title="Permanent link">&para;</a></h3>
+<p>Quan creïs una imatge a GIMP, la podràs crear en base als següents modes de color:</p>
+<ul>
+<li>RGB: Aquest mode de color treballa amb els colors vermell, blau i verd, i a partir d'aquí barreja aquests colors per obtenir-ne uns de complementaris.</li>
+<li>Escala de grisos: Amb aquesta manera de color aconseguiràs una gamma de grisos, la qual, utilitza 8 bits de grisos.</li>
+<li>Color indexat: Amb aquesta manera de color crearàs una escala d'un o diversos colors.</li>
+<li>Per treballar amb el color a GIMP, et trobaràs amb paletes com les dels pintors. </li>
+</ul>
+<p>Existeixen diversos tipus però totes tenen elements comuns i zones específiques de cadascuna. L'específica de cada manera és la que se situa en el quadrat de color, just sota les pestanyes d'accés al mode d'elecció de color. Els comuns són els següents:</p>
+<ul>
+<li>Pestanyes per accedir als altres tipus de paleta. Dalt a l'esquerra. (GIMP, impressió, pinzell, triangle, i paleta activa en aquest ordre).</li>
+<li>Selecció de color per tonalitat, saturació i brillantor (HSV).</li>
+<li>Selecció de color per la quantitat de cada color (RGB).</li>
+<li>Selecció de color pel valor hexadecimal.</li>
+</ul>
+<p>La paleta Gimp: Accediràs a aquesta paleta per defecte, quan facis clic sobre l'opció Color de la caixa d'eines. Les diferents paletes que tenim a GIMP són les següents:</p>
+<p><img alt="img_7.png" src="img/img_7.png" /></p>
+<p>La paleta d'impressió: A aquesta paleta (també anomenada CMYK) accediràs fent clic al botó que té una impressora a la paleta GIMP. L'única diferència entre aquesta paleta i l'anterior és que a la part esquerra, en comptes de sortir l'opció de saturació de color, apareixen uns lliscants que et permetran variar la quantitat que vols donar-li a cada color.
+Paleta triangle: Aquesta paleta et mostrarà el model HSV d'elecció de color. Hi accediràs fent clic a l'arrel del triangle circumscrit en una circumferència, en lloc de l'opció de saturació del color. Apareixerà un triangle circumscrit en una circumferència. En la circumferència triaràs el color i en el triangle la saturació i la brillantor.
+Paleta aquarel·la: Accediràs fent clic a la icona del pinzell, aquesta paleta et permetrà accedir a una gran varietat de colors barrejats entre si.
+Paleta activa: Accediràs fent clic al botó amb un dit sobre una paleta de colors, amb aquesta paleta podràs triar entre 256 colors diferents, però a la predeterminada només podràs accedir a 23.</p>
+<div class="admonition info">
+<p class="admonition-title">+ informació</p>
+<p>El canal alfa és un valor amb el qual podràs mesurar el grau de transparència de la imatge. El valor oscil·la entre 0 i 255, és a dir, entre totalment transparent i totalment visible.</p>
+</div>
+<h3 id="34ajustar-la-brillantor-i-el-contrast"><strong>3.4.Ajustar la brillantor i el contrast.</strong><a class="headerlink" href="#34ajustar-la-brillantor-i-el-contrast" title="Permanent link">&para;</a></h3>
+<p><img alt="img_8.png" src="img/img_8.png" /></p>
+<p>En més d'una ocasió necessitaràs ajustar la brillantor i/o el contrast d'una de les teves imatges digitals. Aquest filtre et permetrà corregir irregularitats en imatges clares o fosques, així com, realçar-los colors de les mateixes mitjançant el contrast.</p>
+<p>Amb la brillantor, podràs regular la quantitat de llum de la imatge, si la fotografia ha quedat massa clara o massa fosca, podràs millorar la qualitat amb la modificació d'aquest paràmetre.</p>
+<p>Amb el contrast, podràs regular la diferència de tons de color entre les diferents parts de la imatge, si veus que la fotografia que has tret amb la teva càmera digital no distingeix correctament els colors, podràs millorar la qualitat de la teva imatge, mitjançant la variació d'aquest paràmetre.</p>
+<p>Podràs trobar aquest filtre a GIMP accedint-hi des del menú Colors → Brillo i contrast.</p>
+<ul>
+<li>Lliscant brillantor: Podràs seleccionar per a la brillantor un valor negatiu (més fosc) o positiu (més clar), variant la brillantor de les tonalitats.</li>
+<li>Lliscant contrast: podràs seleccionar per al contrast un valor negatiu (rebaixa) o positiu (incrementa).</li>
+<li>Vista prèvia: aquesta imatge presenta l'actualització dinàmica de l'original. Si la casella està marcada, els canvis es veuen immediatament.</li>
+</ul>
+<p>Un accés ràpid per a la brillantor i el contrast: si fas clic a la imatge, i arrossegues el ratolí amb el botó esquerre polsat verticalment modifiques la brillantor, si fas el mateix horitzontalment modifiques el contrast. Hi ha altres dues eines en el menú Colors que són Nivells... i Corbes... que permeten fer el mateix tipus d'ajustos, i podràs tractar els colors brillants i els foscos, de manera independent.</p>
+<details class="question">
+<summary>Autoavaluació</summary>
+<p><div class="contenidor">
+    <h1 class="extra">Test d'autoavaluació</h1>
+    <div class="pregunta" id="pregunta5">
+        <h3>Quina de les següents afirmacions és correcta?</h3>
+        <div class="opcions">
+            <div class="opcio">
+                <input type="radio" name="q5" id="q5a" value="a" onclick="verificarResposta(5, 'a')">
+                <label for="q5a">Si fas clic a la imatge i arrossegues el ratolí amb el botó esquerre polsat verticalment, modifiques la brillantor.</label>
+            </div>
+            <div class="opcio">
+                <input type="radio" name="q5" id="q5b" value="b" onclick="verificarResposta(5, 'b')">
+                <label for="q5b">Si fas clic a la imatge i arrossegues el ratolí amb el botó dret polsat verticalment, modifiques la brillantor.</label>
+            </div>
+            <div class="opcio">
+                <input type="radio" name="q5" id="q5c" value="c" onclick="verificarResposta(5, 'c')">
+                <label for="q5c">Si fas clic a la imatge i arrossegues el ratolí amb el botó esquerre polsat horitzontalment. Modifiques la brillantor.</label>
+            </div>
+            <div class="opcio">
+                <input type="radio" name="q5" id="q5d" value="d" onclick="verificarResposta(5, 'd')">
+                <label for="q5d">Si fas clic a la imatge i arrossegues el ratolí amb el botó esquerre polsat verticalment, modifiques el contrast.</label>
+            </div>
+        </div>
+        <div class="feedback" id="feedback5"></div>
+    </div>
+</div></p>
+</details>
+<h3 id="35-balance-de-color"><strong>3.5.- Balance de color.</strong><a class="headerlink" href="#35-balance-de-color" title="Permanent link">&para;</a></h3>
+<p>Aquest és el filtre perfecte per corregir tints de color tant a la llum, com als tons mitjans i les ombres de manera independent entre si, i entre cadascun dels diferents canals de color. Això permet augmentar i disminuir la presència de cada color en la imatge. T'haurà ocorregut alguna vegada que en descarregar una fotografia presa amb la teva càmera digital, per alguna raó, es veu com si estigués tintada per algun dels colors primaris RGB (recorda que en imatge digital canviem el groc pel verd), això té solució mitjançant el filtre de balanç de color.</p>
+<p>Podràs modificar aquesta imatge amb l'opció de GIMP que trobaràs a Colors → Balanç de color.</p>
+<p><img alt="img_9.png" src="img/img_9.png" /></p>
+<p>Les opcions que trobaràs en aquest quadre de diàleg són les següents:</p>
+<ul>
+<li><strong>Seleccioni el rang a modificar</strong>: Seleccionant una de les opcions restringiràs el rang de colors que seran modificats amb els lliscadors i amb les caselles d'ombres, tons mitjans i punts de llum. </li>
+<li>** Ajustar els nivells de color**:Els lliscats i les caselles et permetran seleccionar el valor del color en el rang seleccionat.</li>
+<li><strong>Conservar la lluminositat</strong>: con esta opción podrás conservar el brillo de la capa activa o selección. </li>
+<li><strong>Reiniciar el rang</strong>: Amb aquest botó reiniciaràs a zero els nivells de color en el rang seleccionat.</li>
+<li><strong>Vista prèvia</strong>: Aquesta imatge presenta l'actualització dinàmica de l'original. Si la casella està marcada, els canvis es veuen immediatament.</li>
+</ul>
+<p><img alt="img_10.png" src="img/img_10.png" /> <img alt="img_11.png" src="img/img_11.png" /></p>
+<p>En les imatges just a dalt podràs comprovar el canvi realitzat en la fotografia en modificar els valors de color. La imatge de l'illa de la part de dalt és l'original, sobre la qual vas a realitzar les modificacions del balanç de color. La imatge de l' illa de la part inferior, és sobre la qual hauràs realitzat les modificacions. En aquesta última, hauràs seleccionat la part de la poma i sobre aquesta selecció hauràs augmentat la influència del verd i disminuïtl a influència del vermell i el blau. Podrà ocórrer també que necessitis en algun moment una imatge determinada, però només en trobis alguna de semblant. Fixeu-te a la teva poma, és una illa de color groc, però tu necessites una poma de color verd. Per canviar-la, pots utilitzar l'eina de balanç de color per convertir aquesta mateixa imatge de la poma groga, en una poma verda.</p>
+<div class="admonition tip">
+<p class="admonition-title">Reflexiona</p>
+<p>Moltes vegades les fotografies que obtens amb la teva càmera digital, tendeixen a temptar-se per la presència de males il·luminacions en les estances en què les fotografies estan realitzades. Podràs arreglar aquests desperfectes amb el "Balanç de color".</p>
+</div>
 
 
 
@@ -3610,7 +3736,7 @@
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">31 de març del 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 d’abril del 2025</span>
   </span>
 
     
