@@ -2319,7 +2319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="exercicisPT.html" class="md-nav__link">
+      <a href="exercicisinterconnexiodispositius.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2952,6 +2952,94 @@
   </iframe>
 </div>
 <p><a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGjYNyZ4WY&#x2F;TnER3ln5pVj2WI9XQ9bxPA&#x2F;view?utm_content=DAGjYNyZ4WY&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Plantilles i aplicacions</a> de Francesc Xavier Sastre Flexas</p>
+<h3 id="1-vlan-en-ports-access-vs-trunk"><strong>1. VLAN en Ports <em>Access<em> vs </em>Trunk</em></strong><a class="headerlink" href="#1-vlan-en-ports-access-vs-trunk" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Característica</strong></th>
+<th><strong>Port Access</strong></th>
+<th><strong>Port Trunk</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Funció principal</strong></td>
+<td>Connecta dispositius finals (PCs, impressores)</td>
+<td>Connecta switches/routers (transporta múltiples VLANs)</td>
+</tr>
+<tr>
+<td><strong>Etiquetatge VLAN</strong></td>
+<td>No etiqueta trànsit (VLAN nativa)</td>
+<td>Etiqueta trànsit amb <strong>802.1Q</strong> (excepte VLAN nativa)</td>
+</tr>
+<tr>
+<td><strong>VLANs suportades</strong></td>
+<td><strong>1 VLAN</strong> (assignada manualment)</td>
+<td><strong>Múltiples VLANs</strong> (configurades al trunk)</td>
+</tr>
+<tr>
+<td><strong>Exemple de configuració (Cisco)</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>switchport mode access
+<span class="linenos" data-linenos="2 "></span>switchport access vlan 10
+</code></pre></div>
+|
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>switchport mode trunk
+<span class="linenos" data-linenos="2 "></span>switchport trunk allowed vlan 10,20
+</code></pre></div></p>
+<p><strong>Cas d'ús</strong>:
+- <em>Access</em>: Per a dispositius que no entenen VLANs (un PC).
+- <em>Trunk</em>: Per a enllaços entre switches o routers (per exemple, per a <strong>inter-VLAN routing</strong>).</p>
+<hr />
+<h3 id="2-vlan-com-a-interficie-virtual-svi-amb-adreca-ip"><strong>2. VLAN com a Interfície Virtual (SVI) amb Adreça IP</strong><a class="headerlink" href="#2-vlan-com-a-interficie-virtual-svi-amb-adreca-ip" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Característica</strong></th>
+<th><strong>SVI (Switch Virtual Interface)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Funció principal</strong></td>
+<td>Actuar com a <strong>gateway</strong> per als hosts de la VLAN (permet <strong>inter-VLAN routing</strong>)</td>
+</tr>
+<tr>
+<td><strong>Requereix</strong></td>
+<td>Switch de <strong>capa 3</strong> (o router)</td>
+</tr>
+<tr>
+<td><strong>Configuració (Cisco)</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>interface Vlan10
+<span class="linenos" data-linenos="2 "></span> ip address 192.168.10.1 255.255.255.0
+<span class="linenos" data-linenos="3 "></span> no shutdown
+</code></pre></div>
+<p><strong>Cas d'ús</strong>:
+- Permet que hosts de la VLAN 10 (connectats a ports <em>access</em>) es comuniquin amb altres VLANs <strong>sense necessitat d'un router físic extern</strong>.
+- És essencial per a <strong>routing intern</strong> en switches de capa 3 (per exemple, Cisco 3560).</p>
+<hr />
+<h3 id="diferencia-clau"><strong>Diferència Clau</strong>:<a class="headerlink" href="#diferencia-clau" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Ports Access/Trunk</strong>: Defineixen <strong>com es transmet el trànsit</strong> (sense etiquetar (<em>untagged</em>) vs etiquetat (<em>tagged</em>)).</li>
+<li><strong>SVI amb IP</strong>: Actua com a <strong>punt de sortida</strong> (gateway) per al trànsit de la VLAN, permetent comunicació entre VLANs.</li>
+</ul>
+<h3 id="exemple-practic"><strong>Exemple Pràctic</strong>:<a class="headerlink" href="#exemple-practic" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Un <strong>PC (VLAN 10)</strong> envia un paquet a un <strong>servidor (VLAN 20)</strong>:<ul>
+<li>El paquet arriba al switch via port <em>access</em> (VLAN 10).</li>
+<li>L’<strong>SVI de la VLAN 10</strong> (192.168.10.1) reenvia el paquet a l’<strong>SVI de la VLAN 20</strong> (192.168.20.1) si hi ha routing activat.</li>
+<li>El paquet surt per un port <em>trunk</em> o <em>access</em> de la VLAN 20 cap al servidor.</li>
+</ul>
+</li>
+</ol>
 
 
 

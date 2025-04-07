@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://docencia.xaviersastre.cat/Moduls/XL/exercicisPT.html">
+        <link rel="canonical" href="https://docencia.xaviersastre.cat/Moduls/XL/exercicisinterconnexiodispositius.html">
       
       
         <link rel="prev" href="../AOF/exercicisisolucions/exercicisGIMP08.html">
@@ -2345,7 +2345,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="exercicisPT.html" class="md-nav__link md-nav__link--active">
+      <a href="exercicisinterconnexiodispositius.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3009,6 +3009,14 @@
 
 <h1 id="exercicis-packet-tracer">Exercicis Packet Tracer<a class="headerlink" href="#exercicis-packet-tracer" title="Permanent link">&para;</a></h1>
 <h2 id="subnetting-i-encaminament">Subnetting i encaminament<a class="headerlink" href="#subnetting-i-encaminament" title="Permanent link">&para;</a></h2>
+<div class="admonition note dos estret">
+<p>Per a les taules d'encaminament que es demanen als següents exercicis, fes servir una taula equivalent a la següent:</p>
+<p><figure markdown="span">
+ <img alt="taulaencaminament.png" src="img/taulaencaminament.png" style="height:50px; object-fit:cover" />
+ <figcaption style="font-size:0.9em;"><a download="exercici2.pkt" href="assets/exercici2.pkt">exercici2.pkt</a></figcaption>
+</figure></p>
+<p><img :=":" alt="taulaencaminament.png" src="img/taulaencaminament.png" style="width: 75%;" /></p>
+</div>
 <ol>
 <li>
 <p>De les adreces IP que s'especifiquen a continuació, indica:</p>
@@ -3251,13 +3259,41 @@
  <figcaption style="font-size:0.9em;"><a download="exercici5.pkt" href="assets/exercici5.pkt">exercici5.pkt</a></figcaption>
 </figure></p>
 </details>
-<h2 id="vlans">VLANs<a class="headerlink" href="#vlans" title="Permanent link">&para;</a></h2>
 <ol start="6">
+<li>A partir del següent esquema completa les taules d'encaminament dels encaminadors A i B.</li>
+</ol>
+<figure>
+ <img alt="exercici6.png" src="img/exercici6.png" style="max-width: 500px; margin-inline: auto" />
+ <figcaption style="font-size:0.9em;">Esquema exercici 6</figcaption>
+</figure>
+<ol start="7">
+<li>A partir del següent esquema completa les taules d'encaminament dels encaminadors A i B.</li>
+</ol>
+<figure>
+ <img alt="exercici7.png" src="img/exercici7.png" style="max-width: 500px; margin-inline: auto" />
+ <figcaption style="font-size:0.9em;">Esquema exercici 7</figcaption>
+</figure>
+<ol start="8">
+<li>En el següent esquema, utilitzant encaminament estàtic, indica quines serien les taules d'encaminament dels encaminadors 1, 2 i 3 per a un funcionament correcte de la comunicació.</li>
+</ol>
+<figure>
+ <img alt="exercici8.png" src="img/exercici8.png" style="max-width: 500px; margin-inline: auto" />
+ <figcaption style="font-size:0.9em;">Esquema exercici 8</figcaption>
+</figure>
+<ol start="9">
+<li>Una empresa que té contractades dues connexions a l'exterior amb dos ISP diferents, utilitza encaminament estàtic a tots els seus routers i per a totes les rutes. L'esquema de xarxes de l'empresa és el que es mostra.</li>
+</ol>
+<figure>
+ <img alt="exercici9.png" src="img/exercici9.png" style="max-width: 500px; margin-inline: auto" />
+ <figcaption style="font-size:0.9em;">Esquema exercici 9</figcaption>
+</figure>
+<h2 id="vlans">VLANs<a class="headerlink" href="#vlans" title="Permanent link">&para;</a></h2>
+<ol start="10">
 <li>En un institut hi ha 3 fibres amb connexió a internet i amb la distribució de dispositius que es mostra a l'esquema. Planteja una solució perquè cada Aula utilitzi una fibra mantenint la distribució física. </li>
 </ol>
 <figure>
- <img alt="codi" src="img/exercici6.png" style="height:600px; object-fit:cover" />
- <figcaption style="font-size:0.9em;">Diagrama exercici 6</figcaption>
+ <img alt="codi" src="img/exercici10.png" style="height:600px; object-fit:cover" />
+ <figcaption style="font-size:0.9em;">Diagrama exercici 10</figcaption>
 </figure>
 <details class="descarrega estret" open="open">
 <summary>Fitxer PT exercici6</summary>
@@ -3272,6 +3308,98 @@
     </figure>
 </div></p>
 </details>
+<ol start="11">
+<li>A partir del següent esquema determina quins enllaços han de ser troncals:</li>
+</ol>
+<figure>
+ <img alt="exercici11_1.png" src="img/exercici11_1.png" style="max-width: 500px; margin-inline: auto" />
+ <figcaption style="font-size:0.9em;">Esquema exercici 11</figcaption>
+</figure>
+<details class="hint">
+<summary>Pista</summary>
+<p>Per saber quins ports hem de posar en mode troncal i en mode accés podem utilitzar un truc que consisteix a unir els PCs de diferents grups amb línies de colors, assenyalant el recorregut que caldria fer per comunicar els uns amb els altres com es mostra a continuació:</p>
+<p><figure markdown="span">
+    <img alt="exercici11_2.png" src="img/exercici11_2.png" style="max-width: 500px; margin-inline: auto" />
+    <figcaption style="font-size:0.9em;">Pista exercici 11</figcaption>
+</figure></p>
+<p><strong>Els ports dels quals surti més d'un color seran ports troncals.</strong></p>
+</details>
+<ol start="12">
+<li>Utilitzant el Packet Tracer i en un switch, configura dues VLANs:</li>
+</ol>
+<ul>
+<li>VLAN 10 (Nom: Professors)</li>
+<li>
+<p>VLAN 20 (Nom: Alumnes).</p>
+</li>
+<li>
+<p>Assigna els ports FastEthernet 0/1 a 0/5 a la VLAN 10 i els ports FastEthernet 0/6 a 0/10 a la VLAN 20.</p>
+</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">Pregunta addicional</p>
+<p>Quina ordre s’utilitza per verificar les VLANs creades i els ports assignats?</p>
+</div>
+<ol start="13">
+<li>Configura un enllaç trunk entre dos switches (SwitchA i SwitchB) que transporti les VLANs 10, 20 i 30. Estableix la VLAN 99 com a VLAN nativa.</li>
+</ol>
+<div class="admonition note estret">
+<p class="admonition-title">Note</p>
+<p>Cerca informació sobre què és la VLAN nativa</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Pregunta addicional</p>
+<p>Quina diferència hi ha entre un port en mode trunk i un port en mode access? Escriu-ho una explicació amb les teves paraules de la manera més clara possible però utilitzant la terminologia adequada. </p>
+</div>
+<ol start="14">
+<li>Fes una configuració de VLAN i enllaços troncals així com està especificat a l'esquema i amb les dades de la taula.</li>
+</ol>
+<figure>
+ <img alt="exercici14.png" src="img/exercici14.png" style="max-width: 500px; margin-inline: auto" />
+ <figcaption style="font-size:0.9em;">Esquema exercici 14</figcaption>
+</figure>
+<p><strong>Taula d'assignació d'adreces</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dispositiu</th>
+<th>Interfície</th>
+<th>Adreça IP</th>
+<th>Màscara de subxarxa</th>
+<th>Gateway predeterminat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1</td>
+<td>VLAN 1</td>
+<td>192.168.1.11</td>
+<td>255.255.255.0</td>
+<td>N/D</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>VLAN 1</td>
+<td>192.168.1.12</td>
+<td>255.255.255.0</td>
+<td>N/D</td>
+</tr>
+<tr>
+<td>PC-A</td>
+<td>NIC</td>
+<td>192.168.10.3</td>
+<td>255.255.255.0</td>
+<td>192.168.10.1</td>
+</tr>
+<tr>
+<td>PC-B</td>
+<td>NIC</td>
+<td>192.168.10.4</td>
+<td>255.255.255.0</td>
+<td>192.168.10.1</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -3292,7 +3420,7 @@
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2 d’abril del 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">7 d’abril del 2025</span>
   </span>
 
     
