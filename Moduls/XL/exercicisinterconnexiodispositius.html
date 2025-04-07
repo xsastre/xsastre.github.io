@@ -3012,14 +3012,11 @@
 <div class="admonition note dos estret">
 <p>Per a les taules d'encaminament que es demanen als següents exercicis, fes servir una taula equivalent a la següent:</p>
 <p><figure markdown="span">
- <img alt="taulaencaminament.png" src="img/taulaencaminament.png" style="height:50px; object-fit:cover" />
- <figcaption style="font-size:0.9em;"><a download="exercici2.pkt" href="assets/exercici2.pkt">exercici2.pkt</a></figcaption>
+ <img :=":" alt="taulaencaminament.png" src="img/taulaencaminament.png" style="width: 75%;" />
+ <figcaption style="font-size:0.9em;">Exemple de taula d'encaminament</figcaption>
 </figure></p>
-<p><img :=":" alt="taulaencaminament.png" src="img/taulaencaminament.png" style="width: 75%;" /></p>
 </div>
-<ol>
-<li>
-<p>De les adreces IP que s'especifiquen a continuació, indica:</p>
+<h4 id="exercici-1-de-les-adreces-ip-que-sespecifiquen-a-continuacio-indica">Exercici  1. De les adreces IP que s'especifiquen a continuació, indica:<a class="headerlink" href="#exercici-1-de-les-adreces-ip-que-sespecifiquen-a-continuacio-indica" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Quin és l’id de xarxa (subxarxa)?</li>
 <li>Quina és l’adreça de broadcast?</li>
@@ -3027,8 +3024,6 @@
 <li>La màscara en format CIDR o en format de 4 octets decimals (segons la que s’aporti)</li>
 <li>Classe de la xarxa (subxarxa)</li>
 </ul>
-</li>
-</ol>
 <details class="question estret">
 <summary>Cas 1: 215.215.215.213 Mask 255.255.255.248</summary>
 <table>
@@ -3191,17 +3186,13 @@
 </tbody>
 </table>
 </details>
-<ol start="2">
-<li>
-<p>Sobre els casos anteriors i amb el fitxer del PT que trobaras abaix fes:</p>
+<h4 id="exercici-2-sobre-els-casos-anteriors-i-amb-el-fitxer-del-pt-que-trobaras-abaix-fes">Exercici  2. Sobre els casos anteriors i amb el fitxer del PT que trobaras abaix fes:<a class="headerlink" href="#exercici-2-sobre-els-casos-anteriors-i-amb-el-fitxer-del-pt-que-trobaras-abaix-fes" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Connecta el segon PC de cada sector al concentrador</li>
 <li>Assigna la següent IP disponible de cada rang utilitzat i calculat en l'exercici anterior</li>
 <li>Verifica i captura evidències de que hi ha connectivitat entre els pcs que haurien de tenir connectivitat i que NO n'hi ha entre els que NO n'haurien de tenir (PC0 amb PC1; Laptop1 amb Laptop2; PC2 amb PC3. Qualsevol altra combinació no ha de tenir connectivitat)</li>
 <li>Raona i explica perquè tenen connectivitat les combinacions anteriors i la resta no. Què passaria si un usuari canviés la IP de Laptop0 a la IP 215.215.215.214? Justifica la resposta i comprova-ho amb el PT. Captura evidències de la comprovació.</li>
 </ul>
-</li>
-</ol>
 <details class="descarrega estret" open="open">
 <summary>Fitxer PT exercici2</summary>
 <p><figure markdown="span">
@@ -3209,16 +3200,12 @@
  <figcaption style="font-size:0.9em;"><a download="exercici2.pkt" href="assets/exercici2.pkt">exercici2.pkt</a></figcaption>
 </figure></p>
 </details>
-<ol start="3">
-<li>Al fitxer adjunt trobaràs un esquema amb una configuració inicial ja feta. Allò que es demana és el següent:</li>
-</ol>
+<h4 id="exercici-3-al-fitxer-adjunt-trobaras-un-esquema-amb-una-configuracio-inicial-ja-feta-allo-que-es-demana-es-el-seguent"><strong>Exercici  3.</strong> Al fitxer adjunt trobaràs un esquema amb una configuració inicial ja feta. Allò que es demana és el següent:<a class="headerlink" href="#exercici-3-al-fitxer-adjunt-trobaras-un-esquema-amb-una-configuracio-inicial-ja-feta-allo-que-es-demana-es-el-seguent" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Configura l'encaminador inalàmbric perquè els dos elements de la xarxa privada puguin tenir accés a interne. Hauràs de fer una configuración completa incloent:<ul>
+<li>Configura l'encaminador inalàmbric perquè els dos elements de la xarxa privada puguin tenir accés a interne. Hauràs de fer una configuración completa incloent:</li>
 <li>"Network Setup" incloent DHCP Server sobre la xarxa indicada (192.168.0.0 / 24)</li>
 <li>"Internet Setup" (de manera que tengui la IP 101.0.0.1 / 8)</li>
 <li>"Wireless" utilitzant WPA2 Personal, encriptació AES i contrasenya 12345678</li>
-</ul>
-</li>
 </ul>
 <figure>
  <img alt="exercici3_PT.png" src="img/exercici3_PT.png" style="max-width: 500px; margin-inline: auto" />
@@ -3231,9 +3218,7 @@
  <figcaption style="font-size:0.9em;"><a download="exercici3.pkt" href="assets/exercici3.pkt">exercici3.pkt</a></figcaption>
 </figure></p>
 </details>
-<ol start="4">
-<li>Partint de la base del fitxer anterior, hauras de completar la configuració (taula d'encaminament) dels encaminadors 1 i 2, de manera que hi hagi connectivitat completa entre els elements de l'esquema plantejat.</li>
-</ol>
+<h4 id="exercici-4-partint-de-la-base-del-fitxer-anterior-hauras-de-completar-la-configuracio-taula-dencaminament-dels-encaminadors-1-i-2-de-manera-que-hi-hagi-connectivitat-completa-entre-els-elements-de-lesquema-plantejat"><strong>Exercici  4.</strong> Partint de la base del fitxer anterior, hauras de completar la configuració (taula d'encaminament) dels encaminadors 1 i 2, de manera que hi hagi connectivitat completa entre els elements de l'esquema plantejat.<a class="headerlink" href="#exercici-4-partint-de-la-base-del-fitxer-anterior-hauras-de-completar-la-configuracio-taula-dencaminament-dels-encaminadors-1-i-2-de-manera-que-hi-hagi-connectivitat-completa-entre-els-elements-de-lesquema-plantejat" title="Permanent link">&para;</a></h4>
 <figure>
  <img alt="exercici4_PT.png" src="img/exercici4_PT.png" style="max-width: 500px; margin-inline: auto" />
  <figcaption style="font-size:0.9em;">Esquema exercici 4</figcaption>
@@ -3245,9 +3230,7 @@
  <figcaption style="font-size:0.9em;"><a download="exercici4.pkt" href="assets/exercici4.pkt">exercici4.pkt</a></figcaption>
 </figure></p>
 </details>
-<ol start="5">
-<li>En el següent esquema, utilitzant encaminament estàtic, indica quines serien les taules d'encaminament dels encaminadors 1, 2 i 3 per a un funcionament correcte de la comunicació.</li>
-</ol>
+<h4 id="exercici-5-en-el-seguent-esquema-utilitzant-encaminament-estatic-indica-quines-serien-les-taules-dencaminament-dels-encaminadors-1-2-i-3-per-a-un-funcionament-correcte-de-la-comunicacio"><strong>Exercici  5.</strong> En el següent esquema, utilitzant encaminament estàtic, indica quines serien les taules d'encaminament dels encaminadors 1, 2 i 3 per a un funcionament correcte de la comunicació.<a class="headerlink" href="#exercici-5-en-el-seguent-esquema-utilitzant-encaminament-estatic-indica-quines-serien-les-taules-dencaminament-dels-encaminadors-1-2-i-3-per-a-un-funcionament-correcte-de-la-comunicacio" title="Permanent link">&para;</a></h4>
 <figure>
  <img alt="exercici5.png" src="img/exercici5.png" style="max-width: 500px; margin-inline: auto" />
  <figcaption style="font-size:0.9em;">Esquema exercici 5</figcaption>
@@ -3259,38 +3242,28 @@
  <figcaption style="font-size:0.9em;"><a download="exercici5.pkt" href="assets/exercici5.pkt">exercici5.pkt</a></figcaption>
 </figure></p>
 </details>
-<ol start="6">
-<li>A partir del següent esquema completa les taules d'encaminament dels encaminadors A i B.</li>
-</ol>
+<h4 id="exercici-6-a-partir-del-seguent-esquema-completa-les-taules-dencaminament-dels-encaminadors-a-i-b"><strong>Exercici  6.</strong> A partir del següent esquema completa les taules d'encaminament dels encaminadors A i B.<a class="headerlink" href="#exercici-6-a-partir-del-seguent-esquema-completa-les-taules-dencaminament-dels-encaminadors-a-i-b" title="Permanent link">&para;</a></h4>
 <figure>
  <img alt="exercici6.png" src="img/exercici6.png" style="max-width: 500px; margin-inline: auto" />
  <figcaption style="font-size:0.9em;">Esquema exercici 6</figcaption>
 </figure>
-<ol start="7">
-<li>A partir del següent esquema completa les taules d'encaminament dels encaminadors A i B.</li>
-</ol>
+<h4 id="exercici-7-a-partir-del-seguent-esquema-completa-les-taules-dencaminament-dels-encaminadors-a-i-b"><strong>Exercici  7.</strong> A partir del següent esquema completa les taules d'encaminament dels encaminadors A i B.<a class="headerlink" href="#exercici-7-a-partir-del-seguent-esquema-completa-les-taules-dencaminament-dels-encaminadors-a-i-b" title="Permanent link">&para;</a></h4>
 <figure>
  <img alt="exercici7.png" src="img/exercici7.png" style="max-width: 500px; margin-inline: auto" />
  <figcaption style="font-size:0.9em;">Esquema exercici 7</figcaption>
 </figure>
-<ol start="8">
-<li>En el següent esquema, utilitzant encaminament estàtic, indica quines serien les taules d'encaminament dels encaminadors 1, 2 i 3 per a un funcionament correcte de la comunicació.</li>
-</ol>
+<h4 id="exercici-8-en-el-seguent-esquema-utilitzant-encaminament-estatic-indica-quines-serien-les-taules-dencaminament-dels-encaminadors-1-2-i-3-per-a-un-funcionament-correcte-de-la-comunicacio"><strong>Exercici  8.</strong> En el següent esquema, utilitzant encaminament estàtic, indica quines serien les taules d'encaminament dels encaminadors 1, 2 i 3 per a un funcionament correcte de la comunicació.<a class="headerlink" href="#exercici-8-en-el-seguent-esquema-utilitzant-encaminament-estatic-indica-quines-serien-les-taules-dencaminament-dels-encaminadors-1-2-i-3-per-a-un-funcionament-correcte-de-la-comunicacio" title="Permanent link">&para;</a></h4>
 <figure>
  <img alt="exercici8.png" src="img/exercici8.png" style="max-width: 500px; margin-inline: auto" />
  <figcaption style="font-size:0.9em;">Esquema exercici 8</figcaption>
 </figure>
-<ol start="9">
-<li>Una empresa que té contractades dues connexions a l'exterior amb dos ISP diferents, utilitza encaminament estàtic a tots els seus routers i per a totes les rutes. L'esquema de xarxes de l'empresa és el que es mostra.</li>
-</ol>
+<h4 id="exercici-9-una-empresa-que-te-contractades-dues-connexions-a-lexterior-amb-dos-isp-diferents-utilitza-encaminament-estatic-a-tots-els-seus-routers-i-per-a-totes-les-rutes-lesquema-de-xarxes-de-lempresa-es-el-que-es-mostra"><strong>Exercici  9.</strong> Una empresa que té contractades dues connexions a l'exterior amb dos ISP diferents, utilitza encaminament estàtic a tots els seus routers i per a totes les rutes. L'esquema de xarxes de l'empresa és el que es mostra.<a class="headerlink" href="#exercici-9-una-empresa-que-te-contractades-dues-connexions-a-lexterior-amb-dos-isp-diferents-utilitza-encaminament-estatic-a-tots-els-seus-routers-i-per-a-totes-les-rutes-lesquema-de-xarxes-de-lempresa-es-el-que-es-mostra" title="Permanent link">&para;</a></h4>
 <figure>
  <img alt="exercici9.png" src="img/exercici9.png" style="max-width: 500px; margin-inline: auto" />
  <figcaption style="font-size:0.9em;">Esquema exercici 9</figcaption>
 </figure>
 <h2 id="vlans">VLANs<a class="headerlink" href="#vlans" title="Permanent link">&para;</a></h2>
-<ol start="10">
-<li>En un institut hi ha 3 fibres amb connexió a internet i amb la distribució de dispositius que es mostra a l'esquema. Planteja una solució perquè cada Aula utilitzi una fibra mantenint la distribució física. </li>
-</ol>
+<h4 id="exercici-10-en-un-institut-hi-ha-3-fibres-amb-connexio-a-internet-i-amb-la-distribucio-de-dispositius-que-es-mostra-a-lesquema-planteja-una-solucio-perque-cada-aula-utilitzi-una-fibra-mantenint-la-distribucio-fisica"><strong>Exercici 10.</strong> En un institut hi ha 3 fibres amb connexió a internet i amb la distribució de dispositius que es mostra a l'esquema. Planteja una solució perquè cada Aula utilitzi una fibra mantenint la distribució física.<a class="headerlink" href="#exercici-10-en-un-institut-hi-ha-3-fibres-amb-connexio-a-internet-i-amb-la-distribucio-de-dispositius-que-es-mostra-a-lesquema-planteja-una-solucio-perque-cada-aula-utilitzi-una-fibra-mantenint-la-distribucio-fisica" title="Permanent link">&para;</a></h4>
 <figure>
  <img alt="codi" src="img/exercici10.png" style="height:600px; object-fit:cover" />
  <figcaption style="font-size:0.9em;">Diagrama exercici 10</figcaption>
@@ -3308,9 +3281,7 @@
     </figure>
 </div></p>
 </details>
-<ol start="11">
-<li>A partir del següent esquema determina quins enllaços han de ser troncals:</li>
-</ol>
+<h4 id="exercici-11-a-partir-del-seguent-esquema-determina-quins-enllacos-han-de-ser-troncals"><strong>Exercici 11.</strong> A partir del següent esquema determina quins enllaços han de ser troncals:<a class="headerlink" href="#exercici-11-a-partir-del-seguent-esquema-determina-quins-enllacos-han-de-ser-troncals" title="Permanent link">&para;</a></h4>
 <figure>
  <img alt="exercici11_1.png" src="img/exercici11_1.png" style="max-width: 500px; margin-inline: auto" />
  <figcaption style="font-size:0.9em;">Esquema exercici 11</figcaption>
@@ -3324,9 +3295,7 @@
 </figure></p>
 <p><strong>Els ports dels quals surti més d'un color seran ports troncals.</strong></p>
 </details>
-<ol start="12">
-<li>Utilitzant el Packet Tracer i en un switch, configura dues VLANs:</li>
-</ol>
+<h4 id="exercici-12-utilitzant-el-packet-tracer-i-en-un-switch-configura-dues-vlans"><strong>Exercici 12.</strong> Utilitzant el Packet Tracer i en un switch, configura dues VLANs:<a class="headerlink" href="#exercici-12-utilitzant-el-packet-tracer-i-en-un-switch-configura-dues-vlans" title="Permanent link">&para;</a></h4>
 <ul>
 <li>VLAN 10 (Nom: Professors)</li>
 <li>
@@ -3340,9 +3309,7 @@
 <p class="admonition-title">Pregunta addicional</p>
 <p>Quina ordre s’utilitza per verificar les VLANs creades i els ports assignats?</p>
 </div>
-<ol start="13">
-<li>Configura un enllaç trunk entre dos switches (SwitchA i SwitchB) que transporti les VLANs 10, 20 i 30. Estableix la VLAN 99 com a VLAN nativa.</li>
-</ol>
+<h4 id="exercici-13-configura-un-enllac-trunk-entre-dos-switches-switcha-i-switchb-que-transporti-les-vlans-10-20-i-30-estableix-la-vlan-99-com-a-vlan-nativa"><strong>Exercici 13.</strong> Configura un enllaç trunk entre dos switches (SwitchA i SwitchB) que transporti les VLANs 10, 20 i 30. Estableix la VLAN 99 com a VLAN nativa.<a class="headerlink" href="#exercici-13-configura-un-enllac-trunk-entre-dos-switches-switcha-i-switchb-que-transporti-les-vlans-10-20-i-30-estableix-la-vlan-99-com-a-vlan-nativa" title="Permanent link">&para;</a></h4>
 <div class="admonition note estret">
 <p class="admonition-title">Note</p>
 <p>Cerca informació sobre què és la VLAN nativa</p>
@@ -3351,9 +3318,7 @@
 <p class="admonition-title">Pregunta addicional</p>
 <p>Quina diferència hi ha entre un port en mode trunk i un port en mode access? Escriu-ho una explicació amb les teves paraules de la manera més clara possible però utilitzant la terminologia adequada. </p>
 </div>
-<ol start="14">
-<li>Fes una configuració de VLAN i enllaços troncals així com està especificat a l'esquema i amb les dades de la taula.</li>
-</ol>
+<h4 id="exercici-14-fes-una-configuracio-de-vlan-i-enllacos-troncals-aixi-com-esta-especificat-a-lesquema-i-amb-les-dades-de-la-taula"><strong>Exercici 14.</strong> Fes una configuració de VLAN i enllaços troncals així com està especificat a l'esquema i amb les dades de la taula.<a class="headerlink" href="#exercici-14-fes-una-configuracio-de-vlan-i-enllacos-troncals-aixi-com-esta-especificat-a-lesquema-i-amb-les-dades-de-la-taula" title="Permanent link">&para;</a></h4>
 <figure>
  <img alt="exercici14.png" src="img/exercici14.png" style="max-width: 500px; margin-inline: auto" />
  <figcaption style="font-size:0.9em;">Esquema exercici 14</figcaption>
