@@ -1,0 +1,1213 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docencia.xaviersastre.cat/Moduls/ARXIU/2425/XL/exercicisinterconnexiodispositius2.html">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../imatges/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
+    
+    
+      
+        <title>Exercicis Packet Tracer - Docencia Xavier</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../css/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-KXJX1CP7QG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-KXJX1CP7QG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-KXJX1CP7QG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercicis-packet-tracer" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../../../../index.html" title="Docencia Xavier" class="md-header__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  <img src="../../../../imatges/education_blanc.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docencia Xavier
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Exercicis Packet Tracer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="Teal"  aria-label="Canviar a mode nit"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode nit" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="Teal"  aria-label="Canviar a mode dia"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../index.html" title="Docencia Xavier" class="md-nav__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  <img src="../../../../imatges/education_blanc.png" alt="logo">
+
+    </a>
+    Docencia Xavier
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWES
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            DWES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DWES/UT01ArquitecturesWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT01 Arquitectures Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bloc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Arxiva
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Arxiva
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/archive/2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/aws.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/amazon.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/coneixements-generals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coneixements generals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/dam.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/daw.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/dwec.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/dwes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DWES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/dynamodb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DynamoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/general.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/html.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/js.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/java.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/javascript.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/matem%C3%A0tiques.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matemàtiques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/php.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/psp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PSP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/programaci%C3%B3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/programci%C3%B3-multifil.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programció multifil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="exercicis-packet-tracer">Exercicis Packet Tracer<a class="headerlink" href="#exercicis-packet-tracer" title="Permanent link">&para;</a></h1>
+<h2 id="subnetting-i-encaminament">Subnetting i encaminament<a class="headerlink" href="#subnetting-i-encaminament" title="Permanent link">&para;</a></h2>
+<div class="admonition tip estret">
+<p class="admonition-title"><strong>Recomanacions generals</strong>:</p>
+<ul>
+<li><strong>Adreçament</strong>: Utilitza màscares <code>/24</code> per a xarxes locals i <code>/30</code> per a enllaços entre routers.</li>
+<li><strong>Verificació</strong>: Fes servir <strong>ping</strong> i <strong>traceroute</strong> des dels PCs per comprovar la connectivitat.</li>
+</ul>
+</div>
+<h4 id="exercici-1-interconnexio-entre-dues-xarxes-i-un-encaminador"><strong>Exercici  1. Interconnexió entre dues xarxes i un encaminador</strong><a class="headerlink" href="#exercici-1-interconnexio-entre-dues-xarxes-i-un-encaminador" title="Permanent link">&para;</a></h4>
+<p>Tenim dues xarxes privades 172.16.100.0 / 24 i la 172.17.99.0 / 24. Es demana que es crei amb packet tracer una simulació per fer la interconnexió de les dues xarxes, verificant la connectivitat entre tots els dispositius.</p>
+<details class="descarrega estret" open="open">
+<summary>Fitxer PT exercici1</summary>
+<p><figure markdown="span">
+ <img alt="codi" src="img/icon_PT.png" style="height:50px; object-fit:cover" />
+ <figcaption style="font-size:0.9em;"><a download="colecio2exercici1.pkt" href="assets/coleccio2exercici1.pkt">Col·lecció 2 exercici 1</a></figcaption>
+</figure></p>
+</details>
+<h4 id="exercici-2-configuracio-basica-de-vlans"><strong>Exercici 2. Configuració bàsica de VLANs</strong><a class="headerlink" href="#exercici-2-configuracio-basica-de-vlans" title="Permanent link">&para;</a></h4>
+<p>Crea dues VLANs (VLAN 10 i VLAN 20) en un switch.</p>
+<p>Assigna 2 PCs a la VLAN 10 i 2 PCs a la VLAN 20.</p>
+<p>Verifica que els PCs de la mateixa VLAN poden comunicar-se, però no amb els de l'altra VLAN.</p>
+<h4 id="exercici-3-configuracio-de-vlans-entre-switchs"><strong>Exercici 3. Configuració de VLANs entre switchs</strong><a class="headerlink" href="#exercici-3-configuracio-de-vlans-entre-switchs" title="Permanent link">&para;</a></h4>
+<p>Connecta dos switchs amb un enllaç trunk.</p>
+<p>Crea la VLAN 30 en ambdós switchs.</p>
+<p>Assigna un PC a cada switch dins la VLAN 30.</p>
+<p>Comprova que poden comunicar-se malgrat estar en switchs diferents.</p>
+<h4 id="exercici-4-configuracio-de-dhcp-per-vlans"><strong>Exercici 4. Configuració de DHCP per VLANs</strong><a class="headerlink" href="#exercici-4-configuracio-de-dhcp-per-vlans" title="Permanent link">&para;</a></h4>
+<p>Configura un <a href="DHCP_encaminador_concentrador.html">switch</a> per actuar com a servidor DHCP per a dues VLANs (VLAN 80 i VLAN 90).</p>
+<p>Assigna rang d'adreces diferents per a cada VLAN.</p>
+<p>Verifica que els PCs reben adreces IP automàticament de la VLAN corresponent.</p>
+<p>Aquí tens <strong>10 enunciats d’exercicis bàsics d’encaminament</strong> entre xarxes privades, sense incloure VLANs, combinant diferents nombres d’encaminadors (fins a 4) i xarxes (fins a 7). Tots es poden resoldre amb <strong>Packet Tracer</strong> utilitzant configuració gràfica (no CLI).</p>
+<h4 id="exercici-5-xarxa-simple-amb-1-encaminador-i-2-xarxes"><strong>Exercici 5: Xarxa simple amb 1 encaminador i 2 xarxes</strong><a class="headerlink" href="#exercici-5-xarxa-simple-amb-1-encaminador-i-2-xarxes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Configura un encaminador (Router0) amb dues interfícies:<ul>
+<li><strong>Fa0/0</strong>: Xarxa <code>192.168.1.0/24</code> (connecta 2 PCs).</li>
+<li><strong>Fa0/1</strong>: Xarxa <code>192.168.2.0/24</code> (connecta 2 PCs).</li>
+</ul>
+</li>
+<li>Assigna adreces IP estàtiques als PCs i verifica la comunicació entre les dues xarxes.</li>
+</ul>
+<h4 id="exercici-6-2-encaminadors-i-3-xarxes-en-cadena"><strong>Exercici 6: 2 encaminadors i 3 xarxes en cadena</strong><a class="headerlink" href="#exercici-6-2-encaminadors-i-3-xarxes-en-cadena" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Connecta <strong>Router0</strong> i <strong>Router1</strong> amb un enllaç serial (<code>10.0.0.0/30</code>).</li>
+<li><strong>Router0</strong>:<ul>
+<li>Xarxa <code>192.168.1.0/24</code> (2 PCs).</li>
+</ul>
+</li>
+<li><strong>Router1</strong>:<ul>
+<li>Xarxa <code>192.168.2.0/24</code> (2 PCs).</li>
+</ul>
+</li>
+<li>Configura encaminament estàtic als routers per permetre comunicació entre totes les xarxes.</li>
+</ul>
+<h4 id="exercici-7-3-encaminadors-en-estrella-4-xarxes"><strong>Exercici 7: 3 encaminadors en estrella (4 xarxes)</strong><a class="headerlink" href="#exercici-7-3-encaminadors-en-estrella-4-xarxes" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Router0</strong> (centre) connectat a:<ul>
+<li><strong>Router1</strong>: Xarxa <code>192.168.1.0/24</code>.</li>
+<li><strong>Router2</strong>: Xarxa <code>192.168.2.0/24</code>.</li>
+<li><strong>Router3</strong>: Xarxa <code>192.168.3.0/24</code>.</li>
+</ul>
+</li>
+<li>Assigna una xarxa <code>/30</code> per a cada enllaç entre routers.</li>
+<li>Configura rutes estàtiques per interconnectar totes les xarxes.</li>
+</ul>
+<h4 id="exercici-8-2-encaminadors-i-4-xarxes-amb-redundancia"><strong>Exercici 8: 2 encaminadors i 4 xarxes (amb redundància)</strong><a class="headerlink" href="#exercici-8-2-encaminadors-i-4-xarxes-amb-redundancia" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Router0</strong> i <strong>Router1</strong> connectats amb <strong>dos enllaços</strong> (serial i Ethernet):<ul>
+<li>Enllaç 1: <code>10.0.0.0/30</code> (serial).</li>
+<li>Enllaç 2: <code>10.0.1.0/30</code> (Ethernet).</li>
+</ul>
+</li>
+<li>Cada router té dues xarxes locals (<code>192.168.1.0/24</code> i <code>192.168.2.0/24</code>).</li>
+<li>Configura encaminament estàtic per utilitzar només l’enllaç serial com a primari.</li>
+</ul>
+<h4 id="exercici-9-4-encaminadors-i-5-xarxes-topologia-en-anell"><strong>Exercici 9: 4 encaminadors i 5 xarxes (topologia en anell)</strong><a class="headerlink" href="#exercici-9-4-encaminadors-i-5-xarxes-topologia-en-anell" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Connecta 4 routers en anell amb enllaços <code>/30</code>:<ul>
+<li>Router0 → Router1 → Router2 → Router3 → Router0.</li>
+</ul>
+</li>
+<li>Cada router té una xarxa local (<code>192.168.X.0/24</code>, on <code>X</code> és 1 a 4).</li>
+<li>Configura rutes estàtiques per evitar bucles (simulant un protocol d’encaminament).</li>
+</ul>
+<h4 id="exercici-10-3-encaminadors-i-6-xarxes-jerarquic"><strong>Exercici 10: 3 encaminadors i 6 xarxes (jeràrquic)</strong><a class="headerlink" href="#exercici-10-3-encaminadors-i-6-xarxes-jerarquic" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Router0</strong> (nivell superior) connectat a <strong>Router1</strong> i <strong>Router2</strong> (nivell inferior).</li>
+<li>Cada router inferior té dues xarxes locals (<code>192.168.X.0/24</code> i <code>192.168.Y.0/24</code>).</li>
+<li>Utilitza xarxes <code>/30</code> per als enllaços entre routers.</li>
+<li>Configura rutes per defecte (<em>default route</em>) als routers inferiors cap a Router0.</li>
+</ul>
+<h4 id="exercici-7-2-encaminadors-i-3-xarxes-amb-dhcp"><strong>Exercici 7: 2 encaminadors i 3 xarxes amb DHCP</strong><a class="headerlink" href="#exercici-7-2-encaminadors-i-3-xarxes-amb-dhcp" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Router0</strong> actua com a <a href="DHCP_encaminador_concentrador.html">servidor DHCP</a> per a la xarxa <code>192.168.1.0/24</code>.</li>
+<li><strong>Router1</strong> té una xarxa <code>192.168.2.0/24</code> amb adreces estàtiques.</li>
+<li>Connecta els routers amb un enllaç <code>10.0.0.0/30</code>.</li>
+<li>Verifica que els PCs de la xarxa DHCP poden comunicar-se amb la xarxa estàtica.</li>
+</ul>
+<h4 id="exercici-8-4-encaminadors-i-7-xarxes-topologia-malla-parcial"><strong>Exercici 8: 4 encaminadors i 7 xarxes (topologia malla parcial)</strong><a class="headerlink" href="#exercici-8-4-encaminadors-i-7-xarxes-topologia-malla-parcial" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Connecta 4 routers en una topologia mixta (alguns enllaços directes, altres no).</li>
+<li>Cada router té 1 o 2 xarxes locals (<code>192.168.X.0/24</code>).</li>
+<li>Configura encaminament estàtic per assegurar connectivitat entre totes les xarxes.</li>
+</ul>
+<h4 id="exercici-9-3-encaminadors-i-4-xarxes-amb-nat"><strong>Exercici 9: 3 encaminadors i 4 xarxes amb NAT</strong><a class="headerlink" href="#exercici-9-3-encaminadors-i-4-xarxes-amb-nat" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Router0</strong> té una xarxa privada (<code>192.168.1.0/24</code>) i una interfície pública (simulada amb <code>203.0.113.0/30</code>).</li>
+<li><strong>Router1</strong> i <strong>Router2</strong> tenen xarxes privades (<code>192.168.2.0/24</code> i <code>192.168.3.0/24</code>).</li>
+<li>Configura NAT a Router0 per permetre als PCs de les xarxes privades accedir a la "Internet" pública.</li>
+</ul>
+<div class="admonition info estret">
+<p class="admonition-title">Recorda</p>
+<p>Tenim un exercici fet a classe sobre el NAT. Intenta recordar el concepte i aplica'l a aquest execici.</p>
+</div>
+<h4 id="exercici-10-exercici-complet-vlan-subnetting"><strong>Exercici 10: Exercici complet VLAN + Subnetting</strong><a class="headerlink" href="#exercici-10-exercici-complet-vlan-subnetting" title="Permanent link">&para;</a></h4>
+<figure>
+ <img alt="exercici13" src="img/img_4.png" style="max-width: 500px; margin-inline: auto" />
+ <figcaption style="font-size:0.9em;">Esquema exercici 10</figcaption>
+</figure>
+<p>En l’esquema pots observar que hi ha tres xarxes (PALMA, MURO i POLLENÇA) interconnectades a través d’encaminadors. Sen’s demana el següent:</p>
+<ul>
+<li>A la xarxa de Palma tenim assignada la xarxa 172.17.100.0/24, però ara ens demanen que hi facem dues VLANs:<ul>
+<li>VLAN110</li>
+<li>VLAN200</li>
+</ul>
+</li>
+</ul>
+<p>La primera haurà de tenir l’adreçament IP de la tercera subxarxa resultant de fer subnetting de 172.17.100.0/24 amb máscara CIDR 27.</p>
+<p>La segona haurà de tenir l’adreçament IP de la cinquena subxarxa resultant de fer subnetting de 172.17.100.0/24 amb máscara CIDR 27.</p>
+<ul>
+<li>Assigna totes les IPs, de forma manual, als dispositius de la xarxa de Palma</li>
+<li>La xarxa de Muro ha de tenir la xarxa 172.17.150.0/24</li>
+<li>Assigna totes les IPs, de forma manual, als dispositius de la xarxa de Muro</li>
+<li>La xarxa de Pollença ha de tenir la xarxa 172.17.151.0/24</li>
+<li>Assigna totes les IPs, de forma manual, als dispositius de la xarxa de Pollença</li>
+<li>Ara hauràs de configurar els encaminadors de manera que tots els ordinadors es puguin veure amb la resta d’ordinadors (tots amb tots). Les xarxes per intercomunicar els encaminadors han de sortir de la xarxa 10.10.10.0/24, fent subnetting amb màscara de 30 bits.</li>
+</ul>
+<p>Per aquest exercici i amb l’objectiu de poder intercomunicar les VLANs 110 i 200 amb la resta de xarxes i també entre elles, s’ha disposat un router amb dos ports assignats un per a cada VLAN. Pensa com hauràs de realitzar la configuració, tenint en compte que en aquest esquema, cada VLAN ha de disposar d’un gateway per defecte. </p>
+<details class="descarrega estret" open="open">
+<summary>Fitxer PT exercici10</summary>
+<p><figure markdown="span">
+ <img alt="codi" src="img/icon_PT.png" style="height:50px; object-fit:cover" />
+ <figcaption style="font-size:0.9em;"><a download="colecio2exercici10.pkt" href="assets/coleccio2exercici10.pkt">Col·lecció 2 exercici 10</a></figcaption>
+</figure></p>
+</details>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Darrera actualització">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">23 de setembre del 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025 Xavier Sastre - Llicencia CC BY-NC-SA <a href="#__consent">Canvia configuració de les galetes</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+
+
+
+
+
+<h4>Consentiment ús galetes</h4>
+<p>Utilitzem galetes per reconèixer les vostres visites, així com mesurar l'eficàcia de la nostra documentació i si els usuaris troben allò que estan buscant. Amb el teu consentiment, ens ajudes a millorar la nostra documentació.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+          
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accepta</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Rebutja</button>
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestiona la configuració</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "toc.integrate", "content.tabs.link", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

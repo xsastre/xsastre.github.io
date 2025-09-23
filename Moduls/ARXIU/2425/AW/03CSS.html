@@ -1,0 +1,1208 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docencia.xaviersastre.cat/Moduls/ARXIU/2425/AW/03CSS.html">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../imatges/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
+    
+    
+      
+        <title>03CSS - Docencia Xavier</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../css/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-KXJX1CP7QG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-KXJX1CP7QG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-KXJX1CP7QG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#que-es-css" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../../../../index.html" title="Docencia Xavier" class="md-header__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  <img src="../../../../imatges/education_blanc.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docencia Xavier
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              03CSS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="Teal"  aria-label="Canviar a mode nit"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode nit" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="Teal"  aria-label="Canviar a mode dia"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../index.html" title="Docencia Xavier" class="md-nav__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  <img src="../../../../imatges/education_blanc.png" alt="logo">
+
+    </a>
+    Docencia Xavier
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWES
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            DWES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DWES/UT01ArquitecturesWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT01 Arquitectures Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bloc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Arxiva
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Arxiva
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/archive/2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/aws.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/amazon.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/coneixements-generals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coneixements generals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/dam.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/daw.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/dwec.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/dwes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DWES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/dynamodb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DynamoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/general.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/html.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/js.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/java.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/javascript.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/matem%C3%A0tiques.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matemàtiques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/php.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/psp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PSP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/programaci%C3%B3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/programci%C3%B3-multifil.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programció multifil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>03CSS</h1>
+
+<h2 id="que-es-css">Què és CSS<a class="headerlink" href="#que-es-css" title="Permanent link">&para;</a></h2>
+<p>CSS són les sigles en anglès per a fulls d'estil en cascada (Cascading Style Sheets). Bàsicament, és un llenguatge que maneja el disseny i presentació de les pàgines web, és a dir, com llueixen quan un usuari les visita. Funciona juntament amb el llenguatge HTML que s’encarrega del contingut bàsic dels llocs.</p>
+<p>Se'ls anomena fulles d'estil «en cascada» perquè en pots tenir diverses i una amb les propietats heretades (o «en cascada») d'altres.</p>
+<p>Per a moltes persones, una simple plantilla de bloc és suficient. Tot i així, quan vulgueu personalitzar l'aparença d'un lloc, necessitareu implementar CSS que, en conjunt amb un bon CMS, us ajudarà a potenciar l'abast del vostre contingut.</p>
+<h2 id="per-a-que-serveix-css">Per a què serveix CSS<a class="headerlink" href="#per-a-que-serveix-css" title="Permanent link">&para;</a></h2>
+<p>Amb CSS, pots crear regles per dir-li al teu lloc web com vols mostrar la informació i desar les ordres per a elements d'estil (com fonts, colors, mides, etc.) separats dels que configuren el contingut.</p>
+<p>A més, podeu crear formats específics útils per comunicar les vostres idees i produir experiències més agradables, en l'aspecte visual, per als usuaris del lloc web.</p>
+<h2 id="avantatges-i-desavantatges-dusar-css">Avantatges i desavantatges d'usar CSS<a class="headerlink" href="#avantatges-i-desavantatges-dusar-css" title="Permanent link">&para;</a></h2>
+<h3 id="avantatges-dusar-css">Avantatges d'usar CSS<a class="headerlink" href="#avantatges-dusar-css" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Separació de l'estructura i la presentació**. CSS permet separar el contingut HTML de la presentació visual. És a dir, us permet mantenir el codi HTML net i estructurat, mentre que l'estil es defineix en un fitxer CSS separat. Aquest ordre millora la llegibilitat del codi i en facilita el manteniment, així com l'actualització dels estils.</li>
+<li>Consistència i mantenibilitat.** En utilitzar CSS, podeu aplicar estils de manera consistent a un lloc o aplicació web. Els estils es defineixen una vegada i s'apliquen a múltiples elements a les pàgines, cosa que afavoreix la renovació de l'aparença visual de tot el projecte.</li>
+<li>Eficiència en el rendiment.** CSS permet carregar estils externs en un fitxer separat. Amb això, el navegador emmagatzemarà en memòria cau els estils i els aplicarà a totes les pàgines del lloc, cosa que millora el rendiment en reduir la quantitat de dades que cal transferir entre el servidor i el client.</li>
+<li>Flexibilitat i control.** Així mateix, ofereix una àmplia gamma de propietats i selectors amb què tindràs un control precís sobre l'estil dels elements HTML. Podràs modificar, de manera senzilla, els colors, fonts, marges, mides, dissenys, etc. Gràcies a aquestes característiques, podràs personalitzar i adaptar a diversos dispositius i mides de pantalla el teu lloc web.</li>
+</ul>
+<h3 id="desavantatges-dusar-css">Desavantatges d'usar CSS<a class="headerlink" href="#desavantatges-dusar-css" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Corba d'aprenentatge**. CSS pot tenir una corba d'aprenentatge empinada, en particular, per als principiants. Entendre, completament, totes les propietats, selectors i conceptes avançats pot portar temps i pràctica.</li>
+<li>Compatibilitat entre navegadors**. Tot i que els estàndards de CSS són dels més acceptats, alguns navegadors podrien interpretar i renderitzar els estils de manera diferent. Això pot resultar en inconsistències visuals i requerir proves o ajustaments addicionals per garantir la compatibilitat entre plataformes.</li>
+<li>Especificitat i herència**. CSS utilitza regles d'especificitat i d'herència per determinar quins estils s'apliquen als elements. De vegades, l'ordre de les regles i la jerarquia poden generar resultats inesperats. Això requereix una comprensió acurada de com funcionen aquestes regles per evitar conflictes i problemes destil.</li>
+<li>Limitacions a la maquetació. Tot i que CSS ofereix una àmplia gamma de propietats per al disseny i la maquetació, pot presentar limitacions en certs casos més complexos. Alguns dissenys específics poden requerir solucions addicionals o lús de tècniques més avançades per aconseguir el resultat desitjat.</li>
+</ul>
+<h2 id="com-funciona-css">Com funciona CSS<a class="headerlink" href="#com-funciona-css" title="Permanent link">&para;</a></h2>
+<p>CSS funciona com a complement a la informació que forma part d'un lloc web. Mentre que el codi HTML inclou totes les dades, el codi CSS s'encarrega de donar-los format i presentar-los visualment a través d'un navegador.</p>
+<p>En accedir a un lloc web, el navegador ha de rastrejar la informació continguda a l'HTML i traduir-la a un DOM (o model d'objectes del document). Aquests objectes han de ser conjuntats amb els blocs de codi corresponents a CSS perquè l'estil elegit sigui aplicat a ells i apareguin en el format assignat a l'ordinador.</p>
+<p>Segons siguin els selectors que hagis utilitzat al teu CSS, s'aplicaran propietats diferents a cada bloc d'informació en HTML. En fer-los servir, podràs modificar, amb facilitat, l'estil d'un conjunt definit de blocs i mantenir la imatge de la teva marca en tot el teu contingut.</p>
+<h2 id="caracteristiques-de-css">Característiques de CSS<a class="headerlink" href="#caracteristiques-de-css" title="Permanent link">&para;</a></h2>
+<ul>
+<li>És un llenguatge de programació diferent a HTML.</li>
+<li>Permet l'apilament d'instruccions per definir els formats específics.</li>
+<li>És utilitzable a tots els navegadors i plataformes.</li>
+<li>Optimitza el funcionament de les pàgines web.</li>
+<li>Té una sintaxi específica.</li>
+<li>Permet personalitzar totalment l'aparença de pàgines.</li>
+</ul>
+<h3 id="1-es-un-llenguatge-diferent-a-html">1. És un llenguatge diferent a HTML<a class="headerlink" href="#1-es-un-llenguatge-diferent-a-html" title="Permanent link">&para;</a></h3>
+<p>HTML és un llenguatge que serveix per gestionar la informació continguda a un lloc web. D'altra banda, CSS té com a funció estructurar l'estil de les pàgines. Tots dos llenguatges treballen en conjunt per presentar la informació al públic final.</p>
+<h3 id="2-permet-lapilament-dinstruccions-per-definir-formats-especifics">2. Permet l'apilament d'instruccions per definir formats específics<a class="headerlink" href="#2-permet-lapilament-dinstruccions-per-definir-formats-especifics" title="Permanent link">&para;</a></h3>
+<p>Això significa que es poden crear blocs d'instruccions imbricades que permeten fer modificacions generals, de manera senzilla, cosa que simplifica la tasca de disseny i la creació d'estils estandarditzats. Així, es creen formats específics que es poden aplicar a diferents pàgines, els quals, a més, són modificables de forma molt senzilla.</p>
+<h3 id="3-es-utilitzable-en-tots-els-navegadors-i-plataformes">3. És utilitzable en tots els navegadors i plataformes<a class="headerlink" href="#3-es-utilitzable-en-tots-els-navegadors-i-plataformes" title="Permanent link">&para;</a></h3>
+<p>Com que és un llenguatge popular per donar format als llocs web, el seu ús és universal per a un ampli nombre de dispositius, formats i plataformes com Edge, Safari, Chrome, etc. És per això que és fàcil donar format a les pàgines, segons el navegador utilitzat per cada usuari.</p>
+<h3 id="4-optimitza-el-funcionament-de-les-pagines-web">4. Optimitza el funcionament de les pàgines web<a class="headerlink" href="#4-optimitza-el-funcionament-de-les-pagines-web" title="Permanent link">&para;</a></h3>
+<p>En separar el codi de contingut i d'estil, és molt més ràpid el processament de la informació, cosa que es tradueix en una experiència més fluida per als usuaris i en una càrrega de treball menor per als processadors. És important i imprescindible la sincronització del codi en HTML amb CSS perquè la informació es presenti de manera correcta.</p>
+<h3 id="5-te-una-sintaxi-especifica">5. Té una sintaxi específica<a class="headerlink" href="#5-te-una-sintaxi-especifica" title="Permanent link">&para;</a></h3>
+<p>Si bé, la majoria dels llenguatges comparteixen algunes funcions i signes, hi ha particularitats en l'ús de CSS, per la qual cosa cal conèixer el llenguatge de programació, així com les característiques d'apilament. Més endavant revisarem algunes de les utilitats específiques.</p>
+<h3 id="6-permet-personalitzar-totalment-laparenca-de-les-pagines">6. Permet personalitzar totalment l'aparença de les pàgines<a class="headerlink" href="#6-permet-personalitzar-totalment-laparenca-de-les-pagines" title="Permanent link">&para;</a></h3>
+<p>CSS dóna cabuda a una gran llibertat creativa. Els dissenyadors tenen un ampli espectre de possibilitats amb les eines que CSS aporta. L'ús de diferents codis de colors i de fonts permet emprar paletes de moltíssimes tonalitats i múltiples tipografies. Així mateix, es poden disposar els elements visuals d'un lloc segons les necessitats del disseny.</p>
+<div class="admonition example">
+<p class="admonition-title">Anem per feina</p>
+<p>Feta aquesta introducció és moment de començar a aprendre a utilitzar-lo. Recorda, però, continuar llegint la resta d'aquesta pàgina pel teu compte.</p>
+<p>Fes la següent pràctica: <a href="exercicisisolucions/practica_CSS_W3Schools.html">Practica CSS W3Schools</a></p>
+</div>
+<hr />
+<details class="question">
+<summary>Què vol dir que un lloc web sigui responsive?</summary>
+<p>El disseny web responsive o adaptatiu és una tècnica de disseny web que cerca la correcta visualització duna mateixa pàgina en diferents dispositius. Des d'ordinadors d'escriptori fins a tablets i mòbils.</p>
+<p>Avui dia accedim a llocs web des de tota mena de dispositius; ordinador, tablet, smartphone… per la qual cosa, cada cop més, ens sorgeix la necessitat que la nostra web s'adapti a les diferents mides dels mateixos.</p>
+</details>
+<details class="question">
+<summary>Què són les media queries?</summary>
+<p>Les Media queries s o consultes sobre el medi permeten col·locar diferents propietats en funció de:
+- Si el mitjà és una pantalla o una impressora
+  - La mida de la pantalla
+  - La resolució de la pantalla
+  - L'orientació de la pantalla
+  - Etc.</p>
+<p>Pots visitar <a href="https://www.w3schools.com/css/css3_mediaqueries.asp">https://www.w3schools.com/css/css3_mediaqueries.asp</a> per saber-ne més.</p>
+</details>
+<details class="question">
+<summary>Què vol dir indentar?</summary>
+<p>S'anomena indentació de codi al fet d'utilitzar sagnat (moure lleugerament cap a la dreta) a les línies de codi per facilitar-ne la lectura, i indicar visualment si ens trobem a l'interior d'una funció, bucle, condicional, etc...</p>
+<p>Si vols saber-ne més pots llegir l'article <a href="https://lenguajejs.com/javascript/introduccion/indentacion/">Indentació de codi</a>.</p>
+</details>
+<details class="question">
+<summary>Hi ha la propietat <code>transparency</code>?</summary>
+<p>No. Hi ha la <code>opacity</code>.</p>
+</details>
+<details class="question">
+<summary>Quin és l'efecte <code>ellipsis</code> de CSS de la propietat <code>text-overflow</code>?</summary>
+<p>Quan el text no hi cap, s'hi afegeixen punts suspensius.</p>
+<p>Pots veure el comportament de la propietat <code>desbordament de text</code> a <a href="https://www.w3schools.com/cssref/tryit.php?filename=trycss3_text-overflow">aquest enllaç</a>.</p>
+</details>
+<details class="question">
+<summary>Per què serveix definir un <code>@font-face</code> a CSS?</summary>
+<p>La regla <code>@font-face</code> permet descarregar una font o tipografia d'una pàgina web, carregar-la al navegador i utilitzar-la a les nostres pàgines encara que no estigui instal·lada al sistema. Tot això de manera transparent a l'usuari, sense que hagi de fer cap acció.</p>
+</details>
+<details class="question">
+<summary>Què són/fan les funcions <code>skewX()</code> i <code>skewY()</code>?</summary>
+<p>Les funcions de deformació disponibles a CSS són les següents:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Funcions</th>
+<th style="text-align: left;">Significat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">skewX(xdeg)</td>
+<td style="text-align: left;">Estableix un angle d'ANGLE xdeg per a una deformació 2D respecte a l'eix X.</td>
+</tr>
+<tr>
+<td style="text-align: left;">skewY(ydeg)</td>
+<td style="text-align: left;">Estableix un angle d'ANGLE ydeg per a una deformació 2D respecte a l'eix Y.</td>
+</tr>
+</tbody>
+</table>
+<p>Pots veure el comportament d'aquesta propietat a <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_skew">aquest enllaç</a>.</p>
+</details>
+<details class="question">
+<summary>Què passa si apliquem el següent estil <code>transform: rotateX (90deg);</code>?</summary>
+<p>Pots veure el comportament d'aquesta propietat a <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_rotate">aquest enllaç</a>.</p>
+</details>
+<details class="question">
+<summary>Què passarà aquí?</summary>
+<p><div class="annotate copy select highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">  </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="k">width</span><span class="w"> </span><span class="mi">2</span><span class="kt">s</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="p">}</span>
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span><span class="nt">div</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+<span class="linenos" data-linenos="11 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="12 "></span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="15 "></span>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>This is a div<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="16 "></span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div>
+Que l'amplada del <code>div</code> es modificarà depenent de si el ratolí està a sobre o no.</p>
+</details>
+<details class="question">
+<summary>Què fa el valor <code>ease</code> del <code>animation-timing-function</code>?</summary>
+<p>Mira aquest exemple de W3Schools <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_animation-timing-function2">Elements amb diferents valors de funció de temporització</a></p>
+</details>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Darrera actualització">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">23 de setembre del 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025 Xavier Sastre - Llicencia CC BY-NC-SA <a href="#__consent">Canvia configuració de les galetes</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+
+
+
+
+
+<h4>Consentiment ús galetes</h4>
+<p>Utilitzem galetes per reconèixer les vostres visites, així com mesurar l'eficàcia de la nostra documentació i si els usuaris troben allò que estan buscant. Amb el teu consentiment, ens ajudes a millorar la nostra documentació.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+          
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accepta</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Rebutja</button>
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestiona la configuració</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "toc.integrate", "content.tabs.link", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

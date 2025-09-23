@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemple memòria PFC</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <style>
+        #pdf-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #pdf-canvas {
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #f9f9f9;
+        }
+        #controls {
+            text-align: center;
+            margin: 15px 0;
+        }
+        button {
+            padding: 8px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #page-info {
+            display: inline-block;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.01);
+            z-index: 10;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div id="pdf-container">
+    <canvas id="pdf-canvas"></canvas>
+    <div class="overlay"></div> <!-- Capa de protección -->
+    <div id="controls">
+        <button id="prev">Anterior</button>
+        <span id="page-info">Pàgina 1 de 0</span>
+        <button id="next">Següent</button>
+    </div>
+</div>
+
+<script>
+    // ===== CONFIGURACIÓN PDF.JS =====
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+        'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+
+    // ===== VARIABLES GLOBALES =====
+    let pdfDoc = null,
+        pageNum = 1,
+        pageRendering = false,
+        pageNumPending = null,
+        scale = 1.5;
+
+    const canvas = document.getElementById('pdf-canvas');
+    const ctx = canvas.getContext('2d');
+    const pageInfo = document.getElementById('page-info');
+
+    // ===== PROTECCIÓN AVANZADA =====
+    // 1. Bloqueo de clic derecho
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    // 2. Bloqueo de teclas (Ctrl+S, Ctrl+P, etc.)
+    document.addEventListener('keydown', e => {
+        if (e.ctrlKey && (e.key === 's' || e.key === 'p' || e.key === 'c')) {
+            e.preventDefault();
+            alert('Acción no permitida');
+        }
+    });
+
+    // 3. Ofuscación del contenido (anti-capturas)
+    canvas.style.userSelect = 'none';
+    canvas.style.webkitUserSelect = 'none';
+
+    // ===== CARGA Y RENDERIZADO =====
+    function loadPDF() {
+        // Carga el PDF con opciones de seguridad
+        const loadingTask = pdfjsLib.getDocument({
+            url: './assets/MemoriaPFCExemple.pdf',
+            disableAutoFetch: true,  // Previene descarga completa
+            disableStream: true     // Carga por fragmentos
+        });
+
+        loadingTask.promise.then(pdf => {
+            pdfDoc = pdf;
+            pageInfo.textContent = `Página 1 de ${pdf.numPages}`;
+            renderPage(1);
+        });
+    }
+
+    function renderPage(num) {
+        pageRendering = true;
+        pdfDoc.getPage(num).then(page => {
+            const viewport = page.getViewport({ scale });
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+
+            // Renderiza con watermark opcional
+            const renderContext = {
+                canvasContext: ctx,
+                viewport: viewport,
+                background: 'rgba(255,255,255,0.8)'
+            };
+
+            page.render(renderContext).promise.then(() => {
+                pageRendering = false;
+                if (pageNumPending !== null) {
+                    renderPage(pageNumPending);
+                    pageNumPending = null;
+                }
+            });
+        });
+        pageInfo.textContent = `Página ${num} de ${pdfDoc.numPages}`;
+    }
+
+    // ===== NAVEGACIÓN =====
+    document.getElementById('prev').addEventListener('click', () => {
+        if (pageNum <= 1) return;
+        pageNum--;
+        queueRenderPage(pageNum);
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+        if (pageNum >= pdfDoc.numPages) return;
+        pageNum++;
+        queueRenderPage(pageNum);
+    });
+
+    function queueRenderPage(num) {
+        if (pageRendering) {
+            pageNumPending = num;
+        } else {
+            renderPage(num);
+        }
+    }
+
+    // Inicia la carga
+    loadPDF();
+</script>
+</body>
+</html>
