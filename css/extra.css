@@ -117,3 +117,23 @@ input[type="radio"] {
         padding: 15px;
     }
 }
+
+.container {
+    text-align: center; /* Centra les imatges horitzontalment */
+
+    img {
+        display: inline-block;
+        width: 300px; /* Amplada de les imatges */
+        height: auto; /* Manté la proporció */
+        margin: 10px; /* Espai entre les imatges */
+        vertical-align: middle; /* Alinea verticalment les imatges */
+    }
+}
+
+.image-bisell {
+    width: 200px;
+    height: auto;
+    border-radius: 15px; /* Opcional per arrodonir les vores */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3), -4px -4px 10px rgba(255, 255, 255, 0.3);
+}
+
