@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova inicial no avaluable - DWEC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Pàgina d'inici -->
+        <section id="inici" class="section active">
+            <div class="card">
+                <div class="card__body">
+                    <h1>Prova inicial no avaluable - DWEC</h1>
+                    <p class="descripcion">Aquesta és una prova diagnòstica per avaluar els teus coneixements inicials en Desenvolupament Web en Entorn Client. No computa per a la nota final i t'ajudarà a identificar les àrees on necessites més reforç.</p>
+                    
+                    <div class="form-group">
+                        <label for="nomAlumne" class="form-label">Nom complet de l'alumne:</label>
+                        <input type="text" id="nomAlumne" class="form-control" placeholder="Escriu el teu nom complet" required>
+                    </div>
+                    
+                    <button type="button" class="btn btn--primary btn--full-width" onclick="comenzarProva()">
+                        Començar la prova
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preguntes teòriques -->
+        <section id="preguntes" class="section hidden">
+            <div class="card">
+                <div class="card__header">
+                    <h2>Preguntes teòriques</h2>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 25%"></div>
+                    </div>
+                </div>
+                <div class="card__body">
+                    <div id="preguntes-container">
+                        <!-- Les preguntes es generaran dinàmicament -->
+                    </div>
+                    
+                    <div class="navegacion">
+                        <button type="button" class="btn btn--outline" onclick="tornarInici()">Tornar a l'inici</button>
+                        <button type="button" class="btn btn--primary" onclick="seguentExercici()">Continuar a l'exercici pràctic</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercici pràctic -->
+        <section id="exercici" class="section hidden">
+            <div class="card">
+                <div class="card__header">
+                    <h2>Exercici pràctic</h2>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 50%"></div>
+                    </div>
+                </div>
+                <div class="card__body">
+                    <div class="exercici-instruccions">
+                        <h3>Instruccions:</h3>
+                        <p>Crea un fitxer HTML bàsic que contingui:</p>
+                        <ol>
+                            <li>Un títol principal &lt;h1&gt; amb el text 'Benvingut a DWEC'</li>
+                            <li>Un paràgraf amb una breu descripció</li>
+                            <li>Una fulla d'estil CSS que canviï el color del títol a blau i el text del paràgraf a gris fosc</li>
+                            <li>Un botó que, en ser clicat, mostri una alerta amb el missatge 'Hola, món!'</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="codiPractic" class="form-label">Escriu el teu codi HTML/CSS/JavaScript:</label>
+                        <textarea id="codiPractic" class="form-control" rows="15" placeholder="Escriu aquí el teu codi..."></textarea>
+                    </div>
+                    
+                    <div class="navegacion">
+                        <button type="button" class="btn btn--outline" onclick="tornarPreguntes()">Tornar a les preguntes</button>
+                        <button type="button" class="btn btn--primary" onclick="seguentAnalisi()">Continuar a l'anàlisi</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anàlisi de codi -->
+        <section id="analisi" class="section hidden">
+            <div class="card">
+                <div class="card__header">
+                    <h2>Anàlisi de codi</h2>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="card__body">
+                    <h3>Analitza el següent codi JavaScript:</h3>
+                    <pre><code>document.getElementById("btnClick").addEventListener("click", function() {
+  alert("Has fet clic al botó!");
+});</code></pre>
+                    
+                    <div class="form-group">
+                        <label for="explicacioCodi" class="form-label">Explica amb les teves paraules què fa aquest codi:</label>
+                        <textarea id="explicacioCodi" class="form-control" rows="6" placeholder="Escriu la teva explicació..."></textarea>
+                    </div>
+                    
+                    <div class="navegacion">
+                        <button type="button" class="btn btn--outline" onclick="tornarExercici()">Tornar a l'exercici</button>
+                        <button type="button" class="btn btn--primary" onclick="veureMeusResultats()">Veure els meus resultats</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resultats -->
+        <section id="resultats" class="section hidden">
+            <div class="card">
+                <div class="card__header">
+                    <h2>Resultats de la prova</h2>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="card__body">
+                    <div id="resultat-alumne" class="alumne-info"></div>
+                    
+                    <div class="resultats-test">
+                        <h3>Preguntes teòriques</h3>
+                        <div id="puntuacio-test" class="puntuacio"></div>
+                        <div id="respostes-detall" class="respostes-detall"></div>
+                    </div>
+                    
+                    <div class="feedback-section">
+                        <h3>Feedback personalitzat</h3>
+                        <div id="feedback-personalitzat" class="feedback"></div>
+                    </div>
+                    
+                    <div class="exercici-responses">
+                        <h3>Les teves respostes a l'exercici pràctic i anàlisi</h3>
+                        <div class="response-summary">
+                            <h4>Exercici pràctic:</h4>
+                            <div id="resum-exercici" class="response-content"></div>
+                            
+                            <h4>Anàlisi de codi:</h4>
+                            <div id="resum-analisi" class="response-content"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="accions-finals">
+                        <button type="button" class="btn btn--primary" onclick="imprimirResultats()">Descarregar/Imprimir resultats</button>
+                        <button type="button" class="btn btn--outline" onclick="reiniciarProva()">Fer la prova de nou</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
