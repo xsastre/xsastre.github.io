@@ -1144,24 +1144,25 @@
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>* Empresa + lloc de feina + frameworks PHP + requísitos + sou + enllaci a l&#39;oferta.
 </code></pre></div>
 <p>UT104. Una vegada arrencat el servei PHP, crea l'arxiu <code>info.php</code> i afegeix el següent fragment de codi:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>``` php
-<span class="linenos" data-linenos="2 "></span>&lt;?php phpinfo() ?&gt;
-<span class="linenos" data-linenos="3 "></span>```
-<span class="linenos" data-linenos="4 "></span>Anota els valors de:
-<span class="linenos" data-linenos="5 "></span>
-<span class="linenos" data-linenos="6 "></span>* Versió de PHP
-<span class="linenos" data-linenos="7 "></span>* Loaded Configuration File
-<span class="linenos" data-linenos="8 "></span>* `memory_limit`
-<span class="linenos" data-linenos="9 "></span>* `DOCUMENT_ROOT`
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">    </span><span class="cp">&lt;?php</span> <span class="nb">phpinfo</span><span class="p">()</span> <span class="cp">?&gt;</span>
 </code></pre></div>
-<p>UT105. Obre l'arxiu <code>php.ini-production</code> que està dins del contenidor (pots esbrinar la ruta a partir de la propietat Configuration File (php.ini) Path) i indica per a què serveixen les següents propietats i quins valors contenen:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>* `file_uploads`
-<span class="linenos" data-linenos="2 "></span>* `max_execution_estafi`
-<span class="linenos" data-linenos="3 "></span>* `short_open_tag`
-<span class="linenos" data-linenos="4 "></span>
-<span class="linenos" data-linenos="5 "></span>!!! noti &quot;php.ini&quot;
-<span class="linenos" data-linenos="6 "></span>    És l&#39;arxiu de configuració de PHP, i en tota instal·lació vénen dues plantilles (`php.ini-development` i `php.ini-production`) perquè triem els valors més concordes al nostre projecte i creiem el nostre arxiu propi de `php.ini`.
-</code></pre></div>
+<p>Anota els valors de:</p>
+<ul>
+<li>Versió de PHP</li>
+<li>Loaded Configuration File</li>
+<li><code>memory_limit</code></li>
+<li><code>DOCUMENT_ROOT</code></li>
+</ul>
+<p>UT105. (Opcional. Necessitau Docker) Obre l'arxiu <code>php.ini-production</code> que està dins del contenidor (pots esbrinar la ruta a partir de la propietat Configuration File (php.ini) Path) i indica per a què serveixen les següents propietats i quins valors contenen:</p>
+<ul>
+<li><code>file_uploads</code></li>
+<li><code>max_execution_estafi</code></li>
+<li><code>short_open_tag</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">php.ini</p>
+<p>És l'arxiu de configuració de PHP, i en tota instal·lació vénen dues plantilles (<code>php.ini-development</code> i <code>php.ini-production</code>) perquè triem els valors més concordes al nostre projecte i creiem el nostre arxiu propi de <code>php.ini</code>.</p>
+</div>
 
 
 
@@ -1182,7 +1183,7 @@
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">24 de setembre de 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">29 de setembre de 2025</span>
   </span>
 
     
