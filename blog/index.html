@@ -1067,6 +1067,29 @@
   
   
     <li class="md-nav__item">
+      <a href="category/projecte-intermodular.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projecte intermodular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
       <a href="category/springboot.html" class="md-nav__link">
         
   
@@ -1112,6 +1135,49 @@
 <p><img alt="pexels-suzyhazelwood-3601081.jpg" src="../imatges/pexels-suzyhazelwood-3601081.jpg" /></p>
 <p><a href="https://www.pexels.com/ca-es/foto/fusta-industria-teclejant-escrivint-a-maquina-3601081/"><span style="font-size:0.7em;">Foto de Suzy Hazelwood (una mica retallada)</span></a></p>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-09-30 00:00:00+00:00">30 de setembre de 2025</time></li>
+        
+          <li class="md-meta__item">
+            a
+            
+              <a href="category/projecte-intermodular.html" class="md-meta__link">Projecte intermodular</a>, 
+              <a href="category/daw.html" class="md-meta__link">DAW</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min de lectura
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="scrum-i-els-sprints"><a class="toclink" href="2025/09/30/scrum-i-els-sprints.html">Scrum i els sprints</a></h2>
+<p>Entrada basada en informació d'IA</p>
+<p>Scrum és una metodologia àgil per gestionar projectes mitjançant cicles curts i iteratius anomenats sprints, que permeten lliurar valor de manera constant i millorar contínuament el procés de treball.<sup id="fnref:2"><a class="footnote-ref" href="2025/09/30/scrum-i-els-sprints.html#fn:2">2</a></sup><sup id="fnref:5"><a class="footnote-ref" href="2025/09/30/scrum-i-els-sprints.html#fn:5">5</a></sup><sup id="fnref:7"><a class="footnote-ref" href="2025/09/30/scrum-i-els-sprints.html#fn:7">7</a></sup></p>
+<h4 id="funcionament-de-scrum"><a class="toclink" href="2025/09/30/scrum-i-els-sprints.html#funcionament-de-scrum">Funcionament de Scrum</a></h4>
+<ul>
+<li>El projecte es divideix en petites parts (sprints) de durada fixa, generalment d’1 a 4 setmanes, en què l’equip treballa per aconseguir un objectiu concret i lliurable (increment del producte).<sup id="fnref8:5"><a class="footnote-ref" href="2025/09/30/scrum-i-els-sprints.html#fn:5">5</a></sup><sup id="fnref5:6"><a class="footnote-ref" href="2025/09/30/scrum-i-els-sprints.html#fn:6">6</a></sup><sup id="fnref10:7"><a class="footnote-ref" href="2025/09/30/scrum-i-els-sprints.html#fn:7">7</a></sup></li>
+</ul>
+
+    <nav class="md-post__action">
+      <a href="2025/09/30/scrum-i-els-sprints.html">
+        Continua llegint
+      </a>
+    </nav>
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -1190,96 +1256,7 @@
   <img alt="" src="../imatges/01entradaSpringBootBloc.png" width="50%" />
 </figure>
 <p>Fonamentalment existien tres passes a realitzar. El primer és crear un projecte Maven/Gradle i descarregar les dependències necessàries. En segon lloc hi ha el procés de crear l'aplicació, però per això ens agradi o no hem d'abordar un procés ampli de configuració de l'aplicació, amb fitxers XML o anotacions i configuracions molt especifiques que moltes vegades només un expert era capaç d'abordar amb garanties. Finalment hauríem de desplegar-la en un servidor.</p>
-<p><strong>Problemes</strong></p>
-<p>Si ens posem a pensar una mica a detall en el tema, únicament la passa número dos és una tasca de desenvolupament i dins d'aquesta tasca 2 fins i tot la part de configuració no està clar que sigui desenvolupament en si. Són coses que estan més orientats a infraestructura que al desenvolupament en si mateix.</p>
-<figure>
-  <img alt="" src="../imatges/02entradaSringBootBloc.png" width="50%" />
-</figure>
-<p>No hauríem d'estar triant contínuament les dependències i el servidor de desplegament així com realitzar una configuració inicial. Això és un tema només per a experts i que aporta realment poc hauria de ser automatic.</p>
-<h3 id="spring-boot"><a class="toclink" href="2025/09/25/spring-boot-qu%C3%A8-%C3%A9s-i-com-funciona.html#spring-boot">Spring Boot</a></h3>
-<p>SpringBoot neix amb la intenció de simplificar els passos 1 i 3. Simplificar la configuració, que ens puguem centrar en el desenvolupament de la nostra aplicació. Com funciona?. L'enfocament és senzill i ho entendrem realitzant un exemple. Per això anem a connectar-nos a l'assistent de Boot que es denomina Spring Initializer.</p>
-<figure>
-  <img alt="" src="../imatges/03entradaSpringBootBloc.png" width="50%" />
-</figure>
-<h5 id="string-boot-starter-y-simplificaciones"><a class="toclink" href="2025/09/25/spring-boot-qu%C3%A8-%C3%A9s-i-com-funciona.html#string-boot-starter-y-simplificaciones">String Boot Starter y simplificaciones</a></h5>
-<p>L'assistent és intuïtiu, elegim el package al qual volem que les nostres classes pertanyin, elegim el nom del projecte i per últim les dependències. Això sí que ja no es tracta de triar JAR per JAR sinó per tipus d'aplicació que necessitem a aquest concepte se l'anomena Spring Starter. Per tant en comptes d'haver de triar 10 o 20 dependències és molt més còmode triar 2 starters i Spring Boot s'encarrega de la resta.</p>
-<figure>
-  <img alt="" src="../../imatges/04entradaSpringBootBloc.png" width="50%" />
-</figure>
-<h5 id="starters-i-avantatges"><a class="toclink" href="2025/09/25/spring-boot-qu%C3%A8-%C3%A9s-i-com-funciona.html#starters-i-avantatges">Starters i avantatges</a></h5>
-<p>L'avantatge és abismal ja que no només redueixo les dependències sinó també els temes a configurar ja que els starter poden encarregar-se d'afegir carpetes etc.</p>
-<h5 id="construint-laplicacio"><a class="toclink" href="2025/09/25/spring-boot-qu%C3%A8-%C3%A9s-i-com-funciona.html#construint-laplicacio">Construint l'aplicació</a></h5>
-<p>En aquest cas vaig a construir una aplicació Spring MVC i trio la dependència web o Starter Web. Posem generar projecte i ens descarregarà un projecte Maven en format zip. Descomprimim el projecte i aquest és el seu contingut.</p>
-<figure>
-  <img alt="" src="../imatges/05entradaSpringBootBloc.png" width="50%" />
-</figure>
-<p>Una aplicació de Spring amb estructura Maven totalment configurada i carpetes addicionals per cobrir les nostres necessitats. El següent pas importar aquesta aplicació al nostre IDE (IntelliJ al nostre cas). Anam a veure el contingut de la classe DemoApplication.</p>
-<figure>
-  <img alt="" src="../imatges/06entradaSpringBootBloc.png" width="50%" />
-</figure>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kn">package</span><span class="w"> </span><span class="nn">edu.xaviersastre.demo</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.boot.SpringApplication</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 4 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.boot.autoconfigure.SpringBootApplication</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 5 "></span>
-<span class="linenos" data-linenos=" 6 "></span><span class="nd">@SpringBootApplication</span>
-<span class="linenos" data-linenos=" 7 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DemoApplication</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="n">SpringApplication</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">DemoApplication</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">);</span>
-<span class="linenos" data-linenos="11 "></span><span class="p">}</span>
-</code></pre></div>
-<p>Aquesta classe és l'encarregada d'arrencar la nostra aplicació de Spring a diferència d'un enfocament clàssic no cal desplegar-la en un servidor web ja que Spring Boot proveeix d'un (conté un Tomcat incrustat)</p>
-<h5 id="spring-boot-controller"><a class="toclink" href="2025/09/25/spring-boot-qu%C3%A8-%C3%A9s-i-com-funciona.html#spring-boot-controller">Spring Boot Controller</a></h5>
-<p>Anam a construir un controlador de Demo molt senzill:</p>
-<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kn">package</span><span class="w"> </span><span class="nn">edu.xaviersastre.demo</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.boot.SpringApplication</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 4 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.boot.autoconfigure.SpringBootApplication</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 5 "></span>
-<span class="linenos" data-linenos=" 6 "></span><span class="nd">@SpringBootApplication</span>
-<span class="linenos" data-linenos=" 7 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DemoApplication</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="n">SpringApplication</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">DemoApplication</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">);</span>
-<span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="p">}</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span><span class="p">}</span>
-</code></pre></div>
-Aquest controlador registra la url de / perquè ens retorni “Hola Món”. És moment d'executar la nostra aplicació, directament des d'IntelliJ o amb mvn. Si obrim un navegador i accedim a la url per defecte del tomcat incrustat http://localhost:8080 veurem quelcom semblant a això.</p>
-<figure>
-  <img alt="" src="../imatges/07entradaSpringBootBloc.png" width="70%" />
-</figure>
-<p>Aquesta és la manera com estam executant el nostre codi des d'IntelliJ</p>
-<figure>
-  <img alt="" src="../imatges/08entradaSpringBootBloc.png" width="100%" />
-</figure>
-<p>SpringBoot ens ha simplificat tota l'operativa a l'hora de construir l'aplicació pràcticament no hem hagut de seleccionar dependències de Spring i no ha fet falta definir cap servidor Tomcat en el nostre entorn de desenvolupament ja que Spring Boot en porta un integrat.</p>
-<h4 id="spring-boot-tomcat-i-docker"><a class="toclink" href="2025/09/25/spring-boot-qu%C3%A8-%C3%A9s-i-com-funciona.html#spring-boot-tomcat-i-docker">Spring Boot Tomcat i Docker</a></h4>
-<p>Perquè Spring Boot porta integrat Tomcat?. Molt senzill perquè a partir d'ara els desplegaments no es realitzaran a Servidors Web Standard que emmagatzemen desenes d'aplicacions sinó que cadascuna de les aplicacions es desplegarà en un contenidor Docker completament aïllada de la resta i independent. El contenidor necessita que l'aplicació sigui completament operativa per si sola.</p>
-<figure>
-  <img alt="" src="../imatges/09entradaSpringBootBloc.png" width="100%" />
-</figure>
-<h4 id="spring-boot-war"><a class="toclink" href="2025/09/25/spring-boot-qu%C3%A8-%C3%A9s-i-com-funciona.html#spring-boot-war">Spring Boot WAR</a></h4>
-<p>Si el teu problema és que ara per ara no tens contenidors Docker ni tens Kubernetes entre les teves eines de desplegament, no hi ha problema. Pots seguir usant Spring Boot i desplegar-lo en un entorn de Tomcat o JBoss directament simplement modificant l'inici i fent que la nostra aplicació en comptes de desplegar-se com a JAR es desplegui com a WAR.</p>
-<figure>
-  <img alt="" src="../imatges/10entradaSpringBootBloc.png" width="75%" />
-</figure>
-<p>En aquest cas s'haurà d'afegir una classe que es cuida d'integrar el projecte amb Tomcat de forma transparent:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kn">package</span><span class="w"> </span><span class="nn">edu.xaviersastre.demo</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.boot.builder.SpringApplicationBuilder</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 4 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.boot.web.servlet.support.SpringBootServletInitializer</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 5 "></span>
-<span class="linenos" data-linenos=" 6 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ServletInitializer</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">SpringBootServletInitializer</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos" data-linenos=" 7 "></span>
-<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="nd">@Override</span>
-<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">SpringApplicationBuilder</span><span class="w"> </span><span class="nf">configure</span><span class="p">(</span><span class="n">SpringApplicationBuilder</span><span class="w"> </span><span class="n">application</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">application</span><span class="p">.</span><span class="na">sources</span><span class="p">(</span><span class="n">DemoApplication</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-<span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="p">}</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span><span class="p">}</span>
-</code></pre></div>
+
     <nav class="md-post__action">
       <a href="2025/09/25/spring-boot-qu%C3%A8-%C3%A9s-i-com-funciona.html">
         Continua llegint
@@ -1603,44 +1580,6 @@ Aquest controlador registra la url de / perquè ens retorni “Hola Món”. És
   </div>
 </article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-10-23 00:00:00+00:00">23 d’octubre de 2024</time></li>
-        
-          <li class="md-meta__item">
-            a
-            
-              <a href="category/general.html" class="md-meta__link">General</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min de lectura
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="el-bloc"><a class="toclink" href="2024/10/23/el-bloc.html">El bloc!</a></h2>
-<p><img alt="pexels-padrinan-1591056.jpg" src="../imatges/pexels-padrinan-1591056.jpg" /></p>
-<p><a href="https://www.pexels.com/ca-es/foto/1591056/"><span style="font-size:0.7em;">Foto de Miguel Á. Padriñán</span></a></p>
-<p>Doncs en aquest lloc web que estic fent aquest curs, notava a faltar qualcuna manera de publicar documentació que realment no té una estructura clara però que vos pot resultar interessant. Aleshores he revisat si amb el <a href="https://squidfunk.github.io/mkdocs-material/">mkdocs - material</a> es podia crear qualcuna cosa semblant a un bloc 
-    <nav class="md-post__action">
-      <a href="2024/10/23/el-bloc.html">
-        Continua llegint
-      </a>
-    </nav>
-  </div>
-</article>
-      
       
         
           
@@ -1648,7 +1587,7 @@ Aquest controlador registra la url de / perquè ens retorni “Hola Món”. És
 
 
 <nav class="md-pagination">
-  
+  <span class="md-pagination__current">1</span> <a class="md-pagination__link" href="page/2/index.html">2</a>
 </nav>
         
       
