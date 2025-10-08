@@ -1,0 +1,2202 @@
+<!DOCTYPE html><html lang="ca" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docencia.xaviersastre.cat/Moduls/DWEC/UT01.html">
+      
+      
+        <link rel="prev" href="../DWES/exercicisisolucions/UT02PHPExercicis.html">
+      
+      
+        <link rel="next" href="presentacions/DWECUT1/index.html">
+      
+      
+      <link rel="icon" href="../../imatges/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Material teòric - Docencia Xavier</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-KXJX1CP7QG"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-KXJX1CP7QG",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-KXJX1CP7QG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-introduccio-a-les-arquitectures-de-desenvolupament-web" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../../index.html" title="Docencia Xavier" class="md-header__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  <img src="../../imatges/education_blanc.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docencia Xavier
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Material teòric
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="Teal" aria-label="Canviar a mode nit" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode nit" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="Teal" aria-label="Canviar a mode dia" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Docencia Xavier" class="md-nav__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  <img src="../../imatges/education_blanc.png" alt="logo">
+
+    </a>
+    Docencia Xavier
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    NC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            NC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CECNC/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducció i index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT01 Compliment normatiu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            UT01 Compliment normatiu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CECNC/UT01_old.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CECNC/presentacions/01 Unitat 1 - Compliment  normatiu_ok/index_HTML.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diapositives unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWES
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            DWES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1">
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT01 Arquitectures Web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            UT01 Arquitectures Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/UT01ArquitecturesWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/presentacions/DWESUT01 - Arquitectures i eines/index_HTML.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diapositives unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/UT01ArquitecturesWebVideo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vídeo resum de la unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/UT01ArquitecturesWebActivitats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activitats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT02 Llenguatge PHP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            UT02 Llenguatge PHP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/UT02PHP.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/UT02PHPVideo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vídeo resum de la unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/UT02PHPTest.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test autoavaluació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/exercicisisolucions/UT02PHPExercicis.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activitats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            DWEC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT01 Arquitectures Web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            UT01 Arquitectures Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="UT01.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-introduccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Introducció
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-evolucio-historica-de-la-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Evolució Històrica de la Web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-definicio-del-model-client-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Definició del Model Client-Servidor
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="presentacions/DWECUT1/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diapositives unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT02 Llenguatge Javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            UT02 Llenguatge Javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicisisolucions/UT02Exercicis.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercicis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bloc  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"></path></svg>
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Arxiva
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Arxiva
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2025.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3">
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/aws.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/amazon.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/coneixements-generals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coneixements generals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/dam.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/daw.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/dwec.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/dwes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DWES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/docker.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/dynamodb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DynamoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/general.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/html.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/js.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/java.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/javascript.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/matem%C3%A0tiques.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matemàtiques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/php.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/psp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PSP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/programaci%C3%B3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/programci%C3%B3-multifil.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programció multifil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/projecte-intermodular.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projecte intermodular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/springboot.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpringBoot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="1-introduccio-a-les-arquitectures-de-desenvolupament-web"><strong>1. Introducció a les Arquitectures de Desenvolupament Web</strong><a class="headerlink" href="#1-introduccio-a-les-arquitectures-de-desenvolupament-web" title="Permanent link">¶</a></h1>
+<h2 id="11-introduccio"><strong>1.1. Introducció</strong><a class="headerlink" href="#11-introduccio" title="Permanent link">¶</a></h2>
+<p>Comprendre l'arquitectura client-servidor és fonamental per a qualsevol iniciativa de desenvolupament a la web moderna. Aquest model constitueix la base sobre la qual s'erigeixen pràcticament totes les aplicacions i serveis digitals. Aquest informe tècnic té com a objectiu principal analitzar i comparar les tecnologies, responsabilitats i millors pràctiques inherents als entorns del costat del client (client-side) i del costat del servidor (server-side) .</p>
+<p>La finalitat és proporcionar una guia clara i estratègica per a la presa de decisions tècniques en projectes de desenvolupament web, assegurant que les solucions adoptades siguin robustes, segures i eficients. En el context acadèmic actual, aquesta comprensió és especialment rellevant per a estudiants que s'inicien en el desenvolupament web i necessiten una base sòlida sobre la qual construir les seves competències tècniques.</p>
+<h2 id="12-evolucio-historica-de-la-web"><strong>1.2. Evolució Històrica de la Web</strong><a class="headerlink" href="#12-evolucio-historica-de-la-web" title="Permanent link">¶</a></h2>
+<p>La Web va ser inventada per Tim Berners-Lee al CERN el 1989, fonamentant-se en el concepte d'hipertext. El World Wide Web Consortium (W3C) és l'organització responsable de desenvolupar i mantenir els estàndards web (incloent HTML, CSS i JavaScript) amb l'objectiu de garantir que la Web sigui oberta i accessible .</p>
+<p>El desenvolupament d'aplicacions web ha evolucionat significativament:</p>
+<p><strong>Pàgines Web Estàtiques</strong>: Simples pàgines HTML amb hipervincles</p>
+<p><strong>Pàgines Web Generades pel Servidor</strong>: HTML generat al servidor (PHP, Node, Java)</p>
+<p><strong>Introducció d'AJAX</strong>: Permet carregar o pujar dades al servidor de manera asíncrona, millorant la interactivitat sense recarregar la pàgina</p>
+<p><strong>Single Page Application (SPA)</strong>: Aplicacions d'una sola pàgina que es comuniquen amb el servidor usant JSON o XML, oferint una experiència d'App</p>
+<p><strong>Progressive Web Apps (PWA)</strong>: Combinen les millors característiques de les webs i les aplicacions mòbils  </p>
+<h2 id="13-definicio-del-model-client-servidor"><strong>1.3. Definició del Model Client-Servidor</strong><a class="headerlink" href="#13-definicio-del-model-client-servidor" title="Permanent link">¶</a></h2>
+<p>El model client-servidor és l'estructura fonamental que permet la comunicació a la World Wide Web . Es compon de tres elements essencials que treballen de manera coordinada:</p>
+<p><strong>El costat del client (client-side)</strong>: Fa referència a l'entorn on l'usuari final interactua amb l'aplicació. En la gran majoria dels casos, aquest entorn és el navegador web (com ara Firefox, Google Chrome o Microsoft</p>
+<p>Edge) que s'executa a l'ordinador o dispositiu mòbil de l'usuari </p>
+<p><strong>El costat del servidor (server-side)</strong>: Correspon a l'entorn remot que allotja el lloc web i gestiona la seva lògica central. Inclou el maquinari (servidors físics, màquines virtuals), el programari de servidor web (com Apache o NGINX), els llenguatges de programació del backend i les bases de dades on s'emmagatzema la informació de manera persistent </p>
+<p><strong>La xarxa</strong>: És el teixit connectiu que comunica el client i el servidor. Aquesta comunicació es realitza mitjançant protocols estàndard, principalment el Protocol de Transferència d'Hipertext (HTTP), que defineix com s'estructuren i es transmeten els missatges entre ambdós extrems </p>
+<h1 id="2-analisi-de-larquitectura-del-costat-del-client-client-side"><strong>2. Anàlisi de l'Arquitectura del Costat del Client (Client-Side)</strong><a class="headerlink" href="#2-analisi-de-larquitectura-del-costat-del-client-client-side" title="Permanent link">¶</a></h1>
+<h2 id="21-introduccio"><strong>2.1. Introducció</strong><a class="headerlink" href="#21-introduccio" title="Permanent link">¶</a></h2>
+<p>L'arquitectura del costat del client és responsable de tot allò que l'usuari veu i amb què interactua directament al seu navegador. El seu rol estratègic és crucial, ja que determina la qualitat de l'experiència d'usuari (UX), la interactivitat i el dinamisme de la interfície. Tot el codi client-side s'executa íntegrament en el dispositiu de l'usuari, la qual cosa permet respostes immediates a les seves accions sense necessitat de comunicar-se constantment amb el servidor .</p>
+<h2 id="22-principals-tecnologies"><strong>2.2. Principals Tecnologies</strong><a class="headerlink" href="#22-principals-tecnologies" title="Permanent link">¶</a></h2>
+<p>El desenvolupament en el costat del client s'estructura en capes tecnològiques ben definides, cadascuna amb una responsabilitat específica per construir una experiència web completa  :</p>
+<h3 id="221-contingut-html"><strong>2.2.1. Contingut (HTML)</strong><a class="headerlink" href="#221-contingut-html" title="Permanent link">¶</a></h3>
+<p>L'HTML (HyperText Markup Language) és l'esquelet de qualsevol pàgina web. Defineix l'estructura semàntica del contingut, organitzant la informació en elements com títols, paràgrafs, llistes, imatges i formularis. HTML5 introdueix elements semàntics més específics com <code>&amp;lt;section&amp;gt;</code>, <code>&amp;lt;nav&amp;gt;</code>, <code>&amp;lt;article&amp;gt;</code>, <code>&amp;lt;aside&amp;gt;</code>, <code>&amp;lt;header&amp;gt;</code>, i <code>&amp;lt;footer&amp;gt;</code> que milloren l'accessibilitat i el SEO 
+.</p>
+<h3 id="222-presentacio-css"><strong>2.2.2. Presentació (CSS)</strong><a class="headerlink" href="#222-presentacio-css" title="Permanent link">¶</a></h3>
+<p>El CSS (Cascading Style Sheets) s'encarrega de l'aspecte visual i l'estil. Controla la disposició (layout), els colors, la tipografia i les plantilles, separant de manera efectiva la presentació de l'estructura del contingut . Aquesta separació entre contingut i presentació és una pràctica fonamental del desenvolupament web modern</p>
+<p>.</p>
+<h3 id="223-comportament-javascript"><strong>2.2.3. Comportament (JavaScript)</strong><a class="headerlink" href="#223-comportament-javascript" title="Permanent link">¶</a></h3>
+<p>JavaScript és el llenguatge de programació principal del client. Aporta interactivitat i dinamisme a les pàgines, permetent executar lògica directament al navegador per respondre a les accions de l'usuari i modificar el contingut de la pàgina en temps real<br>
+.</p>
+<h2 id="23-funcionalitats-i-casos-dus"><strong>2.3. Funcionalitats i Casos d'Ús</strong><a class="headerlink" href="#23-funcionalitats-i-casos-dus" title="Permanent link">¶</a></h2>
+<p>La programació del costat del client, principalment a través de JavaScript, habilita un conjunt de funcionalitats clau per a les aplicacions web modernes  :</p>
+<p><strong>Reacció a la Interacció de l'Usuari</strong>: Gestiona esdeveniments com clics en enllaços, enviaments de formularis o moviments del ratolí</p>
+<p><strong>Modificació Dinàmica de Contingut i Estil</strong>: Permet alterar l'estructura (DOM) i l'estil de la pàgina en temps real</p>
+<p><strong>Preprocessament de Dades</strong>: S'utilitza per realitzar validacions en formularis abans que les dades siguin enviades al servidor</p>
+<p><strong>Comunicació Asíncrona (AJAX)</strong>: Permet actualitzar parts específiques d'una pàgina sense interrompre l'experiència de navegació de l'usuari</p>
+<h2 id="24-lecosistema-de-desenvolupament-javascript"><strong>2.4. L'Ecosistema de Desenvolupament JavaScript</strong><a class="headerlink" href="#24-lecosistema-de-desenvolupament-javascript" title="Permanent link">¶</a></h2>
+<p>El desenvolupament amb JavaScript es pot abordar des de diferents nivells de complexitat i abstracció</p>
+<h3 id="241-javascript-vanilla"><strong>2.4.1. JavaScript 'Vanilla'</strong><a class="headerlink" href="#241-javascript-vanilla" title="Permanent link">¶</a></h3>
+<p>Es refereix a l'ús de JavaScript pur, sense cap biblioteca o framework extern. És una opció ideal per a projectes petits o per afegir interactivitat simple, ja que no introdueix dependències addicionals i ofereix un control màxim sobre el codi .</p>
+<h3 id="242-biblioteques"><strong>2.4.2. Biblioteques</strong><a class="headerlink" href="#242-biblioteques" title="Permanent link">¶</a></h3>
+<p>Són conjunts de codi que faciliten tasques específiques i repetitives, com la manipulació del DOM o la gestió d'esdeveniments. Exemples populars inclouen:</p>
+<p><strong>jQuery</strong>: Una biblioteca ràpida i rica en característiques que simplifica la manipulació del DOM</p>
+<p><strong>React.js</strong>: Biblioteca desenvolupada per Facebook per construir interfícies d'usuari interactives i reutilitzables  </p>
+<h3 id="243-frameworks"><strong>2.4.3. Frameworks</strong><a class="headerlink" href="#243-frameworks" title="Permanent link">¶</a></h3>
+<p>Ofereixen una estructura completa i un paradigma de programació definit per construir aplicacions complexes des de zero</p>
+<p><strong>Angular</strong>: Framework robust desenvolupat per Google, ideal per a aplicacions web de gran escala</p>
+<p><strong>Vue.js</strong>: Framework progressiu conegut per la seva simplicitat i flexibilitat</p>
+<p><strong>Svelte</strong>: Es diferencia en compilar el codi a JavaScript optimitzat, eliminant l'ús del Virtual DOM</p>
+<h2 id="25-limitacions-i-restriccions-de-seguretat"><strong>2.5. Limitacions i Restriccions de Seguretat</strong><a class="headerlink" href="#25-limitacions-i-restriccions-de-seguretat" title="Permanent link">¶</a></h2>
+<p>L'execució de codi al navegador del client comporta limitacions i restriccions de seguretat inherents  :</p>
+<h3 id="251-limitacions-funcionals"><strong>2.5.1. Limitacions Funcionals</strong><a class="headerlink" href="#251-limitacions-funcionals" title="Permanent link">¶</a></h3>
+<p>Per disseny, JavaScript executat en un navegador no pot realitzar les següents accions:</p>
+<ol>
+<li>
+<p>Escriure fitxers directament al servidor</p>
+</li>
+<li>
+<p>Llegir o escriure fitxers o directoris a l'ordinador del client (excepte cookies)</p>
+</li>
+<li>
+<p>Llançar l'execució d'aplicacions externes</p>
+</li>
+<li>
+<p>Modificar les preferències del navegador</p>
+</li>
+<li>
+<p>Accedir a informació d'una pàgina web allotjada en un domini diferent</p>
+</li>
+</ol>
+<h3 id="252-model-de-seguretat"><strong>2.5.2. Model de Seguretat</strong><a class="headerlink" href="#252-model-de-seguretat" title="Permanent link">¶</a></h3>
+<p>La seguretat de JavaScript al client es basa en dos pilars fonamentals:</p>
+<p><strong>"Espai segur d'execució" (Sandbox)</strong>: El codi JavaScript s'executa en un entorn aïllat dins del navegador</p>
+<p><strong>"Política de mateix origen" (Same-Origin Policy)</strong>: Impedeix que un script carregat des d'un domini pugui accedir a dades d'un altre domini</p>
+<h1 id="3-analisi-de-larquitectura-del-costat-del-servidor-server-side"><strong>3. Anàlisi de l'Arquitectura del Costat del Servidor (Server-Side)</strong><a class="headerlink" href="#3-analisi-de-larquitectura-del-costat-del-servidor-server-side" title="Permanent link">¶</a></h1>
+<h2 id="31-introduccio"><strong>3.1. Introducció</strong><a class="headerlink" href="#31-introduccio" title="Permanent link">¶</a></h2>
+<p>L'arquitectura del costat del servidor constitueix el nucli central de qualsevol aplicació web robusta. És on resideix la lògica de negoci, es gestiona la persistència de les dades i s'implementen les mesures de seguretat fonamentals. A diferència del client, el servidor és un entorn controlat pel desenvolupador, la qual cosa li permet executar tasques privilegiades i accedir a recursos protegits .</p>
+<h2 id="32-tecnologies-i-components"><strong>3.2. Tecnologies i Components</strong><a class="headerlink" href="#32-tecnologies-i-components" title="Permanent link">¶</a></h2>
+<p>L'entorn del servidor està format per una pila de tecnologies que treballen conjuntament per processar les sol·licituds dels clients i generar respostes adequades :</p>
+<h3 id="321-programari-de-servidor-web"><strong>3.2.1. Programari de Servidor Web</strong><a class="headerlink" href="#321-programari-de-servidor-web" title="Permanent link">¶</a></h3>
+<p>És el programari que rep les peticions HTTP dels navegadors i serveix els fitxers corresponents. Exemples destacats inclouen Apache, NGINX i Microsoft IIS.</p>
+<h3 id="322-llenguatges-de-programacio"><strong>3.2.2. Llenguatges de Programació</strong><a class="headerlink" href="#322-llenguatges-de-programacio" title="Permanent link">¶</a></h3>
+<p>El servidor executa codi escrit en una àmplia varietat de llenguatges dissenyats per a la web:</p>
+<p><strong>Llenguatges de scripting</strong>: PHP, Perl (CGI), Python o Node.js (JavaScript al servidor)</p>
+<p><strong>Llenguatges compilats</strong>: Java o C++</p>
+<p><strong>Tecnologies propietàries</strong>: <a href="http://asp.net/">ASP.NET</a> i plataformes com ColdFusion</p>
+<h3 id="323-bases-de-dades"><strong>3.2.3. Bases de Dades</strong><a class="headerlink" href="#323-bases-de-dades" title="Permanent link">¶</a></h3>
+<p>Són sistemes d'emmagatzematge organitzat on l'aplicació guarda i recupera la informació de manera permanent.</p>
+<p>El servidor actua com a intermediari segur entre l'aplicació i la base de dades.</p>
+<h2 id="33-funcionalitats-i-responsabilitats"><strong>3.3. Funcionalitats i Responsabilitats</strong><a class="headerlink" href="#33-funcionalitats-i-responsabilitats" title="Permanent link">¶</a></h2>
+<p>Les tasques següents són responsabilitat exclusiva o principal de l'arquitectura del servidor :</p>
+<p><strong>Emmagatzematge Permanent de Dades</strong>: El servidor és l'únic component capaç d'interactuar de manera segura amb les bases de dades</p>
+<p><strong>Lògica de Negoci i Accés a Dades</strong>: Processa les sol·licituds rebudes i aplica les regles de negoci de l'aplicació</p>
+<p><strong>Autenticació i Seguretat</strong>: La gestió d'usuaris, la validació de credencials i l'aplicació de permisos d'accés són tasques crítiques que han de residir al servidor</p>
+<h1 id="4-comparativa-client-vs-servidor"><strong>4. Comparativa Client vs. Servidor</strong><a class="headerlink" href="#4-comparativa-client-vs-servidor" title="Permanent link">¶</a></h1>
+<h2 id="41-introduccio"><strong>4.1. Introducció</strong><a class="headerlink" href="#41-introduccio" title="Permanent link">¶</a></h2>
+<p>Moltes funcionalitats en el desenvolupament web no tenen una única ubicació d'implementació; es poden realitzar tant al client com al servidor. La decisió correcta depèn d'un equilibri estratègic entre factors com l'experiència d'usuari, el rendiment de l'aplicació, la integritat de les dades i la seguretat .</p>
+<h2 id="42-comparativa-de-tasques-comunes"><strong>4.2. Comparativa de Tasques Comunes</strong><a class="headerlink" href="#42-comparativa-de-tasques-comunes" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tasca</th>
+<th>Implementació Client-Side</th>
+<th>Implementació Server-Side</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Validació de</strong> <strong>Formularis</strong></td>
+<td>Recomanable per a UX: Proporciona retroalimentació instantània sense sobrecarregar el servidor. Tanmateix, és vulnerable ja que es pot eludir</td>
+<td>Obligatòria per a Seguretat: És l'única validació fiable. El servidor ha de verificar sempre totes les dades rebudes</td>
+</tr>
+<tr>
+<td><strong>Accés i</strong> <strong>Emmagatzematge de</strong> <strong>Dades</strong></td>
+<td>Accés per a Visualització: Ideal per presentar dades rebudes del servidor. No pot emmagatzemar dades de manera permanent</td>
+<td>Emmagatzematge Centralitzat: Responsabilitat exclusiva del servidor. Gestiona la interacció amb la base de dades</td>
+</tr>
+<tr>
+<td><strong>Execució de Càlculs</strong></td>
+<td>Apropiat per a Càlculs d'Interfície: Útil per a operacions simples que milloren la interactivitat</td>
+<td>Necessari per a Càlculs Crítics: Essencial per a càlculs complexos que requereixen dades segures</td>
+</tr>
+<tr>
+<td><strong>Manipulació d'Elements de la</strong> <strong>Pàgina</strong></td>
+<td>Tasca Inherent del Client: És la seva funció principal. Operacions com eliminar elements o canviar estils</td>
+<td>No Aplicable: El servidor no té accés directe al DOM un cop la pàgina ha estat enviada al client</td>
+</tr>
+</tbody>
+</table>
+<h2 id="43-complementarietat-entre-client-i-servidor"><strong>4.3. Complementarietat entre Client i Servidor</strong><a class="headerlink" href="#43-complementarietat-entre-client-i-servidor" title="Permanent link">¶</a></h2>
+<p>La conclusió final és que les tecnologies client-side i server-side són complementàries, no adversàries . Una aplicació web ben dissenyada aprofita els punts forts de cada arquitectura per oferir la millor solució possible. L'exemple de la validació de formularis és paradigmàtic: la millor pràctica consisteix a implementar una validació inicial al client per millorar l'experiència d'usuari i una validació final i exhaustiva al servidor per garantir la seguretat i la integritat de les dades.</p>
+<h1 id="5-navegadors-i-la-web"><strong>5. Navegadors i la Web</strong><a class="headerlink" href="#5-navegadors-i-la-web" title="Permanent link">¶</a></h1>
+<h2 id="51-definicio-i-funcionament-dels-navegadors"><strong>5.1. Definició i Funcionament dels Navegadors</strong><a class="headerlink" href="#51-definicio-i-funcionament-dels-navegadors" title="Permanent link">¶</a></h2>
+<p>Un navegador web és un programari que permet l'accés a Internet, interpretant la informació d'arxius i llocs web per a la seva visualització. La seva funció bàsica és obtenir documents HTML i interpretar-los .</p>
+<h3 id="511-components-clau"><strong>5.1.1. Components Clau</strong><a class="headerlink" href="#511-components-clau" title="Permanent link">¶</a></h3>
+<p><strong>Hipervincles i Navegació</strong>: Els documents posseeixen hipervincles que enllacen porcions de text o imatges a altres documents</p>
+<p><strong>Protocols i URLs</strong>: S'utilitza el protocol HTTP per a la comunicació, així com HTTPS (versió xifrada basada en SSL)</p>
+<p><strong>Estàndards</strong>: És imprescindible comprovar que el desenvolupament funcioni correctament en els principals navegadors i que el codi s'ajusti als estàndards HTML i XHTML</p>
+<h2 id="52-principals-navegadors"><strong>5.2. Principals Navegadors</strong><a class="headerlink" href="#52-principals-navegadors" title="Permanent link">¶</a></h2>
+<p>Els navegadors moderns suporten JavaScript i els estàndards web :</p>
+<table>
+<thead>
+<tr>
+<th>Navegador</th>
+<th>Motor de Renderitzat</th>
+<th>Característiques Clau</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Microsoft</strong> <strong>Edge</strong></td>
+<td>Motor de codi obert</td>
+<td>Substitueix l'antic Internet Explorer; dissenyat per ser lleuger</td>
+</tr>
+<tr>
+<td><strong>Mozilla Firefox</strong></td>
+<td>Gecko</td>
+<td>Lliure i de codi obert. Existeix Firefox Developer Edition per a desenvolupadors</td>
+</tr>
+<tr>
+<td><strong>Google</strong> <strong>Chrome</strong></td>
+<td>Blink (fork de WebKit)</td>
+<td>Compilat amb base en components de codi obert</td>
+</tr>
+<tr>
+<td><strong>Safari</strong></td>
+<td>WebKit</td>
+<td>Navegador d'Apple (Mac OS, iOS)</td>
+</tr>
+<tr>
+<td><strong>Opera</strong></td>
+<td>Blink</td>
+<td>Disposa de versions per a escriptori, telèfon i tauleta</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recomanació</strong>: Es recomana utilitzar Mozilla Firefox o Google Chrome per la seva quota de mercat i la gran quantitat d'eines per a la depuració disponibles .</p>
+<h1 id="6-eines-de-desenvolupament-i-millors-practiques"><strong>6. Eines de Desenvolupament i Millors Pràctiques</strong><a class="headerlink" href="#6-eines-de-desenvolupament-i-millors-practiques" title="Permanent link">¶</a></h1>
+<h2 id="61-importancia-de-lentorn-de-desenvolupament"><strong>6.1. Importància de l'Entorn de Desenvolupament</strong><a class="headerlink" href="#61-importancia-de-lentorn-de-desenvolupament" title="Permanent link">¶</a></h2>
+<p>La qualitat i l'eficiència en el desenvolupament web no depenen només de l'arquitectura escollida, sinó també de l'entorn de treball i de l'adhesió a bones pràctiques. Un entorn de desenvolupament ben configurat, equipat amb les eines adequades, i el seguiment d'estàndards de la indústria són crucials per accelerar el procés, minimitzar errors i garantir la qualitat del producte final .</p>
+<h2 id="62-seleccio-deines-essencials"><strong>6.2. Selecció d'Eines Essencials</strong><a class="headerlink" href="#62-seleccio-deines-essencials" title="Permanent link">¶</a></h2>
+<h3 id="621-editors-de-codi-i-ides"><strong>6.2.1. Editors de Codi i IDEs</strong><a class="headerlink" href="#621-editors-de-codi-i-ides" title="Permanent link">¶</a></h3>
+<p>L'elecció d'eines d'edició de codi abasta un espectre que va des d'editors simples fins a entorns de desenvolupament integrats (IDEs) complets :</p>
+<p><strong>Editors simples</strong>: Ideals per a modificacions ràpides (Notepad, Gedit)</p>
+<p><strong>Editors de text avançats</strong>: Ofereixen equilibri entre rendiment i funcionalitat amb ressaltat de sintaxi i autocompletat</p>
+<p><strong>Entorns de Desenvolupament Integrats (IDEs)</strong>: Solucions completes per a projectes grans i complexos</p>
+<p><strong>Per a la majoria de projectes de desenvolupament web modern, es recomana explícitament l'ús de Visual Studio Code (gratuït) o WebStorm</strong> .</p>
+<h2 id="63-webstorm-leina-de-desenvolupament-del-curs"><strong>6.3. WebStorm: L'Eina de Desenvolupament del Curs</strong><a class="headerlink" href="#63-webstorm-leina-de-desenvolupament-del-curs" title="Permanent link">¶</a></h2>
+<p>Durant el curs utilitzarem <strong>WebStorm</strong> com a entorn de desenvolupament integrat principal. WebStorm és un IDE multiplataforma desenvolupat per JetBrains, especialitzat en JavaScript, TypeScript i altres tecnologies web relacionades </p>
+<p>.</p>
+<p><strong>6.3.1. Característiques Principals de WebStorm Asistència de Codi Intel·ligent</strong>:</p>
+<p>Ofereix autocompletat de codi contextual i intelligent</p>
+<p>Detecció d'errors en temps real</p>
+<p>Sugerències contextuels que acceleren l'escriptura de codi </p>
+<p><strong>Depuració Integrada</strong>:</p>
+<p>Facilita la depuració d'aplicacions tant del client com del servidor</p>
+<p>Eines de depuració avançades directament des de l'IDE</p>
+<p>Suport per a JavaScript, Node.js i altres tecnologies web </p>
+<p><strong>Integració amb Sistemes de Control de Versions</strong>:</p>
+<p>S'integra perfectament amb Git, SVN i altres sistemes</p>
+<p>Facilita la gestió de canvis i la col·laboració en equip </p>
+<p><strong>Suport per a Frameworks</strong>:</p>
+<p>Suport extens per a frameworks populars com React, Angular, Vue.js</p>
+<p>Plantilles i eines específiques per a cada framework</p>
+<p>Assistència de codi especialitzada per a JSX i altres sintaxis </p>
+<p><strong>Navegació i Cerca Ràpides</strong>:</p>
+<p>Funcionalitat "Search Everywhere" per buscar accions, arxius i símbols</p>
+<p>Navegació intel·ligent per la base de codi</p>
+<p>Capacitat de saltar ràpidament a definicions i usos </p>
+<h3 id="632-llicencies-destudiant"><strong>6.3.2. Llicències d'Estudiant</strong><a class="headerlink" href="#632-llicencies-destudiant" title="Permanent link">¶</a></h3>
+<p><strong>WebStorm ofereix llicències educatives gratuites per a estudiants i professors</strong>. Els estudiants poden utilitzar el All Products Pack de JetBrains (que inclou WebStorm, IntelliJ IDEA Ultimate, i totes les altres eines de JetBrains) de forma gratuïta amb fins educatius </p>
+<p>.</p>
+<p><strong>Beneficis de la Llicència Educativa</strong>:</p>
+<p>Accés complet a totes les funcionalitats de WebStorm</p>
+<p>Renovació anual mentre es mantingui l'estatus d'estudiant</p>
+<p>40% de descompte en llicències personals després de la graduació</p>
+<p>Accés a eines professionals sense cost </p>
+<p><strong>Com Obtenir la Llicència</strong>:</p>
+<ol>
+<li>
+<p>Dirigir-se a la pàgina de llicències educatives de JetBrains</p>
+</li>
+<li>
+<p>Sol·licitar amb el correu electrònic institucional</p>
+</li>
+<li>
+<p>Verificar l'estatus d'estudiant</p>
+</li>
+<li>
+<p>Descarregar i activar WebStorm amb la llicència educativa </p>
+</li>
+</ol>
+<h3 id="633-avantatges-de-webstorm-per-a-laprenentatge"><strong>6.3.3. Avantatges de WebStorm per a l'Aprenentatge</strong><a class="headerlink" href="#633-avantatges-de-webstorm-per-a-laprenentatge" title="Permanent link">¶</a></h3>
+<p><strong>Entorn Professional</strong>: Permet als estudiants familiaritzar-se amb eines utilitzades en la indústria</p>
+<p><strong>Productivitat Millorada</strong>: Les eines intel·ligents acceleren l'aprenentatge i redueixen errors comuns</p>
+<p><strong>Suport Multi-llenguatge</strong>: Ideal per aprendre HTML, CSS, JavaScript i frameworks moderns</p>
+<p><strong>Integració amb Git</strong>: Facilita l'aprenentatge del control de versions des de l'IDE </p>
+<h2 id="64-navegadors-i-eines-de-depuracio"><strong>6.4. Navegadors i Eines de Depuració</strong><a class="headerlink" href="#64-navegadors-i-eines-de-depuracio" title="Permanent link">¶</a></h2>
+<p>És imprescindible provar el codi en múltiples navegadors per assegurar la compatibilitat. Es recomana centrar-se en Firefox i Google Chrome per la seva quota de mercat i les seves excel·lents eines per a desenvolupadors </p>
+<p>.</p>
+<h3 id="641-la-consola-web-f12"><strong>6.4.1. La Consola Web (F12)</strong><a class="headerlink" href="#641-la-consola-web-f12" title="Permanent link">¶</a></h3>
+<p>La majoria de navegadors incorporen eines natives per facilitar el desenvolupament. La Consola Web, accessible prement F12, inclou diverses pestanyes per a la depuració :</p>
+<p><strong>Red (Xarxa)</strong>: Registre de peticions HTTP</p>
+<p><strong>CSS</strong>: Anàlisi i errors CSS</p>
+<p><strong>JS</strong>: Anàlisi i errors JavaScript</p>
+<p><strong>Seguridad</strong>: Advertències de seguretat</p>
+<p><strong>Registro</strong>: Missatges enviats a window.console</p>
+<h2 id="65-control-de-versions"><strong>6.5. Control de Versions</strong><a class="headerlink" href="#65-control-de-versions" title="Permanent link">¶</a></h2>
+<p>L'ús d'un sistema de control de versions és una pràctica estàndard i ineludible en el desenvolupament professional. <strong>Git és l'eina de facto del sector</strong> per gestionar l'historial de canvis del codi, facilitar la col·laboració en equip i mantenir un registre de les versions del projecte  </p>
+<p>.</p>
+<h3 id="651-beneficis-del-control-de-versions"><strong>6.5.1. Beneficis del Control de Versions</strong><a class="headerlink" href="#651-beneficis-del-control-de-versions" title="Permanent link">¶</a></h3>
+<p><strong>Seguiment de Canvis</strong>: Registre complet de modificacions al llarg del temps</p>
+<p><strong>Col·laboració</strong>: Facilita el treball en equip i la gestió de conflictes <strong>Recuperació</strong>: Capacitat de recuperar versions anteriors del codi<br>
+<strong>Branching</strong>: Permet desenvolupar funcionalitats en paral·lel </p>
+<h2 id="66-millors-practiques"><strong>6.6. Millors Pràctiques</strong><a class="headerlink" href="#66-millors-practiques" title="Permanent link">¶</a></h2>
+<h3 id="661-adhesio-als-estandards-web"><strong>6.6.1. Adhesió als Estàndards Web</strong><a class="headerlink" href="#661-adhesio-als-estandards-web" title="Permanent link">¶</a></h3>
+<p>És fonamental garantir que el codi HTML sigui vàlid segons les especificacions del W3C. L'ús del validador del W3C (<a href="https://validator.w3.org/">https://validator.w3.org/</a>) ajuda a detectar errors estructurals que poden provocar problemes de compatibilitat entre navegadors<br>
+.</p>
+<h3 id="662-integracio-de-codi-javascript"><strong>6.6.2. Integració de Codi JavaScript</strong><a class="headerlink" href="#662-integracio-de-codi-javascript" title="Permanent link">¶</a></h3>
+<p>Encara que és possible inserir codi JavaScript directament dins dels fitxers HTML, la pràctica recomanada és utilitzar fitxers externs amb extensió .js. Aquest enfocament millora la modularitat, permet la reutilització del codi i augmenta la mantenibilitat del projecte<br>
+.</p>
+<h3 id="663-disseny-funcional-sense-javascript"><strong>6.6.3. Disseny Funcional Sense JavaScript</strong><a class="headerlink" href="#663-disseny-funcional-sense-javascript" title="Permanent link">¶</a></h3>
+<p>Un principi de disseny robust, conegut com a "progressive enhancement" (millora progressiva), dicta que una pàgina web hauria de ser completament funcional encara que JavaScript estigui desactivat. JavaScript s'hauria d'utilitzar per millorar l'experiència d'usuari, però no hauria de ser un requisit absolut per accedir al contingut bàsic<br>
+.</p>
+<h3 id="664-separacio-de-contingut-presentacio-i-comportament"><strong>6.6.4. Separació de Contingut, Presentació i Comportament</strong><a class="headerlink" href="#664-separacio-de-contingut-presentacio-i-comportament" title="Permanent link">¶</a></h3>
+<p>Una de les millors pràctiques fonamentals del desenvolupament web modern és la separació clara entre </p>
+<p>:</p>
+<p><strong>Contingut (HTML)</strong>: Estructura i significat semàntic</p>
+<p><strong>Presentació (CSS)</strong>: Aspecte visual i disseny</p>
+<p><strong>Comportament (JavaScript)</strong>: Interactivitat i funcionalitat dinàmica</p>
+<p>Aquesta separació facilita el manteniment, millora l'accessibilitat i permet una major flexibilitat en el desenvolupament.</p>
+<h1 id="7-tecnologies-modernes-i-tendencies"><strong>7. Tecnologies Modernes i Tendències</strong><a class="headerlink" href="#7-tecnologies-modernes-i-tendencies" title="Permanent link">¶</a></h1>
+<h2 id="71-progressive-web-apps-pwa"><strong>7.1. Progressive Web Apps (PWA)</strong><a class="headerlink" href="#71-progressive-web-apps-pwa" title="Permanent link">¶</a></h2>
+<p>Les Progressive Web Apps representen una evolució natural de les aplicacions web tradicionals, combinant les millors característiques de les webs i les aplicacions mòbils </p>
+<p>.</p>
+<h3 id="711-principis-de-les-pwa"><strong>7.1.1. Principis de les PWA</strong><a class="headerlink" href="#711-principis-de-les-pwa" title="Permanent link">¶</a></h3>
+<p><strong>Progressives</strong>: Funcionen per a tots els usuaris, sense importar l'elecció de navegador</p>
+<p><strong>Adaptables</strong>: S'adapten a qualsevol factor de formulari (escriptori, mòbil, tauleta)</p>
+<p><strong>Independents de la connectivitat</strong>: Funcionen offline o amb xarxes de mala qualitat</p>
+<p><strong>Actualitzades</strong>: Sempre actualitzades gràcies als service workers</p>
+<p><strong>Segures</strong>: Emeses via HTTPS per garantir la seguretat </p>
+<h2 id="72-ecosistema-javascript-modern"><strong>7.2. Ecosistema JavaScript Modern</strong><a class="headerlink" href="#72-ecosistema-javascript-modern" title="Permanent link">¶</a></h2>
+<p>L'ecosistema de JavaScript ha crescut exponencialmente, oferint una àmplia varietat d'eines i frameworks per a diferents necessitats </p>
+<p>:</p>
+<h3 id="721-frameworks-frontend-populars"><strong>7.2.1. Frameworks Frontend Populars</strong><a class="headerlink" href="#721-frameworks-frontend-populars" title="Permanent link">¶</a></h3>
+<p><strong>React.js</strong>: Biblioteca per a interfaces d'usuari desenvolupada per Facebook</p>
+<p><strong>Angular</strong>: Framework complet desenvolupat per Google</p>
+<p><strong>Vue.js</strong>: Framework progressiu conegut per la seva simplicitat</p>
+<p><strong>Svelte</strong>: Enfocament innovador que compila a JavaScript optimitzat</p>
+<h3 id="722-ecosistema-backend"><strong>7.2.2. Ecosistema Backend</strong><a class="headerlink" href="#722-ecosistema-backend" title="Permanent link">¶</a></h3>
+<p><strong>Node.js</strong>: Entorn d'execució JavaScript per al servidor</p>
+<p><strong>Express.js</strong>: Framework minimalista per a aplicacions web</p>
+<p><strong>Nest.js</strong>: Framework escalable inspirat en Angular</p>
+<h1 id="8-conclusions"><strong>8. Conclusions</strong><a class="headerlink" href="#8-conclusions" title="Permanent link">¶</a></h1>
+<h2 id="81-sintesi-dels-conceptes-clau"><strong>8.1. Síntesi dels Conceptes Clau</strong><a class="headerlink" href="#81-sintesi-dels-conceptes-clau" title="Permanent link">¶</a></h2>
+<p>L'arquitectura client-servidor constitueix el fonament del desenvolupament web modern, proporcionant un marc sòlid per a la creació d'aplicacions escalables i eficients. La comprensió profunda d'aquesta arquitectura és essencial per a qualsevol desenvolupador web, ja que permet prendre decisions informades sobre la distribució de responsabilitats entre el client i el servidor.</p>
+<h2 id="82-importancia-de-lentorn-de-desenvolupament"><strong>8.2. Importància de l'Entorn de Desenvolupament</strong><a class="headerlink" href="#82-importancia-de-lentorn-de-desenvolupament" title="Permanent link">¶</a></h2>
+<p>L'elecció d'eines adequades, com WebStorm, i l'adopció de millors pràctiques són factors determinants per a l'èxit en el desenvolupament web. La integració d'eines professionals des de l'etapa d'aprenentatge prepara els estudiants per a un entorn de treball real i millora significativament la seva productivitat.</p>
+<h2 id="83-perspectiva-de-futur"><strong>8.3. Perspectiva de Futur</strong><a class="headerlink" href="#83-perspectiva-de-futur" title="Permanent link">¶</a></h2>
+<p>El desenvolupament web continua evolucionant amb noves tecnologies com les Progressive Web Apps, frameworks moderns de JavaScript i eines de desenvolupament cada vegada més sofisticades. La formació en aquests conceptes fonamentals proporciona una base sòlida per adaptar-se a futures innovacions tecnològiques.</p>
+<h2 id="84-recomanacions-per-a-laprenentatge"><strong>8.4. Recomanacions per a l'Aprenentatge</strong><a class="headerlink" href="#84-recomanacions-per-a-laprenentatge" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p><strong>Dominar els Fonaments</strong>: HTML, CSS i JavaScript vanilla abans de passar a frameworks</p>
+</li>
+<li>
+<p><strong>Practicar amb Eines Professionals</strong>: Utilitzar WebStorm per familiaritzar-se amb IDEs industrials</p>
+</li>
+<li>
+<p><strong>Adoptar el Control de Versions</strong>: Integrar Git des del principi en tots els projectes</p>
+</li>
+<li>
+<p><strong>Seguir les Millors Pràctiques</strong>: Aplicar la separació de contingut, presentació i comportament</p>
+</li>
+<li>
+<p><strong>Mantenir-se Actualitzat</strong>: Seguir l'evolució de l'ecosistema JavaScript i les noves tecnologies web</p>
+</li>
+</ol>
+<details class="info">
+<summary><em>Referències</em></summary>
+<ol>
+<li><a href="https://www.supermicro.com/es/glossary/client-server-architecture">https://www.supermicro.com/es/glossary/client-server-architecture</a></li>
+<li><a href="https://ioc.xtec.cat/materials/FP/Recursos/fp_a3d_m06_/web/fp_a3d_m06_htmlindex/WebContent/u4/a1/continguts.html">https://ioc.xtec.cat/materials/FP/Recursos/fp_a3d_m06_/web/fp_a3d_m06_htmlindex/WebContent/u4/a1/continguts.html</a></li>
+<li><a href="https://cursos.frogamesformacion.com/pages/blog/desarrollo-web-5-buenas-pr%C3%A1cticas-para-escribir-c%C3%B3digo-html-css-y-javascript-de-calidad">https://cursos.frogamesformacion.com/pages/blog/desarrollo-web-5-buenas-prácticas-para-escribir-código-html-css-y-javasc ript-de-calidad</a></li>
+<li><a href="https://www.youtube.com/watch?v=3fLAhenpvQg">https://www.youtube.com/watch?v=3fLAhenpvQg</a></li>
+<li><a href="https://docencia.xaviersastre.cat/Moduls/AW/03CSS.html">https://docencia.xaviersastre.cat/Moduls/AW/03CSS.html</a></li>
+<li><a href="https://www.swhosting.com/ca/blog/principals-llenguatges-de-programacio-web">https://www.swhosting.com/ca/blog/principals-llenguatges-de-programacio-web</a></li>
+<li><a href="https://dev.to/deveg4/explorando-el-ecosistema-de-javascript-un-mapa-completo-de-frameworks-y-librerias-41ek">https://dev.to/deveg4/explorando-el-ecosistema-de-javascript-un-mapa-completo-de-frameworks-y-librerias-41ek</a></li>
+<li><a href="https://es.linkedin.com/pulse/frameworks-de-javascript-top-5-mejores-para-el-desarrollo-web-aw3ec">https://es.linkedin.com/pulse/frameworks-de-javascript-top-5-mejores-para-el-desarrollo-web-aw3ec</a></li>
+<li><a href="https://thebridge.tech/blog/framework-javascrip/">https://thebridge.tech/blog/framework-javascrip/</a></li>
+<li><a href="https://www.godaddy.com/resources/es/crearweb/webstorm-jetbrains-ide-que-es">https://www.godaddy.com/resources/es/crearweb/webstorm-jetbrains-ide-que-es</a></li>
+<li><a href="https://www.jetbrains.com/es-es/webstorm/features/">https://www.jetbrains.com/es-es/webstorm/features/</a></li>
+<li><a href="https://www.tencentcloud.com/techpedia/103411">https://www.tencentcloud.com/techpedia/103411</a></li>
+<li><a href="https://sales.jetbrains.com/hc/es/articles/207241195--Ofrecen-licencias-educativas-gratuitas-para-estudiantes-y-profesores">https://sales.jetbrains.com/hc/es/articles/207241195--Ofrecen-licencias-educativas-gratuitas-para-estudiantes-y-profesores</a></li>
+<li><a href="https://intconsultoria.com/licencias-de-jetbrains-estudiantes-optimiza-tu-desarrollo-de-software/">https://intconsultoria.com/licencias-de-jetbrains-estudiantes-optimiza-tu-desarrollo-de-software/</a></li>
+<li><a href="https://sales.jetbrains.com/hc/es/categories/11557780144658-Licencias-educativas-gratuitas-para-estudiantes-y-profesores">https://sales.jetbrains.com/hc/es/categories/11557780144658-Licencias-educativas-gratuitas-para-estudiantes-y-profesores</a></li>
+<li><a href="https://www.youtube.com/watch?v=1NDeqDTXiV0">https://www.youtube.com/watch?v=1NDeqDTXiV0</a></li>
+<li><a href="https://www.getapp.es/software/2048273/webstorm">https://www.getapp.es/software/2048273/webstorm</a></li>
+<li><a href="https://frontendleap.com/fundamentales/introduccion-webstorm">https://frontendleap.com/fundamentales/introduccion-webstorm</a></li>
+<li><a href="https://helpdesk.cdmon.com/portal/ca/kb/articles/com-activar-els-clients-de-control-de-versions-svn-git">https://helpdesk.cdmon.com/portal/ca/kb/articles/com-activar-els-clients-de-control-de-versions-svn-git</a></li>
+<li><a href="https://ioc.xtec.cat/materials/FP/Recursos/fp_daw_m08_/web/fp_daw_m08_htmlindex/WebContent/u4/a2/continguts.html">https://ioc.xtec.cat/materials/FP/Recursos/fp_daw_m08_/web/fp_daw_m08_htmlindex/WebContent/u4/a2/continguts.html</a></li>
+<li><a href="https://canigo.ctti.gencat.cat/howtos/2018-10-Howto-Gitflow-desenvolupament-SIC/">https://canigo.ctti.gencat.cat/howtos/2018-10-Howto-Gitflow-desenvolupament-SIC/</a></li>
+<li><a href="https://www.youtube.com/watch?v=owktvzEgTHI">https://www.youtube.com/watch?v=owktvzEgTHI</a></li>
+<li><a href="https://openaccess.uoc.edu/bitstream/10609/132928/11/josepmonjoTFM0621mem%C3%B2ria.pdf">https://openaccess.uoc.edu/bitstream/10609/132928/11/josepmonjoTFM0621memòria.pdf</a></li>
+<li><a href="https://ddd.uab.cat/pub/tfg/2020/tfg_243120/InformeFinalV3.pdf">https://ddd.uab.cat/pub/tfg/2020/tfg_243120/InformeFinalV3.pdf</a></li>
+<li><a href="https://gooapps.cat/aplicaciones-web-progresivas-pwas-para-empresas/">https://gooapps.cat/aplicaciones-web-progresivas-pwas-para-empresas/</a></li>
+<li><a href="https://www.jetbrains.com/es-es/webstorm/webstorm-2010.html">https://www.jetbrains.com/es-es/webstorm/webstorm-2010.html</a></li>
+<li><a href="https://www.ujaen.es/servicios/sinformatica/catalogo-de-servicios-tic/software/software-instalable-web/software-de-jetbrains">https://www.ujaen.es/servicios/sinformatica/catalogo-de-servicios-tic/software/software-instalable-web/software-de-jetbrains</a></li>
+<li><a href="https://pablomonteserin.com/curso/webstorm/">https://pablomonteserin.com/curso/webstorm/</a></li>
+<li><a href="https://www.youtube.com/watch?v=PY_HVcJ4h1A">https://www.youtube.com/watch?v=PY_HVcJ4h1A</a></li>
+<li><a href="https://www.jetbrains.com/es-es/webstorm/download/">https://www.jetbrains.com/es-es/webstorm/download/</a></li>
+<li><a href="https://www.bestnetsoft.com/webstorm/">https://www.bestnetsoft.com/webstorm/</a></li>
+<li><a href="https://www.jetbrains.com/es-es/academy/student-pack/">https://www.jetbrains.com/es-es/academy/student-pack/</a></li>
+<li><a href="https://www.youtube.com/watch?v=cJOO5lEjlFg">https://www.youtube.com/watch?v=cJOO5lEjlFg</a></li>
+<li><a href="https://www.jetbrains.com/es-es/webstorm/">https://www.jetbrains.com/es-es/webstorm/</a></li>
+<li><a href="https://www.reddit.com/r/javascript/comments/1gb65hc/webstorm_is_now_free_for_noncommercial_use/">https://www.reddit.com/r/javascript/comments/1gb65hc/webstorm_is_now_free_for_noncommercial_use/</a></li>
+<li><a href="https://www.daemon4.com/empresa/noticias/arquitectura-cliente-servidor/">https://www.daemon4.com/empresa/noticias/arquitectura-cliente-servidor/</a></li>
+<li><a href="https://www.youtube.com/watch?v=p85dXRGwJBQ">https://www.youtube.com/watch?v=p85dXRGwJBQ</a></li>
+<li><a href="https://www.atlassian.com/git/tutorials/what-is-version-control">https://www.atlassian.com/git/tutorials/what-is-version-control</a></li>
+<li><a href="https://www.freecodecamp.org/espanol/news/practica-html-css-y-javascript-en-espanol-creando-7-proyectos/">https://www.freecodecamp.org/espanol/news/practica-html-css-y-javascript-en-espanol-creando-7-proyectos/</a></li>
+<li><a href="https://es.wikipedia.org/wiki/Cliente-servidor">https://es.wikipedia.org/wiki/Cliente-servidor</a></li>
+<li><a href="https://xarxanet.org/informatic/recursos/control-de-versions-de-documents-amb-github">https://xarxanet.org/informatic/recursos/control-de-versions-de-documents-amb-github</a></li>
+<li><a href="https://blogs.uoc.edu/informatica/ca/javascript-per-aprendre-programar/">https://blogs.uoc.edu/informatica/ca/javascript-per-aprendre-programar/</a></li>
+<li><a href="https://www.arsys.es/blog/todo-sobre-la-arquitectura-cliente-servidor">https://www.arsys.es/blog/todo-sobre-la-arquitectura-cliente-servidor</a></li>
+<li><a href="https://git-scm.com/book/ms/v2/Getting-Started-About-Version-Control">https://git-scm.com/book/ms/v2/Getting-Started-About-Version-Control</a></li>
+<li><a href="https://www.youtube.com/watch?v=BA328RQa08M">https://www.youtube.com/watch?v=BA328RQa08M</a></li>
+<li><a href="https://www.graphon.com/es/blog/client-server-applications-in-2025">https://www.graphon.com/es/blog/client-server-applications-in-2025</a></li>
+<li><a href="https://ioc.xtec.cat/materials/FP/Recursos/fp_dam_m05_/web/fp_dam_m05_htmlindex/WebContent/u2/a2/continguts.html">https://ioc.xtec.cat/materials/FP/Recursos/fp_dam_m05_/web/fp_dam_m05_htmlindex/WebContent/u2/a2/continguts.html</a></li>
+<li><a href="http://ceipturodeguiera.xtec.cat/formacio/cd2005_informatica/materials/td108/nucli/guia.htm">http://ceipturodeguiera.xtec.cat/formacio/cd2005_informatica/materials/td108/nucli/guia.htm</a></li>
+<li><a href="https://www.unimedia.tech/ca/descobriu-el-millor-ide-per-a-c-les-millors-tendencies-en-desenvolupament-web-personalitzat/">https://www.unimedia.tech/ca/descobriu-el-millor-ide-per-a-c-les-millors-tendencies-en-desenvolupament-web-personalitzat/</a></li>
+<li><a href="https://burjcdigital.urjc.es/bitstreams/aaaafb35-6411-450c-a688-16650ae4e3b2/download">https://burjcdigital.urjc.es/bitstreams/aaaafb35-6411-450c-a688-16650ae4e3b2/download</a></li>
+<li><a href="https://kinsta.com/es/blog/bibliotecas-javascript/">https://kinsta.com/es/blog/bibliotecas-javascript/</a></li>
+<li><a href="https://moltweb.com/">https://moltweb.com</a></li>
+<li><a href="https://weareshifta.com/estado-del-arte-de-los-frameworks-de-javascript-en-2024/">https://weareshifta.com/estado-del-arte-de-los-frameworks-de-javascript-en-2024/</a></li>
+<li><a href="https://itequia.com/ca/6-consells-per-millorar-el-rendiment-daplicacions-a-angular/">https://itequia.com/ca/6-consells-per-millorar-el-rendiment-daplicacions-a-angular/</a></li>
+<li><a href="https://ioc.xtec.cat/materials/FP/Recursos/fp_daw_m09_/web/fp_daw_m09_htmlindex/WebContent/u1/a3/continguts.html">https://ioc.xtec.cat/materials/FP/Recursos/fp_daw_m09_/web/fp_daw_m09_htmlindex/WebContent/u1/a3/continguts.html</a></li>
+<li><a href="https://eduardofierro.pro/blog/el-ecosistema-de-javascript-en-2023">https://eduardofierro.pro/blog/el-ecosistema-de-javascript-en-2023</a></li>
+<li><a href="https://millora.caib.es/">https://millora.caib.es</a></li>
+<li><a href="https://mosaic.uoc.edu/ac/le/ca/m1/ud3/index.html">https://mosaic.uoc.edu/ac/le/ca/m1/ud3/index.html</a></li>
+<li><a href="http://multimedia.uoc.edu/blogs/pw/2013/04/16/webstorm/">http://multimedia.uoc.edu/blogs/pw/2013/04/16/webstorm/</a></li>
+</ol>
+</details>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Darrera actualització">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">8 d’octubre de 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025 Xavier Sastre - Llicencia CC BY-NC-SA <a href="#__consent">Canvia configuració de les galetes</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+
+
+
+
+
+<h4>Consentiment ús galetes</h4>
+<p>Utilitzem galetes per reconèixer les vostres visites, així com mesurar l'eficàcia de la nostra documentació i si els usuaris troben allò que estan buscant. Amb el teu consentiment, ens ajudes a millorar la nostra documentació.</p>
+<input class="md-toggle" type="checkbox" id="__settings">
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+          
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accepta</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Rebutja</button>
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestiona la configuració</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "toc.integrate", "content.tabs.link", "content.tooltips", "content.code.select", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../assets/extra.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

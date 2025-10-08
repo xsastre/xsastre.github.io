@@ -666,6 +666,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docencia.xaviersastre.cat/Moduls/DWEC/UT01.html</loc>
+         <lastmod>2025-10-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docencia.xaviersastre.cat/Moduls/DWEC/UT01_old.html</loc>
+         <lastmod>2025-10-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docencia.xaviersastre.cat/Moduls/DWEC/UT02.html</loc>
          <lastmod>2025-10-08</lastmod>
          <changefreq>daily</changefreq>
@@ -811,17 +821,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docencia.xaviersastre.cat/Moduls/DWEC/exercicisisolucions/UT02Exercicis.html</loc>
+         <lastmod>2025-10-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docencia.xaviersastre.cat/Moduls/DWEC/exercicisisolucions/prova.html</loc>
          <lastmod>2025-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docencia.xaviersastre.cat/Moduls/DWEC/exercicisisolucions/exercicis/enunciats-exercicis-50.html</loc>
-         <lastmod>2025-10-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docencia.xaviersastre.cat/Moduls/DWEC/exercicisisolucions/exercicis/enunciats.html</loc>
          <lastmod>2025-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -862,6 +872,11 @@
     </url>
     <url>
          <loc>https://docencia.xaviersastre.cat/Moduls/DWES/UT02PHPVideo.html</loc>
+         <lastmod>2025-10-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docencia.xaviersastre.cat/Moduls/DWES/UT02PHPindex.html</loc>
          <lastmod>2025-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
