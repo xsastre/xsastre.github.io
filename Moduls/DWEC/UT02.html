@@ -1,0 +1,2482 @@
+<!DOCTYPE html><html lang="ca" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docencia.xaviersastre.cat/Moduls/DWEC/UT02.html">
+      
+      
+      
+      
+      <link rel="icon" href="../../imatges/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>DWEC UT02. Sintaxis Javascript ES6 - Docencia Xavier</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-KXJX1CP7QG"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-KXJX1CP7QG",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-KXJX1CP7QG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dwec-ut02-sintaxis-javascript-es6" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../../index.html" title="Docencia Xavier" class="md-header__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  <img src="../../imatges/education_blanc.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docencia Xavier
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DWEC UT02. Sintaxis Javascript ES6
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="Teal" aria-label="Canviar a mode nit" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode nit" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="Teal" aria-label="Canviar a mode dia" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Docencia Xavier" class="md-nav__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  <img src="../../imatges/education_blanc.png" alt="logo">
+
+    </a>
+    Docencia Xavier
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    NC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            NC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CECNC/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducció i index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT01 Compliment normatiu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            UT01 Compliment normatiu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CECNC/UT01.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CECNC/presentacions/01 Unitat 1 - Compliment  normatiu_ok/index_HTML.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diapositives unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWES
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            DWES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1">
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT01 Arquitectures Web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            UT01 Arquitectures Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/UT01ArquitecturesWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/presentacions/DWESUT01 - Arquitectures i eines/index_HTML.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diapositives unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/UT01ArquitecturesWebVideo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vídeo resum de la unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/UT01ArquitecturesWebActivitats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activitats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT02 Llenguatge PHP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            UT02 Llenguatge PHP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/UT02PHP.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/UT02PHPVideo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vídeo resum de la unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/UT02PHPTest.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test autoavaluació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWES/exercicisisolucions/UT02PHPExercicis.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activitats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bloc  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"></path></svg>
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Arxiva
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Arxiva
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2025.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/aws.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/amazon.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/coneixements-generals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coneixements generals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/dam.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/daw.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/dwec.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/dwes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DWES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/docker.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/dynamodb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DynamoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/general.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/html.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/js.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/java.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/javascript.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/matem%C3%A0tiques.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matemàtiques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/php.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/psp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PSP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/programaci%C3%B3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/programci%C3%B3-multifil.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programció multifil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/projecte-intermodular.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projecte intermodular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/springboot.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpringBoot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="dwec-ut02-sintaxis-javascript-es6">DWEC <strong>UT02. Sintaxis Javascript ES6</strong><a class="headerlink" href="#dwec-ut02-sintaxis-javascript-es6" title="Permanent link">¶</a></h1>
+<p><strong>Índex de contingut</strong></p>
+<ol>
+<li>
+<p><a href="#introducció">Introducció</a>  </p>
+</li>
+<li>
+<p><a href="#hola-món-i-comentaris">Hola món i comentaris</a></p>
+</li>
+<li>
+<p><a href="#variables,-constants-i-arrays">Variables, constants i arrays</a></p>
+</li>
+<li>
+<p><a href="#entrada-i-sortida-en-navegadors">Entrada i sortida en navegadors</a></p>
+</li>
+<li>
+<p><a href="#operadors">Operadors</a></p>
+</li>
+<li>
+<p><a href="#estructures-de-control">Estructures de control</a></p>
+</li>
+<li>
+<p><a href="#estructura-repetitives-\(bucles\)">Estructura repetitives (Bucles)</a>    </p>
+</li>
+<li>
+<p><a href="#funcions">Funcions</a></p>
+</li>
+<li>
+<p><a href="#funcions-fletxa-\(arrow-functions\)">Funcions fletxa (arrow functions)</a>    </p>
+</li>
+<li>
+<p><a href="#classes-a-javascript">Classes a Javascript</a></p>
+</li>
+<li>
+<p><a href="#més-coses-interessants-de-javascript-es6">Més coses interessants de Javascript ES6</a></p>
+</li>
+<li>
+<p><a href="#introducció-a-la-manipulació-del-dom">Introducció a la manipulació del DOM</a></p>
+</li>
+<li>
+<p><a href="#material-addicional">Material addicional</a></p>
+</li>
+<li>
+<p><a href="#bibliografia">Bibliografia</a></p>
+</li>
+<li>
+<p><a href="#autors-\(en-ordre-alfabètic\)">Autors (en ordre alfabètic)</a></p>
+</li>
+</ol>
+<hr>
+<h2 id="introducció">1. Introducció<a class="headerlink" href="#introducció" title="Permanent link">¶</a></h2>
+<p>Javascript és un llenguatge de programació que inicialment va néixer com un llenguatge que permetia executar codi al nostre navegador (client), ampliant la funcionalitat dels nostres llocs web.</p>
+<p>Una de les versions més esteses de Javascript modern, és la anomenada per molts <strong>Javascript ES6</strong> (ECMAScript 6), també anomenat ECMAScript 2015 o fins i tot per alguns anomenat directament Javascript 6. En crear aquesta petita guia ens hem basat en aquesta versió.  Si ja saps Javascript però vols conèixer novetats de Javascript ES6, et recomanem aquest curs <a href="https://didacticode.com/curso/curso-javascript-es6/">https://didacticode.com/curso/curso-javascript-es6/</a></p>
+<p>Actualment aquesta és una de les seves principals funcions, però atesa la seva popularitat el llenguatge ha estat portat a altres àmbits, entre els quals destaca el popular NodeJS  <a href="https://nodejs.org/es/">https://nodejs.org/</a> que permet l'execució de Javascript com a llenguatge escriptori i llenguatge servidor.</p>
+<p>Tot i que en aquest mòdul ens centrem en l'execució de Javascript al navegador, l'après pot ser utilitzat per a altres implementacions de Javascript.</p>
+<h2 id="hola-món-i-comentaris">2. Hola món i comentaris<a class="headerlink" href="#hola-món-i-comentaris" title="Permanent link">¶</a></h2>
+<p>Per afegir JavaScript es fa servir l'etiqueta SCRIPT.</p>
+<p>Aquest pot estar en qualsevol lloc de la pàgina. El codi s'executa en el lloc on es troba de forma seqüencial a com el navegador el va trobant.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">LANGUAGE</span><span class="o">=</span><span class="s2">"JavaScript"</span><span class="o">&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="nx">Aquí</span><span class="w"> </span><span class="nx">va</span><span class="w"> </span><span class="nx">el</span><span class="w"> </span><span class="nx">codi</span><span class="w"> </span>
+<span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="c1">//Això és un comentari a Javascript d'una línia</span>
+<span class="linenos" data-linenos="4 "></span><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</code></pre></div>
+<p>A Javascript els comentaris es poden fer amb // per a una línia i amb /<em> </em>/ per a diverses línies.</p>
+<p>Així mateix des de Javascript és possible escriure missatges a la consola de desenvolupament mitjançant l'ordre <code>console.log(text)</code>.</p>
+<p>Aquest exemple podria ser un petit hola món que en executar-se es mostrarà a la consola de desenvolupament. Exemple amb "console.log" i comentari multilínia.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">LANGUAGE</span><span class="o">=</span><span class="s2">"JavaScript"</span><span class="o">&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Hola Món"</span><span class="p">);</span>
+<span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="cm">/* Això és un comentari</span>
+<span class="linenos" data-linenos="4 "></span><span class="cm">    en Javascript multilínia*/</span>
+<span class="linenos" data-linenos="5 "></span><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</code></pre></div>
+<p>Una altra via per mostrar informació a l'usuari des d'una finestra, és el comandament "alert(text)".</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">LANGUAGE</span><span class="o">=</span><span class="s2">"JavaScript"</span><span class="o">&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">"Hola Món"</span><span class="p">);</span>
+<span class="linenos" data-linenos="3 "></span><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</code></pre></div>
+<p>Hi ha una forma molt més pràctica i ordenada d'usar codi Javascript. Es poden incloure un o diversos fitxers amb codi Javascript en el nostre document HTML. Se'n pot incloure tants com es desitja. Aquesta és la forma més adequada per treballar amb codi Javascript.</p>
+<p>Un exemple d'inclusió de fitxers.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="s2">"rutaDelArxiu1.js"</span><span class="p">}</span><span class="o">&gt;</span>
+<span class="linenos" data-linenos="2 "></span><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="s2">"rutaDelArxiu2.js"</span><span class="p">}</span><span class="o">&gt;</span>
+<span class="linenos" data-linenos="3 "></span><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="s2">"rutaDelArxiu3.js"</span><span class="p">}</span><span class="o">&gt;</span>
+<span class="linenos" data-linenos="4 "></span><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="s2">"rutaDelArxiu4.js"</span><span class="p">}</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id="variables,-constants-i-arrays">3. Variables, constants i arrays<a class="headerlink" href="#variables,-constants-i-arrays" title="Permanent link">¶</a></h2>
+<p>En aquest punt parlarem de variables, constants i arrays. Abans de començar, comentar que és recomanable mantenir un estil de nomenament de variables. Aquí un enllaç sobre formes de nomenar variables:</p>
+<p><a href="https://medium.com/@alonsus91/convenci%C3%B3n-de-nombres-desde-el-camelcase-hasta-el-kebab-case-787e56d6d023">https://medium.com/@alonsus91/convenci%C3%B3n-de-nombres-desde-el-camelcase-hasta-el-kebab-case-787e56d6d023</a></p>
+<p>Durant el curs, farem servir l'estil "CamelCase" <a href="https://es.wikipedia.org/wiki/Camel_case">https://es.wikipedia.org/wiki/Camel_case</a></p>
+<h3 id="àmbit-de-variables-i-constants">Àmbit de variables i constants<a class="headerlink" href="#àmbit-de-variables-i-constants" title="Permanent link">¶</a></h3>
+<p>Abans de començar, vam parlar de l'àmbit de variables (també anomenat "scope" en anglès). L'àmbit de variables en un llenguatge de programació indica en quins llocs del programa pot ser accedida una variable/constant. En comentar cadascun dels tipus, definirem en quin àmbit existeixen.</p>
+<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">¶</a></h3>
+<p>Les variables són elements del llenguatge que permeten emmagatzemar diferents valors en cada moment. Es pot emmagatzemar un valor en una variable i consultar aquest valor posteriorment. També podem modificar el seu contingut sempre que vulguem.</p>
+<p>Per declarar les variables a JavaScript podem utilitzar <strong>let o var,</strong> segons l'àmbit on vulguem que sigui accessible.</p>
+<ul>
+<li><strong>let</strong>: let permet declarar una variable que sigui accessible únicament dins del bloc on s'ha declarat (anomenem bloc a l'espai delimitat per { }).</li>
+<li><strong>var</strong>: var permet declarar una variable que sigui accessible per tots els llocs de la funció on ha estat declarada. Si una variable amb var es declara fora de qualsevol funció, l'àmbit d'aquesta són totes les funcions del codi.</li>
+<li><strong>Variables sense declarar</strong>: Javascript ens permet usar variables no declarades. Si fem això, serà equivalent a declarar-les amb <strong>var</strong> fora del codi, és a dir, seran variables accessibles per qualsevol funció.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">exemple</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="nx">exemple</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w">  </span><span class="c1">//Equival a declarar-la fora de la funciocom a var</span>
+<span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">exemple</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="4 "></span><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">variable1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="linenos" data-linenos="5 "></span><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">variable2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="7 "></span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">variable1</span><span class="p">);</span><span class="w">   </span><span class="c1">// variable1 existeix aquí</span>
+<span class="linenos" data-linenos="8 "></span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">variable2</span><span class="p">);</span><span class="w">   </span><span class="c1">// variable2 no existeix aquí</span>
+<span class="linenos" data-linenos="9 "></span><span class="p">}</span>
+</code></pre></div>
+<p><strong>📖 Important:</strong> En general, recomanem usar <strong>let.</strong> Hauries de tenir una bona raó per fer servir <strong>var</strong>, ja que el seu ús és perillós ja que podria modificar-se una variable des d'un lloc que no controls per accident. Aquests problemes no ocorren únicament a Javascript, sinó en altres llenguatges i poden fer que el teu programa sigui complicat de depurar.</p>
+<h3 id="tipus-de-dades">Tipus de dades<a class="headerlink" href="#tipus-de-dades" title="Permanent link">¶</a></h3>
+<p>Els principals tipus de dades que pot contenir variables a Javascript són:</p>
+<ul>
+<li><strong>Numèrics (tipus "number")</strong>: pot contenir qualsevol tipus de nombre real (0.3, 1.7, 2.9) o sencer (5, 3, -1).</li>
+<li><strong>Enters grans (tipus "bigint"):</strong> poden contenir enters amb valors superiors a 2^53 -1. Es poden nomenclar escrivint una lletra "n" al final de l'enter. No es poden utilitzar amb la majoria d'operadors matemàtics de Javascript.</li>
+<li><strong>Booleans (tipus "boolean")</strong> : pot contenir un dels següents valors: true, false, 1 i 0.</li>
+<li><strong>Cadenes (tipus "string")</strong>: qualsevol combinació de caràcters (lletres, números, signes especials i espais). Les cadenes es delimiten mitjançant cometes dobles o simples ("Lolo","lalO").  Per concatenar cadenes es pot fer servir l'operador "+".</li>
+</ul>
+<p>El tipus d'una variable es pot comprovar usant l'estructura <strong>typeof</strong> variable ==="tipus".</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">edat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">23</span><span class="p">,</span><span class="w"> </span><span class="nx">nova_edat</span><span class="p">,</span><span class="w"> </span><span class="nx">increment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
+<span class="linenos" data-linenos="2 "></span><span class="kd">const</span><span class="w"> </span><span class="nx">nom</span><span class="o">=</span><span class="s2">"Rosa García"</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos="3 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"number"</span><span class="p">)</span>
+<span class="linenos" data-linenos="4 "></span><span class="nx">nova_edat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edat</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">increment</span><span class="p">;</span>
+<span class="linenos" data-linenos="5 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nom</span><span class="o">+</span><span class="w"> </span><span class="s2">" després de "</span><span class="o">+</span><span class="nx">increment</span><span class="w"> </span><span class="o">+</span><span class="s2">" anys tindrà "</span><span class="o">+</span><span class="w"> </span><span class="nx">nova_edat</span><span class="p">;</span>
+</code></pre></div>
+<p>Així mateix existeixen altres tipus que Javascript considera primitius: "undefined", "null", "symbol", "object" i "function".</p>
+<p>Tots els valors que NO són d'un tipus bàsic són considerats objectes: arrays, funcions, valors compostos, etc. Aquesta distinció és molt important perquè els valors primitius i els valors objectes es comporten de diferent forma quan són assignats i quan són passats com a paràmetre a una funció.</p>
+<p>Més informació a  <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures">https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures</a></p>
+<h3 id="coerció">Coerció<a class="headerlink" href="#coerció" title="Permanent link">¶</a></h3>
+<p>Javascript és un llenguatge de tipat tou (és a dir, en declarar una variable no se li assigna un tipus), tot i que internament Javascript si manegi tipus de dades.</p>
+<p>En determinats moments, resulta necessari convertir un valor d'un tipus a un altre. Això en JS s'anomena "coerció", i pot ocórrer de forma implícita o podem forçar-ho de forma explícita.</p>
+<p>Per exemple</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">);</span>
+</code></pre></div>
+<p>En aquest codi, ocorre una coerció <strong>implícita</strong> de número (que és de tipus number) a un tipus string, de manera que pot ser imprès per consola. Podríem realitzar la conversió de forma <strong>explícita</strong> de la manera següent:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</code></pre></div>
+<p>Les coercions implícites ocorren molt sovint en JS, encara que moltes vegades no en siguem conscients. Resulta molt important entendre com funcionen per poder deduir quin serà el resultat d'una comparació.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">" "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// string number</span>
+<span class="linenos" data-linenos="3 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="c1">//ens mostra 15 </span>
+</code></pre></div>
+<p>En els llenguatges de tipat dur (per exemple, Java) se'ns prohibeix realitzar operacions entre diferents tipus de dades. No obstant això, Javascript, no fa això, ja que permet operar entre diferents tipus, seguint una sèrie de regles:</p>
+<ul>
+<li>
+<p>Javascript té l'operador === i !=== per realitzar comparacions estrictes, però no posseeix aquests operadors per a desigualtats (&gt;, &lt;, &gt;=, &lt;=).</p>
+</li>
+<li>
+<p>Si és possible, JS prefereix fer coercions a tipus number per sobre d'altres tipus bàsics. Per exemple, l'expressió ("15" &lt; 100) es resoldrà com a true perquè JS canviarà "15", de tipus string, per 15 de tipus number.</p>
+<ul>
+<li>Tingues en compte que si converteixes "15" a string, en comparar-ho amb "100" l'expressió es resoldria com a false.</li>
+</ul>
+</li>
+<li>
+<p>A l'hora de fer coerció a boolean, els següents valors es convertiran en false: undefined, null, 0, "", NaN. La resta de valors es convertiran en true.</p>
+</li>
+</ul>
+<p>Exemple coerció a number
+.
+</p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1">// &lt;, &lt;=, &gt;, &lt;= també fan coercion. No existeix &gt;== ni &lt;==</span>
+<span class="linenos" data-linenos="2 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">];</span>
+<span class="linenos" data-linenos="3 "></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">500</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="linenos" data-linenos="5 "></span><span class="p">}</span><span class="w"> </span><span class="c1">// 0,1,2</span>
+</code></pre></div><p></p>
+<p>Exemple on no es fa coerció.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">var</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"10"</span><span class="p">;</span>
+<span class="linenos" data-linenos="2 "></span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"9"</span><span class="p">;</span>
+<span class="linenos" data-linenos="3 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span><span class="w"> </span><span class="c1">// true, tots dos són String i els compara com a cadena </span>
+</code></pre></div>
+<p>Exemple de coerció amb undefined</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">altura</span><span class="p">;</span><span class="w">  </span><span class="c1">// variable no definida</span>
+<span class="linenos" data-linenos="2 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">altura</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// En no estar definit, false</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title"><strong>💬 Interessant:</strong></p>
+<p>En realitzar comparacions, si fas servir == o != per comparar les dades, Javascript realitza coerció. Si vols que la comparació no converteixi tipus i només sigui certa si són del mateix tipus, has de fer servir === o !==. Aquesta és una bona pràctica molt recomanada perquè aquestes conversions no ens juguin males passades.</p>
+</div>
+<p>Per a més informació <a href="https://www.etnassoft.com/2011/04/06/coercion-de-datos-en-javascript/">https://www.etnassoft.com/2011/04/06/coercion-de-datos-en-javascript/</a></p>
+<h3 id="arrays">Arrays<a class="headerlink" href="#arrays" title="Permanent link">¶</a></h3>
+<p>Un array (també anomenat vector o arranjament) és una variable que conté diversos valors. Ho creiem simplement amb "[]" o amb "new Array()" o inicialitzant els elements. Podem referenciar els elements d'un vector indicant la seva posició.</p>
+<p>Els arrays posseeixen una propietat anomenada "length" que podem utilitzar per conèixer el nombre d'elements del vector.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1">// Array definit 1 a 1</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">elMeuVector</span><span class="o">=</span><span class="p">[];</span><span class="w"> </span><span class="c1">// let elMeuVector=new Array(); és equivalent </span>
+<span class="linenos" data-linenos=" 3 "></span><span class="nx">elMeuVector</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="o">=</span><span class="mf">22</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nx">elMeuVector</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="o">=</span><span class="mf">12</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="nx">elMeuVector</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span><span class="o">=</span><span class="mf">33</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="c1">// Array definit en una línia inicialitzant elements</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">unltreVector</span><span class="o">=</span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="s2">"Cancamusa"</span><span class="p">];</span><span class="w">  </span><span class="nx">Valors</span><span class="w"> </span><span class="nx">dins</span><span class="w"> </span><span class="nx">del</span><span class="w"> </span><span class="nx">vector</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">elAltreVector</span><span class="p">[</span><span class="mf">1</span><span class="p">]);</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">unAltreVector</span><span class="p">[</span><span class="mf">2</span><span class="p">]);</span>
+<span class="linenos" data-linenos="10 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">elMeuVector</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">" "</span><span class="o">+</span><span class="nx">elMeuVector</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="c1">// vector i mida</span>
+<span class="linenos" data-linenos="11 "></span><span class="c1">// Matriu bidimensional 5x4 declarada sense omplir</span>
+<span class="linenos" data-linenos="12 "></span><span class="c1">// Per saber més de map, mirar seccion de funcions fletxa</span>
+<span class="linenos" data-linenos="13 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">vectorBi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span><span class="mf">5</span><span class="p">).</span><span class="nx">fill</span><span class="p">().</span><span class="nx">map</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span><span class="mf">4</span><span class="p">));</span>
+<span class="linenos" data-linenos="14 "></span><span class="c1">// Un altre vector bidimensional 3x5, farcit de zeros</span>
+<span class="linenos" data-linenos="15 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">unAltreVectorBi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[...</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span><span class="mf">3</span><span class="p">)].</span><span class="nx">map</span><span class="p">(</span><span class="nx">x</span><span class="p">=&gt;</span><span class="nb">Array</span><span class="p">(</span><span class="mf">5</span><span class="p">).</span><span class="nx">fill</span><span class="p">(</span><span class="mf">0</span><span class="p">));</span>
+</code></pre></div>
+<h3 id="clonant-arrays-(i-objectes)">Clonant arrays (i objectes)<a class="headerlink" href="#clonant-arrays-(i-objectes)" title="Permanent link">¶</a></h3>
+<p>Els arrays a Javascript internament emmagatzemen referències on està allotjat cada objecte en memòria, per la qual cosa copiar un array no és tan simple com fer elMeuVector=elMeuAltreVector.</p>
+<p>A Javascript ES6, es pot fer una còpia senzilla dels valors d'un vector unidimensional així:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">elMeuVector</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="nx">elMeuAltreVector</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="o">|</span>
+</code></pre></div>
+<p>Aquesta còpia només funciona amb arrays unidimensionals, ja que amb multidimensionals, només copiarà les referències de memòria de cadascun d'aquests.</p>
+<p>Es poden fer còpies completes amb mètodes com aquest, que es basa a convertir el vector a JSON i tornar a obtenir-lo des de JSON:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">elMeuVectorMultidimensional</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">elMeuAltreVectorMultidimensional</span><span class="p">));</span>
+</code></pre></div>
+<p>Més informació a <a href="https://www.samanthaming.com/tidbits/70-3-ways-to-clone-objects/">https://www.samanthaming.com/tidbits/70-3-ways-to-clone-objects/</a></p>
+<h3 id="conversions-entre-tipus">Conversions entre tipus<a class="headerlink" href="#conversions-entre-tipus" title="Permanent link">¶</a></h3>
+<p>Javascript no defineix explícitament el tipus de dades de les seves variables. Segons s'emmagatzemen, poden ser cadenes (Entre Comillas), sencers (sense part decimal) o decimals (amb part decimal).</p>
+<p>Elements com la funció "prompt" per llegir de teclat amb una finestra emergent del navegador, llegeixen els elements sempre com a cadena. Per a aquests casos i altres, mereix la pena usar funcions de conversió de dades.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="s2">"100"</span><span class="p">;</span><span class="w">     </span><span class="c1">// És una cadena</span>
+<span class="linenos" data-linenos="2 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="o">=</span><span class="s2">"100.13"</span><span class="p">;</span><span class="w">  </span><span class="c1">// És una cadena</span>
+<span class="linenos" data-linenos="3 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">num3</span><span class="o">=</span><span class="mf">11</span><span class="p">;</span><span class="w">        </span><span class="c1">// És un sencer</span>
+<span class="linenos" data-linenos="4 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">n</span><span class="o">=</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span><span class="c1">// Emmagatzema un sencer. Si hi hagués hagut part decimal l'hagués truncat</span>
+<span class="linenos" data-linenos="5 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">n2</span><span class="w"> </span><span class="o">=</span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span><span class="w">    </span><span class="c1">// Emmagatzema un decimal</span>
+<span class="linenos" data-linenos="6 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">n3</span><span class="w"> </span><span class="o">=</span><span class="nx">num3</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span><span class="w">    </span><span class="c1">// Emmagatzema una cadena</span>
+</code></pre></div>
+<h3 id="constants">Constants<a class="headerlink" href="#constants" title="Permanent link">¶</a></h3>
+<p>Les constants són elements que permeten emmagatzemar un valor, però aquest valor un cop emmagatzemat és invariable (roman constant). Per declarar constants s'utilitza la instrucció "const". Solen ser útils per definir dades constants, com el número PI, el número d'Euler, etc...</p>
+<p>El seu àmbit és el mateix que el de <strong>let</strong>, és a dir, només són accessibles en el bloc que s'han declarat.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">const</span><span class="w"> </span><span class="nx">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1416</span><span class="p">;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">PI</span><span class="p">);</span><span class="w"> </span>
+<span class="linenos" data-linenos="3 "></span><span class="nx">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w">  </span><span class="c1">// Això falla</span>
+</code></pre></div>
+<p>Tot i que resulta possible definir arrays i objectes usant <strong>const</strong>, no és recomanable fer-ho, ja que és possible que el seu ús no sigui el que pensem.</p>
+<p>Per exemple, en declarar un array/objecte, realment el que passa és que la variable emmagatzema la direcció de memòria de l'objecte/array. Si ho declarem fent servir <strong>const</strong>, el que farem és que no es pugui canviar aquesta direcció de memòria, però ens permetrà canviar els seus valors.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">const</span><span class="w"> </span><span class="nx">elMeuVector</span><span class="o">=</span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">];</span>
+<span class="linenos" data-linenos="2 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">elMeuVector</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span><span class="w">    </span><span class="c1">// Mostra el valor 1</span>
+<span class="linenos" data-linenos="3 "></span><span class="nx">elMeuVector</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="o">=</span><span class="mf">4</span><span class="p">;</span>
+<span class="linenos" data-linenos="4 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">elMeuVector</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span><span class="w">    </span><span class="c1">// Mostra el valor 4</span>
+<span class="linenos" data-linenos="5 "></span><span class="nx">elMeuVector</span><span class="o">=</span><span class="p">[];</span><span class="w">  </span><span class="nx">Això</span><span class="w"> </span><span class="nx">falla</span>
+</code></pre></div>
+<h3 id="mode-estricte-&quot;use-strict&quot;">Mode estricte <code>use strict</code><a class="headerlink" href="#mode-estricte-&quot;use-strict&quot;" title="Permanent link">¶</a></h3>
+<p>Javascript ES6 incorpora l'anomenat "mode estricte". Si en algun lloc del codi s'indica la sentència <code>use strict</code> indica que aquest codi s'executarà en mode estricte:</p>
+<ul>
+<li>Escriure <code>use strict</code> fora de qualsevol funció afecta tot el codi.</li>
+<li>Escriure <code>use strict</code> dins d'una funció afecta aquesta funció.</li>
+</ul>
+<p>Entre les principals característiques d'<code>use strict</code> hem <strong>d'obligar que totes les variables siguin declarades</strong>.</p>
+<p><code>use strict</code> és ignorat per versions anteriors de Javascript, en prendre'l com una simple declaració de cadena.</p>
+<p>Les principals característiques d'<code>use strict</code> són:</p>
+<ul>
+<li>No permet usar variables/objectes no declarats (els objectes són variables).</li>
+<li>No permet eliminar (usant <code>delete</code>) variables/objectes/funcions.</li>
+<li>No permet noms duplicats de paràmetres en funcions.</li>
+<li>No permet escriure en propietats d'objectes definides com a només lectura.</li>
+<li>Evita que determinades paraules reservades siguin usades com a variables (eval, arguments, this, etc...)</li>
+</ul>
+<p><strong>Exemple 1:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="s2">"use strict"</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos="2 "></span><span class="nx">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span><span class="w">        </span><span class="c1">// Dona error</span>
+<span class="linenos" data-linenos="3 "></span><span class="nx">funcioProva</span><span class="p">();</span>
+<span class="linenos" data-linenos="4 "></span>
+<span class="linenos" data-linenos="5 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">funcioProva</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="nx">piBIS</span><span class="o">=</span><span class="mf">3.14</span><span class="p">;</span><span class="w">     </span><span class="c1">// Dona error</span>
+</code></pre></div>
+<p><strong>Exemple 2:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nx">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span><span class="w">  </span><span class="c1">// Dona error, use strict només s'aplica a la funció</span>
+<span class="linenos" data-linenos="2 "></span><span class="nx">funcioProva</span><span class="p">();</span>
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span><span class="kd">function</span><span class="w"> </span><span class="nx">funcioProva</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="s2">"use strict"</span><span class="sb">`;</span>
+<span class="linenos" data-linenos="6 "></span><span class="sb">    piBIS = 3.14;    // Dona error</span>
+</code></pre></div>
+<h2 id="entrada-i-sortida-en-navegadors">4. Entrada i sortida en navegadors<a class="headerlink" href="#entrada-i-sortida-en-navegadors" title="Permanent link">¶</a></h2>
+<h3 id="alert">alert<a class="headerlink" href="#alert" title="Permanent link">¶</a></h3>
+<p>El mètode alert() permet mostrar a l'usuari informació literal o el contingut de variables en una finestra independent. La finestra contindrà la informació a mostrar i el botó Acceptar.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nx">alert</span><span class="p">(</span><span class="s2">"Hola món"</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="console.log">console.log<a class="headerlink" href="#console.log" title="Permanent link">¶</a></h3>
+<p>El mètode console.log permet mostrar informació a la consola de desenvolupament. En versions de Javascript d'escriptori tipus NodeJS, permet mostrar text "per pantalla".</p>
+<p>console.log("Un altre hola món");</p>
+<h3 id="confirm">confirm<a class="headerlink" href="#confirm" title="Permanent link">¶</a></h3>
+<p>A través del mètode confirm() s'activa un quadre de diàleg que conté els botons Acceptar i Cancel·lar. Quan l'usuari pitja el botó Acceptar, aquest mètode retorna el valor true; Cancel·lar retorna el valor false. Amb ajuda d'aquest mètode l'usuari pot decidir sobre preguntes concretes i influir d'aquesta manera directament a la pàgina.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">resposta</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos="2 "></span><span class="nx">resposta</span><span class="o">=</span><span class="nx">confirm</span><span class="w"> </span><span class="p">(</span><span class="s2">"Desitja cancel·lar la subscripció?"</span><span class="p">);</span>
+<span class="linenos" data-linenos="3 "></span><span class="nx">alert</span><span class="p">(</span><span class="s2">"Vostè ha contestat que "</span><span class="o">+</span><span class="nx">resposta</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="prompt">prompt<a class="headerlink" href="#prompt" title="Permanent link">¶</a></h3>
+<p>El mètode prompt() obre un quadre de diàleg en pantalla en què es demana a l'usuari que introdueixi alguna dada. Si es polsa el botó Cancel·lar, el valor de devolució és false/null. Polsant en Acceptar s'obté el valor true i la cadena de caràcters introduïda es guarda per al seu posterior processament.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">provincia</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos="2 "></span><span class="nx">provincia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">"Introdueixi la província"</span><span class="p">,</span><span class="s2">"Murcia"</span><span class="p">);</span>
+<span class="linenos" data-linenos="3 "></span><span class="nx">alert</span><span class="p">(</span><span class="s2">"Vostè ha introduït la següent informació "</span><span class="o">+</span><span class="nx">provincia</span><span class="p">);</span>
+<span class="linenos" data-linenos="4 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Operació realitzada amb èxit"</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="operadors">5. Operadors<a class="headerlink" href="#operadors" title="Permanent link">¶</a></h2>
+<p>Combinant variables i valors, es poden formular expressions més complexes. Les expressions són una part clau en la creació de programes. Per formular expressions utilitzem els anomenats operadors. Passem a comentar els principals operadors de Javascript.</p>
+<h3 id="operadors-d'-assignació">Operadors d'assignació<a class="headerlink" href="#operadors-d'-assignació" title="Permanent link">¶</a></h3>
+<p>Els operadors d'assignació s'utilitzen per assignar valors a les variables. Alguns d'ells, a més d'assignar el valor, també inclouen operacions (Exemple += assigna i suma).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operador</th>
+<th style="text-align: left;">Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">=</td>
+<td style="text-align: left;">Assigna a la variable de la part esquerra el valor de la part dreta.</td>
+</tr>
+<tr>
+<td style="text-align: left;">+=</td>
+<td style="text-align: left;">Suma els operands esquerre i dret i assigna el resultat a l'operant esquerre.</td>
+</tr>
+<tr>
+<td style="text-align: left;">-=</td>
+<td style="text-align: left;">Resta l'operant dret de l'operant esquerre i assigna el resultat a l'operant esquerre.</td>
+</tr>
+<tr>
+<td style="text-align: left;">*=</td>
+<td style="text-align: left;">Multiplica ambdós operands i assigna el resultat a l'operant esquerre.</td>
+</tr>
+<tr>
+<td style="text-align: left;">/=</td>
+<td style="text-align: left;">Divideix ambdós operands i assigna el resultat a l'operant esquerre.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+<span class="linenos" data-linenos="2 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos="3 "></span><span class="nx">num2</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">num1</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos="4 "></span><span class="nx">num2</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="nx">num1</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos="5 "></span><span class="nx">num2</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="nx">num1</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos="6 "></span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos="7 "></span><span class="nx">num2</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="nx">num1</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="operadors-aritmètics">Operadors aritmètics<a class="headerlink" href="#operadors-aritmètics" title="Permanent link">¶</a></h3>
+<p>Els operadors aritmètics s'utilitzen per realitzar càlculs aritmètics.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operador</th>
+<th style="text-align: left;">Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">+</td>
+<td style="text-align: left;">Suma.</td>
+</tr>
+<tr>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Resta.</td>
+</tr>
+<tr>
+<td style="text-align: left;">*</td>
+<td style="text-align: left;">Multiplicació.</td>
+</tr>
+<tr>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">Divisió.</td>
+</tr>
+<tr>
+<td style="text-align: left;">%</td>
+<td style="text-align: left;">Calcula la resta d'una divisió sencera.</td>
+</tr>
+</tbody>
+</table>
+<p>A més d'aquests operadors, també hi ha operadors aritmètics unitaris: increment (++), disminució (--) i la negació unitària (-).</p>
+<p>Els operadors d'increment i disminució poden estar tant davant com darrere d'una variable, amb diferents matisos en la seva execució. Aquests operadors augmenten o disminueixen en 1, respectivament, el valor d'una variable.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operador</th>
+<th style="text-align: left;">Descripció (Suposant x=5)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">y = + + x</td>
+<td style="text-align: left;">Primer l'increment i després l'assignació. x = 6, i = 6.</td>
+</tr>
+<tr>
+<td style="text-align: left;">y = x + +</td>
+<td style="text-align: left;">Primer l'assignació i després l'increment. x = 6, i = 5.</td>
+</tr>
+<tr>
+<td style="text-align: left;">y = --x</td>
+<td style="text-align: left;">Primer el decrement i després l'assignació. x = 4, i = 4.</td>
+</tr>
+<tr>
+<td style="text-align: left;">i = x--</td>
+<td style="text-align: left;">Primer l'assignació i després el decrement x = 4, i = 5.</td>
+</tr>
+<tr>
+<td style="text-align: left;">i =-x</td>
+<td style="text-align: left;">S'assigna a la variable "i" el valor negatiu de "x", però el valor de la variable "x" no varia. x = 5, y = -5.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="nx">resultat1</span><span class="p">,</span><span class="w"> </span><span class="nx">resultat2</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos="2 "></span><span class="nx">resultat1</span><span class="w"> </span><span class="o">=</span><span class="p">((</span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="o">*</span><span class="mf">200</span><span class="p">)</span><span class="o">/</span><span class="mf">100</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos="3 "></span><span class="nx">resultat2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">resultat1</span><span class="o">%</span><span class="mf">3</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos="4 "></span><span class="nx">resultat1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="nx">num1</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos="5 "></span><span class="nx">resultat2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num2</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos" data-linenos="6 "></span><span class="nx">resultat1</span><span class="w"> </span><span class="o">=--</span><span class="nx">num1</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos="7 "></span><span class="nx">resultat2</span><span class="w"> </span><span class="o">=</span><span class="nx">num2</span><span class="o">--</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos="8 "></span><span class="nx">resultat1</span><span class="w"> </span><span class="o">=-</span><span class="nx">resultat2</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="operadors-de-comparació">Operadors de comparació<a class="headerlink" href="#operadors-de-comparació" title="Permanent link">¶</a></h3>
+<p>Operadors utilitzats per comparar dos valors entre si. Com a valor de retorn s'obté sempre un valor booleà: <em>true</em> o <em>false.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operador</th>
+<th style="text-align: left;">Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">===</td>
+<td style="text-align: left;">Compara dos elements, incloent-hi el seu tipus intern. Si són de diferent tipus, no realitza conversió i retorna false ja que sempre els considera diferents. <strong>Ús recomanat.</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">!==</td>
+<td style="text-align: left;">Compara dos elements, incloent-hi el seu tipus intern. Si són de diferent tipus, no realitza conversió i retorna true ja que sempre els considera diferents. <strong>Ús recomanat.</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">==</td>
+<td style="text-align: left;">Retorna el valor <em>true</em> quan els dos operands són iguals. Si els elements són de diferents tipus, realitza una conversió. <strong>No està recomanat el seu ús.</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">!=</td>
+<td style="text-align: left;">Retorna el valor <em>true</em> quan els dos operands són diferents. Si els elements són de diferents tipus, realitza una conversió. <strong>No està recomanat el seu ús.</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">&gt;</td>
+<td style="text-align: left;">Retorna el valor <em>true</em> quan l'operant de l'esquerra és més gran que el de la dreta.</td>
+</tr>
+<tr>
+<td style="text-align: left;">&lt;</td>
+<td style="text-align: left;">Retorna el valor <em>true</em> quan l'operant de la dreta és menor que el de l'esquerra.</td>
+</tr>
+<tr>
+<td style="text-align: left;">&gt;=</td>
+<td style="text-align: left;">Retorna el valor <em>true</em> quan l'operant de l'esquerra és major o igual que el de la dreta.</td>
+</tr>
+<tr>
+<td style="text-align: left;">&lt;=</td>
+<td style="text-align: left;">Retorna el valor <em>true</em> quan l'operant de la dreta és    menor o igual que el de l'esquerra.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="nx">c</span><span class="w"> </span><span class="o">=</span><span class="s2">" 5"</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"El resultat de l'expressió 'a==c' és igual a "</span><span class="o">+</span><span class="p">(</span><span class="nx">a</span><span class="o">==</span><span class="nx">c</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"El resultat de l'expressió 'a===c' és igual a "</span><span class="o">+</span><span class="p">(</span><span class="nx">a</span><span class="o">===</span><span class="nx">c</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"El resultat de l'expressió 'a!=c' és igual a "</span><span class="o">+</span><span class="p">(</span><span class="nx">a</span><span class="o">!=</span><span class="nx">c</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"El resultat de l'expressió 'a!==c' és igual a "</span><span class="o">+</span><span class="p">(</span><span class="nx">a</span><span class="o">!==</span><span class="nx">c</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"El resultat de l'expressió 'a==b' és igual a "</span><span class="o">+</span><span class="p">(</span><span class="nx">a</span><span class="o">==</span><span class="nx">b</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"El resultat de l'expressió 'a!=b' és igual a "</span><span class="o">+</span><span class="p">(</span><span class="nx">a</span><span class="o">!=</span><span class="nx">b</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"El resultat de l'expressió 'a&gt;b' és igual a "</span><span class="o">+</span><span class="p">(</span><span class="nx">a</span><span class="o">&gt;</span><span class="nx">b</span><span class="p">));</span>
+<span class="linenos" data-linenos="10 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"El resultat de l'expressió 'a&lt;b' és igual a "</span><span class="o">+</span><span class="p">(</span><span class="nx">a</span><span class="o">&lt;</span><span class="nx">b</span><span class="p">));</span>
+<span class="linenos" data-linenos="11 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"El resultat de l'expressió 'a&gt;=b' és igual a "</span><span class="o">+</span><span class="p">(</span><span class="nx">a</span><span class="o">&gt;=</span><span class="nx">b</span><span class="p">));</span>
+<span class="linenos" data-linenos="12 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"El resultat de l'expressió 'a&lt;=b' és igual a "</span><span class="o">+</span><span class="p">(</span><span class="nx">a</span><span class="o">&lt;=</span><span class="nx">b</span><span class="p">));</span>
+</code></pre></div>
+<h3 id="operadors-lògics">Operadors lògics<a class="headerlink" href="#operadors-lògics" title="Permanent link">¶</a></h3>
+<p>Els operadors lògics s'utilitzen per al processament dels valors booleans. Al seu torn el valor que retornen també és booleà: true o false.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operador</th>
+<th style="text-align: left;">Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">&amp;&amp;</td>
+<td style="text-align: left;">I "lògica". El valor de devolució és true quan tots dos operands són veritables.</td>
+</tr>
+<tr>
+<td style="text-align: left;">||</td>
+<td style="text-align: left;">O "lògica". El valor de devolució és true quan algun dels operands és veritable o ho són tots dos.</td>
+</tr>
+<tr>
+<td style="text-align: left;">!</td>
+<td style="text-align: left;">No "lògic". Si el valor és true, retorna false i si el valor és false, retorna true.</td>
+</tr>
+</tbody>
+</table>
+<p>Es mostra el resultat de diferents operacions realitzades amb operadors lògics. (En l'exemple es fa servir directament els valore true i false en lloc de variables).</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="s2">"El resultat de l'expressió 'false&amp;&amp;false' és igual a "</span><span class="w"> </span><span class="o">+</span><span class="p">(</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">));</span>
+<span class="linenos" data-linenos="2 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="s2">"El resultat de l'expressió 'false&amp;&amp;true' és igual a "</span><span class="w"> </span><span class="o">+</span><span class="p">(</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">));</span>
+<span class="linenos" data-linenos="3 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="s2">"El resultat de l'expressió 'true&amp;&amp;false' és igual a "</span><span class="w"> </span><span class="o">+</span><span class="p">(</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">));</span>
+<span class="linenos" data-linenos="4 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="s2">"El resultat de l'expressió 'true&amp;&amp;true' és igual a "</span><span class="w"> </span><span class="o">+</span><span class="p">(</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">));</span>
+<span class="linenos" data-linenos="5 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="s2">"El resultat de l'expressió 'false||false' és igual a "</span><span class="w"> </span><span class="o">+</span><span class="p">(</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">));</span>
+<span class="linenos" data-linenos="6 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="s2">"El resultat de l'expressió 'false||true' és igual a "</span><span class="w"> </span><span class="o">+</span><span class="p">(</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">));</span>
+<span class="linenos" data-linenos="7 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="s2">"El resultat de l'expressió 'true||false' és igual a "</span><span class="w"> </span><span class="o">+</span><span class="p">(</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">));</span>
+<span class="linenos" data-linenos="8 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="s2">"El resultat de l'expressió 'true||true' és igual a "</span><span class="w"> </span><span class="o">+</span><span class="p">(</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">));</span>
+<span class="linenos" data-linenos="9 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="s2">"El resultat de l'expressió '!false' és igual a "</span><span class="w"> </span><span class="o">+</span><span class="p">(</span><span class="o">!</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">));</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Per saber més de comparadors i expressions, pots consultar:</p>
+<p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators">https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators</a></p>
+</div>
+<h2 id="estructures-de-control">6. Estructures de control<a class="headerlink" href="#estructures-de-control" title="Permanent link">¶</a></h2>
+<h3 id="instruccions-if/else">Instruccions if/else<a class="headerlink" href="#instruccions-if/else" title="Permanent link">¶</a></h3>
+<p>Per controlar el flux d'informació en els programes JavaScript existeixen una sèrie d'estructures condicionals i bucles que permeten alterar l'ordre seqüencial d'execució. Aquestes són les instruccions if i else.</p>
+<p>La instrucció <code>if</code>  permet l'execució d'un bloc o un altre d'instruccions en funció d'una condició.</p>
+<p><strong>Sintaxi</strong></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">condició</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="c1">// bloc d'instruccions que s'executen si la condició es compleix</span>
+<span class="linenos" data-linenos="3 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="c1">// bloc d'instruccions que s'executen si la condició no es compleix</span>
+<span class="linenos" data-linenos="6 "></span><span class="p">}</span>
+</code></pre></div>
+<p>Les claus només són obligatòries quan hi hagi diverses instruccions seguides pertanyents a la ramificació. Si no poses claus, l'if s'aplicarà únicament a la següent instrucció.</p>
+<p>Pot existir una instrucció if que no contingui la part else. En aquest cas, s'executaran una sèrie d'ordres si es compleix la condició i si això no és així, es continuaria amb les ordres que estan a continuació del bloc if. Exemples d'ús:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">diaSetm</span><span class="p">;</span>
+<span class="linenos" data-linenos="2 "></span><span class="nx">diaSetm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">"Introdueix el dia de la setmana "</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">);</span>
+<span class="linenos" data-linenos="3 "></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">diaSetm</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"diumenge"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Avui és festiu"</span><span class="p">);</span>
+<span class="linenos" data-linenos="5 "></span><span class="p">}</span><span class="w">   </span><span class="c1">// Al no tenir {}, és un "bloc d'una instrucció"</span>
+<span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Avui no és diumenge, a treballar!!"</span><span class="p">);</span>
+</code></pre></div>
+<p>Un altre exemple</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">edatAina</span><span class="p">,</span><span class="nx">edatLluis</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos" data-linenos=" 2 "></span><span class="c1">// Fem servir parseInt per convertir a enter</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="nx">edatAina</span><span class="o">=</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">"Introdueix l'edat d'Aina"</span><span class="p">,</span><span class="s2">""</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nx">edatLluis</span><span class="o">=</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">"Introdueix l'edat de Lluis"</span><span class="p">,</span><span class="s2">""</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">edatAina</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">edatLluis</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Aina es major que en Lluis."</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Aina té "</span><span class="o">+</span><span class="nx">edatAina</span><span class="o">+</span><span class="s2">" anys i Lluis "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">edatLluis</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Aina es menor o de igual edat que en Lluis."</span><span class="p">);</span><span class="w">    </span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Aina té "</span><span class="o">+</span><span class="nx">edatAina</span><span class="o">+</span><span class="s2">" anys i Lluis "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">edatLluis</span><span class="p">);</span>
+<span class="linenos" data-linenos="11 "></span><span class="p">}</span>
+</code></pre></div>
+<h3 id="ramificacions-niuades">Ramificacions niuades<a class="headerlink" href="#ramificacions-niuades" title="Permanent link">¶</a></h3>
+<p>Per a les condicions ramificades més complicades, sovint s'utilitzen les ramificacions niuades. S'hi defineixen consultes if dins d'altres consultes if, per exemple:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">edatAina</span><span class="p">,</span><span class="nx">edadLluis</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="c1">// Convertirem a sencer les cadenes</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="nx">edatAina</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">"Introdueix l'edat de n'Aina"</span><span class="p">,</span><span class="s2">""</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nx">edatLluis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">"Introdueix l'edat de'n Luis"</span><span class="p">,</span><span class="s2">""</span><span class="p">));</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">edatAina</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">edatLluis</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Aina es major que Lluis."</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">edatAina</span><span class="o">&lt;</span><span class="nx">edatLluis</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Aina es menor que Lluis."</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Aina té la mateixa edat que en Lluis."</span><span class="p">);</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="13 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="14 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Aina té "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">edatAina</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">" anys i Lluis "</span><span class="o">+</span><span class="w"> </span><span class="nx">edatLluis</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="estructura-repetitives-(bucles)">7. Estructura repetitives (Bucles)<a class="headerlink" href="#estructura-repetitives-(bucles)" title="Permanent link">¶</a></h2>
+<h3 id="bucle-for">Bucle for<a class="headerlink" href="#bucle-for" title="Permanent link">¶</a></h3>
+<p>Quan l'execució d'un programa arriba a un bucle for:</p>
+<ul>
+<li>El primer que fa és executar la "Inicialització de l'índex", que només s'executa una vegada.</li>
+<li>A continuació analitza la condició de prova i si aquesta es compleix executa les instruccions del bucle.</li>
+<li>Quan finalitza l'execució de les instruccions del bucle es realitza la modificació de l'índex, es retorna a la capçalera del bucle for i es realitza de nou la condició de prova.</li>
+<li>Si la condició es compleix s'executen les instruccions i si no es compleix l'execució continua en les línies de codi que segueixen posteriors al bucle.</li>
+</ul>
+<p><strong>Sintaxi</strong></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">Inicialització</span><span class="w"> </span><span class="nx">índex</span><span class="p">;</span><span class="w"> </span><span class="nx">Condició</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">prova</span><span class="p">;</span><span class="w"> </span><span class="nx">Modificació</span><span class="w"> </span><span class="nx">índex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="c1">// ...  instruccions ...</span>
+<span class="linenos" data-linenos="3 "></span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Exemple:</strong> números parells del 2 al 30</p>
+<p></p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">30</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">+=</span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="linenos" data-linenos="3 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="4 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"S'han escrit els números parells del 2 al 30"</span><span class="p">);</span>
+</code></pre></div>
+<strong>Exemple:</strong> Escriu les potències de 2 fins a 3000<p></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kd">let</span><span class="w"> </span><span class="nx">aux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="linenos" data-linenos="2 "></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">3000</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">*=</span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"2 elevat a "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">aux</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">" és igual a "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="nx">aux</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos" data-linenos="5 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="6 "></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"S'han escrit les potències de 2 menors de 3000"</span><span class="p">);</span>
+</code></pre></div>
+<ol start="2">
+<li>
+<h2 id="bucle-while">Bucle while<a class="headerlink" href="#bucle-while" title="Permanent link">¶</a></h2>
+</li>
+</ol>
+<p>Amb el bucle while es poden executar un grup d'instruccions mentre es compleixi una condició.</p>
+<ul>
+<li>Si la condició mai es compleix, aleshores tampoc s'executa cap instrucció.</li>
+<li>Si la condició es compleix sempre, ens veurem immersos en el problema dels bucles infinits, que poden arribar a col·lapsar el navegador, o fins i tot l'ordinador.<ul>
+<li>Per aquesta raó és molt important que la condició s'hagi de deixar de complir en algun moment per evitar bucles infinits.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Sintaxi</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">while (condició){<em>... instruccions...</em>}</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemple</strong>: Escriu els números parells de 0 a 30</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">let i = 2;while (i&lt;=30) {    console.log(i);    i + = 2;}console.log("Ja s'han mostrat els números parells del 2 al 30");</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemple</strong>: Pregunta una clau fins que es correspongui amb una donada.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">let auxclave="";while (auxclave!="vivaYO"){ auxclave=prompt("introdueix la clau ","claveSecreta")}console.log("Has encertat la clau");</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>
+<h2 id="bucle-do-while">Bucle do-while<a class="headerlink" href="#bucle-do-while" title="Permanent link">¶</a></h2>
+</li>
+</ol>
+<p>La diferència del bucle do-while davant el bucle while rau en el moment en què es comprova la condició: el bucle do-while no la comprova fins al final, és a dir, després del cos del bucle, cosa que significa que el bucle do-while es recorrerà, una vegada, com a mínim, encara que no es compleixi la condició.</p>
+<p><strong>Sintaxi</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">do { <em>... instruccions...</em>} while(condició);</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemple</strong>: Preguntar per una clau fins que s'introdueixi la correcta</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">let auxclave;do { auxclave=prompt("introdueix la clau ","vivaYo")} while (auxclave!=="EstaeslaclaveJEJEJE")console.log("Has encertat la clau");</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="4">
+<li>
+<h2 id="instruccions-break-i-continue">Instruccions BREAK i CONTINUE<a class="headerlink" href="#instruccions-break-i-continue" title="Permanent link">¶</a></h2>
+</li>
+</ol>
+<p>En els bucles for, while i do-while es poden utilitzar les instruccions break i continue per modificar el comportament del bucle.</p>
+<p>La instrucció "break" dins d'un bucle fa que aquest s'interrompi immediatament, tot i que no s'hagi executat encara el bucle complet. En arribar la instrucció, el programa es continua desenvolupant immediatament a continuació del final del bucle.</p>
+<p><strong>Exemple</strong>: Pregunta per la clau i permetre tres respostes incorrectes</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">let auxclave=true;let numveces = 0;<em>Mentre no introdueixi la clau i no es pose Cancelar</em>while (auxclave !== "anonimo" &amp;\&amp;auxclave){ auxclave=prompt("Introdueix la clau ","");    numveces ++;    if (numveces === 3) break;}if (auxclave=="SuperClave"{ console.log("La clave es correcta");}else{ console.log("La clave no es correcta correcta");}</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>L'efecte que té la instrucció "continue" en un bucle és el de fer retornar a la seqüència d'execució a la capçalera del bucle, tornant a executar la condició o a incrementar els índexs quan sigui un bucle for. Això permet saltar-se recorreguts del bucle.</p>
+<p><strong>Exemple</strong>: Presenta tots els números parells del 0 al 50 excepte els que siguin múltiples de 3</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">let i;for (i=2; i&lt; = 50; i+=2){ if ((i%3)===0) continue;    console.log(i);}</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="8">
+<li>
+<h1 id="funcions">Funcions<a class="headerlink" href="#funcions" title="Permanent link">¶</a></h1>
+</li>
+</ol>
+<p>Una funció és un conjunt d'instruccions que s'agrupen sota un nom de funció. S'executa només quan és cridada pel seu nom en el codi del programa. La trucada provoca l'execució de les ordres que conté.</p>
+<p>Les funcions són molt importants per diversos motius:</p>
+<ul>
+<li>Ajuden a estructurar els programes per fer-los el seu codi més comprensible i més fàcil de modificar.</li>
+<li>Permeten repetir l'execució d'un conjunt d'ordres totes les vegades que sigui necessari sense necessitat d'escriure de nou les instruccions.</li>
+</ul>
+<p>Una funció consta de les parts bàsiques següents:</p>
+<ul>
+<li>Un nom de funció.</li>
+<li>Els paràmetres passats a la funció separats per comes i entre parèntesis.</li>
+<li>Les claus d'inici i final de la funció.</li>
+<li>Des de Javascript ES6, es poden definir valors per defecte per als paràmetres.</li>
+</ul>
+<p><strong>Sintaxi de la definició d'una funció</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">function nombrefuncio(paràmetre1, paràmetre2=valorPorDefecte...){ <em>instruccions</em><em>si la funció retorna algun valor hi afegim:</em>return valor;}</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sintaxi de la crida a una funció</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><em>La funció s'executa sempre que s'executi la sentència.</em>valorRetornat=nombrefuncio(paràm1, paràm2...);</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>És important entendre la <strong>diferència entre definir una funció i anomenar-la:</strong></p>
+<ul>
+<li>Definir una funció és simplement especificar el seu nom i definir quines accions realitzarà en el moment en què sigui invocada, mitjançant la paraula reservada function.</li>
+<li>Per cridar a una funció cal especificar el seu nom i introduir els paràmetres que volem que utilitzi. Aquesta trucada es pot efectuar en una línia d'ordres o bé a la dreta d'una sentència d'assignació en el cas que la funció retorni algun valor a causa de l'ús de la instrucció return.</li>
+</ul>
+<p>La definició d'una funció es pot realitzar en qualsevol lloc del programa, però es recomana fer-ho al principi del codi o en un fitxer "js" que contingui funcions.</p>
+<p>La crida a una funció es realitzarà quan sigui necessari, és a dir, quan es demani l'execució de les instruccions que hi ha dins d'ella.</p>
+<p><strong>Exemple</strong>: funcions que retorna la suma de dos valors que es passen per paràmetres i que escriuen el nom del professor.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><em>Definicions de les funcions</em>function suma (a,b){     <em>Aquesta funció retorna un valor</em>    return a+b;} <em>Aquesta funció mostra un text, però no retorna un valor</em>function profe (){         console.log("El professor és molt bo");      <em>ULL: això és un exemple, però rara vegada es realitza en una funció real</em>} <em>Codi que s'executa</em>let op1=5, op2=25;let resultat; <em>Trucada a funció de l'op1,op2);</em>  <em>anomenada a la funció</em>console.log (op1+"+"+op2+"="+resultat); <em>Trucada a funció de l'estat d'aquest any.</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>❕ Atenció:</strong> recordeu que dins de les funcions <strong>rara vegada s'utilitzen funcions d'entrada/sortida</strong>. El 99.9% de les vegades simplement processen l'entrada per paràmetres i retornen un valor.</p>
+<p>Des de Javascript ES6, les funcions suporten els anomenats paràmetres REST.</p>
+<p>Els paràmetres REST són un conjunt de paràmetres que s'emmagatzemen com a vector en un "paràmetre final" nomenclat amb <strong>... nomParametre</strong>. Això ens permet manejar la funció sense haver de controlar el nombre de paràmetres amb els quals aquesta és anomenada.</p>
+<p><strong>Important: només l'últim paràmetre pot ser REST.</strong></p>
+<p><strong>Exemple:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">function provaParREST(a, b, ... masParametros) {  console.log("a: "+a+" b: "+ b + " altres: " + masParametros);}provaParREST("param1", "param1", "param3", "param4", "param5");</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Per saber més dels paràmetres REST</p>
+<p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/parametros_rest">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/parametros_rest</a></p>
+</div>
+<ol start="9">
+<li>
+<h1 id="funcions-fletxa-(arrow-functions)">Funcions fletxa (arrow functions)<a class="headerlink" href="#funcions-fletxa-(arrow-functions)" title="Permanent link">¶</a></h1>
+</li>
+</ol>
+<p>Una funció fletxa (arrow function) és una alternativa compacta a l'ús de funcions tradicionals.</p>
+<ul>
+<li>Aquest tipus de funcions tenen les seves limitacions i han de ser utilitzades només en alguns contextos on siguin útils.</li>
+<li>No són adequades per ser utilitzades com a mètodes.</li>
+</ul>
+<p>Suporta diverses formes de sintaxi, a continuació indiquem les més típiques:</p>
+<ul>
+<li>(parametre1, parametre2, ...) =&gt; {sentencias}</li>
+<li>() =&gt; {sentencias}</li>
+<li>paràmetre =&gt; sentència</li>
+</ul>
+<p>De vegades, són utilitzats amb la <strong>funció "map" dels arrays</strong>. Aquesta funció crea un nou vector format per l'aplicació d'una funció a cadascun dels seus elements:</p>
+<p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map</a></p>
+<p>També és molt útil amb la <strong>funció "redueix" dels arrays</strong>. Aquesta funció executa una "funció reductora" sobre cada element del vector, retornant un únic valor.</p>
+<p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce</a></p>
+<p><strong>Exemple:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><em>let noms = ['Pedro',  'Juan',  'Elena'];console.log(noms.map(nom =&gt; nom.length)); Mostra el vector amb els valors [5, 4, 5]let sumaNombres= noms.redueix((acumulador, element) =&gt; {  return acumulador + element.length;}, 0); Mostra la suma de la longitud delsnoms.log(sumaNombres);</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Per saber-ne més:</p>
+<p><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions</a></p>
+<ol start="10">
+<li>
+<h1 id="classes-a-javascript">Classes a Javascript<a class="headerlink" href="#classes-a-javascript" title="Permanent link">¶</a></h1>
+</li>
+</ol>
+<p>Javascript ES6 permet una millor definició de classes que en anteriors versions de Javascript.</p>
+<p>Mitjançant la paraula reservada "class", permet definir classes, mètodes, atributs, etc...</p>
+<p>Recorda que els objectes a Javascript es guarden com a referències de memòria. En apartats anteriors parlem de com clonar arrays i objectes.<strong>R</strong></p>
+<p><strong>Exemple:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">class Punt {  <em>Constructor de la classe</em> constructor ( pX , pY ){ this.pX = pX;    this.pY = pY; }  <em>Mètode estàtic per calcular distància entre dos punts</em> static distancia ( a , b) { const dx = a.pX - b.pX;    const dy = a.pY - b.pY;    return Math.sqrt ( dx * dx + dy * dy );  }  <em>Mètode indicat per ser usat com a getter</em> get coordX() { return this.pX;   }  <em>Mètode normal</em> devuelveXporY () { return this.pX * this.pY;  }}let p1 = new Punto(5, 5);let p2 = new Punt( 10, 10);<em>Anomenada mètode estàtic</em>console.log (Punt.distància(p1, p2));<em>Anomenada mètode normal</em>console.log (p1.devuelveXporY()); <em>Com que és un getter, es pot fer servir com una propietat</em>console.log (p1.coordX);</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Per saber-ne més: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Classes">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Classes</a></p>
+<ol start="11">
+<li>
+<h1 id="més-coses-interessants-de-javascript-es6">Més coses interessants de Javascript ES6<a class="headerlink" href="#més-coses-interessants-de-javascript-es6" title="Permanent link">¶</a></h1>
+</li>
+</ol>
+<p>Aquest document pretén ser una simple guia i no podem incloure totes les novetats de Javascript ES6, però des d'aquí enllacem les més interessants per si voleu ampliar:</p>
+<ul>
+<li>Iteradors i generadors<ul>
+<li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Iterators_and_Generators">https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Iterators_and_Generators</a></li>
+</ul>
+</li>
+<li>Operadors de propagació (spread)<ul>
+<li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Spread_operator">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Spread_operator</a></li>
+</ul>
+</li>
+<li>Plantilles de cadenes de text (template strings)<ul>
+<li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings</a></li>
+</ul>
+</li>
+<li>For ... of<ul>
+<li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/for...of">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/for...of</a></li>
+</ul>
+</li>
+<li>Tail Call Optimization (fa més segures funcions)<ul>
+<li><a href="https://hackernoon.com/es6-tail-call-optimization-43f545d2f68b">https://hackernoon.com/es6-tail-call-optimization-43f545d2f68b</a></li>
+</ul>
+</li>
+</ul>
+<p>Aquí teniu altres referències a noves característiques de Javascript ES6</p>
+<p><a href="https://github.com/lukehoban/es6features">https://github.com/lukehoban/es6features</a></p>
+<ol start="12">
+<li>
+<h1 id="introducció-a-la-manipulació-del-dom">Introducció a la manipulació del DOM<a class="headerlink" href="#introducció-a-la-manipulació-del-dom" title="Permanent link">¶</a></h1>
+</li>
+</ol>
+<p>Per tal de facilitar la realització de petits exercicis, incloem uns primers conceptes de manipulació del DOM (Document Object Model). Coneixent la id d'algun objecte HTML existent a la pàgina podem canviar les seves propietats.</p>
+<p>Quan volem canviar una propietat d'un objecte present en el document, utilitzem el seu ID (nom únic que defineix un element) i el mètode "document.getElementById()" per accedir a l'element en si.</p>
+<p><strong>Exemple:</strong></p>
+<p>Per canviar una imatge amb id 'matrix', accedim a l'element i modifiquem la propietat src :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">document.getElementById('matrix').src = "mt05.jpg";</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Això es pot usar per a qualsevol propietat existent en qualsevol objecte HTML.</p>
+<p>Una funció Javascript genèrica per canviar una imatge seria:</p>
+<table>
+<thead>
+<tr>
+<th document.getelementbyid_id_.src="rutaImagen;" style="text-align: left;">function cambiarImagen (id, rutaImagen)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="_1"><a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<ol start="13">
+<li>
+<h1 id="material-addicional">Material addicional<a class="headerlink" href="#material-addicional" title="Permanent link">¶</a></h1>
+</li>
+</ol>
+<p>[1] Curs de Git a Udacity</p>
+<p><a href="https://www.udacity.com/course/how-to-use-git-and-github--ud775">https://www.udacity.com/course/how-to-use-git-and-github--ud775</a></p>
+<p>[2] Ús de la "Consola Web"</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console">https://developer.mozilla.org/en-US/docs/Tools/Web_Console</a></p>
+<ol start="14">
+<li>
+<h1 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">¶</a></h1>
+</li>
+</ol>
+<p>[1] Javascript Mozilla Developer <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">https://developer.mozilla.org/es/docs/Web/JavaScript</a></p>
+<p>[2] Javascript ES6 W3C <a href="https://www.w3schools.com/js/js_es6.asp">https://www.w3schools.com/js/js_es6.asp</a></p>
+<ol start="15">
+<li>
+<h1 id="autors-(en-ordre-alfabètic)">Autors (en ordre alfabètic)<a class="headerlink" href="#autors-(en-ordre-alfabètic)" title="Permanent link">¶</a></h1>
+</li>
+</ol>
+<p>A continuació oferim en ordre alfabètic el llistat d'autors que han fet aportacions a aquest document:</p>
+<ul>
+<li>Folgado Galache, Laura</li>
+<li>García Barea, Sergi</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Darrera actualització">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">5 d’octubre de 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025 Xavier Sastre - Llicencia CC BY-NC-SA <a href="#__consent">Canvia configuració de les galetes</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+
+
+
+
+
+<h4>Consentiment ús galetes</h4>
+<p>Utilitzem galetes per reconèixer les vostres visites, així com mesurar l'eficàcia de la nostra documentació i si els usuaris troben allò que estan buscant. Amb el teu consentiment, ens ajudes a millorar la nostra documentació.</p>
+<input class="md-toggle" type="checkbox" id="__settings">
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+          
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accepta</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Rebutja</button>
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestiona la configuració</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "toc.integrate", "content.tabs.link", "content.tooltips", "content.code.select", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../assets/extra.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
