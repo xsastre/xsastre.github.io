@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset = utf-8">
+    <title>Apertura i Tancament de Finestres</title>
+    <script type="text/javascript">
+        const inicialitzar = () => {
+            document.getElementById("crear-finestra").onclick = crearNova;
+            document.getElementById("tancar-finestra").onclick = tancarNova;
+        }
+
+        let novaFinestra;
+
+        const crearNova = () => {
+            novaFinestra = window.open("https://docencia.xaviersastre.cat", "", "height = 400,width = 800");
+        }
+
+        const tancarNova = () => {
+            if (novaFinestra) {
+                novaFinestra.close();
+                novaFinestra = null;
+            }
+        }
+    </script>
+</head>
+<body onLoad="inicialitzar()">
+<h1> Obrim i tanquem finestres</h1>
+<form>
+    <input type="button" id="crear-finestra" value="Crear Nova Finestra">
+    <input type="button" id="tancar-finestra" value="Tancar Nova Finestra">
+</form>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Data en diumenge fins al 2100</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        label, input, button { font-size: 1.1em; }
+        .error { color: red; }
+        .resultat { font-weight: bold; margin-top: 1em; }
+    </style>
+</head>
+<body>
+    <h1>Calcula quants cops una data cau en diumenge fins al 2100</h1>
+    <form id="formulariDiumenge">
+        <label for="dia">Dia: </label>
+        <input type="number" id="dia" name="dia" min="1" max="31" required>
+        <label for="mes">Mes: </label>
+        <input type="number" id="mes" name="mes" min="1" max="12" required>
+        <button type="submit">Calcula</button>
+    </form>
+    <div id="missatge" class="error"></div>
+    <div id="resultat" class="resultat"></div>
+
+    <script>
+        function esDataValida(dia, mes, any) {
+            // Comprova si la data realment existeix (p.ex. 31 de febrer no existeix)
+            let data = new Date(any, mes - 1, dia);
+            return data.getDate() === dia && data.getMonth() === mes - 1 && data.getFullYear() === any;
+        }
+        
+        document.getElementById('formulariDiumenge').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const dia = parseInt(document.getElementById('dia').value, 10);
+            const mes = parseInt(document.getElementById('mes').value, 10);
+            const missatge = document.getElementById('missatge');
+            const resultat = document.getElementById('resultat');
+            missatge.textContent = '';
+            resultat.textContent = '';
+
+            const avui = new Date();
+            const anyActual = avui.getFullYear();
+            let coincidencies = 0;
+            let error = false;
+
+            for (let any = anyActual; any <= 2100; any++) {
+                if (!esDataValida(dia, mes, any)) {
+                    if (any === anyActual) {
+                        missatge.textContent = 'La data introduïda no és vàlida per algun any (p.ex. 29/2 només existeix en anys de traspàs).';
+                        error = true;
+                    }
+                    continue;
+                }
+                let data = new Date(any, mes - 1, dia);
+                if (data.getDay() === 0) { // 0 = Diumenge
+                    coincidencies++;
+                }
+            }
+
+            if (!error) {
+                resultat.textContent = `Del ${anyActual} al 2100, el ${dia}/${mes} cau en diumenge ${coincidencies} vegades.`;
+            }
+        });
+    </script>
+</body>
+</html>

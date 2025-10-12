@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Dies fins al 31/12/2025</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        label, input, button { font-size: 1.1em; }
+        .error { color: red; }
+        .resultat { font-weight: bold; margin-top: 1em; }
+    </style>
+</head>
+<body>
+    <h1>Calcula els dies fins al 31/12/2025</h1>
+    <form id="formulariData">
+        <label for="data">Introdueix una data (DD/MM/YYYY): </label>
+        <input type="text" id="data" name="data" required pattern="\d{2}/\d{2}/\d{4}">
+        <button type="submit">Calcula</button>
+    </form>
+    <div id="missatge" class="error"></div>
+    <div id="resultat" class="resultat"></div>
+
+    <script>
+        function parseDate(input) {
+            const parts = input.split("/");
+            if (parts.length !== 3) return null;
+            const dia = parseInt(parts[0], 10);
+            const mes = parseInt(parts[1], 10) - 1; // mesos 0-11
+            const any = parseInt(parts[2], 10);
+            const data = new Date(any, mes, dia);
+
+            // Validació de la data real (per exemple, 32/13/2025 no és vàlida)
+            if (
+                isNaN(data.getTime()) ||
+                data.getDate() !== dia ||
+                data.getMonth() !== mes ||
+                data.getFullYear() !== any
+            ) {
+                return null;
+            }
+            return data;
+        }
+
+        function diesFinsFinalAny(dataInici) {
+            const dataFinal = new Date(2025, 11, 31);
+            const msPerDia = 24 * 60 * 60 * 1000;
+            const inici = new Date(dataInici.getFullYear(), dataInici.getMonth(), dataInici.getDate());
+            const final = new Date(dataFinal.getFullYear(), dataFinal.getMonth(), dataFinal.getDate());
+            const diffMs = final - inici;
+            return Math.round(diffMs / msPerDia);
+        }
+
+        document.getElementById('formulariData').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const input = document.getElementById('data').value.trim();
+            const missatge = document.getElementById('missatge');
+            const resultat = document.getElementById('resultat');
+            missatge.textContent = '';
+            resultat.textContent = '';
+
+            const dataUser = parseDate(input);
+            const dataFinal = new Date(2025, 11, 31);
+
+            if (!dataUser) {
+                missatge.textContent = "Data no vàlida. Torna-ho a intentar amb el format DD/MM/YYYY.";
+                return;
+            }
+            if (dataUser > dataFinal) {
+                missatge.textContent = "La data introduïda és posterior al 31/12/2025. Torna-ho a intentar.";
+                return;
+            }
+
+            const diesRestants = diesFinsFinalAny(dataUser);
+            resultat.textContent = `Queden ${diesRestants} dies fins al 31/12/2025.`;
+        });
+    </script>
+</body>
+</html>
