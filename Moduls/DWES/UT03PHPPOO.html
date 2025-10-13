@@ -11,7 +11,7 @@
         <link rel="prev" href="exercicisisolucions/UT02PHPExercicis.html">
       
       
-        <link rel="next" href="../DWEC/UT01.html">
+        <link rel="next" href="exercicisisolucions/UT03PHPPOOExercicis.html">
       
       
       <link rel="icon" href="../../imatges/favicon.png">
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#php-orientat-a-objectes" class="md-skip">
+        <a href="#ut03-php-orientat-a-objectes" class="md-skip">
           Salta el contingut
         </a>
       
@@ -1070,6 +1070,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicisisolucions/UT03PHPPOOExercicis.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activitats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1971,10 +1992,12 @@
                   
 
 
-<h1 id="php-orientat-a-objectes">PHP Orientat a Objectes<a class="headerlink" href="#php-orientat-a-objectes" title="Permanent link">¶</a></h1>
+<div class="container">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/UT03PHPPOOPortada.png" data-desc-position="bottom"><img src="img/UT03PHPPOOPortada.png" alt="portada" style="width:auto;height:300px"></a></p>
+</div>
+<h1 id="ut03-php-orientat-a-objectes">UT03 PHP Orientat a Objectes<a class="headerlink" href="#ut03-php-orientat-a-objectes" title="Permanent link">¶</a></h1>
 <details class="abstract">
-<summary>Durada i criteris d'avaluació</summary>
-<p>Durada estimada: 18 sessions</p>
+<summary>Criteris d'avaluació</summary>
 <hr>
 <p>Resultat d'aprenentatge:</p>
 <ol start="5">
@@ -2032,88 +2055,63 @@
 <p>Totes les classes comencen per lletra majúscula.</p>
 </div>
 <p>Quan un projecte creix, és normal modelar les classes mitjançant UML (recordeu <em>Entorns de Desenvolupament</em>?). Les classes es representen mitjançant un quadrat, separant el nom, de les propietats i els mètodes:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/uml.png" data-desc-position="bottom"><img alt="UML" src="img/uml.png" width="500"></a></p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/uml.png" data-desc-position="bottom"><img src="img/uml.png" style="width:auto;height:500px"></a>
+  <figcaption>UML</figcaption>
+</figure>
+
 <p>Un cop hem creat un objecte, s'utilitza l'operador <code>-&gt;</code> per accedir a una propietat o un mètode:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">$objeto-&gt;propietat;</span>
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span><span class="x">$objeto-&gt;método(paràmetres);  </span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">$objecte-&gt;propietat;</span>
+<span class="linenos" data-linenos="2 "></span><span class="x">$objecte-&gt;mètode(paràmetres);  </span>
 </code></pre></div>
 <p>Si des de dins de la classe, volem accedir a una propietat o mètode de la mateixa classe, utilitzarem la referència <code>$this</code>;</p>
 <p></p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">$this-&gt;propietat;</span>
 <span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span><span class="x">$this-&gt;método(paràmetres);    </span>
+<span class="linenos" data-linenos="3 "></span><span class="x">$this-&gt;mètode(paràmetres);    </span>
 </code></pre></div>
 Així doncs, com a exemple, codificaríem una persona al fitxer <code>Persona.php</code> com:<p></p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">Persona</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="k">private</span> <span class="nx">string</span> <span class="nv">$nombre</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">setNombre</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$nom</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span><span class="o">=</span> <span class="nv">$nom</span><span class="p">;</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">imprimir</span><span class="p">(){</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>        <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span><span class="p">;</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span>        <span class="k">echo</span> <span class="s1">'&lt;br&gt;'</span><span class="p">;</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span><span class="nv">$bruno</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Persona</span><span class="p">();</span> <span class="c1">// creem un objecte</span>
-<span class="linenos" data-linenos="24 "></span>
-<span class="linenos" data-linenos="25 "></span><span class="nv">$bruno</span><span class="o">-&gt;</span><span class="na">setNombre</span><span class="p">(</span><span class="s2">"Bruno Díaz"</span><span class="p">);</span>
-<span class="linenos" data-linenos="26 "></span>
-<span class="linenos" data-linenos="27 "></span><span class="nv">$bruno</span><span class="o">-&gt;</span><span class="na">imprimir</span><span class="p">();</span>  
+<span class="linenos" data-linenos=" 2 "></span><span class="k">class</span> <span class="nc">Persona</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="k">private</span> <span class="nx">string</span> <span class="nv">$nom</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">setNom</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$nom</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span><span class="o">=</span> <span class="nv">$nom</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">imprimir</span><span class="p">(){</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="k">echo</span> <span class="s1">'&lt;br&gt;'</span><span class="p">;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="11 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="12 "></span><span class="nv">$bruno</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Persona</span><span class="p">();</span> <span class="c1">// creem un objecte</span>
+<span class="linenos" data-linenos="13 "></span><span class="nv">$bruno</span><span class="o">-&gt;</span><span class="na">setNom</span><span class="p">(</span><span class="s2">"Bruno Díaz"</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span><span class="nv">$bruno</span><span class="o">-&gt;</span><span class="na">imprimir</span><span class="p">();</span>  
 </code></pre></div>
 <p>Tot i que es poden declarar diverses classes al mateix arxiu, és una mala pràctica. Així doncs, cada fitxer contedrà una sola classe, i es nomenarà amb el nom de la classe.</p>
 <h2 id="encapsulacio">Encapsulació<a class="headerlink" href="#encapsulacio" title="Permanent link">¶</a></h2>
 <p>Les propietats es defineixen privades o protegides (si volem que les classes heretades hi puguin accedir).</p>
-<p>Per a cada propietat, s'afegeixen mètodes públics (<em>getter/setter</em>):<br>
-</p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">public setPropietat(tipus $param)</span>
+<p>Per a cada propietat, s'afegeixen mètodes públics (<em>getter/setter</em>):  </p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">public setPropietat(tipus $param)</span>
 <span class="linenos" data-linenos="2 "></span>
 <span class="linenos" data-linenos="3 "></span><span class="x">public getPropietat() : tipus  </span>
 </code></pre></div>
-Les constants es defineixen públiques perquè siguin accessibles per tots els recursos.<p></p>
+<p>Les constants es defineixen públiques perquè siguin accessibles per tots els recursos.</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
 <span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">MayorMenor</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="k">private</span> <span class="nx">int</span> <span class="nv">$mayor</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="k">private</span> <span class="nx">int</span> <span class="nv">$menor</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">setMayor</span><span class="p">(</span><span class="nx">int</span> <span class="nv">$may</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">mayor</span> <span class="o">=</span> <span class="nv">$may</span><span class="p">;</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">setMenor</span><span class="p">(</span><span class="nx">int</span> <span class="nv">$men</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">menor</span> <span class="o">=</span> <span class="nv">$men</span><span class="p">;</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getMayor</span><span class="p">()</span> <span class="o">:</span> <span class="nx">int</span> <span class="p">{</span>
-<span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">major</span><span class="p">;</span>
-<span class="linenos" data-linenos="24 "></span>
-<span class="linenos" data-linenos="25 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="26 "></span>
-<span class="linenos" data-linenos="27 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getMenor</span><span class="p">()</span> <span class="o">:</span> <span class="nx">int</span> <span class="p">{</span>
-<span class="linenos" data-linenos="28 "></span>
-<span class="linenos" data-linenos="29 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">menor</span><span class="p">;</span>
-<span class="linenos" data-linenos="30 "></span>
-<span class="linenos" data-linenos="31 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="32 "></span>
-<span class="linenos" data-linenos="33 "></span><span class="p">}</span>  
+<span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">MajorMenor</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="k">private</span> <span class="nx">int</span> <span class="nv">$major</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="k">private</span> <span class="nx">int</span> <span class="nv">$menor</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">setMajor</span><span class="p">(</span><span class="nx">int</span> <span class="nv">$maj</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">major</span> <span class="o">=</span> <span class="nv">$maj</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">setMenor</span><span class="p">(</span><span class="nx">int</span> <span class="nv">$men</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">menor</span> <span class="o">=</span> <span class="nv">$men</span><span class="p">;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getmajor</span><span class="p">()</span> <span class="o">:</span> <span class="nx">int</span> <span class="p">{</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">major</span><span class="p">;</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getMenor</span><span class="p">()</span> <span class="o">:</span> <span class="nx">int</span> <span class="p">{</span>
+<span class="linenos" data-linenos="16 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">menor</span><span class="p">;</span>
+<span class="linenos" data-linenos="17 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="18 "></span><span class="p">}</span>  
 </code></pre></div>
 <h3 id="rebent-i-enviant-objectes">Rebent i enviant objectes<a class="headerlink" href="#rebent-i-enviant-objectes" title="Permanent link">¶</a></h3>
 <p>És recomanable indicar-ho en el tipus de paràmetres. Si l'objecte pot retornar nuls es posa <code>?</code> davant del nom de la classe.</p>
@@ -2122,130 +2120,81 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
 <p>Els objectes que s'envien i reben com a paràmetres sempre es passen per referència.</p>
 </div>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">function</span> <span class="nf">maymen</span><span class="p">(</span><span class="k">array</span> <span class="nv">$numeros</span><span class="p">)</span> <span class="o">:</span> <span class="o">?</span> <span class="nx">MayorMenor</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="nv">$a</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span> <span class="nv">$numeros</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="nv">$b</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span> <span class="nv">$numeros</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="nv">$result</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MayorMenor</span><span class="p">();</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>    <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">setMayor</span><span class="p">(</span><span class="nv">$a</span><span class="p">);</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>    <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">setMenor</span><span class="p">(</span><span class="nv">$b</span><span class="p">);</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>    <span class="k">return</span> <span class="nv">$result</span><span class="p">;</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span><span class="nv">$resultado</span> <span class="o">=</span> <span class="nx">maymen</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">76</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">388</span><span class="p">,</span><span class="mi">41</span><span class="p">,</span><span class="mi">39</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">97</span><span class="p">,</span><span class="mi">22</span><span class="p">]);</span>
-<span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span><span class="k">echo</span> <span class="s2">"&lt;br&gt;Mayor: "</span><span class="o">.</span><span class="nv">$resultado</span><span class="o">-&gt;</span><span class="na">getMayor</span><span class="p">();</span>
-<span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span><span class="k">echo</span> <span class="s2">"&lt;br&gt;Menor: "</span><span class="o">.</span><span class="nv">$resultado</span><span class="o">-&gt;</span><span class="na">getMenor</span><span class="p">();</span>  
+<span class="linenos" data-linenos=" 2 "></span><span class="k">function</span> <span class="nf">majmen</span><span class="p">(</span><span class="k">array</span> <span class="nv">$numeros</span><span class="p">)</span> <span class="o">:</span> <span class="o">?</span><span class="nx">MajorMenor</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="nv">$a</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nv">$numeros</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nv">$b</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nv">$numeros</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nv">$result</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MajorMenor</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">setMajor</span><span class="p">(</span><span class="nv">$a</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">setMenor</span><span class="p">(</span><span class="nv">$b</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="k">return</span> <span class="nv">$result</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="10 "></span><span class="nv">$resultat</span> <span class="o">=</span> <span class="nx">majmen</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">76</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">388</span><span class="p">,</span><span class="mi">41</span><span class="p">,</span><span class="mi">39</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">97</span><span class="p">,</span><span class="mi">22</span><span class="p">]);</span>
+<span class="linenos" data-linenos="11 "></span><span class="k">echo</span> <span class="s2">"&lt;br&gt;Major: "</span><span class="o">.</span><span class="nv">$resultat</span><span class="o">-&gt;</span><span class="na">getMajor</span><span class="p">();</span>
+<span class="linenos" data-linenos="12 "></span><span class="k">echo</span> <span class="s2">"&lt;br&gt;Menor: "</span><span class="o">.</span><span class="nv">$resultat</span><span class="o">-&gt;</span><span class="na">getMenor</span><span class="p">();</span>  
 </code></pre></div>
 <h2 id="constructor">Constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h2>
 <p>El constructor dels objectes es defineix mitjançant el mètode màgic <code>__construct</code>. Pot o no tenir paràmetres, però només hi pot haver un únic constructor.</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
 <span class="linenos" data-linenos=" 2 "></span>
 <span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">Persona</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="k">private</span> <span class="nx">string</span> <span class="nv">$nombre</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$nom</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span> <span class="o">=</span> <span class="nv">$nom</span><span class="p">;</span>
-<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="k">private</span> <span class="nx">string</span> <span class="nv">$nom</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$nom</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span> <span class="o">=</span> <span class="nv">$nom</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">imprimir</span><span class="p">(){</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span><span class="p">;</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="k">echo</span> <span class="s1">'&lt;br&gt;'</span><span class="p">;</span>
 <span class="linenos" data-linenos="11 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">imprimir</span><span class="p">(){</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>    <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span><span class="p">;</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span>    <span class="k">echo</span> <span class="s1">'&lt;br&gt;'</span><span class="p">;</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span><span class="nv">$bruno</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Persona</span><span class="p">(</span><span class="s2">"Bruno Díaz"</span><span class="p">);</span>
-<span class="linenos" data-linenos="24 "></span>
-<span class="linenos" data-linenos="25 "></span><span class="nv">$bruno</span><span class="o">-&gt;</span><span class="na">imprimir</span><span class="p">();</span>  
+<span class="linenos" data-linenos="12 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="13 "></span><span class="nv">$bruno</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Persona</span><span class="p">(</span><span class="s2">"Bruno Díaz"</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span><span class="nv">$bruno</span><span class="o">-&gt;</span><span class="na">imprimir</span><span class="p">();</span>  
 </code></pre></div>
 <h3 id="constructors-en-php-8">Constructors en PHP 8<a class="headerlink" href="#constructors-en-php-8" title="Permanent link">¶</a></h3>
 <p>Una de les grans novetats que ofereix PHP 8 és la simplificació dels constructors amb paràmetres, el que es coneix com a <em>promoció de les propietats del constructor</em>.</p>
 <p>Per a això, en comptes d'haver de declarar les propietats com a privades o protegides, i després dins del constructor haver d'assignar els paràmetres a aquestes propietats, el mateix constructor promociona les propietats.</p>
 <p>Vegem-ho millor amb un exemple. Imaginem una classe <code>Punt</code> on vulguem emmagatzemar les seves coordenades:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">Punt</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="k">protected</span> <span class="nx">float</span> <span class="nv">$x</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="k">protected</span> <span class="nx">float</span> <span class="nv">$y</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="k">protected</span> <span class="nx">float</span> <span class="nv">$z</span><span class="p">;</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>        <span class="nx">float</span> <span class="nv">$x</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>        <span class="nx">float</span> <span class="nv">$y</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span>        <span class="nx">float</span> <span class="nv">$z</span> <span class="o">=</span> <span class="mf">0.0</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span>    <span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">x</span> <span class="o">=</span> <span class="nv">$x</span><span class="p">;</span>
-<span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">i</span> <span class="o">=</span> <span class="nv">$y</span><span class="p">;</span>
-<span class="linenos" data-linenos="24 "></span>
-<span class="linenos" data-linenos="25 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">z</span> <span class="o">=</span> <span class="nv">$z</span><span class="p">;</span>
-<span class="linenos" data-linenos="26 "></span>
-<span class="linenos" data-linenos="27 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="28 "></span>
-<span class="linenos" data-linenos="29 "></span><span class="p">}</span>  
+<span class="linenos" data-linenos=" 2 "></span><span class="k">class</span> <span class="nc">Punt</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="k">protected</span> <span class="nx">float</span> <span class="nv">$x</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="k">protected</span> <span class="nx">float</span> <span class="nv">$y</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="k">protected</span> <span class="nx">float</span> <span class="nv">$z</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="nx">float</span> <span class="nv">$x</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="nx">float</span> <span class="nv">$y</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="nx">float</span> <span class="nv">$z</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">x</span> <span class="o">=</span> <span class="nv">$x</span><span class="p">;</span>
+<span class="linenos" data-linenos="12 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">i</span> <span class="o">=</span> <span class="nv">$y</span><span class="p">;</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">z</span> <span class="o">=</span> <span class="nv">$z</span><span class="p">;</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="15 "></span><span class="p">}</span>  
 </code></pre></div>
 <p>A PHP 8, quedaria de la següent manera (molt més curt, cosa que facilita la seva llegibilitat):</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">Punt</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>        <span class="k">protected</span> <span class="nx">float</span> <span class="nv">$x</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>        <span class="k">protected</span> <span class="nx">float</span> <span class="nv">$y</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>        <span class="k">protected</span> <span class="nx">float</span> <span class="nv">$z</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>    <span class="p">)</span> <span class="p">{}</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span><span class="p">}</span>  
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span><span class="k">class</span> <span class="nc">Punt</span> <span class="p">{</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span>
+<span class="linenos" data-linenos="5 "></span>        <span class="k">protected</span> <span class="nx">float</span> <span class="nv">$x</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+<span class="linenos" data-linenos="6 "></span>        <span class="k">protected</span> <span class="nx">float</span> <span class="nv">$y</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+<span class="linenos" data-linenos="7 "></span>        <span class="k">protected</span> <span class="nx">float</span> <span class="nv">$z</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+<span class="linenos" data-linenos="8 "></span>    <span class="p">)</span> <span class="p">{}</span>
+<span class="linenos" data-linenos="9 "></span><span class="p">}</span>  
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">L'ordre importa</p>
-</div>
 <p>A l'hora de codificar l'ordre dels elements ha de ser:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
 <span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="nx">declari</span><span class="p">(</span> <span class="nx">strict_types</span> <span class="o">=</span> <span class="mi">1</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="k">class</span> <span class="nc">NombreClase</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="c1">// propietats</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="c1">// constructor</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>    <span class="c1">// getters - setters</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>    <span class="c1">// resta de mètodes</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span><span class="cp">?&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="k">declare</span><span class="p">(</span> <span class="nx">strict_types</span> <span class="o">=</span> <span class="mi">1</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="k">class</span> <span class="nc">NomClasse</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="c1">// propietats</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="c1">// constructor</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="c1">// getters - setters</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="c1">// resta de mètodes</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="10 "></span><span class="cp">?&gt;</span>
 </code></pre></div>
+</div>
 <h2 id="classes-estatiques">Classes estàtiques<a class="headerlink" href="#classes-estatiques" title="Permanent link">¶</a></h2>
 <p>Són aquelles que tenen propietats i/o mètodes estàtics (també es coneixen com <em>de classe</em>, perquè el seu valor es comparteix entre totes les instàncies de la mateixa classe).</p>
 <p>Es declaren amb <code>static</code> i es referencia amb <code>::</code>.</p>
@@ -2256,57 +2205,36 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
 <span class="linenos" data-linenos=" 2 "></span>
 <span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">Producte</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="k">const</span> <span class="no">IVA</span> <span class="o">=</span> <span class="mf">0.23</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="k">private</span> <span class="k">static</span> <span class="nv">$numProductes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">nouProducte</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>        <span class="nx">self</span><span class="o">::</span><span class="nv">$numProductes</span><span class="o">++</span><span class="p">;</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span><span class="nx">Producte</span><span class="o">::</span> <span class="na">nouProducte</span><span class="p">();</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span><span class="nv">$impuesto</span> <span class="o">=</span> <span class="nx">Producte</span><span class="o">::</span><span class="na">IVA</span><span class="p">;</span>  
+<span class="linenos" data-linenos=" 4 "></span>    <span class="k">const</span> <span class="no">IVA</span> <span class="o">=</span> <span class="mf">0.23</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="k">private</span> <span class="k">static</span> <span class="nv">$numProductes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
+<span class="linenos" data-linenos=" 6 "></span>    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">nouProducte</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="nx">self</span><span class="o">::</span><span class="nv">$numProductes</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span><span class="nx">Producte</span><span class="o">::</span> <span class="na">nouProducte</span><span class="p">();</span>
+<span class="linenos" data-linenos="13 "></span><span class="nv">$impost</span> <span class="o">=</span> <span class="nx">Producte</span><span class="o">::</span><span class="na">IVA</span><span class="p">;</span>  
 </code></pre></div>
 <p>També podem tenir classes normals que tinguin alguna propietat estàtica:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">Producte</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="k">const</span> <span class="no">IVA</span> <span class="o">=</span> <span class="mf">0.23</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="k">private</span> <span class="k">static</span> <span class="nv">$numProductes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="k">private</span> <span class="nv">$codi</span><span class="p">;</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$cod</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>        <span class="nx">self</span><span class="o">::</span><span class="nv">$numProductes</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">class</span> <span class="nc">Producte</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="k">const</span> <span class="no">IVA</span> <span class="o">=</span> <span class="mf">0.23</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="k">private</span> <span class="k">static</span> <span class="nv">$numProductes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="k">private</span> <span class="nv">$codi</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$cod</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="nx">self</span><span class="o">::</span><span class="nv">$numProductes</span><span class="o">++</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">codi</span> <span class="o">=</span> <span class="nv">$cod</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">mostrarResum</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="k">return</span> <span class="s2">"El producte "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">codi</span><span class="o">.</span><span class="s2">" és el número "</span><span class="o">.</span><span class="nx">self</span><span class="o">::</span><span class="nv">$numProductes</span><span class="p">;</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="13 "></span><span class="p">}</span>
 <span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">codi</span> <span class="o">=</span> <span class="nv">$cod</span><span class="p">;</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">mostrarResumen</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
-<span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span>        <span class="k">return</span> <span class="s2">"El producte "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">codi</span><span class="o">.</span><span class="s2">" és el número "</span><span class="o">.</span><span class="nx">self</span><span class="o">::</span><span class="nv">$numProductes</span><span class="p">;</span>
-<span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="24 "></span>
-<span class="linenos" data-linenos="25 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="26 "></span>
-<span class="linenos" data-linenos="27 "></span><span class="nv">$prod</span> <span class="mi">1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Producte</span><span class="p">(</span><span class="s2">"PS5"</span><span class="p">);</span>
-<span class="linenos" data-linenos="28 "></span>
-<span class="linenos" data-linenos="29 "></span><span class="nv">$prod</span> <span class="mi">2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Producte</span><span class="p">(</span><span class="s2">"XBOX Sèries X"</span><span class="p">);</span>
-<span class="linenos" data-linenos="30 "></span>
-<span class="linenos" data-linenos="31 "></span><span class="nv">$prod</span> <span class="mi">3</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Producte</span><span class="p">(</span><span class="s2">"Nintendo Switch"</span><span class="p">);</span>
-<span class="linenos" data-linenos="32 "></span>
-<span class="linenos" data-linenos="33 "></span><span class="k">echo</span> <span class="nv">$prod</span> <span class="mi">3</span><span class="o">-&gt;</span><span class="na">mostrarResumen</span><span class="p">();</span>  
+<span class="linenos" data-linenos="15 "></span><span class="nv">$prod1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Producte</span><span class="p">(</span><span class="s2">"PS5"</span><span class="p">);</span>
+<span class="linenos" data-linenos="16 "></span><span class="nv">$prod2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Producte</span><span class="p">(</span><span class="s2">"XBOX Sèries X"</span><span class="p">);</span>
+<span class="linenos" data-linenos="17 "></span><span class="nv">$prod3</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Producte</span><span class="p">(</span><span class="s2">"Nintendo Switch"</span><span class="p">);</span>
+<span class="linenos" data-linenos="18 "></span><span class="k">echo</span> <span class="nv">$prod3</span><span class="o">-&gt;</span><span class="na">mostrarResum</span><span class="p">();</span>  
 </code></pre></div>
 <h2 id="introspeccio">Introspecció<a class="headerlink" href="#introspeccio" title="Permanent link">¶</a></h2>
 <p>En treballar amb classes i objectes, existeixen un conjunt de funcions ja definides pel llenguatge que permeten obtenir informació sobre els objectes:</p>
@@ -2398,50 +2326,30 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
 <li><code>is_subclass_of( object, string): bool</code></li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="nv">$t</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tv</span><span class="p">();</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="nv">$t</span><span class="o">-&gt;</span><span class="na">codi</span> <span class="o">=</span> <span class="mi">33</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span><span class="k">if</span> <span class="p">(</span><span class="nv">$t</span> <span class="nx">instanceof</span> <span class="nx">Producte</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="k">echo</span> <span class="nv">$t</span><span class="o">-&gt;</span><span class="na">mostrarResumen</span><span class="p">();</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span><span class="nv">$pare</span> <span class="o">=</span> <span class="nb">get_parent_class</span><span class="p">(</span><span class="nv">$t</span><span class="p">);</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span><span class="k">echo</span> <span class="s2">"&lt;br&gt;La classe pare és: "</span> <span class="o">.</span> <span class="nv">$pare</span><span class="p">;</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span><span class="nv">$objectePare</span> <span class="o">=</span> <span class="k">new</span> <span class="nv">$pare</span><span class="p">;</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span><span class="k">echo</span> <span class="nv">$objectePare</span><span class="o">-&gt;</span><span class="na">mostrarResum</span><span class="p">();</span>
-<span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span><span class="k">if</span> <span class="p">(</span><span class="nb">is_subclass_of</span><span class="p">(</span><span class="nv">$t</span><span class="p">,</span> <span class="s1">'Producte'</span><span class="p">))</span> <span class="p">{</span>
-<span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span>    <span class="k">echo</span> <span class="s2">"&lt;br&gt;Soy un fill de Producte"</span><span class="p">;</span>
-<span class="linenos" data-linenos="24 "></span>
-<span class="linenos" data-linenos="25 "></span><span class="p">}</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nv">$t</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tv</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="nv">$t</span><span class="o">-&gt;</span><span class="na">codi</span> <span class="o">=</span> <span class="mi">33</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="k">if</span> <span class="p">(</span><span class="nv">$t</span> <span class="nx">instanceof</span> <span class="nx">Producte</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="k">echo</span> <span class="nv">$t</span><span class="o">-&gt;</span><span class="na">mostrarResumen</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="p">}</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="nv">$pare</span> <span class="o">=</span> <span class="nb">get_parent_class</span><span class="p">(</span><span class="nv">$t</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="k">echo</span> <span class="s2">"&lt;br&gt;La classe pare és: "</span> <span class="o">.</span> <span class="nv">$pare</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="nv">$objectePare</span> <span class="o">=</span> <span class="k">new</span> <span class="nv">$pare</span><span class="p">;</span>
+<span class="linenos" data-linenos="10 "></span><span class="k">echo</span> <span class="nv">$objectePare</span><span class="o">-&gt;</span><span class="na">mostrarResum</span><span class="p">();</span>
+<span class="linenos" data-linenos="11 "></span><span class="k">if</span> <span class="p">(</span><span class="nb">is_subclass_of</span><span class="p">(</span><span class="nv">$t</span><span class="p">,</span> <span class="s1">'Producte'</span><span class="p">))</span> <span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="k">echo</span> <span class="s2">"&lt;br&gt;Som un fill de Producte"</span><span class="p">;</span>
+<span class="linenos" data-linenos="13 "></span><span class="p">}</span>
 </code></pre></div>
 <h3 id="sobreescriure-metodes">Sobreescriure mètodes<a class="headerlink" href="#sobreescriure-metodes" title="Permanent link">¶</a></h3>
 <p>Podem crear mètodes en els fills amb el mateix nom que el pare, canviant el seu comportament. Per invocar els mètodes del pare -&gt; <code>parent::nomMetodo()</code>
-</p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">Tv</span> <span class="k">extends</span> <span class="nx">Producte</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="k">public</span> <span class="nv">$polzades</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span><span class="k">public</span> <span class="nv">$tecnologia</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="k">public</span> <span class="k">function</span> <span class="nf">mostrarResum</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>      <span class="k">parent</span><span class="o">::</span><span class="na">mostrarResum</span><span class="p">();</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>      <span class="k">echo</span> <span class="s2">"&lt;p&gt;TV "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tecnologia</span><span class="o">.</span><span class="s2">" de "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">polzades</span><span class="o">.</span><span class="s2">" &lt;/p&gt;"</span><span class="p">;</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span><span class="p">}</span>
+</p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos="2 "></span><span class="k">class</span> <span class="nc">Tv</span> <span class="k">extends</span> <span class="nx">Producte</span> <span class="p">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="k">public</span> <span class="nv">$polzades</span><span class="p">;</span>
+<span class="linenos" data-linenos="4 "></span><span class="k">public</span> <span class="nv">$tecnologia</span><span class="p">;</span>
+<span class="linenos" data-linenos="5 "></span><span class="k">public</span> <span class="k">function</span> <span class="nf">mostrarResum</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos="6 "></span>      <span class="k">parent</span><span class="o">::</span><span class="na">mostrarResum</span><span class="p">();</span>
+<span class="linenos" data-linenos="7 "></span>      <span class="k">echo</span> <span class="s2">"&lt;p&gt;TV "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tecnologia</span><span class="o">.</span><span class="s2">" de "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">polzades</span><span class="o">.</span><span class="s2">" &lt;/p&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="8 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="9 "></span><span class="p">}</span>
 </code></pre></div><p></p>
 <h3 id="constructor-en-fills">Constructor en fills<a class="headerlink" href="#constructor-en-fills" title="Permanent link">¶</a></h3>
 <p>En els fills no es crea cap constructor de manera automàtica. Per la qual cosa si no n'hi ha, s'invoca automàticament el del pare. En canvi, si el definim en el fill, hem d'invocar el del pare de manera explícita.</p>
@@ -2499,196 +2407,124 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
 </div>
 </div>
 <h2 id="classes-abstractes">Classes abstractes<a class="headerlink" href="#classes-abstractes" title="Permanent link">¶</a></h2>
-<p>Les classes abstractes obliguen a heretar d'una classe, ja que no es permet la seva instància. Es defineix mitjançant <code>abstract class NombreClase {</code>. Una classe abstracta pot contenir propietats i mètodes no-abstractes, i/o mètodes abstractes.
-</p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="nx">Classe</span> <span class="nx">abstracta</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="k">abstract</span> <span class="k">class</span> <span class="nc">Producte</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="k">private</span> <span class="nv">$codi</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getCodi</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">codi</span><span class="p">;</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>    <span class="nx">Mètode</span> <span class="nx">abstracte</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span>    <span class="k">abstract</span> <span class="k">public</span> <span class="k">function</span> <span class="nf">mostrarResum</span><span class="p">();</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span><span class="p">}</span>
-</code></pre></div><p></p>
+<p>Les classes abstractes obliguen a heretar d'una classe, ja que no es permet la seva instància. Es defineix mitjançant <code>abstract class NombreClase {</code>. Una classe abstracta pot contenir propietats i mètodes no-abstractes, i/o mètodes abstractes.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="c1">// Classe abstracta</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="k">abstract</span> <span class="k">class</span> <span class="nc">Producte</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="k">private</span> <span class="nv">$codi</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getCodi</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">codi</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="c1">// Mètode abstracte</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="k">abstract</span> <span class="k">public</span> <span class="k">function</span> <span class="nf">mostrarResum</span><span class="p">();</span>
+<span class="linenos" data-linenos="10 "></span><span class="p">}</span>
+</code></pre></div>
 <p>Quan una classe hereta d'una classe abstracta, obligatòriament ha d'implementar els mètodes que té el pare marcats com a abstractes.</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">Tv</span> <span class="k">extends</span> <span class="nx">Producte</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="k">public</span> <span class="nv">$polzades</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="k">public</span> <span class="nv">$tecnologia</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">mostrarResum</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//obligat a implementar-lo</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>        <span class="k">echo</span> <span class="s2">"&lt;p&gt;Codi "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getCodi</span><span class="p">()</span><span class="o">.</span><span class="s2">" &lt;/p&gt;"</span><span class="p">;</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>        <span class="k">echo</span> <span class="s2">"&lt;p&gt;TV "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tecnologia</span><span class="o">.</span><span class="s2">" de "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">polzades</span><span class="o">.</span><span class="s2">" &lt;/p&gt;"</span><span class="p">;</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span><span class="nv">$t</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tv</span><span class="p">();</span>
-<span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span><span class="k">echo</span> <span class="nv">$t</span><span class="o">-&gt;</span><span class="na">getCodi</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">class</span> <span class="nc">Tv</span> <span class="k">extends</span> <span class="nx">Producte</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="k">public</span> <span class="nv">$polzades</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="k">public</span> <span class="nv">$tecnologia</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">mostrarResum</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//obligat a implementar-lo</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="k">echo</span> <span class="s2">"&lt;p&gt;Codi "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getCodi</span><span class="p">()</span><span class="o">.</span><span class="s2">" &lt;/p&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="k">echo</span> <span class="s2">"&lt;p&gt;TV "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">tecnologia</span><span class="o">.</span><span class="s2">" de "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">polzades</span><span class="o">.</span><span class="s2">" &lt;/p&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="10 "></span><span class="nv">$t</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tv</span><span class="p">();</span>
+<span class="linenos" data-linenos="11 "></span><span class="k">echo</span> <span class="nv">$t</span><span class="o">-&gt;</span><span class="na">getCodi</span><span class="p">();</span>
 </code></pre></div>
 <h2 id="classes-finals">Classes finals<a class="headerlink" href="#classes-finals" title="Permanent link">¶</a></h2>
-<p>Són classes oposades a abstractes, ja que eviten que es pugui heretar una classe o mètode per sobreescriure'l.
-</p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">Producte</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="k">private</span> <span class="nv">$codi</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getCodi</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">codi</span><span class="p">;</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>    <span class="k">final</span> <span class="k">public</span> <span class="k">function</span> <span class="nf">mostrarResum</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>        <span class="k">return</span> <span class="s2">"Producte "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">codi</span><span class="p">;</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span><span class="c1">// No podrem heretar de Microones</span>
-<span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span><span class="k">final</span> <span class="k">class</span> <span class="nc">Microones</span> <span class="k">extends</span> <span class="nx">Producte</span> <span class="p">{</span>
-<span class="linenos" data-linenos="24 "></span>
-<span class="linenos" data-linenos="25 "></span>    <span class="k">private</span> <span class="nv">$potencia</span><span class="p">;</span>
-<span class="linenos" data-linenos="26 "></span>
-<span class="linenos" data-linenos="27 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getPotencia</span><span class="p">()</span> <span class="o">:</span> <span class="nx">int</span> <span class="p">{</span>
-<span class="linenos" data-linenos="28 "></span>
-<span class="linenos" data-linenos="29 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">potència</span><span class="p">;</span>
-<span class="linenos" data-linenos="30 "></span>
-<span class="linenos" data-linenos="31 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="32 "></span>
-<span class="linenos" data-linenos="33 "></span>    <span class="c1">// No podem implementar()</span>
-<span class="linenos" data-linenos="34 "></span>
-<span class="linenos" data-linenos="35 "></span><span class="p">}</span>
-</code></pre></div><p></p>
+<p>Són classes oposades a abstractes, ja que eviten que es pugui heretar una classe o mètode per sobreescriure'l.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">class</span> <span class="nc">Producte</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="k">private</span> <span class="nv">$codi</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getCodi</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">codi</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="k">final</span> <span class="k">public</span> <span class="k">function</span> <span class="nf">mostrarResum</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="k">return</span> <span class="s2">"Producte "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">codi</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="10 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span><span class="c1">// No podrem heretar de Microones</span>
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span><span class="k">final</span> <span class="k">class</span> <span class="nc">Microones</span> <span class="k">extends</span> <span class="nx">Producte</span> <span class="p">{</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="k">private</span> <span class="nv">$potencia</span><span class="p">;</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getPotencia</span><span class="p">()</span> <span class="o">:</span> <span class="nx">int</span> <span class="p">{</span>
+<span class="linenos" data-linenos="17 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">potència</span><span class="p">;</span>
+<span class="linenos" data-linenos="18 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="19 "></span>
+<span class="linenos" data-linenos="20 "></span>    <span class="c1">// No podem implementar mostrarResum()</span>
+<span class="linenos" data-linenos="21 "></span><span class="p">}</span>
+</code></pre></div>
 <h2 id="interficies">Interfícies<a class="headerlink" href="#interficies" title="Permanent link">¶</a></h2>
 <p>Permet definir un contracte amb les firmes dels mètodes a complir. Així doncs, només conté declaracions de funcions i totes han de ser públiques.</p>
-<p>Es declaren amb la paraula clau <code>interfície</code> i després les classes que compleixin el contracte el realitzen mitjançant la paraula clau <code>implements</code>.
-</p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">interface</span> <span class="nx">Nombreable</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="nx">declaració</span> <span class="nx">de</span> <span class="nx">funcions</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span><span class="p">}</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="k">class</span> <span class="nc">NombreClase</span> <span class="k">implements</span> <span class="nx">NombreInterfaz</span> <span class="p">{</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span><span class="nx">codi</span> <span class="nx">de</span> <span class="nx">la</span> <span class="nx">classe</span>
-</code></pre></div><p></p>
+<p>Es declaren amb la paraula clau <code>interfície</code> i després les classes que compleixin el contracte el realitzen mitjançant la paraula clau <code>implements</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos="2 "></span><span class="k">interface</span> <span class="nx">Nombrable</span> <span class="p">{</span>
+<span class="linenos" data-linenos="3 "></span><span class="c1">// declaració de funcions</span>
+<span class="linenos" data-linenos="4 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="5 "></span>
+<span class="linenos" data-linenos="6 "></span><span class="k">class</span> <span class="nc">NombClasse</span> <span class="k">implements</span> <span class="nx">NomInterface</span> <span class="p">{</span>
+<span class="linenos" data-linenos="7 "></span>
+<span class="linenos" data-linenos="8 "></span><span class="c1">// codi de la classe</span>
+</code></pre></div>
 <p>Es permet l'herència d'interfícies. A més, una classe pot implementar diversos interfícies (en aquest cas, sí que suporta l'herècia múltiple, però només d'interfícies).</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
 <span class="linenos" data-linenos=" 2 "></span>
 <span class="linenos" data-linenos=" 3 "></span><span class="k">interface</span> <span class="nx">Mostrable</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">mostrarResum</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">mostrarResum</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="p">}</span>
 <span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span><span class="p">}</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="k">interface</span> <span class="nx">MostrableTodo</span> <span class="k">extends</span> <span class="nx">Mostrable</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="k">interface</span> <span class="nx">MostrableTot</span> <span class="k">extends</span> <span class="nx">Mostrable</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">mostrarTot</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="p">}</span>
 <span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">mostrarTodo</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
-<span class="linenos" data-linenos="12 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="k">interface</span> <span class="nx">Facturable</span> <span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">generarFactura</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
 <span class="linenos" data-linenos="13 "></span><span class="p">}</span>
 <span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span><span class="k">interface</span> <span class="nx">Facturable</span> <span class="p">{</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">generarFactura</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span><span class="p">}</span>
-<span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span><span class="k">class</span> <span class="nc">Producte</span> <span class="k">implements</span> <span class="nx">MostrableTodo</span><span class="p">,</span> <span class="nx">Facturable</span> <span class="p">{</span>
-<span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span>    <span class="nx">Implementacions</span> <span class="nx">dels</span> <span class="nx">mètodes</span>
-<span class="linenos" data-linenos="24 "></span>
-<span class="linenos" data-linenos="25 "></span>    <span class="nx">Obligatòriament</span> <span class="nx">haurà</span> <span class="nx">d</span><span class="err">'</span><span class="nx">implementar</span> <span class="k">public</span> <span class="k">function</span> <span class="nf">mostrarResum</span><span class="p">,</span> <span class="nx">mostrarTodo</span> <span class="nx">i</span> <span class="nx">generarFactura</span>
-<span class="linenos" data-linenos="26 "></span>
-<span class="linenos" data-linenos="27 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="15 "></span><span class="k">class</span> <span class="nc">Producte</span> <span class="k">implements</span> <span class="nx">MostrableTot</span><span class="p">,</span> <span class="nx">Facturable</span> <span class="p">{</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="c1">// Implementacions dels mètodes</span>
+<span class="linenos" data-linenos="17 "></span>    <span class="c1">// Obligatòriament haurà d'implementar public function mostrarResum, mostrarTot i generarFactura</span>
+<span class="linenos" data-linenos="18 "></span><span class="p">}</span>
 </code></pre></div>
 <h2 id="metodes-encadenats">Mètodes encadenats<a class="headerlink" href="#metodes-encadenats" title="Permanent link">¶</a></h2>
 <p>Segueix el plantejament de la programació funcional, i també es coneix com <em>a method chaining</em>. Planteja que sobre un objecte es realitzen diverses trucades.</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="nv">$p</span> <span class="mi">1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Llibre</span><span class="p">();</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="nv">$p</span> <span class="mi">1</span><span class="o">-&gt;</span><span class="na">setNombre</span><span class="p">(</span><span class="s2">"Harry Potter"</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nv">$p1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Llibre</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="nv">$p1</span><span class="o">-&gt;</span><span class="na">setNom</span><span class="p">(</span><span class="s2">"Harry Potter"</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nv">$p1</span><span class="o">-&gt;</span><span class="na">setAutor</span><span class="p">(</span><span class="s2">"JK Rowling"</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="k">echo</span> <span class="nv">$p1</span><span class="p">;</span>
 <span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span><span class="nv">$p</span> <span class="mi">1</span><span class="o">-&gt;</span><span class="na">setAutor</span><span class="p">(</span><span class="s2">"JK Rowling"</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="k">echo</span> <span class="nv">$p</span> <span class="mi">1</span><span class="p">;</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span><span class="nx">Method</span> <span class="nx">chaining</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span><span class="nv">$p</span> <span class="mi">2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Llibre</span><span class="p">();</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span><span class="nv">$p</span> <span class="mi">2</span><span class="o">-&gt;</span><span class="na">setNombre</span><span class="p">(</span><span class="s2">"Patria"</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setAutor</span><span class="p">(</span><span class="s2">"Aramburu"</span><span class="p">);</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span><span class="k">echo</span> <span class="nv">$p</span> <span class="mi">2</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="c1">// Method chaining</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="nv">$p2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Llibre</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="nv">$p2</span><span class="o">-&gt;</span><span class="na">setNom</span><span class="p">(</span><span class="s2">"Patria"</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setAutor</span><span class="p">(</span><span class="s2">"Aramburu"</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span><span class="k">echo</span> <span class="nv">$p2</span><span class="p">;</span>
 </code></pre></div>
-<p>Per facilitar-ho, vam modificar tots els seus mètodes mutadors (que modifiquen dades, <em>setters</em>, ...) perquè retornin una referència a <code>$this</code>:</p>
+<p>Per facilitar-ho, anam modificar tots els seus mètodes mutadors (que modifiquen dades, <em>setters</em>, ...) perquè retornin una referència a <code>$this</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">Llibre</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="k">private</span> <span class="nx">string</span> <span class="nv">$nombre</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="k">private</span> <span class="nx">string</span> <span class="nv">$autor</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getNombre</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span><span class="p">;</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">setNombre</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$nombre</span><span class="p">)</span> <span class="o">:</span> <span class="nx">Llibre</span> <span class="p">{</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span> <span class="o">=</span> <span class="nv">$nombre</span><span class="p">;</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="p">;</span>
-<span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getAutor</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
-<span class="linenos" data-linenos="24 "></span>
-<span class="linenos" data-linenos="25 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">autor</span><span class="p">;</span>
-<span class="linenos" data-linenos="26 "></span>
-<span class="linenos" data-linenos="27 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="28 "></span>
-<span class="linenos" data-linenos="29 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">setAutor</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$autor</span><span class="p">)</span> <span class="o">:</span> <span class="nx">Llibre</span> <span class="p">{</span>
-<span class="linenos" data-linenos="30 "></span>
-<span class="linenos" data-linenos="31 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">autor</span> <span class="o">=</span> <span class="nv">$autor</span><span class="p">;</span>
-<span class="linenos" data-linenos="32 "></span>
-<span class="linenos" data-linenos="33 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="p">;</span>
-<span class="linenos" data-linenos="34 "></span>
-<span class="linenos" data-linenos="35 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="36 "></span>
-<span class="linenos" data-linenos="37 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__toString</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
-<span class="linenos" data-linenos="38 "></span>
-<span class="linenos" data-linenos="39 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span><span class="o">.</span><span class="s2">" de "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">autor</span><span class="p">;</span>
-<span class="linenos" data-linenos="40 "></span>
-<span class="linenos" data-linenos="41 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="42 "></span>
-<span class="linenos" data-linenos="43 "></span><span class="p">}</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">class</span> <span class="nc">Llibre</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="k">private</span> <span class="nx">string</span> <span class="nv">$nom</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="k">private</span> <span class="nx">string</span> <span class="nv">$autor</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getNom</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">setNomb</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$nombre</span><span class="p">)</span> <span class="o">:</span> <span class="nx">Llibre</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span> <span class="o">=</span> <span class="nv">$nom</span><span class="p">;</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="p">;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getAutor</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">autor</span><span class="p">;</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">setAutor</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$autor</span><span class="p">)</span> <span class="o">:</span> <span class="nx">Llibre</span> <span class="p">{</span>
+<span class="linenos" data-linenos="16 "></span>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">autor</span> <span class="o">=</span> <span class="nv">$autor</span><span class="p">;</span>
+<span class="linenos" data-linenos="17 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="p">;</span>
+<span class="linenos" data-linenos="18 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="19 "></span>
+<span class="linenos" data-linenos="20 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__toString</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
+<span class="linenos" data-linenos="21 "></span>        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span><span class="o">.</span><span class="s2">" de "</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">autor</span><span class="p">;</span>
+<span class="linenos" data-linenos="22 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="23 "></span><span class="p">}</span>
 </code></pre></div>
 <h2 id="metodes-magics">Mètodes màgics<a class="headerlink" href="#metodes-magics" title="Permanent link">¶</a></h2>
 <p>Totes les classes PHP ofereixen un conjunt de mètodes, també coneguts com <em>a magic methods</em> que es poden sobreescriure per substituir el seu comportament. Alguns d'ells ja els hem utilitzat.</p>
@@ -2697,10 +2533,10 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
 <ul>
 <li><code>__construct()</code></li>
 <li><code>__destruct()</code> → s'invoca en perdre la referència. S'utilitza per tancar una connexió a la BD, tancar un fitxer, ...</li>
-<li><code>__toString()</code> → representació de l'objecte com a cadena. És a dir, quan fem <code>esclat $objeto</code> s'executa automàticament aquest mètode.</li>
+<li><code>__toString()</code> → representació de l'objecte com a cadena. És a dir, quan fem <code>esclat $objecte</code> s'executa automàticament aquest mètode.</li>
 <li><code>__get(propietat)</code>, <code>__set(propietat, valor)</code> → Permetria accedir a les propietats privades, tot i que sempre és més llegible/mantenible codificar els <em>getter/setter</em>.</li>
 <li><code>__isset(propietat)</code>, <code>__unset(propietat)</code> → Permet esbrinar o treure el valor a una propietat.</li>
-<li><code>__sleep()</code>, <code>__wakeup()</code> → S'executen en recuperar (<em>unserialize^</em>) o emmagatzemar un objecte que se serialitza (<em>serialize</em>), i s'utilitzen per a definir quines propietats se serialitzen.</li>
+<li><code>__sleep()</code>, <code>__wakeup()</code> → S'executen en recuperar (<em>unserialize</em>) o emmagatzemar un objecte que se serialitza (<em>serialize</em>), i s'utilitzen per a definir quines propietats se serialitzen.</li>
 <li><code>__call()</code>, <code>__callStatic()</code> → S'executen en cridar a un mètode que no és públic. Permeten sobrecarreguen mètodes.</li>
 </ul>
 <h2 id="espai-de-noms">Espai de noms<a class="headerlink" href="#espai-de-noms" title="Permanent link">¶</a></h2>
@@ -2710,29 +2546,22 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
 <p>Un sol namespace per arxiu i crear una estructura de carpetes respectant els nivells/subnivells (igual que es fa a <em>Java</em>)</p>
 </div>
 <p>Es declaren en la primera línia mitjançant la paraula clau <code>namespace</code> seguida del nom de l'espai de noms assignat (cada subnivell se separa amb la barra invertida <code>\</code>):</p>
-<p>Per exemple, per col·locar la classe <code>Producte</code> dins del <em>namespace</em> <code>Dwes\Exemples</code> ho faríem així:
-</p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">namespace</span> <span class="nx">Dwes\Exemples</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="k">const</span> <span class="no">IVA</span> <span class="o">=</span> <span class="mf">0.21</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span><span class="k">class</span> <span class="nc">Producte</span> <span class="p">{</span>
+<p>Per exemple, per col·locar la classe <code>Producte</code> dins del <em>namespace</em> <code>Dwes\Exemples</code> ho faríem així:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">namespace</span> <span class="nx">DWES\Exemples</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="k">const</span> <span class="no">IVA</span> <span class="o">=</span> <span class="mf">0.21</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="k">class</span> <span class="nc">Producte</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="k">public</span> <span class="nv">$nombre</span><span class="p">;</span>
 <span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="k">public</span> <span class="nv">$nombre</span><span class="p">;</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">mostra</span><span class="p">()</span> <span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>        <span class="k">echo</span><span class="s2">"&lt;p&gt;Prod:"</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span> <span class="o">.</span> <span class="s2">"&lt;/p&gt;"</span><span class="p">;</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span><span class="p">}</span>
-</code></pre></div><p></p>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">mostra</span><span class="p">()</span> <span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="k">echo</span><span class="s2">"&lt;p&gt;Prod:"</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nom</span> <span class="o">.</span> <span class="s2">"&lt;/p&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="12 "></span><span class="p">}</span>
+</code></pre></div>
 <h3 id="acces">Accés<a class="headerlink" href="#acces" title="Permanent link">¶</a></h3>
-<p>Per referenciar un recurs que conté un namespace, primer hem de tenir-lo disponible fent ús d'<code>inclogui</code> o <code>requerix</code>. Si el recurs és al mateix <em>namespace</em>, es realitza un accés directe (es coneix com a accés sense qualificar).</p>
+<p>Per referenciar un recurs que conté un namespace, primer hem de tenir-lo disponible fent ús d'<code>include</code> o <code>require</code>. Si el recurs és al mateix <em>namespace</em>, es realitza un accés directe (es coneix com a accés sense qualificar).</p>
 <p>Realment hi ha tres tipus d'accés:</p>
 <ul>
 <li>sense qualificar: <code>recurs</code></li>
@@ -2740,100 +2569,96 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
 <li>totalment qualificat: <code>\rutaAbsoluta\recurs</code></li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">namespace</span> <span class="nx">Dwes\Exemples</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="k">include_once</span><span class="p">(</span><span class="s2">"Producte.php"</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span><span class="k">echo</span> <span class="nx">IVA</span><span class="p">;</span> <span class="nx">sense</span> <span class="nx">qualificar</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="k">echo</span> <span class="nx">Utilidades\IVA</span><span class="p">;</span> <span class="nx">d</span><span class="err">'</span><span class="nx">accés</span> <span class="nx">qualificat</span><span class="o">.</span> <span class="nx">Donaria</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">no</span> <span class="nx">existeix</span> <span class="nx">\Dwes\Exemples\Utilitats\IVA</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span><span class="k">echo</span> <span class="nx">\Dwes\Exemples\IVA</span><span class="p">;</span> <span class="nx">totalment</span> <span class="nx">qualificat</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span><span class="nv">$p</span> <span class="mi">1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Producte</span><span class="p">();</span> <span class="nx">el</span> <span class="nx">busca</span> <span class="nx">al</span> <span class="nx">mateix</span> <span class="k">namespace</span> <span class="nx">i</span> <span class="nx">troba</span> <span class="nx">\Dwes\Exemples\Producte</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span><span class="nv">$p</span> <span class="mi">2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Model\Producte</span><span class="p">();</span> <span class="nx">donaria</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">no</span> <span class="nx">existeix</span> <span class="nx">el</span> <span class="k">namespace</span> <span class="nx">Model</span><span class="o">.</span> <span class="nx">Està</span> <span class="nx">buscant</span> <span class="nx">\Dwes\Exemples\Model\Producte</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span><span class="nv">$p</span> <span class="mi">3</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Dwes\Exemples\Producte</span><span class="p">();</span> <span class="nx">\Dwes\Exemples\Producte</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">namespace</span> <span class="nx">DWES\Exemples</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="k">include_once</span><span class="p">(</span><span class="s2">"Producte.php"</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="k">echo</span> <span class="nx">IVA</span><span class="p">;</span> <span class="c1">// sense qualificar</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="k">echo</span> <span class="nx">Utilidades\IVA</span><span class="p">;</span> <span class="c1">// accés qualificat. Donaria error, no existeix \DWES\Exemples\Utilitats\IVA</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="k">echo</span> <span class="nx">\DWES\Exemples\IVA</span><span class="p">;</span> <span class="c1">//totalment qualificat</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span><span class="nv">$p1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Producte</span><span class="p">();</span> <span class="c1">// el busca al mateix namespace i troba \DWES\Exemples\Producte</span>
+<span class="linenos" data-linenos="11 "></span><span class="nv">$p2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Model\Producte</span><span class="p">();</span> <span class="c1">// donaria error, no existeix el namespace Model. Està buscant \DWES\Exemples\Model\Producte</span>
+<span class="linenos" data-linenos="12 "></span><span class="nv">$p3</span> <span class="o">=</span><span class="k">new</span> <span class="nx">\DWES\Exemples\Producte</span><span class="p">();</span> <span class="c1">// \DWES\Exemples\Producte</span>
 </code></pre></div>
 <p>Per evitar la referència qualificada podem declarar l'ús mitjançant <code>use</code> (similar a fer <code>import</code> a <em>Java</em>). Es fa a la capçalera, després del <code>namespace</code>:</p>
 <p>Els tipus possibles són:</p>
 <ul>
 <li><code>use const nomQualificatConstant</code></li>
-<li><code>use function nomQualificatFuncion</code></li>
+<li><code>use function nomQualificatFuncio</code></li>
 <li><code>use nomQualificatClasse</code></li>
 <li><code>use nomQualificatClasse as NouNom</code> // per renomenar elements</li>
 </ul>
-<p>Per exemple, si volem utilitzar la classe <code>\Dwes\Exemples\Producte</code> des d'un recurs que es troba a l'arrel, per exemple a <code>inicio.php</code>, faríem:
-</p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">include_once</span><span class="p">(</span><span class="s2">"Dwes\Exemple\Producte.php"</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="k">use</span> <span class="k">const</span> <span class="no">Dwes\Exemples\IVA</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span><span class="k">use</span> <span class="nx">\Dwes\Exemples\Producte</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="k">echo</span> <span class="nx">IVA</span><span class="p">;</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span><span class="nv">$p</span> <span class="mi">1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Producte</span><span class="p">();</span>
-</code></pre></div><p></p>
+<p>Per exemple, si volem utilitzar la classe <code>\DWES\Exemples\Producte</code> des d'un recurs que es troba a l'arrel, per exemple a <code>inici.php</code>, faríem:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos="2 "></span><span class="k">include_once</span><span class="p">(</span><span class="s2">"DWES\Exemple\Producte.php"</span><span class="p">);</span>
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span><span class="k">use</span> <span class="k">const</span> <span class="no">DWES\Exemples\IVA</span><span class="p">;</span>
+<span class="linenos" data-linenos="5 "></span><span class="k">use</span> <span class="nx">\DWES\Exemples\Producte</span><span class="p">;</span>
+<span class="linenos" data-linenos="6 "></span>
+<span class="linenos" data-linenos="7 "></span><span class="k">echo</span> <span class="nx">IVA</span><span class="p">;</span>
+<span class="linenos" data-linenos="8 "></span><span class="nv">$p1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Producte</span><span class="p">();</span>
+</code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">To <code>use</code> or not to <code>use</code></p>
 <p>En resum, <code>use</code> permet accedir sense qualificar recursos que estan en un altre <em>namespace</em>. Si estem en el mateix espai de nom, no necessitem <code>use</code>.</p>
 </div>
 <h3 id="organitzacio">Organització<a class="headerlink" href="#organitzacio" title="Permanent link">¶</a></h3>
-<p>Tot projecte, conforme creix, necessita organitzar el seu codi font. Es planteja una organització en la qual els arxius que interactuen amb el navegador es col·loquen en l'arrel, i les classes que defensem van dins d'un namespace (i dins de la seva pròpia carpeta <code>o</code> <code>app</code>).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAAz0lEQVR4AezSMQ6AIBQFwR/vf2g7svYUqGP1KgPDXuNbAjAWxQwMGBHIVAaMCGQqA0YEMpUBIwKZyoARgUxlwIhApjJ2YeQ/n5jKyDPCgBGBTGXAiECmMmBEIFMZMCKQqQwYEchUBowIZCrjCIwc4pSpjLwEDBgRyFQGjAhkKgNGBDKVASMCmcqAEYFMZcCIQKYy3o+RG2ycyggmDBgRyFQGjAhkKgNGBDKVASMCmcqAEYFMZcCIQKYyfo6R6z+nMuIBA0YEMpUBIwKZygjGDQAA//+ULJr7AAAABklEQVQDAPrRAIegLtQpAAAAAElFTkSuQmCC" data-desc-position="bottom"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAAz0lEQVR4AezSMQ6AIBQFwR/vf2g7svYUqGP1KgPDXuNbAjAWxQwMGBHIVAaMCGQqA0YEMpUBIwKZyoARgUxlwIhApjJ2YeQ/n5jKyDPCgBGBTGXAiECmMmBEIFMZMCKQqQwYEchUBowIZCrjCIwc4pSpjLwEDBgRyFQGjAhkKgNGBDKVASMCmcqAEYFMZcCIQKYy3o+RG2ycyggmDBgRyFQGjAhkKgNGBDKVASMCmcqAEYFMZcCIQKYyfo6R6z+nMuIBA0YEMpUBIwKZygjGDQAA//+ULJr7AAAABklEQVQDAPrRAIegLtQpAAAAAElFTkSuQmCC"></a> Organització del codi font !!! tip "Organització, inclots i usos" * Col·locarem cada recurs en un fitxer a part. * En la primera línia indicarem el seu <em>namespace</em> (si no està en l'arrel). * Si utilitzem altres recursos, farem un <code>include_once</code> d'aquests recursos (classes, interfícies, etc...). * Cada recurs ha d'incloure tots els altres recursos que referenciï: la classe de la qual hereta,  interfícies que implementa, classes utilitzades/rebudes com paràmetres, etc... * Si els recursos estan en un espai de noms diferent al que estem, emprarem <code>use</code> amb la ruta completa per a després utilitzar referències sense qualificar.</p>
+<p>Tot projecte, a mesura que creix, necessita organitzar el seu codi font. Es planteja una organització en la qual els arxius que interactuen amb el navegador es col·loquen en l'arrel, i les classes que defensem van dins d'un namespace (i dins de la seva pròpia carpeta <code>o</code> <code>app</code>).</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/03organizacion.png" data-desc-position="bottom"><img src="img/03organizacion.png" style="width:auto"></a>
+  <figcaption>Organització del codi font</figcaption>
+</figure>
+
+<div class="admonition tip">
+<p class="admonition-title">Organització, includes i usos</p>
+<ul>
+<li>Col·locarem cada recurs en un fitxer a part. </li>
+<li>En la primera línia indicarem el seu <em>namespace</em> (si no està en l'arrel). </li>
+<li>Si utilitzem altres recursos, farem un <code>include_once</code> d'aquests recursos (classes, interfícies, etc...). </li>
+<li>Cada recurs ha d'incloure tots els altres recursos que referenciï: la classe de la qual hereta,  interfícies que implementa, classes utilitzades/rebudes com paràmetres, etc... </li>
+<li>Si els recursos estan en un espai de noms diferent al que estem, emprarem <code>use</code> amb la ruta completa per a després utilitzar referències sense qualificar.</li>
+</ul>
+</div>
 <h3 id="autoload">Autoload<a class="headerlink" href="#autoload" title="Permanent link">¶</a></h3>
-<p>No és tediós haver de fer l <code>'inclús</code> de les classes? L <em>'autoload</em> ve al rescat.</p>
-<p>Així doncs, permet carregar les classes (no les constants ni les funcions) que s'utilitzaran i evitar haver de fer el <code>include_once</code> de cadascuna d'elles. Per a això, s'utilitza la funció <code>spl_autoload_register</code>
-</p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span><span class="nb">spl_autoload_register</span><span class="p">(</span> <span class="k">function</span><span class="p">(</span> <span class="nv">$nombreClase</span> <span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="4 "></span>
-<span class="linenos" data-linenos="5 "></span>    <span class="k">include_once</span> <span class="nv">$nombreClase</span><span class="o">.</span><span class="s1">'. php'</span><span class="p">;</span>
-<span class="linenos" data-linenos="6 "></span>
-<span class="linenos" data-linenos="7 "></span><span class="p">}</span> <span class="p">);</span>
-<span class="linenos" data-linenos="8 "></span>
-<span class="linenos" data-linenos="9 "></span><span class="cp">?&gt;</span>
-</code></pre></div><p></p>
+<p>No és tediós haver de fer l <code>'include</code> de les classes? L <em>'autoload</em> ve al rescat.</p>
+<p>Així doncs, permet carregar les classes (no les constants ni les funcions) que s'utilitzaran i evitar haver de fer el <code>include_once</code> de cadascuna d'elles. Per a això, s'utilitza la funció <code>spl_autoload_register</code></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos="2 "></span><span class="nb">spl_autoload_register</span><span class="p">(</span> <span class="k">function</span><span class="p">(</span> <span class="nv">$nomClasse</span> <span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="k">include_once</span> <span class="nv">$nomClasse</span><span class="o">.</span><span class="s1">'. php'</span><span class="p">;</span>
+<span class="linenos" data-linenos="4 "></span><span class="p">}</span> <span class="p">);</span>
+<span class="linenos" data-linenos="5 "></span><span class="cp">?&gt;</span>
+</code></pre></div>
 <div class="admonition question">
 <p class="admonition-title">Per què s'anomenen <em>autoload</em>?</p>
 <p>Perquè abans es realitzava mitjançant el mètode màgic <code>__autoload()</code>, el qual està <em>deprecated</em> des de PHP 7.2</p>
 </div>
 <p>I com organitzem ara el nostre codi aprofitant l <em>'autoload</em>?</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAAz0lEQVR4AezSMQ6AIBQFwR/vf2g7svYUqGP1KgPDXuNbAjAWxQwMGBHIVAaMCGQqA0YEMpUBIwKZyoARgUxlwIhApjJ2YeQ/n5jKyDPCgBGBTGXAiECmMmBEIFMZMCKQqQwYEchUBowIZCrjCIwc4pSpjLwEDBgRyFQGjAhkKgNGBDKVASMCmcqAEYFMZcCIQKYy3o+RG2ycyggmDBgRyFQGjAhkKgNGBDKVASMCmcqAEYFMZcCIQKYyfo6R6z+nMuIBA0YEMpUBIwKZygjGDQAA//+ULJr7AAAABklEQVQDAPrRAIegLtQpAAAAAElFTkSuQmCC" data-desc-position="bottom"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAAz0lEQVR4AezSMQ6AIBQFwR/vf2g7svYUqGP1KgPDXuNbAjAWxQwMGBHIVAaMCGQqA0YEMpUBIwKZyoARgUxlwIhApjJ2YeQ/n5jKyDPCgBGBTGXAiECmMmBEIFMZMCKQqQwYEchUBowIZCrjCIwc4pSpjLwEDBgRyFQGjAhkKgNGBDKVASMCmcqAEYFMZcCIQKYy3o+RG2ycyggmDBgRyFQGjAhkKgNGBDKVASMCmcqAEYFMZcCIQKYyfo6R6z+nMuIBA0YEMpUBIwKZygjGDQAA//+ULJr7AAAABklEQVQDAPrRAIegLtQpAAAAAElFTkSuQmCC"></a> Organització amb autoload</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/03autoload.png" data-desc-position="bottom"><img src="img/03autoload.png" style="width:auto;height:500px"></a>
+  <figcaption>Organització amb autoload</figcaption>
+</figure>
+
 <p>Per facilitar la recerca dels recursos a incloure, és recomanable col·locar totes les classes dins d'una mateixa carpeta. Nosaltres la vam col·locar dins d <code>'app</code> (més endavant, quan estudiem <em>Laravel</em> veurem el motiu d'aquesta decisió). Altres carpetes que podem crear són <code>test</code> per col·locar les proves <em>PhpUnit</em> que després realitzarem, o la carpeta <code>vendor</code> on s'emmagatzemaran les llibreries del projecte (aquesta carpeta és un estàndard dins de PHP, ja que <em>Composer</em> la crea automàticament).</p>
-<p>Com hem col·locat tots els nostres recursos dins d <code>'app</code>, ara el nostre <code>autoload.php</code> (el qual col·loquem a la carpeta arrel) només va a buscar dins d'aquesta carpeta:
-</p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span><span class="nb">spl_autoload_register</span><span class="p">(</span> <span class="k">function</span><span class="p">(</span> <span class="nv">$nombreClase</span> <span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="4 "></span>
-<span class="linenos" data-linenos="5 "></span>    <span class="k">include_once</span> <span class="s2">"app/"</span><span class="o">.</span><span class="nv">$nombreClase</span><span class="o">.</span><span class="s1">'. php'</span><span class="p">;</span>
-<span class="linenos" data-linenos="6 "></span>
-<span class="linenos" data-linenos="7 "></span><span class="p">}</span> <span class="p">);</span>
-<span class="linenos" data-linenos="8 "></span>
-<span class="linenos" data-linenos="9 "></span><span class="cp">?&gt;</span>
-</code></pre></div><p></p>
+<p>Com hem col·locat tots els nostres recursos dins d <code>'app</code>, ara el nostre <code>autoload.php</code> (el qual col·loquem a la carpeta arrel) només va a buscar dins d'aquesta carpeta:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos="2 "></span><span class="nb">spl_autoload_register</span><span class="p">(</span> <span class="k">function</span><span class="p">(</span> <span class="nv">$nomClasse</span> <span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="k">include_once</span> <span class="s2">"app/"</span><span class="o">.</span><span class="nv">$nomClasse</span><span class="o">.</span><span class="s1">'. php'</span><span class="p">;</span>
+<span class="linenos" data-linenos="4 "></span><span class="p">}</span> <span class="p">);</span>
+<span class="linenos" data-linenos="5 "></span><span class="cp">?&gt;</span>
+</code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Autoload i rutes errònies</p>
 <p>A <em>Ubuntu</em> en  fer l'<em>incllueix</em> de la classe que rep com a paràmetre, les barres dels namespace (<code>\</code>) són diferents a les de les rutes (<code>/</code>). Per això, és millor que utilitzem el fitxer autoload:</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="nb">spl_autoload_register</span><span class="p">(</span> <span class="k">function</span><span class="p">(</span> <span class="nv">$nombreClase</span> <span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="nv">$ruta</span> <span class="o">=</span> <span class="s2">"app</span><span class="se">\\</span><span class="s2">"</span><span class="o">.</span><span class="nv">$nombreClase</span><span class="o">.</span><span class="s1">'. php'</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="nv">$ruta</span> <span class="o">=</span> <span class="nb">str_replace</span><span class="p">(</span><span class="s2">"</span><span class="se">\\</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"/"</span><span class="p">,</span> <span class="nv">$ruta</span><span class="p">);</span> <span class="nx">Substituïm</span> <span class="nx">les</span> <span class="nx">barres</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="k">include_once</span> <span class="nv">$ruta</span><span class="err">'</span><span class="p">;</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span><span class="p">}</span> <span class="p">);</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span><span class="cp">?&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos="2 "></span><span class="nb">spl_autoload_register</span><span class="p">(</span> <span class="k">function</span><span class="p">(</span> <span class="nv">$nomClasse</span> <span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="nv">$ruta</span> <span class="o">=</span> <span class="s2">"app</span><span class="se">\\</span><span class="s2">"</span><span class="o">.</span><span class="nv">$nomClasse</span><span class="o">.</span><span class="s1">'. php'</span><span class="p">;</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="nv">$ruta</span> <span class="o">=</span> <span class="nb">str_replace</span><span class="p">(</span><span class="s2">"</span><span class="se">\\</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"/"</span><span class="p">,</span> <span class="nv">$ruta</span><span class="p">);</span> <span class="c1">// Substituïm les barres</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="k">include_once</span> <span class="nv">$ruta</span><span class="err">'</span><span class="p">;</span>
+<span class="linenos" data-linenos="6 "></span><span class="p">}</span> <span class="p">);</span>
+<span class="linenos" data-linenos="7 "></span><span class="cp">?&gt;</span>
 </code></pre></div>
+</div>
 <h2 id="gestio-derrors">Gestió d'Errors<a class="headerlink" href="#gestio-derrors" title="Permanent link">¶</a></h2>
 <p>PHP classifica els errors que ocorren en diferents nivells. Cada nivell s'identifica amb una constant. Per exemple:</p>
 <ul>
@@ -2863,44 +2688,27 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="nb">error_reporting</span><span class="p">(</span><span class="k">E_ALL</span> <span class="o">&amp;</span><span class="nx">E_NOTICE</span> <span class="o">&amp;</span><span class="k">E_WARNING</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="nv">$resultado</span> <span class="o">=</span> <span class="nv">$dividendo</span> <span class="o">/</span> <span class="nv">$divisor</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span><span class="nb">error_reporting</span><span class="p">(</span><span class="k">E_ALL</span> <span class="o">&amp;</span><span class="nx">E_NOTICE</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="nb">set_error_handler</span><span class="p">(</span><span class="s2">"miManejadorErrores"</span><span class="p">);</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span><span class="nv">$resultado</span> <span class="o">=</span> <span class="nv">$dividendo</span> <span class="o">/</span> <span class="nv">$divisor</span><span class="p">;</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span><span class="nb">restore_error_handler</span><span class="p">();</span> <span class="nx">torna</span> <span class="nx">a</span> <span class="nx">l</span><span class="err">'</span><span class="nx">anterior</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span><span class="k">function</span> <span class="nf">miManejadorErrores</span><span class="p">(</span><span class="nv">$nivel</span><span class="p">,</span> <span class="nv">$mensaje</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span>    <span class="k">switch</span><span class="p">(</span><span class="nv">$nivel</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span>        <span class="k">case</span> <span class="k">E_WARNING</span><span class="o">:</span>
-<span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span>            <span class="k">echo</span> <span class="s2">"&lt;strong&gt;Warning&lt;/strong&gt;: </span><span class="si">$mensaje</span><span class="s2">.&lt;br/&gt;"</span><span class="p">;</span>
-<span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span>            <span class="k">break</span><span class="p">;</span>
-<span class="linenos" data-linenos="24 "></span>
-<span class="linenos" data-linenos="25 "></span>        <span class="k">default</span><span class="o">:</span>
-<span class="linenos" data-linenos="26 "></span>
-<span class="linenos" data-linenos="27 "></span>            <span class="k">echo</span> <span class="s2">"Error de tipus no especificat: </span><span class="si">$mensaje</span><span class="s2">.&lt;br/&gt;"</span><span class="p">;</span>
-<span class="linenos" data-linenos="28 "></span>
-<span class="linenos" data-linenos="29 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="30 "></span>
-<span class="linenos" data-linenos="31 "></span><span class="p">}</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nb">error_reporting</span><span class="p">(</span><span class="k">E_ALL</span> <span class="o">&amp;</span><span class="nx">E_NOTICE</span> <span class="o">&amp;</span><span class="k">E_WARNING</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="nv">$resultat</span> <span class="o">=</span> <span class="nv">$divident</span> <span class="o">/</span> <span class="nv">$divisor</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nb">error_reporting</span><span class="p">(</span><span class="k">E_ALL</span> <span class="o">&amp;</span><span class="nx">E_NOTICE</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="nb">set_error_handler</span><span class="p">(</span><span class="s2">"manejadorErrors"</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="nv">$resultat</span> <span class="o">=</span> <span class="nv">$divident</span> <span class="o">/</span> <span class="nv">$divisor</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="nb">restore_error_handler</span><span class="p">();</span> <span class="c1">// torna a l'anterior</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="k">function</span> <span class="nf">manejadorErrors</span><span class="p">(</span><span class="nv">$nivell</span><span class="p">,</span> <span class="nv">$missatge</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="k">switch</span><span class="p">(</span><span class="nv">$nivell</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="k">case</span> <span class="k">E_WARNING</span><span class="o">:</span>
+<span class="linenos" data-linenos="11 "></span>            <span class="k">echo</span> <span class="s2">"&lt;strong&gt;Warning&lt;/strong&gt;: </span><span class="si">$missatge</span><span class="s2">.&lt;br/&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="12 "></span>            <span class="k">break</span><span class="p">;</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="k">default</span><span class="o">:</span>
+<span class="linenos" data-linenos="14 "></span>            <span class="k">echo</span> <span class="s2">"Error de tipus no especificat: </span><span class="si">$missatge</span><span class="s2">.&lt;br/&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="16 "></span><span class="p">}</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>Error de tipus no especificat: Undefined variable: dividend.
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span>Error de tipus no especificat: Undefined variable: divisor.
-<span class="linenos" data-linenos="4 "></span>
-<span class="linenos" data-linenos="5 "></span>Error de tipo Warning: Division by zero.
+<span class="linenos" data-linenos="2 "></span>Error de tipus no especificat: Undefined variable: divisor.
+<span class="linenos" data-linenos="3 "></span>Error de tipo Warning: Division by zero.
 </code></pre></div>
 </div>
 </div>
@@ -2912,7 +2720,7 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
 <span class="linenos" data-linenos="3 "></span>    <span class="k">if</span> <span class="p">(</span><span class="nv">$divisor</span> <span class="o">==</span> <span class="mi">0</span><span class="nx">\</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos" data-linenos="4 "></span>        <span class="k">throw</span> <span class="k">new</span> <span class="nx">Exception</span><span class="p">(</span><span class="s2">"Divisió per zero."</span><span class="p">);</span>
 <span class="linenos" data-linenos="5 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="6 "></span>    <span class="nv">$resultado</span> <span class="o">=</span> <span class="nv">$dividendo</span> <span class="o">/</span> <span class="nv">$divisor</span><span class="p">;</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="nv">$resultat</span> <span class="o">=</span> <span class="nv">$divident</span> <span class="o">/</span> <span class="nv">$divisor</span><span class="p">;</span>
 <span class="linenos" data-linenos="7 "></span><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos" data-linenos="8 "></span>    <span class="k">echo</span> <span class="s2">"S'ha produït el següent error: "</span><span class="o">.</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
 <span class="linenos" data-linenos="9 "></span><span class="p">}</span>
@@ -2923,40 +2731,37 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
 <h3 id="creant-excepcions">Creant excepcions<a class="headerlink" href="#creant-excepcions" title="Permanent link">¶</a></h3>
 <p>Per crear una excepció, la forma més curta és crear una classe que únicament hereti d <code>'Exception</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos="2 "></span><span class="k">class</span> <span class="nc">HolaExcepcion</span> <span class="k">extends</span> <span class="nx">Exception</span> <span class="p">{}</span>
+<span class="linenos" data-linenos="2 "></span><span class="k">class</span> <span class="nc">HolaExcepcio</span> <span class="k">extends</span> <span class="nx">Exception</span> <span class="p">{}</span>
 </code></pre></div>
 <p>Si volem, i és recomanable depenent dels requisits, podem sobrecarregar els mètodes màgics, per exemple, sobrecarregant el constructor i trucant al constructor del pare, o rescriure el mètode <code>__toString</code> per canviar el seu missatge:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span><span class="k">class</span> <span class="nc">MiExcepcion</span> <span class="k">extends</span> <span class="nx">Exception</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">class</span> <span class="nc">Excepcio</span> <span class="k">extends</span> <span class="nx">Exception</span> <span class="p">{</span>
 <span class="linenos" data-linenos=" 3 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$msj</span><span class="p">,</span> <span class="nv">$codi</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">Exception</span> <span class="nv">$previa</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos" data-linenos=" 4 "></span>        <span class="c1">// codi propi</span>
 <span class="linenos" data-linenos=" 5 "></span>        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="nv">$msj</span><span class="p">,</span> <span class="nv">$codi</span><span class="p">,</span> <span class="nv">$previa</span><span class="p">);</span>
-<span class="linenos" data-linenos=" 6 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos=" 7 "></span>
-<span class="linenos" data-linenos=" 8 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__toString</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 9 "></span>        <span class="k">return</span> <span class="no">__CLASS__</span> <span class="o">.</span> <span class="s2">": [</span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">codxxe</span><span class="si">}</span><span class="s2">]: </span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">message</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="linenos" data-linenos="10 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="11 "></span>
-<span class="linenos" data-linenos="12 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">miFuncion</span><span class="p">()</span> <span class="p">{</span>
-<span class="linenos" data-linenos="13 "></span>        <span class="k">echo</span> <span class="s2">"Una funció personalitzada per a aquest tipus d'excepció</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="linenos" data-linenos="14 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="15 "></span><span class="p">}</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__toString</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="k">return</span> <span class="no">__CLASS__</span> <span class="o">.</span> <span class="s2">": [</span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">codxxe</span><span class="si">}</span><span class="s2">]: </span><span class="si">{</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">message</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">laMevaFuncio</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span>        <span class="k">echo</span> <span class="s2">"Una funció personalitzada per a aquest tipus d'excepció</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="13 "></span><span class="p">}</span>
 </code></pre></div>
 <p>Si definim una excepció d'aplicació dins d'un <em>namespace</em>, quan referenciem a <code>Exception</code>, haurem de referenciar-la mitjançant el seu nom totalment qualificat (<code>\Exception</code>), o utilitzant <code>use</code>:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Mitjançant nom totalment qualificat</label><label for="__tabbed_3_2">Mitjançant 'use'</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos="2 "></span><span class="k">namespace</span> <span class="nx">\Dwes\Exemples</span><span class="p">;</span>
-<span class="linenos" data-linenos="3 "></span>    <span class="k">class</span> <span class="nc">AppExcepcion</span> <span class="k">extends</span> <span class="nx">\Exception</span> <span class="p">{}</span>
+<span class="linenos" data-linenos="2 "></span><span class="k">namespace</span> <span class="nx">\DWES\Exemples</span><span class="p">;</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="k">class</span> <span class="nc">AppExcepcio</span> <span class="k">extends</span> <span class="nx">Exception</span> <span class="p">{}</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span><span class="k">namespace</span> <span class="nx">\Dwes\Exemples</span><span class="p">;</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="k">use</span> <span class="nx">Exception</span><span class="p">;</span>
-<span class="linenos" data-linenos="5 "></span>    <span class="k">class</span> <span class="nc">AppExcepcion</span> <span class="k">extends</span> <span class="nx">Exception</span> <span class="p">{}</span>
+<span class="linenos" data-linenos="2 "></span><span class="k">namespace</span> <span class="nx">\DWES\Exemples</span><span class="p">;</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="k">use</span> <span class="nx">Exception</span><span class="p">;</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="k">class</span> <span class="nc">AppExcepcion</span> <span class="k">extends</span> <span class="nx">Exception</span> <span class="p">{}</span>
 </code></pre></div>
 </div>
 </div>
@@ -2964,19 +2769,19 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
 <h2 id="excepcions-multiples">Excepcions múltiples<a class="headerlink" href="#excepcions-multiples" title="Permanent link">¶</a></h2>
 <p>Es poden fer servir excepcions múltiples per comprovar diferents condicions. A l'hora de capturar-les, es fa de més específica a més general.</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span><span class="nv">$email</span> <span class="o">=</span> <span class="s2">"ejemplo@ejemplo.com"</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nv">$email</span> <span class="o">=</span> <span class="s2">"exemple@exemple.com"</span><span class="p">;</span>
 <span class="linenos" data-linenos=" 3 "></span><span class="k">try</span> <span class="p">{</span>
 <span class="linenos" data-linenos=" 4 "></span>    <span class="c1">// Comprova si l'email és vàlid</span>
 <span class="linenos" data-linenos=" 5 "></span>    <span class="k">if</span><span class="p">(</span><span class="nb">filter_var</span><span class="p">(</span><span class="nv">$email</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_EMAIL</span><span class="p">)</span> <span class="o">===</span> <span class="k">FALSE</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 6 "></span>        <span class="k">throw</span> <span class="k">new</span> <span class="nx">MiExcepcion</span><span class="p">(</span><span class="nv">$email</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 6 "></span>        <span class="k">throw</span> <span class="k">new</span> <span class="nx">Excepcio</span><span class="p">(</span><span class="nv">$email</span><span class="p">);</span>
 <span class="linenos" data-linenos=" 7 "></span>    <span class="p">}</span>
 <span class="linenos" data-linenos=" 8 "></span>
 <span class="linenos" data-linenos=" 9 "></span>    <span class="c1">// Comprova la paraula exemple en la direcció email</span>
-<span class="linenos" data-linenos="10 "></span>    <span class="k">if</span><span class="p">(</span><span class="nb">strpos</span><span class="p">(</span><span class="nv">$email</span><span class="p">,</span> <span class="s2">"exemple"</span><span class="p">)</span> <span class="nx">\</span><span class="o">!==</span> <span class="k">FALSE</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="k">if</span><span class="p">(</span><span class="nb">strpos</span><span class="p">(</span><span class="nv">$email</span><span class="p">,</span> <span class="s2">"exemple"</span><span class="p">)</span> <span class="o">!==</span> <span class="k">FALSE</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos" data-linenos="11 "></span>        <span class="k">throw</span> <span class="k">new</span> <span class="nx">Exception</span><span class="p">(</span><span class="s2">"</span><span class="si">$email</span><span class="s2"> és un email d'exemple no vàlid"</span><span class="p">);</span>
 <span class="linenos" data-linenos="12 "></span>    <span class="p">}</span>
-<span class="linenos" data-linenos="13 "></span><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">MiExcepcion</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="14 "></span>    <span class="k">echo</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">miFuncion</span><span class="p">();</span>
+<span class="linenos" data-linenos="13 "></span><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Excepcio</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="k">echo</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">laMevaFuncio</span><span class="p">();</span>
 <span class="linenos" data-linenos="15 "></span><span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos" data-linenos="16 "></span>    <span class="k">echo</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
 <span class="linenos" data-linenos="17 "></span><span class="p">}</span>
@@ -2985,46 +2790,30 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
 <p class="admonition-title">Autoavaluació</p>
 <p>Què passaria en executar el següent codi?</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">MainException</span> <span class="k">extends</span> <span class="nx">Exception</span> <span class="p">{}</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="k">class</span> <span class="nc">SubException</span> <span class="k">extends</span> <span class="nx">MainException</span> <span class="p">{}</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>    <span class="k">try</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span>    <span class="k">throw</span> <span class="k">new</span> <span class="nx">SubException</span><span class="p">(</span><span class="s2">"Llançada SubException"</span><span class="p">);</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">MainException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span>    <span class="k">echo</span> <span class="s2">"Capturada MainException "</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">SubException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span>    <span class="k">echo</span> <span class="s2">"Capturada SubException "</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span>    <span class="k">echo</span> <span class="s2">"Capturada Exception "</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
-<span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">class</span> <span class="nc">MainException</span> <span class="k">extends</span> <span class="nx">Exception</span> <span class="p">{}</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">SubException</span> <span class="k">extends</span> <span class="nx">MainException</span> <span class="p">{}</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="k">throw</span> <span class="k">new</span> <span class="nx">SubException</span><span class="p">(</span><span class="s2">"Llançada SubException"</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">MainException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span>      <span class="k">echo</span> <span class="s2">"Capturada MainException "</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">SubException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>      <span class="k">echo</span> <span class="s2">"Capturada SubException "</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span>     <span class="k">echo</span> <span class="s2">"Capturada Exception "</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="p">}</span>
 </code></pre></div>
 </div>
-<p>Si en el mateix 'catch'volem capturar diverses excepcions, hem d'utilitzar l'operador '|':</p>
+<p>Si en el mateix 'catch' volem capturar diverses excepcions, hem d'utilitzar l'operador '|':</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
 <span class="linenos" data-linenos=" 2 "></span>
 <span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">MainException</span> <span class="k">extends</span> <span class="nx">Exception</span> <span class="p">{}</span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="k">class</span> <span class="nc">SubException</span> <span class="k">extends</span> <span class="nx">MainException</span> <span class="p">{}</span>
-<span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span><span class="k">try</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="k">throw</span> <span class="k">new</span> <span class="nx">SubException</span><span class="p">(</span><span class="s2">"Llançada SubException"</span><span class="p">);</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">MainException</span> <span class="o">|</span> <span class="nx">SubException</span> <span class="nv">$e</span> <span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos="12 "></span>
-<span class="linenos" data-linenos="13 "></span><span class="k">echo</span> <span class="s2">"Capturada Exception "</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span><span class="p">}</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="k">class</span> <span class="nc">SubException</span> <span class="k">extends</span> <span class="nx">MainException</span> <span class="p">{}</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span>  <span class="k">throw</span> <span class="k">new</span> <span class="nx">SubException</span><span class="p">(</span><span class="s2">"Llançada SubException"</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">MainException</span> <span class="o">|</span> <span class="nx">SubException</span> <span class="nv">$e</span> <span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>  <span class="k">echo</span> <span class="s2">"Capturada Exception "</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="linenos" data-linenos="10 "></span><span class="p">}</span>
 </code></pre></div>
 <p>Des de PHP 7, existeix el tipus <code>Throwable</code>, el qual és un interfície que implementen tant els errors com les excepcions, i ens permet capturar els dos tipus alhora:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
@@ -3035,21 +2824,19 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
 <span class="linenos" data-linenos="6 "></span><span class="p">}</span>
 </code></pre></div>
 <p>Si només volem capturar els errors fatals, podem fer ús de la classe <code>Error</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
-<span class="linenos" data-linenos=" 2 "></span><span class="k">try</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 3 "></span>    <span class="c1">// Genera una notificació que no es captura</span>
-<span class="linenos" data-linenos=" 4 "></span>    <span class="k">echo</span> <span class="nv">$variableNoAsignada</span><span class="p">;</span>
-<span class="linenos" data-linenos=" 5 "></span>    <span class="c1">// Error fatal que es captura</span>
-<span class="linenos" data-linenos=" 6 "></span>    <span class="nx">funcionQueNoExiste</span><span class="p">();</span>
-<span class="linenos" data-linenos=" 7 "></span><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Error</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="k">echo</span> <span class="s2">"Error capturat: "</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos="2 "></span><span class="k">try</span> <span class="p">{</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="c1">// Genera una notificació que no es captura</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="k">echo</span> <span class="nv">$variableNoAsignada</span><span class="p">;</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="c1">// Error fatal que es captura</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="nx">funcionQueNoExiste</span><span class="p">();</span>
+<span class="linenos" data-linenos="7 "></span><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Error</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="8 "></span>    <span class="k">echo</span> <span class="s2">"Error capturat: "</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="linenos" data-linenos="9 "></span><span class="p">}</span>
 </code></pre></div>
 <h3 id="rellancar-excepcions">Rellançar excepcions<a class="headerlink" href="#rellancar-excepcions" title="Permanent link">¶</a></h3>
-<p>En les aplicacions reals, és molt comú capturar una excepció de sistema i llançar-n'una d'aplicació que hem definit nosaltres. També podem llançar les excepcions sense necessitat d'estar dins d'un <code>try/catch</code>.
-</p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<p>En les aplicacions reals, és molt comú capturar una excepció de sistema i llançar-n'una d'aplicació que hem definit nosaltres. També podem llançar les excepcions sense necessitat d'estar dins d'un <code>try/catch</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
 <span class="linenos" data-linenos="2 "></span><span class="k">class</span> <span class="nc">AppException</span> <span class="k">extends</span> <span class="nx">Exception</span> <span class="p">{}</span>
 <span class="linenos" data-linenos="3 "></span>
 <span class="linenos" data-linenos="4 "></span><span class="k">try</span> <span class="p">{</span>
@@ -3057,7 +2844,7 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
 <span class="linenos" data-linenos="6 "></span><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
 <span class="linenos" data-linenos="7 "></span>    <span class="k">throw</span> <span class="k">new</span> <span class="nx">AppException</span><span class="p">(</span><span class="s2">"AppException: "</span><span class="o">.</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">(),</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getCode</span><span class="p">(),</span> <span class="nv">$e</span><span class="p">);</span>
 <span class="linenos" data-linenos="8 "></span><span class="p">}</span>
-</code></pre></div><p></p>
+</code></pre></div>
 <h2 id="spl">SPL<a class="headerlink" href="#spl" title="Permanent link">¶</a></h2>
 <p><em>Standard PHP Library</em> és el conjunt de funcions i utilitats que ofereix PHP, com:</p>
 <ul>
@@ -3096,6 +2883,7 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
 <ul>
 <li><a href="https://www.php.net/manual/es/index.php">Manual de PHP</a></li>
 <li><a href="https://desarrolloweb.com/manuales/manual-php.html#manual68">Manual d'OO en PHP - www.desarrolloweb.com</a></li>
+<li>[Lloc web d'Aitor Medrano}(https://aitor-medrano.github.io/)</li>
 </ul>
 
 
@@ -3117,7 +2905,7 @@ Les constants es defineixen públiques perquè siguin accessibles per tots els r
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 d’octubre de 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">13 d’octubre de 2025</span>
   </span>
 
     

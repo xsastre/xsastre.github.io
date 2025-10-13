@@ -1,0 +1,2393 @@
+<!DOCTYPE html><html lang="ca" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docencia.xaviersastre.cat/Moduls/DWES/exercicisisolucions/UT03PHPPOOExercicis.html">
+      
+      
+        <link rel="prev" href="../UT03PHPPOO.html">
+      
+      
+        <link rel="next" href="../../DWEC/UT01.html">
+      
+      
+      <link rel="icon" href="../../../imatges/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Activitats - Docencia Xavier</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../css/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-KXJX1CP7QG"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-KXJX1CP7QG",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-KXJX1CP7QG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercicis-php-orientat-a-objectes" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../../../index.html" title="Docencia Xavier" class="md-header__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  <img src="../../../imatges/education_blanc.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docencia Xavier
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Activitats
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="Teal" aria-label="Canviar a mode nit" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode nit" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="Teal" aria-label="Canviar a mode dia" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../index.html" title="Docencia Xavier" class="md-nav__button md-logo" aria-label="Docencia Xavier" data-md-component="logo">
+      
+  <img src="../../../imatges/education_blanc.png" alt="logo">
+
+    </a>
+    Docencia Xavier
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inici
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    NC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            NC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CECNC/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducció i index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT01 Compliment normatiu
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            UT01 Compliment normatiu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CECNC/UT01.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CECNC/presentacions/01%20Unitat%201%20-%20Compliment%20%20normatiu_ok/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diapositives unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWES
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            DWES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1">
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT01 Arquitectures Web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            UT01 Arquitectures Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT01ArquitecturesWeb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentacions/DWESUT01 - Arquitectures i eines/index_HTML.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diapositives unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT01ArquitecturesWebVideo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vídeo resum de la unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT01ArquitecturesWebActivitats.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activitats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT02 Llenguatge PHP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            UT02 Llenguatge PHP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT02PHP.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT02PHPVideo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vídeo resum de la unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT02PHPTest.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test autoavaluació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="UT02PHPExercicis.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activitats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT03 Llenguatge PHP Orientat a Objectes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            UT03 Llenguatge PHP Orientat a Objectes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT03PHPPOO.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="UT03PHPPOOExercicis.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Activitats
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            DWEC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1">
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT01 Arquitectures Web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            UT01 Arquitectures Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWEC/UT01.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWEC/presentacions/DWECUT1/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diapositives unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT02 Llenguatge Javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            UT02 Llenguatge Javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DWEC/exercicisisolucions/UT02Exercicis.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercicis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bloc  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8l4.59-4.59m5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82l1.41-1.41M22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2Z"></path></svg>
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Arxiva
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Arxiva
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2025.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3">
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/aws.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/amazon.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/coneixements-generals.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coneixements generals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/dam.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/daw.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAW
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/dwec.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DWEC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/dwes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DWES
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/docker.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/dynamodb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DynamoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/general.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/html.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/js.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/java.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/javascript.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/matem%C3%A0tiques.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matemàtiques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/php.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/psp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PSP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/programaci%C3%B3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/programci%C3%B3-multifil.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programció multifil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/projecte-intermodular.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projecte intermodular
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/springboot.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SpringBoot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="exercicis-php-orientat-a-objectes">Exercicis PHP Orientat a objectes<a class="headerlink" href="#exercicis-php-orientat-a-objectes" title="Permanent link">¶</a></h1>
+<p>✏️   EXERCICI 112   (<code>exercici112Empleat.php</code>): Crea una classe Empleat amb el seu nom, llinatges i sou. Encapsula les propietats mitjançant <code>getters/setters</code> i afegeix mètodes per a:</p>
+<ul>
+<li>Obtenir el seu nom complet → getNomComplet(): string</li>
+<li>Que retorni un booleà indicant si ha de pagar o no impostos (es paguen quan el sou és superior a 3333€) → hadePagarImpostos(): bool</li>
+</ul>
+<p>✏️   EXERCICI 113 (<code>exercici113EmpleatTelefons.php</code>): Copia la classe de l'exercici 112 i modifica-la. Afegeix una propietat privada que emmagatzemi una matriu de números de telèfons. Afegeix els mètodes següents:</p>
+<ul>
+<li><code>public function afegirTelefon(int $telefo) : void</code> → Afegeix un telèfon a la matriu</li>
+<li><code>public function llistarTelefons(): string</code> → Mostra els telèfons separats per comes</li>
+<li><code>public function buidarTelefons(): void</code> → Elimina tots els telèfons</li>
+</ul>
+<p>✏️   EXERCICI 114 (<code>exercici114EmpleatConstructor.php</code>): Copia la classe de l'exercici 113 i modifica-la.
+Elimina els <em>setters</em> de <code>nom</code> i <code>llinatges</code>, de manera que aquestes dades s'assignin mitjançant el constructor (utilitza la sintaxi de PHP7).
+Si el constructor rep un tercer paràmetre, serà el sou del <code>Empleat</code>. Si no, se li assignaran 1000€ com a sou inicial.</p>
+<p><code>exercici114EmpleatConstructor8.php</code>: Modifica la classe i utilitza la sintaxi del PHP 8 de promoció de les propietats del constructor.</p>
+<p>✏️   EXERCICI 115 (<code>exercici115EmpleatConstant.php</code>): Copia la classe de l'exercici 114 i modifica-la.
+Afegeix una constant <code>SOU_MAXIM</code> amb el valor del sou que ha de pagar impostos, i modifica el codi per utilitzar la constant.</p>
+<p>✏️   EXERCICI 116 (<code>exercici116EmpleatSou.php</code>):Copia la classe de l'exercici 115 i modifica-la.
+Canvia la constant per una variable estàtica <code>souMaxim</code>, de manera que mitjançant <code>getter/setter</code> puguis modificar el seu valor.</p>
+<p>✏️   EXERCICI 117 (<code>exercici117EmpleatStatic.php</code>: Copia la classe de l'exercici 116 i modifica-la.
+     Completa el mètode següent amb una cadena HTML que mostri les dades d'un empleat dins d'un paràgraf i tots els telèfons mitjançant una llista ordenada (per a això, hauràs de crear un <em>getter</em> per als telèfons):</p>
+<ul>
+<li><code>public static function toHtml(Empleat $emp): string</code></li>
+</ul>
+<p>✏️   EXERCICI 118 (<code>exercici118Persona.php</code>): Copia la classe de l'exercici anterior a <code>exercici118Empleat.php</code> i modifícala.</p>
+<p>Crea una classe Persona que sigui pare d'Empleat, de manera que Persona contingui el nom i els cognoms, i en Empleat quedi el salari i els telèfons.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/03/03p118.png" data-desc-position="bottom"><img src="../img/03/03p118.png" style="width:auto;height:200px"></a>
+  <figcaption>Exercici 118</figcaption>
+</figure>
+
+<p>✏️   EXERCICI 119 (<code>exercici119PersonaH.php</code>): Copia les classes de l'exercici anterior i modifícales. Crea en Persona el mètode estàtic toHtml(Persona $p), i modifica en Empleat el mateix mètode toHtml(Persona $p), però canvia la funció perquè rebi una Persona com a paràmetre.
+Per accedir a les propietats de l'empleat amb la persona que rebem com a paràmetre, comprovarem el seu tipus:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">class</span> <span class="nc">Empleat</span> <span class="k">extends</span> <span class="nx">Persona</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="c1">/// reste del codi</span>
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">toHtml</span><span class="p">(</span><span class="nx">Persona</span> <span class="nv">$p</span><span class="p">)</span><span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="k">if</span> <span class="p">(</span><span class="nv">$p</span> <span class="nx">instanceof</span> <span class="nx">Empleat</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 8 "></span>            <span class="c1">// Aqui ja podem accedir a les propietats i mètodes d'Empleat</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="11 "></span><span class="p">}</span>
+</code></pre></div>
+<p>✏️   EXERCICI 120 (<code>exercici120PersonaE.php</code>): Copia les classes de l'exercici anterior i modifícales.
+Afegeix en <code>Persona</code> un atribut <code>edat</code>
+A l'hora de saber si un empleat ha de pagar impostos, ho farà sempre que tingui més de 21 anys i depengui del valor del seu sou. Modifica tot el codi necessari per mostrar i/o editar l'edat quan sigui necessari.</p>
+<p>✏️   EXERCICI 121 (<code>exercici121PersonaS.php</code>): Copia les classes de l'exercici anterior i modifícales.
+Afegeix nous mètodes que facin una representació de totes les propietats de les classes Persona i Empleat, de forma similar als realitzats en HTML, però sense que siguin estàtics, de manera que obtingui les dades mitjançant <code>$this</code>.</p>
+<p><code>function public __toString(): string</code></p>
+<div class="admonition tip">
+<p class="admonition-title"><em>Magic methods</em></p>
+<p>El mètode<code>__toString()</code> és un mètode màgic que s'invoca automàticament quan volem obtenir la representació en cadena d'un objecte.</p>
+</div>
+<p>✏️   EXERCICI 122 (<code>exercici122PersonaA.php</code>): Copia les classes de l'exercici anterior i modifícales.
+     Transforma <code>Persona</code> a una classe abstracta on el seu mètode estàtic <code>toHtml(Persona $p)</code> hagi de ser redefinit en tots els seus fills.</p>
+<p>✏️   EXERCICI 123 (<code>exercici123Treballador.php</code>): Copia les classes de l'exercici anterior i modifícales.</p>
+<ul>
+<li>Canvia l'estructura de classes conforme al gràfic respectant tots els mètodes que ja estan fets.</li>
+<li><code>Treballador</code> és una classe abstracta que ara emmagatzema els <code>telefons</code> i on <code>calcularSou</code> és un mètode abstracte de manera que:</li>
+<li>El sou d'un <code>Empleat</code> es calcula a partir de les hores treballades i el que cobra per hora.</li>
+<li>Per als <code>Gerent</code>s, el seu sou s'incrementa percentualment en base a la seva edat: <code>salari + salari*edat/100</code></li>
+</ul>
+<figure>
+   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/03/03p312.png" data-desc-position="bottom"><img src="../img/03/03p312.png"></a>
+   <figcaption>Exercici 123</figcaption>
+</figure>
+
+<p>✏️   EXERCICI 124 (<code>exercici124Empresa.php</code>): Utilitzant les classes dels exercicis anteriors:</p>
+<ul>
+<li>Crea una classe <code>Empresa</code> que a més del nom i la direcció, contingui una propietat amb un vector de <code>Treballador</code>, ja siguin <code>Empleat</code>s o <code>Gerent</code>s.</li>
+<li>Afegeix <em>getters/setters</em> per al nom i adreça.</li>
+<li>Afegeix mètodes per afegir i llistar els treballadors.</li>
+<li><code>public function afegirTreballador(Treballador $t)</code></li>
+<li><code>public function llistarTreballadorsHtml() : string</code> -&gt; utiliza <code>Treballador::toHtml(Persona $p)</code></li>
+<li>Afegeix un mètode per obtenir el cost total en nòmines.</li>
+<li><code>public function getCostNomines(): float</code> -&gt; recorre els treballadors i invoca el mètode 'calcularSou()'.</li>
+</ul>
+<p>✏️   EXERCICI 125 (<code>exercici125EmpresaI.php</code>): Copia les classes de l'exercici anterior i modifícales.</p>
+<ul>
+<li>Crea un interfície JSerialitzable, de manera que ofereixi els mètodes:</li>
+<li><code>toJSON(): string</code> → utilitza la funció <a href="https://www.php.net/manual/es/function.json-encode.php"><code>json_encode(mixed)</code></a>. Tingues en compte que com que tenim les propietats dels objectes privats, has de recórrer les propietats i col·locar-les en un mapa. Per exemple:</li>
+</ul>
+<p></p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos="2 "></span><span class="k">public</span> <span class="k">function</span> <span class="nf">toJSON</span><span class="p">()</span><span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$this</span> <span class="k">as</span> <span class="nv">$clau</span> <span class="o">=&gt;</span> <span class="nv">$valor</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="4 "></span>        <span class="nv">$mapa</span><span class="o">-&gt;</span><span class="nv">$clau</span> <span class="o">=</span> <span class="nv">$valor</span><span class="p">;</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="6 "></span>    <span class="k">return</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$mapa</span><span class="p">);</span>
+<span class="linenos" data-linenos="7 "></span><span class="p">}</span>
+<span class="linenos" data-linenos="8 "></span><span class="cp">?&gt;</span>
+</code></pre></div>
+* <code>toSerialize(): string</code> → utilitza la funció <a href="https://www.php.net/manual/es/function.serialize.php"><code>serialize(mixed)</code></a>
+* Modifica totes les classes que no són abstractes perquè implementin l'interfície creat.<p></p>
+<details class="info">
+<summary>Projecte Videoclub</summary>
+<p>En els següents exercicis simularem un petit projecte d'un Videoclub (basat en la proposta que fa el tutorial de desarrolloweb.com), el qual realitzarem mitjançant un desenvolupament incremental i seguint la pràctica de programació en parelles (<em>pair programming</em>).</p>
+<p>Abans de res, crea un repositori privat a GitHub i puja el projecte actual de <em>Videoclub</em>. Un cop creat, convida el teu company al repositori com a col·laborador.</p>
+<ul>
+<li>Inicialitza en local el teu repostori de git, mitjançant <code>git init</code></li>
+<li>Afegeix i puja els canvis al teu repositori, mitjançant <code>git add .</code> i després <code>git commit -m 'Inicialitzant projecte'.</code></li>
+<li>Connecta el teu repositori amb GitHub i puja els canvis (mira les instruccions de GitHub: ordres <code>git remote</code> y <code>git push</code>).</li>
+<li>El teu company haurà de descarregar el projecte amb les seves credencials.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Projecte no real</p>
+<p>El següent projecte està pensat des d'un punt de vista formatiu. Algunes de les decisions que es prenen no s'han de fer servir (com fer <code>echo</code>, dins de les classes) o provar el codi comparant el resultat al navegador.</p>
+</div>
+<p>Cada classe ha d'anar en un arxiu php separat. Per facilitar la seva implementació, es mostra l'estructura UML del model i un fragment de codi per provar les classes:</p>
+<p></p><figure style="float: right;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/03/03p320.png" data-desc-position="bottom"><img src="../img/03/03p320.png" width="150"></a>
+    <figcaption>Cream el soport</figcaption>
+</figure><p></p>
+<p>✏️   EXERCICI 126. Crea una classe per emmagatzemar suports (<code>Soport.php</code>). Aquesta classe serà la classe pare dels diferents suports amb els quals treballi el nostre videoclub (cintes de vídeo, videojocs, etc...):</p>
+<ul>
+<li>Crea el constructor que inicialitzi les seves propietats. Fixeu-vos que la classe no té mètodes <em>setters</em>.</li>
+<li>Definir una constant mitjançant una propietat privada i estàtica anomenada <code>IVA</code> amb un valor del 21%</li>
+<li>Crear un arxiu ('inici.php') per usar les classes i copia el següent fragment:</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Codi de prova</label><label for="__tabbed_1_2">Navegador</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos="2 "></span><span class="k">include</span> <span class="s2">"Soport.php"</span><span class="p">;</span>
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span><span class="nv">$soport1</span><span class="o">=</span><span class="k">new</span> <span class="nx">Soport</span><span class="p">(</span><span class="s2">"Tenet"</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+<span class="linenos" data-linenos="5 "></span><span class="k">echo</span> <span class="s2">"&lt;strong&gt;"</span> <span class="o">.</span> <span class="nv">$soport1</span><span class="o">-&gt;</span><span class="na">titol</span> <span class="o">.</span> <span class="s2">"&lt;/strong&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="6 "></span><span class="k">echo</span> <span class="s2">"&lt;br&gt;Preu: "</span> <span class="o">.</span> <span class="nv">$soport1</span><span class="o">-&gt;</span><span class="na">getPreu</span><span class="p">()</span> <span class="o">.</span> <span class="s2">" euros"</span><span class="p">;</span>
+<span class="linenos" data-linenos="7 "></span><span class="k">echo</span> <span class="s2">"&lt;br&gt;Preu IVA inclos: "</span> <span class="o">.</span> <span class="nv">$soport1</span><span class="o">-&gt;</span><span class="na">getPreuAmbIVA</span><span class="p">()</span> <span class="o">.</span> <span class="s2">" euros"</span><span class="p">;</span>
+<span class="linenos" data-linenos="8 "></span><span class="nv">$soport1</span><span class="o">-&gt;</span><span class="na">mostraResum</span><span class="p">();</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p></p><pre><strong>Tenet</strong>
+Preu: 3 euros
+Preu IVA inclos: 3.48 euros
+<em>Tenet</em>
+3 € (IVA no inclos)
+</pre><p></p>
+</div>
+</div>
+</div>
+<p></p><figure style="float: right;">
+     <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/03/03p321.png" data-desc-position="bottom"><img src="../img/03/03p321.png" width="150"></a>
+     <figcaption>Afegim cinta de video</figcaption>
+</figure><p></p>
+<p>✏️   EXERCICI 127. Crea la classe <code>CintaVideo</code> la qual hereta de <code>Soport</code>. Afegeix l'atribut <code>durada</code> sobreescriu tant el contructor com el mètode <code>mostraResum</code> (des de <code>CintaVideo</code> hauràs d'invocar al mètode <code>mostraResum</code> del pare).</p>
+<p>Afegeix a 'inici.php' el codi per provar la classe:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Codi de prova</label><label for="__tabbed_2_2">Navegador</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos="2 "></span><span class="k">include</span> <span class="s2">"CintaVideo.php"</span><span class="p">;</span>
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span><span class="nv">$laMevaCinta</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CintaVideo</span><span class="p">(</span><span class="s2">"Los cazafantasmas"</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mi">107</span><span class="p">);</span>
+<span class="linenos" data-linenos="5 "></span><span class="k">echo</span> <span class="s2">"&lt;strong&gt;"</span> <span class="o">.</span> <span class="nv">$laMevaCinta</span><span class="o">-&gt;</span><span class="na">titol</span> <span class="o">.</span> <span class="s2">"&lt;/strong&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="6 "></span><span class="k">echo</span> <span class="s2">"&lt;br&gt;Preu: "</span> <span class="o">.</span> <span class="nv">$laMevaCinta</span><span class="o">-&gt;</span><span class="na">getPreu</span><span class="p">()</span> <span class="o">.</span> <span class="s2">" euros"</span><span class="p">;</span>
+<span class="linenos" data-linenos="7 "></span><span class="k">echo</span> <span class="s2">"&lt;br&gt;Preu IVA inclos: "</span> <span class="o">.</span> <span class="nv">$laMevaCinta</span><span class="o">-&gt;</span><span class="na">getPreuAmbIVA</span> <span class="o">.</span> <span class="s2">" euros"</span><span class="p">;</span>
+<span class="linenos" data-linenos="8 "></span><span class="nv">$laMevaCinta</span><span class="o">-&gt;</span><span class="na">mostraResum</span><span class="p">();</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p></p><pre> <strong>Los cazafantasmas</strong>
+ Preu: 3.5 euros
+ Preu IVA inclos: 4.06 euros
+ Pel·Lícula en VHS:
+ <em>Los cazafantasmas</em>
+ 3.5 € (IVA no inclos)
+ Durada: 107 minutos
+ </pre><p></p>
+</div>
+</div>
+</div>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p></p><figure style="float: right;">
+     <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/03/03p322.png" data-desc-position="bottom"><img src="../img/03/03p322.png" width="150"></a>
+     <figcaption>Afegim DVD</figcaption>
+</figure><p></p>
+<p>✏️   EXERCICI 128. Crea la classe <code>DVD</code> la qual hereta de <code>Soport</code>. Afegeix els atributs <code>idiomes</code> i <code>formatPantalla</code>. A continuació sobreescriu tant el contructor com el mètode <code>mostraResum</code>.</p>
+<p>Afegeix a 'inici.php' el codi per provar la classe:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Codi de prova</label><label for="__tabbed_3_2">Navegador</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos="2 "></span><span class="k">include</span> <span class="s2">"Dvd.php"</span><span class="p">;</span>
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span><span class="nv">$elMeuDvd</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Dvd</span><span class="p">(</span><span class="s2">"Origen"</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s2">"es,en,fr"</span><span class="p">,</span> <span class="s2">"16:9"</span><span class="p">);</span>
+<span class="linenos" data-linenos="5 "></span><span class="k">echo</span> <span class="s2">"&lt;strong&gt;"</span> <span class="o">.</span> <span class="nv">$elMeuDvd</span><span class="o">-&gt;</span><span class="na">titol</span> <span class="o">.</span> <span class="s2">"&lt;/strong&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="6 "></span><span class="k">echo</span> <span class="s2">"&lt;br&gt;Preu: "</span> <span class="o">.</span> <span class="nv">$elMeuDvd</span><span class="o">-&gt;</span><span class="na">getPreu</span><span class="p">()</span> <span class="o">.</span> <span class="s2">" euros"</span><span class="p">;</span>
+<span class="linenos" data-linenos="7 "></span><span class="k">echo</span> <span class="s2">"&lt;br&gt;Preu IVA inclos: "</span> <span class="o">.</span> <span class="nv">$elMeuDvd</span><span class="o">-&gt;</span><span class="na">getPreuAmbIVA</span> <span class="o">.</span> <span class="s2">" euros"</span><span class="p">;</span>
+<span class="linenos" data-linenos="8 "></span><span class="nv">$elMeuDvd</span><span class="o">-&gt;</span><span class="na">mostraResum</span><span class="p">();</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p></p><pre><strong>Origen</strong>
+Preu: 15 euros
+Preu IVA inclos: 17.4 euros
+Pel·Lícula en DVD:
+<em>Origen</em>
+15 € (IVA no inclos)
+Idiomes:es,en,fr
+Format Pantalla:16:9
+</pre><p></p>
+</div>
+</div>
+</div>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p></p><figure style="float: right;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/03/03p323.png" data-desc-position="bottom"><img src="../img/03/03p323.png" width="250"></a>
+    <figcaption>Afegim Joc</figcaption>
+</figure><p></p>
+<p>✏️   EXERCICI 129. Crea la classe <code>Joc</code> la qual hereta de <code>Soport</code>. Afegeix els atributs <code>consola</code>, <code>minNumJugadors</code> y <code>maxNumJugadors</code>. A continuació afegeix el mètode <code>mostraJugadorsPossibles</code>, el qual ha de mostrar <em>Per a un jugador</em>, <em>Per a X jugadors</em> o <em>De X a Y jugadors</em> depenent dels valors de les atributs creats. Finalment, sobreescriu tant el contructor com el mètode <code>mostraResum</code>.</p>
+<p>Afegeix a 'inici.php' el codi per provar la classe:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Codi de prova</label><label for="__tabbed_4_2">Navegador</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos="2 "></span><span class="k">include</span> <span class="s2">"Joc.php"</span><span class="p">;</span>
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span><span class="nv">$elMeuJoc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Joc</span><span class="p">(</span><span class="s2">"The Last of Us Part II"</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mf">49.99</span><span class="p">,</span> <span class="s2">"PS4"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="linenos" data-linenos="5 "></span><span class="k">echo</span> <span class="s2">"&lt;strong&gt;"</span> <span class="o">.</span> <span class="nv">$elMeuJoc</span><span class="o">-&gt;</span><span class="na">titol</span> <span class="o">.</span> <span class="s2">"&lt;/strong&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="6 "></span><span class="k">echo</span> <span class="s2">"&lt;br&gt;Preu: "</span> <span class="o">.</span> <span class="nv">$elMeuJoc</span><span class="o">-&gt;</span><span class="na">getPreu</span><span class="p">()</span> <span class="o">.</span> <span class="s2">" euros"</span><span class="p">;</span>
+<span class="linenos" data-linenos="7 "></span><span class="k">echo</span> <span class="s2">"&lt;br&gt;Preu IVA inclos: "</span> <span class="o">.</span> <span class="nv">$elMeuJoc</span><span class="o">-&gt;</span><span class="na">getPreuAmbIVA</span> <span class="o">.</span> <span class="s2">" euros"</span><span class="p">;</span>
+<span class="linenos" data-linenos="8 "></span><span class="nv">$elMeuJoc</span><span class="o">-&gt;</span><span class="na">mostraResum</span><span class="p">();</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p></p><pre><strong>The Last of Us Part II</strong>
+Preu: 49.99 euros
+Preu IVA inclos: 57.9884 euros
+Joc per: PS4
+<em>The Last of Us Part II</em>
+49.99 € (IVA no inclos)
+Per un jugador
+</pre><p></p>
+</div>
+</div>
+</div>
+<p>Arribats a aquest punt, el nostre model és similar al següent diagrama:</p>
+<p></p><figure>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/03/03videoclub1.png" data-desc-position="bottom"><img src="../img/03/03videoclub1.png" width="600"></a>
+    <figcaption>Model inicial de Videoclub</figcaption>
+</figure><p></p>
+<p></p><figure style="float: right;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/03/03p324.png" data-desc-position="bottom"><img src="../img/03/03p324.png" width="150"></a>
+    <figcaption>Afegim Client</figcaption>
+</figure><p></p>
+<p>✏️   EXERCICI 130. Crear la classe <code>Client</code>. El constructor rebrà el <code>nom</code>, <code>numero</code> y <code>maxLloguerConcurrent</code>, aquest últim podent ser opcional i prenent com a valor per defecte 3. Després d'això, afegeix <em>getter/setter</em> únicament a <code>numero</code>, i un <em>getter</em> a <code>numSoportsLlogats</code> (aquest camp ha d'emmagatzemar un comptador del total de lloguers que ha realitzat). La matriu de soports llogats contindrà classes que heretin de <code>Soport</code>. Finalment, afegeix el mètode <code>mostraResum</code> que mostri el nom i la quantitat de lloguers (tamany de la matriu <code>soportsLlogats</code>).</p>
+<p>✏️   EXERCICI 131. Dins de <code>Client</code>, afegeix les operacions següents:</p>
+<ul>
+<li><code>teLlogat(Soport $s): bool</code> → Recorre el vector de soports i comprova si hi ha el soport</li>
+<li><code>llogar(Soport $s): bool</code> -→ Ha de comprovar si el soport està llogat i si no ha superat la quota de lloguers. En llogar, incrementarà el <code>numSoportsLlogats</code> i emmagatzemarà el soport al vector. Per cada cas ha de mostrar un missatge informant de l'ocorregut.</li>
+</ul>
+<p>✏️   EXERCICI 132. Seguim amb <code>Client</code> per afegir les operacions:</p>
+<ul>
+<li><code>tornar(int $numSoport): bool</code> → Ha de comprovar que el soport estava llogat i actualitzar la quantitat de soports llogats. Per cada cas ha de mostrar un missatge informant de l'ocorregut</li>
+<li><code>llistarLloguers(): void</code> → Informa de quants lloguers té el client i els mostra.</li>
+</ul>
+<p>Crea l'arxiu <code>inici2.php</code> amb el següent codi font per provar la classe:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Codi de prova</label><label for="__tabbed_5_2">Navegador</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">include_once</span> <span class="s2">"CintaVideo.php"</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="k">include_once</span> <span class="s2">"Dvd.php"</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="k">include_once</span> <span class="s2">"Joc.php"</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="k">include_once</span> <span class="s2">"Client.php"</span><span class="p">;</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span><span class="c1">//instanciam un parell d'objectes client</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="nv">$client1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">(</span><span class="s2">"Bruce Wayne"</span><span class="p">,</span> <span class="mi">23</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="nv">$client2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">(</span><span class="s2">"Clark Kent"</span><span class="p">,</span> <span class="mi">33</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="c1">//mostrem el número de cada client creat</span>
+<span class="linenos" data-linenos="12 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;L'identificador del client 1 és: "</span> <span class="o">.</span> <span class="nv">$client1</span><span class="o">-&gt;</span><span class="na">getNumero</span><span class="p">();</span>
+<span class="linenos" data-linenos="13 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;L'identificador del client 2 és: "</span> <span class="o">.</span> <span class="nv">$client2</span><span class="o">-&gt;</span><span class="na">getNumero</span><span class="p">();</span>
+<span class="linenos" data-linenos="14 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="15 "></span><span class="c1">//instancio alguns soports</span>
+<span class="linenos" data-linenos="16 "></span><span class="nv">$soport1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CintaVideo</span><span class="p">(</span><span class="s2">"Los cazafantasmas"</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mi">107</span><span class="p">);</span>
+<span class="linenos" data-linenos="17 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="18 "></span><span class="nv">$soport2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Joc</span><span class="p">(</span><span class="s2">"The Last of Us Part II"</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mf">49.99</span><span class="p">,</span> <span class="s2">"PS4"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="linenos" data-linenos="19 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="20 "></span><span class="nv">$soport3</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Dvd</span><span class="p">(</span><span class="s2">"Origen"</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s2">"es,en,fr"</span><span class="p">,</span> <span class="s2">"16:9"</span><span class="p">);</span>
+<span class="linenos" data-linenos="21 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="22 "></span><span class="nv">$soport4</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Dvd</span><span class="p">(</span><span class="s2">"El Imperio Contraataca"</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">"es,en"</span><span class="p">,</span><span class="s2">"16:9"</span><span class="p">);</span>
+<span class="linenos" data-linenos="23 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="24 "></span><span class="c1">//Llog alguns soports</span>
+<span class="linenos" data-linenos="25 "></span><span class="nv">$client1</span><span class="o">-&gt;</span><span class="na">llogar</span><span class="p">(</span><span class="nv">$soport1</span><span class="p">);</span>
+<span class="linenos" data-linenos="26 "></span><span class="nv">$client1</span><span class="o">-&gt;</span><span class="na">llogar</span><span class="p">(</span><span class="nv">$soport2</span><span class="p">);</span>
+<span class="linenos" data-linenos="27 "></span><span class="nv">$client1</span><span class="o">-&gt;</span><span class="na">llogar</span><span class="p">(</span><span class="nv">$soport3</span><span class="p">);</span>
+<span class="linenos" data-linenos="28 "></span>
+<span class="linenos" data-linenos="29 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="30 "></span><span class="c1">//vaig intentar llogar de nou un soport que ja té llogat</span>
+<span class="linenos" data-linenos="31 "></span><span class="nv">$client1</span><span class="o">-&gt;</span><span class="na">llogar</span><span class="p">(</span><span class="nv">$soport1</span><span class="p">);</span>
+<span class="linenos" data-linenos="32 "></span>
+<span class="linenos" data-linenos="33 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="34 "></span><span class="c1">//el client té 3 soports de lloguer com a màxim</span>
+<span class="linenos" data-linenos="35 "></span><span class="c1">//aquest soport no el pot llogar</span>
+<span class="linenos" data-linenos="36 "></span><span class="nv">$client1</span><span class="o">-&gt;</span><span class="na">llogar</span><span class="p">(</span><span class="nv">$soport4</span><span class="p">);</span>
+<span class="linenos" data-linenos="37 "></span>
+<span class="linenos" data-linenos="38 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="39 "></span><span class="c1">//aquest soport no el té llogat</span>
+<span class="linenos" data-linenos="40 "></span><span class="nv">$client1</span><span class="o">-&gt;</span><span class="na">tornar</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="linenos" data-linenos="41 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="42 "></span><span class="c1">//torna un soport que sí que té llogat</span>
+<span class="linenos" data-linenos="43 "></span><span class="nv">$client1</span><span class="o">-&gt;</span><span class="na">tornar</span><span class="p">(</span><span class="mi">26</span><span class="p">);</span>
+<span class="linenos" data-linenos="44 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="45 "></span><span class="c1">//llog un altre soport</span>
+<span class="linenos" data-linenos="46 "></span><span class="nv">$client1</span><span class="o">-&gt;</span><span class="na">llogar</span><span class="p">(</span><span class="nv">$soport4</span><span class="p">);</span>
+<span class="linenos" data-linenos="47 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="48 "></span><span class="c1">//faig un llistat dels elements llogats</span>
+<span class="linenos" data-linenos="49 "></span><span class="nv">$client1</span><span class="o">-&gt;</span><span class="na">llistaLlogers</span><span class="p">();</span>
+<span class="linenos" data-linenos="50 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="51 "></span><span class="c1">//aquest client no té lloguers</span>
+<span class="linenos" data-linenos="52 "></span><span class="nv">$client2</span><span class="o">-&gt;</span><span class="na">tornar</span><span class="p">(</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p></p><pre>L'identificador del client 1 és: 23
+L'identificador del client 2 és: 33<p></p>
+<p>Pel·lícula en VHS Los cazafantasmas
+3.5 € (IVA no inclos)
+Durada: 107 minuts</p>
+<p>Joc per PS4: The Last of Us Part II
+49.99 € (IVA no inclos)
+Per a 1 jugador</p>
+<p>Pel·lícula en DVD Origen
+15 € (IVA no inclos)
+Idiomes: es,en,fr
+Format Pantalla: 16:9</p>
+<p>Pel·lícula en DVD El Imperio Contraataca
+3 € (IVA no inclos)
+Idiomes: es,en
+Format Pantalla: 16:9</p>
+<p>Llogat correctament: Los cazafantasmas a client: Bruce Wayne
+Llogat correctament: The Last of Us Part II a client: Bruce Wayne
+Llogat correctament: Origen a client: Bruce Wayne</p>
+<p>Ja tens aquest suport "Los cazafantasmas" llogat.</p>
+<p>Has arribat al màxim de lloguers.</p>
+<p>No tens aquest suport llogat.</p>
+<p>"The Last of Us Part II" Suport retornat correctament.</p>
+<p>Llogat correctament: El Imperio Contraataca a client: Bruce Wayne</p>
+<p>Bruce Wayne té 3 lloguers:
+Pel·lícula en VHS Los cazafantasmas
+3.5 € (IVA no inclos)
+Durada: 107 minuts</p>
+<hr>
+<p>Pel·lícula en DVD Origen
+15 € (IVA no inclos)
+Idiomes: es,en,fr
+Format Pantalla: 16:9</p>
+<hr>
+<p>Pel·lícula en DVD El Imperio Contraataca
+3 € (IVA no inclos)
+Idiomes: es,en
+Format Pantalla: 16:9</p>
+<hr>
+<p>No tens aquest suport llogat.
+</p></pre><p></p>
+</div>
+</div>
+</div>
+<p>✏️   EXERCICI 132. Arribat a aquest punt, anam a relacionar els clients i els soports mitjançant la classe <code>Videoclub</code>. Així doncs crea la classe que representa el gràfic, tenint en compte que:</p>
+<ul>
+<li><code>products</code> és un array de <code>Soport</code></li>
+<li><code>socis</code> és un array de <code>Client</code></li>
+<li>Els mètodes públics d'incloure algun soport, crearan la classe i cridaran al mètode privat de <code>incloureProducte</code>, el qual és l'encarregat d'introduir-lo dins el vector.</li>
+</ul>
+<p>El model complet es semblarà a això:</p>
+<p></p><figure>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/03/03videoclub2.png" data-desc-position="bottom"><img src="../img/03/03videoclub2.png" width="800"></a>
+    <figcaption>Model complet de Videoclub</figcaption>
+</figure><p></p>
+<p>I per provar el projecte, dins <code>inici3.php</code> col·locarem:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">Codi de prova</label><label for="__tabbed_6_2">Navegador</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">include_once</span> <span class="s2">"Videoclub.php"</span><span class="p">;</span> <span class="c1">// No incloem res més</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="nv">$vc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Videoclub</span><span class="p">(</span><span class="s2">"Cas Concos 45 baixos"</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="c1">//inclouré uns quants soports de prova</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="nv">$vc</span><span class="o">-&gt;</span><span class="na">incloureJoc</span><span class="p">(</span><span class="s2">"God of War"</span><span class="p">,</span> <span class="mf">19.99</span><span class="p">,</span> <span class="s2">"PS4"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="nv">$vc</span><span class="o">-&gt;</span><span class="na">incloureJoc</span><span class="p">(</span><span class="s2">"The Last of Us Part II"</span><span class="p">,</span> <span class="mf">49.99</span><span class="p">,</span> <span class="s2">"PS4"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="nv">$vc</span><span class="o">-&gt;</span><span class="na">incloureDvd</span><span class="p">(</span><span class="s2">"Torrente"</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="s2">"es"</span><span class="p">,</span><span class="s2">"16:9"</span><span class="p">);</span>
+<span class="linenos" data-linenos="10 "></span><span class="nv">$vc</span><span class="o">-&gt;</span><span class="na">incloureDvd</span><span class="p">(</span><span class="s2">"Origen"</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="s2">"es,en,fr"</span><span class="p">,</span> <span class="s2">"16:9"</span><span class="p">);</span>
+<span class="linenos" data-linenos="11 "></span><span class="nv">$vc</span><span class="o">-&gt;</span><span class="na">incloureDvd</span><span class="p">(</span><span class="s2">"El Imperio Contraataca"</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">"es,en"</span><span class="p">,</span><span class="s2">"16:9"</span><span class="p">);</span>
+<span class="linenos" data-linenos="12 "></span><span class="nv">$vc</span><span class="o">-&gt;</span><span class="na">incloureCintaVideo</span><span class="p">(</span><span class="s2">"Los cazafantasmas"</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mi">107</span><span class="p">);</span>
+<span class="linenos" data-linenos="13 "></span><span class="nv">$vc</span><span class="o">-&gt;</span><span class="na">incloureCintaVideo</span><span class="p">(</span><span class="s2">"El nombre de la Rosa"</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">140</span><span class="p">);</span>
+<span class="linenos" data-linenos="14 "></span>
+<span class="linenos" data-linenos="15 "></span><span class="c1">//llist els productes</span>
+<span class="linenos" data-linenos="16 "></span><span class="nv">$vc</span><span class="o">-&gt;</span><span class="na">llistarProductes</span><span class="p">();</span>
+<span class="linenos" data-linenos="17 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="18 "></span><span class="c1">//crearé alguns socis</span>
+<span class="linenos" data-linenos="19 "></span><span class="nv">$vc</span><span class="o">-&gt;</span><span class="na">incloureSoci</span><span class="p">(</span><span class="s2">"Tofol Verdera"</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+<span class="linenos" data-linenos="20 "></span><span class="nv">$vc</span><span class="o">-&gt;</span><span class="na">incloureSoci</span><span class="p">(</span><span class="s2">"Biel Calafell"</span><span class="p">);</span>
+<span class="linenos" data-linenos="21 "></span><span class="k">echo</span> <span class="s2">"&lt;/br&gt;"</span><span class="p">;</span>
+<span class="linenos" data-linenos="22 "></span><span class="nv">$vc</span><span class="o">-&gt;</span><span class="na">llogarSociProducte</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="linenos" data-linenos="23 "></span><span class="nv">$vc</span><span class="o">-&gt;</span><span class="na">llogarSociProducte</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="linenos" data-linenos="24 "></span><span class="c1">// llogar una altra vegada el soport 2 al soci 1.</span>
+<span class="linenos" data-linenos="25 "></span><span class="c1">// no ha de deixar-me perquè ja el té llogat</span>
+<span class="linenos" data-linenos="26 "></span><span class="nv">$vc</span><span class="o">-&gt;</span><span class="na">llogarSociProducte</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="linenos" data-linenos="27 "></span><span class="c1">// llogar el soport 6 al soci 1.</span>
+<span class="linenos" data-linenos="28 "></span><span class="c1">// no es pot perquè el soci 1 té 2 lloguers com a màxim</span>
+<span class="linenos" data-linenos="29 "></span><span class="nv">$vc</span><span class="o">-&gt;</span><span class="na">llogarSociProducte</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span>
+<span class="linenos" data-linenos="30 "></span>
+<span class="linenos" data-linenos="31 "></span><span class="c1">// llist els socis</span>
+<span class="linenos" data-linenos="32 "></span><span class="nv">$vc</span><span class="o">-&gt;</span><span class="na">llistarSocis</span><span class="p">();</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p></p><pre>Joc per PS4: God of War
+19.99 € (IVA no inclos)
+Per a 1 jugador
+======
+Inclòs soport 1
+======
+Joc per PS4: The Last of Us Part II
+49.99 € (IVA no inclos)
+Per a 1 jugador
+======
+Inclòs soport 2
+======
+Pel·lícula en DVD Torrente
+4.5 € (IVA no inclos)
+Idiomes: es
+Format Pantalla: 16:9
+======
+Inclòs soport 3
+======
+Pel·lícula en DVD Origen
+4.5 € (IVA no inclos)
+Idiomes: es,en,fr
+Format Pantalla: 16:9
+======
+Inclòs soport 4
+======
+Pel·lícula en DVD El Imperio Contraataca
+3 € (IVA no inclos)
+Idiomes: es,en
+Format Pantalla: 16:9
+======
+Inclòs soport 5
+======
+Pel·lícula en VHS Los cazafantasmas
+3.5 € (IVA no inclos)
+Durada: 107 minuts
+======
+Inclòs soport 6
+======
+Pel·lícula en VHS El nombre de la Rosa
+1.5 € (IVA no inclos)
+Durada: 140 minuts
+======
+Inclòs soport 7
+======
+Llista de productes
+7 productes disponibles<p></p>
+<p>Joc per PS4: God of War
+19.99 € (IVA no inclos)
+Per a 1 jugador
+Joc per PS4: The Last of Us Part II
+49.99 € (IVA no inclos)
+Per a 1 jugador
+Pel·lícula en DVD Torrente
+4.5 € (IVA no inclos)
+Idiomes: es
+Format Pantalla: 16:9
+Pel·lícula en DVD Origen
+4.5 € (IVA no inclos)
+Idiomes: es,en,fr
+Format Pantalla: 16:9
+Pel·lícula en DVD El Imperio Contraataca
+3 € (IVA no inclos)
+Idiomes: es,en
+Format Pantalla: 16:9
+Pel·lícula en VHS Los cazafantasmas
+3.5 € (IVA no inclos)
+Durada: 107 minuts
+Pel·lícula en VHS El nombre de la Rosa
+1.5 € (IVA no inclos)
+Durada: 140 minuts</p>
+<p>======
+Inclòs soci Tofol Verdera amb número 1
+======
+======
+Inclòs soci Biel Calafell amb número 2
+======</p>
+<p>Llogat correctament: The Last of Us Part II a client: Tofol Verdera
+Llogat correctament: Torrente a client: Tofol Verdera
+Ja tens aquest suport "The Last of Us Part II" llogat.
+Has arribat al màxim de lloguers.
+Llista de socis</p>
+<p>Client Tofol Verdera amb 2 lloguers.
+Client Biel Calafell amb 0 lloguers.
+</p></pre><p></p>
+</div>
+</div>
+</div>
+<p>✏️   EXERCICI 133. Transforma <code>Soport</code> a una classe abstracta i comprova que tot continua funcionant. Què aconseguim en fer-la abstracta?</p>
+<p>✏️   EXERCICI 134. Crea un interfície <code>Resumible</code>, de manera que les classes que l'implementin han d'oferir el mètode <code>mostraResum()</code>. Modifica la classe <code>Soport</code> i fes que implementi l'interfície. Fa falta que també l'implementin els fills?</p>
+</details>
+<div id="seccio-protegida" style="display:none;">
+??? info "Projecte Videoclub 2.0"
+
+     Antes de comenzar con la segunda parte del videoclub, crea una etiqueta mediante `git tag` con el nombre `v0.329` y sube los cambios a GitHub.
+
+     330. Modifica las operaciones de llogar, tanto en `Cliente` como en `Videoclub`, per dar soport al encadenamiento de métodos.
+     Posteriormente, modifica el codi de prova per utilizar esta técnica.
+     331. Haciendo uso de *namespaces*:
+          * Coloca todas las clases/interfaces en `Dwes\ProyectoVideoclub`
+          * Cada clase debe hacer `include_once` de los recursos que emplea
+          * Coloca el/los archivos de prueba en el raíz (sin espacio de nombres)
+          * Desde el archivo de pruebas, utiliza `use` per poder realizar accesos sin cualificar
+          * Etiqueta los cambios como `v0.331`.
+     332. Reorganiza las carpeta tal como hemos visto en los apuntes: `app`, `test` y `vendor`.
+          * Crea un fichero `autoload.php` per registrar la ruta donde encontrar las clases
+          * Modifica todo el código necesario, incluyendo `autoload.php` donde sea necesario y borrando los *includes* previos.
+     333. A continuación vamos a crear un conjunto de excepciones de aplicación. Estas excepciones son simples, no necesitan sobreescribir ningún método. Así pues, crea la excepción de aplicación `VideoclubException` en el *namespace* `Dwes\ProyectoVideoclub\Util`.
+          Posteriormente crea los siguientes hijos (deben heredar de `VideoclubException`), cada uno en su propio archivo:
+          * `SoportYaAlquiladoException`
+          * `CupoSuperadoException`
+          * `SoportNoEncontradoException`
+          * `ClienteNoEncontradoException`
+     334. En `Cliente`, modifica los métodos `llogar` y `tornar`, per que hagan uso de las nuevas excepciones (lanzándolas cuando sea necesario) y funcionen como métodos encadenados. Destacar que estos métodos, no se capturar estás excepciones, sólo se lanzan.
+          En `Videoclub`, modifica `llogarSocioPelicula` per capturar todas las excepciones que ahora lanza `Cliente` e informar al usuario en consecuencia.
+     335. Vamos a modificar el proyecto per que el videoclub sepa qué productos están o no alquilados:
+          * En `Soport`, crea una propiedad pública cuyo nombre sea `alquilado` que inicialmente estará a `false`. Cuando se alquile, se pondrá a `true`. Al tornar, la volveremos a poner a `false`.
+          * En `Videoclub`, crea dos nuevas propiedades y sus getters:
+          * `numProductosAlquilados`
+          * `numTotalAlquileres`
+     336. Crea un nuevo método en `Videoclub` llamado `llogarSocioProductos(int numSocio, array numerosProductos)`, el cual debe recibir un array con los productos a llogar.Antes de llogar-los, debe comprobar que todos los soports estén disponibles, de manera que si uno no lo está, no se le alquile ninguno.
+     337. Crea dos nuevos métodos en `Videoclub`, y mediante la definición, deduce qué deben realizar:
+          * `tornarSocioProducto(int numSocio, int numeroProducto)`
+          * `tornarSocioProductos(int numSocio, array numerosProductos)`
+
+    Deben soportar el encadenamiento de métodos.
+    Recuerda actualizar la propiedad`alquilado` de los diferentes soports.
+
+     Cuando hayas realizado todos los ejercicios, crea una etiqueta mediante `git tag` con el nombre `v0.337` y sube los cambios a GitHub.
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Darrera actualització">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">13 d’octubre de 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025 Xavier Sastre - Llicencia CC BY-NC-SA <a href="#__consent">Canvia configuració de les galetes</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+
+
+
+
+
+<h4>Consentiment ús galetes</h4>
+<p>Utilitzem galetes per reconèixer les vostres visites, així com mesurar l'eficàcia de la nostra documentació i si els usuaris troben allò que estan buscant. Amb el teu consentiment, ens ajudes a millorar la nostra documentació.</p>
+<input class="md-toggle" type="checkbox" id="__settings">
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+          
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accepta</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Rebutja</button>
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestiona la configuració</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "toc.integrate", "content.tabs.link", "content.tooltips", "content.code.select", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../assets/extra.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
