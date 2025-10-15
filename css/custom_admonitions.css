@@ -1,0 +1,28 @@
+.admonition.motivacio-especial {
+    background-color: #ffeb3b; /* groc fort per destacar */
+    border-left: 8px solid #fbc02d; /* una vora gruixuda i color fort */
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(251, 192, 45, 0.5);
+    color: #333;
+}
+.admonition.motivacio-especial > p.admonition-title::before {
+    display: none; /* Amaga la icona */
+}
+
+.admonition.custom-motivation > md-typeset .admonition-title,
+.admonition.custom-motivation > md-typeset summary {
+    background-color: #448aff1a; /* fons suau blau */
+    border: none;
+    font-weight: 700;
+    margin: 0 -.6rem;
+    padding: .4rem 0;
+    position: relative;
+    font-size: 3em; /* posa la mida que prefereixis */
+    color: #0d47a1; /* blau fosc notable */
+    font-family: 'Arial Black', Gadget, sans-serif;
+}
+
+
+

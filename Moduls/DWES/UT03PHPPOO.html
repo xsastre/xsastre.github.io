@@ -49,6 +49,8 @@
     
       <link rel="stylesheet" href="../../css/neoteroi-mkdocs.css">
     
+      <link rel="stylesheet" href="../../css/custom_admonitions.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -918,6 +920,21 @@
       Classes estàtiques
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Classes estàtiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#particularitats-de-les-classes-estatiques-en-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      Particularitats de les classes estàtiques en PHP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2260,11 +2277,31 @@ Així doncs, com a exemple, codificaríem una persona al fitxer <code>Persona.ph
 </code></pre></div>
 </div>
 <h2 id="classes-estatiques">Classes estàtiques<a class="headerlink" href="#classes-estatiques" title="Permanent link">¶</a></h2>
-<p>Són aquelles que tenen propietats i/o mètodes estàtics (també es coneixen com <em>de classe</em>, perquè el seu valor es comparteix entre totes les instàncies de la mateixa classe).</p>
-<p>Es declaren amb <code>static</code> i es referencia amb <code>::</code>.</p>
+<p>Una classe estàtica en PHP és una classe que no necessita ser instanciada per utilitzar els seus mètodes o propietats. Tota la funcionalitat d’aquest tipus de classe s’accedeix directament a través del nom de la classe, utilitzant l'operador de resolució d’àmbit ::. Les classes estàtiques serveixen per a crear mètodes i propietats que són comuns a totes les instàncies i que, per tant, no depenen d’un objecte específic.</p>
+<h3 id="particularitats-de-les-classes-estatiques-en-php">Particularitats de les classes estàtiques en PHP<a class="headerlink" href="#particularitats-de-les-classes-estatiques-en-php" title="Permanent link">¶</a></h3>
 <ul>
-<li>Si volem accedir a un mètode estàtic, s'anteposa el nom de la classe: <code>Producte::nouProducte()</code>.</li>
+<li>Mètodes i propietats estàtiques: S’han de declarar amb la paraula clau static.</li>
+<li>Accés a membres estàtics: Es fa mitjançant el nom de la classe, seguit de l’operador :: i el nom del membre estàtic. Per exemple: Classe::metodeEstatic().</li>
+<li>No necessiten instanciar-se: No cal crear un objecte de la classe per a utilitzar els seus membres estàtics, cosa que fa la seva utilitat en funcionalitats que no requereixen informació d’un objecte en concret.</li>
+<li>Limitacions: Un mètode estàtic no pot accedir a les propietats ni a methods no estàtics directament, ja que aquestes requereixen una instància de la classe per ser accedides.​</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Exemples pràctics</p>
+</div>
+<ul>
+<li>Una funció que calcula un valor i que és útil des de qualsevol lloc sense necessitat d’instanciar, com una calculadora o utilitat general.</li>
+<li>Comptadors globals que comparteixen una variable entre totes les instàncies, com en el cas de comptar quantes vegades s’ha cridat un mètode.</li>
+</ul>
+<p>En resum les classes estàtiques són útils quan es tracta de grups de funcions o dades que són globals per a tota la aplicació, no associades a un objecte concret. Tot i això, s’han d’utilitzar amb prudència, ja que poden complicar el manteniment del codi si s’abusa d’elles.
+Es declaren amb <code>static</code> i es referencia amb <code>::</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">Recordau!</p>
+</div>
+<ul>
+<li>Si volem accedir a un mètode estàtic, s'anteposa el nom de la classe: <code>Producte::nouProducte()</code>.<ul>
 <li>Si des d'un mètode volem accedir a una propietat estàtica de la mateixa classe, s'utilitza la referència <code>self</code>: <code>self::$numProductes</code></li>
+</ul>
+</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
 <span class="linenos" data-linenos=" 2 "></span>
@@ -2969,7 +3006,7 @@ Així doncs, com a exemple, codificaríem una persona al fitxer <code>Persona.ph
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">13 d’octubre de 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 d’octubre de 2025</span>
   </span>
 
     
