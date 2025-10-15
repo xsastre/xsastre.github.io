@@ -2287,22 +2287,20 @@ Així doncs, com a exemple, codificaríem una persona al fitxer <code>Persona.ph
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Exemples pràctics</p>
-</div>
 <ul>
 <li>Una funció que calcula un valor i que és útil des de qualsevol lloc sense necessitat d’instanciar, com una calculadora o utilitat general.</li>
 <li>Comptadors globals que comparteixen una variable entre totes les instàncies, com en el cas de comptar quantes vegades s’ha cridat un mètode.</li>
 </ul>
+</div>
 <p>En resum les classes estàtiques són útils quan es tracta de grups de funcions o dades que són globals per a tota la aplicació, no associades a un objecte concret. Tot i això, s’han d’utilitzar amb prudència, ja que poden complicar el manteniment del codi si s’abusa d’elles.
 Es declaren amb <code>static</code> i es referencia amb <code>::</code>.</p>
 <div class="admonition info">
 <p class="admonition-title">Recordau!</p>
-</div>
 <ul>
-<li>Si volem accedir a un mètode estàtic, s'anteposa el nom de la classe: <code>Producte::nouProducte()</code>.<ul>
+<li>Si volem accedir a un mètode estàtic, s'anteposa el nom de la classe: <code>Producte::nouProducte()</code>.</li>
 <li>Si des d'un mètode volem accedir a una propietat estàtica de la mateixa classe, s'utilitza la referència <code>self</code>: <code>self::$numProductes</code></li>
 </ul>
-</li>
-</ul>
+</div>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cp">&lt;?php</span>
 <span class="linenos" data-linenos=" 2 "></span>
 <span class="linenos" data-linenos=" 3 "></span><span class="k">class</span> <span class="nc">Producte</span> <span class="p">{</span>
