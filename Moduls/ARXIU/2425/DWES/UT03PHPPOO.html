@@ -1016,11 +1016,138 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../DWEC/UT02.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DWEC/presentacions/DWECUT2/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diapositives unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../DWEC/exercicisisolucions/UT02Exercicis.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Exercicis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT03 Model d’objectes predefinits a JavaScript.
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            UT03 Model d’objectes predefinits a JavaScript.
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DWEC/UT03.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DWEC/presentacions/DWECUT3/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diapositives unitat
   </span>
   
 
@@ -1783,7 +1910,7 @@
 <p>Todas las clases empiezan por letra mayúscula.</p>
 </div>
 <p>Cuando un proyecto crece, es normal modelar las clases mediante UML (¿recordáis <em>Entornos de Desarrollo</em>?). La clases se representan mediante un cuadrado, separando el nombre, de las propiedades y los métodos:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/uml.png" data-desc-position="bottom"><img alt="UML" src="img/uml.png" width="500"></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="img/uml.png"><img alt="UML" src="img/uml.png" width="500"></a></p>
 <p>Una vez que hemos creado un objeto, se utiliza el operador <code>-&gt;</code> para acceder a una propiedad o un método:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="x">$objeto-&gt;propiedad;</span>
 <span class="linenos" data-linenos="2 "></span><span class="x">$objeto-&gt;método(parámetros);</span>
@@ -2340,10 +2467,9 @@ Una clase abstracta puede contener propiedades y métodos no-abstractos, y/o mé
 <h3 id="organizacion">Organización<a class="headerlink" href="#organizacion" title="Permanent link">¶</a></h3>
 <p>Todo proyecto, conforme crece, necesita organizar su código fuente. Se plantea una organización en la que los archivos que interactuan con el navegador se colocan en el raíz, y las clases que definamos van dentro de un namespace (y dentro de su propia carpeta <code>src</code> o <code>app</code>).</p>
 <figure>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/03organizacion.png" data-desc-position="bottom"><img src="img/03organizacion.png"></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="img/03organizacion.png"><img src="img/03organizacion.png"></a>
 <figcaption>Organización del código fuente</figcaption>
 </figure>
-
 <div class="admonition tip">
 <p class="admonition-title">Organización, includes y usos</p>
 <ul>
@@ -2369,10 +2495,9 @@ Una clase abstracta puede contener propiedades y métodos no-abstractos, y/o mé
 </div>
 <p>Y ¿cómo organizamos ahora nuestro código aprovechando el <em>autoload</em>?</p>
 <figure style="float: right;">
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/03autoload.png" data-desc-position="bottom"><img src="img/03autoload.png" width="600"></a>
-    <figcaption>Organización con autoload</figcaption>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="img/03autoload.png"><img src="img/03autoload.png" width="600"></a>
+<figcaption>Organización con autoload</figcaption>
 </figure>
-
 <p>Para facilitar la búsqueda de los recursos a incluir, es recomendable colocar todas las clases dentro de una misma carpeta. Nosotros la vamos a colocar dentro de <code>app</code> (más adelante, cuando estudiemos <em>Laravel</em> veremos el motivo de esta decisión). Otras carpetas que podemos crear son <code>test</code> para colocar las pruebas <em>PhpUnit</em> que luego realizaremos, o la carpeta <code>vendor</code> donde se almacenarán las librerías del proyecto (esta carpeta es un estándard dentro de PHP, ya que <em>Composer</em> la crea automáticamente).</p>
 <p>Como hemos colocado todos nuestros recursos dentro de <code>app</code>, ahora nuestro <code>autoload.php</code> (el cual colocamos en la carpeta raíz) sólo va a buscar dentro de esa carpeta:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>

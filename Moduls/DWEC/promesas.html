@@ -1016,11 +1016,138 @@
   
   
     <li class="md-nav__item">
+      <a href="UT02.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="presentacions/DWECUT2/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diapositives unitat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="exercicisisolucions/UT02Exercicis.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Exercicis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT03 Model d’objectes predefinits a JavaScript.
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            UT03 Model d’objectes predefinits a JavaScript.
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="UT03.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material teòric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="presentacions/DWECUT3/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diapositives unitat
   </span>
   
 
@@ -1848,7 +1975,7 @@
 <h4 id="tareas-y-microtareas">Tareas y Microtareas<a class="headerlink" href="#tareas-y-microtareas" title="Permanent link">¶</a></h4>
 <p>JavaScript gestiona las operaciones asíncronas utilizando varias colas de tareas, cada una con una prioridad diferente. Estas colas incluyen la <strong>cola de macrotareas</strong> y la <strong>cola de microtareas</strong>.</p>
 <h5 id="cola-de-macrotareas-y-microtareas">Cola de Macrotareas y Microtareas<a class="headerlink" href="#cola-de-macrotareas-y-microtareas" title="Permanent link">¶</a></h5>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/microtasks.png" data-desc-position="bottom"><img _="," align="right" alt="microtasks.png" src="img/microtasks.png" width="300px"></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="img/microtasks.png"><img _="," align="right" alt="microtasks.png" src="img/microtasks.png" width="300px"></a></p>
 <p>Las <strong>macrotareas</strong> incluyen operaciones como los eventos del DOM, <code>setTimeout</code>, <code>setInterval</code> y otras operaciones asíncronas. Las macrotareas se gestionan en la "cola de macrotareas" y se procesan una por una.</p>
 <p>Las <strong>microtareas</strong>, por otro lado, incluyen las promesas (<code>Promises</code>) y las mutaciones del DOM (a través de <code>MutationObserver</code>). Estas tareas se gestionan en la "cola de microtareas", que tiene una prioridad más alta que la de las macrotareas. Esto significa que después de cada macrotarea, el motor de JavaScript procesará todas las microtareas antes de continuar con la siguiente macrotarea.</p>
 <p>Cuando se completa una macrotarea, el motor de JavaScript pasa a procesar todas las microtareas pendientes. Este ciclo de procesamiento asegura que las microtareas reciban atención inmediata después de cada macrotarea.</p>
