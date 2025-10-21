@@ -1,0 +1,934 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introducció"><a class="header" href="#introducció">Introducció</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="capítol-1"><a class="header" href="#capítol-1">Capítol 1</a></h1>
+<h1 id="ut03-model-dobjectes-predefinits-a-javascript"><a class="header" href="#ut03-model-dobjectes-predefinits-a-javascript"><strong>UT03 Model d’objectes predefinits a JavaScript.</strong></a></h1>
+<h2 id="1--objectes-de-més-alt-nivell-a-javascript"><a class="header" href="#1--objectes-de-més-alt-nivell-a-javascript"><strong>1.- Objectes de més alt nivell a Javascript.</strong></a></h2>
+<p>!!! info "<strong>Introducció</strong>"</p>
+<pre><code>Anam a aprofundir en els objectes bàsics i de més alt nivell de JavaScript. Aquests objectes, els trobareu en pràcticament la majoria d'aplicacions que faceu amb JavaScript, per la qual cosa serà fonamental, que tingui molt clares les característiques i diferents funcionalitats que aquests objectes li aportaran a les seves aplicacions.
+</code></pre>
+<p>Una pàgina web, és un document HTML que serà interpretat pels navegadors de forma gràfica, però que també ha de permetre'n l'accés al codi font.</p>
+<p>El Model d'Objectes del Document (DOM), permet veure el mateix document d'una altra manera, descrivint el contingut del document com un conjunt d'objectes, sobre els quals un programa de Javascript pot interactuar.</p>
+<p>Segons el W3C, el Model d'Objectes del Document és una interfície de programació d'aplicacions (API), per a documents vàlids HTML i ben construïts XML. Defineix l’estructura lògica dels documents, i la manera com s’accedeixen i es manipulen.</p>
+<p>Ara que ja has vist en la unitat anterior, els fonaments de la programació, anem a aprofundir una mica més pel que fa als objectes, que podrem col·locar en la majoria dels nostres documents.</p>
+<p>Definim com a <strong>objecte</strong>, una entitat amb una sèrie de <strong>propietats</strong> que defineixen el seu estat, i uns <strong>mètodes</strong> (funcions), que actuen sobre aquestes propietats.</p>
+<p>La forma d’accedir a una propietat d’un objecte és la següent:</p>
+<p><code>nomObjecte.propietat</code></p>
+<p>La forma d’accedir a un mètode d’un objecte és la següent:</p>
+<p><code>nomObjecte.metode([paràmetres opcionals])</code></p>
+<p>També podem referenciar una propietat d’un objecte, pel seu índex en la creació. Els índexs comencen per 0.</p>
+<p>En aquesta unitat, ens enfocarem en objectes d'alt nivell, que trobaràs freqüentment en les teves aplicacions de JavaScript: <strong>window</strong>, <strong>location</strong>, <strong>navigator</strong> i <strong>document</strong>. L'objectiu, no és només indicar-te les nocions bàsiques perquè puguis començar a realitzar tasques senzilles, sinó també, el preparar-te per aprofundir en les propietats i mètodes, gestors d'esdeveniments, etc. que trobaràs en unitats posteriors.</p>
+<p>Només veurem les propietats bàsiques, i els mètodes dels objectes esmentats anteriorment.</p>
+<p>Et mostrem aquí el gràfic del model d'objectes d'alt nivell, per a tots els navegadors que permetin fer servir JavaScript.</p>
+<div class="container" markdown>
+<img src="img/DWEC03_CONT_R01_Jerarquia.png" alt="portada" style="width:auto;height:300px">
+</div>
+<p>És molt important que tinguis aquest gràfic en ment perquè ha de ser la guia al llarg de tota aquesta unitat.</p>
+<p>!!! warning "Alerta"</p>
+<pre><code>En aquesta unitat no parlarem de l'ús de **frames** ja que el seu ús està totalment desaconsellat per motius d'accessibilitat i usabilitat, per la qual cosa et recomanem no usar-los.
+</code></pre>
+<h3 id="11--objecte-window"><a class="header" href="#11--objecte-window"><strong>1.1.- Objecte window.</strong></a></h3>
+<figure markdown="span">
+  ![DWEC03_CONT_R02_Ventanas](img/DWEC03_CONT_R02_Ventanas.png){ width="100%" }
+  <figcaption style="font-size:0.7em;"><a href="https://commons.wikimedia.org/wiki/File:Crystal_Clear_app_kpersonalizer.png">Everaldo Coelho</a><a href="http://www.gnu.org/licenses/gpl.html">&nbsp;(GNU/GPL)</a></figcaption>
+</figure>
+<p>En la jerarquia d'objectes, tenim a la part superior l'objecte <strong>window</strong>.</p>
+<p>Aquest objecte està situat justament aquí, perquè és el contenidor principal de tot el contingut que es visualitza al navegador. Tan aviat com s'obre una finestra (<strong>window</strong>) al navegador, fins i tot encara que no s'hi carregui cap document, aquest objecte window ja estarà definit en memòria.</p>
+<p>A més de la secció de contingut de l’objecte <strong>window</strong>, que és justament on es carregaran els documents, el camp d’influència d’aquest objecte, abasta també les dimensions de la finestra, així com tot el que envolta l’àrea de contingut: les barres de desplaçament, barra d’eines, barra d’estat, etc.</p>
+<p>Com es veu en el gràfic de la jerarquia d'objectes, sota l'objecte <strong>window</strong> tenim altres objectes com el <strong>navigator</strong>, <strong>screen</strong>, <strong>history</strong>, <strong>location</strong> i l'objecte <strong>document</strong>. Aquest objecte <strong>document</strong> serà el que contindrà tota la jerarquia d’objectes, que tinguem dins la nostra pàgina HTML.</p>
+<div class="container" markdown>
+<img src="img/DWEC03_CONT_R01_Jerarquia.png" alt="portada" style="width:auto;height:300px">
+</div>
+<p>!!! warning "Atenció"</p>
+<pre><code>**Atenció** En els navegadors més moderns, els usuaris tenen la possibilitat d'obrir les pàgines tant en noves pestanyes dins d'un navegador, com en noves finestres de navegador. Per a JavaScript tant les finestres de navegador, com les pestanyes, són tots dos objectes **window**.
+</code></pre>
+<p><strong>Accés a propietats i mètodes.</strong></p>
+<p>Per accedir a les propietats i mètodes de l'objecte <strong>window</strong>, ho podrem fer de diferents formes, depenent més del nostre estil, que de requeriments sintàctics. Així, la forma més lògica i comuna de realitzar aquesta referència, inclouria l’objecte <strong>window</strong> tal com es mostra en aquest exemple:</p>
+<pre><code> window.nombrePropietat  
+ window.nomMétodo([paràmetres])  
+</code></pre>
+<p>Com pots veure, els paràmetres van entre corxets, indicant que són opcionals i que dependran del mètode al qual estem cridant.</p>
+<p>Un objecte <strong>window</strong> també es podrà referenciar mitjançant la paraula <strong>self</strong>, quan estem fent la referència des del propi document contingut en aquesta finestra:</p>
+<pre><code> self.nombrePropietat  
+ self.nomMétodo([paràmetres])  
+</code></pre>
+<p>Podrem fer servir qualsevol de les dues referències anteriors, però intentarem deixar la paraula reservada <strong>self</strong>, per a scripts més complexos en què tinguem múltiples marcs i finestres.</p>
+<p>Atès que l'objecte <strong>window</strong> sempre estarà present quan executem els nostres scripts, podrem ometre'l, en referències als objectes dins d'aquesta finestra. Així que, si escrivim:</p>
+<pre><code> nomPropietat  
+ nomMétodo([paràmetres])  
+</code></pre>
+<p>També funcionaria sense cap problema, perquè s'assumeix que aquestes propietats o mètodes, són de l'objecte de més jerarquia (l'objecte <strong>window</strong>) en el qual ens trobem.</p>
+<p>!!! quote "<strong>Cites per pensar</strong>"</p>
+<pre><code>"Només tancant les portes darrere d'un mateix, s'obren finestres cap al pervenir."
+
+***SAGAN, Françoise.***
+</code></pre>
+<h4 id="111--gestió-de-finestres"><a class="header" href="#111--gestió-de-finestres"><strong>1.1.1.- Gestió de finestres.</strong></a></h4>
+<figure markdown="span">
+  ![DWEC03_CONT_R14_String](img/DWEC03_CONT_R03_Ventana.png){ width="100%" }
+  <figcaption style="font-size:0.7em;"><a href="https://commons.wikimedia.org/wiki/File:Crystal_Clear_app_kpersonalizer.png">Everaldo Coelho</a><a href="http://www.gnu.org/licenses/gpl.html">&nbsp;(GNU/GPL)</a></figcaption>
+</figure>
+<p>Un script no crearà mai la finestra principal d'un navegador. És l'usuari, qui realitza aquesta tasca obrint una URL al navegador o un arxiu des del menú d'obrir. Però tanmateix, un script que estigui executant-se en una de les finestres principals del navegador, si que podrà crear o obrir noves sub-finestres.</p>
+<p>El mètode que genera una nova finestra és <strong>window.open()</strong>. Aquest mètode conté fins a tres paràmetres, que defineixen les característiques de la nova finestra: la URL del document a obrir, el nom d'aquesta finestra i la seva aparença física (tamany, color,etc.).</p>
+<p>Per exemple, si considerem la següent instrucció que obre una nova finestra d’una mida determinada i amb el contingut d’un document HTML:</p>
+<p><code>let subVentana = window.open("nueva.html", "nova", "height=800, width=600");</code></p>
+<p>L'important d'aquesta instrucció, és l'assignació que hem fet en la variable <strong>subVentana</strong>. D'aquesta manera podrem al llarg del nostre codi, referenciar a la nova finestra des de l'script original de la finestra principal. Per exemple, si volguéssim tancar la nova finestra des del nostre script, simplement hauríem de fer: <strong>subVentana.</strong></p>
+<p>Aquí si que cal especificar <strong>subVentana</strong>, ja que si escrivíssim <strong>window.close()</strong>, <strong>self.close()</strong> o <strong>close()</strong> estaríem intentant tancar la nostra pròpia finestra (prèvia confirmació), però no la <strong>subVentana</strong> que creiem en els passos anteriors.</p>
+<p><strong>Vegeu el següent exemple que permet obrir i tancar una sub-finestra:</strong></p>
+<pre><code class="language-javascript+html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta http-equiv="content-type" content="text/html; charset = utf-8"&gt;
+    &lt;title&gt;Apertura i Tancament de Finestres&lt;/title&gt;
+    &lt;script type="text/javascript"&gt;
+        const inicialitzar = () =&gt; {
+            document.getElementById("crear-finestra").onclick = crearNova;
+            document.getElementById("tancar-finestra").onclick = tancarNova;
+        }
+
+        let novaFinestra;
+
+        const crearNova = () =&gt; {
+            novaFinestra = window.open("https://docencia.xaviersastre.cat", "", "height = 400,width = 800");
+        }
+
+        const tancarNova = () =&gt; {
+            if (novaFinestra) {
+                novaFinestra.close();
+                novaFinestra = null;
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body onLoad="inicialitzar()"&gt;
+&lt;h1&gt; Obrim i tanquem finestres&lt;/h1&gt;
+&lt;form&gt;
+    &lt;input type="button" id="crear-finestra" value="Crear Nova Finestra"&gt;
+    &lt;input type="button" id="tancar-finestra" value="Tancar Nova Finestra"&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4 id="112--propietats-i-mètodes"><a class="header" href="#112--propietats-i-mètodes"><strong>1.1.2.- Propietats i mètodes.</strong></a></h4>
+<p>L'objecte <strong>window</strong> representa una finestra oberta en un navegador. Si un document conté marcs (<strong>&lt;frame&gt;</strong> o <strong>&lt;iframe&gt;</strong>), el navegador crea un objecte <strong>window</strong> per al document HTML, i un objecte <strong>window</strong> addicional per a cada marc.</p>
+<figure markdown="span">
+  ![DWEC03_CONT_R03_Ventana_abierta](img/DWEC03_CONT_R03_Ventana_abierta.jpg){ width="100%" }
+  <figcaption style="font-size:0.7em;"><a href="http://www.flickr.com/photos/quinnanya/4399115213/sizes/z/in/photostream/">quinn.anya</a><a href="https://creativecommons.org/licenses/list.ca">&nbsp;CC BY-SA</a></figcaption>
+</figure>
+<p><strong>Propietats de l’objecte Window</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Propietat</th><th>Descripció</th></tr></thead><tbody>
+<tr><td><strong>closed</strong></td><td>Retorna un valor Boolean indicant quan una finestra ha estat tancada o no.</td></tr>
+<tr><td><strong>defaultStatus</strong></td><td>Ajusta o retorna el valor per defecte de la barra d’estat d’una finestra.</td></tr>
+<tr><td><strong>document</strong></td><td>Retorna l’objecte <strong>document</strong> per a la finestra.</td></tr>
+<tr><td><strong>frames</strong></td><td>Retorna un arrelament de tots els marcs (inclosos iframes) de la finestra actual.</td></tr>
+<tr><td><strong>history</strong></td><td>Retorna l’objecte <strong>history</strong> de la finestra.</td></tr>
+<tr><td><strong>length</strong></td><td>Retorna el nombre de frames (incloent-hi iframes) que hi ha a dins d'una finestra.</td></tr>
+<tr><td><strong>location</strong></td><td>Retorna la Localització de l'objecte d'urL del fitxer.</td></tr>
+<tr><td><strong>name</strong></td><td>Ajusta o retorna el nom d’una finestra.</td></tr>
+<tr><td><strong>navigator</strong></td><td>Retorna l’objecte <strong>navigator</strong> d’una finestra.</td></tr>
+<tr><td><strong>opener</strong></td><td>Retorna la referència a la finestra que va obrir la finestra actual.</td></tr>
+<tr><td><strong>parent</strong></td><td>Retorna la finestra pare de la finestra actual.</td></tr>
+<tr><td><strong>self</strong></td><td>Retorna la finestra actual.</td></tr>
+<tr><td><strong>estatus</strong></td><td>Ajusta el text de la barra d’estat d’una finestra.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Mètodes de l’objecte Window</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Mètode</th><th>Descripció</th></tr></thead><tbody>
+<tr><td><strong>alert()</strong></td><td>Mostra una finestra emergent d'alerta i un botó d'acceptar.</td></tr>
+<tr><td><strong>blur()</strong></td><td>Elimina el focus de la finestra actual.</td></tr>
+<tr><td><strong>clearInterval()</strong></td><td>Reseteja el cronòmetre ajustat amb <strong>setInterval()</strong>.</td></tr>
+<tr><td><strong>setInterval()</strong></td><td>Crida a una funció o avalua una expressió en un interval especificat (en mil·lisegons).</td></tr>
+<tr><td><strong>close()</strong></td><td>Tanca la finestra actual.</td></tr>
+<tr><td><strong>confirm()</strong></td><td>Mostra una finestra emergent amb un missatge, un botó d'acceptar i un botó de cancel·lar.</td></tr>
+<tr><td><strong>focus()</strong></td><td>Col·loca el focus en la finestra actual.</td></tr>
+<tr><td><strong>open()</strong></td><td>Obre una nova finestra de navegació.</td></tr>
+<tr><td><strong>prompt()</strong></td><td>Mostra una finestra de diàleg per introduir dades.</td></tr>
+</tbody></table>
+</div>
+<p>!!! info "<strong>Has de conèixer</strong>"</p>
+<pre><code>El següent enllaç amplia informació sobre l'objecte **Window** i totes les seves propietats i mètodes.
+
+[Més informació i exemples sobre l'objecte **Window**.](http://www.webestilo.com/javascript/js17.phtml)
+</code></pre>
+<h3 id="12--objecte-location"><a class="header" href="#12--objecte-location"><strong>1.2.- Objecte location.</strong></a></h3>
+<p>L’objecte <strong>location</strong> conté informació referent a la URL actual.</p>
+<p>Aquest objecte, és part de l’objecte <strong>window</strong> i hi accedeixen a través de la propietat <strong>window.location</strong>.</p>
+<figure markdown="span">
+  ![DWEC03_CONT_R04_URL](img/DWEC03_CONT_R04_URL.jpg){ width="100%" }
+  <figcaption style="font-size:0.7em;"><a href="http://www.flickr.com/photos/chrisdlugosz/3402955869/sizes/z/in/photostream/">chrisdlugosz</a><a href="https://creativecommons.org/licenses/list.ca">&nbsp;CC BY</a></figcaption>
+</figure>
+<p>L’objecte <strong>location</strong> conté informació referent a la URL actual.</p>
+<p>Aquest objecte, és part de l’objecte <strong>window</strong> i hi accedeixen a través de la propietat <strong>window.location</strong>.</p>
+<p><strong>Propietats de l’objecte Location</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Propietat</th><th>Descripció</th></tr></thead><tbody>
+<tr><td><strong>hash</strong></td><td>Cadena que conté el nom de l’enllaç, dins la URL.</td></tr>
+<tr><td><strong>host</strong></td><td>Cadena que conté el nom del servidor i el número del port, dins la URL.</td></tr>
+<tr><td><strong>hostname</strong></td><td>Cadena que conté el nom de domini del servidor (o l'adreça IP), dins la URL.</td></tr>
+<tr><td><strong>href</strong></td><td>Cadena que conté la URL completa.</td></tr>
+<tr><td><strong>pathname</strong></td><td>Cadena que conté el camí al recurs, dins la URL.</td></tr>
+<tr><td><strong>port</strong></td><td>Cadena que conté el número de port del servidor, dins la URL.</td></tr>
+<tr><td><strong>protocol</strong></td><td>Cadena que conté el protocol utilitzat (incloent-hi els dos punts), dins de la URL.</td></tr>
+<tr><td><strong>search</strong></td><td>Cadena que conté la informació passada en una trucada a un script, dins de la URL.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Mètodes de l’objecte Location</strong></p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left"></th><th style="text-align: left"></th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>assign()</strong></td><td style="text-align: left">Carrega un nou document.</td></tr>
+<tr><td style="text-align: left"><strong>reload()</strong></td><td style="text-align: left">Torna a carregar la URL especificada en la propietat <strong>href</strong> de l’objecte <strong>location</strong>.</td></tr>
+<tr><td style="text-align: left"><strong>replaci()</strong></td><td style="text-align: left">Reemplaça l'historial actual mentre carrega la URL especificada en cadenaURL.</td></tr>
+</tbody></table>
+</div>
+<p>!!! quote "<strong>Cites per pensar</strong>"</p>
+<pre><code>"Mil rutes s'allunyen de la fi escollida, però n'hi ha una que hi arriba."
+
+***MONTAIGNE, Michel de.***
+</code></pre>
+<p>!!! info "<strong>Has de conèixer</strong>"</p>
+<pre><code>El següent enllaç amplia informació sobre l'objecte **Location** i totes les seves propietats i mètodes.
+
+[Més informació i exemples sobre l'objecte **Location**.](http://www.webestilo.com/javascript/js19.phtml)
+</code></pre>
+<h3 id="13--objecte-navigator"><a class="header" href="#13--objecte-navigator"><strong>1.3.- Objecte navigator.</strong></a></h3>
+<p>Aquest objecte <strong>navigator</strong>, conté informació sobre el navegador que estem utilitzant quan obrim una URL o un document local.</p>
+<figure markdown="span">
+  ![DWEC03_CONT_R05_Navigator](img/DWEC03_CONT_R05_Navigator.jpg){ width="100%" }
+  <figcaption style="font-size:0.7em;"><a href="http://www.flickr.com/photos/caitlinator/4229768048/sizes/z/in/photostream/">Caitlinator</a><a href="https://creativecommons.org/licenses/list.ca">&nbsp;CC BY</a></figcaption>
+</figure>
+<p><strong>Propietats de l’objecte Navigator</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Propietat</th><th>Descripció</th></tr></thead><tbody>
+<tr><td><strong>appCodeName</strong></td><td>Cadena que conté el nom en codi del navegador.</td></tr>
+<tr><td><strong>appName</strong></td><td>Cadena que conté el nom del client.</td></tr>
+<tr><td><strong>appVersion</strong></td><td>Cadena que conté informació sobre la versió del client.</td></tr>
+<tr><td><strong>cookieEnabled</strong></td><td>Determina si les cookies estan o no habilitades al navegador.</td></tr>
+<tr><td><strong>platform</strong></td><td>Cadena amb la plataforma sobre la qual s'està executant el programa client.</td></tr>
+<tr><td><strong>userAgent</strong></td><td>Cadena que conté la capçalera completa de l’agent enviada en una petició HTTP. Conté la informació de les propietats <strong>appCodeName</strong> i <strong>appVersion</strong>.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Mètodes de l’objecte Navigator</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Mètode</th><th>Descripció</th></tr></thead><tbody>
+<tr><td><strong>javaEnabled()</strong></td><td>Retorna true si el client permet la utilització de Java, en cas contrari, retorna false.</td></tr>
+</tbody></table>
+</div>
+<p>!!! info "<strong>Has de conèixer</strong>"</p>
+<pre><code>El següent enllaç amplia informació sobre l'objecte **Navigator** i totes les seves propietats i mètodes.
+
+[Més informació i exemples sobre l'objecte **Navigator**.](http://www.webestilo.com/javascript/js21.phtml)
+</code></pre>
+<h3 id="14--objecte-document"><a class="header" href="#14--objecte-document"><strong>1.4.- Objecte document.</strong></a></h3>
+<figure markdown="span">
+  ![DWEC03_CONT_R07_Document](img/DWEC03_CONT_R07_Document.jpg){ width="100%" }
+  <figcaption style="font-size:0.7em;"><a href="http://www.flickr.com/photos/maxlinkc/2870863900/sizes/z/in/photostream/">infilmity</a><a href="https://creativecommons.org/licenses/list.ca">&nbsp;CC BY-NC-SA</a></figcaption>
+</figure>
+<p>Cada document carregat en una finestra del navegador, serà un objecte de tipus <strong>document</strong>.</p>
+<p>L’objecte <strong>document</strong> proporciona als scripts, l’accés a tots els elements HTML dins d’una pàgina.</p>
+<p>Aquest objecte forma part a més de l'objecte <strong>window</strong>, i pot ser accedit a través de la propietat <strong>window.document</strong> o directament <strong>document</strong> (ja que podem ometre la referència a la <strong>window</strong> actual).</p>
+<p><strong>Col·leccions de l'objecte Document</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Col·lecció</th><th>Descripció</th></tr></thead><tbody>
+<tr><td><strong>anchors[]</strong></td><td>És un arrelament que conté tots els hiperenllaços del document.</td></tr>
+<tr><td><strong>forms[]</strong></td><td>És un arrelament que conté tots els formularis del document.</td></tr>
+<tr><td><strong>images[modifica]</strong></td><td>És un arrelament que conté totes les imatges del document.</td></tr>
+<tr><td><strong>links[]</strong></td><td>És un arrelament que conté tots els enllaços del document.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Propietats de l’objecte Document</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Propietat</th><th>Descripció</th></tr></thead><tbody>
+<tr><td><strong>cookie</strong></td><td>Retorna tots els noms/valors de les cookies en el document.</td></tr>
+<tr><td><strong>domain</strong></td><td>Cadena que conté el nom de domini del servidor que va carregar el document.</td></tr>
+<tr><td><strong>referrer</strong></td><td>Cadena que conté la URL del document des del qual arribem al document actual.</td></tr>
+<tr><td><strong>title</strong></td><td>Retorna o ajusta el títol del document.</td></tr>
+<tr><td><strong>URL</strong></td><td>Retorna la URL completa del document.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Propietats de l’objecte Document</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Mètode</th><th>Descripció</th></tr></thead><tbody>
+<tr><td><strong>close()</strong></td><td>Tanca el flux obert prèviament amb <strong>document.</strong></td></tr>
+<tr><td><strong>getElementById()</strong></td><td>Per accedir a un element identificat per l’id escrit entre parèntesis.</td></tr>
+<tr><td><strong>getElementsByName()</strong></td><td>Per accedir als elements identificats per l’atribut <strong>name</strong> escrit entre parèntesis.</td></tr>
+<tr><td><strong>getElementsByTagName()</strong></td><td>Per accedir als elements identificats pel tag o l’etiqueta escrita entre parèntesis.</td></tr>
+<tr><td><strong>open()</strong></td><td>Obre el flux d’escriptura per poder utilitzar <strong>document.write()</strong> o <strong>document.writeln</strong> en el document.</td></tr>
+<tr><td><strong>write()</strong></td><td>Per poder escriure expressions HTML o codi de JavaScript dins d’un document.</td></tr>
+<tr><td><strong>writeln()</strong></td><td>El mateix que <strong>write()</strong> però afegeix un salt de línia al final de cada instrucció.</td></tr>
+</tbody></table>
+</div>
+<p>!!! info "<strong>Has de conèixer</strong>"</p>
+<pre><code>El següent enllaç amplia informació sobre l'objecte **Document** totes les seves propietats i mètodes.
+
+[Més informació i exemples sobre l'objecte **Document**.](http://www.w3schools.com/jsref/dom_obj_document.asp)
+</code></pre>
+<h2 id="2--objectes-nadius-a-javascript"><a class="header" href="#2--objectes-nadius-a-javascript"><strong>2.- Objectes nadius a Javascript.</strong></a></h2>
+<p>Aquests objectes, fan referència al treball amb cadenes de text, operacions matemàtiques, nombres, valors booleans i treball amb dates i hores.</p>
+<p>Aquest li serà molt útil per realitzar la seva aplicació ja que haurà de realitzar diferents tipus de conversions de dades, treballar intensivament amb cadenes i per suposat amb dates i hores.</p>
+<p>Tot i que no hem vist com crear objectes, sí que ja hem donat unes pinzellades al que són els objectes, propietats i mètodes.</p>
+<p>En aquesta secció vam fer una ullada a objectes que són nadius a JavaScript, això és, allò que JavaScript ens dona, llestos per a la seva utilització en la nostra aplicació.</p>
+<p>Enxampem una ullada als objectes <strong>String</strong>, <strong>Math</strong>, <strong>Number</strong>, <strong>Boolean</strong> i <strong>Date</strong>.</p>
+<p>!!! quote "<strong>Cites per pensar</strong>"</p>
+<pre><code>"Si m'haguessin fet objecte seria objectiu, però em van fer subjecte."
+
+***BERGAMÍN, José.***  
+</code></pre>
+<p>!!! note "<strong>Reflexiona</strong>"</p>
+<pre><code>T'has parat a pensar alguna vegada que el nostre món està envoltat d'objectes arreu?
+
+Saps que pràcticament, tots aquests objectes tenen algunes propietats com poden ser mida, color, pes, tipus de corrent que fan servir, temperatura, tipus de combustible, etc.?
+
+Saps que també podem realitzar accions amb aquests objectes, com poden ser encendre, apagar, moure, obrir, tancar, pujar temperatura, baixar temperatura, marcar nombre, penjar, etc.?
+</code></pre>
+<h3 id="21--objecte-string"><a class="header" href="#21--objecte-string"><strong>2.1.- Objecte String.</strong></a></h3>
+<figure markdown="span">
+  ![DWEC03_CONT_R13_Cadenas](img/DWEC03_CONT_R13_Cadenas.jpg){ width="100%" }
+  <figcaption style="font-size:0.7em;"><a href="http://www.flickr.com/photos/faccig/3579566706/sizes/z/in/photostream/">faccig</a><a href="https://creativecommons.org/licenses/list.ca">&nbsp;(CC BY-SA)</a></figcaption>
+</figure>
+<p>Una cadena (string) consta d'un o més caràcters de text, envoltats de cometes simples o dobles; dona igual que usem ja que es considerarà una cadena de tota manera, però en alguns casos resulta més còmode l'ús d'unes o altres.</p>
+<p>Recorda que de com definir les cadenes ja hem parlat i que no se t'oblidin les <strong>plantilles de cadenes</strong> que et fan molt fàcil la seva composició en comptes d'estar concatenant que de vegades resulta engreixat.</p>
+<p><strong>Caràcters especials o caràcters d’escapament.</strong></p>
+<p>La forma en què es creen les cadenes a JavaScript, fa que quan haguem d'emprar certs caràcters especials en una cadena de text, haguem d'escapar-los, emprant el símbol <strong>\</strong> seguit del caràcter.</p>
+<p>Veiem aquí un llistat dels caràcters especials o d'escapament a JavaScript:</p>
+<p><strong>Caràcters d’escapament i especials en JavaScript</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Símbols</th><th>Explicació</th></tr></thead><tbody>
+<tr><td><strong>"</strong></td><td>Cometes dobles.</td></tr>
+<tr><td><strong>'</strong></td><td>Comella simple.</td></tr>
+<tr><td><strong>\</strong></td><td>Barra inclinada.</td></tr>
+<tr><td><strong>\b</strong></td><td>Reculada.</td></tr>
+<tr><td><strong>\t</strong></td><td>Tabulador.</td></tr>
+<tr><td><strong>\n</strong></td><td>Nova línia.</td></tr>
+<tr><td><strong>\r</strong></td><td>Salt de línia.</td></tr>
+<tr><td><strong>\f</strong></td><td>Avanç de pàgina.</td></tr>
+</tbody></table>
+</div>
+<p>!!! info "<strong>Has de conèixer</strong>"</p>
+<pre><code>El següent enllaç amplia informació sobre l'objecte **String** i totes les seves propietats i mètodes.
+
+[Més informació i exemples sobre l'objecte **String**.](http://www.w3schools.com/jsref/jsref_obj_string.asp)
+</code></pre>
+<h4 id="211--propietats-i-mètodes-de-lobjecte-string"><a class="header" href="#211--propietats-i-mètodes-de-lobjecte-string"><strong>2.1.1.- Propietats i mètodes de l’objecte String.</strong></a></h4>
+<figure markdown="span">
+  ![DWEC03_CONT_R14_String](img/DWEC03_CONT_R14_String.jpg){ width="100%" }
+  <figcaption style="font-size:0.7em;"><a href="http://www.flickr.com/photos/batega/2708381886/sizes/z/in/photostream/">Josep Ma. Rosell</a><a href="https://creativecommons.org/licenses/list.ca">&nbsp;(CC BY)</a></figcaption>
+</figure>
+<p>Per crear un objecte <strong>String</strong> ho podrem fer de les formes:</p>
+<pre><code>let cadena1 = new String('Primera cadena');  
+let cadena2 = "Segona cadena";  
+let cadena3 = 'Tercera cadena';  
+let totesCadenes = '${cadena1} \- ${cadena2} \- ${cadena3}';  
+</code></pre>
+<p>És a dir, cada vegada que tinguem una cadena de text, en realitat és un objecte <strong>String</strong> que té propietats i mètodes:</p>
+<pre><code> cadena.propietat;  
+ cadena.metode( [paràmetres] );  
+</code></pre>
+<p><strong>Propietats de l’objecte String</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Propietat</th><th>Descripció</th></tr></thead><tbody>
+<tr><td><strong>length</strong></td><td>Conté la longitud d’una cadena.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Mètodes de l’objecte String</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Mètodes</th><th>Descripció</th></tr></thead><tbody>
+<tr><td><strong>charAt()</strong></td><td>Retorna el caràcter especificat per la posició que s’indica entre parèntesis.</td></tr>
+<tr><td><strong>charCodeAt()</strong></td><td>Retorna l’Unicode del caràcter especificat per la posició que s’indica entre parèntesis.</td></tr>
+<tr><td><strong>concat()</strong></td><td>Uneix una o més cadenes i retorna el resultat d'aquesta unió.</td></tr>
+<tr><td><strong>fromCharCode()</strong></td><td>Converteix valors Unicode a caràcters.</td></tr>
+<tr><td><strong>indexOf()</strong></td><td>Retorna la posició de la primera ocurrència del caràcter buscat a la cadena.</td></tr>
+<tr><td><strong>lastIndexOf()</strong></td><td>Retorna la posició de l'última ocurrència del caràcter buscat a la cadena.</td></tr>
+<tr><td><strong>match()</strong></td><td>Busca una coincidència entre una expressió regular i una cadena i retorna les coincidències o <strong>null</strong> si no ha trobat res.</td></tr>
+<tr><td><strong>replaci()</strong></td><td>Busca una subcadena a la cadena i la reemplaça per la nova cadena especificada.</td></tr>
+<tr><td><strong>search()</strong></td><td>Busca una subcadena a la cadena i retorna la posició on es va trobar.</td></tr>
+<tr><td><strong>slice()</strong></td><td>Extreu una part de la cadena i retorna una nova cadena.</td></tr>
+<tr><td><strong>split()</strong></td><td>Divideix una cadena en un arrelament de subcadenes.</td></tr>
+<tr><td><strong>substr()</strong></td><td>Extreu els caràcters d’una cadena, començant en una determinada posició i amb el nombre de caràcters indicat.</td></tr>
+<tr><td><strong>substring()</strong></td><td>Extreu els caràcters d’una cadena entre dos índexs especificats.</td></tr>
+<tr><td><strong>toLowerCase()</strong></td><td>Converteix una cadena en minúscules.</td></tr>
+<tr><td><strong>toUpperCase()</strong></td><td>Converteix una cadena en majúscules.</td></tr>
+</tbody></table>
+</div>
+<p>És un estàndard de codificació de caràcters dissenyat per facilitar el tractament informàtic, transmissió i visualització correcta de textos realitzats en diferents idiomes, de tal manera que els caràcters especials de cada idioma siguin mostrats correctament independentment de la nostra configuració d’idioma local. El terme Unicode prové dels tres objectius perseguits: universalitat, uniformitat i unicitat.</p>
+<h3 id="22--objecte-math"><a class="header" href="#22--objecte-math"><strong>2.2.- Objecte Math.</strong></a></h3>
+<figure markdown="span" class="img-small" style="width:auto;height:300px">
+  ![DWEC03_CONT_R14_String](img/DWEC03_CONT_R15_NumeroPI.jpg)
+  <figcaption style="font-size:0.7em;"><a href="http://www.flickr.com/photos/conskeptical/361555297/sizes/z/in/photostream/">conskeptical</a><a href="https://creativecommons.org/licenses/list.ca">&nbsp;(CC BY-NC-SA)</a></figcaption>
+</figure>
+<p>Ja vam veure anteriorment algunes funcions, que ens permetien convertir cadenes a diferents formats numèrics (<strong>parseInt</strong>, <strong>parseFloat</strong>). A banda d'aquestes funcions, disposem d'un objecte <strong>Math</strong> a JavaScript, que ens permet realitzar operacions matemàtiques. L'objecte <strong>Math</strong> no posseeix un constructor (no ens permetrà per tant crear o instànciar nous objectes que siguin de tipus <strong>Math</strong>), per la qual cosa per anomenar les seves propietats i mètodes, ho farem anteposant <strong>Math</strong> a la propietat o el mètode. Per exemple:</p>
+<pre><code class="language-javascript">let x = Math.PI;             // Retorna el número PI.  
+let i = Math.sqrt( 16);      // Retorna l'arrel quadrada de 16\.
+</code></pre>
+<p><strong>Propietats de l’objecte Math</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Propietat</th><th>Descripció</th></tr></thead><tbody>
+<tr><td><strong>E</strong></td><td>Retorna el número Euler (aproximadament 2.718).</td></tr>
+<tr><td><strong>LN2</strong></td><td>Retorna el logaritme neperià de 2 ( aproximadament 0.693).</td></tr>
+<tr><td><strong>LN10</strong></td><td>Retorna el logaritme neperià de 10 ( aproximadament 2.302).</td></tr>
+<tr><td><strong>LOG2E</strong></td><td>Retorna el logaritme base 2 d'E ( aproximadament 1.442).</td></tr>
+<tr><td><strong>LOG10E</strong></td><td>Retorna el logaritme base 10 d'E ( aproximadament 0.434).</td></tr>
+<tr><td><strong>PI</strong></td><td>Retorna el número PI ( aproximadament 3.14159).</td></tr>
+<tr><td><strong>SQRT2</strong></td><td>Retorna l'arrel quadrada de 2 ( aproximadament 1.414).</td></tr>
+</tbody></table>
+</div>
+<p><strong>Mètodes de l’objecte Math</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Mètode</th><th>Descripció</th></tr></thead><tbody>
+<tr><td><strong>abs( x)</strong></td><td>Retorna el valor absolut de x.</td></tr>
+<tr><td><strong>acos( x)</strong></td><td>Retorna l’arc de x, en radians.</td></tr>
+<tr><td><strong>asin( x)</strong></td><td>Retorna l’arcosè de x, en radians.</td></tr>
+<tr><td><strong>atan( x)</strong></td><td>Retorna l'arcotangent de x, en radians amb un valor entre -PI/2 i PI/2.</td></tr>
+<tr><td><strong>atan2( i,x)</strong></td><td>Retorna l'arcotangent del quocient dels seus arguments.</td></tr>
+<tr><td><strong>ceil( x)</strong></td><td>Retorna el número x arrodonit a l’alta cap al següent sencer.</td></tr>
+<tr><td><strong>cos( x)</strong></td><td>Retorna el cosin de x (x està en radians).</td></tr>
+<tr><td><strong>floor( x)</strong></td><td>Retorna el número x arrodonit a la baixa cap a l’anterior sencer.</td></tr>
+<tr><td><strong>log( x)</strong></td><td>Retorna el logaritme neperiant (base E) de x.</td></tr>
+<tr><td><strong>max( x,y,z,...,n)</strong></td><td>Retorna el nombre més alt dels que es passen com a paràmetres.</td></tr>
+<tr><td><strong>min( x,y,z,...,n)</strong></td><td>Retorna el nombre més baix dels que es passen com a paràmetres.</td></tr>
+<tr><td><strong>pow( x,y)</strong></td><td>Retorna el resultat de x elevat a i.</td></tr>
+<tr><td><strong>random()</strong></td><td>Retorna un número a l'atzar entre 0 i 1.</td></tr>
+<tr><td><strong>round( x)</strong></td><td>Arrodoneix x a l’enter més proper.</td></tr>
+<tr><td><strong>sense( x)</strong></td><td>Retorna el si de x (x està en radians).</td></tr>
+<tr><td><strong>sqrt( x)</strong></td><td>Retorna l’arrel quadrada de x.</td></tr>
+<tr><td><strong>tan( x)</strong></td><td>Retorna la tangent d'un angle.</td></tr>
+</tbody></table>
+</div>
+<h3 id="23--objecte-number"><a class="header" href="#23--objecte-number"><strong>2.3.- Objecte Number.</strong></a></h3>
+<figure markdown="span" class="img-small">
+  ![DWEC03_CONT_R14_String](img/DWEC03_CONT_R16_Number.jpg){ width="100%" }
+  <figcaption style="font-size:0.7em;"><a href="http://www.flickr.com/photos/darwinbell/309913845/sizes/z/in/photostream/">Darwin Bell</a><a href="https://creativecommons.org/licenses/list.ca">CC BY</a></figcaption>
+</figure>
+<p>L'objecte <strong>Number</strong> es fa servir molt rarament, ja que per a la major part dels casos, JavaScript satisfà les necessitats del dia a dia amb els valors numèrics que emmagatzemem en variables. Però l'objecte <strong>Number</strong> conté alguna informació i capacitats molt interessants per a programadors més seriosos.</p>
+<p>El primer, és que l’objecte <strong>Number</strong> conté propietats que ens indiquen el rang de nombres suportats en el llenguatge. El nombre més alt és <strong>1.79E + 308</strong>; el nombre més baix és <strong>2.22E-308</strong>. Qualsevol nombre més gran que el nombre més alt, serà considerat com a infinit positiu, i si és més petit que el nombre més baix, serà considerat infinit negatiu.</p>
+<p>Els números i els seus valors estan definits internament a JavaScript, com a valors de doble precisió i de 64 bits.</p>
+<p>L’objecte <strong>Number</strong>, és un objecte embolcall per a valors numèrics primitius.</p>
+<p>Els objectes <strong>Number</strong> són creats amb <strong>new Number()</strong>.</p>
+<p><strong>Propietats de l’objecte Number</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Propietat</th><th>Descripció</th></tr></thead><tbody>
+<tr><td><strong>constructor</strong></td><td>Retorna la funció que va crear l'objecte <strong>Number</strong>.</td></tr>
+<tr><td><strong>MAX_VALUE</strong></td><td>Retorna el número més alt disponible a JavaScript.</td></tr>
+<tr><td><strong>MIN_VALUE</strong></td><td>Retorna el nombre més petit disponible a JavaScript.</td></tr>
+<tr><td><strong>NEGATIVE_INFINITY</strong></td><td>Representa infinit negatiu (es retorna en cas d'overflow).</td></tr>
+<tr><td><strong>POSITIVE_INFINITY</strong></td><td>Representa infinit positiu (es retorna en cas d'overflow).</td></tr>
+<tr><td><strong>prototype</strong></td><td>Permet afegir les nostres pròpies propietats i mètodes a un objecte.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Mètodes de l’objecte Number</strong></p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left"></th><th style="text-align: left"></th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>toExponential( x)</strong></td><td style="text-align: left">Converteix un número a la seva notació exponencial.</td></tr>
+<tr><td style="text-align: left"><strong>toFixed( x)</strong></td><td style="text-align: left">Formatea un nombre amb x digits decimals després del punt decimal.</td></tr>
+<tr><td style="text-align: left"><strong>toPrecision(x)</strong></td><td style="text-align: left">Formatea un número a la longitud x.</td></tr>
+<tr><td style="text-align: left"><strong>toString()</strong></td><td style="text-align: left">Converteix un objecte <strong>Number</strong> en una cadena. Si se’n posa 2 com a paràmetre es mostrarà el número en binari. Si se’n posa 8 com a paràmetre es mostrarà el número en octal. Si se’n posa 16 com a paràmetre es mostrarà el número en hexadecimal.</td></tr>
+<tr><td style="text-align: left"><strong>valueOf()</strong></td><td style="text-align: left">Retorna el valor primitiu d’un objecte <strong>Number</strong>.</td></tr>
+</tbody></table>
+</div>
+<p>És un sistema numèric en base 2 (usa 2 símbols) i utilitza els dígits 0 i 1 com a representació numèrica.</p>
+<p>És un sistema numèric en base 8 (usa 8 símbols) i utilitza els dígits del 0 al 7 com a representació numèrica.</p>
+<p>És un sistema numèric en base 16 (usa 16 símbols) i utilitza els dígits del 0 a 9 i les lletres de l'A a la F com a representació numèrica.</p>
+<h3 id="24--objecte-boolean"><a class="header" href="#24--objecte-boolean"><strong>2.4.- Objecte Boolean.</strong></a></h3>
+<p>L'objecte <strong>Boolean</strong> s'utilitza per convertir un valor no lògic, a un valor lògic (<strong>true</strong> o <strong>false</strong>).</p>
+<figure markdown="span" class="img-small">
+  ![DWEC03_CONT_R14_String](img/DWEC03_CONT_R17_Verdadero.png){ width="100%" }
+  <figcaption style="font-size:0.7em;"><a href="https://commons.wikimedia.org/wiki/File:Crystal_Clear_app_clean.png">Darwin Bell</a><a href="http://www.gnu.org/licenses/gpl.html">&nbsp;(GNU/GPL)</a></figcaption>
+</figure>
+<p><strong>Propietats de l’objecte Boolean</strong></p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td><strong>constructor</strong></td><td>Retorna la funció que va crear l'objecte <strong>Boolean</strong>.</td></tr>
+<tr><td><strong>prototype</strong></td><td>Et permetrà afegir propietats i mètodes a un objecte.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Mètodes de l’objecte Boolean</strong></p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td><strong>toString()</strong></td><td>Converteix un valor <strong>Boolean</strong> a una cadena i retorna el resultat.</td></tr>
+<tr><td><strong>valueOf()</strong></td><td>Retorna el valor primitiu d’un objecte <strong>Boolean</strong>.</td></tr>
+</tbody></table>
+</div>
+<p>!!! info "<strong>Per saber-ne més</strong>"</p>
+<pre><code>En el següent enllaç podràs trobar exemples sobre l'ús de l'objecte **Boolean**.
+
+[Més informació i exemples sobre l'objecte **Boolean**.](http://www.desarrolloweb.com/articulos/777.php)
+</code></pre>
+<h3 id="25--objecte-date"><a class="header" href="#25--objecte-date"><strong>2.5.- Objecte Date.</strong></a></h3>
+<figure markdown="span" class="img-small">
+  ![DWEC03_CONT_R14_String](img/DWEC03_CONT_R18_Calendario.png){ width="100%" }
+  <figcaption style="font-size:0.7em;"><a href="https://commons.wikimedia.org/wiki/File:Crystal_Clear_app_clean.png">Darwin Bell</a><a href="http://www.gnu.org/licenses/gpl.html">&nbsp;(GNU/GPL)</a></figcaption>
+</figure>
+<p>L'objecte <strong>Date</strong> s'utilitza per treballar amb dates i hores. Els objectes <strong>Date</strong> es creen amb <strong>new Date()</strong>.</p>
+<p>Hi ha 4 formes d'instància (crear un objecte de tipus <strong>Date</strong>):</p>
+<pre><code class="language-javascript">let dia1 = new Date();  
+let dia2 = new Date(milisegundos);  
+let dia3 = new Date(cadena de Data);  
+let dia4 = new Date( any, mes, dia, hores, minuts, segons, mil·lisegons);
+</code></pre>
+<p><strong>Propietats de l’objecte Date</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Propietat</th><th>Descripció</th></tr></thead><tbody>
+<tr><td><strong>constructor</strong></td><td>Retorna la funció que va crear l'objecte <strong>Date</strong>.</td></tr>
+<tr><td><strong>prototype</strong></td><td>Et permetrà afegir propietats i mètodes a un objecte.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Mètodes de l’objecte Date</strong></p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left"></th><th style="text-align: left"></th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>getDate()</strong></td><td style="text-align: left">Retorna el dia del mes (d'1-31).</td></tr>
+<tr><td style="text-align: left"><strong>getDay()</strong></td><td style="text-align: left">Retorna el dia de la setmana (de 0-6).</td></tr>
+<tr><td style="text-align: left"><strong>getFullYear()</strong></td><td style="text-align: left">Retorna l'any (4 dígits).</td></tr>
+<tr><td style="text-align: left"><strong>getHours()</strong></td><td style="text-align: left">Torna l'hora (de 0-23).</td></tr>
+<tr><td style="text-align: left"><strong>getMilliseconds()</strong></td><td style="text-align: left">Retorna els mil·lisegons (de 0-999).</td></tr>
+<tr><td style="text-align: left"><strong>getMinutes()</strong></td><td style="text-align: left">Torna els minuts (de 0-59).</td></tr>
+<tr><td style="text-align: left"><strong>getMonth()</strong></td><td style="text-align: left">Torna el mes (de 0-11).</td></tr>
+<tr><td style="text-align: left"><strong>getSeconds()</strong></td><td style="text-align: left">Retorna els segons (de 0-59).</td></tr>
+<tr><td style="text-align: left"><strong>getTime()</strong></td><td style="text-align: left">Retorna els mil·lisegons des de mitja nit de l'1 de Gener de 1970.</td></tr>
+<tr><td style="text-align: left"><strong>getTimezoneOffset()</strong></td><td style="text-align: left">Retorna la diferència de temps entre GMT i l'hora local, en minuts.</td></tr>
+<tr><td style="text-align: left"><strong>getUTCDate()</strong></td><td style="text-align: left">Retorna el dia del mes en base a l'hora UTC (d'1-31).</td></tr>
+<tr><td style="text-align: left"><strong>getUTCDay()</strong></td><td style="text-align: left">Retorna el dia de la setmana en base a l'hora UTC (de 0-6).</td></tr>
+<tr><td style="text-align: left"><strong>getUTCFullYear()</strong></td><td style="text-align: left">Retorna l'any en base a l'hora UTC (4 dígits).</td></tr>
+<tr><td style="text-align: left"><strong>setDate()</strong></td><td style="text-align: left">Ajusta el dia del mes de l'objecte (d'1-31).</td></tr>
+<tr><td style="text-align: left"><strong>setFullYear()</strong></td><td style="text-align: left">Ajusta l'any de l'objecte (4 dígits).</td></tr>
+<tr><td style="text-align: left"><strong>setHours()</strong></td><td style="text-align: left">Ajusta l'hora de l'objecte (de 0-23).</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="capítol-2"><a class="header" href="#capítol-2">Capítol 2</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ut01-arquitectures-i-eines-de-desenvolupament"><a class="header" href="#ut01-arquitectures-i-eines-de-desenvolupament">UT01. Arquitectures i eines de desenvolupament</a></h1>
+<h2 id="1-navegadors-i-la-web"><a class="header" href="#1-navegadors-i-la-web">1. Navegadors i la Web</a></h2>
+<h3 id="11-introducció-a-la-web"><a class="header" href="#11-introducció-a-la-web">1.1. Introducció a la Web</a></h3>
+<p>La Web, inventada per <strong>Tim Berners-Lee</strong> al CERN el 1989, es fonamenta en el concepte d'<strong>hipertext</strong>. El <strong>World Wide Web Consortium (W3C)</strong> és l'organització responsable de desenvolupar i mantenir els estàndards web (incloent HTML, CSS i JavaScript) amb l'objectiu de garantir que la Web sigui oberta i accessible.</p>
+<p>Quan es parla de Web, es fa referència a l'espai d'informació format per tots els servidors interconnectats.</p>
+<h3 id="12-definició-i-funcionament-dels-navegadors"><a class="header" href="#12-definició-i-funcionament-dels-navegadors">1.2. Definició i Funcionament dels Navegadors</a></h3>
+<p>Un navegador web és un programari que permet l'accés a Internet, interpretant la informació d'arxius i llocs web per a la seva visualització. La seva funció bàsica és obtenir documents HTML i interpretar-los.</p>
+<ul>
+<li><strong>Hipervincles i Navegació:</strong> Els documents (pàgines web) posseeixen hipervincles que enllacen porcions de text o imatges a altres documents. El seguiment d'aquests enllaços es coneix com a <strong>navegació</strong>, d'on prové el nom <em>navegador</em>.</li>
+<li><strong>Protocols i URLs:</strong> Per accedir als recursos, s'utilitza un identificador únic anomenat <strong>URL (Uniform Resource Locator)</strong>. La comunicació entre el servidor web i el navegador es realitza principalment mitjançant el protocol <strong>HTTP</strong>, tot i que també se suporten <strong>FTP</strong> i <strong>HTTPS</strong> (una versió xifrada d'HTTP basada en SSL).</li>
+<li><strong>Estàndards:</strong> És imprescindible comprovar que qualsevol desenvolupament web funcioni correctament en els principals navegadors, i que el codi s'ajusti als estàndards HTML i XHTML. Es pot validar el compliment dels estàndards W3C mitjançant l'eina <code>https://validator.w3.org/</code>.</li>
+</ul>
+<h3 id="13-principals-navegadors-2020"><a class="header" href="#13-principals-navegadors-2020">1.3. Principals Navegadors (2020)</a></h3>
+<p>Els navegadors moderns suporten JavaScript i els estàndards web.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Navegador</th><th style="text-align: left">Motor de Renderitzat / Base</th><th style="text-align: left">Característiques clau</th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>Microsoft Edge</strong></td><td style="text-align: left">Motor de renderitzat de codi obert</td><td style="text-align: left">Substitueix l'antic Internet Explorer; dissenyat per ser lleuger.</td></tr>
+<tr><td style="text-align: left"><strong>Mozilla Firefox</strong></td><td style="text-align: left"><strong>Gecko</strong></td><td style="text-align: left">Lliure i de codi obert. Existeix la versió <em>Firefox Developer Edition</em> per a desenvolupadors.</td></tr>
+<tr><td style="text-align: left"><strong>Google Chrome</strong></td><td style="text-align: left"><strong>Blink</strong> (fork de WebKit)</td><td style="text-align: left">Compilat amb base en components de codi obert.</td></tr>
+<tr><td style="text-align: left"><strong>Safari</strong></td><td style="text-align: left">(Sense especificar)</td><td style="text-align: left">Navegador de codi tancat d'Apple (Mac OS, iOS, Windows—sense suport des del 2012).</td></tr>
+<tr><td style="text-align: left"><strong>Opera</strong></td><td style="text-align: left"><strong>Blink</strong></td><td style="text-align: left">Creat per Opera Software. Disposa de versions per a escriptori, telèfon i tauleta.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Recomanació:</strong> Es recomana utilitzar <strong>Mozilla Firefox</strong> o <strong>Google Chrome</strong> per la seva quota de mercat i la gran quantitat d'eines per a la depuració disponibles.</p>
+<h2 id="2-arquitectura-i-Àrees-del-desenvolupament-web"><a class="header" href="#2-arquitectura-i-Àrees-del-desenvolupament-web">2. Arquitectura i Àrees del Desenvolupament Web</a></h2>
+<h3 id="21-arquitectura-client-servidor"><a class="header" href="#21-arquitectura-client-servidor">2.1. Arquitectura Client-Servidor</a></h3>
+<p>El desenvolupament web es basa en el model client-servidor:</p>
+<ul>
+<li><strong>Costat del Servidor (<em>Server-side</em>)</strong>: Inclou el <em>hardware</em> i <em>software</em> (servidors web com Apache, IIS, NGINX) i les tecnologies de programació incrustades (com CGI, PERL, PHP, Node.js).</li>
+<li><strong>Costat del Client (<em>Client-side</em>)</strong>: Fa referència als navegadors web (clients web) i les tecnologies que suporten, com HTML, CSS i llenguatges com JavaScript, utilitzats per a la presentació i les característiques interactives.</li>
+</ul>
+<p>La tria entre tecnologia <em>client-side</em> i <em>server-side</em> depèn de la tasca; són complementàries. Per exemple, la validació de formularis és més efectiva al costat del client, mentre que l'emmagatzematge de dades es gestiona millor al costat del servidor.</p>
+<h3 id="22-Àrees-del-disseny-i-desenvolupament-web"><a class="header" href="#22-Àrees-del-disseny-i-desenvolupament-web">2.2. Àrees del Disseny i Desenvolupament Web</a></h3>
+<p>El desenvolupament web abasta diverses facetes:</p>
+<ol>
+<li><strong>Contingut:</strong> Forma i organització del contingut del lloc, estructurat amb tecnologies de marcat com <strong>HTML</strong>.</li>
+<li><strong>Visual (Disseny):</strong> Plantilla, aparença i elements gràfics, utilitzant tecnologies com <strong>CSS</strong>.</li>
+<li><strong>Tecnologia:</strong> Tipus d'elements interactius, sovint construïts mitjançant tècniques de programació.</li>
+<li><strong>Distribució:</strong> Velocitat i fiabilitat amb què el lloc web es distribueix (hardware/software i arquitectura de xarxa).</li>
+<li><strong>Propòsit:</strong> La raó per la qual existeix el lloc web (sovint de tipus econòmic).</li>
+</ol>
+<h2 id="3-llenguatges-de-scripting-javascript"><a class="header" href="#3-llenguatges-de-scripting-javascript">3. Llenguatges de Scripting (JavaScript)</a></h2>
+<p>El focus del mòdul se centra en els llenguatges de <em>scripting</em> que aporten dinamisme a les pàgines, principalment <strong>JavaScript</strong>.</p>
+<h3 id="31-rol-i-característiques-de-javascript"><a class="header" href="#31-rol-i-característiques-de-javascript">3.1. Rol i Característiques de JavaScript</a></h3>
+<p>JavaScript se situa a la capa superior del desenvolupament web en el costat del client, gestionant el <strong>Comportament</strong> de la pàgina. Les 4 capes són: Comportament (JavaScript), Presentació (CSS), Estructura (DOM / HTML), i Contingut.</p>
+<p><strong>Usos típics de JavaScript:</strong></p>
+<ul>
+<li>Fer que la pàgina web respongui a la interacció de l'usuari.</li>
+<li>Pre-processar dades al client abans d'enviar-les al servidor.</li>
+<li>Modificar estils i contingut dinàmicament.</li>
+<li>Utilitzar AJAX per sol·licitar dades XML al servidor de forma <strong>asíncrona</strong> (<em>background</em>) i transparent.</li>
+</ul>
+<h3 id="32-limitacions-i-seguretat"><a class="header" href="#32-limitacions-i-seguretat">3.2. Limitacions i Seguretat</a></h3>
+<p>JavaScript és interpretat pel client, però presenta limitacions que reforcen la seguretat:</p>
+<ul>
+<li><strong>No tots els clients executen JavaScript</strong>; per tant, la pàgina hauria de ser funcional fins i tot amb JavaScript desactivat.</li>
+<li><strong>No pot escriure fitxers directament al servidor</strong> (aquesta tasca recau en el llenguatge de servidor).</li>
+<li>S'executa en un "<strong>espai segur d'execució</strong>" i està restringit per la <strong>política de "mateix origen"</strong> (<em>same-origin</em>), impedint l'accés a informació d'altres webs (usuaris, contrasenyes, <em>cookies</em>).</li>
+<li>No pot modificar les preferències del navegador, llançar aplicacions en l'ordinador del client, ni llegir o escriure fitxers locals (amb l'excepció de les <em>cookies</em>).</li>
+</ul>
+<h3 id="33-integració-de-codi-javascript-amb-html"><a class="header" href="#33-integració-de-codi-javascript-amb-html">3.3. Integració de Codi JavaScript amb HTML</a></h3>
+<p>El codi JavaScript es pot inserir utilitzant l'etiqueta <code>&lt;script&gt;&lt;/script&gt;</code>.</p>
+<ul>
+<li><strong>Ficher Extern:</strong> La forma més recomanable és incrustar un fitxer extern (<code>.js</code>) mitjançant l'atribut <code>src</code>. Això permet la separació de codi i estructura, la centralització de codi per a depuració i millora la rapidesa de càrrega (gràcies a la memòria cau del navegador).
+<ul>
+<li>Exemple: <code>&lt;script type="text/javascript" src="tucodigo.js"&gt;&lt;/script&gt;</code>.</li>
+</ul>
+</li>
+<li><strong>XHTML:</strong> En XHTML, s'utilitzen les seccions <strong>CDATA</strong> per encapsular les instruccions de JavaScript i evitar conflictes amb caràcters com <code>&lt;</code> i <code>&amp;</code>.</li>
+</ul>
+<h2 id="4-entorn-de-desenvolupament-i-eines"><a class="header" href="#4-entorn-de-desenvolupament-i-eines">4. Entorn de Desenvolupament i Eines</a></h2>
+<h3 id="41-eines-i-entorns-recomanats"><a class="header" href="#41-eines-i-entorns-recomanats">4.1. Eines i Entorns Recomanats</a></h3>
+<p>Es recomana l'ús de <strong>Visual Studio Code (VSC)</strong> com a entorn de desenvolupament per la seva potència i el seu gran ecosistema de <em>plugins</em>. Els editors de codi han de facilitar la programació amb característiques com sintaxi amb codificació de colors i verificació de sintaxi.</p>
+<p><strong>Control de Versions:</strong> Durant el curs s'utilitzaran repositoris <strong>Git</strong> per al lliurament de pràctiques i el control de versions.</p>
+<h3 id="42-la-consola-web-f12"><a class="header" href="#42-la-consola-web-f12">4.2. La Consola Web (F12)</a></h3>
+<p>La majoria de navegadors incorporen eines natives per facilitar el desenvolupament. La més destacada és la <strong>Consola Web</strong>, accessible prement la tecla <strong>F12</strong> a Firefox i Google Chrome.</p>
+<p>La consola web inclou diverses pestanyes per a la depuració:</p>
+<ul>
+<li><strong>Red (Xarxa):</strong> Registre de peticions HTTP.</li>
+<li><strong>CSS:</strong> Anàlisi i errors CSS (mostrat en color blau).</li>
+<li><strong>JS:</strong> Anàlisi i errors Javascript (mostrat en color groc).</li>
+<li><strong>Seguridad (Seguretat):</strong> Advertències o fallades de seguretat (mostrat en color vermell).</li>
+<li><strong>Registro (Registre):</strong> Missatges enviats a l'objecte <code>window.console</code> (mostrat en color gris).</li>
+</ul>
+<h2 id="5-evolució-i-tipus-daplicacions-web"><a class="header" href="#5-evolució-i-tipus-daplicacions-web">5. Evolució i Tipus d'Aplicacions Web</a></h2>
+<p>El desenvolupament d'aplicacions web ha evolucionat significativament:</p>
+<ol>
+<li><strong>Pàgines Web Estàtiques:</strong> Simples pàgines HTML amb hipervincles.</li>
+<li><strong>Pàgines Web Generades pel Servidor:</strong> HTML generat al servidor (PHP, Node, Java).</li>
+<li><strong>Introducció d'AJAX:</strong> Permet carregar o pujar dades al servidor de manera asíncrona, millorant la interactivitat sense recarregar la pàgina.</li>
+<li><strong>Single Page Application (SPA):</strong> Aplicacions d'una sola pàgina que es comuniquen amb el servidor usant JSON o XML, oferint una experiència d'App.</li>
+</ol>
+<h3 id="51-tecnologies-de-frontend-javascript"><a class="header" href="#51-tecnologies-de-frontend-javascript">5.1. Tecnologies de Frontend (JavaScript)</a></h3>
+<p>Es pot programar utilitzant:</p>
+<ul>
+<li><strong>JavaScript 'Vanilla':</strong> JavaScript pur, sense biblioteques.</li>
+<li><strong>Biblioteques:</strong> Faciliten tasques complexes sense canviar el paradigma de programació (e.g., <strong>JQuery</strong>, <strong>React</strong>, Vue.js).</li>
+<li><strong>Frameworks:</strong> Canvien totalment el paradigma de programació, facilitant la creació ràpida de pàgines (e.g., <strong>Angular</strong>, Vue.js).</li>
+<li><strong>Frameworks Full Stack / MetaFrameworks:</strong> S'encarreguen tant del <em>backend</em> com del <em>frontend</em>, utilitzant tècniques com el <strong>Server Side Rendering (SSR)</strong> o l'<strong>Hydration</strong> (que permet que les aplicacions generades al servidor continuïn sent dinàmiques al client).</li>
+</ul>
+<p>Altres tipus d'aplicacions web inclouen les <strong>Progressive Web Apps (PWA)</strong>, que combinen les millors característiques de les webs i les aplicacions mòbils, i les <strong>Apps Híbrides</strong>.</p>
+<h3 id="52-producció-i-optimització"><a class="header" href="#52-producció-i-optimització">5.2. Producció i Optimització</a></h3>
+<p>Per a la posada en producció, es necessita un servidor web que serveixi els fitxers HTML, CSS i Javascript de forma estàtica. Sovint s'utilitzen eines de construcció (<em>JavaScript Build Tools</em>), com <strong>Vite</strong> o <strong>Webpack</strong>, que compilen, minifican i optimitzen el codi per millorar la velocitat de càrrega i evitar incompatibilitats entre navegadors.</p>
+<hr />
+<h1 id="informe-tècnic-anàlisi-comparativa-darquitectures-web-client-servidor"><a class="header" href="#informe-tècnic-anàlisi-comparativa-darquitectures-web-client-servidor"><strong>Informe Tècnic: Anàlisi Comparativa d'Arquitectures Web Client-Servidor</strong></a></h1>
+<h2 id="10-introducció-a-les-arquitectures-de-desenvolupament-web"><a class="header" href="#10-introducció-a-les-arquitectures-de-desenvolupament-web"><strong>1.0 Introducció a les Arquitectures de Desenvolupament Web</strong></a></h2>
+<h3 id="11-anàlisi-del-context-estratègic"><a class="header" href="#11-anàlisi-del-context-estratègic"><strong>1.1. Anàlisi del Context Estratègic</strong></a></h3>
+<p>Comprendre l'arquitectura client-servidor és fonamental per a qualsevol iniciativa de desenvolupament a la web moderna. Aquest model constitueix la base sobre la qual s'erigeixen pràcticament totes les aplicacions i serveis digitals. Aquest informe tècnic té com a objectiu principal analitzar i comparar les tecnologies, responsabilitats i millors pràctiques inherents als entorns del costat del client (client-side) i del costat del servidor (server-side). La finalitat és proporcionar una guia clara i estratègica per a la presa de decisions tècniques en projectes de desenvolupament web, assegurant que les solucions adoptades siguin robustes, segures i eficients.</p>
+<h3 id="12-definició-del-model-client-servidor"><a class="header" href="#12-definició-del-model-client-servidor"><strong>1.2. Definició del Model Client-Servidor</strong></a></h3>
+<p>El model client-servidor és l'estructura fonamental que permet la comunicació a la World Wide Web. Es compon de tres elements essencials que treballen de manera coordinada:</p>
+<ul>
+<li><strong>El costat del client (client-side):</strong> Fa referència a l'entorn on l'usuari final interactua amb l'aplicació. En la gran majoria dels casos, aquest entorn és el navegador web (com ara Firefox, Google Chrome o Microsoft Edge) que s'executa a l'ordinador o dispositiu mòbil de l'usuari.</li>
+<li><strong>El costat del servidor (server-side):</strong> Correspon a l'entorn remot que allotja el lloc web i gestiona la seva lògica central. Inclou el maquinari (servidors físics, màquines virtuals), el programari de servidor web (com Apache o NGINX), els llenguatges de programació del backend i les bases de dades on s'emmagatzema la informació de manera persistent.</li>
+<li><strong>La xarxa:</strong> És el teixit connectiu que comunica el client i el servidor. Aquesta comunicació es realitza mitjançant protocols estàndard, principalment el Protocol de Transferència d'Hipertext (HTTP), que defineix com s'estructuren i es transmeten els missatges entre ambdós extrems.</li>
+</ul>
+<h3 id="13-transició"><a class="header" href="#13-transició"><strong>1.3. Transició</strong></a></h3>
+<p>Amb aquest marc conceptual establert, l'informe procedirà a una anàlisi detallada de cada component, començant per l'arquitectura i les tecnologies que defineixen el costat del client.</p>
+<h2 id="20-anàlisi-de-larquitectura-del-costat-del-client-client-side"><a class="header" href="#20-anàlisi-de-larquitectura-del-costat-del-client-client-side"><strong>2.0 Anàlisi de l'Arquitectura del Costat del Client (Client-Side)</strong></a></h2>
+<h3 id="21-visió-general-estratègica"><a class="header" href="#21-visió-general-estratègica"><strong>2.1. Visió General Estratègica</strong></a></h3>
+<p>L'arquitectura del costat del client és responsable de tot allò que l'usuari veu i amb què interactua directament al seu navegador. El seu rol estratègic és crucial, ja que determina la qualitat de l'experiència d'usuari (UX), la interactivitat i el dinamisme de la interfície. Tot el codi client-side s'executa íntegrament en el dispositiu de l'usuari, la qual cosa permet respostes immediates a les seves accions sense necessitat de comunicar-se constantment amb el servidor.</p>
+<h3 id="22-anàlisi-de-les-tecnologies-fonamentals"><a class="header" href="#22-anàlisi-de-les-tecnologies-fonamentals"><strong>2.2. Anàlisi de les Tecnologies Fonamentals</strong></a></h3>
+<p>El desenvolupament en el costat del client s'estructura en capes tecnològiques ben definides, cadascuna amb una responsabilitat específica per construir una experiència web completa:</p>
+<ul>
+<li><strong>Contingut (HTML):</strong> L'HTML (HyperText Markup Language) és l'esquelet de qualsevol pàgina web. Defineix l'estructura semàntica del contingut, organitzant la informació en elements com títols, paràgrafs, llistes, imatges i formularis.</li>
+<li><strong>Presentació (CSS):</strong> El CSS (Cascading Style Sheets) s'encarrega de l'aspecte visual i l'estil. Controla la disposició (layout), els colors, la tipografia i les plantilles, separant de manera efectiva la presentació de l'estructura del contingut.</li>
+<li><strong>Comportament (JavaScript):</strong> JavaScript és el llenguatge de programació principal del client. Aporta interactivitat i dinamisme a les pàgines, permetent executar lògica directament al navegador per respondre a les accions de l'usuari i modificar el contingut de la pàgina en temps real.</li>
+</ul>
+<h3 id="23-avaluació-de-funcionalitats-i-casos-dÚs"><a class="header" href="#23-avaluació-de-funcionalitats-i-casos-dÚs"><strong>2.3. Avaluació de Funcionalitats i Casos d'Ús</strong></a></h3>
+<p>La programació del costat del client, principalment a través de JavaScript, habilita un conjunt de funcionalitats clau per a les aplicacions web modernes:</p>
+<ul>
+<li><strong>Reacció a la Interacció de l'Usuari:</strong> Gestiona esdeveniments com clics en enllaços, enviaments de formularis o moviments del ratolí, permetent que la pàgina respongui de manera immediata a les accions de l'usuari.</li>
+<li><strong>Modificació Dinàmica de Contingut i Estil:</strong> Permet alterar l'estructura (DOM - Document Object Model) i l'estil de la pàgina en temps real, sense necessitat de recarregar-la. Això és fonamental per a funcionalitats com mostrar o amagar seccions, actualitzar dades o aplicar efectes visuals.</li>
+<li><strong>Preprocessament de Dades:</strong> S'utilitza per realitzar validacions en formularis abans que les dades siguin enviades al servidor. Aquesta pràctica millora significativament l'experiència de l'usuari, ja que proporciona una retroalimentació instantània sobre possibles errors.</li>
+<li><strong>Comunicació Asíncrona (AJAX):</strong> Mitjançant tecnologies com AJAX (Asynchronous JavaScript and XML), el client pot sol·licitar o enviar dades al servidor en segon pla. Això permet actualitzar parts específiques d'una pàgina (com un feed de notícies o un mapa) sense interrompre l'experiència de navegació de l'usuari.</li>
+</ul>
+<h3 id="24-anàlisi-de-lecosistema-de-desenvolupament"><a class="header" href="#24-anàlisi-de-lecosistema-de-desenvolupament"><strong>2.4. Anàlisi de l'Ecosistema de Desenvolupament</strong></a></h3>
+<p>El desenvolupament amb JavaScript es pot abordar des de diferents nivells de complexitat i abstracció, cadascun amb els seus propis avantatges estratègics:</p>
+<ul>
+<li><strong>JavaScript 'Vanilla':</strong> Es refereix a l'ús de JavaScript pur, sense cap biblioteca o framework extern. És una opció ideal per a projectes petits o per afegir interactivitat simple, ja que no introdueix dependències addicionals i ofereix un control màxim sobre el codi.</li>
+<li><strong>Biblioteques (p. ex., JQuery, React):</strong> Són conjunts de codi que faciliten tasques específiques i repetitives, com la manipulació del DOM o la gestió d'esdeveniments. S'integren en projectes existents per resoldre problemes concrets, oferint eines per augmentar la productivitat sense imposar una estructura completa a l'aplicació.</li>
+<li><strong>Frameworks (p. ex., Angular, Vue.js):</strong> Ofereixen una estructura completa i un paradigma de programació definit per construir aplicacions complexes des de zero. Canvien completament la manera de programar, facilitant un desenvolupament ràpid i organitzat, però creen una dependència tecnològica més forta. Eines com <strong>React</strong> i <strong>Vue.js</strong> difuminen aquesta distinció, ja que, tot i ser tècnicament biblioteques, sovint s'utilitzen com a base fonamental d'aplicacions complexes, adoptant un rol similar al d'un framework.</li>
+</ul>
+<h3 id="25-examen-de-limitacions-i-restriccions-de-seguretat"><a class="header" href="#25-examen-de-limitacions-i-restriccions-de-seguretat"><strong>2.5. Examen de Limitacions i Restriccions de Seguretat</strong></a></h3>
+<p>L'execució de codi al navegador del client comporta limitacions i restriccions de seguretat inherents. Aquestes limitacions funcionals són una conseqüència directa del model de seguretat dissenyat per protegir l'usuari i la integritat del seu sistema operatiu.</p>
+<h4 id="limitacions-funcionals"><a class="header" href="#limitacions-funcionals"><strong>Limitacions Funcionals</strong></a></h4>
+<p>Per disseny, JavaScript executat en un navegador <strong>no</strong> pot realitzar les següents accions:</p>
+<ol>
+<li>Escriure fitxers directament al servidor.</li>
+<li>Llegir o escriure fitxers o directoris a l'ordinador del client (a excepció de les cookies).</li>
+<li>Llançar l'execució d'aplicacions externes a l'ordinador del client.</li>
+<li>Modificar les preferències del navegador o accedir a elements de la interfície del sistema operatiu.</li>
+<li>Accedir a informació d'una pàgina web allotjada en un domini diferent.</li>
+</ol>
+<h4 id="model-de-seguretat"><a class="header" href="#model-de-seguretat"><strong>Model de Seguretat</strong></a></h4>
+<p>La seguretat de JavaScript al client es basa en dos pilars fonamentals:</p>
+<ul>
+<li><strong>"Espai segur d'execució" (Sandbox):</strong> El codi JavaScript s'executa en un entorn aïllat (sandbox) dins del navegador. Aquest entorn restringeix el seu accés al sistema operatiu i als recursos del sistema, limitant les seves accions a tasques relacionades exclusivament amb la pàgina web.</li>
+<li><strong>"Política de mateix origen" (Same-Origin Policy):</strong> Aquesta política de seguretat impedeix que un script carregat des d'un domini pugui accedir a dades (com cookies o informació d'usuari) d'un altre domini. Això és crucial per prevenir atacs on un lloc maliciós intenti robar informació d'un altre lloc obert al navegador.</li>
+</ul>
+<h3 id="26-transició"><a class="header" href="#26-transició"><strong>2.6. Transició</strong></a></h3>
+<p>Aquestes limitacions intrínseques del costat del client, especialment la incapacitat d'emmagatzemar dades de forma permanent i segura, posen de manifest la necessitat d'una contrapartida al servidor per a gestionar la lògica de negoci crítica i la persistència de la informació.</p>
+<h2 id="30-anàlisi-de-larquitectura-del-costat-del-servidor-server-side"><a class="header" href="#30-anàlisi-de-larquitectura-del-costat-del-servidor-server-side"><strong>3.0 Anàlisi de l'Arquitectura del Costat del Servidor (Server-Side)</strong></a></h2>
+<h3 id="31-perspectiva-estratègica-del-servidor"><a class="header" href="#31-perspectiva-estratègica-del-servidor"><strong>3.1. Perspectiva Estratègica del Servidor</strong></a></h3>
+<p>L'arquitectura del costat del servidor constitueix el nucli central de qualsevol aplicació web robusta. És on resideix la lògica de negoci, es gestiona la persistència de les dades i s'implementen les mesures de seguretat fonamentals. A diferència del client, el servidor és un entorn controlat pel desenvolupador, la qual cosa li permet executar tasques privilegiades i accedir a recursos protegits.</p>
+<h3 id="32-anàlisi-de-les-tecnologies-i-components"><a class="header" href="#32-anàlisi-de-les-tecnologies-i-components"><strong>3.2. Anàlisi de les Tecnologies i Components</strong></a></h3>
+<p>L'entorn del servidor està format per una pila de tecnologies que treballen conjuntament per processar les sol·licituds dels clients i generar respostes adequades:</p>
+<ul>
+<li><strong>Programari de Servidor Web:</strong> És el programari que rep les peticions HTTP dels navegadors i serveix els fitxers corresponents. Exemples destacats inclouen <strong>Apache</strong>, <strong>NGINX</strong> i <strong>Microsoft IIS</strong>.</li>
+<li><strong>Llenguatges de Programació:</strong> El servidor executa codi escrit en una àmplia varietat de llenguatges dissenyats per a la web. Aquests inclouen llenguatges de scripting com <strong>PHP</strong>, <strong>Perl (CGI)</strong>, <strong>Python</strong> o <strong>Node.js (JavaScript al servidor)</strong>, o llenguatges compilats com <strong>Java</strong> o <strong>C++</strong>. També s'inclouen tecnologies propietàries com <strong>ASP.NET</strong> i plataformes com <strong>ColdFusion</strong>.</li>
+<li><strong>Bases de Dades:</strong> Són sistemes d'emmagatzematge organitzat on l'aplicació guarda i recupera la informació de manera permanent. El servidor actua com a intermediari segur entre l'aplicació i la base de dades.</li>
+</ul>
+<h3 id="33-avaluació-de-funcionalitats-i-responsabilitats-clau"><a class="header" href="#33-avaluació-de-funcionalitats-i-responsabilitats-clau"><strong>3.3. Avaluació de Funcionalitats i Responsabilitats Clau</strong></a></h3>
+<p>Les tasques següents són responsabilitat exclusiva o principal de l'arquitectura del servidor:</p>
+<ul>
+<li><strong>Emmagatzematge Permanent de Dades:</strong> El servidor és l'únic component capaç d'interactuar de manera segura amb les bases de dades per guardar, modificar i consultar informació (com perfils d'usuari, productes o comandes).</li>
+<li><strong>Lògica de Negoci i Accés a Dades:</strong> Processa les sol·licituds rebudes, aplica les regles de negoci de l'aplicació i determina quines dades s'han de consultar o modificar. Garanteix que les operacions es realitzin de manera consistent i segura.</li>
+<li><strong>Autenticació i Seguretat:</strong> La gestió d'usuaris, la validació de credencials i l'aplicació de permisos d'accés són tasques crítiques que han de residir al servidor. La validació final de qualsevol dada provinent del client es realitza aquí per prevenir vulnerabilitats.</li>
+</ul>
+<h3 id="34-transició"><a class="header" href="#34-transició"><strong>3.4. Transició</strong></a></h3>
+<p>Un cop definits els rols i capacitats de cada arquitectura, és essencial comparar directament com certes tasques comunes es poden abordar des de cada costat per prendre decisions d'implementació informades.</p>
+<h2 id="40-anàlisi-comparativa-dimplementació-client-vs-servidor"><a class="header" href="#40-anàlisi-comparativa-dimplementació-client-vs-servidor"><strong>4.0 Anàlisi Comparativa d'Implementació: Client vs. Servidor</strong></a></h2>
+<h3 id="41-introducció-a-la-presa-de-decisions-tècniques"><a class="header" href="#41-introducció-a-la-presa-de-decisions-tècniques"><strong>4.1. Introducció a la Presa de Decisions Tècniques</strong></a></h3>
+<p>Moltes funcionalitats en el desenvolupament web no tenen una única ubicació d'implementació; es poden realitzar tant al client com al servidor. La decisió correcta depèn d'un equilibri estratègic entre factors com l'experiència d'usuari, el rendiment de l'aplicació, la integritat de les dades i la seguretat. Escollir el lloc adequat per a cada tasca és clau per construir una aplicació eficient i robusta.</p>
+<h3 id="42-matriu-comparativa-de-tasques-comunes"><a class="header" href="#42-matriu-comparativa-de-tasques-comunes"><strong>4.2. Matriu Comparativa de Tasques Comunes</strong></a></h3>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Tasca</th><th style="text-align: left">Implementació Client-Side (Anàlisi)</th><th style="text-align: left">Implementació Server-Side (Anàlisi)</th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>Validació de Formularis</strong></td><td style="text-align: left"><strong>Recomanable per a UX:</strong> Proporciona retroalimentació instantània a l'usuari sense sobrecarregar el servidor. Millora la usabilitat i redueix la frustració. Tanmateix, és vulnerable, ja que es pot eludir.</td><td style="text-align: left"><strong>Obligatòria per a Seguretat:</strong> És l'única validació fiable. El servidor ha de verificar sempre totes les dades rebudes per garantir la integritat i prevenir atacs maliciosos, ja que la validació del client pot ser desactivada o manipulada.</td></tr>
+<tr><td style="text-align: left"><strong>Accés i Emmagatzematge de Dades</strong></td><td style="text-align: left"><strong>Accés per a Visualització:</strong> Ideal per presentar dades rebudes del servidor (p. ex., en una presentació de diapositives) i manipular-les a la interfície. No pot emmagatzemar dades de manera permanent i segura.</td><td style="text-align: left">**Emmagatzematge Centralitzat:**Responsabilitat exclusiva del servidor. Gestiona la interacció amb la base de dades per garantir la persistència, la seguretat i la integritat de la informació.</td></tr>
+<tr><td style="text-align: left"><strong>Execució de Càlculs</strong></td><td style="text-align: left"><strong>Apropiat per a Càlculs d'Interfície:</strong> Útil per a operacions simples que milloren la interactivitat (p. ex., calcular el total d'un carret de la compra en temps real). L'execució és ràpida, ja que utilitza els recursos del client.</td><td style="text-align: left"><strong>Necessari per a Càlculs Crítics:</strong> Essencial per a càlculs complexos, que requereixen dades segures o que formen part de la lògica de negoci principal. L'execució al servidor garanteix la precisió i la seguretat del resultat.</td></tr>
+<tr><td style="text-align: left"><strong>Manipulació d'Elements de la Pàgina</strong></td><td style="text-align: left"><strong>Tasca Inherent del Client:</strong> És la seva funció principal. Operacions com eliminar un paràgraf, afegir un element a una llista o canviar un estil es realitzen manipulant el DOM directament al navegador, proporcionant una resposta immediata.</td><td style="text-align: left"><strong>No Aplicable:</strong> El servidor no té accés directe al DOM de la pàgina un cop ha estat enviada al client. La seva funció és generar l'HTML inicial o proporcionar dades perquè el client realitzi les manipulacions.</td></tr>
+</tbody></table>
+</div>
+<h3 id="43-anàlisi-de-la-complementarietat"><a class="header" href="#43-anàlisi-de-la-complementarietat"><strong>4.3. Anàlisi de la Complementarietat</strong></a></h3>
+<p>La conclusió clau d'aquesta anàlisi és que les tecnologies client-side i server-side són <strong>complementàries, no adversàries</strong>. Una aplicació web ben dissenyada aprofita els punts forts de cada arquitectura per oferir la millor solució possible. L'exemple de la validació de formularis és paradigmàtic: la millor pràctica consisteix a implementar una validació inicial al client per millorar l'experiència d'usuari i una validació final i exhaustiva al servidor per garantir la seguretat i la integritat de les dades. Aquesta col·laboració és el pilar del desenvolupament web modern.</p>
+<h3 id="44-transició"><a class="header" href="#44-transició"><strong>4.4. Transició</strong></a></h3>
+<p>Un cop enteses les arquitectures i la seva interrelació, el pas següent és examinar les eines i les pràctiques recomanades per implementar aquestes solucions de manera efectiva i professional.</p>
+<h2 id="50-eines-de-desenvolupament-i-millors-pràctiques"><a class="header" href="#50-eines-de-desenvolupament-i-millors-pràctiques"><strong>5.0 Eines de Desenvolupament i Millors Pràctiques</strong></a></h2>
+<h3 id="51-importància-de-lentorn-de-desenvolupament"><a class="header" href="#51-importància-de-lentorn-de-desenvolupament"><strong>5.1. Importància de l'Entorn de Desenvolupament</strong></a></h3>
+<p>La qualitat i l'eficiència en el desenvolupament web no depenen només de l'arquitectura escollida, sinó també de l'entorn de treball i de l'adhesió a bones pràctiques. Un entorn de desenvolupament ben configurat, equipat amb les eines adequades, i el seguiment d'estàndards de la indústria són crucials per accelerar el procés, minimitzar errors i garantir la qualitat del producte final.</p>
+<h3 id="52-selecció-deines-essencials"><a class="header" href="#52-selecció-deines-essencials"><strong>5.2. Selecció d'Eines Essencials</strong></a></h3>
+<ul>
+<li><strong>Editors de Codi i IDEs:</strong> L'elecció d'eines d'edició de codi abasta un espectre que va des d'editors simples fins a entorns de desenvolupament integrats (IDEs) complets. Es poden classificar en tres categories principals:
+<ul>
+<li><strong>Editors simples:</strong> Ideals per a modificacions ràpides i casuals (p. ex., Notepad, Gedit). Són lleugers però manquen de funcionalitats avançades.</li>
+<li><strong>Editors de text avançats:</strong> Ofereixen un equilibri excel·lent entre rendiment i funcionalitat, amb característiques com ressaltat de sintaxi, autocompletat i un ampli ecosistema d'extensions.</li>
+<li><strong>Entorns de Desenvolupament Integrats (IDEs):</strong> Solucions completes dissenyades per a projectes grans i complexos, que integren depuradors, compiladors i altres eines (p. ex., Eclipse, NetBeans).</li>
+</ul>
+</li>
+<li>Per a la majoria de projectes de desenvolupament web modern, es recomana explícitament l'ús de <strong>Visual Studio Code</strong>, un editor de text avançat que destaca per la seva potència, versatilitat i extensibilitat. Les extensions clau per a un flux de treball eficient inclouen:
+<ul>
+<li><code>Prettier</code>: Per a un formatatge automàtic i consistent del codi.</li>
+<li><code>ESLint</code>: Per a la detecció d'errors de programació i d'estil en JavaScript.</li>
+<li><code>Live Server</code>: Per llançar un servidor de desenvolupament local que recarrega automàticament la pàgina en desar els canvis.</li>
+<li><code>html-in-template-string</code>: Per facilitar l'edició de literals de plantilla (template literals) en JavaScript.</li>
+</ul>
+</li>
+<li><strong>Navegadors i Eines de Depuració:</strong> És imprescindible provar el codi en múltiples navegadors per assegurar la compatibilitat. Es recomana centrar-se en <strong>Firefox</strong> i <strong>Google Chrome</strong> per la seva quota de mercat i les seves excel·lents eines per a desenvolupadors. Aquestes eines, accessibles prement la tecla <code>F12</code>, inclouen la <strong>"Consola Web"</strong>, que és fonamental per registrar missatges, inspeccionar errors de JavaScript i analitzar el trànsit de xarxa.</li>
+<li><strong>Control de Versions:</strong> L'ús d'un sistema de control de versions és una pràctica estàndard i ineludible en el desenvolupament professional. <strong>Git</strong> és l'eina de facto del sector per gestionar l'historial de canvis del codi, facilitar la col·laboració en equip i mantenir un registre de les versions del projecte.</li>
+</ul>
+<h3 id="53-guia-de-millors-pràctiques-dimplementació"><a class="header" href="#53-guia-de-millors-pràctiques-dimplementació"><strong>5.3. Guia de Millors Pràctiques d'Implementació</strong></a></h3>
+<ul>
+<li><strong>Adhesió als Estàndards Web:</strong> És fonamental garantir que el codi HTML sigui vàlid segons les especificacions del W3C. L'ús del <strong>validador del W3C</strong> (<code>https://validator.w3.org/</code>) ajuda a detectar errors estructurals que, si no es corregeixen, poden provocar un funcionament incorrecte del CSS i del JavaScript. Un HTML invàlid és una font comuna de problemes de compatibilitat entre navegadors.</li>
+<li><strong>Integració de Codi JavaScript:</strong> Encara que és possible inserir codi JavaScript directament dins dels fitxers HTML, la pràctica recomanada és utilitzar <strong>fitxers externs amb extensió <code>.js</code></strong>. Aquest enfocament millora significativament la modularitat, permet la reutilització del codi en múltiples pàgines, optimitza el rendiment gràcies a la memòria cau del navegador i augmenta la claredat i mantenibilitat del projecte.</li>
+<li><strong>Disseny Funcional Sense JavaScript:</strong> Un principi de disseny robust, conegut com a "progressive enhancement" (millora progressiva), dicta que una pàgina web hauria de ser completament funcional i accessible encara que JavaScript estigui desactivat. JavaScript s'hauria d'utilitzar per millorar l'experiència d'usuari i afegir interactivitat, però no hauria de ser un requisit absolut per accedir al contingut o a les funcionalitats bàsiques.</li>
+</ul>
+<h3 id="54-transició"><a class="header" href="#54-transició"><strong>5.4. Transició</strong></a></h3>
+<p>La combinació d'una comprensió clara de les arquitectures, l'ús d'eines adequades i l'adopció d'aquestes millors pràctiques permet als equips de desenvolupament prendre decisions informades i construir productes web de la màxima qualitat per a cada projecte específic.</p>
+<h2 id="60-conclusions-i-recomanacions-estratègiques"><a class="header" href="#60-conclusions-i-recomanacions-estratègiques"><strong>6.0 Conclusions i Recomanacions Estratègiques</strong></a></h2>
+<h3 id="61-síntesi-final"><a class="header" href="#61-síntesi-final"><strong>6.1. Síntesi Final</strong></a></h3>
+<p>Aquest informe ha demostrat que les arquitectures del costat del client i del costat del servidor no són opcions excloents, sinó components d'un sistema integrat i complementari. El client excel·leix en la creació d'interfícies d'usuari interactives i amb una resposta ràpida, mentre que el servidor ostenta un rol insubstituïble en la gestió de la lògica de negoci, la persistència de dades i la seguretat. La clau de l'èxit en el desenvolupament web rau en entendre les fortaleses i limitacions de cada entorn per assignar cada tasca al lloc on s'executarà de manera més eficient i segura.</p>
+<h3 id="62-guia-per-a-la-presa-de-decisions"><a class="header" href="#62-guia-per-a-la-presa-de-decisions"><strong>6.2. Guia per a la Presa de Decisions</strong></a></h3>
+<p>Una de les decisions arquitectòniques més rellevants avui dia és si optar per una <strong>Single Page Application (SPA)</strong>, que delega gran part de la lògica de presentació al client. L'anàlisi suggereix que una SPA pot ser considerada "sobreenginyeria" si no es justifica adequadament. Els següents criteris ajuden a prendre una decisió informada:</p>
+<ul>
+<li><strong>Freqüència d'Ús:</strong> Una SPA és més adequada per a aplicacions que l'usuari manté obertes i utilitza constantment (com una eina de gestió de projectes o un client de correu electrònic). Per a llocs web d'ús esporàdic (com un blog o una pàgina corporativa), una arquitectura tradicional generada al servidor sol ser més eficient, lleugera i favorable per al SEO.</li>
+<li><strong>Complexitat de la Interfície:</strong> Una SPA es justifica quan l'aplicació requereix un alt grau d'interactivitat, components que comparteixen estat entre si i rutes gestionades al client. Si la interfície és principalment informativa i amb interaccions simples, una SPA pot complicar innecessàriament el desenvolupament.</li>
+</ul>
+<h3 id="63-recomanació-final"><a class="header" href="#63-recomanació-final"><strong>6.3. Recomanació Final</strong></a></h3>
+<p>La millor arquitectura web no és una fórmula universal, sinó aquella que s'alinea estretament amb el <strong>propòsit</strong> de l'aplicació. Ha d'equilibrar de manera intel·ligent les necessitats d'una experiència d'usuari fluida i moderna amb els requisits no negociables de seguretat i rendiment del servidor. La implementació d'aquesta arquitectura ha de basar-se en l'ús d'eines de desenvolupament modernes, l'adopció de millors pràctiques i una adhesió rigorosa als estàndards oberts que garanteixen la interoperabilitat i la longevitat de la solució.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
