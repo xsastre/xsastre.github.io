@@ -576,41 +576,12 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox">
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Introducció i índex
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
 <a class="md-nav__link md-nav__link--active" href="index.html">
 <span class="md-ellipsis">
     Introducció i índex
     
   </span>
 </a>
-<nav aria-label="Taula de continguts" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Taula de continguts
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#planificacio-del-pfc">
-<span class="md-ellipsis">
-      Planificació del PFC
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#planificacio-del-pfc_1">
-<span class="md-ellipsis">
-      Planificació del PFC
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -901,179 +872,6 @@ Endavant, que el cim valdrà cada esforç!</p>
 </li>
 </ul>
 </div>
-<h2 id="planificacio-del-pfc">Planificació del PFC<a class="headerlink" href="#planificacio-del-pfc" title="Permanent link">¶</a></h2>
-<div class="mermaid">
-
----
-config:
-theme: forest
----
-gantt
-    title Cronograma M12 - Projecte DAW (28 setmanes)
-    dateFormat  YYYY-WW
-    axisFormat  "W%W"
-
-    section Bloc 1: Identificació i Anàlisi
-        Tasques 1.1–1.9       :done,    b1, 2025-36, 4w
-    section Bloc 2: Disseny i Planificació
-        Tasques 2.1–2.18      :active,  b2, 2025-40, 6w
-    section Bloc 3: Desenvolupament i Implementació
-        Tasques 3.1–3.24      :         b3, 2025-46, 10w
-    section Bloc 4: Documentació i Presentació
-        Tasques 4.1–4.20      :         b4, 2026-04, 5w
-    section Bloc 5: Avaluació i Millora Contínua
-        Tasques 5.1–5.24      :         b5, 2026-09, 3w
-
-</div>
-<h2 id="planificacio-del-pfc_1">Planificació del PFC<a class="headerlink" href="#planificacio-del-pfc_1" title="Permanent link">¶</a></h2>
-<div class="mermaid">
-
----
-config:
-theme: forest
----
-gantt
-  title Cronograma complet M12 – Projecte DAW (95 tasques)
-    dateFormat  YYYY-MM-DD
-  axisFormat  "W%W"
-
-  section Bloc 1: Identificació i Anàlisi de Necessitats
-  Tasca 1.1: Investigació mercat         :     2025-36, 1w
-  Tasca 1.2: Identificació necessitats    :     2025-37, 1w
-  Tasca 1.3: Objectius SMART             :     2025-38, 1w
-  Tasca 1.4: Definició abast             :     2025-39, 1w
-  Tasca 1.5: Viabilitat tècnica          :     2025-40, 1w
-  Tasca 1.6: Viabilitat econòmica        :     2025-41, 1w
-  Tasca 1.7: Benchmarking competitiu     :     2025-42, 1w
-  Tasca 1.8: Selecció tecnologies        :     2025-43, 1w
-  Tasca 1.9: Justificació tecnològica    :     2025-44, 1w
-
-  section Bloc 2: Disseny i Planificació del Projecte
-  Tasca 2.1: Diagrama casos d’ús         :     2025-45, 1w
-  Tasca 2.2: Diagrames seqüència        :     2025-46, 1w
-  Tasca 2.3: Diagrama de classes        :     2025-47, 1w
-  Tasca 2.4: Diagrama components        :     2025-48, 1w
-  Tasca 2.5: Selecció arquitectura       :     2025-49, 1w
-  Tasca 2.6: Disseny capa presentació   :     2025-50, 1w
-  Tasca 2.7: Disseny capa negoci        :     2025-51, 1w
-  Tasca 2.8: Disseny capa dades         :     2025-52, 1w
-  Tasca 2.9: Disseny model dades        :     2025-53, 1w
-  Tasca 2.10: Normalització BD          :     2025-54, 1w
-  Tasca 2.11: Índexs BD                 :     2025-55, 1w
-  Tasca 2.12: Wireframes i mockups      :     2025-56, 1w
-  Tasca 2.13: Prototip interactiu       :     2025-57, 1w
-  Tasca 2.14: Responsive &amp; WCAG         :     2025-58, 1w
-  Tasca 2.15: Metodologia àgil          :     2025-59, 1w
-  Tasca 2.16: Product Backlog           :     2025-60, 1w
-  Tasca 2.17: Planificació sprints      :     2025-61, 1w
-  Tasca 2.18: Estimació recursos        :     2025-62, 1w
-
-  section Bloc 3: Desenvolupament i Implementació
-  Tasca 3.1: Configuració entorn dev     :     2025-63, 1w
-  Tasca 3.2: Arquitectura backend       :     2025-64, 1w
-  Tasca 3.3: Desenvolupament APIs       :     2025-65, 1w
-  Tasca 3.4: Autenticació/Autorització  :     2025-66, 1w
-  Tasca 3.5: Errors i logging           :     2025-67, 1w
-  Tasca 3.6: Lògica de negoci          :     2025-68, 1w
-  Tasca 3.7: Validacions serv/client    :     2025-69, 1w
-  Tasca 3.8: Frontend responsive        :     2025-70, 1w
-  Tasca 3.9: UI interactiva             :     2025-71, 1w
-  Tasca 3.10: Gestió estats frontend     :    2025-72, 1w
-  Tasca 3.11: Optimització front        :     2025-73, 1w
-  Tasca 3.12: Connexió SGBD             :     2025-74, 1w
-  Tasca 3.13: Model dades implementació :     2025-75, 1w
-  Tasca 3.14: Consultes optimitzades    :     2025-76, 1w
-  Tasca 3.15: Gestió transaccions       :     2025-77, 1w
-  Tasca 3.16: Upload multimèdia         :     2025-78, 1w
-  Tasca 3.17: Reproducció multimèdia    :     2025-79, 1w
-  Tasca 3.18: Func. interact. avançades :     2025-80, 1w
-  Tasca 3.19: Optimitz. recursos mm     :     2025-81, 1w
-  Tasca 3.20: Docs endpoints API        :     2025-82, 1w
-  Tasca 3.21: Testing unitari/integració:     2025-83, 1w
-  Tasca 3.22: Versionat Git             :     2025-84, 1w
-  Tasca 3.23: Code review i qualitat    :     2025-85, 1w
-  Tasca 3.24: Integració contínua (CI)  :     2025-86, 1w
-
-  section Bloc 4: Documentació i Presentació
-  Tasca 4.1: Manual arquitectura         :     2025-87, 1w
-  Tasca 4.2: Manual instal·lació        :     2025-88, 1w
-  Tasca 4.3: Manual configuració        :     2025-89, 1w
-  Tasca 4.4: Docs base dades            :     2025-90, 1w
-  Tasca 4.5: Docs APIs                  :     2025-91, 1w
-  Tasca 4.6: Manual usuari - introducció:     2025-92, 1w
-  Tasca 4.7: Manual usuari - funcions    :     2025-93, 1w
-  Tasca 4.8: Troubleshooting usuari     :     2025-94, 1w
-  Tasca 4.9: Casos d’ús                  :     2025-95, 1w
-  Tasca 4.10: Comentaris codi            :    2025-96, 1w
-  Tasca 4.11: README.md                  :    2025-97, 1w
-  Tasca 4.12: Swagger API               :    2025-98, 1w
-  Tasca 4.13: UML finals                 :    2025-99, 1w
-  Tasca 4.14: Informe resum executiu    :    2026-00, 1w
-  Tasca 4.15: Informe metodologia       :    2026-01, 1w
-  Tasca 4.16: Informe resultats        :    2026-02, 1w
-  Tasca 4.17: Informe conclusions      :    2026-03, 1w
-  Tasca 4.18: Informe millores futures :    2026-04, 1w
-  Tasca 4.19: Presentació executiva     :    2026-05, 1w
-  Tasca 4.20: Demo interactiva          :    2026-06, 1w
-
-  section Bloc 5: Avaluació i Millora Contínua
-  Tasca 5.1: Testing unitari backend     :    2026-07, 1w
-  Tasca 5.2: Testing integr. APIs        :    2026-08, 1w
-  Tasca 5.3: Testing funcional frontend  :    2026-09, 1w
-  Tasca 5.4: Testing E2E                 :    2026-10, 1w
-  Tasca 5.5: Testing rendiment           :    2026-11, 1w
-  Tasca 5.6: Testing càrrega             :    2026-12, 1w
-  Tasca 5.7: Testing seguretat           :    2026-13, 1w
-  Tasca 5.8: Testing cross-browser       :    2026-14, 1w
-  Tasca 5.9: Auditoria accessibilitat    :    2026-15, 1w
-  Tasca 5.10: Testing usabilitat         :    2026-16, 1w
-  Tasca 5.11: Anàlisi mètriques UX       :    2026-17, 1w
-  Tasca 5.12: Validació responsive       :    2026-18, 1w
-  Tasca 5.13: Refactoring codi           :    2026-19, 1w
-  Tasca 5.14: Optimització consultes BD  :    2026-20, 1w
-  Tasca 5.15: Optimització frontend      :    2026-21, 1w
-  Tasca 5.16: Implementació cache        :    2026-22, 1w
-  Tasca 5.17: Configuració producció     :    2026-23, 1w
-  Tasca 5.18: Desplegament aplicació     :    2026-24, 1w
-  Tasca 5.19: Config. monitorització     :    2026-25, 1w
-  Tasca 5.20: Document desplegament      :    2026-26, 1w
-  Tasca 5.21: Anàlisi vs objectius       :    2026-27, 1w
-  Tasca 5.22: Identificació millores     :    2026-28, 1w
-  Tasca 5.23: Roadmap evolutiu           :    2026-29, 1w
-  Tasca 5.24: Avaluació crítica global   :    2026-30, 1w
-
-</div>
-<div class="mermaid">
-
----
-config:
-theme: forest
----
-gantt
-    title Planificació del PFC
-    dateFormat  YYYY-MM-DD
-    section Introducció
-        Introducció al PFC  : 2025-03-14, 1d
-    section Tutories
-        1a Tutoria          :done, t1, 2025-03-14, 1d
-        2a Tutoria          :done, t2, 2025-03-24, 1d
-        3a Tutoria          :done, t3, 2025-04-14, 1d
-        4a Tutoria          :done, t4, 2025-04-28, 1d
-        5a Tutoria          :t5, 2025-05-12, 1d
-        6a Tutoria          :t6, 2025-05-26, 1d
-        7a Tutoria          :t7, 2025-06-09, 1d
-    section Desenv. PFC
-        Presentació idea i tema del PFC :done, d1, 2025-03-17, 1d
-        Recopilació material i redacció esborranys dels apartats :active d2, after d1, 2025-05-25
-        Creació esquelet memòria    :done, d3, 2025-03-24, 2025-04-14
-        Redacció esborrany memòria :active, d4, 2025-03-28,2025-05-12
-        Entrega esborrany   :milestone, m3, 2025-05-12,1d
-        Redacció memòria definitiva:    : d5, 2025-05-07, 2025-06-09
-    section Tasques finals
-        Entrega document: milestone, m1, 2025-06-10,1d
-        Preparació presentació defensa  :tf1, 2025-06-03,2025-06-13
-        DEFENSA PFC :milestone, m2, 2025-06-16, 1d
-</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Darrera actualització">
@@ -1147,8 +945,7 @@ gantt
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../assets/extra.js"></script>
 <script src="../../assets/meus.js"></script>
-<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
-mermaid.initialize({});</script>
+
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
 </script></body></html>
