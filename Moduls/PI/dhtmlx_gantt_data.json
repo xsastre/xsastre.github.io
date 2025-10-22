@@ -1,0 +1,215 @@
+{
+  "data": [
+    {
+      "id": "section_1",
+      "text": null,
+      "open": true
+    },
+    {
+      "id": "section_2",
+      "text": "Bloc 2: Disseny i Planificació del Projecte",
+      "open": true
+    },
+    {
+      "id": "section_3",
+      "text": "Bloc 1: Identificació i Anàlisi de Necessitats",
+      "open": true
+    },
+    {
+      "id": "v1",
+      "text": "Inici projecte",
+      "start_date": "2025-09-22",
+      "duration": 60,
+      "parent": "section_1"
+    },
+    {
+      "id": "b101",
+      "text": "Tasca 1.01 Investigació mercat",
+      "start_date": "2025-09-29",
+      "duration": 14,
+      "parent": "section_3"
+    },
+    {
+      "id": "b102",
+      "text": "Tasca 1.02 Identificació necessitats",
+      "start_date": "2025-09-29",
+      "duration": 14,
+      "parent": "section_3"
+    },
+    {
+      "id": "b103",
+      "text": "Tasca 1.03 Objectius SMART",
+      "start_date": "2025-10-06",
+      "duration": 7,
+      "parent": "section_3"
+    },
+    {
+      "id": "b104",
+      "text": "Tasca 1.04 Definició abast",
+      "start_date": "2025-10-06",
+      "duration": 14,
+      "parent": "section_3"
+    },
+    {
+      "id": "b107",
+      "text": "Tasca 1.07 Benchmarking competitiu",
+      "start_date": "2025-10-06",
+      "duration": 14,
+      "parent": "section_3"
+    },
+    {
+      "id": "b105",
+      "text": "Tasca 1.05 Viabilitat tècnica",
+      "start_date": "2025-10-13",
+      "duration": 7,
+      "parent": "section_3"
+    },
+    {
+      "id": "b106",
+      "text": "Tasca 1.06 Viabilitat econòmica",
+      "start_date": "2025-10-13",
+      "duration": 7,
+      "parent": "section_3"
+    },
+    {
+      "id": "b108",
+      "text": "Tasca 1.08 Selecció tecnologies",
+      "start_date": "2025-10-13",
+      "duration": 14,
+      "parent": "section_3"
+    },
+    {
+      "id": "b109",
+      "text": "Tasca 1.09 Justificació tecnològica",
+      "start_date": "2025-10-20",
+      "duration": 7,
+      "parent": "section_3"
+    },
+    {
+      "id": "b201",
+      "text": "Tasca 2.01 Diagrama casos d’ús",
+      "start_date": "2025-10-20",
+      "duration": 14,
+      "parent": "section_2"
+    },
+    {
+      "id": "b202",
+      "text": "Tasca 2.02 Diagrames seqüència",
+      "start_date": "2025-10-27",
+      "duration": 14,
+      "parent": "section_2"
+    },
+    {
+      "id": "b205",
+      "text": "Tasca 2.05 Selecció arquitectura",
+      "start_date": "2025-10-27",
+      "duration": 7,
+      "parent": "section_2"
+    },
+    {
+      "id": "b215",
+      "text": "Tasca 2.15 Metodologia àgil",
+      "start_date": "2025-10-27",
+      "duration": 7,
+      "parent": "section_2"
+    },
+    {
+      "id": "b216",
+      "text": "Tasca 2.16 Product Backlog",
+      "start_date": "2025-10-27",
+      "duration": 14,
+      "parent": "section_2"
+    },
+    {
+      "id": "b203",
+      "text": "Tasca 2.03 Diagrama de classes",
+      "start_date": "2025-11-03",
+      "duration": 14,
+      "parent": "section_2"
+    },
+    {
+      "id": "b209",
+      "text": "Tasca 2.09 Disseny model dades",
+      "start_date": "2025-11-03",
+      "duration": 14,
+      "parent": "section_2"
+    },
+    {
+      "id": "b217",
+      "text": "Tasca 2.17 Planificació sprints",
+      "start_date": "2025-11-03",
+      "duration": 7,
+      "parent": "section_2"
+    },
+    {
+      "id": "b218",
+      "text": "Tasca 2.18 Estimació recursos",
+      "start_date": "2025-11-03",
+      "duration": 7,
+      "parent": "section_2"
+    },
+    {
+      "id": "b204",
+      "text": "Tasca 2.04 Diagrama components",
+      "start_date": "2025-11-10",
+      "duration": 7,
+      "parent": "section_2"
+    },
+    {
+      "id": "b206",
+      "text": "Tasca 2.06 Disseny capa presentació",
+      "start_date": "2025-11-10",
+      "duration": 14,
+      "parent": "section_2"
+    },
+    {
+      "id": "b210",
+      "text": "Tasca 2.10 Normalització BD",
+      "start_date": "2025-11-10",
+      "duration": 7,
+      "parent": "section_2"
+    },
+    {
+      "id": "b207",
+      "text": "Tasca 2.07 Disseny capa negoci",
+      "start_date": "2025-11-17",
+      "duration": 7,
+      "parent": "section_2"
+    },
+    {
+      "id": "b208",
+      "text": "Tasca 2.08 Disseny capa dades",
+      "start_date": "2025-11-17",
+      "duration": 7,
+      "parent": "section_2"
+    },
+    {
+      "id": "b211",
+      "text": "Tasca 2.11 Índexs BD",
+      "start_date": "2025-11-17",
+      "duration": 7,
+      "parent": "section_2"
+    },
+    {
+      "id": "b212",
+      "text": "Tasca 2.12 Wireframes i mockups",
+      "start_date": "2025-11-17",
+      "duration": 14,
+      "parent": "section_2"
+    },
+    {
+      "id": "b213",
+      "text": "Tasca 2.13 Prototip interactiu",
+      "start_date": "2025-11-24",
+      "duration": 14,
+      "parent": "section_2"
+    },
+    {
+      "id": "b214",
+      "text": "Tasca 2.14 Responsive &amp; WCAG",
+      "start_date": "2025-12-01",
+      "duration": 7,
+      "parent": "section_2"
+    }
+  ]
+}

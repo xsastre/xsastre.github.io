@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Projecte DAW - Gantt</title>
+    <script src="../../assets/dhtmlxgantt.js?v=9.0.15"></script>
+    <link rel="stylesheet" href="../../css/dhtmlxgantt.css?v=9.0.15">
+    <style>
+        html, body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="gantt_here" style="width:100%; height:100%;"></div>
+
+<script>
+
+    var hourToStr = gantt.date.date_to_str("%H:%i");
+    var hourRangeFormat = function(step){
+        return function(date){
+            var intervalEnd = new Date(gantt.date.add(date, step, "hour") - 1)
+            return hourToStr(date) + " - " + hourToStr(intervalEnd);
+        };
+    };
+
+
+    gantt.config.min_column_width = 80;
+    var zoomConfig = {
+        minColumnWidth: 80,
+        maxColumnWidth: 150,
+        levels: [
+            [
+                { unit: "month", format: "%M %Y", step: 1},
+                { unit: "week", step: 1, format: function (date) {
+                        var dateToStr = gantt.date.date_to_str("%d %M");
+                        var endDate = gantt.date.add(date, 7 - date.getDay(), "day");
+                        var weekNum = gantt.date.date_to_str("%W")(date);
+                        return "Week #" + weekNum + ", " + dateToStr(date) + " - " + dateToStr(endDate);
+                    }}
+            ],
+            [
+                { unit: "month", format: "%M %Y", step: 1},
+                { unit: "day", format: "%d %M", step: 1}
+            ],
+            [
+                { unit: "day", format: "%d %M", step: 1},
+                { unit: "hour", format: hourRangeFormat(12), step: 12}
+            ],
+            [
+                {unit: "day", format: "%d %M",step: 1},
+                {unit: "hour",format: hourRangeFormat(6),step: 6}
+            ],
+            [
+                { unit: "day", format: "%d %M", step: 1 },
+                { unit: "hour", format: "%H:%i", step: 1}
+            ]
+        ],
+        startDate: new Date(2025, 09, 22),
+        endDate: new Date(2026, 06, 20),
+        useKey: "ctrlKey",
+        trigger: "wheel",
+        element: function(){
+            return gantt.$root.querySelector(".gantt_task");
+        }
+    }
+
+    gantt.ext.zoom.init(zoomConfig);
+
+
+
+
+    // Configura el Gantt
+        gantt.config.xml_date = "%Y-%m-%d";
+
+    gantt.config.scales = [
+        { unit: "month", step: 1, format: "%F, %Y" },
+        { unit: "day", step: 1, format: "%j, %D" }
+    ];
+        gantt.init("gantt_here");
+
+
+    gantt.templates.scale_cell_class = function(date){
+        if(date.getDay()==0||date.getDay()==6){
+            return "weekend";
+        }
+    };
+    gantt.render();
+
+        // Carrega dades des del fitxer JSON
+        gantt.load("dhtmlx_gantt_data.json");
+
+        // Opcional: defineix com es mostren les columnes
+        gantt.config.columns = [
+            {name:"text", label:"Tasca", tree:true, width:250},
+            {name:"start_date", label:"Inici", align:"center"},
+            {name:"duration", label:"Durada", align:"center"}
+        ];
+
+        // a single day-scale
+        /*        gantt.config.scales = [
+                    { unit: "day", step: 1, format: "%j, %D" }
+                ];*/
+
+        // several scales at once
+/*        gantt.config.scales = [
+            { unit: "month", step: 1, format: "%F, %Y" },
+            { unit: "week", step: 1, format: weekScaleTemplate },
+            { unit: "day", step: 1, format: "%D", css: daysStyle }
+        ];*/
+
+/*    gantt.plugins({
+        quick_info: true
+    });
+
+    gantt.init("gantt_here");
+
+    gantt.parse({
+        tasks: [
+            { id: 11, text: "Project #1", type: "project", progress: 0.6, open: true },
+
+            { id: 12, text: "Task #1", start_date: "03-04-2023", duration: 5, parent: 11, progress: 1, open: true },
+            { id: 13, text: "Task #2", start_date: "03-04-2023", type: "project", parent: 11, progress: 0.5, open: true },
+            { id: 14, text: "Task #3", start_date: "02-04-2023", duration: 6, parent: 11, progress: 0.8, open: true },
+            { id: 15, text: "Task #4", type: "project", parent: 11, progress: 0.2, open: true },
+            { id: 16, text: "Final milestone", start_date: "15-04-2023", type: "milestone", parent: 11, progress: 0, open: true },
+
+            { id: 17, text: "Task #2.1", start_date: "03-04-2023", duration: 2, parent: 13, progress: 1, open: true },
+            { id: 18, text: "Task #2.2", start_date: "06-04-2023", duration: 3, parent: 13, progress: 0.8, open: true },
+            { id: 19, text: "Task #2.3", start_date: "10-04-2023", duration: 4, parent: 13, progress: 0.2, open: true },
+            { id: 20, text: "Task #2.4", start_date: "10-04-2023", duration: 4, parent: 13, progress: 0, open: true },
+            { id: 21, text: "Task #4.1", start_date: "03-04-2023", duration: 4, parent: 15, progress: 0.5, open: true },
+            { id: 22, text: "Task #4.2", start_date: "03-04-2023", duration: 4, parent: 15, progress: 0.1, open: true },
+            { id: 23, text: "Mediate milestone", start_date: "14-04-2023", type: "milestone", parent: 15, progress: 0, open: true }
+        ],
+        links: [
+            { id: 10, source: 11, target: 12, type: 1 },
+            { id: 11, source: 11, target: 13, type: 1 },
+            { id: 12, source: 11, target: 14, type: 1 },
+            { id: 13, source: 11, target: 15, type: 1 },
+            { id: 14, source: 23, target: 16, type: 0 },
+            { id: 15, source: 13, target: 17, type: 1 },
+            { id: 16, source: 17, target: 18, type: 0 },
+            { id: 17, source: 18, target: 19, type: 0 },
+            { id: 18, source: 19, target: 20, type: 0 },
+            { id: 19, source: 15, target: 21, type: 2 },
+            { id: 20, source: 15, target: 22, type: 2 },
+            { id: 21, source: 15, target: 23, type: 0 }
+        ]
+    });*/
+</script>
+</body>
+</html>
