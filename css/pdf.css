@@ -1,0 +1,7 @@
+
+/* Amaga el banner de cookies */
+
+aside.md-consent__inner
+{
+    display: none !important;
+}
