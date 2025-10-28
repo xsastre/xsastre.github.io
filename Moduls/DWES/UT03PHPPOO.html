@@ -3277,7 +3277,7 @@ Es declaren amb <code>static</code> i es referencia amb <code>::</code>.</p>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="img/03autoload.png"><img src="img/03autoload.png" style="width:auto;height:500px"></a>
 <figcaption>Organització amb autoload</figcaption>
 </figure>
-<p>Per facilitar la recerca dels recursos a incloure, és recomanable col·locar totes les classes dins d'una mateixa carpeta. Nosaltres la vam col·locar dins d <code>'app</code> (més endavant, quan estudiem <em>Laravel</em> veurem el motiu d'aquesta decisió). Altres carpetes que podem crear són <code>test</code> per col·locar les proves <em>PhpUnit</em> que després realitzarem, o la carpeta <code>vendor</code> on s'emmagatzemaran les llibreries del projecte (aquesta carpeta és un estàndard dins de PHP, ja que <em>Composer</em> la crea automàticament).</p>
+<p>Per facilitar la recerca dels recursos a incloure, és recomanable col·locar totes les classes dins d'una mateixa carpeta. Nosaltres les col·locarem dins d <code>'app</code>. Altres carpetes que podem crear són <code>test</code> per col·locar les proves <em>PhpUnit</em> que després realitzarem, o la carpeta <code>vendor</code> on s'emmagatzemaran les llibreries del projecte (aquesta carpeta és un estàndard dins de PHP, ja que <em>Composer</em> la crea automàticament).</p>
 <p>Com hem col·locat tots els nostres recursos dins d <code>'app</code>, ara el nostre <code>autoload.php</code> (el qual col·loquem a la carpeta arrel) només va a buscar dins d'aquesta carpeta:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
 <span class="linenos" data-linenos="2 "></span><span class="nb">spl_autoload_register</span><span class="p">(</span> <span class="k">function</span><span class="p">(</span> <span class="nv">$nomClasse</span> <span class="p">)</span> <span class="p">{</span>
@@ -3287,7 +3287,7 @@ Es declaren amb <code>static</code> i es referencia amb <code>::</code>.</p>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Autoload i rutes errònies</p>
-<p>A <em>Ubuntu</em> en  fer l'<em>incllueix</em> de la classe que rep com a paràmetre, les barres dels namespace (<code>\</code>) són diferents a les de les rutes (<code>/</code>). Per això, és millor que utilitzem el fitxer autoload:</p>
+<p>A <em>Ubuntu</em> en  fer l'<code>include</code> de la classe que rep com a paràmetre, les barres dels namespace (<code>\</code>) són diferents a les de les rutes (<code>/</code>). Per això, és millor que utilitzem el fitxer autoload:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="cp">&lt;?php</span>
 <span class="linenos" data-linenos="2 "></span><span class="nb">spl_autoload_register</span><span class="p">(</span> <span class="k">function</span><span class="p">(</span> <span class="nv">$nomClasse</span> <span class="p">)</span> <span class="p">{</span>
 <span class="linenos" data-linenos="3 "></span>    <span class="nv">$ruta</span> <span class="o">=</span> <span class="s2">"app</span><span class="se">\\</span><span class="s2">"</span><span class="o">.</span><span class="nv">$nomClasse</span><span class="o">.</span><span class="s1">'. php'</span><span class="p">;</span>
@@ -3521,7 +3521,7 @@ Es declaren amb <code>static</code> i es referencia amb <code>::</code>.</p>
 <ul>
 <li><a href="https://www.php.net/manual/es/index.php">Manual de PHP</a></li>
 <li><a href="https://desarrolloweb.com/manuales/manual-php.html#manual68">Manual d'OO en PHP - www.desarrolloweb.com</a></li>
-<li>[Lloc web d'Aitor Medrano}(https://aitor-medrano.github.io/)</li>
+<li><a href="https://aitor-medrano.github.io/">Lloc web d'Aitor Medrano</a></li>
 </ul>
 
 
@@ -3545,7 +3545,7 @@ Es declaren amb <code>static</code> i es referencia amb <code>::</code>.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="20 d’octubre del 2025 00:49:16 UTC">20 d’octubre del 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="28 d’octubre del 2025 12:12:28 UTC">28 d’octubre del 2025</span>
   </span>
 
     

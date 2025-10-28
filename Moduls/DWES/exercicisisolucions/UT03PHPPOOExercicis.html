@@ -2805,45 +2805,47 @@ Client Biel Calafell amb 0 lloguers.
 <p>✏️   EXERCICI 133. Transforma <code>Soport</code> a una classe abstracta i comprova que tot continua funcionant. Què aconseguim en fer-la abstracta?</p>
 <p>✏️   EXERCICI 134. Crea un interfície <code>Resumible</code>, de manera que les classes que l'implementin han d'oferir el mètode <code>mostraResum()</code>. Modifica la classe <code>Soport</code> i fes que implementi l'interfície. Fa falta que també l'implementin els fills?</p>
 </details>
-<div id="seccio-protegida" style="display:none;">
-??? info "Projecte Videoclub 2.0"
-
-     Antes de comenzar con la segunda parte del videoclub, crea una etiqueta mediante `git tag` con el nombre `v0.329` y sube los cambios a GitHub.
-
-     330. Modifica las operaciones de llogar, tanto en `Cliente` como en `Videoclub`, per dar soport al encadenamiento de métodos.
-     Posteriormente, modifica el codi de prova per utilizar esta técnica.
-     331. Haciendo uso de *namespaces*:
-          * Coloca todas las clases/interfaces en `Dwes\ProyectoVideoclub`
-          * Cada clase debe hacer `include_once` de los recursos que emplea
-          * Coloca el/los archivos de prueba en el raíz (sin espacio de nombres)
-          * Desde el archivo de pruebas, utiliza `use` per poder realizar accesos sin cualificar
-          * Etiqueta los cambios como `v0.331`.
-     332. Reorganiza las carpeta tal como hemos visto en los apuntes: `app`, `test` y `vendor`.
-          * Crea un fichero `autoload.php` per registrar la ruta donde encontrar las clases
-          * Modifica todo el código necesario, incluyendo `autoload.php` donde sea necesario y borrando los *includes* previos.
-     333. A continuación vamos a crear un conjunto de excepciones de aplicación. Estas excepciones son simples, no necesitan sobreescribir ningún método. Así pues, crea la excepción de aplicación `VideoclubException` en el *namespace* `Dwes\ProyectoVideoclub\Util`.
-          Posteriormente crea los siguientes hijos (deben heredar de `VideoclubException`), cada uno en su propio archivo:
-          * `SoportYaAlquiladoException`
-          * `CupoSuperadoException`
-          * `SoportNoEncontradoException`
-          * `ClienteNoEncontradoException`
-     334. En `Cliente`, modifica los métodos `llogar` y `tornar`, per que hagan uso de las nuevas excepciones (lanzándolas cuando sea necesario) y funcionen como métodos encadenados. Destacar que estos métodos, no se capturar estás excepciones, sólo se lanzan.
-          En `Videoclub`, modifica `llogarSocioPelicula` per capturar todas las excepciones que ahora lanza `Cliente` e informar al usuario en consecuencia.
-     335. Vamos a modificar el proyecto per que el videoclub sepa qué productos están o no alquilados:
-          * En `Soport`, crea una propiedad pública cuyo nombre sea `alquilado` que inicialmente estará a `false`. Cuando se alquile, se pondrá a `true`. Al tornar, la volveremos a poner a `false`.
-          * En `Videoclub`, crea dos nuevas propiedades y sus getters:
-          * `numProductosAlquilados`
-          * `numTotalAlquileres`
-     336. Crea un nuevo método en `Videoclub` llamado `llogarSocioProductos(int numSocio, array numerosProductos)`, el cual debe recibir un array con los productos a llogar.Antes de llogar-los, debe comprobar que todos los soports estén disponibles, de manera que si uno no lo está, no se le alquile ninguno.
-     337. Crea dos nuevos métodos en `Videoclub`, y mediante la definición, deduce qué deben realizar:
-          * `tornarSocioProducto(int numSocio, int numeroProducto)`
-          * `tornarSocioProductos(int numSocio, array numerosProductos)`
-
-    Deben soportar el encadenamiento de métodos.
-    Recuerda actualizar la propiedad`alquilado` de los diferentes soports.
-
-     Cuando hayas realizado todos los ejercicios, crea una etiqueta mediante `git tag` con el nombre `v0.337` y sube los cambios a GitHub.
-</div>
+<details class="info">
+<summary>Projecte Videoclub 2.0</summary>
+<p>Abans de començar amb la segona part del videoclub, crea una etiqueta mitjançant 'git tag' amb el nom 'v0.329' i puja els canvis a GitHub.</p>
+<p>EXERCICI 135. Modifica les operacions de llogar, tant a <code>Client</code> com a <code>Videoclub</code>, per donar suport a l’encadenament de mètodes (revisa els apunts). Posteriorment, modifica el codi de prova per utilitzar aquesta tècnica.</p>
+<p>EXERCICI 136. Fent ús de <em>namespaces</em>:</p>
+<ul>
+<li>Col·loca totes les classes/interfaces a <code>Dwes\ProjecteVideoclub</code></li>
+<li>Cada classe ha de fer <code>include_once</code> dels recursos que utilitza</li>
+<li>Col·loca els arxius de prova a la carpeta arrel (sense espai de noms)</li>
+<li>Des de l’arxiu de proves, utilitza <code>use</code> per accedir sense qualificar</li>
+<li>Etiqueta els canvis com a <code>v0.331</code>.</li>
+</ul>
+<p>EXERCICI 137. Reorganitza les carpetes tal com hem vist en els apunts: <code>app</code>, <code>test</code> i <code>vendor</code>.</p>
+<ul>
+<li>Crea un fitxer <code>autoload.php</code> per registrar les rutes on trobar les classes</li>
+<li>Modifica tot el codi necessari, incloent <code>autoload.php</code> on calgui i elimina els <em>includes</em> previs.</li>
+</ul>
+<p>EXERCICI 138. A continuació crearem un conjunt d’excepcions d’aplicació. Aquestes excepcions són simples, no necessiten sobreescriure cap mètode. Així, crea l’excepció d’aplicació <code>VideoclubException</code> al <em>namespace</em> <code>Dwes\ProjecteVideoclub\Util</code>. Posteriorment crea els fills següents (han d’heretar de <code>VideoclubException</code>), cadascun en el seu propi fitxer:</p>
+<ul>
+<li><code>SoportJaLlogatException</code></li>
+<li><code>QuotaSuperadaException</code></li>
+<li><code>SoportNoTrobatException</code></li>
+<li><code>ClientNoTrobatException</code></li>
+</ul>
+<p>EXERCICI 139. A <code>Client</code>, modifica els mètodes <code>llogar</code> i <code>tornar</code> perquè facin ús de les noves excepcions (es llençaran quan calgui) i funcionin com a mètodes encadenats. Aquests mètodes no han de capturar les excepcions, només llençar-les. A <code>Videoclub</code>, modifica <code>llogarSociProducte</code> per capturar totes les excepcions que llença <code>Client</code> i informar l’usuari en conseqüència.</p>
+<p>EXERCICI 140. Modifiquem el projecte perquè el videoclub sàpiga quins productes estan o no llogats:</p>
+<ul>
+<li>A <code>Soport</code>, crea una propietat pública anomenada <code>llogat</code> que inicialment serà <code>false</code>. Quan es llogui, es posarà a <code>true</code>. Quan es torni, es tornarà a posar a <code>false</code>.</li>
+<li>A <code>Videoclub</code>, crea dues propietats noves i els getters:</li>
+<li><code>numProductesLlogats</code></li>
+<li><code>numTotalLloguers</code></li>
+</ul>
+<p>EXERCICI 141. Crea un mètode nou a <code>Videoclub</code> anomenat <code>llogarSociProductes(int numSoci, array numerosProductos)</code>, que rebi un array amb els productes a llogar. Abans de llogar-los, ha de comprovar que tots els suports estiguin disponibles, de manera que si un no està, no se li llogui cap.</p>
+<p>EXERCICI 142. Crea dos mètodes nous a <code>Videoclub</code>, i dedueix què han de fer:</p>
+<ul>
+<li><code>tornarSociProducte(int numSoci, int numeroProducto)</code></li>
+<li><code>tornarSociProductes(int numSoci, array numerosProductos)</code></li>
+</ul>
+<p>Han de suportar l’encadenament de mètodes. Recorda actualitzar la propietat <code>llogat</code> dels diferents suports.</p>
+<p>Quan hagis realitzat tots els exercicis, crea una etiqueta mitjançant <code>git tag</code> amb el nom <code>v0.337</code> i puja els canvis a GitHub.</p>
+</details>
 
 
 
@@ -2866,7 +2868,7 @@ Client Biel Calafell amb 0 lloguers.
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="22 d’octubre del 2025 17:32:33 UTC">22 d’octubre del 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="28 d’octubre del 2025 12:12:28 UTC">28 d’octubre del 2025</span>
   </span>
 
     

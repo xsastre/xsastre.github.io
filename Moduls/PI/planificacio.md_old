@@ -1,0 +1,226 @@
+## Planificació del PFC
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+
+
+## Planificació del PFC
+
+<div class="mermaid">
+
+---
+config:
+    theme: 'forest'
+---
+
+gantt
+    title Cronograma complet – Projecte DAW 
+    dateFormat  YYYY-MM-DD
+    excludes    2025-12-22, 2025-12-23, 2025-12-24, 2025-12-25, 2025-12-26, 2025-12-27, 2025-12-28, 2025-12-29, 2025-12-30, 2025-12-31, 2026-01-01, 2026-01-02, 2026-01-03, 2026-01-04, 2026-01-05, 2026-01-06
+    Inici projecte : vert, v1, 2025-09-22, 2m
+
+    section Bloc 1: Identificació i Anàlisi de Necessitats
+        Tasca 1.01 Investigació mercat  :active,b101,2025-09-29,2w
+        Tasca 1.02 Identificació necessitats  :active,b102,2025-09-29,2w
+        Tasca 1.03 Objectius SMART  :active,b103,2025-10-06,1w
+        Tasca 1.04 Definició abast  :active,b104,2025-10-06,2w
+        Tasca 1.07 Benchmarking competitiu  :active,b107,2025-10-06,2w
+        Tasca 1.05 Viabilitat tècnica  :active,b105,2025-10-13,1w
+        Tasca 1.06 Viabilitat econòmica  :active,b106,2025-10-13,1w
+        Tasca 1.08 Selecció tecnologies  :active,b108,2025-10-13,2w
+        Tasca 1.09 Justificació tecnològica  :active,b109,2025-10-20,1w
+    
+    section Bloc 2: Disseny i Planificació del Projecte
+        Tasca 2.01 Diagrama casos d’ús  :active,b201,2025-10-20,2w
+        Tasca 2.02 Diagrames seqüència  :active,b202,2025-10-27,2w
+        Tasca 2.05 Selecció arquitectura  :active,b205,2025-10-27,1w
+        Tasca 2.15 Metodologia àgil  :active,b215,2025-10-27,1w
+        Tasca 2.16 Product Backlog  :active,b216,2025-10-27,2w
+        Tasca 2.03 Diagrama de classes  :active,b203,2025-11-03,2w
+        Tasca 2.09 Disseny model dades  :active,b209,2025-11-03,2w
+        Tasca 2.17 Planificació sprints  :active,b217,2025-11-03,1w
+        Tasca 2.18 Estimació recursos  :active,b218,2025-11-03,1w
+        Tasca 2.04 Diagrama components  :active,b204,2025-11-10,1w
+        Tasca 2.06 Disseny capa presentació  :active,b206,2025-11-10,2w
+        Tasca 2.10 Normalització BD  :active,b210,2025-11-10,1w
+        Tasca 2.07 Disseny capa negoci  :active,b207,2025-11-17,1w
+        Tasca 2.08 Disseny capa dades  :active,b208,2025-11-17,1w
+        Tasca 2.11 Índexs BD  :active,b211,2025-11-17,1w
+        Tasca 2.12 Wireframes i mockups  :active,b212,2025-11-17,2w
+        Tasca 2.13 Prototip interactiu  :active,b213,2025-11-24,2w
+        Tasca 2.14 Responsive & WCAG  :active,b214,2025-12-01,1w
+    
+    section Bloc 3: Desenvolupament i Implementació
+        Tasca 3.22 Versionat Git  :active,b322,2025-09-29,28w
+        Tasca 3.01 Configuració entorn dev  :active,b301,2025-12-01,2w
+        Tasca 3.02 Arquitectura backend  :active,b302,2025-12-08,2w
+        Tasca 3.12 Connexió SGBD  :active,b312,2025-12-08,1w
+        Tasca 3.13 Model dades implementació  :active,b313,2025-12-08,2w
+        Tasca 3.03 Desenvolupament APIs  :active,b303,2025-12-15,2w
+        Tasca 3.05 Errors i logging  :active,b305,2025-12-15,2w
+        Tasca 3.04 Autenticació/Autorització  :active,b304,2025-12-22,2w
+        Tasca 3.07 Validacions serv/client  :active,b307,2025-12-22,3w
+        Tasca 3.06 Lògica de negoci  :active,b306,2025-12-29,3w
+        Tasca 3.14 Consultes optimitzades  :active,b314,2025-12-29,3w
+        Tasca 3.20 Docs endpoints API  :active,b320,2025-12-29,2w
+        Tasca 3.08 Frontend responsive  :active,b308,2026-01-05,3w
+        Tasca 3.15 Gestió transaccions  :active,b315,2026-01-05,1w
+        Tasca 3.09 UI interactiva  :active,b309,2026-01-12,3w
+        Tasca 3.16 Upload multimèdia  :active,b316,2026-01-12,2w
+        Tasca 3.21 Testing unitari/integració  :active,b321,2026-01-12,3w
+        Tasca 3.10 Gestió estats frontend  :active,b310,2026-01-19,2w
+        Tasca 3.17 Reproducció multimèdia  :active,b317,2026-01-19,2w
+        Tasca 3.18 Func. interact. avançades  :active,b318,2026-01-26,3w
+        Tasca 3.23 Code review i qualitat  :active,b323,2026-01-26,3w
+        Tasca 3.11 Optimització front  :active,b311,2026-02-02,2w
+        Tasca 3.19 Optimitz. recursos mm  :active,b319,2026-02-02,1w
+        Tasca 3.24 Integració contínua (CI)  :active,b324,2026-02-09,1w
+    
+    section Bloc 4: Documentació i Presentació
+        Tasca 4.10 Comentaris codi  :active,b410,2025-12-08,15w
+        Tasca 4.05 Docs APIs  :active,b405,2026-02-09,2w
+        Tasca 4.12 Swagger API  :active,b412,2026-02-09,2w
+        Tasca 4.02 Manual instal·lació  :active,b402,2026-02-16,2w
+        Tasca 4.11 README.md  :active,b411,2026-02-16,1w
+        Tasca 4.03 Manual configuració  :active,b403,2026-02-23,2w
+        Tasca 4.01 Manual arquitectura  :active,b401,2026-03-02,2w
+        Tasca 4.04 Docs base dades  :active,b404,2026-03-02,1w
+        Tasca 4.06 Manual usuari - introducció  :active,b406,2026-03-09,1w
+        Tasca 4.07 Manual usuari - funcions  :active,b407,2026-03-09,2w
+        Tasca 4.13 UML finals  :active,b413,2026-03-09,1w
+        Tasca 4.08 Troubleshooting usuari  :active,b408,2026-03-16,1w
+        Tasca 4.09 Casos d’ús  :active,b409,2026-03-16,1w
+        Tasca 4.14 Informe resum executiu  :active,b414,2026-03-23,1w
+        Tasca 4.15 Informe metodologia  :active,b415,2026-03-23,1w
+        Tasca 4.16 Informe resultats  :active,b416,2026-03-23,2w
+        Tasca 4.17 Informe conclusions  :active,b417,2026-03-30,1w
+        Tasca 4.18 Informe millores futures  :active,b418,2026-03-30,1w
+        Tasca 4.19 Presentació executiva  :active,b419,2026-03-30,2w
+        Tasca 4.20 Demo interactiva  :active,b420,2026-04-06,1w
+    
+    section Bloc 5: Avaluació i Millora Contínua
+        Tasca 5.01 Testing unitari backend  :active,b501,2026-01-12,5w
+        Tasca 5.02 Testing integr. APIs  :active,b502,2026-01-19,4w
+        Tasca 5.03 Testing funcional frontend  :active,b503,2026-01-26,4w
+        Tasca 5.04 Testing E2E  :active,b504,2026-02-16,2w
+        Tasca 5.07 Testing seguretat  :active,b507,2026-02-16,2w
+        Tasca 5.05 Testing rendiment  :active,b505,2026-02-23,1w
+        Tasca 5.06 Testing càrrega  :active,b506,2026-02-23,1w
+        Tasca 5.08 Testing cross-browser  :active,b508,2026-03-02,1w
+        Tasca 5.09 Auditoria accessibilitat  :active,b509,2026-03-02,1w
+        Tasca 5.12 Validació responsive  :active,b512,2026-03-02,1w
+        Tasca 5.10 Testing usabilitat  :active,b510,2026-03-09,1w
+        Tasca 5.11 Anàlisi mètriques UX  :active,b511,2026-03-09,1w
+        Tasca 5.13 Refactoring codi  :active,b513,2026-03-16,1w
+        Tasca 5.14 Optimització consultes BD  :active,b514,2026-03-16,1w
+        Tasca 5.15 Optimització frontend  :active,b515,2026-03-16,2w
+        Tasca 5.16 Implementació cache  :active,b516,2026-03-23,1w
+        Tasca 5.17 Configuració producció  :active,b517,2026-03-23,1w
+        Tasca 5.18 Desplegament aplicació  :active,b518,2026-03-30,1w
+        Tasca 5.19 Config. monitorització  :active,b519,2026-03-30,1w
+        Tasca 5.20 Document desplegament  :active,b520,2026-03-30,2w
+        Tasca 5.21 Anàlisi vs objectius  :active,b521,2026-04-06,1w
+        Tasca 5.22 Identificació millores  :active,b522,2026-04-06,1w
+        Tasca 5.23 Roadmap evolutiu  :active,b523,2026-04-06,1w
+        Tasca 5.24 Avaluació crítica global  :active,b524,2026-04-06,1w
+    Final projecte : vert, v2, 2026-06-01, 2m
+    click b101 href "tasques_enunciats.html#b101"
+    click b102 href "tasques_enunciats.html#b102"
+    click b103 href "tasques_enunciats.html#b103"
+    click b104 href "tasques_enunciats.html#b104"
+    click b105 href "tasques_enunciats.html#b105"
+    click b106 href "tasques_enunciats.html#b106"
+    click b107 href "tasques_enunciats.html#b107"
+    click b108 href "tasques_enunciats.html#b108"
+    click b109 href "tasques_enunciats.html#b109"
+    click b201 href "tasques_enunciats.html#b201"
+    click b202 href "tasques_enunciats.html#b202"
+    click b203 href "tasques_enunciats.html#b203"
+    click b204 href "tasques_enunciats.html#b204"
+    click b205 href "tasques_enunciats.html#b205"
+    click b206 href "tasques_enunciats.html#b206"
+    click b207 href "tasques_enunciats.html#b207"
+    click b208 href "tasques_enunciats.html#b208"
+    click b209 href "tasques_enunciats.html#b209"
+    click b210 href "tasques_enunciats.html#b210"
+    click b211 href "tasques_enunciats.html#b211"
+    click b212 href "tasques_enunciats.html#b212"
+    click b213 href "tasques_enunciats.html#b213"
+    click b214 href "tasques_enunciats.html#b214"
+    click b215 href "tasques_enunciats.html#b215"
+    click b216 href "tasques_enunciats.html#b216"
+    click b217 href "tasques_enunciats.html#b217"
+    click b218 href "tasques_enunciats.html#b218"
+    click b301 href "tasques_enunciats.html#b301"
+    click b302 href "tasques_enunciats.html#b302"
+    click b303 href "tasques_enunciats.html#b303"
+    click b304 href "tasques_enunciats.html#b304"
+    click b305 href "tasques_enunciats.html#b305"
+    click b306 href "tasques_enunciats.html#b306"
+    click b307 href "tasques_enunciats.html#b307"
+    click b308 href "tasques_enunciats.html#b308"
+    click b309 href "tasques_enunciats.html#b309"
+    click b310 href "tasques_enunciats.html#b310"
+    click b311 href "tasques_enunciats.html#b311"
+    click b312 href "tasques_enunciats.html#b312"
+    click b313 href "tasques_enunciats.html#b313"
+    click b314 href "tasques_enunciats.html#b314"
+    click b315 href "tasques_enunciats.html#b315"
+    click b316 href "tasques_enunciats.html#b316"
+    click b317 href "tasques_enunciats.html#b317"
+    click b318 href "tasques_enunciats.html#b318"
+    click b319 href "tasques_enunciats.html#b319"
+    click b320 href "tasques_enunciats.html#b320"
+    click b321 href "tasques_enunciats.html#b321"
+    click b322 href "tasques_enunciats.html#b322"
+    click b323 href "tasques_enunciats.html#b323"
+    click b324 href "tasques_enunciats.html#b324"
+    click b401 href "tasques_enunciats.html#b401"
+    click b402 href "tasques_enunciats.html#b402"
+    click b403 href "tasques_enunciats.html#b403"
+    click b404 href "tasques_enunciats.html#b404"
+    click b405 href "tasques_enunciats.html#b405"
+    click b406 href "tasques_enunciats.html#b406"
+    click b407 href "tasques_enunciats.html#b407"
+    click b408 href "tasques_enunciats.html#b408"
+    click b409 href "tasques_enunciats.html#b409"
+    click b410 href "tasques_enunciats.html#b410"
+    click b411 href "tasques_enunciats.html#b411"
+    click b412 href "tasques_enunciats.html#b412"
+    click b413 href "tasques_enunciats.html#b413"
+    click b414 href "tasques_enunciats.html#b414"
+    click b415 href "tasques_enunciats.html#b415"
+    click b416 href "tasques_enunciats.html#b416"
+    click b417 href "tasques_enunciats.html#b417"
+    click b418 href "tasques_enunciats.html#b418"
+    click b419 href "tasques_enunciats.html#b419"
+    click b420 href "tasques_enunciats.html#b420"
+    click b501 href "tasques_enunciats.html#b501"
+    click b502 href "tasques_enunciats.html#b502"
+    click b503 href "tasques_enunciats.html#b503"
+    click b504 href "tasques_enunciats.html#b504"
+    click b505 href "tasques_enunciats.html#b505"
+    click b506 href "tasques_enunciats.html#b506"
+    click b507 href "tasques_enunciats.html#b507"
+    click b508 href "tasques_enunciats.html#b508"
+    click b509 href "tasques_enunciats.html#b509"
+    click b510 href "tasques_enunciats.html#b510"
+    click b511 href "tasques_enunciats.html#b511"
+    click b512 href "tasques_enunciats.html#b512"
+    click b513 href "tasques_enunciats.html#b513"
+    click b514 href "tasques_enunciats.html#b514"
+    click b515 href "tasques_enunciats.html#b515"
+    click b516 href "tasques_enunciats.html#b516"
+    click b517 href "tasques_enunciats.html#b517"
+    click b518 href "tasques_enunciats.html#b518"
+    click b519 href "tasques_enunciats.html#b519"
+    click b520 href "tasques_enunciats.html#b520"
+    click b521 href "tasques_enunciats.html#b521"
+    click b522 href "tasques_enunciats.html#b522"
+    click b523 href "tasques_enunciats.html#b523"
+    click b524 href "tasques_enunciats.html#b524"
+
+</div>
+
+
+

@@ -1,0 +1,701 @@
+# Enunciats Complets – Projecte Intermodular DAW
+
+**Total de tasques:** 95  
+**Duració aprox:** 28 setmanes  
+**Intensitat mitjana:** 3.4 tasques/setmana
+
+---
+
+## Taula de Continguts
+
+- [Bloc 1 – Identificació i Anàlisi de Necessitats](#bloc-1) (9 tasques)
+- [Bloc 2 – Disseny i Planificació del Projecte](#bloc-2) (18 tasques)
+- [Bloc 3 – Desenvolupament i Implementació](#bloc-3) (24 tasques)
+- [Bloc 4 – Documentació i Presentació](#bloc-4) (20 tasques)
+- [Bloc 5 – Avaluació i Millora Contínua](#bloc-5) (24 tasques)
+
+---
+
+## Bloc 1 – Identificació i Anàlisi de Necessitats {#bloc-1}
+
+### Tasca 1.1: Investigació del mercat tecnològic {#b101}
+- **Termini:** Setmana 1–2
+- **Entregable:** Informe d’anàlisi de mercat (PDF, 3–4 pàgines)
+- **Enunciat:**  
+  Realitza un estudi de mercat identificant almenys 5 tendències tecnològiques actuals, 3 empreses líders i 2 oportunitats de negoci. Elabora un informe amb anàlisi de mercat, gaps tecnològics, evolució sectorial dels darrers 3 anys i previsions de futur. Utilitza fonts fiables i inclou referències bibliogràfiques.
+- **Criteris:** Profunditat 25% | Fonts fiables 25% | Identificació tendències 25% | Presentació 25%
+
+### Tasca 1.2: Identificació de necessitats reals {#b102}
+- **Termini:** Setmana 1–2
+- **Entregable:** Informe de necessitats + evidències (entrevistes/enquestes)
+- **Enunciat:**  
+  Identifica 3 necessitats reals d’usuaris o empreses mitjançant 5 entrevistes en profunditat o 1 enquesta de mínim 30 respostes. Documenta cada necessitat: descripció, usuaris afectats, freqüència/impacte, solucions existents i limitacions. Prioritza-les amb matriu impacte–viabilitat i justifica la que abordarà el teu projecte.
+- **Criteris:** Validació amb usuaris 30% | Documentació necessitats 30% | Priorització 40%
+
+### Tasca 1.3: Formulació d’objectius SMART {#b103}
+- **Termini:** Setmana 2
+- **Entregable:** Document objectius SMART + taula de verificació
+- **Enunciat:**  
+  Formula entre 3 i 5 objectius SMART (Específic, Mesurable, Assolible, Rellevant, Temporal). Per cada objectiu especifica: descripció, indicador, valor objectiu, recursos necessaris i data límit. Presenta una taula que demostri el compliment dels 5 criteris.
+- **Criteris:** Compliment SMART 50% | Coherència 30% | Mesurabilitat 20%
+
+### Tasca 1.4: Definició de l’abast del projecte {#b104}
+- **Termini:** Setmana 2–3
+- **Entregable:** Document Statement of Work (SOW)
+- **Enunciat:**  
+  Delimita clarament què inclou i què no. Inclou descripció general, requisits funcionals (≥10, MoSCoW), requisits no funcionals, limitacions, exclusions i criteris d’acceptació. Acompanya casos d’ús o user stories per il·lustrar l’abast.
+- **Criteris:** Claredat abast 30% | Completesa funcions 35% | Funcions no incloses 35%
+
+### Tasca 1.5: Anàlisi de viabilitat tècnica {#b105}
+- **Termini:** Setmana 3
+- **Entregable:** Informe viabilitat tècnica + diagrama arquitectura
+- **Enunciat:**  
+  Avalua requisits de hardware i software, compatibilitat amb sistemes existents, escalabilitat, mantenibilitat, seguretat i rendiment. Identifica riscos amb probabilitat, impacte i pla de mitigació. Inclou diagrama tècnic preliminar.
+- **Criteris:** Anàlisi riscos 30% | Escalabilitat 25% | Seguretat 25% | Viabilitat 20%
+
+### Tasca 1.6: Anàlisi de viabilitat econòmica {#b106}
+- **Termini:** Setmana 3
+- **Entregable:** Pressupost detallat (Excel) + anàlisi comparativa
+- **Enunciat:**  
+  Calcula costos de desenvolupament, hosting, llicències i manteniment. Estima ROI i punt d’equilibri. Compara ≥2 alternatives d’infraestructura (cloud vs on-premise) i justifica l’elecció.
+- **Criteris:** Realisme pressupost 40% | Detall partides 30% | Cost-benefici 30%
+
+### Tasca 1.7: Benchmarking competitiu {#b107}
+- **Termini:** Setmana 2–3
+- **Entregable:** Taula comparativa + informe d’anàlisi
+- **Enunciat:**  
+  Analitza ≥3 aplicacions web competidores. Documenta funcions, tecnologia, model de negoci, punts forts i febles per a cada una. Proposa ≥5 millores diferencials per al teu projecte.
+- **Criteris:** Qualitat anàlisi 40% | Propostes millora 30% | Presentació 30%
+
+### Tasca 1.8: Selecció de tecnologies {#b108}
+- **Termini:** Setmana 3–4
+- **Entregable:** Document stack tecnològic
+- **Enunciat:**  
+  Selecciona llenguatges backend/frontend, frameworks, SGBD, servidor web, IDE, control de versions, eines de testing i hosting. Justifica cada elecció segons requisits, rendiment i costos.
+- **Criteris:** Adequació requisits 40% | Justificació tècnica 30% | Coherència stack 20% | Actualitat 10%
+
+### Tasca 1.9: Justificació tecnològica {#b109}
+- **Termini:** Setmana 4
+- **Entregable:** Document de justificació + matrius de decisió
+- **Enunciat:**  
+  Argumenta cada elecció tecnològica comparant ≥2 alternatives per a cada element crític (framework, SGBD, ORM, hosting). Utilitza matrius ponderades per criteris tècnics, econòmics i d’integració.
+- **Criteris:** Argumentació 50% | Alternatives 25% | Documentació 25%
+
+---
+
+## Bloc 2 – Disseny i Planificació del Projecte {#bloc-2}
+
+### Tasca 2.1: Diagrama de casos d’ús {#b201}
+- **Termini:** Setmana 4–5
+- **Entregable:** Diagrama UML + fitxes descriptives
+- **Enunciat:**  
+  Dibuixa actors (2–5), casos d’ús principals (≥8) i secundaris (≥4). Utilitza relacions include, extend i generalització. Per cada cas inclou nom, actors, precondicions, flux normal i alternatiu, postcondicions i requisits no funcionals.
+- **Criteris:** Completesa actors i casos 40% | Correctesa notació 30% | Claredat 30%
+
+### Tasca 2.2: Diagrames de seqüència {#b202}
+- **Termini:** Setmana 5–6
+- **Entregable:** 5 diagrames UML + documentació
+- **Enunciat:**  
+  Crea ≥5 diagrames de seqüència per processos crítics (autenticació, CRUD, negoci, APIs externes, errors). Inclou objectes, missatges, fragments alt, opt i loop.
+- **Criteris:** Coherència cas ús 30% | Notació UML 30% | Cobertura funcional 40%
+
+### Tasca 2.3: Diagrama de classes {#b203}
+- **Termini:** Setmana 6–7
+- **Entregable:** Diagrama UML complet
+- **Enunciat:**  
+  Dissenya ≥10 classes amb atributs (tipus, visibilitat), mètodes (paràmetres, retorn), relacions (herència, composició, agregació) i paquets lògics.
+- **Criteris:** Disseny OO 40% | Aplicació patrons 30% | Completesa 30%
+
+### Tasca 2.4: Diagrama de components/desplegament {#b204}
+- **Termini:** Setmana 7
+- **Entregable:** Diagrama components + diagrama desplegament
+- **Enunciat:**  
+  Dibuixa components (presentació, negoci, dades, APIs) amb interfícies i dependències. Afegeix diagrama de desplegament amb nodes, artefactes, protocols i consideracions de seguretat.
+- **Criteris:** Correspondència real 40% | Claredat 30% | Nivell detall 30%
+
+### Tasca 2.5: Selecció d’arquitectura {#b205}
+- **Termini:** Setmana 5
+- **Entregable:** Document matriu decisió + diagrama arquitectònic
+- **Enunciat:**  
+  Compara 3 patrons arquitectònics (MVC, n‐tier, microserveis, hexagonal). Avalua complexitat, escalabilitat, mantenibilitat, rendiment i cost. Utilitza matriu ponderada i justifica l’elecció final.
+- **Criteris:** Justificació tècnica 50% | Adequació requisits 30% | Consideració alternatives 20%
+
+### Tasca 2.6: Disseny de la capa de presentació {#b206}
+- **Termini:** Setmana 7–8
+- **Entregable:** Diagrama components frontend + document especificació
+- **Enunciat:**  
+  Defineix estructura de vistes (≥8 pantalles), routing, components (≥15), gestió d’estats (Context API, Redux, Vuex o similar), binding de dades i patrons MVC/MVVM.
+- **Criteris:** Separació responsabilitats 40% | Aplicació patrons 30% | Documentació 30%
+
+### Tasca 2.7: Disseny de la capa de negoci {#b207}
+- **Termini:** Setmana 8
+- **Entregable:** Diagrames flux + document serveis negoci
+- **Enunciat:**  
+  Documenta ≥10 regles de negoci, 5 serveis de domini, gestió de transaccions i errors, algoritmes complexos. Aplica SOLID i patrons (Strategy, Factory, Observer).
+- **Criteris:** Principis SOLID 40% | Gestió errors 30% | Qualitat codi 30%
+
+### Tasca 2.8: Disseny de la capa de dades {#b208}
+- **Termini:** Setmana 8
+- **Entregable:** Document estratègia accés dades + diagrama + exemples codi
+- **Enunciat:**  
+  Defineix patró d’accés (Repository, DAO), operacions CRUD, pool connexions, gestió transaccions, ORM seleccionat i optimitzacions d’accés.
+- **Criteris:** Eficiència accés 40% | Gestió transaccions 30% | Separació capes 30%
+
+### Tasca 2.9: Disseny del model de dades {#b209}
+- **Termini:** Setmana 6–7
+- **Entregable:** Diagrama ER + diccionari de dades
+- **Enunciat:**  
+  Dibuixa ≥10 entitats amb atributs, tipus dades, claus primàries i foranes, relacions (1:1, 1:N, N:M) i restriccions d’integritat.
+- **Criteris:** Completesa model 35% | Correctesa relacions 35% | Adequació tipus 30%
+
+### Tasca 2.10: Normalització de la base de dades {#b210}
+- **Termini:** Setmana 7
+- **Entregable:** Document normalització + diagrama normalitzat + scripts SQL
+- **Enunciat:**  
+  Aplica formes normals (1FN, 2FN, 3FN, BCNF). Documenta cada pas i justifica desnormalitzacions per rendiment.
+- **Criteris:** Aplicació normals 50% | Justificació 30% | Documentació 20%
+
+### Tasca 2.11: Definició d’índexs i optimitzacions {#b211}
+- **Termini:** Setmana 8
+- **Entregable:** Document estratègia indexació + scripts SQL CREATE INDEX
+- **Enunciat:**  
+  Defineix índexs primaris, únics, simples i compostos (≥5). Especifica tipus (B-tree, GIN), justificació per consultes i impacte rendiment.
+- **Criteris:** Adequació índexs 40% | Justificació tècnica 30% | Impacte rendiment 30%
+
+### Tasca 2.12: Wireframes i mockups {#b212}
+- **Termini:** Setmana 8–9
+- **Entregable:** Wireframes (10) + mockups (5) + user flows detalls
+- **Enunciat:**  
+  Dissenya wireframes de baixa fidelitat per 10 pantalles i mockups alta fidelitat per 5 pantalles clau, aplicant guia estil i estats UI.
+- **Criteris:** Cobertura funcional 40% | Claredat fluxos 30% | Qualitat visual 30%
+
+### Tasca 2.13: Prototip interactiu {#b213}
+- **Termini:** Setmana 9–10
+- **Entregable:** Enllaç prototip + document explicació
+- **Enunciat:**  
+  Crea un prototip interactiu amb Figma/Adobe XD d’alta fidelitat (10 pantalles, ≥3 fluxos) amb navegació, transicions i dades reals.
+- **Criteris:** Fidelitat prototip 30% | Interactivitat 30% | Usabilitat 40%
+
+### Tasca 2.14: Disseny responsive i accessible {#b214}
+- **Termini:** Setmana 10
+- **Entregable:** Responsive designs (3 breakpoints) + checklist WCAG 2.1 AA
+- **Enunciat:**  
+  Implementa mobile-first per mòbil, tablet i desktop. Aplica WCAG AA: contrast, navegació per teclat, etiquetes ARIA i mides touch targets.
+- **Criteris:** Adaptabilitat 35% | Accessibilitat 35% | Coherència visual 30%
+
+### Tasca 2.15: Planificació amb metodologia àgil {#b215}
+- **Termini:** Setmana 5
+- **Entregable:** Document metodologia + configuració eina (Jira/Trello)
+- **Enunciat:**  
+  Decideix entre Scrum i Kanban. Defineix rols, cerimònies, artefactes, WIP limits i mètriques (Lead Time, Cycle Time).
+- **Criteris:** Adequació metodología 40% | Definició rols 30% | Cerimònies 30%
+
+### Tasca 2.16: Product Backlog i User Stories {#b216}
+- **Termini:** Setmana 5–6
+- **Entregable:** Backlog complet (≥20 stories) + Epics agrupats
+- **Enunciat:**  
+  Redacta ≥20 user stories en format “Com a [ROL] vull [FUNC] per [BENEF]” amb criteris d’acceptació (≥3), priorització MoSCoW i estimació Fibonacci.
+- **Criteris:** Qualitat stories 40% | Priorització 30% | Estimació 30%
+
+### Tasca 2.17: Planificació de sprints {#b217}
+- **Termini:** Setmana 6
+- **Entregable:** Sprint Backlog per ≥3 primers sprints + diagrama Gantt/Roadmap
+- **Enunciat:**  
+  Divideix el projecte en ≥6 sprints de 1–2 setmanes. Assigna User Stories a cada sprint basant-te en velocitat i dependències. Inclou hites i buffers (10–15%).
+- **Criteris:** Realisme temporal 40% | Equilibri sprints 30% | Definició objectius 30%
+
+### Tasca 2.18: Estimació de temps i recursos {#b218}
+- **Termini:** Setmana 6
+- **Entregable:** Full d’estimacions + matriu de riscos
+- **Enunciat:**  
+  Utilitza Planning Poker o Story Points (Fibonacci). Afegeix contingència +20%. Calcula velocitat setmanal i ruta crítica. Elabora matriu riscos amb probabilitat, impacte i pla de mitigació.
+- **Criteris:** Realisme estimacions 40% | Gestió dependències 30% | Riscos 30%
+
+---
+
+## Bloc 3 – Desenvolupament i Implementació {#bloc-3}
+
+### Tasca 3.1: Configuració entorn desenvolupament {#b301}
+- **Termini:** Setmana 10–11
+- **Entregable:** README.md + scripts + repositori
+- **Enunciat:**  
+  Configura entorn local amb IDE (VS Code/WebStorm), Git, runtime backend (Node.js/PHP/Python), framework, SGBD, servidor web, testing i dependències. Opcional Docker amb docker-compose.
+- **Criteris:** Completesa setup 40% | Funcionalitat entorn 30% | Documentació 30%
+
+### Tasca 3.2: Implementació arquitectura backend {#b302}
+- **Termini:** Setmana 11–12
+- **Entregable:** Estructura codi + doc. arquitectura + 3 endpoints prova
+- **Enunciat:**  
+  Implementa patró backend (MVC o capes). Inclou models, controladors, serveis, repositoris, configuració de rutes, middlewares i entrypoint.
+- **Criteris:** Adherència arquitectura 40% | Separació capes 30% | Mantenibilitat 30%
+
+### Tasca 3.3: APIs RESTful {#b303}
+- **Termini:** Setmana 12–14
+- **Entregable:** API completa (≥15 endpoints) + col·lecció Postman
+- **Enunciat:**  
+  Desenvolupa endpoints REST amb mètodes HTTP, URLs semàntiques, JSON consistent, paginació, filtrat, versionat, CORS i rate limiting.
+- **Criteris:** Estàndards REST 35% | Cobertura funcional 35% | Gestió errors 30%
+
+### Tasca 3.4: Autenticació i autorització {#b304}
+- **Termini:** Setmana 13–14
+- **Entregable:** Sistema auth complet + doc. flux + tests
+- **Enunciat:**  
+  Registre, login amb JWT o sessions segures, hash contrasenyes, refresh tokens, roles RBAC i permissions.
+- **Criteris:** Seguretat 40% | Funcionalitat roles 35% | Gestió sessions 25%
+
+### Tasca 3.5: Gestió d’errors i logging {#b305}
+- **Termini:** Setmana 12–13
+- **Entregable:** Logging + doc. errors + exemples
+- **Enunciat:**  
+  Captura global errors, middleware errors, JSON errors estàndard, llibreria logging amb rotació i logs estructurats.
+- **Criteris:** Cobertura errors 40% | Qualitat logs 30% | UX errors 30%
+
+### Tasca 3.6: Lògica de negoci {#b306}
+- **Termini:** Setmana 14–16
+- **Entregable:** Codi serveis + tests unitaris + doc.
+- **Enunciat:**  
+  Implementa serveis de negoci seguint SOLID i patrons (Strategy, Factory). Crea 5 serveis, validacions, càlculs i integracions.
+- **Criteris:** SOLID 40% | Patrons 30% | Qualitat codi 30%
+
+### Tasca 3.7: Validacions servidor i client {#b307}
+- **Termini:** Setmana 13–15
+- **Entregable:** Validacions + doc. + tests
+- **Enunciat:**  
+  Validacions servidor (tipus, rangs, sanitització) i client (realtime, missatges clars, indicadors visuals).
+- **Criteris:** Cobertura validacions 40% | Missatges clars 30% | Coherència 30%
+
+### Tasca 3.8: Frontend responsive {#b308}
+- **Termini:** Setmana 15–17
+- **Entregable:** Codi HTML/CSS + validació W3C + screenshots
+- **Enunciat:**  
+  Semàntica HTML5, CSS Grid/Flexbox, mobile-first, breakpoints, imatges responsives, tipografia fluida, accesibilitat bàsica.
+- **Criteris:** Semàntica 30% | Responsive 40% | Compatibilitat 30%
+
+### Tasca 3.9: Interacció UI {#b309}
+- **Termini:** Setmana 16–18
+- **Entregable:** JavaScript/Framework + doc.
+- **Enunciat:**  
+  DOM dinamici, AJAX/Fetch, SPA behaviour, spinners, modals, animacions, drag&drop i paginació dinàmica.
+- **Criteris:** Funcionalitat 40% | Animacions 30% | UX 30%
+
+### Tasca 3.10: Gestió estats frontend {#b310}
+- **Termini:** Setmana 17–18
+- **Entregable:** Sistema estats + diagrama
+- **Enunciat:**  
+  Context API/Redux/Vuex o Observer pattern vanilla per estats globals i locals, sincronització amb backend.
+- **Criteris:** Correctesa 50% | Rendiment 25% | Mantenibilitat 25%
+
+### Tasca 3.11: Optimització rendiment frontend {#b311}
+- **Termini:** Setmana 19–20
+- **Entregable:** Lighthouse reports before/after + doc.
+- **Enunciat:**  
+  Lazy load, code splitting, minificació, compressió, tree shaking, critical CSS, prefetch, service workers i fonts optimizats.
+- **Criteris:** Millora rendiment 50% | Implementació tècniques 30% | Testing 20%
+
+### Tasca 3.12: Connexió i configuració SGBD {#b312}
+- **Termini:** Setmana 11
+- **Entregable:** Connexió SSL, pool, doc. config
+- **Enunciat:**  
+  Separar config, .env, pool connexions, SSL, health check i retry logic.
+- **Criteris:** Estabilitat 40% | Seguretat 30% | Documentació 30%
+
+### Tasca 3.13: Implementació model de dades {#b313}
+- **Termini:** Setmana 11–12
+- **Entregable:** Scripts SQL, migrations, seed data
+- **Enunciat:**  
+  Crear taules, vistes, triggers, procediments i dades de prova (≥50 registres) seguint diagrama ER.
+- **Criteris:** Fidelitat model 40% | Qualitat SQL 35% | Rendiment 25%
+
+### Tasca 3.14: Consultes optimitzades {#b314}
+- **Termini:** Setmana 14–16
+- **Entregable:** SQL queries + execution plans
+- **Enunciat:**  
+  SELECT, JOINs, CTEs, agregacions, paginació, full-text. Analitza amb EXPLAIN i evita scans innecessaris.
+- **Criteris:** Eficiència queries 45% | Correctesa 35% | Índexs 20%
+
+### Tasca 3.15: Gestió transaccions {#b315}
+- **Termini:** Setmana 15
+- **Entregable:** Codi transaccions + tests
+- **Enunciat:**  
+  Implementa BEGIN/COMMIT/ROLLBACK amb nivells aïllament, locks pessimistes/optimistes i retry logic.
+- **Criteris:** Atomicitat 50% | Gestió errors 30% | Rendiment 20%
+
+### Tasca 3.16: Upload i gestió fitxers multimèdia {#b316}
+- **Termini:** Setmana 16–17
+- **Entregable:** Form upload, validació server/client, thumbnails
+- **Enunciat:**  
+  Input file, validació MIME i mida, noms únics, emmagatzematge (filesystem o S3), thumbnails, endpoint descàrrega i permisos.
+- **Criteris:** Seguretat upload 40% | Funcionalitat completa 35% | Gestió errors 25%
+
+### Tasca 3.17: Reproducció multimèdia {#b317}
+- **Termini:** Setmana 17–18
+- **Entregable:** Controls vídeo/àudio personalitzats + tests
+- **Enunciat:**  
+  HTML5 <video>/<audio> amb controls, subtítols, keyboard shortcuts, suport formats, fallbacks i analytics.
+- **Criteris:** Compatibilitat 35% | Qualitat controls 35% | UX 30%
+
+### Tasca 3.18: Funcionalitats interactives avançades {#b318}
+- **Termini:** Setmana 18–20
+- **Entregable:** ≥3 funcionalitats + doc. + demo
+- **Enunciat:**  
+  Drag&drop, autocomplete, filtres, export CSV/PDF, gràfics, mapes, push notifications, rich text, calendari o chat.
+- **Criteris:** Innovació 30% | Implementació 40% | UX 30%
+
+### Tasca 3.19: Optimització recursos multimèdia {#b319}
+- **Termini:** Setmana 19
+- **Entregable:** Pipeline scripts + metrics before/after
+- **Enunciat:**  
+  Compressió imatges (WebP/AVIF), vídeos (H.264), lazy loading, sprites, LQIP, CDN si cal.
+- **Criteris:** Millora rendiment 45% | Qualitat tècnica 35% | Impacte 20%
+
+### Tasca 3.20: Documentació endpoints API {#b320}
+- **Termini:** Setmana 14–15
+- **Entregable:** Swagger UI + OpenAPI spec
+- **Enunciat:**  
+  Documenta tots els endpoints amb OpenAPI 3.0: paràmetres, schemas, exemples, autenticació i tags.
+- **Criteris:** Completesa docs 40% | Exemples clars 30% | Execució “Try it out” 30%
+
+### Tasca 3.21: Testing unitari i integració APIs {#b321}
+- **Termini:** Setmana 16–18
+- **Entregable:** Suites tests + coverage >80%
+- **Enunciat:**  
+  Jest/Mocha o PHPUnit tests per lògica de negoci i Supertest/N  ewman per integració. Cobertura ≥80%.
+- **Criteris:** Cobertura tests 40% | Qualitat assertions 35% | Integració 25%
+
+### Tasca 3.22: Versionat amb Git {#b322}
+- **Termini:** Continu; mínim 50 commits
+- **Entregable:** Repositori net + branching strategy
+- **Enunciat:**  
+  .gitignore, commits semàntics (Conventional Commits), GitFlow o trunk-based, PRs, tags vX.Y.Z.
+- **Criteris:** Historial net 35% | Commits semàntics 30% | Branching 35%
+
+### Tasca 3.23: Code review i qualitat codi {#b323}
+- **Termini:** Setmana 18–20
+- **Entregable:** Linting, SonarQube + checklist review
+- **Enunciat:**  
+  ESLint/Prettier, Pylint/PHPStan, SonarQube, pre-commit hooks, code smells i complexitat baixa.
+- **Criteris:** Compliment estàndards 40% | Resultats linting 30% | Millora contínua 30%
+
+### Tasca 3.24: Integració contínua (CI) {#b324}
+- **Termini:** Setmana 20
+- **Entregable:** Pipeline CI (GitHub Actions/Jenkins) + badge
+- **Enunciat:**  
+  Configura pipeline per linting, tests, build i coverage. Notificacions i badge en README.
+- **Criteris:** Automatització 40% | Eficàcia pipeline 35% | Temps execució <10m 25%
+
+---
+
+## Bloc 4 – Documentació i Presentació {#bloc-4}
+
+### Tasca 4.1: Manual tècnic – Arquitectura {#b401}
+- **Termini:** Setmana 23–24
+- **Entregable:** Capítol arquitectura (PDF) + diagrames
+- **Enunciat:**  
+  Documenta arquitectura amb diagrama alt nivell, components finals, desplegament, decisions, patrons disseny i seguretat.
+- **Criteris:** Completesa arquitectura 40% | Claredat diagrames 30% | Justificació 30%
+
+### Tasca 4.2: Manual tècnic – Instal·lació {#b402}
+- **Termini:** Setmana 21–22
+- **Entregable:** Guia instal·lació + scripts
+- **Enunciat:**  
+  Pas a pas: prerequisits, clonació repo, dependències, config BD, migrations, .env, build i start.
+- **Criteris:** Claredat instruccions 40% | Funcionalitat scripts 30% | Completesa 30%
+
+### Tasca 4.3: Manual tècnic – Configuració {#b403}
+- **Termini:** Setmana 22–23
+- **Entregable:** Document config + fitxers exemple
+- **Enunciat:**  
+  Documenta arxius config principals, variables .env, entorns, logging, cache, email i seguretat.
+- **Criteris:** Precisió config 50% | Troubleshooting 25% | Actualització 25%
+
+### Tasca 4.4: Manual tècnic – Base de dades {#b404}
+- **Termini:** Setmana 23
+- **Entregable:** Documentació BD completa + scripts
+- **Enunciat:**  
+  Diagrama ER final, diccionari dades, scripts creació, vistes, procediments, triggers, backup i manteniment.
+- **Criteris:** Correspondència model 40% | Qualitat scripts 30% | Documentació 30%
+
+### Tasca 4.5: Manual tècnic – APIs {#b405}
+- **Termini:** Setmana 20–21
+- **Entregable:** Docs Markdown + Swagger UI + Postman
+- **Enunciat:**  
+  Guia inici ràpid, auth, rate limits, versionat, esquemes, exemples request/response i changelog.
+- **Criteris:** Completesa endpoints 40% | Exemples clars 30% | Execució Swagger 30%
+
+### Tasca 4.6: Manual d’usuari – Introducció {#b406}
+- **Termini:** Setmana 24
+- **Entregable:** PDF amb disseny
+- **Enunciat:**  
+  Explica què és l’app, públic objectiu, requisits, accessibilitat, screenshots anotats i convencions de manual.
+- **Criteris:** Claredat objectius 35% | Adequació audiència 35% | Precisió requisits 30%
+
+### Tasca 4.7: Manual d’usuari – Funcionalitats {#b407}
+- **Termini:** Setmana 24–25
+- **Entregable:** PDF amb guies pas a pas i screenshots
+- **Enunciat:**  
+  Per ≥10 funcions: títol, descripció, passos numerats amb captures, camps, resultats i consells.
+- **Criteris:** Cobertura funcions 40% | Qualitat screenshots 30% | Ús pràctic 30%
+
+### Tasca 4.8: Manual d’usuari – Troubleshooting {#b408}
+- **Termini:** Setmana 25
+- **Entregable:** PDF FAQs + solucions
+- **Enunciat:**  
+  Secció errors comuns amb causes, solucions i contacte suport. Inclou FAQs ≥10 i guies resolució.
+- **Criteris:** Utilitat 40% | Claredat solucions 35% | Completesa 25%
+
+### Tasca 4.9: Manual d’usuari – Casos d’ús {#b409}
+- **Termini:** Setmana 25
+- **Entregable:** PDF narratives + screenshots
+- **Enunciat:**  
+  ≥5 casos d’ús reals amb context, passos, screenshots, variations i personas fictícies.
+- **Criteris:** Realisme 40% | Detall 35% | Narrativa 25%
+
+### Tasca 4.10: Documentació codi – Comentaris {#b410}
+- **Termini:** Continu (11–25)
+- **Entregable:** Codi comentat + docs HTML
+- **Enunciat:**  
+  JSDoc/PHPDoc/Sphinx amb descripció classes, mètodes, paràmetres, retorns i examples.
+- **Criteris:** Cobertura comentaris 40% | Qualitat docs 35% | Generació automàtica 25%
+
+### Tasca 4.11: README.md {#b411}
+- **Termini:** Setmana 21
+- **Entregable:** README complet
+- **Enunciat:**  
+  Títol, badges, screenshots, bullets funcions, demo link, stack, prereqs, instal·lació, ús, tests, contributing, llicència, autors.
+- **Criteris:** Completesa 35% | Claredat 35% | Professional 30%
+
+### Tasca 4.12: API docs Swagger {#b412}
+- **Termini:** Setmana 20–21
+- **Entregable:** Swagger UI + OpenAPI spec
+- **Enunciat:**  
+  Documentació auto generada amb operativa “Try it out” i export JSON/YAML.
+- **Criteris:** Cobertura total 40% | Funcionalitat try it out 35% | Mantenibilitat 25%
+
+### Tasca 4.13: Diagrames tècnics actualitzats {#b413}
+- **Termini:** Setmana 24
+- **Entregable:** UML finals en /docs/diagrams
+- **Enunciat:**  
+  Actualitza casos d’ús, seqüència, classes, components, desplegament i ER segons la implementació final.
+- **Criteris:** Fidelitat **50%** | Qualitat visual 30% | Actualització 20%
+
+### Tasca 4.14: Informe final – Resum executiu {#b414}
+- **Termini:** Setmana 26
+- **Entregable:** PDF (2 pàg.)
+- **Enunciat:**  
+  Sintetitza problema, objectius, solució, metodologia, tecnologies, resultats clau, impacte i recomanacions top 3.
+- **Criteris:** Síntesi 40% | Presentació resultats 35% | Claredat 25%
+
+### Tasca 4.15: Informe final – Metodologia {#b415}
+- **Termini:** Setmana 26
+- **Entregable:** PDF (3–4 pàg.)
+- **Enunciat:**  
+  Documenta fases, sprints, ceremonies, eines, Gantt vs real, burndown, gestió riscos i lliçons apreses.
+- **Criteris:** Justificació 40% | Reflexió adaptacions 35% | Documentació lliçons 25%
+
+### Tasca 4.16: Informe final – Resultats {#b416}
+- **Termini:** Setmana 26–27
+- **Entregable:** PDF (4–5 pàg.)
+- **Enunciat:**  
+  Presenta entregables implementats, cobertura tests, rendiment, mètriques QA, usabilitat i compliance WCAG.
+- **Criteris:** Evidència 40% | Compliment SMART 35% | Dades objectivables 25%
+
+### Tasca 4.17: Informe final – Conclusions {#b417}
+- **Termini:** Setmana 27
+- **Entregable:** PDF (3–4 pàg.)
+- **Enunciat:**  
+  Reflexiona èxits i errors, decisions tècniques, dificultats, competències desenvolupades i aplicabilitat laboral.
+- **Criteris:** Anàlisi crítica 40% | Reflexió personal 35% | Objectivitat 25%
+
+### Tasca 4.18: Informe final – Millores futures {#b418}
+- **Termini:** Setmana 27
+- **Entregable:** PDF (2–3 pàg.) + roadmap
+- **Enunciat:**  
+  Proposa funcionalitats pendents, refactoring, evolució UX, integracions, internacionalització i seguretat. Prioritza amb matriu impacte/esforç.
+- **Criteris:** Viabilitat 35% | Priorització 35% | Estimació 30%
+
+### Tasca 4.19: Presentació executiva {#b419}
+- **Termini:** Setmana 27–28
+- **Entregable:** Slides PPT/Google + PDF exportat
+- **Enunciat:**  
+  15–20 min. Slide deck amb context, objectius, arquitectura simplificada, funcions clau, demo, resultats, conclusions i roadmap.
+- **Criteris:** Estructura 30% | Storytelling 25% | Visuals 25% | Timing 20%
+
+### Tasca 4.20: Demo interactiva {#b420}
+- **Termini:** Setmana 28
+- **Entregable:** Demo en viu + backup vídeo/screenshots
+- **Enunciat:**  
+  Prepara escenari realista amb dades de demo, mostra login, CRUD principal, funcionalitats interactives i fallback plan.
+- **Criteris:** Funcionalitat 40% | Preparació 30% | Gestió imprevistos 30%
+
+---
+
+## Bloc 5 – Avaluació i Millora Contínua {#bloc-5}
+
+### Tasca 5.1: Testing unitari backend {#b501}
+- **Termini:** Setmanes 16–20
+- **Entregable:** Test suite + coverage >80%
+- **Enunciat:**  
+  Crea tests unitaris per serveis i helpers. Mocking dep. externes, fixtures, teardown, assertions clares i tests parametritzats.
+- **Criteris:** Coverage 40% | Qualitat assertions 35% | Organització 25%
+
+### Tasca 5.2: Testing integració APIs {#b502}
+- **Termini:** Setmanes 17–20
+- **Entregable:** Tests integració + report
+- **Enunciat:**  
+  Automatitza tests HTTP per endpoints crítics: happy path, validacions, errors 401/403/404, CRUD. BD test separada i seed data.
+- **Criteris:** Cobertura endpoints 40% | Qualitat tests 30% | Gestió errors 30%
+
+### Tasca 5.3: Testing funcional frontend {#b503}
+- **Termini:** Setmanes 18–21
+- **Entregable:** Cypress/Selenium suite + screenshots
+- **Enunciat:**  
+  Testing UI: navegació, formularis, modals, drag&drop, responsive, upload, feedback visuals.
+- **Criteris:** Cobertura fluxos 40% | Qualitat tests 35% | Mantenibilitat 25%
+
+### Tasca 5.4: Testing E2E {#b504}
+- **Termini:** Setmana 21–22
+- **Entregable:** E2E tests + vídeos execució
+- **Enunciat:**  
+  Fluxos complets: registre/login, CRUD, checkout, paginació. BD de test i videos per doc.
+- **Criteris:** Cobertura escenaris 45% | Robustesa tests 30% | Documentació 25%
+
+### Tasca 5.5: Testing rendiment {#b505}
+- **Termini:** Setmana 22
+- **Entregable:** Lighthouse & GTmetrix reports + doc.
+- **Enunciat:**  
+  Mesura Core Web Vitals i optimitza segons resultats.
+- **Criteris:** Millora mètriques 50% | Anàlisi detallat 30% | Implementació 20%
+
+### Tasca 5.6: Testing càrrega i estrès {#b506}
+- **Termini:** Setmana 22
+- **Entregable:** Load test reports + gràfics
+- **Enunciat:**  
+  Simula 50–500 usuaris, ramp-up, spike, soak testing. Mesura temps resposta, throughput i error rate.
+- **Criteris:** Determinació límits 40% | Anàlisi resultats 35% | Documentació 25%
+
+### Tasca 5.7: Testing seguretat {#b507}
+- **Termini:** Setmana 21–22
+- **Entregable:** Security audit report + fix
+- **Enunciat:**  
+  OWASP ZAP/Burp scans, npm/composer audit, headers seguretat, CSRF, XSS, injection tests.
+- **Criteris:** Identificació vulnerabilitats 40% | Remediació 35% | Doc. fixes 25%
+
+### Tasca 5.8: Testing cross-browser {#b508}
+- **Termini:** Setmana 23
+- **Entregable:** Matriu compatibilitat + screenshots
+- **Enunciat:**  
+  Test manual/automatitzat en Chrome, Firefox, Safari, Edge i mòbils. Detecta issues i aplica polyfills.
+- **Criteris:** Cobertura navegadors 40% | Resolució issues 35% | Documentació 25%
+
+### Tasca 5.9: Auditoria accessibilitat WCAG {#b509}
+- **Termini:** Setmana 23
+- **Entregable:** AXE/WAVE/Lighthouse report + fixes
+- **Enunciat:**  
+  Verifica WCAG 2.1 AA: contrast, focus, labels, ARIA, teclat only i screen reader tests.
+- **Criteris:** Compliment 50% | Documentació issues 25% | Fixes aplicats 25%
+
+### Tasca 5.10: Testing usabilitat {#b510}
+- **Termini:** Setmana 24
+- **Entregable:** Usability report + vídeos
+- **Enunciat:**  
+  Sessions think-aloud amb 5–10 usuaris, tasques realistes, SUS survey, recordings i notes d’observacions.
+- **Criteris:** Task completion 35% | Time on task 35% | Satisfaction 30%
+
+### Tasca 5.11: Anàlisi mètriques UX {#b511}
+- **Termini:** Setmana 24
+- **Entregable:** Dashboard mètriques + insights
+- **Enunciat:**  
+  Configura Google Analytics/Mixpanel: events, funnels, heatmaps i grava sessions. Analitza completion rate, error rate i satisfacció.
+- **Criteris:** Recollida mètriques 40% | Anàlisi insights 35% | Recomanacions 25%
+
+### Tasca 5.12: Validació responsive design {#b512}
+- **Termini:** Setmana 23
+- **Entregable:** Checklist + screenshots múltiples breakpoints
+- **Enunciat:**  
+  Test responsive en dispositius reals i emuladors per 8 breakpoints. Verifica layout, text, botons i taules.
+- **Criteris:** Cobertura breakpoints 40% | Qualitat fixes 35% | Documentació 25%
+
+### Tasca 5.13: Refactoring i optimització codi {#b513}
+- **Termini:** Setmana 25
+- **Entregable:** Codi refactoritzat + SonarQube report
+- **Enunciat:**  
+  Utilitza SonarQube per identificar code smells, complexitat ≥10 i duplicació. Aplica SOLID, DRY, patterns i tests passing.
+- **Criteris:** Reducció debt >50% | Tests passing 100% | Documentació 25%
+
+### Tasca 5.14: Optimització consultes BD {#b514}
+- **Termini:** Setmana 25
+- **Entregable:** EXPLAIN reports + benchmarks
+- **Enunciat:**  
+  Analitza slow queries, afegeix índexs, partitioning, views materialitzades, caching i ORM eager loading.
+- **Criteris:** Millora rendiment >50% | Correctesa consultes 35% | Documentació 15%
+
+### Tasca 5.15: Optimització recursos frontend {#b515}
+- **Termini:** Setmana 25–26
+- **Entregable:** Lighthouse reports + bundle analysis
+- **Enunciat:**  
+  Lazy loading, code splitting, minify, tree shaking, compressió, critical CSS i fonts optimizats.
+- **Criteris:** Score >90 | Mètriques Core Web Vitals 50% | Bundle size 25% | Documentació 25%
+
+### Tasca 5.16: Implementació cache estratègic {#b516}
+- **Termini:** Setmana 26
+- **Entregable:** Document arquitectura cache + metrics
+- **Enunciat:**  
+  Cache navegador (HTTP), app (Redis), CDN, invalidation strategy i monitoring cache hit rate.
+- **Criteris:** Hit rate 45% | Estratègia 30% | Documentació 25%
+
+### Tasca 5.17: Configuració entorn producció {#b517}
+- **Termini:** Setmana 26
+- **Entregable:** Infraestructura doc + security checklist
+- **Enunciat:**  
+  Setup servidor cloud, SSL, firewall, backups, SSH keys, fail2ban, rate limiting i logs rotació.
+- **Criteris:** Seguretat 40% | Automatització 35% | Documentació 25%
+
+### Tasca 5.18: Desplegament aplicació {#b518}
+- **Termini:** Setmana 27
+- **Entregable:** Deployment scripts + CI/CD pipeline
+- **Enunciat:**  
+  Blue/Green o Rolling deployment amb zero downtime, migrations i smoke tests. Documenta rollback i health checks.
+- **Criteris:** Zero downtime 45% | Automatització 30% | Documentació 25%
+
+### Tasca 5.19: Configuració monitorització {#b519}
+- **Termini:** Setmana 27
+- **Entregable:** APM dashboards + alertes
+- **Enunciat:**  
+  Integra New Relic/Datadog, metrics servidors, BD, errors (Sentry) i uptime checks amb alertes.
+- **Criteris:** Cobertura metrics 40% | Alerts config 35% | Documentació 25%
+
+### Tasca 5.20: Documentació desplegament {#b520}
+- **Termini:** Setmana 27–28
+- **Entregable:** Manual operacions + runbooks
+- **Enunciat:**  
+  Documenta procediments deployment, rollback, backups, troubleshooting i scaling. Inclou runbooks i scripts.
+- **Criteris:** Completesa 40% | Claredat 35% | Facilitat uso 25%
+
+### Tasca 5.21: Anàlisi resultats vs objectius {#b521}
+- **Termini:** Setmana 28
+- **Entregable:** Dashboard + root cause analysis
+- **Enunciat:**  
+  Compara resultats reals amb SMART inicials. Calcula percentatge de compliment i analitza desviacions.
+- **Criteris:** Quantificació 45% | Root causes 30% | Claredat 25%
+
+### Tasca 5.22: Identificació punts millora {#b522}
+- **Termini:** Setmana 28
+- **Entregable:** Matriu impacte/esforç + action plan
+- **Enunciat:**  
+  Analitza tècnic, UX/UI i procés per identificar àrees de millora prioritàries.
+- **Criteris:** Identificació gaps 40% | Priorització 35% | Viabilitat 25%
+
+### Tasca 5.23: Roadmap evolutiu {#b523}
+- **Termini:** Setmana 28
+- **Entregable:** Roadmap visual + backlog futures
+- **Enunciat:**  
+  Planifica v1.1, v1.2 i v2.0 amb themes, features, estimacions, recursos i timeline.
+- **Criteris:** Realisme 35% | Priorització 35% | Documentació 30%
+
+### Tasca 5.24: Avaluació crítica global {#b524}
+- **Termini:** Setmana 28
+- **Entregable:** Essay reflexiu (3–5 pàg.)
+- **Enunciat:**  
+  Reflexiona sobre èxits, fracassos, decisions, metodologies, competències apreses i recomanacions futures.
+- **Criteris:** Anàlisi crítica 35% | Reflexió personal 35% | Lliçons aprend 30%
+
