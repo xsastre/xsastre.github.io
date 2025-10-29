@@ -1,0 +1,96 @@
+Codi Tasca;Nom Tasca;Resultats Aprenentatge (RA) Mòduls DAW;Descripció Vinculació
+1.1;Investigació del mercat tecnològic;ED.RA1, ED.RA2, FOL.RA4;Reconeix elements desenvolupament programari, avalua entorns i competències emprenedoria
+1.2;Identificació de necessitats reals;PI.RA1, FOL.RA3;Identifica necessitats sector productiu, relaciona amb projectes i gestió empresarial
+1.3;Formulació d'objectius SMART;PI.RA1, PI.RA2, FOL.RA1;Disseny projecte amb objectius, planificació i emprenedoria
+1.4;Definició de l'abast del projecte;PI.RA2, ED.RA6;Planifica projecte DAW, genera diagrames UML de casos d'ús i comportament
+1.5;Anàlisi de viabilitat tècnica;SI.RA1, SI.RA5, DAW.RA1;Avalua sistemes informàtics, interconnecta xarxes i implanta arquitectures web
+1.6;Anàlisi de viabilitat econòmica;FOL.RA2, FOL.RA4;Aplica procediments empresarials, costos i viabilitat financera
+1.7;Benchmarking competitiu;PI.RA1, DIW.RA1;Identifica necessitats sector, analitza interfícies web competidores
+1.8;Selecció de tecnologies;ED.RA1, DWEC.RA1, DWES.RA1, DAW.RA1;Reconeix eines desenvolupament, arquitectures client-servidor i servidors
+1.9;Justificació tecnològica;ED.RA1, ED.RA2, PI.RA2;Avalua entorns desenvolupament, justifica stack tecnològic del projecte
+2.1;Diagrama de casos d'ús;ED.RA6, PI.RA2;Genera diagrames comportament UML i planifica projecte DAW
+2.2;Diagrames de seqüència;ED.RA6, PI.RA2;Diagrames interacció UML, planifica projecte amb especificacions
+2.3;Diagrama de classes;ED.RA5, PROG.RA4;Genera diagrames classes, aplica programació orientada objectes
+2.4;Diagrama de components/desplegament;ED.RA5, DAW.RA1, DAW.RA4;Arquitectura components, desplegament aplicacions web
+2.5;Selecció d'arquitectura;DWES.RA1, DAW.RA1, PI.RA2;Selecciona arquitectures servidor, implanta aplicacions i planifica
+2.6;Disseny de la capa de presentació;DWEC.RA1, DWEC.RA6, DIW.RA2;Arquitectures client, model objectes document (DOM) i interfícies web
+2.7;Disseny de la capa de negoci;DWES.RA5, PROG.RA4, PROG.RA5;Separa lògica negoci, aplica POO i llibreries classes
+2.8;Disseny de la capa de dades;DWES.RA6, BD.RA3, BD.RA4;Accés magatzems dades, consultes i manipulació BD
+2.9;Disseny del model de dades;BD.RA2, BD.RA6;Crea BD model relacional, dissenya diagrames entitat-relació
+2.10;Normalització de la base de dades;BD.RA2, BD.RA6;Defineix estructura BD, aplica formes normals
+2.11;Definició d'índexs i optimitzacions;BD.RA3, DWES.RA6;Consulta informació BD optimitzada i accés eficient dades
+2.12;Wireframes i mockups;DIW.RA1, DIW.RA2;Planifica interfície web, crea prototips i estils
+2.13;Prototip interactiu;DIW.RA1, DIW.RA2, DWEC.RA5;Disseny interfície interactiva, esdeveniments i formularis
+2.14;Disseny responsive i accessible;DIW.RA1, DIW.RA4;Especificacions disseny, accessibilitat i usabilitat web
+2.15;Planificació amb metodologia àgil;PI.RA2, ED.RA1;Planifica projecte amb metodologies àgils i fases desenvolupament
+2.16;Product Backlog i User Stories;PI.RA2, ED.RA6;Planifica projecte amb requisits, casos d'ús i històries usuari
+2.17;Planificació de sprints;PI.RA2, PI.RA3;Planifica sprints, temporalització i gestió temps
+2.18;Estimació de temps i recursos;PI.RA2, PI.RA3;Planifica recursos, estima temps i gestiona riscos
+3.1;Configuració entorn desenvolupament;ED.RA2, DAW.RA1, DAW.RA6;Avalua entorns IDE, configura servidors i control versions
+3.2;Implementació arquitectura backend;DWES.RA1, DWES.RA5, PROG.RA4;Arquitectura servidor, separació lògica negoci i POO
+3.3;APIs RESTful;DWES.RA7, DWES.RA9;Desenvolupa serveis web, pàgines dinàmiques interactives
+3.4;Autenticació i autorització;DWES.RA4, SI.RA6, DAW.RA2;Funcionalitats aplicacions servidor, gestió usuaris i seguretat
+3.5;Gestió d'errors i logging;DWES.RA4, ED.RA3;Desenvolupa aplicacions servidor, verifica funcionament i proves
+3.6;Lògica de negoci;DWES.RA5, PROG.RA4, PROG.RA5;Separa lògica negoci, POO i llibreries classes
+3.7;Validacions servidor i client;DWES.RA4, DWEC.RA3, DWEC.RA5;Desenvolupa aplicacions, utilitza objectes predefinits i formularis
+3.8;Frontend responsive;DWEC.RA1, DIW.RA2, DIW.RA4;Arquitectures client, interfícies homogènies i accessibilitat
+3.9;Interacció UI;DWEC.RA5, DWEC.RA6, DIW.RA2;Esdeveniments, maneig formularis, DOM i interfícies interactives
+3.10;Gestió estats frontend;DWEC.RA4, DWEC.RA6;Estructures programador, model objectes document
+3.11;Optimització rendiment frontend;DWEC.RA1, DIW.RA3, DAW.RA5;Arquitectures client, multimedia web i verificació execució
+3.12;Connexió i configuració SGBD;BD.RA1, DWES.RA6, DAW.RA4;Reconeix BD, accés dades i configura servidors aplicacions
+3.13;Implementació model de dades;BD.RA2, BD.RA3, DWES.RA6;Crea BD, consulta informació i accés magatzems dades
+3.14;Consultes optimitzades;BD.RA3, BD.RA5, DWES.RA6;Consulta BD, procediments emmagatzemats i accés eficient
+3.15;Gestió transaccions;BD.RA4, BD.RA5, DWES.RA6;Modifica informació BD, procediments i transaccions
+3.16;Upload i gestió fitxers multimèdia;DWES.RA4, DIW.RA3, PROG.RA6;Funcionalitats aplicacions, multimedia web i fitxers
+3.17;Reproducció multimèdia;DIW.RA3, DWEC.RA6;Prepara multimedia web i integra funcionalitats DOM
+3.18;Funcionalitats interactives avançades;DWEC.RA5, DWEC.RA7, DWES.RA9;Esdeveniments, comunicació asíncrona i aplicacions híbrides
+3.19;Optimització recursos multimèdia;DIW.RA3, DAW.RA5;Prepara multimedia, verifica execució i rendiment
+3.20;Documentació endpoints API;DWES.RA7, DAW.RA6;Serveis web, elabora documentació aplicació
+3.21;Testing unitari i integració APIs;ED.RA3, ED.RA4, DWES.RA7;Verifica funcionament, optimitza codi i proves serveis web
+3.22;Versionat amb Git;DAW.RA6, ED.RA2;Control versions, documentació i entorns desenvolupament
+3.23;Code review i qualitat codi;ED.RA3, ED.RA4, DAW.RA6;Proves programari, optimització codi i documentació
+3.24;Integració contínua (CI);DAW.RA5, DAW.RA6, ED.RA3;Verifica execució, control versions i proves automàtiques
+4.1;Manual tècnic – Arquitectura;DAW.RA6, ED.RA5, PI.RA5;Documentació aplicació, diagrames classes i avaluació projecte
+4.2;Manual tècnic – Instal·lació;DAW.RA1, DAW.RA6, SI.RA2;Implanta arquitectures, documentació i instal·lació SO
+4.3;Manual tècnic – Configuració;DAW.RA2, DAW.RA4, DAW.RA6;Gestiona servidors web, aplicacions i documentació
+4.4;Manual tècnic – Base de dades;BD.RA2, BD.RA6, DAW.RA6;Crea BD, disseny model relacional i documentació
+4.5;Manual tècnic – APIs;DWES.RA7, DAW.RA6, LM.RA2;Serveis web, documentació i àmbits aplicació XML
+4.6;Manual d'usuari – Introducció;DIW.RA1, PI.RA5;Especificacions disseny interfície i avaluació projecte
+4.7;Manual d'usuari – Funcionalitats;PI.RA5, DIW.RA1;Avalua projecte, disseny interfície i casos d'ús
+4.8;Manual d'usuari – Troubleshooting;PI.RA5, DAW.RA6;Avaluació projecte i documentació resolució problemes
+4.9;Manual d'usuari – Casos d'ús;ED.RA6, PI.RA5;Diagrames casos d'ús i avaluació projecte
+4.10;Documentació codi – Comentaris;DAW.RA6, PROG.RA2, ED.RA4;Documentació codi, disseny modular i optimització
+4.11;README.md;DAW.RA6, PI.RA5;Elabora documentació aplicació web i avalua projecte
+4.12;API docs Swagger;DWES.RA7, DAW.RA6;Serveis web amb documentació generada automàtica
+4.13;Diagrames tècnics actualitzats;ED.RA5, ED.RA6, PI.RA5;Diagrames classes/comportament UML i avaluació
+4.14;Informe final – Resum executiu;PI.RA5, FOL.RA1;Avalua projecte i competències emprenedoria
+4.15;Informe final – Metodologia;PI.RA2, PI.RA5, ED.RA1;Planifica projecte, avaluació i metodologies desenvolupament
+4.16;Informe final – Resultats;PI.RA5, ED.RA3;Avalua compliment objectius i verificació proves
+4.17;Informe final – Conclusions;PI.RA5, PI.RA4;Avalua projecte i reflexió competències professionals
+4.18;Informe final – Millores futures;PI.RA1, PI.RA5;Identifica necessitats i proposa millores projecte
+4.19;Presentació executiva;PI.RA4, PI.RA5;Prepara defensa projecte i avaluació
+4.20;Demo interactiva;PI.RA4, PI.RA5, DWEC.RA7;Defensa projecte, avaluació i comunicació asíncrona
+5.1;Testing unitari backend;ED.RA3, DWES.RA4;Verifica funcionament i proves aplicacions servidor
+5.2;Testing integració APIs;ED.RA3, DWES.RA7;Proves programari i serveis web
+5.3;Testing funcional frontend;ED.RA3, DWEC.RA5, DIW.RA4;Proves aplicacions, esdeveniments i usabilitat
+5.4;Testing E2E;ED.RA3, PI.RA3;Verifica funcionament i implementa projecte integrat
+5.5;Testing rendiment;ED.RA4, DAW.RA5, DIW.RA3;Optimitza codi, verifica execució i multimedia
+5.6;Testing càrrega i estrès;ED.RA3, DAW.RA5, SI.RA4;Proves rendiment, execució aplicacions i gestió sistemes
+5.7;Testing seguretat;DAW.RA2, SI.RA6, DWES.RA4;Configuració segura servidors, opera xarxes i autenticació
+5.8;Testing cross-browser;DWEC.RA1, DIW.RA4;Verifica compatibilitat arquitectures client i usabilitat
+5.9;Auditoria accessibilitat WCAG;DIW.RA4, DWEC.RA1;Aplica accessibilitat web i arquitectures client
+5.10;Testing usabilitat;DIW.RA1, DIW.RA4, PI.RA5;Planifica interfície, usabilitat i avalua projecte
+5.11;Anàlisi mètriques UX;DIW.RA1, DIW.RA4, PI.RA5;Disseny interfície, usabilitat i avaluació experiència
+5.12;Validació responsive design;DIW.RA2, DIW.RA4, DWEC.RA1;Interfícies responsive, accessibilitat i arquitectures client
+5.13;Refactoring i optimització codi;ED.RA4, PROG.RA4, PROG.RA5;Optimitza codi, POO i llibreries classes
+5.14;Optimització consultes BD;BD.RA3, BD.RA5, ED.RA4;Consultes optimitzades, procediments i millora rendiment
+5.15;Optimització recursos frontend;DWEC.RA1, DIW.RA3, ED.RA4;Arquitectures client, multimedia i optimització codi
+5.16;Implementació cache estratègic;DWES.RA5, DAW.RA4, SI.RA4;Aplicacions servidor, configuració i gestió recursos
+5.17;Configuració entorn producció;DAW.RA1, DAW.RA2, SI.RA5;Arquitectures web, servidors segurs i xarxes
+5.18;Desplegament aplicació;DAW.RA3, DAW.RA4, DAW.RA5;Servidors transferència, aplicacions i verifica execució
+5.19;Configuració monitorització;DAW.RA5, SI.RA4, SI.RA6;Verifica execució, gestiona sistemes i opera xarxes
+5.20;Documentació desplegament;DAW.RA6, DAW.RA1, PI.RA5;Documentació aplicació, arquitectures i avalua projecte
+5.21;Anàlisi resultats vs objectius;PI.RA5, ED.RA3;Avalua compliment objectius SMART i resultats projecte
+5.22;Identificació punts millora;PI.RA1, PI.RA5, ED.RA3;Identifica necessitats, avalua i proposa millores
+5.23;Roadmap evolutiu;PI.RA1, PI.RA5;Relaciona necessitats sector amb evolució projecte
+5.24;Avaluació crítica global;PI.RA4, PI.RA5;Reflexió competències, avaluació global i defensa projecte
